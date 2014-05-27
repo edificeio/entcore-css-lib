@@ -211,6 +211,17 @@ nav.horizontal{
     margin: 0;
     float: left;
   }
+	input[type=submit], input[type=button]{
+		height: 25px;
+		line-height: 18px;
+		.border-radius(0);
+		.border-radius-right(5px);
+		border-left: 0;
+	}
+}
+
+.display-buttons{
+	padding-bottom: 10px;
 }
 
 .filters{
@@ -456,6 +467,21 @@ section.selected, article.selected{
 	background: #ccc;
 }
 
+i.show-details{
+	float:right !important;
+	margin: 1px;
+}
+
+i.show-icons{
+	float: right !important;
+	margin: 1px;
+}
+
+i.show-list{
+	float: right !important;
+	margin: 1px;
+}
+
 article.media{
 	border: 2px dashed #ccc;
 }
@@ -536,6 +562,7 @@ table{
 	tr{
 		border-top: 1px solid #ccc;
 		background: transparent;
+		.run-transition(background);
 	}
 	tr.checked{
 		background: #eee;
@@ -595,6 +622,7 @@ table.list-view{
 
 a{
 	color: blue;
+	.run-transition(color);
 }
 
 .v-center-container{
@@ -984,12 +1012,17 @@ ul.icons-tabs{
 	background: #eee;
 
 	.options-list{
-		display: none;
 		position: absolute;
 		width: 175%;
 		top: 49px;
 		.border-box;
 		background: #eee;
+		height: 0;
+		overflow: hidden;
+		.run-transition(height);
+	}
+	.options-list.toggle-visible{
+		height: 260px;
 	}
 
 	.option i{
@@ -1013,8 +1046,6 @@ ul.icons-tabs{
 			vertical-align: middle;
 			max-height: 100%;
 			background-size: auto 100%;
-			// hack fixing a firefox rendering bug
-			transform: rotate( .0001deg );
 		}
 		span{
 			clear: none;
@@ -1117,7 +1148,7 @@ article{
 
 
 .text-container{
-	padding: 10px;
+	padding: 40px;
 
 	h1{
 		margin-top: 1em;
