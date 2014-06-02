@@ -1636,3 +1636,45 @@ em.high-importance{
 	font-weight: bold;
 	color: #666;
 }
+
+.pull-down-menu{
+	position: relative;
+	.wrapper{
+		width: 220px;
+		overflow: hidden;
+		position: absolute;
+		left: -226px;
+		.arrow{
+			float: right;
+			width: 0;
+			height: 0;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			border-left: 10px solid #fff;
+		}
+	}
+	.pull-down-content{
+		margin-right: 0px;
+		background: #fff;
+		.run-transition(margin-right);
+		float: right;
+		li{
+			list-style-type: none;
+		}
+	}
+	.pull-down-content{
+		ul{
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
+.pull-down-menu.hide{
+	.pull-down-content{
+		margin-right: -220px;
+	}
+	.arrow{
+		display: none;
+	}
+}
