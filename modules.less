@@ -241,13 +241,23 @@ nav.horizontal{
 	}
 }
 
+.widgets{
+	width: 228px;
+	.cell;
+	.reduce-block-six;
+}
+
+.widgets-friend{
+	margin-left: 235px;
+}
+
 .widget-container(@header-size){
-	.twelve;
 	.cell;
 
+	width: 215px;
 	background-size: contain;
 	background-repeat: no-repeat;
-	margin-bottom: @header-size + 10px;
+	margin-bottom: 15px;
 	padding-right: 1px;
 	.content{
 		margin-top: @header-size;
@@ -366,13 +376,12 @@ p{
 }
 
 .calendar{
-	.height-seven;
-	.widget-container(25.7%);
-	padding-bottom: 49.4% !important;
+	height: 160px;
+	.widget-container(55px);
 
 	.content{
 		.fixed;
-		height: 98%;
+		height: 104px;
 	}
 
 	.day{
@@ -488,8 +497,9 @@ article.media{
 
 .mood-widget{
 	padding-top: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 	height: 45px;
+	width: 215px;
 
 	h1{
 		position: absolute;
@@ -1676,5 +1686,25 @@ em.high-importance{
 	}
 	.arrow{
 		display: none;
+	}
+}
+
+.notification{
+	article{
+		margin-bottom: 15px;
+		padding: 9px;
+		margin-left: 110px;
+		height: 84px;
+	}
+	.avatar{
+		width: 84px;
+		height: 84px;
+		float: left;
+		img{
+			height: auto;
+		}
+	}
+	i.type{
+		float: left;
 	}
 }
