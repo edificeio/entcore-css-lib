@@ -1650,23 +1650,17 @@ em.high-importance{
 .pull-down-menu{
 	position: relative;
 	.wrapper{
-		width: 220px;
+		height: 190px;
 		overflow: hidden;
 		position: absolute;
-		left: -226px;
-		.arrow{
-			float: right;
-			width: 0;
-			height: 0;
-			border-top: 10px solid transparent;
-			border-bottom: 10px solid transparent;
-			border-left: 10px solid #fff;
-		}
+		top: 30px;
+		.run-transition(height);
 	}
 	.pull-down-content{
-		margin-right: 0px;
+		top: 0px;
+		height: 100%;
 		background: #fff;
-		.run-transition(margin-right);
+
 		float: right;
 		li{
 			list-style-type: none;
@@ -1681,11 +1675,8 @@ em.high-importance{
 }
 
 .pull-down-menu.hide{
-	.pull-down-content{
-		margin-right: -220px;
-	}
-	.arrow{
-		display: none;
+	.wrapper{
+		height: 0px;
 	}
 }
 
@@ -1707,4 +1698,19 @@ em.high-importance{
 	i.type{
 		float: left;
 	}
+}
+
+.calendar {
+	width: 256px;
+	height: 151px;
+}
+
+.last-mails-widget{
+	width: 256px;
+}
+
+.widgets{
+	display: table-cell;
+	width: 276px;
+	paddng: 10px;
 }
