@@ -225,13 +225,16 @@ nav.horizontal{
 }
 
 .filters{
+	position: relative;
+	height: 30px;
+	padding: 6px;
 	h5{
 		.cell;
 		width: 170px;
 		margin: 0;
 	}
 	ul{
-		margin-bottom: 0;
+		margin: 0;
 	}
 	li{
 		display: inline-block;
@@ -252,7 +255,7 @@ textarea{
 }
 
 .widgets-friend{
-	margin-left: 235px;
+	margin-left: 276px;
 }
 
 .widget-container(@header-size){
@@ -274,6 +277,16 @@ textarea{
 		overflow: hidden;
 
 	}
+}
+
+.upper-title{
+	margin-bottom: 0;
+}
+
+.comment{
+	padding: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .user-content{
@@ -1717,4 +1730,19 @@ em.high-importance{
 	display: table-cell;
 	width: 276px;
 	paddng: 10px;
+}
+
+.linker{
+	.found-resources{
+		position: relative;
+		top: 9px;
+		height: 285px;
+		width: 636px;
+		margin-left: auto;
+		margin-right: auto;
+		.icons-view{
+			overflow: auto;
+			.absolute;
+		}
+	}
 }
