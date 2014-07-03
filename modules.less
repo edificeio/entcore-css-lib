@@ -82,6 +82,9 @@ nav.vertical{
 	h1{
 		margin-top: 0;
 	}
+	ul:first-child, div ul:first-child{
+		padding-left: 0;
+	}
 	ul{
 		margin-top: 0;
 		width: 99%;
@@ -1867,6 +1870,25 @@ em.high-importance{
 	z-index: 1;
 	border: 1px solid #ccc;
 	margin-left: -1px;
-	border-top-width: 10px;
-	border-bottom-width: 10px;
+	border-top-width: 11px;
+	border-bottom-width: 11px;
+}
+
+@font-face {
+	font-family: KGJune;
+	src: url(/public/fonts/KGJuneBug.ttf);
+}
+
+@font-face {
+	font-family: EcritureA;
+	src: url(/public/fonts/EcritureA-Romain-Orne.otf);
+	font-size-adjust: 80;
+}
+
+body{
+	cursor: default !important;
+}
+
+a.cke_smile img {
+	width: 40px;
 }
