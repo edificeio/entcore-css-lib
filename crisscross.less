@@ -6,6 +6,11 @@
 	.border-box;
 }
 
+.row:after{
+	clear:both;
+	content: " ";
+}
+
 .cell{
 	.border-box;
 	float: left;
@@ -43,7 +48,7 @@
 .fixed-block{
 	box-sizing: content-box;
 	position: relative;
-	height: 1px;
+	height: 0px;
 
 	.right-magnet.cell.absolute{
 		right: 0 !important;
