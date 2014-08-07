@@ -1900,3 +1900,151 @@ body{
 a.cke_smile img {
 	width: 40px;
 }
+
+.radial-menu{
+	height: 120px;
+	width: 120px;
+	position: absolute;
+	right: -94px;
+	top: -36px;
+	ul.menu-items{
+		position: relative;
+		margin: 0;
+		li{
+			list-style-type: none;
+			background: #666;
+			height: 35px;
+			width: 35px;
+			border-radius: 20px;
+			position: absolute;
+			left: 40px;
+			top: 40px;
+			transition: top 200ms ease, left 200ms ease, background 200ms ease;
+			padding: 2px;
+			padding-top: 7px;
+			box-sizing: border-box;
+			i{
+				display: inline;
+			}
+		}
+		li::before{
+			content: '';
+		}
+		li:hover{
+			background: #fff;
+			i{
+				-webkit-filter: none;
+				-moz-filter: none;
+				filter: none;
+			}
+
+			cursor: pointer;
+		}
+	}
+	i.text{
+		.icon(text-icon, 30px);
+		background-size: 60% auto;
+	}
+	i.image{
+		.icon(picture-icon, 30px);
+		background-size: 60% auto;
+	}
+	i.sound{
+		.icon(music-icon, 30px);
+		background-size: 60% auto;
+	}
+	i.video{
+		.icon(video-icon, 30px);
+		background-size: 60% auto;
+	}
+	button{
+		height: 35px;
+		width: 35px;
+		padding: 2px;
+		border-radius: 20px;
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		opacity: 1;
+		.run-transition(opacity);
+	}
+}
+
+.radial-menu:hover{
+	ul.menu-items{
+		li:first-child {
+			top: 0;
+			left: 40px;
+		}
+		li:nth-child(2) {
+			left: 0px;
+			top: 25px;
+		}
+		li:nth-child(3) {
+			left: 80px;
+			top: 25px;
+		}
+		li:nth-child(4) {
+			top: 75px;
+			left: 65px;
+		}
+		li:nth-child(5) {
+			top: 75px;
+			left: 15px;
+		}
+	}
+	button{
+		opacity: 0;
+		cursor: pointer;
+		pointer-events: none;
+	}
+}
+
+.accordions{
+	.accordion{
+		margin: 0;
+		h2{
+			font-family: Arial;
+			.vertical-gradient(#383838, #333);
+			border: 1px solid #555;
+			border-bottom: 0;
+			font-size: 20px;
+			color: #666;
+		}
+		.toggle{
+			border: 0;
+			background: #333;
+			.twelve;
+			.cell;
+			.content{
+				.row;
+				h3{
+					font-weight: normal;
+					color: #666;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	.accordion:last-child{
+		h2{
+			border-bottom: 1px solid #555;
+		}
+	}
+
+	.accordion.opened{
+		h2{
+			border: 1px solid #555;
+			border-bottom: 0;
+			color: #ccc;
+
+		}
+		.toggle{
+			height: 350px;
+			border: 1px solid #555;
+			border-top: 0;
+			padding: 10px;
+		}
+	}
+}
