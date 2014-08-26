@@ -633,6 +633,11 @@ table{
 	}
 }
 
+.cell-ellipsis{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
 
 table.list-view{
 	width: 100%;
@@ -657,7 +662,20 @@ table.list-view{
 			word-break: break-word;
 		}
 	}
+	td.user{
+		max-width: 100px;
 
+	}
+	td.icon{
+		width: 25px;
+		height: 25px;
+	}
+	td.content{
+		max-width: 280px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
 }
 
 a{
