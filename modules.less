@@ -639,7 +639,7 @@ table{
 	overflow: hidden;
 }
 
-table.list-view{
+.list-view{
 	width: 100%;
 
 	tr.underline{
@@ -664,6 +664,7 @@ table.list-view{
 	}
 	td.user{
 		max-width: 100px;
+		.cell-ellipsis;
 
 	}
 	td.icon{
@@ -672,9 +673,7 @@ table.list-view{
 	}
 	td.content{
 		max-width: 280px;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		overflow: hidden;
+		.cell-ellipsis;
 	}
 }
 
@@ -2064,5 +2063,34 @@ a.cke_smile img {
 			border-top: 0;
 			padding: 10px;
 		}
+	}
+}
+
+.progress-bar{
+	background: #f6f6f6;
+	border: 1px solid #ddd;
+	position: relative;
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	.border-radius();
+	overflow: hidden;
+	text-align: right;
+	.border-box;
+	padding-right: 8px;
+	font-size: 11px;
+	.filled{
+		background: #666;
+		position: absolute;
+		height: 25px;
+		line-height: 25px;
+		padding-right: 8px;
+		color: #fff;
+		padding-left: 8px;
+		overflow: hidden;
+		.border-box;
+	}
+	.filled.small{
+		color: #666;
 	}
 }
