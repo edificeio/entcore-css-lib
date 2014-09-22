@@ -79,6 +79,11 @@ textarea.inline-editing{
 
 nav.vertical{
 	padding-right: 10px;
+	h2{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
 	h1{
 		margin-top: 0;
 	}
@@ -94,7 +99,7 @@ nav.vertical{
 			display: block;
 			font-size: 14px;
 			font-weight: normal;
-			width: 100%;
+			width: 100% !important;
 			top: 0;
 			a{
 				display: block;
@@ -701,11 +706,6 @@ a{
 			width: 100%;
 		}
 	}
-}
-
-.contextual-editor{
-	width: 500px;
-	height: 200px;
 }
 
 .contextual-editor.cke_editable{
@@ -1743,7 +1743,8 @@ em.high-importance{
 
 .notification{
 	article{
-		margin-bottom: 15px;
+		margin-bottom: 12px;
+		margin-top: 12px;
 		padding: 9px;
 		margin-left: 110px;
 		height: 84px;
