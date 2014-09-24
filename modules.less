@@ -49,8 +49,11 @@
 	.absolute;
 }
 
-a, button, input[type=button], input[type=submit]{
+a.button, button, input[type=button], input[type=submit]{
 	cursor: pointer;
+	margin: 0;
+	margin-left: 1px;
+	margin-right: 1px;
 }
 
 i{
@@ -634,6 +637,7 @@ table{
 
 article{
 	border: 1px solid #ccc;
+	padding: 8px;
 }
 
 
@@ -1126,8 +1130,6 @@ section{
     .action-buttons{
       .cell;
       .ten;
-      line-height: 50px;
-
       margin-bottom: 10px;
       button, a.button{
         vertical-align: top;
@@ -1275,6 +1277,9 @@ hr{
 }
 
 section.lightbox-window{
+	.row{
+		min-height: initial !important;
+	}
 	.lightbox-buttons{
 		position: absolute;
 		bottom: 0px;
@@ -2148,9 +2153,11 @@ a.cke_smile img {
 	width: 100%;
 	overflow: hidden;
 	padding-top: 2px;
+	border-left: 1px solid #ddd;
+	border-top: 1px dashed #ddd;
 	.border-box;
 	.cell{
-		background: #fff;
+		background: #bbb;
 		opacity: 0.1;
 		border-right: 1px solid #000;
 		border-bottom: 1px solid #000;
@@ -2158,7 +2165,7 @@ a.cke_smile img {
 		margin-top: -1px;
 	}
 	.row{
-		min-height: 0;
+		min-height: 0 !important;
 	}
 }
 
@@ -2166,15 +2173,28 @@ a.cke_smile img {
 	border-bottom: 2px solid transparent
 }
 
+.grid-view{
+	.grid-add-row{
+		display: none;
+	}
+	.media{
+		outline: none;
+	}
+}
+
 .grid-add-row{
 	.twelve;
 	.cell;
+	margin: 0;
+	border: 0;
+	padding: 12px;
 }
 
 .nested-grid{
 	height: 100%;
 	cursor: inherit;
 	min-height: 60px;
+	position: relative;
 }
 
 .illustrated-article {
@@ -2233,6 +2253,7 @@ a.cke_smile img {
 		left: 0;
 		height: 100%;
 		width: 100%;
+		min-height: 50px;
 	}
 	[contenteditable]{
 		p, h1, h2, h3, h4, h5{
@@ -2249,7 +2270,8 @@ a.cke_smile img {
 		top: 0;
 		left: 0;
 		.border-box;
-		min-height: 50px;
+
+		min-height: 100%;
 		cursor: inherit !important;
 	}
 
@@ -2288,9 +2310,15 @@ a.cke_smile img {
 	}
 
 	.text-wrapper{
+		min-height: 100%;
 		p, h1, h2, h3{
 			padding: 7px;
+			margin: 0;
 		}
+	}
+
+	.media-container{
+		overflow: visible;
 	}
 }
 
@@ -2302,6 +2330,7 @@ a.cke_smile img {
 	.viewer{
 		.media{
 			opacity: 0.3;
+			cursor: inherit;
 		}
 		.drawing-grid.editor{
 			.media{
@@ -2405,6 +2434,7 @@ a.cke_smile img {
 
 .grid-wrapper{
 	height: 100%;
+	position: relative;
 	.square-menu{
 		display: block;
 		position: absolute;
@@ -2435,10 +2465,9 @@ a.cke_smile img {
 	display: table-cell;
 	button{
 		width: 51px;
-		margin-top: 2px;
 		height: 47px;
+		margin: 0;
 		float: right;
-		margin-right: 5px;
 	}
 	ul.menu-items{
 		margin: 0;
