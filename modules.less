@@ -1782,6 +1782,35 @@ em.high-importance{
 	paddng: 10px;
 }
 
+.illustrated-list{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	li{
+		display: block;
+		height: 40px;
+		width: 100%;
+		line-height: 40px;
+		list-style-type: none;
+	}
+	li.selected{
+		color: #fff;
+		a{
+			color: #fff;
+		}
+	}
+	img{
+		height: 40px;
+		width: 40px;
+		display: block;
+		float: left;
+		margin-right: 10px;
+	}
+}
+
 .lightbox-view .tabs.linker{
 	section .icons-view{
 		border-left: 0;
@@ -1791,33 +1820,7 @@ em.high-importance{
 		height: 25px;
 		margin-top: 1px;
 	}
-	.illustrated-list{
-		margin: 0;
-		padding: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		li{
-			display: block;
-			height: 40px;
-			width: 100%;
-			line-height: 40px;
-		}
-		li.selected{
-			color: #fff;
-			a{
-				color: #fff;
-			}
-		}
-		img{
-			height: 40px;
-			width: 40px;
-			display: block;
-			float: left;
-			margin-right: 10px;
-		}
-	}
+
 	.found-resources{
 		position: relative;
 		height: 165px;
@@ -1833,6 +1836,7 @@ em.high-importance{
 
 .accordions{
 	.accordion{
+		padding: 0;
 		h2{
 			padding: 4px;
 			padding-left: 10px;
@@ -2154,7 +2158,7 @@ a.cke_smile img {
 	overflow: hidden;
 	padding-top: 2px;
 	border-left: 1px solid #ddd;
-	border-top: 1px dashed #ddd;
+	border-top: 1px dashed #888;
 	.border-box;
 	.cell{
 		background: #bbb;
@@ -2179,6 +2183,7 @@ a.cke_smile img {
 	}
 	.media{
 		outline: none;
+		cursor: default;
 	}
 }
 
@@ -2195,6 +2200,14 @@ a.cke_smile img {
 	cursor: inherit;
 	min-height: 60px;
 	position: relative;
+	padding: 10px;
+	.drawing-grid > .row:last-child{
+		min-height: 0;
+		.grid-add-row{
+			position: absolute;
+			bottom: -47px;
+		}
+	}
 }
 
 .illustrated-article {
@@ -2671,3 +2684,47 @@ a.cke_smile img {
 		cursor: pointer;
 	}
 }
+
+.page-markers{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	.marker {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 80px 80px;
+		z-index: 2;
+		border-color: transparent transparent #ccc transparent;
+		bottom: 0;
+		right: 0;
+		pointer-events: none;
+		.content{
+			position: absolute;
+			transform: rotate(-45deg);
+			bottom: -95px;
+			left: -115px;
+			width: 80px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			pointer-events: all;
+		}
+	}
+	.marker:nth-child(2){
+		border-width: 0 0 130px 130px;
+		z-index: 1;
+		.content{
+			line-height: 30px;
+			width: 120px;
+			height: 30px;
+			bottom: -87px;
+			left: -110px;
+		}
+	}
+}
+.blogs-posts-list table{
+	table-layout: fixed;
+}
+>>>>>>> 0790bfa... grid fixes
