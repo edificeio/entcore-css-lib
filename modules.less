@@ -175,7 +175,7 @@ textarea{
 }
 
 .centered-text{
-	text-align: center;
+	text-align: center !important;
 }
 
 .badge{
@@ -1198,6 +1198,10 @@ hr{
 	display: inline-block;
 }
 
+.media .lightbox-view, .media .lightbox-window{
+	cursor: pointer;
+}
+
 .lightbox-window form{
 	padding: 10px;
 	input, label{
@@ -1807,7 +1811,7 @@ em.high-importance{
 	}
 	img{
 		height: 40px;
-		width: 40px;
+		width: 40px !important;
 		display: block;
 		float: left;
 		margin-right: 10px;
@@ -2363,6 +2367,7 @@ a.cke_smile img {
 	padding-left: 80px;
 	.media{
 		outline: none;
+		cursor: default;
 	}
 	.drawing-grid.editor{
 		.media{
