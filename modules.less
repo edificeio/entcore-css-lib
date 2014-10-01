@@ -771,6 +771,10 @@ a{
 		padding: 15px;
 		.border-box;
 	}
+	.found-users-list{
+		height: 180px;
+		overflow-y: auto;
+	}
 }
 
 .drop-down.hidden{
@@ -987,6 +991,10 @@ ul.icons-tabs{
 			}
 		}
 		a{
+			i.shared{
+				bottom: 2px;
+			}
+
 			i.inline{
 				display: inline-block;
 				position: relative;
@@ -1292,8 +1300,9 @@ section.lightbox-window{
 		}
 	}
 	.close-lightbox{
-		.icon(glyphicons_207_remove_2, 20px);
-
+		i{
+			.icon(glyphicons_207_remove_2, 20px);
+		}
 	}
 }
 
@@ -2207,7 +2216,6 @@ a.cke_smile img {
 	cursor: inherit;
 	min-height: 60px;
 	position: relative;
-	padding: 10px;
 	.drawing-grid > .row:last-child{
 		min-height: 0;
 		.grid-add-row{
@@ -2636,7 +2644,7 @@ a.cke_smile img {
 			label{
 				padding: 6px;
 				float: left;
-				width: 119px;
+				width: 99px;
 				i{
 					margin-left: auto;
 					margin-right: auto;
@@ -2664,33 +2672,58 @@ a.cke_smile img {
 		}
 	}
 	i.blog{
-		.icon(blog-large, 100px);
+		.icon(blog-large, 99px);
 		cursor: pointer;
 	}
 	i.userbook{
-		.icon(userbook-large, 100px);
+		.icon(userbook-large, 99px);
 		cursor: pointer;
 	}
 	i.workspace{
-		.icon(workspace-large, 100px);
+		.icon(workspace-large, 99px);
+		cursor: pointer;
+	}
+	i.wiki{
+		.icon(wiki-filter, 99px);
+		cursor: pointer;
+	}
+	i.forum{
+		.icon(forum-filter, 99px);
+		cursor: pointer;
+	}
+	i.news{
+		.icon(actualites-filter, 99px);
+		cursor: pointer;
+	}
+	i.pages{
+		.icon(pages-filter, 99px);
 		cursor: pointer;
 	}
 	i.conversation, i.messagerie{
-		.icon(conversation-large, 100px);
+		.icon(conversation-large, 99px);
 		cursor: pointer;
 	}
 	i.draft{
-		.icon(draft, 100px);
+		.icon(draft, 99px);
 		cursor: pointer;
 	}
 	i.submitted{
-		.icon(submitted, 100px);
+		.icon(submitted, 99px);
 		cursor: pointer;
 	}
 	i.published{
-		.icon(published, 100px);
+		.icon(published, 99px);
 		cursor: pointer;
 	}
+}
+
+i.shared{
+	.icon(shared, 18px);
+	background-position: center;
+	display: block;
+	position: absolute;
+	bottom: -2px;
+	right: -3px;
 }
 
 .page-markers{
