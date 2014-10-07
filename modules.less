@@ -731,6 +731,17 @@ a{
 	padding: 4px;
 }
 
+.lightbox-window .share, .lightbox-view .share{
+	.found-users-list{
+		height: 180px;
+		overflow-y: auto;
+	}
+	.groups-list{
+		height: 160px;
+		overflow-y: auto;
+	}
+}
+
 .share{
 	table{
 		width: 100%;
@@ -738,6 +749,7 @@ a{
 	td, th{
 		width: 100px;
 		text-align: center;
+		line-height: 18px;
 	}
 	td:first-child, th:first-child{
 		width: 30%;
@@ -768,12 +780,7 @@ a{
 		width: 100%;
 		display: block;
 		font-size: 15px;
-		padding: 15px;
 		.border-box;
-	}
-	.found-users-list{
-		height: 180px;
-		overflow-y: auto;
 	}
 }
 
@@ -1781,6 +1788,13 @@ em.high-importance{
 	i.type{
 		float: left;
 	}
+	.notification-date{
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		width: 200px;
+		text-align: right;
+	}
 }
 
 .calendar {
@@ -1795,7 +1809,7 @@ em.high-importance{
 .widgets{
 	display: table-cell;
 	width: 276px;
-	paddng: 10px;
+	padding: 10px;
 }
 
 .illustrated-list{
@@ -2645,6 +2659,7 @@ a.cke_smile img {
 		margin-top: 10px;
 		margin-bottom: 10px;
 		color: #000;
+		cursor: pointer;
 	}
 	ul{
 		margin-top: 0;
@@ -2779,4 +2794,44 @@ i.shared{
 }
 .blogs-posts-list table{
 	table-layout: fixed;
+}
+
+@media screen and (max-width: 800px){
+	.widgets{
+		display: none;
+	}
+
+	.widgets-friend{
+		margin-left: 0px;
+	}
+
+	.drop-down-filters{
+		.wrapper{
+			i{
+				height: 55px !important;
+				width: 55px !important;
+				background-size: 60px 60px;
+			}
+			p{
+				display: none;
+			}
+			label{
+				width: 59px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px){
+	.notification{
+		.avatar{
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 420px){
+	.drop-down-filters{
+		display: none !important;
+	}
 }
