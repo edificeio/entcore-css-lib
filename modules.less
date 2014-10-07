@@ -680,16 +680,16 @@ table{
 			word-break: break-word;
 		}
 	}
-	td.user{
+	td.user, th.user{
 		max-width: 100px;
 		.cell-ellipsis;
 
 	}
-	td.icon{
+	td.icon, th.user{
 		width: 25px;
 		height: 25px;
 	}
-	td.content{
+	td.content, th.user{
 		max-width: 280px;
 		.cell-ellipsis;
 	}
@@ -864,6 +864,10 @@ a{
 	button.hide{
 		opacity: 0;
 		.run-transition(opacity);
+	}
+	.contextual-link{
+		float: right;
+		margin: 10px;
 	}
 }
 
@@ -2822,12 +2826,60 @@ i.shared{
 	}
 }
 
+.panel{
+	width: 415px;
+	margin-left:auto;
+	margin-right: auto;
+	.border-radius;
+	padding: 15px;
+
+	label{
+		width: 150px;
+	}
+
+	input[type=text], input[type=password]{
+		width: 200px;
+		float: right;
+		line-height: 20px;
+		border: 0;
+	}
+	a{
+		display: block;
+		clear: both;
+	}
+	h1 img{
+		display: none;
+	}
+
+	input[type=submit]{
+		float: right;
+	}
+}
+
 @media screen and (max-width: 550px){
 	.notification{
 		.avatar{
 			display: none;
 		}
 	}
+	.panel{
+		.border-radius(0);
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		label, input[type=text], input[type=password]{
+			clear: both;
+			float: left !important;
+		}
+		input[type=submit], a{
+			clear: both;
+			float: left !important;
+		}
+	}
+
 }
 
 @media screen and (max-width: 420px){
