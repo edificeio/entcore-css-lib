@@ -65,6 +65,7 @@ iframe{
 	width: 100%;
 	height: 100%;
 	overflow: visible;
+	min-height: 500px;
 }
 
 body.app{
@@ -2642,7 +2643,7 @@ a.cke_smile img {
 	}
 }
 
-.drop-down-filters{
+.drop-down-filters, .filters{
 	z-index: 2;
 	.wrapper{
 		height: 170px;
@@ -2656,11 +2657,10 @@ a.cke_smile img {
 		height: 0;
 		box-shadow: none;
 	}
-	p:first-child{
+	p:first-child, .filters-icons{
 		margin-top: 10px;
 		margin-bottom: 10px;
 		color: #000;
-		cursor: pointer;
 	}
 	ul{
 		margin-top: 0;
@@ -2679,6 +2679,7 @@ a.cke_smile img {
 					float: none !important;
 					opacity: 0.2;
 					.run-transition(opacity);
+					cursor: pointer;
 				}
 			}
 			p{
@@ -2885,7 +2886,7 @@ i.shared{
 }
 
 @media screen and (max-width: 420px){
-	.drop-down-filters{
+	.drop-down-filters, .filters{
 		display: none !important;
 	}
 }
