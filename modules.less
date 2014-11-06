@@ -1064,6 +1064,7 @@ ul.icons-tabs{
 		float: left;
 		margin-right: 0;
 		margin-top: 0;
+		padding: 6px;
 	}
 	button{
 		margin-left: 0;
@@ -1137,22 +1138,31 @@ ul.icons-tabs{
 		overflow: hidden;
 		.run-transition(height);
 	}
+	.options-list.icons-view{
+		padding: 0;
+	}
 	.options-list.toggle-visible{
 		height: 260px;
 	}
 
 	.option i{
 		background-size: 100% auto;
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
 	}
 
 	.option, .current{
 		cursor: pointer;
 	}
 
+	.option{
+		text-align: center;
+	}
+
 	span{
 		display: block;
 		line-height: 26px;
-		float: left;
 	}
 
 	.current{
@@ -1876,6 +1886,12 @@ em.high-importance{
 	clear: both;
 }
 
+.illustrated-links{
+	ul{
+		padding: 0;
+	}
+}
+
 .lightbox-view .tabs.linker{
 	section .icons-view{
 		border-left: 0;
@@ -2543,8 +2559,8 @@ a.cke_smile img {
 }
 
 .square-menu{
-	min-width: 80px;
-	width: 80px;
+	min-width: 50px;
+	width: 50px;
 	display: table-cell;
 	button{
 		width: 51px;
@@ -3138,4 +3154,212 @@ i.shared{
 
 iframe.cke_panel_frame{
 	min-height: 100%;
+}
+
+
+.dominos.fallen{
+	.item{
+		min-width: 295px;
+		width: 25%;
+		.domino{
+			.top, .bottom{
+				clear: none;
+				float: left;
+				padding-bottom: 48%;
+
+			}
+			.bottom{
+				width: 48%;
+				margin: 0;
+			}
+			.top{
+				width:52%;
+			}
+		}
+	}
+}
+
+.letter-picker{
+	i.close-2x{
+		display: none;
+	}
+	.lightbox-view{
+		background: transparent;
+		h2{
+			color: #fff;
+			margin: 1px;
+			width: 86px;
+			height: 86px;
+			line-height: 86px;
+			text-align: center;
+			font-size: 24px;
+		}
+		h2.disabled{
+			color: #ddd;
+		}
+	}
+}
+
+h1.letter-picker{
+	width: 16px;
+	margin-left: 5px;
+	text-align: center;
+	clear: both;
+}
+
+nav.illustrated-links{
+	ul{
+		li{
+			list-style-type: none;
+			display: table;
+			margin-bottom: 12px;
+
+			.illustration{
+				display: table-cell;
+				min-width: 120px;
+				height: 120px;
+				img{
+					position: absolute;
+					width: 120px;
+					height: 120px;
+				}
+			}
+			.content{
+				padding: 8px;
+				padding-left: 15px;
+				display: table-cell;
+				vertical-align: top;
+				width: 100%;
+				h1{
+					margin: 0px;
+					font-size: 22px;
+				}
+				em, strong{
+					font-size: 12px;
+					font-weight: normal;
+				}
+				p{
+					color: #666;
+					font-size: 12px;
+					margin: 0;
+				}
+				em{
+					color: #aaa;
+				}
+			}
+		}
+	}
+}
+
+ul.thought-out-actions{
+	padding: 0;
+	margin: 0;
+	li{
+		margin-bottom: 1px;
+		list-style-type: none;
+		padding: 8px;
+		h2{
+			margin: 0;
+			font-size: 20px;
+		}
+		p{
+			margin: 0;
+			font-size: 12px;
+		}
+	}
+}
+
+.edit-grid{
+	button,i,input[button]{
+		opacity: 1;
+		pointer-events: all;
+	}
+	.grid-guides{
+		opacity: 1
+	}
+	.grid-media{
+		pointer-events: all;
+	}
+	.square-menu button, .grid-add-row{
+		display: block;
+	}
+}
+
+.blur-grid{
+	button,i,input[button]{
+		opacity: 0.2;
+		pointer-events: none;
+	}
+	.grid-guides{
+		opacity: 0.3
+	}
+	.grid-media{
+		pointer-events: none;
+	}
+	.square-menu button, .grid-add-row{
+		display: none;
+	}
+}
+
+.blur-grid{
+	.blur-grid;
+	.edit-grid{
+		.edit-grid;
+	}
+}
+
+.menu-items{
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	li{
+		min-height: 30px;
+		line-height: 30px;
+		list-style-type: none;
+		cursor: pointer !important;
+	}
+	li:hover{
+		color: #000;
+	}
+	i.text{
+		.icon(text-icon, 30px);
+		background-size: 60% auto;
+		background-color: transparent;
+		border: none;
+	}
+	i.image, input[type=button].image{
+		.icon(picture-icon, 30px);
+	}
+	i.sound, input[type=button].sound{
+		.icon(music-icon, 30px);
+	}
+	i.video{
+		.icon(video-icon, 30px);
+		background-color: transparent;
+		border: none;
+	}
+	i.grid{
+		.icon(glyphicons_099_vector_path_all, 30px);
+		background-size: 60% auto;
+		background-color: transparent;
+		border: none;
+	}
+	i.sniplet {
+		.icon(glyphicons_155_show_big_thumbnails, 30px);
+		background-size: 60% auto;
+		background-color: transparent
+	}
+	input[type=button]{
+		background-position: 4px !important;
+		padding-left: 29px;
+		background-size: 19px;
+		background-color: transparent;
+		border: none;
+		width: 100% !important;
+		text-align: left;
+		font-size: 12px;
+	}
+	input[type=button]:hover{
+		color: #000;
+	}
 }
