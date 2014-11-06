@@ -1149,7 +1149,7 @@ ul.icons-tabs{
 		background-size: 100% auto;
 		margin-left: auto;
 		margin-right: auto;
-		float: none;
+		float: none !important;
 	}
 
 	.option, .current{
@@ -3064,10 +3064,17 @@ i.shared{
 	.date-picker-icon{
 		margin-right: 8px;
 	}
+
+}
+
+.date-picker-icon{
 	a{
 		height: 39px;
 		width: 50px;
 		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 }
 
@@ -3362,4 +3369,77 @@ ul.thought-out-actions{
 	input[type=button]:hover{
 		color: #000;
 	}
+}
+
+.flexible{
+	.run-transition(width);
+	.small-hidden{
+		display: none;
+	}
+}
+
+.flexible:empty{
+	width: 0 !important;
+}
+
+.empty-neighbour{
+	width: 100% !important;
+	.patchwork{
+		padding-right: 0;
+	}
+	.small-hidden{
+		display: block;
+	}
+	.big-hidden{
+		display: none;
+	}
+}
+
+.patchwork{
+	.navigation .items{
+		padding-right: 35px;
+		.row{
+			> .cell{
+				height: 110px;
+			}
+			article{
+				margin-bottom: 0;
+				.bottom-locked{
+					bottom: 8px;
+				}
+			}
+			img{
+				height: 110px;
+				width: 110px;
+			}
+			.buttons{
+				.bottom-locked
+			}
+		}
+		.row.selected, .row:nth-child(2n).selected{
+			h1{
+				border-bottom: 1px dashed;
+			}
+		}
+		.row:nth-child(2n){
+			.cell{
+				float: right !important;
+				text-align: right;
+			}
+			.bottom-locked{
+				right: 8px;
+			}
+		}
+	}
+
+	.navigation{
+		.three;
+		.cell;
+	}
+	.content{
+		.nine;
+		.right-magnet;
+		overflow: hidden;
+	}
+
 }
