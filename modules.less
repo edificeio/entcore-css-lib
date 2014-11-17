@@ -1821,9 +1821,14 @@ em.high-importance{
 		width: 84px;
 		height: 84px;
 		float: left;
+		margin-right: 5px;
 		img{
 			height: auto;
 		}
+	}
+	.content{
+		float: none;
+		width: 100%;
 	}
 	i.type {
 		float: left;
@@ -1864,6 +1869,7 @@ em.high-importance{
 		width: 100%;
 		line-height: 40px;
 		list-style-type: none;
+		box-sizing: border-box;
 	}
 	li.selected{
 		color: #fff;
@@ -2906,6 +2912,9 @@ i.shared{
 		.avatar{
 			display: none;
 		}
+		.content{
+			margin: 0;
+		}
 	}
 	.panel{
 		.border-radius(0);
@@ -3312,9 +3321,20 @@ ul.thought-out-actions{
 }
 
 .blur-grid{
-	.blur-grid;
 	.edit-grid{
-		.edit-grid;
+		button,i,input[button]{
+			opacity: 1;
+			pointer-events: all;
+		}
+		.grid-guides{
+			opacity: 1
+		}
+		.grid-media{
+			pointer-events: all;
+		}
+		.square-menu button, .grid-add-row{
+			display: block;
+		}
 	}
 }
 
