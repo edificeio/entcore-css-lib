@@ -300,10 +300,21 @@ textarea{
 	width: 228px;
 	.cell;
 	.reduce-block-six;
+	.run-transition(width);
+	overflow: hidden;
+}
+
+.widgets.hidden{
+	width: 0;
 }
 
 .widgets-friend{
 	margin-left: 276px;
+	.run-transition(margin-left);
+}
+
+.widgets-friend.widgets-enemy{
+	margin-left: 15px;
 }
 
 .widget-container(@header-size){
