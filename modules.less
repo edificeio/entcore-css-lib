@@ -2545,6 +2545,11 @@ a.cke_smile img {
 		.media-container{
 			overflow-y: auto;
 			height: 100%;
+			iframe{
+				height: 100%;
+				min-height: 0;
+				position: absolute;
+			}
 		}
 
 	}
@@ -2588,6 +2593,7 @@ a.cke_smile img {
 	-moz-transition: width 150ms ease, padding-bottom 150ms ease, margin-left 100ms ease;
 	-webkit-transition: width 150ms ease, padding-bottom 150ms ease, margin-left 100ms ease;
 	transition: width 150ms ease, padding-bottom 150ms ease, margin-left 100ms ease;
+
 }
 
 .drawing-grid{
@@ -3220,6 +3226,7 @@ iframe.cke_panel_frame{
 
 .cke_dialog_body iframe, article iframe, [contenteditable] iframe{
 	min-height: 0;
+	height: 500px;
 }
 
 .dominos.fallen{
