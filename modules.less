@@ -302,7 +302,7 @@ textarea{
 	.reduce-block-six;
 	.run-transition(width);
 	overflow-x: hidden;
-	height: 1000px;
+	height: 1800px;
 }
 
 .widgets.hidden{
@@ -2491,6 +2491,9 @@ a.cke_smile img {
 			outline: 1px dotted black;
 		}
 	}
+	nav.vertical{
+		padding: 0;
+	}
 }
 
 .editor{
@@ -2894,6 +2897,18 @@ i.shared{
 			bottom: -87px;
 			left: -110px;
 		}
+	}
+	.marker:nth-child(3){
+		border-width: 0 0 190px 191px;
+		z-index: 0;
+		.content{
+			bottom: -121px;
+			left: -174px;
+			width: 190px;
+		}
+	}
+	.marker:empty{
+		display: none;
 	}
 }
 .blogs-posts-list table{
@@ -3487,6 +3502,7 @@ ul.thought-out-actions{
 			img{
 				height: 110px;
 				width: 110px;
+				margin-right: 10px;
 			}
 			.buttons{
 				.bottom-locked
