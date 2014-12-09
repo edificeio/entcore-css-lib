@@ -1931,27 +1931,30 @@ em.high-importance{
 	}
 }
 
-.lightbox-view .tabs.linker{
-	section .icons-view{
-		border-left: 0;
-	}
-	select{
-		height: 25px;
-	}
-
-	.found-resources{
-		position: relative;
-		height: 165px;
-		overflow-y: auto;
-		clear: both;
-		.run-transition(height);
-		.icons-view{
-			overflow: auto;
-			.absolute;
+.lightbox-view {
+	.tabs.linker {
+		section .icons-view {
+			border-left: 0;
+		}
+		select {
+			height: 25px;
 		}
 	}
-	.illustrated-list{
-		position: absolute;
+	.linker{
+		.found-resources {
+			position: relative;
+			height: 165px;
+			overflow-y: auto;
+			clear: both;
+			.run-transition(height);
+			.icons-view {
+				overflow: auto;
+				.absolute;
+			}
+		}
+		.illustrated-list {
+			position: absolute;
+		}
 	}
 }
 
