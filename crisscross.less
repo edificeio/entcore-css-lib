@@ -32,6 +32,11 @@
 	width: (960px / 12 * @cell-size);
 }
 
+.grid-rigid-cell-height(@cell-size: 1){
+	height: (960px / 12 * @cell-size);
+	box-sizing: border-box;
+}
+
 .grid-rigid-margin(@cell-size: 1){
 	margin-left: (960px / 12 * @cell-size);
 }
@@ -290,6 +295,54 @@
 
 	> .twelve{
 		.grid-rigid-cell-width(12);
+	}
+
+	> .height-one{
+		.grid-rigid-cell-height(1);
+	}
+
+	> .height-two{
+		.grid-rigid-cell-height(2);
+	}
+
+	> .height-three{
+		.grid-rigid-cell-height(3);
+	}
+
+	> .height-four{
+		.grid-rigid-cell-height(4);
+	}
+
+	> .height-five{
+		.grid-rigid-cell-height(5);
+	}
+
+	> .height-six{
+		.grid-rigid-cell-height(6);
+	}
+
+	> .height-seven{
+		.grid-rigid-cell-height(7);
+	}
+
+	> .height-eight{
+		.grid-rigid-cell-height(8);
+	}
+
+	> .height-nine{
+		.grid-rigid-cell-height(9);
+	}
+
+	> .height-ten{
+		.grid-rigid-cell-height(10);
+	}
+
+	> .height-eleven{
+		.grid-rigid-cell-height(11);
+	}
+
+	> .height-twelve{
+		.grid-rigid-cell-height(12);
 	}
 
 	> .margin-one{
