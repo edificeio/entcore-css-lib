@@ -164,13 +164,28 @@ nav.vertical{
 }
 
 nav.stamps{
+	.grid-rigid-cell-width(4);
 	article{
-		margin-top: 7px;
-		margin-bottom: 7px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		line-height: 20px;
 		padding: 0;
-		height: 98px;
 		.twelve;
+		height: 120px;
+		width: 290px;
+		clear: both;
+		position: relative;
+		> div:nth-child(2){
+			padding: 8px;
+		}
+		> div:nth-child(1){
+			height: 120px;
+			width: 120px;
+			margin-right: 5px;
+			.cell;
+		}
 	}
+
 }
 
 .dominos{
@@ -505,6 +520,7 @@ p{
 }
 
 .dominos{
+	margin-bottom: 30px;
 	.twelve;
 	.cell;
 	.item{
@@ -1052,6 +1068,10 @@ ul.icons-tabs{
 		}
 		.img.container{
 			border: 1px solid #ccc;
+			> div{
+				height: 100%;
+				width: 100%;
+			}
 		}
 
 		img, i{
@@ -2425,6 +2445,12 @@ a.cke_smile img {
 
 		min-height: 100%;
 		cursor: inherit !important;
+	}
+
+	.articles-sniplet{
+		[contenteditable]{
+			position: relative;
+		}
 	}
 
 	i.close{
