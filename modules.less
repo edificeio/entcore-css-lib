@@ -180,10 +180,10 @@ nav.stamps{
 		right: 5px;
 	}
 	.item{
+		max-width: 188px;
 		min-width: 154px;
 		.domino{
 			border: 1px solid #ccc;
-			max-width: 250px;
 		}
 	}
 }
@@ -1669,7 +1669,7 @@ span.no-style{
 		background: #ccc;
 		color: #000;
 		.border-radius(3px);
-		box-shadow: 1px 2px 2px #ccc;
+		box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 		font-size: 12px;
 		position: relative;
 	}
@@ -2014,19 +2014,6 @@ em.high-importance{
 		}
 	}
 
-	.accordion:first-child{
-		h2{
-			.border-radius-top();
-		}
-	}
-
-	.accordion:last-child{
-		h2{
-			.border-radius-bottom();
-			border-bottom: 1px solid #555;
-		}
-	}
-
 	.accordion.opened{
 		h2{
 			border: 1px solid #555;
@@ -2087,11 +2074,9 @@ em.high-importance{
 	padding: 0;
 	li{
 		list-style-type: none;
-		border: 1px solid #ccc;
 		padding: 5px;
-		.border-radius();
 		.run-transition(background);
-		margin: 5px;
+		margin: 3px;
 	}
 
 	li.selected{
@@ -2134,6 +2119,7 @@ a.cke_smile img {
 		position: relative;
 		margin: 0;
 		li{
+			text-align: center;
 			list-style-type: none;
 			background: #666;
 			height: 35px;
@@ -3388,7 +3374,9 @@ nav.illustrated-links{
 ul.thought-out-actions{
 	padding: 0;
 	margin: 0;
-	li{
+	> li{
+		.twelve;
+		.cell;
 		margin-bottom: 1px;
 		list-style-type: none;
 		padding: 8px;
@@ -3520,7 +3508,7 @@ ul.thought-out-actions{
 	width: 0 !important;
 }
 
-.empty-neighbour{
+.empty-neighbour, .flexible.content:empty + .flexible.navigation{
 	width: 100% !important;
 	.patchwork{
 		padding-right: 0;
@@ -3537,6 +3525,9 @@ ul.thought-out-actions{
 	.navigation .items{
 		padding-right: 35px;
 		.row{
+			border: 1px solid #ddd;
+			margin-bottom: 10px;
+			.run-transition(background);
 			> .cell{
 				height: 110px;
 			}
@@ -3555,20 +3546,6 @@ ul.thought-out-actions{
 				.bottom-locked
 			}
 		}
-		.row.selected, .row:nth-child(2n).selected{
-			h1{
-				border-bottom: 1px dashed;
-			}
-		}
-		.row:nth-child(2n){
-			.cell{
-				float: right !important;
-				text-align: right;
-			}
-			.bottom-locked{
-				right: 8px;
-			}
-		}
 	}
 
 	.navigation{
@@ -3579,6 +3556,7 @@ ul.thought-out-actions{
 		.nine;
 		.right-magnet;
 		overflow: hidden;
+		padding: 0;
 	}
 }
 
