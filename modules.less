@@ -637,6 +637,7 @@ article.media{
 		.options-list{
 			top: 25px;
 			width: 210%;
+
 		}
 
 		.current {
@@ -946,6 +947,9 @@ a{
 	position: fixed;
 	.run-transition(height);
 	z-index: 20;
+	.toggle{
+		padding: 10px;
+	}
 	button{
 		opacity: 1;
 		.run-transition(opacity);
@@ -1222,6 +1226,7 @@ ul.icons-tabs{
 		height: 0;
 		overflow: hidden;
 		.run-transition(height);
+		max-width: none;
 	}
 	.options-list.icons-view{
 		padding: 0;
@@ -1690,7 +1695,7 @@ span.no-style{
 	z-index: 20;
 	display: none;
 	.content{
-		padding: 5px;
+		padding: 5px 10px;
 		background: #ccc;
 		color: #000;
 		.border-radius(3px);
@@ -3653,7 +3658,8 @@ carousel{
 	.images{
 		width: 100%;
 		position: relative;
-		height: 326px;
+		height: 0;
+		padding-bottom: 33%;
 		.image{
 			position: absolute;
 			left: 0;
@@ -3741,7 +3747,7 @@ carousel.slide{
 	}
 	.image.current{
 		display: block;
-		height: 326px;
+		height: 100%;
 		width: 70%;
 		margin-left: 15%;
 		z-index: 200 !important;
