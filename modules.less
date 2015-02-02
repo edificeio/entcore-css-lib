@@ -83,6 +83,7 @@ textarea.inline-editing{
 
 nav.vertical{
 	padding-right: 15px;
+	box-sizing: border-box;
 	h2{
 		overflow: hidden;
 		white-space: nowrap;
@@ -161,6 +162,10 @@ nav.vertical{
 			}
 		}
   }
+}
+
+input[type=text], input[type=password], input[type=search]{
+	border: none;
 }
 
 nav.stamps{
@@ -2374,8 +2379,8 @@ a.cke_smile img {
 		display: table-cell;
 		.image {
 			overflow: hidden;
-			height: 150px;
-			width: 150px;
+			height: 100px;
+			width: 100px;
 			margin-right: 15px;
 			position: relative;
 			img {
@@ -2384,7 +2389,7 @@ a.cke_smile img {
 		}
 		legend {
 			height: 55px;
-			width: 150px;
+			width: 100px;
 			margin-right: 15px;
 			box-sizing: border-box;
 			padding: 6px;
@@ -3023,7 +3028,6 @@ i.shared{
 		width: 200px;
 		float: right;
 		line-height: 20px;
-		border: 0;
 	}
 	a{
 		display: block;
