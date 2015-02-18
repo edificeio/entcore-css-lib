@@ -874,21 +874,23 @@ a{
 }
 
 .drop-down.hidden{
-	max-height: 0px;
+	height: 0;
+}
+
+.drop-down.expanded{
+	overflow: visible;
 }
 
 .drop-down{
 	overflow: hidden;
 	position: absolute;
 	z-index: 8000;
-	max-height: 260px;
+	height: 260px;
 	background: #eee;
 	cursor: pointer;
-	.run-transition(max-height, 200ms, ease-in-out);
+	.run-transition(height);
 	ul{
-		padding: 0px;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding: 10px 0;
 		margin: 0px;
 		background: #eee;
 		width: 100%;
@@ -1149,6 +1151,8 @@ ul.icons-tabs{
 }
 
 .select-file{
+	margin-top: 20px;
+	margin-bottom: 20px;
 	input[type=text]{
 		float: left;
 		margin-right: 0;
@@ -1348,7 +1352,6 @@ hr{
 }
 
 .lightbox-window form{
-	padding: 10px;
 	input, label{
 		display: block;
 		float: left;
@@ -3615,6 +3618,10 @@ ul.thought-out-actions{
 	.run-transition(margin-top);
 }
 
+table{
+	margin-bottom: 20px;
+}
+
 .wizard{
 	display: table;
 	width: 100%;
@@ -3802,5 +3809,51 @@ carousel.triplets{
 image-select.loading-panel{
 	img{
 		visibility: hidden;
+	}
+}
+
+slider, slider.drawing-zone{
+	overflow:visible;
+	height: 15px;
+	margin-left: -12px;
+	display: block;
+	position: relative;
+	width: 100%;
+	margin-top: 35px;
+	margin-bottom: 20px;
+	.bar {
+		width: 100%;
+		height: 15px;
+		background: #ddd;
+		box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1) inset;
+		margin-left: 12px;
+	}
+	.cursor{
+		width: 0;
+		height: 0;
+		border-top: 20px solid #666;
+		border-right: 13px solid transparent;
+		border-left: 13px solid transparent;
+		margin-top: -26px;
+		z-index: 1;
+		cursor: pointer;
+	}
+	.filled{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 15px;
+		background: #666;
+		margin-left: 12px;
+	}
+	legend{
+		position: absolute;
+		top: -23px;
+	}
+	legend.min{
+		left: 0;
+	}
+	legend.max{
+		right: -25px;
 	}
 }
