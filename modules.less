@@ -882,7 +882,7 @@ a{
 }
 
 .drop-down{
-	overflow: hidden;
+	overflow: visible;
 	position: absolute;
 	z-index: 8000;
 	height: 260px;
@@ -1444,6 +1444,10 @@ section.lightbox-window{
 			.icon(glyphicons_207_remove_2, 20px);
 		}
 	}
+}
+
+i.remove{
+	.icon(glyphicons_207_remove_2, 20px);
 }
 
 .loading-panel{
@@ -2014,6 +2018,12 @@ em.high-importance{
 		}
 		.illustrated-list {
 			position: absolute;
+			li{
+				img{
+					position: relative !important;
+					height: 100% !important;
+				}
+			}
 		}
 	}
 }
@@ -3249,22 +3259,19 @@ drop-down-button{
 }
 
 .drop-down-button{
-	position: absolute;
 	z-index: 650;
 	white-space: nowrap;
-	width: 100%;
+	min-width: 100%;
+	position: relative;
+	display: inline-block;
 	label{
 		display: block;
 		cursor: pointer;
 		.border-box;
-		width: 100%;
-		padding: 4px;
-		padding-left: 10px;
-		padding-right: 10px;
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
+		min-width: 100%;
+		padding: 4px 10px;
+		border-radius: 3px 3px 0 0;
+		float: left;
 		font-size: 15px;
 		background: #fff;
 		border: 1px solid #444;
@@ -3856,4 +3863,47 @@ slider, slider.drawing-zone{
 	legend.max{
 		right: -25px;
 	}
+}
+
+recorder{
+	display: block;
+	.metadata{
+		input[type=text]{
+			width: 100%;
+			box-sizing: border-box;
+		}
+		::-webkit-input-placeholder { /* WebKit browsers */
+			color: #fff;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			color: #fff;
+			opacity:  1;
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10+ */
+			color: #fff;
+		}
+	}
+	.controls{
+		width: 100%;
+		height: 40px;
+		i{
+			margin: 10px 3px 3px;
+		}
+		.play{
+			.icon(glyphicons_173_play, 20px);
+		}
+		.pause{
+			.icon(glyphicons_174_pause, 20px);
+		}
+		.record{
+			.icon(glyphicons_169_record, 20px);
+		}
+		.save{
+			.icon(glyphicons_443_floppy_disk, 20px);
+		}
+		.remove{
+			.icon(glyphicons_207_remove_2_white, 20px);
+		}
+	}
+
 }
