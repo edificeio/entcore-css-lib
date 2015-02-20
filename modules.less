@@ -862,6 +862,28 @@ a{
 	}
 }
 
+.read-only{
+	.share{
+		label{
+			pointer-events: none;
+		}
+		input[type=checkbox]{
+			opacity: 0.5;
+		}
+		.row:last-child{
+			display: none;
+		}
+		.line{
+			margin: 0 !important;
+			border: none !important;
+		}
+		.drop-line{
+			pointer-events: none;
+			background: none !important;
+		}
+	}
+}
+
 .share.publish{
 	table{
 		tr{
