@@ -3941,18 +3941,39 @@ recorder{
 		.play{
 			.icon(glyphicons_173_play, 20px);
 		}
-		.pause{
-			.icon(glyphicons_174_pause, 20px);
-		}
 		.record{
 			.icon(glyphicons_169_record, 20px);
 		}
+		.pause{
+			.icon(glyphicons_174_pause, 20px);
+		}
 		.save{
 			.icon(glyphicons_443_floppy_disk, 20px);
+			float: right;
 		}
 		.remove{
-			.icon(glyphicons_207_remove_2_white, 20px);
+			.icon(glyphicons_207_remove_2_accent, 20px);
+			float: right;
 		}
 	}
-
+	.view{
+		height: 30px;
+	}
+	.status{
+		width: 100%;
+		height: 20px;
+		padding: 5px;
+		box-sizing: border-box;
+		font-size: 14px;
+		.elapsed-time{
+			float: right;
+		}
+		.status{
+			float: left;
+		}
+	}
+	.controls{
+		padding: 2px;
+		box-sizing: border-box;
+	}
 }
