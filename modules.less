@@ -3916,10 +3916,14 @@ slider, slider.drawing-zone{
 
 recorder{
 	display: block;
+	padding: 5px;
 	.metadata{
+		float: right;
+		width: 50%;
 		input[type=text]{
 			width: 100%;
 			box-sizing: border-box;
+			text-align: right;
 		}
 		::-webkit-input-placeholder { /* WebKit browsers */
 			color: #fff;
@@ -3949,25 +3953,26 @@ recorder{
 		}
 		.save{
 			.icon(glyphicons_443_floppy_disk, 20px);
-			float: right;
 		}
 		.remove{
 			.icon(glyphicons_207_remove_2_accent, 20px);
-			float: right;
 		}
 	}
 	.view{
 		height: 30px;
 	}
+	.elapsed-time{
+		float: right;
+		padding-top: 15px;
+	}
 	.status{
-		width: 100%;
+		width: 50%;
 		height: 20px;
 		padding: 5px;
 		box-sizing: border-box;
 		font-size: 14px;
-		.elapsed-time{
-			float: right;
-		}
+		float: left;
+
 		.status{
 			float: left;
 		}
