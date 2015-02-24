@@ -737,6 +737,7 @@ table{
 
 .list-view{
 	width: 100%;
+	list-style-type: none;
 
 	tr.underline{
 		padding-bottom: 15px;
@@ -771,6 +772,37 @@ table{
 		max-width: 280px;
 		.cell-ellipsis;
 	}
+	.date{
+		text-align: right;
+	}
+}
+
+ul.list-view{
+	padding-left: 0;
+	li{
+		width: 100%;
+		float: left;
+		border-bottom: 1px solid #ccc;
+		padding-left: 15px;
+		padding-right: 15px;
+		box-sizing: border-box;
+		background: #fff;
+		> div > .cell{
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	li.date{
+		text-align: right;
+	}
+}
+
+i.drag-anchor{
+	.icon(glyphicons_186_move, 15px);
+	background-size: contain;
+	float: none;
+	display: inline-block;
 }
 
 a{
