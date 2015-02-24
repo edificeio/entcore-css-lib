@@ -3918,12 +3918,13 @@ recorder{
 	display: block;
 	padding: 5px;
 	.metadata{
-		float: right;
-		width: 50%;
+		float: left;
+		width: 100%;
+		padding: 3px;
+		box-sizing: border-box;
 		input[type=text]{
 			width: 100%;
 			box-sizing: border-box;
-			text-align: right;
 		}
 		::-webkit-input-placeholder { /* WebKit browsers */
 			color: #fff;
@@ -3938,7 +3939,7 @@ recorder{
 	}
 	.controls{
 		width: 100%;
-		height: 40px;
+		height: 60px;
 		i{
 			margin: 10px 3px 3px;
 		}
@@ -3959,18 +3960,17 @@ recorder{
 		}
 	}
 	.view{
-		height: 30px;
+		height: 40px;
 	}
 	.elapsed-time{
 		float: right;
-		padding-top: 15px;
+		padding-top: 10px;
 	}
 	.status{
-		width: 50%;
-		height: 20px;
-		padding: 5px;
+		width: 100%;
+		height: 30px;
+		padding: 3px;
 		box-sizing: border-box;
-		font-size: 14px;
 		float: left;
 
 		.status{
@@ -3980,5 +3980,8 @@ recorder{
 	.controls{
 		padding: 2px;
 		box-sizing: border-box;
+		i:first-child{
+			margin-left: 0;
+		}
 	}
 }
