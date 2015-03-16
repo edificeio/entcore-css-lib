@@ -815,6 +815,91 @@ i.drag-anchor{
 	display: inline-block;
 }
 
+i.fullscreen{
+	.icon(glyphicons_215_resize_full, 25px);
+}
+
+i.leave-fullscreen{
+	.icon(glyphicons_214_resize_small, 25px);
+}
+
+i.previous{
+	.icon(glyphicons_210_left_arrow, 25px);
+}
+
+i.next{
+	.icon(glyphicons_211_right_arrow, 25px);
+}
+
+i.download{
+	.icon(glyphicons_181_download_alt, 25px);
+}
+
+.embedded-viewer{
+	padding: 5px;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+	img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	i{
+		margin-left: 3px;
+		margin-right: 3px;
+	}
+	.file{
+		margin-top: 30px;
+	}
+}
+
+.embedded-viewer.fullscreen{
+	position: fixed;
+	z-index: 10010;
+	left: 0;
+	top: 0;
+	height: 40px;
+}
+
+.fullscreen-viewer{
+	position: absolute;
+	z-index: 10000;
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+	top: 40px;
+	left: 0;
+	min-height: 100%;
+	.render{
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+}
+
+pdf-viewer{
+	display: block;
+	width: 100%;
+	position: relative;
+	margin-top: 30px;
+	.file-controls, .pagination{
+		position: absolute;
+		top: -30px;
+	}
+	.file-controls{
+		right: 65px;
+	}
+	.pagination{
+		right: 5px;
+	}
+}
+
+.pagination{
+	input[type=text]{
+		width: 20px;
+	}
+}
+
 a{
 	color: blue;
 	.run-transition(color);
