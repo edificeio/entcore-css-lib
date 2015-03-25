@@ -3232,6 +3232,7 @@ portal .page-markers{
 	.icons-view.apps{
 		margin-top: 0;
 	}
+
 }
 
 popover{
@@ -3241,11 +3242,12 @@ popover{
 		content: "\25b2";
 		display: block;
 		position: absolute;
-		top: -17px;
+		top: -7px;
 		font-size: 36px;
 		left: 50%;
-		margin-left: -14px;
+		margin-left: -17px;
 		color: #fff;
+		z-index: 0;
 	}
 	popover-content{
 		position: absolute;
@@ -3258,6 +3260,10 @@ popover{
 		left: -50px;
 		margin-left: 50%;
 		text-align: center;
+		.content{
+			z-index: 1;
+			position: relative;
+		}
 	}
 	popover-content.hidden{
 		opacity: 0;
