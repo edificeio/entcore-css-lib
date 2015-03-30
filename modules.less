@@ -2168,7 +2168,33 @@ em.high-importance{
 	}
 }
 
-.lightbox-view {
+.lightbox{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	position: fixed;
+	z-index: 10001;
+	background: rgba(0,0,0,0.6);
+	top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	left: 0;
+	right: 0;
+	display: none;
+	.content{
+		border-radius: 5px;
+		width: 720px;
+		margin-left: auto;
+		margin-right: auto;
+		background: #fff;
+		position: relative;
+		margin-top: 80px;
+		padding: 15px;
+	}
+}
+
+.lightbox-view, .lightbox {
 	.tabs.linker {
 		section .icons-view {
 			border-left: 0;
@@ -3620,7 +3646,10 @@ iframe.cke_panel_frame{
 	i.close-2x{
 		display: none;
 	}
-	.lightbox-view{
+	.content{
+		background: transparent;
+	}
+	.lightbox-view, .lightbox{
 		background: transparent;
 		h2{
 			color: #fff;
