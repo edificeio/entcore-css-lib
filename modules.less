@@ -2627,8 +2627,12 @@ a.cke_smile img {
 }
 
 .illustrated-article {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
 	.illustration {
 		display: table-cell;
+		width: 100px;
 		.image {
 			overflow: hidden;
 			height: 100px;
@@ -2653,7 +2657,6 @@ a.cke_smile img {
 	}
 	.illustrated-text {
 		display: table-cell;
-		width: 100%;
 		vertical-align: top;
 		position: relative;
 		.bottom-locked {
@@ -3550,7 +3553,6 @@ drop-down-button{
 	white-space: nowrap;
 	min-width: 100%;
 	position: relative;
-	display: inline-block;
 	label{
 		display: block;
 		cursor: pointer;
