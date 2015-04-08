@@ -3980,7 +3980,7 @@ carousel{
 		width: 100%;
 		position: relative;
 		height: 0;
-		padding-bottom: 33%;
+		padding-bottom: 45%;
 		.image{
 			position: absolute;
 			left: 0;
@@ -3988,7 +3988,6 @@ carousel{
 			.run-transition(all);
 			text-align: center;
 			display: none;
-			overflow: hidden;
 			padding: 8px;
 			border: 1px solid #ddd;
 			background: #fff;
@@ -4052,6 +4051,29 @@ carousel.slide{
 				vertical-align: middle;
 			}
 		}
+		&::before{
+			content: " ";
+			position: absolute;
+			display: block;
+			background: rgba(255, 255, 255, 0.6);
+			height: 100px;
+			width: 100px;
+			border-radius: 50px;
+			top: 20px;
+			left: -25px;
+		}
+		&::after{
+			width: 0;
+			height: 0;
+			border-top: 25px solid transparent;
+			border-bottom: 25px solid transparent;
+			border-right: 35px solid black;
+			content: " ";
+			display: block;
+			position: absolute;
+			top: 45px;
+			left: 0px;
+		}
 	}
 	.image.next{
 		display: block;
@@ -4064,6 +4086,29 @@ carousel.slide{
 			img{
 				vertical-align: middle;
 			}
+		}
+		&::before{
+			content: " ";
+			position: absolute;
+			top: 20px;
+			right: -25px;
+			display: block;
+			background: rgba(255, 255, 255, 0.6);
+			height: 100px;
+			width: 100px;
+			border-radius: 50px;
+		}
+		&::after{
+			width: 0;
+			height: 0;
+			border-top: 25px solid transparent;
+			border-bottom: 25px solid transparent;
+			border-left: 35px solid black;
+			content: " ";
+			display: block;
+			position: absolute;
+			top: 45px;
+			right: 0px;
 		}
 	}
 	.image.current{
