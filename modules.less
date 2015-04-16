@@ -3663,16 +3663,18 @@ iframe.cke_panel_frame{
 		.domino{
 			.top, .bottom{
 				clear: none;
-				float: left;
-				padding-bottom: 48%;
-
-			}
-			.bottom{
-				width: 48%;
-				margin: 0;
+				padding-bottom: 0;
 			}
 			.top{
-				width:52%;
+				width: 120px;
+				height: 120px;
+				margin: 0;
+				float: left;
+			}
+			.bottom{
+				margin: 0 0 0 120px;
+				height: 120px;
+				width: auto;
 			}
 		}
 	}
@@ -4337,7 +4339,7 @@ recorder{
 }
 
 article.preview{
-	height: 115px;
+	height: 130px;
 	overflow: hidden;
 	.run-transition(height);
 	&.expanded{
@@ -4376,5 +4378,55 @@ input-password{
 		float: none;
   		vertical-align: middle;
 		border-left: none;
+	}
+}
+
+side-panel{
+	position: relative;
+	z-index: 1;
+	.opener{
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		display: inline-block;
+		vertical-align: middle;
+		border-radius: 25px;
+		transform: rotate(90deg);
+		font-size: 30px;
+		.run-transition(transform);
+	}
+	.opener:hover{
+		transform: rotate(-90deg);
+	}
+	.opener::after{
+		content: "\25B2";
+		display: block;
+		margin-top: -3px;
+	}
+	&.hidden{
+		.toggle{
+			width: 0;
+		}
+		.opener{
+			transform: rotate(-90deg);
+		}
+		.opener:hover{
+			transform: rotate(90deg);
+		}
+	}
+	.toggle{
+		position: absolute;
+		width: 300px;
+		box-sizing: border-box;
+		.run-transition(width);
+		overflow: hidden;
+		top: 0;
+		left: 55px;
+		.content{
+			padding: 15px;
+			width: 300px;
+			box-sizing: border-box;
+		}
 	}
 }
