@@ -3430,12 +3430,44 @@ popover{
 }
 
 .schedule{
+	.previous-timeslots{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 40px;
+		z-index: 800;
+	}
+	.next-timeslots{
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 800;
+		height: 27px;
+	}
+	.hidden-schedule-items {
+		&.after{
+			bottom: -24px;
+			top: initial;
+		}
+		position: absolute;
+		top: -27px;
+		z-index: 801;
+		font-size: 10px;
+		left: 50%;
+		width: 22px;
+		margin-left: -7px;
+		background: #fff;
+		border-radius: 15px;
+		text-align: center;
+		color: #666;
+		pointer-events: none;
+	}
 	width: 100%;
 	height: auto;
 	margin-left: 115px;
 	padding-right: 115px;
 	box-sizing: border-box;
-	margin-top: 50px;
 	overflow: visible;
 	legend.timeslots{
 		width: 115px;
@@ -3443,6 +3475,7 @@ popover{
 		color: #777;
 		position: absolute;
 		left: -115px;
+		margin-top: 60px;
 	}
 	.timeslot{
 		height: 40px;
@@ -3452,6 +3485,10 @@ popover{
 	}
 	.days{
 		width: 100%;
+		padding-top: 60px;
+		overflow: hidden;
+		position: relative;
+		height: 546px;
 		.day{
 			float: left;
 			width: 100% / 7;
@@ -3465,7 +3502,8 @@ popover{
 				background: #D9F1F1;
 				.border-box;
 				position: absolute;
-				top: -40px;
+				top: -60px;
+				z-index: 800;
 			}
 			.timeslots{
 				height: auto;
@@ -3477,15 +3515,10 @@ popover{
 					.border-box;
 				}
 			}
-
 		}
 	}
 
 	.schedule-items{
-		position: absolute;
-		left: 0;
-		top: 0px;
-		width: 100%;
 		.border-box;
 		.schedule-item{
 			width: 100%;
@@ -3558,15 +3591,12 @@ popover{
 }
 
 .week-switcher{
-	position: absolute;
 	z-index: 30;
-	top: -35px;
-	left: -8px;
 	font-size: 12px;
+	top: 15px;
 	.date-picker-icon{
 		margin-right: 8px;
 	}
-
 }
 
 .date-picker-icon{
@@ -3582,7 +3612,7 @@ popover{
 
 .calendar-current-week{
 	position: absolute;
-	top: -98px;
+	top: -63px;
 	height: 45px;
 	background: #efefef;
 	width: 100%;
