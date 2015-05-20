@@ -2775,6 +2775,7 @@ a.cke_smile img {
 		right: 7px;
 		top: 5px;
 		background-size: 60%;
+		z-index: 200;
 	}
 	.icons-view i.close{
 		right: 11px;
@@ -3736,7 +3737,6 @@ iframe.cke_panel_frame{
 		background: transparent;
 	}
 	.lightbox-view, .lightbox{
-		background: transparent;
 		h2{
 			color: #fff;
 			margin: 1px;
@@ -3753,10 +3753,12 @@ iframe.cke_panel_frame{
 }
 
 h1.letter-picker{
-	width: 16px;
-	margin-left: 5px;
-	text-align: center;
 	clear: both;
+	height: 60px;
+	width: 60px;
+	line-height: 60px;
+	text-align: center;
+	margin: 40px auto -9px;
 }
 
 nav.illustrated-links{
@@ -4076,6 +4078,7 @@ carousel{
 			box-sizing: border-box;
 			img{
 				display: inline-block;
+				max-height: 100%;
 			}
 			.image-container{
 				height: 100%;
