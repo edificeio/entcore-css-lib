@@ -3519,6 +3519,7 @@ popover{
 	.schedule-items{
 		.border-box;
 		.schedule-item{
+			.run-transition(top);
 			width: 100%;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -3527,6 +3528,9 @@ popover{
 			border-radius: 5px;
 			.border-box;
 			z-index: 500;
+			container{
+				.run-transition(all);
+			}
 			.schedule-item-content{
 				position: absolute;
 				top: 0;
