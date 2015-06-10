@@ -89,7 +89,41 @@ h1{
 	}
 }
 
-nav.vertical{
+help{
+	section.lightbox > div.content{
+		width: 920px;
+	}
+}
+.app-single-post{
+	background: #fff;
+	section.app-content-section:not(:target) {
+		display: none;
+	}
+	.app-menu{
+		float: left;
+		width: 250px;
+	}
+	.app-content-section{
+		width: 640px;
+		float: right;
+		overflow: auto;
+		height: 395px;
+		img{
+			max-width: 100%;
+		}
+	}
+	.app-content-container{
+		margin-top: 15px;
+	}
+}
+.app-single-post::after {
+	content: " ";
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+nav.vertical, .app-menu{
 	padding-right: 15px;
 	box-sizing: border-box;
 	h2{
@@ -4601,26 +4635,30 @@ plus{
 	}
 }
 
-.card{
-	.three;
-	.cell;
-	max-width: 400px;
-	min-width: 350px;
-	padding: 10px;
-	.illustration{
-		margin-right: 10px;
-		margin-bottom: 10px;
-		position: relative;
-		.three;
-		.height-three;
-		.cell;
-		input[type=checkbox]{
-			position: absolute;
-			top: 5px;
-			left: 5px;
+.cards-list{
+	width: 100%;
+	text-align: center;
+	.card{
+		text-align: left;
+		display: inline-block;
+		padding: 10px;
+		margin: 8px;
+		vertical-align: top;
+		.illustration{
+			margin-right: 10px;
+			margin-bottom: 10px;
+			position: relative;
+			.three;
+			.height-three;
+			.cell;
+			input[type=checkbox]{
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
 		}
-	}
-	h3:first-of-type, h1:first-of-type, h2:first-of-type{
-		margin-top: 0;
+		h3:first-of-type, h1:first-of-type, h2:first-of-type{
+			margin-top: 0;
+		}
 	}
 }
