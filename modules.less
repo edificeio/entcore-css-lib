@@ -54,6 +54,7 @@ a.button, button, input[type=button], input[type=submit]{
 	margin: 0;
 	margin-left: 1px;
 	margin-right: 1px;
+	.cell;
 }
 
 i{
@@ -1692,7 +1693,7 @@ article{
 
 hr{
 	border: none;
-	margin: 15px;
+	padding: 10px;
 }
 
 .cell{
@@ -4660,5 +4661,23 @@ plus{
 		h3:first-of-type, h1:first-of-type, h2:first-of-type{
 			margin-top: 0;
 		}
+	}
+}
+
+.illustration{
+	display: flex;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	left: 0;
+	img{
+		align-self: center;
+	}
+	input[type=checkbox]{
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
 	}
 }
