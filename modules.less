@@ -20,9 +20,8 @@
 	background-image: url("@{icons-root}@{icon-name}@{icons-extension}");
 	background-repeat: no-repeat;
 	background-position: center;
-	display: block;
+	display: inline-block;
 	.border-box;
-	float: left;
 	vertical-align: middle;
 }
 
@@ -31,8 +30,6 @@
 	background: -moz-linear-gradient(@top-color, @bottom-color);
 	background: -o-linear-gradient(@top-color, @bottom-color);
 	background:  linear-gradient(@top-color, @bottom-color);
-	-pie-background: linear-gradient(@top-color, @bottom-color);
-	behavior: url(/assets/themes/panda/css/PIE.htc);
 }
 
 .invert-colors(){
@@ -186,10 +183,13 @@ nav.vertical, .app-menu{
 					display: block;
 					float: right;
 					margin-top: 2px;
+					opacity: 0;
+					.run-transition(opacity);
 				}
 
 				i.arrow{
 					float: left;
+					opacity: 1;
 				}
 				i.arrow::before{
 					content: ">";
@@ -207,10 +207,18 @@ nav.vertical, .app-menu{
 			}
 			a.selected{
 				background: #ccc;
+				i{
+					opacity: 1;
+				}
 			}
 			a.opened{
 				i.arrow::before{
 					content: "v";
+				}
+			}
+			a:hover{
+				i{
+					opacity: 1;
 				}
 			}
 			input{
@@ -713,6 +721,11 @@ i.home{
 	float: none;
 	margin-top: -3px;
 	margin-right: 5px;
+}
+
+i.attachment{
+	.icon(glyphicons_062_paperclip, 20px);
+	background-size: contain;
 }
 
 article.media{
