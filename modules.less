@@ -112,9 +112,6 @@ help{
 
 .app-single-post{
 	background: #fff;
-	section.app-content-section:not(:target) {
-		display: none;
-	}
 	.app-menu{
 		float: left;
 		width: 250px;
@@ -122,10 +119,9 @@ help{
 	.app-content-section{
 		width: 640px;
 		float: right;
-		overflow: auto;
-		height: 395px;
 		img{
 			max-width: 100%;
+			display: block;
 		}
 	}
 	.app-content-container{
@@ -2316,6 +2312,10 @@ section.lightbox{
 	right: 0;
 	display: none;
 	text-align: left;
+	color: initial;
+	line-height: initial;
+	font-size: initial;
+	font-weight: normal;
 	.background{
 		position: absolute;
 		width: 100%;
@@ -2333,6 +2333,12 @@ section.lightbox{
 		float: none !important;
 	}
 	.content::after{
+		clear:both;
+		content: " ";
+		display: block;
+		width: 100%;
+	}
+	&::after{
 		clear:both;
 		content: " ";
 		display: block;
