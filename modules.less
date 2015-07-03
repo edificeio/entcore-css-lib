@@ -4530,7 +4530,7 @@ input-password{
 	}
 }
 
-.hash-magnet{
+.hash-magnet, nav.hash-magnet.vertical{
 	margin-top: -80px;
 	padding-top: 80px;
 	display: block;
@@ -4737,5 +4737,69 @@ plus{
 		position: absolute;
 		bottom: 5px;
 		right: 5px;
+	}
+}
+
+.single-line{
+
+}
+
+nav.floating{
+	margin-bottom: 10px;
+	.arrow.next{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 40px;
+		display: none;
+		&::after{
+			content: "\25B2";
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 40px;
+			height: 40px;
+			background-color: #ccc;
+			text-align: center;
+			border-radius: 20px;
+			font-size: 26px;
+			line-height: 38px;
+		}
+		&.visible{
+			display: block;
+		}
+	}
+	.arrow.previous{
+		position: absolute;
+		height: 40px;
+		width: 100%;
+		top: 80px;
+		z-index: 10;
+		display: none;
+		&::after{
+			content: "\25B2";
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 40px;
+			height: 40px;
+			background-color: #ccc;
+			text-align: center;
+			border-radius: 20px;
+			font-size: 26px;
+			line-height: 38px;
+			transform: rotate(180deg);
+		}
+		&.visible{
+			display: block;
+		}
+	}
+	.content{
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		box-sizing: border-box;
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
 }
