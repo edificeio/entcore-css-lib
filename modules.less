@@ -3316,6 +3316,7 @@ portal .page-markers{
 		.content{
 			position: absolute;
 			transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg);
 			bottom: -69px;
 			left: -66px;
 			width: 80px;
@@ -4607,12 +4608,15 @@ side-panel{
 		vertical-align: middle;
 		border-radius: 25px;
 		transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
 		font-size: 24px;
 		margin-top: -6px;
 		.run-transition(transform);
+		.run-transition(-webkit-transform);
 	}
 	.opener:hover{
 		transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
 	}
 	.opener::after{
 		content: "\25B2";
@@ -4625,9 +4629,11 @@ side-panel{
 		}
 		.opener{
 			transform: rotate(-90deg);
+			-webkit-transform: rotate(-90deg);
 		}
 		.opener:hover{
 			transform: rotate(90deg);
+			-webkit-transform: rotate(90deg);
 		}
 	}
 	.toggle{
@@ -4664,6 +4670,7 @@ plus{
 			display:block;
 			position: absolute;
 			.run-transition(transform);
+			.run-transition(-webkit-transform);
 			height: 100%;
 			width: 100%;
 			top: 0;
@@ -4789,6 +4796,7 @@ nav.floating{
 			font-size: 26px;
 			line-height: 38px;
 			transform: rotate(180deg);
+			-webkit-transform: rotate(180deg);
 		}
 		&.visible{
 			display: block;
