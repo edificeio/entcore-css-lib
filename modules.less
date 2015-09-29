@@ -1995,10 +1995,15 @@ span.no-style{
 			min-height: 100%;
 		}
 	}
-	article{
-		img.extensible{
-			width: 100%;
-			height: 100%;
+	article.media, article{
+		.image-container{
+			display: flex;
+			align-items: center;
+			img{
+				width: 100%;
+				height: auto;
+				max-height: none;
+			}
 		}
 		p, h1, h2, h3, h4, h5, h6{
 			padding: 5px;
