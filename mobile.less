@@ -1,5 +1,13 @@
-@media screen and (max-width: 800px){
+@media screen and (max-width: 700px){
 	body {
+		width: 100%;
+		min-height: 100%;
+		.run-transition(left);
+		left: 0;
+		position: relative !important;
+		&.slide{
+			left: 300px;
+		}
 		section.lightbox {
 			> div.content{
 				min-height: 100%;
@@ -9,7 +17,7 @@
 				box-sizing: border-box;
 			}
 		}
-		.icons-view.app{
+		.icons-view.apps{
 			.element{
 				width: 80px;
 				.legend{
@@ -24,6 +32,33 @@
 					font-size: 55px;
 				}
 			}
+		}
+		.toggle-buttons{
+			height: auto;
+			.button, button{
+				padding: 5px;
+			}
+		}
+
+		.mobile-nav-opener{
+			.icon(glyphicons_113_justify, 50px);
+			float: left;
+		}
+
+		nav.vertical[side-nav]{
+			position: absolute;
+			width: 300px;
+			left: -315px;
+			top: -10px;
+			z-index: 10001;
+			padding: 10px;
+			box-sizing: border-box;
+
+		}
+
+		.toggle-buttons {
+			left: 0;
+			margin-left:0;
 		}
 	}
 }

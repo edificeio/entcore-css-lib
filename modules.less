@@ -5,7 +5,7 @@
 
 @baseFontSize: 12px;
 
-@import "crisscross";
+@import "crisscross-mobile";
 @import "datepicker";
 
 @icon-list-size: 117px;
@@ -1230,6 +1230,7 @@ a{
 	height: 60px;
 	bottom: 0;
 	position: fixed;
+	max-width: 100%;
 	.run-transition(height);
 	z-index: 8000;
 	.toggle{
@@ -4218,6 +4219,8 @@ carousel{
 				height: 100%;
 				width: 100%;
 				overflow: hidden;
+				display: flex;
+				align-items: center;
 			}
 		}
 	}
@@ -4852,3 +4855,5 @@ nav.floating{
 		padding-bottom: 20px;
 	}
 }
+
+@import "mobile";
