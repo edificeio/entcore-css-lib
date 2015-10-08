@@ -1,0 +1,323 @@
+@import "crisscross";
+
+@media screen and (max-width: 800px){
+	body{
+		.row-mobile:after{
+			clear:both;
+			content: " ";
+			display: block;
+			width: 100%;
+		}
+
+		.cell-mobile{
+			.border-box;
+			float: left;
+			display: block;
+			position: relative;
+		}
+
+		.right-magnet-mobile{
+			float: right !important;
+		}
+
+		.bottom-magnet-mobile{
+			position: absolute;
+			bottom: 0;
+		}
+
+		.fixed-block-mobile{
+			box-sizing: content-box;
+			position: relative;
+			height: 0px;
+
+			.right-magnet.cell.absolute{
+				right: 0 !important;
+				left: auto;
+			}
+			.cell.fluid{
+				position: relative;
+				height: 100%;
+			}
+			.bottom-magnet.cell{
+				bottom: 0;
+				position: absolute;
+			}
+		}
+
+		.height-one-mobile{
+			.fixed-block;
+			.grid-cell-height(1);
+		}
+
+		.height-one-plus-half-mobile{
+			.fixed-block;
+			.grid-cell-height(1.5);
+		}
+
+		.left-one-mobile{
+			.grid-cell-left(1);
+		}
+
+		.height-two-mobile{
+			.fixed-block;
+			.grid-cell-height(2);
+		}
+
+		.left-two-mobile{
+			.grid-cell-left(2);
+		}
+
+		.height-three-mobile{
+			.fixed-block;
+			.grid-cell-height(3);
+		}
+
+		.left-three-mobile{
+			.grid-cell-left(3);
+		}
+
+		.height-four-mobile{
+			.fixed-block;
+			.grid-cell-height(4);
+		}
+
+		.left-four-mobile{
+			.grid-cell-left(4);
+		}
+
+		.height-five-mobile{
+			.fixed-block;
+			.grid-cell-height(5);
+		}
+
+		.left-five-mobile{
+			.grid-cell-left(5);
+		}
+
+		.height-six-mobile{
+			.fixed-block;
+			.grid-cell-height(6);
+		}
+
+		.left-six-mobile{
+			.fixed-block;
+			.grid-cell-left(6);
+		}
+
+		.height-seven-mobile{
+			.fixed-block;
+			.grid-cell-height(7);
+		}
+
+		.left-seven-mobile{
+			.grid-cell-left(7);
+		}
+
+		.height-eight-mobile{
+			.fixed-block;
+			.grid-cell-height(8);
+		}
+
+		.left-eight-mobile{
+			.grid-cell-left(8);
+		}
+
+		.height-nine-mobile{
+			.fixed-block;
+			.grid-cell-height(9);
+		}
+
+		.left-nine-mobile{
+			.grid-cell-left(9);
+		}
+
+		.height-ten-mobile{
+			.fixed-block;
+			.grid-cell-height(10);
+		}
+
+		.left-ten-mobile{
+			.grid-cell-left(10);
+		}
+
+		.height-eleven-mobile{
+			.fixed-block;
+			.grid-cell-height(11);
+		}
+
+		.left-eleven-mobile{
+			.grid-cell-left(11);
+		}
+
+		.height-twelve-mobile{
+			.fixed-block;
+			.grid-cell-height(12);
+		}
+
+		.left-twelve-mobile{
+			.grid-cell-left(12);
+		}
+
+		.zero-mobile{
+			display: none !important;
+		}
+
+		.one-mobile{
+			.grid-cell-width(1);
+		}
+
+		.two-mobile{
+			.grid-cell-width(2);
+		}
+
+		.three-mobile{
+			.grid-cell-width(3);
+		}
+
+		.four-mobile{
+			.grid-cell-width(4);
+		}
+
+		.five-mobile{
+			.grid-cell-width(5);
+		}
+
+		.six-mobile{
+			.grid-cell-width(6);
+		}
+
+		.seven-mobile{
+			.grid-cell-width(7);
+		}
+
+		.eight-mobile{
+			.grid-cell-width(8);
+		}
+
+		.nine-mobile{
+			.grid-cell-width(9);
+		}
+
+		.ten-mobile{
+			.grid-cell-width(10);
+		}
+
+		.eleven-mobile{
+			.grid-cell-width(11);
+		}
+
+		.twelve-mobile{
+			.grid-cell-width(12);
+		}
+
+		.rigid-grid{
+			> .one-mobile{
+				.grid-cell-width(12);
+			}
+
+			> .two-mobile{
+				.grid-cell-width(2);
+			}
+
+			> .three-mobile{
+				.grid-cell-width(3);
+			}
+
+			> .four-mobile{
+				.grid-cell-width(4);
+			}
+
+			> .five-mobile{
+				.grid-cell-width(5);
+			}
+
+			> .six-mobile{
+				.grid-cell-width(6);
+			}
+
+			> .seven-mobile{
+				.grid-cell-width(7);
+			}
+
+			> .eight-mobile{
+				.grid-cell-width(8);
+			}
+
+			> .nine-mobile{
+				.grid-cell-width(9);
+			}
+
+			> .ten-mobile{
+				.grid-cell-width(10);
+			}
+
+			> .eleven-mobile{
+				.grid-cell-width(11);
+			}
+
+			> .twelve-mobile{
+				.grid-cell-width(12);
+			}
+
+			> .height-one-mobile{
+				.grid-cell-height(1);
+			}
+
+			> .height-two-mobile{
+				.grid-cell-height(2);
+			}
+
+			> .height-three-mobile{
+				.grid-cell-height(3);
+			}
+
+			> .height-four-mobile{
+				.grid-cell-height(4);
+			}
+
+			> .height-five-mobile{
+				.grid-cell-height(5);
+			}
+
+			> .height-six-mobile{
+				.grid-cell-height(6);
+			}
+
+			> .height-seven-mobile{
+				.grid-cell-height(7);
+			}
+
+			> .height-eight-mobile{
+				.grid-cell-height(8);
+			}
+
+			> .height-nine-mobile{
+				.grid-cell-height(9);
+			}
+
+			> .height-ten-mobile{
+				.grid-cell-height(10);
+			}
+
+			> .height-eleven-mobile{
+				.grid-cell-height(11);
+			}
+
+			> .height-twelve-mobile{
+				.grid-cell-height(12);
+			}
+
+			> .margin-one, > .margin-two, > .margin-three, > .margin-four,
+			> .margin-five, > .margin-six, > .margin-seven, > .margin-eight,
+			> .margin-nine, > .margin-ten, > .margin-eleven, > .margin-twelve
+			{
+				margin: 0;
+			}
+		}
+
+		nav.vertical{
+			padding-right: 0;
+			margin: 0;
+		}
+	}
+}
