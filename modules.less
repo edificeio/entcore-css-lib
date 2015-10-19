@@ -1866,7 +1866,9 @@ em[contenteditable=true]{
 div.hidden-content{
 	height: 0px;
 	width: 0px;
-	overflow: hidden;
+	> *{
+		opacity: 0;
+	}
 }
 
 .flip-right, .flip-left{
