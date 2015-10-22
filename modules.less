@@ -671,6 +671,43 @@ p{
 
 }
 
+
+.ribbon(@height:30px){
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: fade(@white, 60%);
+	text-align: right;
+	height: 0;
+	overflow: hidden;
+	.run-transition(height);
+
+	i{
+		height: @height;
+		width: @height;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: inline-block;
+		box-sizing: border-box;
+		vertical-align: middle;
+	}
+
+	span{
+		padding-left:@height;
+	}
+}
+.ribbon-up(@height:30px){
+	height: @height;
+}
+
+.domino .top:hover .ribbon{
+  .ribbon-up;
+}
+.ribbon{
+	.ribbon();
+}
+
+
 img.text-sized{
 	height: 20px;
 	vertical-align: top;
@@ -4860,5 +4897,6 @@ nav.floating{
 		padding-bottom: 20px;
 	}
 }
+
 
 @import "mobile";
