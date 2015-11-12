@@ -3479,18 +3479,25 @@ ul.toc{
 popover{
 	position: relative;
 	display: inline-block;
-	popover-content::before{
-		content: "\25b2";
-		display: block;
-		position: absolute;
-		top: -15px;
-		font-size: 36px;
-		left: 50%;
-		margin-left: -17px;
-		color: #fff;
-		z-index: 0;
-	}
 	popover-content{
+		&::before{
+			content: "\25b2";
+			display: block;
+			position: absolute;
+			top: -15px;
+			font-size: 36px;
+			left: 50%;
+			margin-left: -17px;
+			color: #fff;
+			z-index: 0;
+		}
+		&.right{
+			left: -240px;
+			&::before{
+				left: 100%;
+				margin-left: -33px;
+			}
+		}
 		position: absolute;
 		min-height: 100px;
 		background: #eee;
