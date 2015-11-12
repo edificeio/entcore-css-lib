@@ -13,6 +13,18 @@
 			left: 300px;
 		}
 
+		table, ul.list-view{
+			th, td{
+				padding: 7px;
+			}
+		}
+
+		.list-view{
+			.content{
+				max-width: 180px;
+			}
+		}
+
 		.share {
 			font-size: 10px;
 			table thead th, table thead td{
@@ -126,6 +138,26 @@
 		.toggle-buttons {
 			left: 0;
 			margin-left:0;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	body{
+		.list-view{
+			.content{
+				max-width: 130px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 325px) {
+	body{
+		.list-view{
+			.content{
+				max-width: 90px;
+			}
 		}
 	}
 }
