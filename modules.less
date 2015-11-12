@@ -4261,16 +4261,13 @@ carousel{
 			border: 1px solid #ddd;
 			background: #fff;
 			box-sizing: border-box;
-			img{
-				display: inline-block;
-				max-height: 100%;
-			}
 			.image-container{
 				height: 100%;
 				width: 100%;
 				overflow: hidden;
 				display: flex;
 				align-items: center;
+				justify-content: center;
 			}
 		}
 	}
@@ -4319,9 +4316,6 @@ carousel.slide{
 		top: (326px - 150px) / 2;
 		.image-container{
 			line-height: 132px;
-			img{
-				vertical-align: middle;
-			}
 		}
 		&::before{
 			content: " ";
@@ -4359,9 +4353,6 @@ carousel.slide{
 		top: (326px - 150px) / 2;
 		.image-container{
 			line-height: 132px;
-			img{
-				vertical-align: middle;
-			}
 		}
 		&::before{
 			content: " ";
@@ -4399,9 +4390,6 @@ carousel.slide{
 		z-index: 200 !important;
 		.image-container{
 			line-height: 308px;
-			img{
-				vertical-align: middle;
-			}
 		}
 	}
 }
