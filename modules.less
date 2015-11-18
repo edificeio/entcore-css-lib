@@ -2,7 +2,6 @@
 @grayLight: #ccc;
 @grayLighter: #eee;
 @btnPrimaryBackground: #ccc;
-
 @baseFontSize: 12px;
 
 @import "crisscross-mobile";
@@ -3433,35 +3432,6 @@ ul.toc{
 	table-layout: fixed;
 }
 
-@media screen and (max-width: 800px){
-	.widgets{
-		display: none;
-	}
-
-	.widgets-friend{
-		margin-left: 0px !important;
-	}
-
-	.drop-down-filters{
-		.wrapper{
-			i{
-				height: 55px !important;
-				width: 55px !important;
-				background-size: 60px 60px;
-			}
-			p{
-				display: none;
-			}
-			label{
-				width: 59px;
-			}
-		}
-	}
-	.navbar .welcome-message{
-		display: none;
-	}
-}
-
 .bookmarked-apps{
 	min-height: 48px;
 	padding: 5px;
@@ -3556,43 +3526,6 @@ popover{
 	}
 }
 
-@media screen and (max-width: 550px){
-	.notification{
-		.avatar{
-			display: none;
-		}
-		.content{
-			margin: 0;
-		}
-	}
-	.panel{
-		.border-radius(0);
-		box-sizing: border-box;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		label, input[type=text], input[type=password], input[type=tel], input[type=email]{
-			clear: both;
-			float: left !important;
-		}
-		input[type=submit], a{
-			clear: both;
-			float: left !important;
-		}
-		p{
-			clear: both;
-		}
-	}
-
-}
-
-@media screen and (max-width: 420px){
-	.drop-down-filters, .filters{
-		display: none !important;
-	}
-}
 
 .schedule{
 	.previous-timeslots{
