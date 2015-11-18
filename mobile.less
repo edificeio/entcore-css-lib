@@ -13,6 +13,26 @@
 			left: 300px;
 		}
 
+		.logo{
+			display: none;
+		}
+
+		.application-title{
+			position: fixed;
+			color: #fff;
+			top: 0;
+			left: 10px;
+			z-index: 10001;
+			line-height: 50px;
+			margin-top: 0;
+			&.move-right{
+				margin-left: 40px;
+			}
+			i{
+				display: none !important;
+			}
+		}
+
 		table, ul.list-view{
 			th, td{
 				padding: 7px;
@@ -111,6 +131,10 @@
 		.mobile-nav-opener{
 			.icon(glyphicons_113_justify, 50px);
 			float: left;
+			display: none;
+			&.visible{
+				display: inline-block;
+			}
 		}
 
 		nav.vertical[side-nav]{
