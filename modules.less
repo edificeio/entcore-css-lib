@@ -1381,10 +1381,13 @@ ul.icons-tabs{
 
 .icons-view{
 	margin-top: 15px;
+	text-align: center;
 	.row;
 	padding-left: 0;
 	.element{
-		.cell;
+		display: inline-block;
+		box-sizing: border-box;
+		position: relative;
 		height: 192px;
 		overflow: hidden;
 		width: @icon-list-size + (@icon-list-padding * 2) + 2px + 12px;
