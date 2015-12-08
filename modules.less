@@ -4839,7 +4839,7 @@ editor.drawing-zone{
 	height: auto;
 }
 
-editor{
+body editor{
 	display: block;
 	position: relative;
 	float: left;
@@ -4883,6 +4883,7 @@ editor{
 		box-sizing: border-box;
 		.run-transition(width);
 		min-height: 300px;
+        border: 1px solid #ddd !important;
 		a{
 			img{
 				border: 1px dashed;
@@ -4895,12 +4896,34 @@ editor{
 		.run-transition(width);
 		margin: 0;
 		min-height: 300px;
+        line-height: 1.5em;
+        font-family: Consolas;
+        tab-size: 4;
+        font-size: 16px;
+        border: 1px solid #ddd !important;
 	}
+    > code.language-html{
+        position: absolute;
+        border-left-width: 0;
+        right: 0;
+        z-index: 1;
+        top: 47px;
+        pointer-events: none;
+        white-space: pre;
+        background-color: transparent;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        border: 1px solid #ddd !important;
+        .tag{
+            padding-left: 0;
+        }
+    }
 	&.edit{
 		> [contenteditable]{
 			width: 100%;
 		}
-		> textarea{
+		> textarea, > code{
 			width: 0;
 			padding: 0;
 			border: 0;
@@ -4917,12 +4940,15 @@ editor{
 		> textarea{
 			width: 100%;
 		}
+        > code{
+            width: 100%;
+        }
 	}
 	&.both{
 		> [contenteditable]{
 			width: 50%;
 		}
-		> textarea{
+		> textarea, > code{
 			width: 50%;
 			border-left-width: 0;
 		}
