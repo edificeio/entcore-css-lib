@@ -1084,25 +1084,6 @@ a{
 	}
 }
 
-.contextual-editor.cke_editable{
-	border: 1px solid #ccc;
-	padding: 0;
-}
-
-.block-editor{
-	.cke_chrome{
-		display: block !important;
-	}
-}
-
-.cke_tpl_list{
-	height: 312px !important;
-}
-
-.cke_editable{
-	padding: 4px;
-}
-
 .share{
 	table{
 		width: 100%;
@@ -1320,12 +1301,6 @@ files-picker{
 	overflow: hidden;
 	width: 0;
 	.run-transition(width);
-}
-
-.editor-container{
-	margin-top: 80px;
-	min-height: 300px;
-	margin-bottom: 15px;
 }
 
 ul.icons-tabs{
@@ -2855,6 +2830,7 @@ a.cke_smile img {
 	editor.focus{
 		margin-top: 46px;
 	}
+
 	[contenteditable]{
 		p, h1, h2, h3, h4, h5{
 			padding-left: 10px;
@@ -4849,7 +4825,7 @@ body editor{
         font-family: Consolas;
         tab-size: 4;
         font-size: 16px;
-        border: 1px solid #ddd !important;
+        border: 1px solid #ddd;
 	}
     > code.language-html{
         position: absolute;
@@ -4858,12 +4834,13 @@ body editor{
         z-index: 1;
         top: 47px;
         pointer-events: none;
-        white-space: pre;
         background-color: transparent;
         padding: 10px;
         box-sizing: border-box;
         overflow: hidden;
-        border: 1px solid #ddd !important;
+        border: 1px solid transparent;
+        border-top-width: 2px;
+        white-space: pre-wrap;
         .tag{
             padding-left: 0;
         }
@@ -4888,6 +4865,7 @@ body editor{
 		}
 		> textarea{
 			width: 100%;
+            border: 1px solid #ddd;
 		}
         > code{
             width: 100%;
@@ -4897,10 +4875,16 @@ body editor{
 		> [contenteditable]{
 			width: 50%;
 		}
-		> textarea, > code{
+		> textarea{
 			width: 50%;
 			border-left-width: 0;
+            border: 1px solid #ddd;
 		}
+        > code {
+            width: 50%;
+            border: 1px solid transparent;
+            border-top-width: 0px;
+        }
 	}
 	&::after{
 		content: " ";
@@ -5141,14 +5125,14 @@ body editor{
 		cursor: pointer !important;
 	}
 	img{
-		float: left;
+		display: inline-block;
 	}
 }
 
 select-list{
 	position: relative;
 	font-size: 14px;
-	z-index: 1;
+	z-index: 2;
 	.options{
 		position: absolute;
 		background-color: #fff;
