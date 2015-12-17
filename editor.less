@@ -4,7 +4,7 @@ body editor{
 	position: relative;
 	float: left;
 	width: 100%;
-	.editor-toolbar-opener{
+	.editor-toolbar-opener, .close-focus{
 		display: none;
 	}
 	> popover{
@@ -410,18 +410,68 @@ select-list{
 		height: 100%;
 		z-index: 10001;
 		
+		editor-toolbar{
+			height: 100%;
+			overflow: hidden;
+			position: fixed;
+			right: 0;
+			top: 0;
+			z-index: 1;
+			padding-top: 40px;
+			width: 0;
+			.run-transition(width);
+		}
+		
+		editor-toolbar.opened{
+			width: 44px;
+			.option{
+				width: 44px;
+				i{
+					width: 29px;
+				}
+			}
+		}
+		
+		 .close-focus{
+			 display: block;
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 z-index: 1;
+			 margin: 0;
+    		 border-radius: 0;
+		 }
+		
 		.editor-toolbar-opener{
 			display: block;
 			position: fixed;
 			top: 0;
 			right: 0;
-			height: 50px;
-			width: 50px;
+			z-index: 2;
+			margin: 0;
+			border-radius: 0;
+			font-size: 22px;
+			height: 38px;
+			width: 44px;
+			&::before{
+				content: "+";
+				display: block;
+				position: absolute;
+				left: 15px;
+				top: 9px;
+			}
+
+			&.active::before{
+				content: "-";
+				width: 15px;
+			}
 		}
 		
 		[contenteditable]{
 			width: 100%;
 			height: 100%;
+			padding: 10px;
+			padding-top: 45px;
 		}
 	}
 }
