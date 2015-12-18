@@ -4400,6 +4400,32 @@ side-panel{
 	img{
 		display: inline-block;
 	}
+    blockquote.quotation{
+        background: #f5f5f5;
+        padding: 15px;
+        border-left: 5px solid #444;
+        footer{
+            text-align: right;
+            font-style: italic;
+            color: #666;
+        }
+    }
+}
+
+body editor{
+    .quote.option{
+        [contenteditable]{
+            height: 200px;
+            overflow: auto;
+            margin-top: 50px;
+        }
+        select-list{
+            .selected-value{
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
 }
 
 @import "navigations";
