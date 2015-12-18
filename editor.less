@@ -7,6 +7,16 @@ body editor{
 	.editor-toolbar-opener, .close-focus{
 		display: none;
 	}
+    &.focus{
+        editor-toolbar.inline{
+			select-list{
+				display: inline;
+			}
+			popover{
+				display: inline-block
+			}
+        }
+    }
 	> popover{
 		position: absolute;
 		right: 10px;
@@ -91,6 +101,7 @@ body editor{
 			width: 0;
 			padding: 0;
 			border: 0;
+            height: 0 !important;
 		}
 	}
 	&.html{
@@ -162,21 +173,13 @@ body editor{
 		border-bottom: 0;
 		&.inline{
 			position: absolute;
-			height: 46px;
 			top: 0;
 			.run-transition(bottom);
 			select-list, popover{
 				display: none;
 			}
 		}
-		&.inline.show{
-			select-list{
-				display: inline;
-			}
-			popover{
-				display: inline-block
-			}
-		}
+		
 		.sp-replacer{
 			display: none;
 		}
