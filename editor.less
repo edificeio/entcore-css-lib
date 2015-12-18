@@ -55,7 +55,7 @@ body editor{
 		float: left;
 		box-sizing: border-box;
 		.run-transition(width);
-		min-height: 300px;
+		height: 300px;
         border: 1px solid #ddd !important;
 		a{
 			img{
@@ -63,6 +63,13 @@ body editor{
 			}
 		}
 	}
+
+    &[inline]{
+        code.language-html{
+            top: 0 !important;
+        }
+    }
+
 	> textarea{
 		float: left;
 		box-sizing: border-box;
@@ -80,7 +87,7 @@ body editor{
         border-left-width: 0;
         right: 0;
         z-index: 1;
-        top: 47px;
+        top: 0;
         pointer-events: none;
         background-color: transparent;
         padding: 10px;
