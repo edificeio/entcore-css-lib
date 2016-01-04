@@ -1,3 +1,5 @@
+/// <reference path="app.less">
+
 body editor{
 	.run-transition(margin);
 	display: block;
@@ -7,7 +9,7 @@ body editor{
 	.editor-toolbar-opener, .close-focus{
 		display: none;
 	}
-    &.focus{
+    &.focus.edit, &.focus.both{
         editor-toolbar.inline{
 			select-list{
 				display: inline;
@@ -170,7 +172,7 @@ body editor{
 	contextual-menu.show{
 		width: 200px;
 	}
-	editor-toolbar{
+	&.edit editor-toolbar, &.both editor-toolbar{
 		display: block;
 		float: left;
 		width: 100%;
@@ -207,16 +209,18 @@ body editor{
 			vertical-align: middle;
 			border-bottom: 3px solid transparent;
 			i{
-				width: 15px;
-				height: 15px;
 				display: inline-block;
-				margin: 1px;
 				.run-transition(all);
-				background-size: contain;
+				background-size: 15px;
+                background-repeat: no-repeat;
+                background-position: center;
 				-webkit-user-select: none;
 				-moz-user-select: none;
 				-ms-user-select: none;
 				user-select: none;
+                position: absolute;
+                top: 0;
+                left: 0;
 			}
 		}
 		.option.disabled{
@@ -232,61 +236,61 @@ body editor{
 			box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
 		}
 		.option.undo > i{
-			.icon("editor/undo", 15px);
+			.icon("editor/undo", 100%);
 		}
 		.option.redo > i{
-			.icon("editor/redo", 15px);
+			.icon("editor/redo", 100%);
 		}
 		.option.bold > i{
-			.icon("editor/bold", 15px);
+			.icon("editor/bold", 100%);
 		}
 		.option.italic > i{
-			.icon("editor/italic", 15px);
+			.icon("editor/italic", 100%);
 		}
 		.option.underline > i{
-			.icon("editor/underline", 15px);
+			.icon("editor/underline", 100%);
 		}
 		.option.justify-left > i{
-			.icon("editor/justify-left", 15px)
+			.icon("editor/justify-left", 100%)
 		}
 		.option.justify-right > i{
-			.icon("editor/justify-right", 15px)
+			.icon("editor/justify-right", 100%)
 		}
 		.option.justify-center > i{
-			.icon("editor/justify-center", 15px);
+			.icon("editor/justify-center", 100%);
 		}
 		.option.justify-full > i{
-			.icon("editor/justify-full", 15px);
+			.icon("editor/justify-full", 100%);
 		}
 		.option.subscript > i{
-			.icon("editor/subscript", 15px);
+			.icon("editor/subscript", 100%);
 		}
 		.option.superscript > i{
-			.icon("editor/superscript", 15px);
+			.icon("editor/superscript", 100%);
 		}
 		.option.quote > i{
-			.icon("editor/quote", 15px)
+			.icon("editor/quote", 100%)
 		}
 		.option.ulist i{
-			.icon("editor/ulist", 15px);
+			.icon("editor/ulist", 100%);
 		}
 		.option.olist > i{
-			.icon("editor/olist", 15px);
+			.icon("editor/olist", 100%);
 		}
 		.option.remove-format > i{
-			.icon("editor/remove-format", 15px);
+			.icon("editor/remove-format", 100%);
 		}
-		.option.image > i{
-			.icon("editor/image", 15px)
-		}
+		.option.image> i{
+			.icon("editor/image", 100%);
+		} 
 		.option.sound > i{
-			.icon("editor/sound", 15px)
+			.icon("editor/sound", 100%);
 		}
 		.option.mathjax > i{
-			.icon("editor/mathjax", 15px)
+			.icon("editor/mathjax", 100%);
 		}
 		.option.templates > i{
-			.icon("editor/templates", 15px)
+			.icon("editor/templates", 100%);
 		}
 		.option.font{
 			width: 120px;
@@ -325,23 +329,30 @@ body editor{
 					background: #ddd;
 				}
 			}
-			popover > i{
-				.icon("editor/table", 21px);
-			}
-			popover popover-content{
-				width: 120px;
-				left: -58px;
-				margin-top: 15px;
-			}
+            popover{
+                width: 100%;
+                height: 100%;
+                > i{
+				    .icon("editor/table", 15px);
+                    top: 7px;
+                    left: 3px;
+			    }
+                popover-content{
+				    width: 120px;
+				    left: -58px;
+                    margin-top: 10px;
+				    margin-left: 14px;
+			    }
+            }
 		}
 		.option.linker{
 			> i{
-				.icon("editor/linker", 15px)
+				.icon("editor/linker", 100%)
 			}
 		}
 		.option.smileys{
 			> i {
-				.icon("editor/smileys", 15px);
+				.icon("editor/smileys", 100%);
 			}
 			lightbox{
 				img{
@@ -351,13 +362,13 @@ body editor{
 			}
 		}
 		.option.unlink > i{
-			.icon("editor/unlink", 15px);
+			.icon("editor/unlink", 100%);
 		}
 		.option.embed > i{
-			.icon("editor/embed", 15px);
+			.icon("editor/embed", 100%);
 		}
 		.option.audio > i{
-			.icon("editor/audio", 15px);
+			.icon("editor/audio", 100%);
 		}
 	}
 }
@@ -420,7 +431,7 @@ select-list{
 		height: 100%;
 		z-index: 10001;
 		
-		editor-toolbar{
+		&.edit editor-toolbar, &.both editor-toolbar{
 			height: 100%;
 			overflow: hidden;
 			position: fixed;
@@ -432,7 +443,7 @@ select-list{
 			.run-transition(width);
 		}
 		
-		editor-toolbar.opened{
+		&.edit editor-toolbar.opened, &.both editor-toolbar.opened{
 			width: 44px;
 			.option{
 				width: 44px;
