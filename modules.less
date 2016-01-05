@@ -10,18 +10,17 @@
 @icon-list-size: 117px;
 @icon-list-padding: 7px;
 
-.icon(@icon-name: icon, @icon-size: 40px){
-	@icons-root: "../img/icons/";
-	@icons-extension: ".png";
+.icon(@icon-name: icon, @icon-size: 40px, @icons-extension: ".png"){
+  @icons-root: "../img/icons/";
 
-	height: @icon-size;
-	width: @icon-size;
-	background-image: url("@{icons-root}@{icon-name}@{icons-extension}");
-	background-repeat: no-repeat;
-	background-position: center;
-	display: inline-block;
-	.border-box;
-	vertical-align: middle;
+  height: @icon-size;
+  width: @icon-size;
+  background-image: url("@{icons-root}@{icon-name}@{icons-extension}");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  .border-box;
+  vertical-align: middle;
 }
 
 .vertical-gradient(@top-color: blue, @bottom-color: white){
