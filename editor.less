@@ -173,7 +173,7 @@ body editor{
 	contextual-menu.show{
 		width: 200px;
 	}
-	&.edit editor-toolbar, &.both editor-toolbar{
+	&.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar{
 		display: block;
 		float: left;
 		width: 100%;
@@ -436,7 +436,7 @@ select-list{
 		height: 100%;
 		z-index: 10001;
 		
-		&.edit editor-toolbar, &.both editor-toolbar{
+		&.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar{
 			height: 100%;
 			overflow: hidden;
 			position: fixed;
@@ -448,7 +448,7 @@ select-list{
 			.run-transition(width);
 		}
 		
-		&.edit editor-toolbar.opened, &.both editor-toolbar.opened{
+		&.edit editor-toolbar.opened, &.both editor-toolbar.opened, &.html editor-toolbar.opened{
 			width: 44px;
 			.option{
 				width: 44px;
