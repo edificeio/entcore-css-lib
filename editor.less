@@ -16,7 +16,7 @@ body editor{
                 opacity: 1;
                 pointer-events: all;
 			}
-			popover{
+			popover, > popover{
 				display: inline-block;
                 opacity: 1;
                 pointer-events: all;
@@ -80,6 +80,17 @@ body editor{
     &[inline]{
         code.language-html{
             top: 0 !important;
+        }
+        popover{
+            display: none;
+        }
+        > popover{
+            top: -35px;
+        }
+        &.focus{
+            popover{
+                display: inline-block;
+            }
         }
     }
 
