@@ -1,3 +1,4 @@
+
 .row{
 	width: 100%;
 	position: relative;
@@ -51,7 +52,7 @@
 }
 
 .grid-cell-left(@cell-size: 1){
-	@media screen and (min-width: 720px){
+	@media screen and (min-width: @tablette){
 		left: (100% / 12 * @cell-size);
 	}
 }
@@ -484,4 +485,3 @@
 	-o-box-sizing: content-box;
 	box-sizing: content-box;
 }
-

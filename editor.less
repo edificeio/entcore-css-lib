@@ -37,7 +37,7 @@ body editor{
                 background-image: url("../img/icons/editor/glyphicons_280_settings.png")
             }
 		}
-        
+
 		ul{
 			padding: 0;
 			margin: 10px 0 10px 0;
@@ -218,7 +218,7 @@ body editor{
                 pointer-events: none;
 			}
 		}
-		
+
 		.sp-replacer{
 			display: none;
 		}
@@ -312,7 +312,7 @@ body editor{
 		}
 		.option.image> i{
 			.icon("editor/image", 100%);
-		} 
+		}
 		.option.sound > i{
 			.icon("editor/sound", 100%);
 		}
@@ -368,7 +368,7 @@ body editor{
                 popover-content.hidden{
                     .draw-table{
                         display: none;
-                    }       
+                    }
                 }
                 width: 100%;
                 height: 100%;
@@ -462,18 +462,18 @@ select-list{
 	}
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: @tablette){
 	body editor{
 		popover{
 			display: none;
 		}
-		
+
 		editor-toolbar{
 			height: 0;
 			overflow: hidden;
 		}
 	}
-	
+
 	body editor.focus{
 		min-height: 324px;
 		position: fixed;
@@ -482,7 +482,7 @@ select-list{
 		width: 100%;
 		height: 100%;
 		z-index: 10001;
-		
+
 		&.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar{
 			height: 100%;
 			overflow: hidden;
@@ -494,7 +494,7 @@ select-list{
 			width: 0;
 			.run-transition(width);
 		}
-		
+
 		&.edit editor-toolbar.opened, &.both editor-toolbar.opened, &.html editor-toolbar.opened{
 			width: 44px;
 			.option{
@@ -504,7 +504,7 @@ select-list{
 				}
 			}
 		}
-		
+
 		 .close-focus{
 			 display: block;
 			 position: fixed;
@@ -514,7 +514,7 @@ select-list{
 			 margin: 0;
     		 border-radius: 0;
 		 }
-		
+
 		.editor-toolbar-opener{
 			display: block;
 			position: fixed;
@@ -539,7 +539,7 @@ select-list{
 				width: 15px;
 			}
 		}
-		
+
 		[contenteditable]{
 			width: 100%;
 			height: 100%;
