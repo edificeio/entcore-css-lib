@@ -1,0 +1,499 @@
+
+.row{
+	width: 100%;
+	position: relative;
+	clear: both;
+	box-sizing: border-box;
+}
+
+@mixin row{
+	width: 100%;
+	position: relative;
+	clear: both;
+	box-sizing: border-box;
+}
+
+.row:after{
+	clear:both;
+	content: " ";
+	display: block;
+	width: 100%;
+}
+
+.cell{
+	box-sizing: border-box;
+	float: left;
+	display: block;
+	position: relative;
+}
+
+@mixin cell{
+	box-sizing: border-box;
+	float: left;
+	display: block;
+	position: relative;
+}
+
+.right-magnet{
+	float: right !important;
+}
+
+@mixin right-magnet{
+	float: right !important;
+}
+
+.bottom-magnet{
+	position: absolute;
+	bottom: 0;
+}
+
+@mixin grid-rigid-cell-width($cell-size: 1) {
+	width: (960px / 12 * $cell-size);
+}
+
+@mixin grid-rigid-cell-height($cell-size: 1) {
+	height: (960px / 12 * $cell-size);
+	box-sizing: border-box;
+	padding-bottom: 0;
+}
+
+@mixin grid-rigid-margin($cell-size: 1) {
+	margin-left: (960px / 12 * $cell-size);
+}
+
+@mixin grid-cell-width($cell-size: 1) {
+	width: (100% / 12 * $cell-size);
+}
+
+@mixin grid-cell-height($cell-size: 1) {
+	padding-bottom: (100% / 12 * $cell-size);
+}
+
+@mixin grid-cell-left($cell-size: 1) {
+	@media screen and (min-width: $tablette){
+		left: (100% / 12 * $cell-size);
+	}
+}
+
+@mixin fixed-block{
+	box-sizing: content-box;
+	position: relative;
+	height: 0px;
+
+	.right-magnet.cell.absolute{
+		right: 0 !important;
+		left: auto;
+	}
+	.cell.fluid{
+		position: relative;
+		height: 100%;
+	}
+	.bottom-magnet.cell{
+		bottom: 0;
+		position: absolute;
+	}
+}
+
+.height-one{
+	@include fixed-block;
+	@include grid-cell-height(1);
+}
+
+.height-one-plus-half{
+	@include fixed-block;
+	@include grid-cell-height(1.5);
+}
+
+.left-one{
+	@include grid-cell-left(1);
+}
+
+.height-two{
+	@include fixed-block;
+	@include grid-cell-height(2);
+}
+
+.left-two{
+	@include grid-cell-left(2);
+}
+
+.height-three{
+	@include fixed-block;
+	@include grid-cell-height(3);
+}
+
+.left-three{
+	@include grid-cell-left(3);
+}
+
+.height-four{
+	@include fixed-block;
+	@include grid-cell-height(4);
+}
+
+.left-four{
+	@include grid-cell-left(4);
+}
+
+.height-five{
+	@include fixed-block;
+	@include grid-cell-height(5);
+}
+
+.left-five{
+	@include grid-cell-left(5);
+}
+
+.height-six{
+	@include fixed-block;
+	@include grid-cell-height(6);
+}
+
+.left-six{
+	@include fixed-block;
+	@include grid-cell-left(6);
+}
+
+.height-seven{
+	@include fixed-block;
+	@include grid-cell-height(7);
+}
+
+.left-seven{
+	@include grid-cell-left(7);
+}
+
+.height-eight{
+	@include fixed-block;
+	@include grid-cell-height(8);
+}
+
+.left-eight{
+	@include grid-cell-left(8);
+}
+
+.height-nine{
+	@include fixed-block;
+	@include grid-cell-height(9);
+}
+
+.left-nine{
+	@include grid-cell-left(9);
+}
+
+.height-ten{
+	@include fixed-block;
+	@include grid-cell-height(10);
+}
+
+.left-ten{
+	@include grid-cell-left(10);
+}
+
+.height-eleven{
+	@include fixed-block;
+	@include grid-cell-height(11);
+}
+
+.left-eleven{
+	@include grid-cell-left(11);
+}
+
+.height-twelve{
+	@include fixed-block;
+	@include grid-cell-height(12);
+}
+
+.left-twelve{
+	@include grid-cell-left(12);
+}
+
+.fluid{
+	position: relative !important;
+}
+
+@mixin absolute{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.absolute{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.zero{
+	display: none;
+}
+
+.one{
+	@include grid-cell-width(1);
+}
+
+.two{
+	@include grid-cell-width(2);
+}
+
+.three{
+	@include grid-cell-width(3);
+}
+
+.four{
+	@include grid-cell-width(4);
+}
+
+.five{
+	@include grid-cell-width(5);
+}
+
+.six{
+	@include grid-cell-width(6);
+}
+
+.seven{
+	@include grid-cell-width(7);
+}
+
+.eight{
+	@include grid-cell-width(8);
+}
+
+.nine{
+	@include grid-cell-width(9);
+}
+
+.ten{
+	@include grid-cell-width(10);
+}
+
+.eleven{
+	@include grid-cell-width(11);
+}
+
+.twelve{
+	@include grid-cell-width(12);
+}
+
+.rigid-grid{
+	> .one{
+		@include grid-rigid-cell-width(1);
+	}
+
+	> .two{
+		@include grid-rigid-cell-width(2);
+	}
+
+	> .three{
+		@include grid-rigid-cell-width(3);
+	}
+
+	> .four{
+		@include grid-rigid-cell-width(4);
+	}
+
+	> .five{
+		@include grid-rigid-cell-width(5);
+	}
+
+	> .six{
+		@include grid-rigid-cell-width(6);
+	}
+
+	> .seven{
+		@include grid-rigid-cell-width(7);
+	}
+
+	> .eight{
+		@include grid-rigid-cell-width(8);
+	}
+
+	> .nine{
+		@include grid-rigid-cell-width(9);
+	}
+
+	> .ten{
+		@include grid-rigid-cell-width(10);
+	}
+
+	> .eleven{
+		@include grid-rigid-cell-width(11);
+	}
+
+	> .twelve{
+		@include grid-rigid-cell-width(12);
+	}
+
+	> .height-one{
+		@include grid-rigid-cell-height(1);
+	}
+
+	> .height-two{
+		@include grid-rigid-cell-height(2);
+	}
+
+	> .height-three{
+		@include grid-rigid-cell-height(3);
+	}
+
+	> .height-four{
+		@include grid-rigid-cell-height(4);
+	}
+
+	> .height-five{
+		@include grid-rigid-cell-height(5);
+	}
+
+	> .height-six{
+		@include grid-rigid-cell-height(6);
+	}
+
+	> .height-seven{
+		@include grid-rigid-cell-height(7);
+	}
+
+	> .height-eight{
+		@include grid-rigid-cell-height(8);
+	}
+
+	> .height-nine{
+		@include grid-rigid-cell-height(9);
+	}
+
+	> .height-ten{
+		@include grid-rigid-cell-height(10);
+	}
+
+	> .height-eleven{
+		@include grid-rigid-cell-height(11);
+	}
+
+	> .height-twelve{
+		@include grid-rigid-cell-height(12);
+	}
+
+	> .margin-one{
+		@include grid-rigid-margin(1);
+	}
+
+	> .margin-two{
+		@include grid-rigid-margin(2);
+	}
+
+	> .margin-three{
+		@include grid-rigid-margin(3);
+	}
+
+	> .margin-four{
+		@include grid-rigid-margin(4);
+	}
+
+	> .margin-five{
+		@include grid-rigid-margin(5);
+	}
+
+	> .margin-six{
+		@include grid-rigid-margin(6);
+	}
+
+	> .margin-seven{
+		@include grid-rigid-margin(7);
+	}
+
+	> .margin-eight{
+		@include grid-rigid-margin(8);
+	}
+
+	> .margin-nine{
+		@include grid-rigid-margin(9);
+	}
+
+	> .margin-ten{
+		@include grid-rigid-margin(10);
+	}
+
+	> .margin-eleven{
+		@include grid-rigid-margin(11);
+	}
+
+	> .margin-twelve{
+		@include grid-rigid-margin(12);
+	}
+}
+
+.centered{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin border-radius($radius: 5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-radius-bottom($radius: 5px) {
+  -webkit-border-bottom-left-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-bottom-left-radius: $radius;
+  -moz-border-bottom-right-radius: $radius;
+  -ms-border-bottom-left-radius: $radius;
+  -ms-border-bottom-right-radius: $radius;
+  -o-border-bottom-left-radius: $radius;
+  -o-border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin border-radius-top($radius: 5px) {
+  -webkit-border-top-left-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-top-left-radius: $radius;
+  -moz-border-top-right-radius: $radius;
+  -ms-border-top-left-radius: $radius;
+  -ms-border-top-right-radius: $radius;
+  -o-border-top-left-radius: $radius;
+  -o-border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-radius-left($radius: 5px) {
+  -webkit-border-top-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-top-left-radius: $radius;
+  -moz-border-bottom-left-radius: $radius;
+  -ms-border-top-left-radius: $radius;
+  -ms-border-bottom-left-radius: $radius;
+  -o-border-top-left-radius: $radius;
+  -o-border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius-right($radius: 5px) {
+  -webkit-border-top-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-top-right-radius: $radius;
+  -moz-border-bottom-right-radius: $radius;
+  -ms-border-top-right-radius: $radius;
+  -ms-border-bottom-right-radius: $radius;
+  -o-border-top-right-radius: $radius;
+  -o-border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin run-transition($property: color, $speed: 250ms, $timing: ease) {
+  -o-transition: $property $speed $timing;
+  -moz-transition: $property $speed $timing;
+  -webkit-transition: $property $speed $timing;
+  transition: $property $speed $timing;
+}

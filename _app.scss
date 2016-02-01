@@ -1,5 +1,5 @@
 
-@header-height: 150px;
+$header-height: 150px;
 
 html, body{
 	margin: 0;
@@ -35,14 +35,14 @@ html.print{
   height: 100%;
 
   header.main{
-    height: @header-height;
+    height: $header-height;
     width: 100%;
     position: relative;
   }
 
   .main.wrapper{
-    .border-box;
-    padding-top: @header-height;
+    box-sizing: border-box;
+    padding-top: $header-height;
     position: absolute;
     top: 0;
     height: 100%;
@@ -53,14 +53,14 @@ html.print{
   }
 
 	section.main{
-		.border-box;
+		box-sizing: border-box;
 		min-height: 100%;
 		padding: 10px;
 		text-align: left;
 	}
 }
 
-.lightbox-backdrop{
+@mixin lightbox-backdrop{
 	position: fixed;
 	background: #222;
 	top: 0;
@@ -74,8 +74,12 @@ html.print{
 	display: none;
 }
 
-.lightbox-window{
-	position: fixed;
+.lightbox-backdrop{
+    @include lightbox-backdrop;
+}
+
+@mixin lightbox-window{
+    position: fixed;
 	z-index: 10001;
 	background: #fff;
 	top: 0;
@@ -88,6 +92,10 @@ html.print{
 	border-radius: 5px;
 }
 
+.lightbox-window{
+	@include lightbox-window;
+}
+
 .close-lightbox{
 	position: absolute;
 	right: 0;
@@ -97,13 +105,13 @@ html.print{
 }
 
 .lightbox-view{
-	.lightbox-window;
+	@include lightbox-window;
 	width: 800px;
 	text-align: left;
 }
 
 .lightbox-background{
-	.lightbox-backdrop;
+	@include lightbox-backdrop;
 }
 
 body.lightbox-body{

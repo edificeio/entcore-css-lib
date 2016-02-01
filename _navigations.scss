@@ -9,7 +9,7 @@
 		vertical-align: top;
 		margin: 0;
 		padding: 6px;
-		.border-box;
+		box-sizing: border-box;
 		max-height: 100%;
 		width: auto;
   }
@@ -20,8 +20,8 @@
     margin-top: 8px;
   }
   .account{
-    .cell;
-    .right-magnet;
+    @include cell;
+    @include right-magnet;
     i{
       margin-top: 3px;
     }
@@ -53,8 +53,8 @@ nav.horizontal{
 	input[type=submit], input[type=button]{
 		height: 25px;
 		line-height: 18px;
-		.border-radius(0);
-		.border-radius-right(5px);
+		@include border-radius(0);
+		@include border-radius-right(5px);
 		border-left: 0;
 	}
 }
@@ -76,7 +76,7 @@ nav.stamps{
 			height: 98px;
 			width: 98px;
 			margin-right: 5px;
-			.cell;
+			@include cell;
 		}
 	}
 }
@@ -106,7 +106,7 @@ nav.half-stamps{
 			height: 70px;
 			width: 70px;
 			margin-right: 5px;
-			.cell;
+			@include cell;
 		}
 	}
 }
@@ -145,7 +145,7 @@ nav.vertical, .app-menu{
 				line-height: 20px;
 				padding: 5px;
 				padding-left: 10px;
-				.border-box;
+				box-sizing: border-box;
 				width: 100%;
 				margin: 0;
 				margin-top: 5px;
@@ -156,7 +156,7 @@ nav.vertical, .app-menu{
 					float: right;
 					margin-top: 2px;
 					opacity: 0;
-					.run-transition(opacity);
+					@include run-transition(opacity);
 				}
 
 				i.arrow{
@@ -199,9 +199,9 @@ nav.vertical, .app-menu{
 				left: 0px !important;
 			}
 			input[type=text], input[type=search]{
-				.border-radius(0px);
+				@include border-radius(0px);
 				margin-left: 0;
-				.border-box;
+				box-sizing: border-box;
 				width: 100%;
 			}
 		}
@@ -340,8 +340,8 @@ plus{
 		> div{
 			display:block;
 			position: absolute;
-			.run-transition(transform);
-			.run-transition(-webkit-transform);
+			@include run-transition(transform);
+			@include run-transition(-webkit-transform);
 			height: 100%;
 			width: 100%;
 			top: 0;
