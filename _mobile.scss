@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: $tablette){
 
 	body{
 
@@ -30,11 +30,7 @@
 			display: none;
 		}
 	}
-}
 
-
-
-@media screen and (max-width: 700px){
 	* {
 		-ms-scroll-chaining: none;
 	}
@@ -42,7 +38,7 @@
 	body {
 		width: 100%;
 		min-height: 100%;
-		.run-transition(left);
+		@include run-transition(left);
 		left: 0;
 		position: relative !important;
 		&.slide{
@@ -165,7 +161,7 @@
 		}
 
 		.mobile-nav-opener{
-			.icon(glyphicons_113_justify, 50px);
+			@include icon(glyphicons_113_justify, 50px);
 			float: left;
 			display: none;
 			&.visible{
@@ -178,7 +174,7 @@
 			left: 0;
 			top: 50px;
 			z-index: 10001;
-			.run-transition(all);
+			@include run-transition(all);
 			box-sizing: border-box;
 			width: 0;
 			overflow: hidden;
@@ -207,7 +203,7 @@
 
 
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: $fat-mobile){
 
 	body {
 
@@ -220,7 +216,7 @@
 			}
 		}
 		.auth .panel {
-			.border-radius(0);
+			@include border-radius(0);
 			box-sizing: border-box;
 			width: 100%;
 			height: 100%;
@@ -258,28 +254,11 @@
 }
 
 
-
-
-
-
-
-@media screen and (max-width: 420px){
+@media screen and (max-width: $small-mobile){
 	.drop-down-filters, .filters{
 		display: none !important;
 	}
-}
 
-@media screen and (max-width: 400px) {
-	body{
-		.list-view{
-			.content{
-				max-width: 130px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 325px) {
 	body{
 		.list-view{
 			.content{
@@ -287,4 +266,5 @@
 			}
 		}
 	}
+
 }

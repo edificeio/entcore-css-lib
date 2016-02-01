@@ -1,47 +1,40 @@
-@white: #fff;
-@grayLight: #ccc;
-@grayLighter: #eee;
-@btnPrimaryBackground: #ccc;
-@baseFontSize: 12px;
+$white: #fff;
 
-@import "crisscross-mobile";
-@import "datepicker";
+$icon-list-size: 117px;
+$icon-list-padding: 7px;
 
-@icon-list-size: 117px;
-@icon-list-padding: 7px;
+@mixin icon($icon-name: icon, $icon-size: 40px, $icons-extension: ".png") {
+  $icons-root: "../img/icons/";
 
-.icon(@icon-name: icon, @icon-size: 40px, @icons-extension: ".png"){
-  @icons-root: "../img/icons/";
-
-  height: @icon-size;
-  width: @icon-size;
-  background-image: url("@{icons-root}@{icon-name}@{icons-extension}");
+  height: $icon-size;
+  width: $icon-size;
+  background-image: url("#{$icons-root}#{$icon-name}#{$icons-extension}");
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
-  .border-box;
+  box-sizing: border-box;
   vertical-align: middle;
 }
 
-.vertical-gradient(@top-color: blue, @bottom-color: white){
-	background: -webkit-linear-gradient(@top-color, @bottom-color);
-	background: -moz-linear-gradient(@top-color, @bottom-color);
-	background: -o-linear-gradient(@top-color, @bottom-color);
-	background:  linear-gradient(@top-color, @bottom-color);
+@mixin reduce-block($size) {
+	padding: $size;
 }
 
-.invert-colors(){
+@mixin vertical-gradient($top-color: blue, $bottom-color: white) {
+	background: -webkit-linear-gradient($top-color, $bottom-color);
+	background: -moz-linear-gradient($top-color, $bottom-color);
+	background: -o-linear-gradient($top-color, $bottom-color);
+	background:  linear-gradient($top-color, $bottom-color);
+}
+
+@mixin invert-colors(){
 	-webkit-filter: invert(100%);
 	-moz-filter: invert(100%);
 	filter: invert(100%);
 }
 
-.buttonBackground(@top: #eee, @bottom: #ccc){
-	.vertical-gradient(@top, @bottom);
-}
-
 .fixed{
-	.absolute;
+	@include absolute;
 }
 
 a.button, button, input[type=button], input[type=submit]{
@@ -49,7 +42,7 @@ a.button, button, input[type=button], input[type=submit]{
 	margin: 0;
 	margin-left: 1px;
 	margin-right: 1px;
-	.cell;
+	@include cell;
 }
 
 i{
@@ -169,7 +162,7 @@ textarea{
 }
 
 .badge{
-	.border-radius(10px);
+	@include border-radius(10px);
 	background: #ccc;
 	font-weight: bold;
 	padding: 1px;
@@ -188,7 +181,7 @@ textarea{
 	height: 30px;
 	padding: 6px;
 	h5{
-		.cell;
+		@include cell;
 		width: 170px;
 		margin: 0;
 	}
@@ -204,14 +197,14 @@ textarea{
 }
 
 textarea{
-	.border-box;
+	box-sizing: border-box;
 }
 
 .widgets{
 	width: 228px;
-	.cell;
-	.reduce-block-six;
-	.run-transition(width);
+	@include cell;
+	@include reduce-block(6px);
+	@include run-transition(width);
 	height: 1800px;
 }
 
@@ -221,15 +214,15 @@ textarea{
 
 .widgets-friend{
 	margin-left: 276px;
-	.run-transition(margin-left);
+	@include run-transition(margin-left);
 }
 
 .widgets-friend.widgets-enemy{
 	margin-left: 15px;
 }
 
-.widget-container(@header-size){
-	.cell;
+@mixin widget-container($header-size) {
+	@include cell;
 
 	width: 215px;
 	background-size: contain;
@@ -237,13 +230,13 @@ textarea{
 	margin-bottom: 15px;
 	padding-right: 1px;
 	.content{
-		margin-top: @header-size;
-		.twelve;
-		.cell;
+		margin-top: $header-size;
+		width: 100%;
+		@include cell;
 
 		border: 1px solid;
 		border-top: none;
-		.border-radius-bottom(10px);
+		@include border-radius-bottom(10px);
 		overflow: hidden;
 
 	}
@@ -309,7 +302,7 @@ p{
 }
 
 .birthday{
-	.widget-container(35px);
+	@include widget-container(35px);
 	margin-bottom: 25px;
 	background-color: #eee;
 	h1{
@@ -333,7 +326,7 @@ p{
 					padding-left: 5px;
 					.user{
 						display: inline-block;
-						.five;
+						width: 20%;
 						height: 100%;
 						line-height: 100%;
 						vertical-align: middle;
@@ -342,7 +335,7 @@ p{
 						}
 					}
 					.date{
-						.right-magnet;
+						@include right-magnet;
 						display: inline-block;
 						vertical-align: middle;
 						h2, h4{
@@ -388,10 +381,10 @@ p{
 
 .calendar.widget{
 	height: 160px;
-	.widget-container(55px);
+	@include widget-container(55px);
 
 	.content{
-		.fixed;
+		@include absolute;
 		height: 104px;
 	}
 
@@ -400,7 +393,7 @@ p{
 		height: 17px;
 		text-align: center;
 		padding-top: 2px;
-		.cell;
+		@include cell;
 	}
 
 	.current-month-header{
@@ -415,19 +408,20 @@ p{
 
 .dominos{
 	margin-bottom: 30px;
-	.twelve;
-	.cell;
+	width: 100%;
+	@include cell;
 	.item{
-		.grid-cell-width(2.4);
-		.cell;
+		@include grid-cell-width(2.4);
+		@include cell;
 		padding: 5px;
 		overflow: hidden;
 		.domino{
-			.cell;
-			.twelve;
+			@include cell;
+			width: 100%;
 			.top{
-				.height-eleven;
-				.row;
+				@include fixed-block;
+	            @include grid-cell-height(11);
+				@include row;
 				overflow: hidden;
 				img{
 					position: absolute;
@@ -437,8 +431,9 @@ p{
 				}
 			}
 			.bottom{
-				.height-nine;
-				.row;
+				@include fixed-block;
+	            @include grid-cell-height(9);
+				@include row;
 				background: #fff;
 				overflow: hidden;
 				margin-top: 5px;
@@ -449,7 +444,7 @@ p{
 					top: 0;
 					left: 0;
 					padding: 5px;
-					.border-box;
+					box-sizing: border-box;
 				}
 			}
 		}
@@ -458,19 +453,19 @@ p{
 }
 
 
-.ribbon(@height:30px){
+@mixin ribbon($height:30px) {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	background: fade(@white, 60%);
+	background: fade($white, 60%);
 	text-align: right;
 	height: 0;
 	overflow: hidden;
-	.run-transition(height);
+	@include run-transition(height);
 
 	i{
-		height: @height;
-		width: @height;
+		height: $height;
+		width: $height;
 		background-repeat: no-repeat;
 		background-position: center;
 		display: inline-block;
@@ -479,18 +474,18 @@ p{
 	}
 
 	span{
-		padding-left:@height;
+		padding-left:$height;
 	}
 }
-.ribbon-up(@height:30px){
-	height: @height;
+@mixin ribbon-up($height:30px) {
+	height: $height;
 }
 
 .domino .top:hover .ribbon{
-  .ribbon-up;
+  @include ribbon-up;
 }
 .ribbon{
-	.ribbon();
+	@include ribbon();
 }
 
 
@@ -542,7 +537,7 @@ i.show-list{
 }
 
 i.home{
-	.icon(glyphicons_020_home, 20px);
+	@include icon(glyphicons_020_home, 20px);
 	background-size: contain;
 	display: inline-block;
 	vertical-align: middle;
@@ -552,7 +547,7 @@ i.home{
 }
 
 i.attachment{
-	.icon(glyphicons_062_paperclip, 20px);
+	@include icon(glyphicons_062_paperclip, 20px);
 	background-size: contain;
 }
 
@@ -638,7 +633,7 @@ table{
 	tr{
 		border-top: 1px solid #ccc;
 		background: transparent;
-		.run-transition(background);
+		@include run-transition(background);
 	}
 	tr.checked{
 		background: #eee;
@@ -676,6 +671,12 @@ table{
 	overflow: hidden;
 }
 
+@mixin cell-ellipsis{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 .list-view{
 	margin-top: 15px;
 
@@ -707,7 +708,7 @@ table{
 	}
 	td.user, th.user{
 		max-width: 100px;
-		.cell-ellipsis;
+		@include cell-ellipsis;
 
 	}
 	td.icon, th.icon{
@@ -716,7 +717,7 @@ table{
 	}
 	td.content, th.content{
 		max-width: 280px;
-		.cell-ellipsis;
+		@include cell-ellipsis;
 	}
 	.date{
 		text-align: right;
@@ -747,30 +748,30 @@ ul.list-view{
 }
 
 i.drag-anchor{
-	.icon(glyphicons_186_move, 15px);
+	@include icon(glyphicons_186_move, 15px);
 	background-size: contain;
 	float: none;
 	display: inline-block;
 }
 
 i.fullscreen{
-	.icon(glyphicons_215_resize_full, 25px);
+	@include icon(glyphicons_215_resize_full, 25px);
 }
 
 i.leave-fullscreen{
-	.icon(glyphicons_214_resize_small, 25px);
+	@include icon(glyphicons_214_resize_small, 25px);
 }
 
 i.previous{
-	.icon(glyphicons_210_left_arrow, 25px);
+	@include icon(glyphicons_210_left_arrow, 25px);
 }
 
 i.next{
-	.icon(glyphicons_211_right_arrow, 25px);
+	@include icon(glyphicons_211_right_arrow, 25px);
 }
 
 i.download{
-	.icon(glyphicons_181_download_alt, 25px);
+	@include icon(glyphicons_181_download_alt, 25px);
 }
 
 .embedded-viewer{
@@ -851,7 +852,7 @@ pdf-viewer{
 
 a{
 	color: blue;
-	.run-transition(color);
+	@include run-transition(color);
 }
 
 .v-center-container{
@@ -904,7 +905,7 @@ a{
 		width: 100%;
 		display: block;
 		font-size: 15px;
-		.border-box;
+		box-sizing: border-box;
 	}
 }
 
@@ -949,14 +950,14 @@ a{
 	overflow: visible;
 }
 
-.drop-down{
+@mixin drop-down{
 	overflow: visible;
 	position: absolute;
 	z-index: 8000;
 	height: 226px;
 	background: #eee;
 	cursor: pointer;
-	.run-transition(height);
+	@include run-transition(height);
 	> div {
 		position: relative;
 		height: 100%;
@@ -982,11 +983,17 @@ a{
 	}
 }
 
+.drop-down{
+	@include drop-down();
+}
+
+
+
 //twitter bootstrap adapter
 .dropdown-menu{
-	.drop-down;
+	@include drop-down;
 	height: auto;
-	.reduce-block-six;
+	@include reduce-block(6px);
 }
 
 .table-condensed{
@@ -1023,7 +1030,7 @@ a{
 	top: 2px;
 	right: -15px;
 	overflow: hidden;
-	.run-transition(width);
+	@include run-transition(width);
 	z-index: 5;
 }
 
@@ -1040,18 +1047,18 @@ a{
 	bottom: 0;
 	position: fixed;
 	max-width: 100%;
-	.run-transition(height);
+	@include run-transition(height);
 	z-index: 8000;
 	.toggle{
 		padding: 10px;
 	}
 	button{
 		opacity: 1;
-		.run-transition(opacity);
+		@include run-transition(opacity);
 	}
 	button.hide{
 		opacity: 0;
-		.run-transition(opacity);
+		@include run-transition(opacity);
 	}
 	.contextual-link{
 		float: right;
@@ -1075,14 +1082,14 @@ files-picker{
 
 .toggle-buttons.hide{
 	height: 0px;
-	.run-transition(height);
+	@include run-transition(height);
 	overflow: hidden;
 }
 
 .toggle-panel.hide{
 	overflow: hidden;
 	width: 0;
-	.run-transition(width);
+	@include run-transition(width);
 }
 
 ul.icons-tabs{
@@ -1121,30 +1128,26 @@ ul.icons-tabs{
 	padding: 10px;
 }
 
-.reduce-block(@size){
-	padding: @size;
-}
-
 .reduce-block-two{
-	.reduce-block(2px);
+	@include reduce-block(2px);
 }
 
 .reduce-block-four{
-	.reduce-block(4px);
+	@include reduce-block(4px);
 }
 
 .reduce-block-six{
-	.reduce-block(6px);
+	@include reduce-block(6px);
 }
 
 .reduce-block-eight{
-	.reduce-block(8px);
+	@include reduce-block(8px);
 }
 
 .icons-view{
 	margin-top: 15px;
 	text-align: center;
-	.row;
+	@include row;
 	padding-left: 0;
 	.element{
 		display: inline-block;
@@ -1152,16 +1155,16 @@ ul.icons-tabs{
 		position: relative;
 		height: 192px;
 		overflow: hidden;
-		width: @icon-list-size + (@icon-list-padding * 2) + 2px + 12px;
+		width: $icon-list-size + ($icon-list-padding * 2) + 2px + 12px;
 		margin: 2px;
 		position: relative;
 		list-style-type: none;
 
 		.container{
-			height: @icon-list-size;
-			width: @icon-list-size;
+			height: $icon-list-size;
+			width: $icon-list-size;
 			display: block;
-			padding: @icon-list-padding;
+			padding: $icon-list-padding;
 			border: 1px solid transparent;
 			margin-left: auto;
 			margin-right: auto;
@@ -1218,8 +1221,8 @@ ul.icons-tabs{
 			}
 
 			i{
-				width: @icon-list-size;
-				height: @icon-list-size;
+				width: $icon-list-size;
+				height: $icon-list-size;
 				background-size: auto 100%;
 			}
 		}
@@ -1259,7 +1262,7 @@ ul.icons-tabs{
 	button{
 		margin-left: 0;
 		margin-top: 0px;
-		.border-radius-left(0);
+		@include border-radius-left(0);
 	}
 }
 
@@ -1333,11 +1336,11 @@ ul.icons-tabs{
 		position: absolute;
 		width: 175%;
 		top: 49px;
-		.border-box;
+		box-sizing: border-box;
 		background: #eee;
 		height: 0;
 		overflow: hidden;
-		.run-transition(height);
+		@include run-transition(height);
 		max-width: none;
 	}
 	.options-list.icons-view{
@@ -1386,8 +1389,8 @@ ul.icons-tabs{
 section{
   .contextual-buttons{
     .action-buttons{
-      .cell;
-      .nine;
+      @include cell;
+      @include grid-cell-width(9);
       margin-bottom: 10px;
       button, a.button{
         vertical-align: top;
@@ -1403,19 +1406,19 @@ section{
 }
 
 .display-buttons{
-	.cell;
+	@include cell;
 	float: right;
 	text-align: right;
 
 	i{
 		float: right;
 		cursor: pointer;
-		.run-transition(opacity);
+		@include run-transition(opacity);
 		opacity: 1;
 	}
 	i:hover{
 		opacity: 0.4;
-		.run-transition(opacity)
+		@include run-transition(opacity)
 	}
 }
 
@@ -1498,9 +1501,13 @@ article{
 	overflow: hidden;
 }
 
-.bottom-locked{
+@mixin bottom-locked{
 	position: absolute;
 	bottom: 0px;
+}
+
+.bottom-locked{
+	@include bottom-locked;
 }
 
 .box, .text-container article.box{
@@ -1560,13 +1567,13 @@ section.lightbox-window{
 	}
 	.close-lightbox{
 		i{
-			.icon(glyphicons_207_remove_2, 20px);
+			@include icon(glyphicons_207_remove_2, 20px);
 		}
 	}
 }
 
 i.remove{
-	.icon(glyphicons_207_remove_2, 20px);
+	@include icon(glyphicons_207_remove_2, 20px);
 }
 
 .loading-panel{
@@ -1689,16 +1696,16 @@ div.hidden-content{
 	height: 80px;
 	z-index: 15;
 	background: #fff;
-	.border-radius(40px);
+	@include border-radius(40px);
 	position: absolute;
 	top: 40%;
 	opacity: 0.5;
-	.run-transition(opacity);
+	@include run-transition(opacity);
 }
 
 .flip-right:hover, .flip-left:hover{
 	opacity: 1;
-	.run-transition(opacity);
+	@include run-transition(opacity);
 }
 
 .flip-right{
@@ -1737,7 +1744,7 @@ div.hidden-content{
 
 .drawing-zone{
 	overflow: hidden;
-	.border-box;
+	box-sizing: border-box;
 	height: 300px;
 	position: relative;
 }
@@ -1788,7 +1795,7 @@ span.no-style{
 			margin-top: 0;
 		}
 		img, div{
-			.border-radius();
+			@include border-radius();
 			max-width: none;
 			display: block;
 		}
@@ -1825,7 +1832,7 @@ span.no-style{
 		padding: 5px 10px;
 		background: #ccc;
 		color: #000;
-		.border-radius(3px);
+		@include border-radius(3px);
 		box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
 		font-size: 12px;
 		position: relative;
@@ -1963,7 +1970,7 @@ span.no-style{
 	padding: 7px;
 	font-size: 12px;
 	text-align: center;
-	.border-radius(10px);
+	@include border-radius(10px);
 }
 
 .info{
@@ -1972,7 +1979,7 @@ span.no-style{
 	padding: 7px;
 	font-size: 12px;
 	text-align: center;
-	.border-radius(10px);
+	@include border-radius(10px);
 }
 
 em.low-importance{
@@ -2000,7 +2007,7 @@ em.high-importance{
 		overflow: hidden;
 		position: absolute;
 		top: 30px;
-		.run-transition(height);
+		@include run-transition(height);
 	}
 	.pull-down-content{
 		top: 0px;
@@ -2178,10 +2185,10 @@ section.lightbox{
 			height: 165px;
 			overflow-y: auto;
 			clear: both;
-			.run-transition(height);
+			@include run-transition(height);
 			.icons-view {
 				overflow: auto;
-				.absolute;
+				@include absolute;
 			}
 		}
 		.illustrated-list {
@@ -2203,7 +2210,7 @@ section.lightbox{
 			padding: 4px;
 			padding-left: 10px;
 			padding-right: 10px;
-			.vertical-gradient(#eee, #e5e5e5);
+			@include vertical-gradient(#eee, #e5e5e5);
 			border: 1px solid #555;
 			border-bottom: 0;
 			font-size: 20px;
@@ -2211,7 +2218,7 @@ section.lightbox{
 		}
 		.toggle{
 			height: 0px;
-			.run-transition(height);
+			@include run-transition(height);
 			overflow: hidden;
 			padding: 0px;
 			border: 0;
@@ -2237,7 +2244,7 @@ section.lightbox{
 			overflow: hidden;
 			border: 1px solid #555;
 			border-top: 0;
-			.border-radius(0);
+			@include border-radius(0);
 			.content{
 				padding: 10px;
 			}
@@ -2246,10 +2253,10 @@ section.lightbox{
 
 	.accordion:last-child.opened{
 		.toggle{
-			.border-radius-bottom();
+			@include border-radius-bottom();
 		}
 		h2{
-			.border-radius(0);
+			@include border-radius(0);
 		}
 	}
 }
@@ -2282,12 +2289,12 @@ section.lightbox{
 }
 
 .selectable-list{
-	.row;
+	@include row;
 	padding: 0;
 	li{
 		list-style-type: none;
 		padding: 5px;
-		.run-transition(background);
+		@include run-transition(background);
 		margin: 3px;
 	}
 
@@ -2298,7 +2305,7 @@ section.lightbox{
 }
 
 .side-tabs-content{
-	.border-radius(0);
+	@include border-radius(0);
 	z-index: 1;
 	border: 1px solid #ccc;
 	margin-left: -1px;
@@ -2363,19 +2370,19 @@ a.cke_smile img {
 		}
 	}
 	i.text{
-		.icon(text-icon, 30px);
+		@include icon(text-icon, 30px);
 		background-size: 60% auto;
 	}
 	i.image{
-		.icon(picture-icon, 30px);
+		@include icon(picture-icon, 30px);
 		background-size: 60% auto;
 	}
 	i.sound{
-		.icon(music-icon, 30px);
+		@include icon(music-icon, 30px);
 		background-size: 60% auto;
 	}
 	i.video{
-		.icon(video-icon, 30px);
+		@include icon(video-icon, 30px);
 		background-size: 60% auto;
 	}
 	button{
@@ -2387,7 +2394,7 @@ a.cke_smile img {
 		top: 40px;
 		left: 40px;
 		opacity: 1;
-		.run-transition(opacity);
+		@include run-transition(opacity);
 	}
 }
 
@@ -2425,7 +2432,7 @@ a.cke_smile img {
 	.accordion{
 		margin: 0;
 		h2{
-			.vertical-gradient(#383838, #333);
+			@include vertical-gradient(#383838, #333);
 			border: 1px solid #555;
 			border-bottom: 0;
 			font-size: 20px;
@@ -2434,10 +2441,10 @@ a.cke_smile img {
 		.toggle{
 			border: 0;
 			background: #333;
-			.twelve;
-			.cell;
+			@include grid-cell-width(12);
+			@include cell;
 			.content{
-				.row;
+				@include row;
 				h3{
 					font-weight: normal;
 					color: #666;
@@ -2476,10 +2483,10 @@ a.cke_smile img {
 	width: 100%;
 	height: 25px;
 	line-height: 25px;
-	.border-radius();
+	@include border-radius();
 	overflow: hidden;
 	text-align: right;
-	.border-box;
+	box-sizing: border-box;
 	padding-right: 8px;
 	font-size: 11px;
 	.filled{
@@ -2491,7 +2498,7 @@ a.cke_smile img {
 		color: #fff;
 		padding-left: 8px;
 		overflow: hidden;
-		.border-box;
+		box-sizing: border-box;
 	}
 	.filled.small{
 		color: #666;
@@ -2506,7 +2513,7 @@ a.cke_smile img {
 	overflow: hidden;
 	padding-top: 2px;
 	border-top: 1px dashed #888;
-	.border-box;
+	box-sizing: border-box;
 	.cell{
 		background: #bbb;
 		opacity: 0.1;
@@ -2540,8 +2547,8 @@ a.cke_smile img {
 }
 
 .grid-add-row{
-	.twelve;
-	.cell;
+	@include grid-cell-width(12);
+	@include cell;
 	margin: 0;
 	border: 0;
 	padding: 12px;
@@ -2577,7 +2584,7 @@ a.cke_smile img {
 			margin-right: 15px;
 			position: relative;
 			img {
-				.absolute;
+				@include absolute;
 			}
 		}
 		legend {
@@ -2657,7 +2664,7 @@ a.cke_smile img {
 		padding: 7px;
 		min-height: 100%;
 		position: relative;
-		.border-box;
+		box-sizing: border-box;
 		.media-container{
 			min-height: 40px;
 			position: relative;
@@ -2758,32 +2765,32 @@ a.cke_smile img {
 
 .media-container.pink{
 	background: pink;
-	.run-transition(background);
+	@include run-transition(background);
 }
 .media-container.purple{
 	background: purple;
-	.run-transition(background);
+	@include run-transition(background);
 }
 .media-container.orange{
 	background: orange;
-	.run-transition(background);
+	@include run-transition(background);
 }
 .media-container.white{
 	background: #fff;
 	color: #000;
-	.run-transition(background);
+	@include run-transition(background);
 }
 .media-container.green{
 	background: green;
-	.run-transition(background);
+	@include run-transition(background);
 }
 .media-container.blue{
 	background: blue;
-	.run-transition(background);
+	@include run-transition(background);
 }
 .media-container.black{
 	background: black;
-	.run-transition(background);
+	@include run-transition(background);
 }
 
 grid-cell{
@@ -2798,7 +2805,7 @@ grid-cell.height-undefined{
 .media.height-five, .media.height-six, .media.height-seven, .media.height-eight,
 .media.height-nine, .media.height-ten, .media.height-eleven, .media.height-twelve{
 	.media-wrapper{
-		.absolute;
+		@include absolute;
 		.media-container{
 			overflow-y: auto;
 			height: 100%;
@@ -2888,7 +2895,7 @@ grid-cell.height-undefined{
 		margin: 0;
 		padding: 0;
 		li{
-			.run-transition(background);
+			@include run-transition(background);
 			height: 30px;
 			width: 30px;
 			margin: 3px;
@@ -2979,12 +2986,12 @@ grid-cell.height-undefined{
 		background: #fff;
 
 		box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
-		.run-transition(height);
+		@include run-transition(height);
 		button{
 			padding: 0;
 			height: 25px;
 			width: 25px;
-			.border-box;
+			box-sizing: border-box;
 		}
 	}
 	button{
@@ -3015,7 +3022,7 @@ grid-cell.height-undefined{
 	z-index: 2;
 	.wrapper{
 		height: 170px;
-		.run-transition(height);
+		@include run-transition(height);
 		overflow: hidden;
 		position: absolute;
 		background: #fff;
@@ -3037,7 +3044,7 @@ grid-cell.height-undefined{
 	}
 	ul{
 		margin-top: 0;
-		.border-box;
+		box-sizing: border-box;
 		padding: 8px;
 		li{
 			display: inline;
@@ -3051,7 +3058,7 @@ grid-cell.height-undefined{
 					margin-right: auto;
 					float: none !important;
 					opacity: 0.2;
-					.run-transition(opacity);
+					@include run-transition(opacity);
 					cursor: pointer;
 					display: inline-block;
 				}
@@ -3075,21 +3082,21 @@ grid-cell.height-undefined{
 		}
 	}
 	i.draft{
-		.icon(draft, 99px);
+		@include icon(draft, 99px);
 		cursor: pointer;
 	}
 	i.submitted{
-		.icon(submitted, 99px);
+		@include icon(submitted, 99px);
 		cursor: pointer;
 	}
 	i.published{
-		.icon(published, 99px);
+		@include icon(published, 99px);
 		cursor: pointer;
 	}
 }
 
 i.shared{
-	.icon(shared, 18px);
+	@include icon(shared, 18px);
 	background-position: center;
 	display: block;
 	position: absolute;
@@ -3217,7 +3224,7 @@ popover{
 		width: 250px;
 		top: 100%;
 		opacity: 1;
-		.run-transition(opacity);
+		@include run-transition(opacity);
 		left: -125px;
 		margin-left: 50%;
 		text-align: center;
@@ -3242,7 +3249,7 @@ popover{
 	width: 415px;
 	margin-left:auto;
 	margin-right: auto;
-	.border-radius;
+	@include border-radius;
 	padding: 15px;
 
 	label{
@@ -3339,7 +3346,7 @@ popover{
 				line-height: 40px;
 				color: #777;
 				background: #D9F1F1;
-				.border-box;
+				box-sizing: border-box;
 				position: absolute;
 				top: -60px;
 				z-index: 800;
@@ -3351,26 +3358,26 @@ popover{
 					border-bottom: 1px solid #eee;
 					border-right: 1px solid #eee;
 					width: 100%;
-					.border-box;
+					box-sizing: border-box;
 				}
 			}
 		}
 	}
 
 	.schedule-items{
-		.border-box;
+		box-sizing: border-box;
 		.schedule-item{
-			.run-transition(top);
+			@include run-transition(top);
 			width: 100%;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			position: absolute;
 			border: 1px solid transparent;
 			border-radius: 5px;
-			.border-box;
+			box-sizing: border-box;
 			z-index: 500;
 			container{
-				.run-transition(all);
+				@include run-transition(all);
 			}
 			.schedule-item-content{
 				position: absolute;
@@ -3416,19 +3423,19 @@ popover{
 			}
 		}
 		.schedule-item.one{
-			.one;
+			@include grid-cell-width(1);
 		}
 		.schedule-item.two{
-			.two;
+			@include grid-cell-width(2);
 		}
 		.schedule-item.three{
-			.three;
+			@include grid-cell-width(3);
 		}
 		.schedule-item.four{
-			.four;
+			@include grid-cell-width(4);
 		}
 		.schedule-item.six{
-			.six;
+			@include grid-cell-width(6);
 		}
 	}
 }
@@ -3479,7 +3486,7 @@ drop-down-button{
 	label{
 		display: block;
 		cursor: pointer;
-		.border-box;
+		box-sizing: border-box;
 		min-width: 100%;
 		padding: 4px 10px;
 		border-radius: 3px 3px 0 0;
@@ -3488,7 +3495,7 @@ drop-down-button{
 		background: #fff;
 		border: 1px solid #444;
 		color: #000;
-		.run-transition(background);
+		@include run-transition(background);
 		font-weight: 300;
 	}
 
@@ -3505,9 +3512,9 @@ drop-down-button{
 			box-sizing: border-box;
 			li{
 				list-style-type: none;
-				.border-box;
+				box-sizing: border-box;
 				padding: 5px;
-				.run-transition(background);
+				@include run-transition(background);
 				font-size: 13px;
 				text-align: center;
 				color: #444;
@@ -3655,8 +3662,8 @@ ul.thought-out-actions{
 	padding: 0;
 	margin: 0;
 	> li{
-		.twelve;
-		.cell;
+		@include grid-cell-width(12);
+		@include cell;
 		margin-bottom: 1px;
 		list-style-type: none;
 		padding: 8px;
@@ -3729,30 +3736,30 @@ ul.thought-out-actions{
 		color: #000;
 	}
 	i.text{
-		.icon(text-icon, 30px);
+		@include icon(text-icon, 30px);
 		background-size: 60% auto;
 		background-color: transparent;
 		border: none;
 	}
 	i.image, input[type=button].image{
-		.icon(picture-icon, 30px);
+		@include icon(picture-icon, 30px);
 	}
 	i.sound, input[type=button].sound{
-		.icon(music-icon, 30px);
+		@include icon(music-icon, 30px);
 	}
 	i.video{
-		.icon(video-icon, 30px);
+		@include icon(video-icon, 30px);
 		background-color: transparent;
 		border: none;
 	}
 	i.grid{
-		.icon(glyphicons_099_vector_path_all, 30px);
+		@include icon(glyphicons_099_vector_path_all, 30px);
 		background-size: 60% auto;
 		background-color: transparent;
 		border: none;
 	}
 	i.sniplet {
-		.icon(glyphicons_155_show_big_thumbnails, 30px);
+		@include icon(glyphicons_155_show_big_thumbnails, 30px);
 		background-size: 60% auto;
 		background-color: transparent
 	}
@@ -3772,7 +3779,7 @@ ul.thought-out-actions{
 }
 
 .flexible{
-	.run-transition(width);
+	@include run-transition(width);
 	.small-hidden{
 		display: none;
 	}
@@ -3801,7 +3808,7 @@ ul.thought-out-actions{
 		.row{
 			border: 1px solid #ddd;
 			margin-bottom: 10px;
-			.run-transition(background);
+			@include run-transition(background);
 			> .cell{
 				height: 110px;
 			}
@@ -3817,18 +3824,18 @@ ul.thought-out-actions{
 				margin-right: 10px;
 			}
 			.buttons{
-				.bottom-locked
+				@include bottom-locked();
 			}
 		}
 	}
 
 	.navigation{
-		.three;
-		.cell;
+		@include grid-cell-width(3);
+		@include cell;
 	}
 	.content{
-		.nine;
-		.right-magnet;
+		@include grid-cell-width(9);
+		@include right-magnet;
 		overflow: hidden;
 		padding: 0;
 		position: relative;
@@ -3840,7 +3847,7 @@ ul.thought-out-actions{
 }
 
 [sortable-element].animated{
-	.run-transition(margin-top);
+	@include run-transition(margin-top);
 }
 
 table{
@@ -3914,7 +3921,7 @@ carousel{
 			position: absolute;
 			left: 0;
 			top: 0;
-			.run-transition(all);
+			@include run-transition(all);
 			text-align: center;
 			display: none;
 			padding: 8px;
@@ -3987,7 +3994,7 @@ carousel.slide{
 			border-radius: 50px;
 			top: 20px;
 			left: -25px;
-			.run-transition(background);
+			@include run-transition(background);
 		}
 		&:hover::before{
 			background: #fff;
@@ -4024,7 +4031,7 @@ carousel.slide{
 			height: 100px;
 			width: 100px;
 			border-radius: 50px;
-			.run-transition(background);
+			@include run-transition(background);
 		}
 		&:hover::before{
 			background: #fff;
@@ -4182,19 +4189,19 @@ recorder{
 			margin: 10px 3px 3px;
 		}
 		.play{
-			.icon(glyphicons_173_play, 20px);
+			@include icon(glyphicons_173_play, 20px);
 		}
 		.record{
-			.icon(glyphicons_169_record, 20px);
+			@include icon(glyphicons_169_record, 20px);
 		}
 		.pause{
-			.icon(glyphicons_174_pause, 20px);
+			@include icon(glyphicons_174_pause, 20px);
 		}
 		.save{
-			.icon(glyphicons_443_floppy_disk, 20px);
+			@include icon(glyphicons_443_floppy_disk, 20px);
 		}
 		.remove{
-			.icon(glyphicons_207_remove_2_accent, 20px);
+			@include icon(glyphicons_207_remove_2_accent, 20px);
 		}
 	}
 	.view{
@@ -4231,7 +4238,7 @@ recorder{
 article.preview{
 	height: 140px;
 	overflow: hidden;
-	.run-transition(height);
+	@include run-transition(height);
 	&.expanded{
 	}
 }
@@ -4298,8 +4305,8 @@ side-panel{
 		-webkit-transform: rotate(90deg);
 		font-size: 24px;
 		margin-top: -6px;
-		.run-transition(transform);
-		.run-transition(-webkit-transform);
+		@include run-transition(transform);
+		@include run-transition(-webkit-transform);
 	}
 	.opener:hover{
 		transform: rotate(-90deg);
@@ -4327,7 +4334,7 @@ side-panel{
 		position: absolute;
 		width: 300px;
 		box-sizing: border-box;
-		.run-transition(width);
+		@include run-transition(width);
 		overflow: hidden;
 		top: 0;
 		left: 55px;
@@ -4352,9 +4359,9 @@ side-panel{
 			margin-right: 10px;
 			margin-bottom: 10px;
 			position: relative;
-			.three;
-			.height-three;
-			.cell;
+			@include grid-cell-width(3);
+			@include grid-cell-height(3);
+			@include cell;
 			input[type=checkbox]{
 				position: absolute;
 				top: 5px;
@@ -4441,7 +4448,3 @@ body editor{
         }
     }
 }
-
-@import "navigations";
-@import "editor";
-@import "mobile";

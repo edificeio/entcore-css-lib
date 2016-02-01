@@ -1,7 +1,7 @@
-/// <reference path="app.less">
+/// <reference path="app.scss">
 
 body editor{
-	.run-transition(margin);
+	@include run-transition(margin);
 	display: block;
 	position: relative;
 	float: left;
@@ -46,7 +46,7 @@ body editor{
                 background-image: url("../img/icons/editor/glyphicons_280_settings.png")
             }
 		}
-        
+
 		ul{
 			padding: 0;
 			margin: 10px 0 10px 0;
@@ -56,7 +56,7 @@ body editor{
 				text-align: left;
 				padding-left: 15px;
 				cursor: pointer;
-				.run-transition(background);
+				@include run-transition(background);
 			}
 			li:hover{
 				background: #eee;
@@ -76,7 +76,7 @@ body editor{
 		overflow: hidden;
 		float: left;
 		box-sizing: border-box;
-		.run-transition(width);
+		@include run-transition(width);
 		height: 300px;
         border: 1px solid #ddd !important;
 		a{
@@ -106,7 +106,7 @@ body editor{
 	> textarea{
 		float: left;
 		box-sizing: border-box;
-		.run-transition(width);
+		@include run-transition(width);
 		margin: 0;
 		min-height: 300px;
         line-height: 1.5em;
@@ -191,7 +191,7 @@ body editor{
 		width: 0;
 		z-index: 10;
 		background-color: #fff;
-		.run-transition(width);
+		@include run-transition(width);
 		ul{
 			margin: 0;
 			padding: 0;
@@ -221,14 +221,14 @@ body editor{
 			position: absolute;
 			top: 0;
             opacity: 0;
-			.run-transition(opacity);
+			@include run-transition(opacity);
 			select-list, popover{
 				display: inline-block;
                 opacity: 0;
                 pointer-events: none;
 			}
 		}
-		
+
 		.sp-replacer{
 			display: none;
 		}
@@ -243,14 +243,14 @@ body editor{
 			-ms-user-select: none;
 			user-select: none;
 			position: relative;
-			.run-transition(all);
+			@include run-transition(all);
 			height: 30px;
 			min-width: 20px;
 			vertical-align: middle;
 			border-bottom: 3px solid transparent;
 			> i, popover i{
 				display: inline-block;
-				.run-transition(all);
+				@include run-transition(all);
 				background-size: 15px;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -276,61 +276,61 @@ body editor{
 			box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
 		}
 		.option.undo > i{
-			.icon("editor/undo", 100%);
+			@include icon("editor/undo", 100%);
 		}
 		.option.redo > i{
-			.icon("editor/redo", 100%);
+			@include icon("editor/redo", 100%);
 		}
 		.option.bold > i{
-			.icon("editor/bold", 100%);
+			@include icon("editor/bold", 100%);
 		}
 		.option.italic > i{
-			.icon("editor/italic", 100%);
+			@include icon("editor/italic", 100%);
 		}
 		.option.underline > i{
-			.icon("editor/underline", 100%);
+			@include icon("editor/underline", 100%);
 		}
 		.option.justify-left > i{
-			.icon("editor/justify-left", 100%)
+			@include icon("editor/justify-left", 100%)
 		}
 		.option.justify-right > i{
-			.icon("editor/justify-right", 100%)
+			@include icon("editor/justify-right", 100%)
 		}
 		.option.justify-center > i{
-			.icon("editor/justify-center", 100%);
+			@include icon("editor/justify-center", 100%);
 		}
 		.option.justify-full > i{
-			.icon("editor/justify-full", 100%);
+			@include icon("editor/justify-full", 100%);
 		}
 		.option.subscript > i{
-			.icon("editor/subscript", 100%);
+			@include icon("editor/subscript", 100%);
 		}
 		.option.superscript > i{
-			.icon("editor/superscript", 100%);
+			@include icon("editor/superscript", 100%);
 		}
 		.option.quote > i{
-			.icon("editor/quote", 100%)
+			@include icon("editor/quote", 100%)
 		}
 		.option.ulist i{
-			.icon("editor/ulist", 100%);
+			@include icon("editor/ulist", 100%);
 		}
 		.option.olist > i{
-			.icon("editor/olist", 100%);
+			@include icon("editor/olist", 100%);
 		}
 		.option.remove-format > i{
-			.icon("editor/remove-format", 100%);
+			@include icon("editor/remove-format", 100%);
 		}
 		.option.image> i{
-			.icon("editor/image", 100%);
-		} 
+			@include icon("editor/image", 100%);
+		}
 		.option.sound > i{
-			.icon("editor/sound", 100%);
+			@include icon("editor/sound", 100%);
 		}
 		.option.mathjax > i{
-			.icon("editor/mathjax", 100%);
+			@include icon("editor/mathjax", 100%);
 		}
 		.option.templates > i{
-			.icon("editor/templates", 100%);
+			@include icon("editor/templates", 100%);
 		}
 		.option.font{
 			width: 140px;
@@ -378,12 +378,12 @@ body editor{
                 popover-content.hidden{
                     .draw-table{
                         display: none;
-                    }       
+                    }
                 }
                 width: 100%;
                 height: 100%;
                 > i{
-				    .icon("editor/table", 15px);
+				    @include icon("editor/table", 15px);
                     top: 7px;
                     left: 3px;
 			    }
@@ -397,12 +397,12 @@ body editor{
 		}
 		.option.linker{
 			> i{
-				.icon("editor/linker", 100%)
+				@include icon("editor/linker", 100%)
 			}
 		}
 		.option.smileys{
 			> i {
-				.icon("editor/smileys", 100%);
+				@include icon("editor/smileys", 100%);
 			}
 			lightbox{
 				img{
@@ -412,13 +412,13 @@ body editor{
 			}
 		}
 		.option.unlink > i{
-			.icon("editor/unlink", 100%);
+			@include icon("editor/unlink", 100%);
 		}
 		.option.embed > i{
-			.icon("editor/embed", 100%);
+			@include icon("editor/embed", 100%);
 		}
 		.option.audio > i{
-			.icon("editor/audio", 100%);
+			@include icon("editor/audio", 100%);
 		}
 	}
 }
@@ -432,7 +432,7 @@ select-list{
 		background-color: #fff;
 		padding: 0 10px 10px;
 		opacity: 1;
-		.run-transition(all);
+		@include run-transition(all);
 		overflow: hidden;
 		top: 0;
 		left: 0;
@@ -472,18 +472,18 @@ select-list{
 	}
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: $tablette){
 	body editor{
 		popover{
 			display: none;
 		}
-		
+
 		editor-toolbar{
 			height: 0;
 			overflow: hidden;
 		}
 	}
-	
+
 	body editor.focus{
 		min-height: 324px;
 		position: fixed;
@@ -492,7 +492,7 @@ select-list{
 		width: 100%;
 		height: 100%;
 		z-index: 10001;
-		
+
 		&.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar{
 			height: 100%;
 			overflow: hidden;
@@ -502,9 +502,9 @@ select-list{
 			z-index: 1;
 			padding-top: 40px;
 			width: 0;
-			.run-transition(width);
+			@include run-transition(width);
 		}
-		
+
 		&.edit editor-toolbar.opened, &.both editor-toolbar.opened, &.html editor-toolbar.opened{
 			width: 44px;
 			.option{
@@ -514,7 +514,7 @@ select-list{
 				}
 			}
 		}
-		
+
 		 .close-focus{
 			 display: block;
 			 position: fixed;
@@ -524,7 +524,7 @@ select-list{
 			 margin: 0;
     		 border-radius: 0;
 		 }
-		
+
 		.editor-toolbar-opener{
 			display: block;
 			position: fixed;
@@ -549,7 +549,7 @@ select-list{
 				width: 15px;
 			}
 		}
-		
+
 		[contenteditable]{
 			width: 100%;
 			height: 100%;
