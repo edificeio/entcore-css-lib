@@ -72,6 +72,11 @@
 				color: #FFF;
 			}
 		}
+		side-panel + h1.application-title{
+			float: left;
+			margin-top: 0;
+			margin-left: auto;
+		}
 
 		table, ul.list-view{
 			th, td{
