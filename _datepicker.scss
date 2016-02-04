@@ -6,7 +6,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  */
- 
+
 .datepicker {
 	top: 0;
 	left: 0;
@@ -18,7 +18,7 @@
 		display: inline-block;
 		border-left:   7px solid transparent;
 		border-right:  7px solid transparent;
-		border-bottom: 7px solid #ccc;
+		border-bottom: 7px solid $grayLight;
 		border-bottom-color: rgba(0,0,0,.2);
 		position: absolute;
 		top: -7px;
@@ -62,7 +62,7 @@
 		&.active,
 		&.active:hover {
 			@include buttonBackground($btnPrimaryBackground, adjust-hue($btnPrimaryBackground, 20));
-			color: #fff;
+			color: $white;
 			text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 		}
 		span {
@@ -79,7 +79,7 @@
 			}
 			&.active {
 				@include buttonBackground($btnPrimaryBackground, adjust-hue($btnPrimaryBackground, 20));
-				color: #fff;
+				color: $white;
 				text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 			}
 			&.old {
@@ -87,7 +87,7 @@
 			}
 		}
 	}
-	
+
 	th {
 		&.switch {
 			width: 145px;
@@ -97,7 +97,7 @@
 			font-size: $baseFontSize * 1.5;
 		}
 	}
-	
+
 	thead tr:first-child th {
 		cursor: pointer;
 		&:hover{

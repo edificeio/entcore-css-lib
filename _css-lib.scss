@@ -1,9 +1,11 @@
 
 @import "breakpoints";
+@import "variables";
+@import "mixins";
 @import "crisscross";
 @import "crisscross-mobile";
 @import "modules";
-@import "bootstrap-adapter";
+//@import "bootstrap-adapter";
 @import "datepicker";
 @import "navigations";
 @import "editor";

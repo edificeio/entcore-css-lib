@@ -1,37 +1,3 @@
-$white: #fff;
-
-$icon-list-size: 117px;
-$icon-list-padding: 7px;
-
-@mixin icon($icon-name: icon, $icon-size: 40px, $icons-extension: ".png") {
-  $icons-root: "../img/icons/";
-
-  height: $icon-size;
-  width: $icon-size;
-  background-image: url("#{$icons-root}#{$icon-name}#{$icons-extension}");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-
-@mixin reduce-block($size) {
-	padding: $size;
-}
-
-@mixin vertical-gradient($top-color: blue, $bottom-color: white) {
-	background: -webkit-linear-gradient($top-color, $bottom-color);
-	background: -moz-linear-gradient($top-color, $bottom-color);
-	background: -o-linear-gradient($top-color, $bottom-color);
-	background:  linear-gradient($top-color, $bottom-color);
-}
-
-@mixin invert-colors(){
-	-webkit-filter: invert(100%);
-	-moz-filter: invert(100%);
-	filter: invert(100%);
-}
 
 .fixed{
 	@include absolute;
@@ -219,27 +185,6 @@ textarea{
 
 .widgets-friend.widgets-enemy{
 	margin-left: 15px;
-}
-
-@mixin widget-container($header-size) {
-	@include cell;
-
-	width: 215px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	margin-bottom: 15px;
-	padding-right: 1px;
-	.content{
-		margin-top: $header-size;
-		width: 100%;
-		@include cell;
-
-		border: 1px solid;
-		border-top: none;
-		@include border-radius-bottom(10px);
-		overflow: hidden;
-
-	}
 }
 
 .widget-container{
@@ -452,35 +397,6 @@ p{
 
 }
 
-
-@mixin ribbon($height:30px) {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	background: fade($white, 60%);
-	text-align: right;
-	height: 0;
-	overflow: hidden;
-	@include run-transition(height);
-
-	i{
-		height: $height;
-		width: $height;
-		background-repeat: no-repeat;
-		background-position: center;
-		display: inline-block;
-		box-sizing: border-box;
-		vertical-align: middle;
-	}
-
-	span{
-		padding-left:$height;
-	}
-}
-@mixin ribbon-up($height:30px) {
-	height: $height;
-}
-
 .domino .top:hover .ribbon{
   @include ribbon-up;
 }
@@ -666,12 +582,6 @@ table{
 }
 
 .cell-ellipsis{
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-@mixin cell-ellipsis{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
@@ -956,43 +866,9 @@ a{
 	overflow: visible;
 }
 
-@mixin drop-down{
-	overflow: visible;
-	position: absolute;
-	z-index: 8000;
-	height: 226px;
-	background: #eee;
-	cursor: pointer;
-	@include run-transition(height);
-	> div {
-		position: relative;
-		height: 100%;
-		width: 100%;
-	}
-	.display-more{
-		background: #eee;
-		text-align: center;
-	}
-	ul{
-		padding: 10px 0;
-		margin: 0px;
-		background: #eee;
-		width: 100%;
-		height: 100%;
-		li{
-			padding-left: 10px;
-			line-height: 32px;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-	}
-}
-
 .drop-down{
 	@include drop-down();
 }
-
 
 
 //twitter bootstrap adapter
@@ -1505,11 +1381,6 @@ article{
 
 .clip{
 	overflow: hidden;
-}
-
-@mixin bottom-locked{
-	position: absolute;
-	bottom: 0px;
 }
 
 .bottom-locked{

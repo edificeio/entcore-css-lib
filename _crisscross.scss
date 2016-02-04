@@ -6,13 +6,6 @@
 	box-sizing: border-box;
 }
 
-@mixin row{
-	width: 100%;
-	position: relative;
-	clear: both;
-	box-sizing: border-box;
-}
-
 .row:after{
 	clear:both;
 	content: " ";
@@ -27,18 +20,7 @@
 	position: relative;
 }
 
-@mixin cell{
-	box-sizing: border-box;
-	float: left;
-	display: block;
-	position: relative;
-}
-
 .right-magnet{
-	float: right !important;
-}
-
-@mixin right-magnet{
 	float: right !important;
 }
 
@@ -47,52 +29,6 @@
 	bottom: 0;
 }
 
-@mixin grid-rigid-cell-width($cell-size: 1) {
-	width: (960px / 12 * $cell-size);
-}
-
-@mixin grid-rigid-cell-height($cell-size: 1) {
-	height: (960px / 12 * $cell-size);
-	box-sizing: border-box;
-	padding-bottom: 0;
-}
-
-@mixin grid-rigid-margin($cell-size: 1) {
-	margin-left: (960px / 12 * $cell-size);
-}
-
-@mixin grid-cell-width($cell-size: 1) {
-	width: (100% / 12 * $cell-size);
-}
-
-@mixin grid-cell-height($cell-size: 1) {
-	padding-bottom: (100% / 12 * $cell-size);
-}
-
-@mixin grid-cell-left($cell-size: 1) {
-	@media screen and (min-width: $tablette){
-		left: (100% / 12 * $cell-size);
-	}
-}
-
-@mixin fixed-block{
-	box-sizing: content-box;
-	position: relative;
-	height: 0px;
-
-	.right-magnet.cell.absolute{
-		right: 0 !important;
-		left: auto;
-	}
-	.cell.fluid{
-		position: relative;
-		height: 100%;
-	}
-	.bottom-magnet.cell{
-		bottom: 0;
-		position: absolute;
-	}
-}
 
 .height-one{
 	@include fixed-block;
@@ -210,14 +146,6 @@
 
 .fluid{
 	position: relative !important;
-}
-
-@mixin absolute{
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
 }
 
 .absolute{
@@ -429,71 +357,4 @@
 .centered{
   margin-left: auto;
   margin-right: auto;
-}
-
-@mixin border-radius($radius: 5px) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  -o-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin border-radius-bottom($radius: 5px) {
-  -webkit-border-bottom-left-radius: $radius;
-  -webkit-border-bottom-right-radius: $radius;
-  -moz-border-bottom-left-radius: $radius;
-  -moz-border-bottom-right-radius: $radius;
-  -ms-border-bottom-left-radius: $radius;
-  -ms-border-bottom-right-radius: $radius;
-  -o-border-bottom-left-radius: $radius;
-  -o-border-bottom-right-radius: $radius;
-  border-bottom-left-radius: $radius;
-  border-bottom-right-radius: $radius;
-}
-
-@mixin border-radius-top($radius: 5px) {
-  -webkit-border-top-left-radius: $radius;
-  -webkit-border-top-right-radius: $radius;
-  -moz-border-top-left-radius: $radius;
-  -moz-border-top-right-radius: $radius;
-  -ms-border-top-left-radius: $radius;
-  -ms-border-top-right-radius: $radius;
-  -o-border-top-left-radius: $radius;
-  -o-border-top-right-radius: $radius;
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
-}
-
-@mixin border-radius-left($radius: 5px) {
-  -webkit-border-top-left-radius: $radius;
-  -webkit-border-bottom-left-radius: $radius;
-  -moz-border-top-left-radius: $radius;
-  -moz-border-bottom-left-radius: $radius;
-  -ms-border-top-left-radius: $radius;
-  -ms-border-bottom-left-radius: $radius;
-  -o-border-top-left-radius: $radius;
-  -o-border-bottom-left-radius: $radius;
-  border-top-left-radius: $radius;
-  border-bottom-left-radius: $radius;
-}
-
-@mixin border-radius-right($radius: 5px) {
-  -webkit-border-top-right-radius: $radius;
-  -webkit-border-bottom-right-radius: $radius;
-  -moz-border-top-right-radius: $radius;
-  -moz-border-bottom-right-radius: $radius;
-  -ms-border-top-right-radius: $radius;
-  -ms-border-bottom-right-radius: $radius;
-  -o-border-top-right-radius: $radius;
-  -o-border-bottom-right-radius: $radius;
-  border-top-right-radius: $radius;
-  border-bottom-right-radius: $radius;
-}
-
-@mixin run-transition($property: color, $speed: 250ms, $timing: ease) {
-  -o-transition: $property $speed $timing;
-  -moz-transition: $property $speed $timing;
-  -webkit-transition: $property $speed $timing;
-  transition: $property $speed $timing;
 }

@@ -1,9 +1,0 @@
-@mixin buttonBackground($top: #eee, $bottom: #ccc) {
-	@include vertical-gradient($top, $bottom);
-}
-
-$white: #fff;
-$grayLight: #ccc;
-$grayLighter: #eee;
-$btnPrimaryBackground: #ccc;
-$baseFontSize: 12px;
