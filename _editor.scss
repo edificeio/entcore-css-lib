@@ -493,9 +493,20 @@ select-list{
 		height: 100%;
 		z-index: 10001;
 
+        select-list{
+            .options{
+                position: fixed;
+                min-width: 0;
+                top: 80px;
+                width: 200px;
+                margin-left: -100px;
+                left: 50%;
+            }
+        }
+
 		&.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar{
 			height: 100%;
-			overflow: hidden;
+			overflow: auto;
 			position: fixed;
 			right: 0;
 			top: 0;
@@ -503,15 +514,21 @@ select-list{
 			padding-top: 40px;
 			width: 0;
 			@include run-transition(width);
+            border-left: 1px solid #ddd;
+            border-right: none;
+            &.opened .option i{
+                width: 40px;
+            }
 		}
+
+        input[type=color]{
+            width: 30px !important;
+        }
 
 		&.edit editor-toolbar.opened, &.both editor-toolbar.opened, &.html editor-toolbar.opened{
 			width: 44px;
 			.option{
 				width: 44px;
-				i{
-					width: 29px;
-				}
 			}
 		}
 
@@ -555,6 +572,14 @@ select-list{
 			height: 100%;
 			padding: 10px;
 			padding-top: 45px;
+            position: absolute;
 		}
 	}
+
+    select-list{
+        .selected-value{
+            border: none;
+            color: transparent;
+        }
+    }
 }
