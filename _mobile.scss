@@ -1,8 +1,34 @@
 
 @media screen and (max-width: $tablette){
-
 	body{
-
+        .lightbox-window .tabs, .lightbox .content .tabs{
+            margin: 0;
+            header{
+                max-width: 50%;
+                margin-right: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                box-sizing: border-box;
+                margin-bottom: -3px;
+            }
+            section{
+                padding: 10px 5px;
+            }
+        } 
+        media-library{
+            .media-library > h2{
+                display: none;
+            }
+            .search{
+                hr{
+                    display: none;
+                }
+                h2{
+                    display: none;
+                }
+            }
+        }
 		.widgets, .widgets-picker{
 			display: none;
 		}
@@ -119,7 +145,7 @@
 
 		.icons-view .element{
 			width: 105px;
-			height: 155px;
+			height: 105px;
 			legend{
 				line-height: 18px;
 				a{
@@ -180,6 +206,17 @@
 				display: inline-block;
 			}
 		}
+
+        nav.vertical{
+            ul{
+                li{
+                    a{
+                        padding-top: 3px;
+                        padding-bottom: 3px;
+                    }
+                }
+            }
+        }
 
 		nav.vertical[side-nav]{
 			position: fixed;

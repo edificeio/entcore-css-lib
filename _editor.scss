@@ -474,7 +474,7 @@ select-list{
 
 @media screen and (max-width: $tablette){
 	body editor{
-		popover{
+		> popover{
 			display: none;
 		}
 
@@ -506,7 +506,7 @@ select-list{
 
 		&.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar{
 			height: 100%;
-			overflow: auto;
+			overflow-y: auto;
 			position: fixed;
 			right: 0;
 			top: 0;
