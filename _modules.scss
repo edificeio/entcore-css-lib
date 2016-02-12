@@ -4114,6 +4114,7 @@ recorder{
 
 article.preview{
 	height: 140px;
+	min-height: 140px;
 	overflow: hidden;
 	@include run-transition(height);
 	&.expanded{
