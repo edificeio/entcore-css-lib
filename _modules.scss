@@ -4346,8 +4346,17 @@ body editor{
 	padding: 30px;
 	box-sizing: border-box;
 	overflow: hidden;
+
+	i.close-2x{
+		float: right;
+		cursor: pointer;
+	}
+
+	.microbox-material{
+		overflow: hidden;
+		padding-bottom: 20px;
+	}
 }
 button.microbox-close{
 	float: right;
-	margin-right: 10%;
 }
