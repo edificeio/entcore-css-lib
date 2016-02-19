@@ -4136,7 +4136,7 @@ i.important::after{
 
 input-password{
 	input{
-		width: 90%;
+		width: calc(100% - 50px);
 		height: 32px;
 		margin: 0px;
 		box-sizing: border-box;
@@ -4145,7 +4145,7 @@ input-password{
 		border-right: none;
 	}
 	button{
-		width: 10%;
+		width: 50px;
 		height: 32px;
 		margin: 0px;
 		box-sizing: border-box;
