@@ -134,10 +134,12 @@
 
 		section.lightbox {
 			> div.content{
-				padding: 7px;
-				min-height: 100%;
-				width: 100%;
+				top: 30px;
+				padding: 20px;
+				min-height: calc(100% - 60px);
+				width: 90%;
 				margin-top: 0;
+				margin-bottom: 30px;
 				border-radius: 0;
 				box-sizing: border-box;
 			}
