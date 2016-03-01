@@ -59,6 +59,24 @@
 		.cards-list .card{
 			max-width: 250px;
 		}
+
+        grid-cell.media{
+            .media-wrapper, .text-wrapper h1, .text-wrapper h2{
+                padding: 0;
+                .media-container{
+                    min-height: 0;
+                }
+            }
+        }
+        
+        .media.height-undefined, .media.height-zero{
+            min-height: 0;
+        }
+
+        .drawing-grid .row {
+            min-height: 0;
+            margin-bottom: 10px;
+        }
 	}
 
 	* {

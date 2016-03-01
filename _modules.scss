@@ -3074,7 +3074,7 @@ ul.toc{
 popover{
 	position: relative;
 	display: inline-block;
-	z-index: 10002;
+	z-index: 5000;
 	popover-content{
 		&::before{
 			content: "\25b2";
