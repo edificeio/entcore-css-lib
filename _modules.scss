@@ -4375,6 +4375,7 @@ button.microbox-close{
 		font-size: 18px;
 		padding: 20px;
 		font-weight: bold;
+		position: relative;
 	}
 	.role{
 		padding-bottom: 15px;
@@ -4382,8 +4383,15 @@ button.microbox-close{
 	}
 	.drop-line{
 		@include run-transition(all);
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		line-height: 27px;
+		top: -10px;
+	    right: -10px;
 		&:before{
-			font-size: 16px;
+			font-size: 13px;
 		}
 	}
 }
