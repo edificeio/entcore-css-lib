@@ -4360,3 +4360,30 @@ body editor{
 button.microbox-close{
 	float: right;
 }
+
+.table-mobile{
+	ul{
+		list-style: none;
+		margin: 20px;
+		padding: 0;
+		text-align: center;
+	}
+	li{
+		padding: 10px 20px;
+	}
+	.heading{
+		font-size: 18px;
+		padding: 20px;
+		font-weight: bold;
+	}
+	.role{
+		padding-bottom: 15px;
+		font-size: 14px;
+	}
+	.drop-line{
+		@include run-transition(all);
+		&:before{
+			font-size: 16px;
+		}
+	}
+}
