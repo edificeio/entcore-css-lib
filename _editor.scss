@@ -519,6 +519,18 @@ select-list{
             &.opened .option i{
                 width: 40px;
             }
+            
+            .option.table{
+                popover popover-content{
+                    &::before{
+                        display: none;
+                    }
+                    position: fixed;
+                    top: 10%;
+                    left: 50%;
+                    margin-left: -61px;
+                }
+            }
 		}
 
         input[type=color]{
