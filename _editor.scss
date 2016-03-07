@@ -6,7 +6,8 @@ body editor{
 	position: relative;
 	float: left;
 	width: 100%;
-
+	margin: 10px auto 20px;
+	
     input[type=color]{
         background: transparent;
         border: none;
@@ -519,7 +520,7 @@ select-list{
             &.opened .option i{
                 width: 40px;
             }
-            
+
             .option.table{
                 popover popover-content{
                     &::before{
