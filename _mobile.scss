@@ -213,7 +213,8 @@
 		.toggle-buttons{
 			height: auto;
 			.button, button{
-				padding: 0px 10px 5px 5px;
+				padding: 5px;
+				font-size: 0.9em;
 			}
 		}
 
@@ -277,7 +278,7 @@
 
 		.notification {
 			.content {
-			margin: 0;
+				margin: 0;
 			}
 		}
 		.auth .panel {
