@@ -254,7 +254,7 @@
 @mixin drop-down{
 	overflow: visible;
 	position: absolute;
-	z-index: 8000;
+	z-index: 10002;
 	height: 226px;
 	background: #eee;
 	cursor: pointer;
