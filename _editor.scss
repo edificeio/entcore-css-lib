@@ -361,6 +361,9 @@ body editor{
 			}
 		}
 		.option.table{
+            popover{
+                z-index: 8000;
+            }
 			.draw-table{
 				.row{
 					min-height: 0;
