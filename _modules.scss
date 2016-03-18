@@ -4288,6 +4288,7 @@ side-panel + app-title{
 [contenteditable], [bind-html]{
 	audio{
 		display: block;
+        max-width: 100%;
 	}
 	audio::before{
 		content: " ";
@@ -4314,6 +4315,9 @@ side-panel + app-title{
             padding: 5px;
             border: 1px solid #eee;
         }
+    }
+    iframe{
+        max-width: 100%;
     }
 }
 
