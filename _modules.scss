@@ -2498,7 +2498,9 @@ a.cke_smile img {
 	cursor: move;
 	outline: 1px dotted black;
 	outline-offset: -1px;
-
+    editor{
+        z-index: 201;
+    }
 	[contenteditable]{
         background: transparent;
 		p, h1, h2, h3, h4, h5{
