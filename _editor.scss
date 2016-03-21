@@ -574,6 +574,10 @@ select-list{
 			font-size: 22px;
 			height: 38px;
 			width: 44px;
+            -webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
 			&::before{
 				content: "+";
 				display: block;
