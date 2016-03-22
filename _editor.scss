@@ -34,7 +34,7 @@ body editor{
         background: transparent;
         border: none;
         display: inline-block !important;
-        width: 45px !important;
+        width: 27px !important;
         cursor: pointer;
     }
 
@@ -286,6 +286,26 @@ body editor{
                 left: 0;
 			}
 		}
+        .option.color{
+            input{
+                height: 13px;
+                padding-top: 20px;
+            }
+            > i{
+                left: 13px;
+		    }
+        }
+
+        .option.background-color{
+            input{
+                height: 32px;
+            }
+            > i{
+                left: 13px;
+                pointer-events: none;
+		    }
+        }
+
 		.option.disabled{
 			opacity: 0.3;
 			pointer-events: none;
