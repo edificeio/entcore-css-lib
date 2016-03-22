@@ -1,5 +1,27 @@
 /// <reference path="app.scss">
 
+[contenteditable] mathjax, [bind-html] mathjax{
+        display: block;
+        float: left;
+        position: relative;
+    }
+
+    [contenteditable] mathjax{
+        border: 1px solid #ccc;
+    }
+    [contenteditable] mathjax::after{
+        display: block;
+        content: " ";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
 body editor{
 	@include run-transition(margin);
 	display: block;
