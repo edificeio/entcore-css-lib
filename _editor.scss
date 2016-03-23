@@ -29,6 +29,7 @@ body editor{
 	float: left;
 	width: 100%;
 	margin: 10px auto 20px;
+    -webkit-user-select: auto;
 	
     input[type=color]{
         background: transparent;
