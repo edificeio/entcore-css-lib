@@ -2642,32 +2642,24 @@ a.cke_smile img {
 }
 
 .media-container.pink{
-	background: pink;
 	@include run-transition(background);
 }
 .media-container.purple{
-	background: purple;
 	@include run-transition(background);
 }
 .media-container.orange{
-	background: orange;
 	@include run-transition(background);
 }
 .media-container.white{
-	background: #fff;
-	color: #000;
 	@include run-transition(background);
 }
 .media-container.green{
-	background: green;
 	@include run-transition(background);
 }
 .media-container.blue{
-	background: blue;
 	@include run-transition(background);
 }
 .media-container.black{
-	background: black;
 	@include run-transition(background);
 }
 
