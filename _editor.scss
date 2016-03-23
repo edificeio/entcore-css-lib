@@ -36,6 +36,8 @@ body editor{
         display: inline-block !important;
         width: 27px !important;
         cursor: pointer;
+        box-sizing: content-box;
+        padding: 0;
     }
 
 	.editor-toolbar-opener, .close-focus{
@@ -288,11 +290,11 @@ body editor{
 		}
         .option.color{
             input{
-                height: 13px;
-                padding-top: 20px;
+                height: 11px;
+                padding-top: 22px;
             }
             > i{
-                left: 13px;
+                left: 11px;
 		    }
         }
 
@@ -301,7 +303,7 @@ body editor{
                 height: 32px;
             }
             > i{
-                left: 13px;
+                left: 11px;
                 pointer-events: none;
 		    }
         }
@@ -584,11 +586,11 @@ select-list{
             }
             
             .option.color > i{
-                left: 3px;
+                left: 2px;
             }
             
             .option.background-color > i{
-                left: 3px;
+                left: 2px;
             }
 		}
 
