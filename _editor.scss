@@ -582,6 +582,14 @@ select-list{
                     margin-left: -61px;
                 }
             }
+            
+            .option.color > i{
+                left: 3px;
+            }
+            
+            .option.background-color > i{
+                left: 3px;
+            }
 		}
 
         input[type=color]{
