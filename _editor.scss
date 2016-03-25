@@ -655,7 +655,7 @@ select-list{
 		}
 	}
 
-    select-list{
+    .option > select-list{
         .selected-value{
             border: none;
             color: transparent;
