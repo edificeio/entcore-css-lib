@@ -523,6 +523,8 @@ select-list{
 
 @media screen and (max-width: $tablette){
 	body editor{
+        margin-top:0;
+
 		> popover{
 			display: none;
 		}
@@ -659,6 +661,24 @@ select-list{
         .selected-value{
             border: none;
             color: transparent;
+        }
+    }
+}
+
+body editor{
+    .quote.option{
+        [contenteditable]{
+            height: 200px;
+            overflow: auto;
+            margin-top: 50px;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        select-list{
+            .selected-value{
+                width: 100%;
+                box-sizing: border-box;
+            }
         }
     }
 }

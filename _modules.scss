@@ -4313,22 +4313,6 @@ side-panel + app-title{
     }
 }
 
-body editor{
-    .quote.option{
-        [contenteditable]{
-            height: 200px;
-            overflow: auto;
-            margin-top: 50px;
-        }
-        select-list{
-            .selected-value{
-                width: 100%;
-                box-sizing: border-box;
-            }
-        }
-    }
-}
-
 .microbox-wrapper{
 	position: fixed;
 	top: 0;
