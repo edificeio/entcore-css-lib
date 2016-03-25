@@ -537,7 +537,12 @@ select-list{
         &.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar{
             display: none;
         }
-	}
+	    contextual-menu{
+            left: 50% !important;
+            margin-left: -100px;
+            top: 150px !important;
+	    }
+    }
 
 	body editor.focus{
 		min-height: 324px;
