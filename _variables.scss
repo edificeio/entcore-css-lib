@@ -3,24 +3,24 @@
 
 
 // also bootsrap-adapter
-$white: #fff;
-$grayLight: #ccc;
-$grayLighter: #eee;
+$white: #fff !default;
+$grayLight: #ccc !default;
+$grayLighter: #eee !default;
 
-$btnPrimaryBackground: $grayLight;
+$btnPrimaryBackground: $grayLight !default;
 
 
 ////////    FONTS
 
 
 //bootsrap-adapter
-$baseFontSize: 12px;
+$baseFontSize: 12px !default;
 
 
 ////////    SIZES
 
 
-$icon-list-size: 117px;
-$icon-list-padding: 7px;
+$icon-list-size: 117px !default;
+$icon-list-padding: 7px !default;
 
-$header-height: 150px;
+$header-height: 150px !default;
