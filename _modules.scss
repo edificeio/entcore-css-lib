@@ -4343,42 +4343,6 @@ button.microbox-close{
 	float: right;
 }
 
-.table-mobile{
-	ul{
-		list-style: none;
-		margin: 20px;
-		padding: 0;
-		text-align: center;
-	}
-	li{
-		padding: 10px 20px;
-	}
-	.heading{
-		font-size: 18px;
-		padding: 20px;
-		font-weight: bold;
-		position: relative;
-	}
-	.role{
-		padding-bottom: 15px;
-		font-size: 14px;
-	}
-	.drop-line{
-		@include run-transition(all);
-		position: absolute;
-		width: 30px;
-		height: 30px;
-		border-radius: 50%;
-		line-height: 27px;
-		top: -10px;
-	    right: -10px;
-		cursor: pointer;
-		&:before{
-			font-size: 13px;
-		}
-	}
-}
-
 .datepicker, .bootstrap-timepicker-widget{
     z-index: 100001;
 }
