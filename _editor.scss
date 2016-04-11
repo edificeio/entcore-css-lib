@@ -690,3 +690,30 @@ body editor{
         }
     }
 }
+
+[contenteditable] .download-attachments a{
+    pointer-events: none;
+}
+
+.download-attachments{
+    background: #eee;
+    color: #666;
+    padding: 15px;
+    h2{
+        color: #666;
+    }
+    .download{
+        height: 18px;
+        width: 18px;
+        margin-right: 10px;
+        background-size: contain;
+    }
+    a{
+        display: block;
+        margin: 3px;
+    }
+    .attachments{
+        border: 1px #fff solid;
+        padding: 5px;
+    }
+}
