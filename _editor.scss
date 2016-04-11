@@ -366,8 +366,11 @@ body editor{
 		.option.remove-format > i{
 			@include icon("editor/remove-format", 100%);
 		}
-		.option.image> i{
+		.option.image > i{
 			@include icon("editor/image", 100%);
+		}
+        .option.attachment > i{
+			@include icon("editor/attachment", 100%);
 		}
 		.option.sound > i{
 			@include icon("editor/sound", 100%);
