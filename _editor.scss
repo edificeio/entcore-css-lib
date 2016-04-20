@@ -1,5 +1,13 @@
 /// <reference path="app.scss">
 
+@font-face {
+    
+	font-family: 'editor';
+  src: url('../../entcore-css-lib/editor-resources/font/font/entcore-editor.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 [contenteditable] mathjax, [bind-html] mathjax{
         display: block;
         float: left;
@@ -17,8 +25,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        -moz-user-select: none;
-        -webkit-user-select: none;
         user-select: none;
     }
 
@@ -63,14 +69,12 @@ body editor{
     }
 	> popover{
 		position: absolute;
-		right: 10px;
-		top: 10px;
+		right: 0;
+		top: 0;
 		z-index: 10;
+		width: 52px;
 		> [popover-opener]{
 			width: 39px;
-            &.tools{
-                background-image: url("../img/icons/editor/glyphicons_280_settings.png")
-            }
 		}
 
 		ul{
@@ -265,9 +269,7 @@ body editor{
 		.option{
 			display: inline-block;
 			padding: 6px 5px;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
+			
 			user-select: none;
 			position: relative;
 			@include run-transition(all);
@@ -276,14 +278,12 @@ body editor{
 			vertical-align: middle;
 			border-bottom: 3px solid transparent;
 			> i, popover i{
+				width: 100%;
 				display: inline-block;
 				@include run-transition(all);
 				background-size: 15px;
                 background-repeat: no-repeat;
                 background-position: center;
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
 				user-select: none;
                 position: absolute;
                 top: 0;
@@ -296,7 +296,7 @@ body editor{
                 padding-top: 22px;
             }
             > i{
-                left: 11px;
+                left: 0;
 		    }
         }
 
@@ -305,7 +305,7 @@ body editor{
                 height: 32px;
             }
             > i{
-                left: 11px;
+                left: 0;
                 pointer-events: none;
 		    }
         }
@@ -321,66 +321,6 @@ body editor{
 		.option.toggled{
 			background-color: #e4e4e4;
 			box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
-		}
-		.option.undo > i{
-			@include icon("editor/undo", 100%);
-		}
-		.option.redo > i{
-			@include icon("editor/redo", 100%);
-		}
-		.option.bold > i{
-			@include icon("editor/bold", 100%);
-		}
-		.option.italic > i{
-			@include icon("editor/italic", 100%);
-		}
-		.option.underline > i{
-			@include icon("editor/underline", 100%);
-		}
-		.option.justify-left > i{
-			@include icon("editor/justify-left", 100%)
-		}
-		.option.justify-right > i{
-			@include icon("editor/justify-right", 100%)
-		}
-		.option.justify-center > i{
-			@include icon("editor/justify-center", 100%);
-		}
-		.option.justify-full > i{
-			@include icon("editor/justify-full", 100%);
-		}
-		.option.subscript > i{
-			@include icon("editor/subscript", 100%);
-		}
-		.option.superscript > i{
-			@include icon("editor/superscript", 100%);
-		}
-		.option.quote > i{
-			@include icon("editor/quote", 100%)
-		}
-		.option.ulist i{
-			@include icon("editor/ulist", 100%);
-		}
-		.option.olist > i{
-			@include icon("editor/olist", 100%);
-		}
-		.option.remove-format > i{
-			@include icon("editor/remove-format", 100%);
-		}
-		.option.image > i{
-			@include icon("editor/image", 100%);
-		}
-        .option.attachment > i{
-			@include icon("editor/attachment", 100%);
-		}
-		.option.sound > i{
-			@include icon("editor/sound", 100%);
-		}
-		.option.mathjax > i{
-			@include icon("editor/mathjax", 100%);
-		}
-		.option.templates > i{
-			@include icon("editor/templates", 100%);
 		}
 		.option.font{
 			width: 140px;
@@ -436,7 +376,6 @@ body editor{
                 width: 100%;
                 height: 100%;
                 > i{
-				    @include icon("editor/table", 15px);
                     top: 7px;
                     left: 3px;
 			    }
@@ -448,30 +387,13 @@ body editor{
 			    }
             }
 		}
-		.option.linker{
-			> i{
-				@include icon("editor/linker", 100%)
-			}
-		}
 		.option.smileys{
-			> i {
-				@include icon("editor/smileys", 100%);
-			}
 			lightbox{
 				img{
 					width: 50px;
 					height: 50px;
 				}
 			}
-		}
-		.option.unlink > i{
-			@include icon("editor/unlink", 100%);
-		}
-		.option.embed > i{
-			@include icon("editor/embed", 100%);
-		}
-		.option.audio > i{
-			@include icon("editor/audio", 100%);
 		}
 	}
 }
@@ -598,11 +520,11 @@ select-list{
             }
             
             .option.color > i{
-                left: 2px;
+                left: 0;
             }
             
             .option.background-color > i{
-                left: 2px;
+                left: 0;
             }
 		}
 
@@ -716,5 +638,262 @@ body editor{
     .attachments{
         border: 1px #fff solid;
         padding: 5px;
+    }
+}
+
+
+//editor icons
+
+@mixin edit-icon(){
+	font-family: "editor";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+}
+
+@mixin editor-icon(){
+	@include edit-icon;
+    display: block;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+}
+
+body editor{
+	> popover{
+		> [popover-opener]{
+            &.tools{
+                @include editor-icon;
+                &::before{
+                    content: '\e815'
+                }
+            }
+		}
+	}
+	&.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar{
+		.option.undo > i{
+			@include editor-icon;
+            &::before{
+                content: '\e800';
+            }
+		}
+		.option.redo > i{
+			@include editor-icon;
+            &::before{
+                content: '\e801';
+            }
+		}
+		.option.bold > i{
+			@include editor-icon;
+            &::before{
+                content: '\e802';
+            }
+		}
+		.option.italic > i{
+			@include editor-icon;
+            &::before{
+                content: '\e803';
+            }
+		}
+		.option.underline > i{
+			@include editor-icon;
+            &::before{
+                content: '\e804';
+            }
+		}
+		.option.justify-left > i{
+			@include editor-icon;
+            &::before{
+                content: '\e805';
+            }
+		}
+		.option.justify-right > i{
+			@include editor-icon;
+            &::before{
+                content: '\e807';
+            }
+		}
+		.option.justify-center > i{
+			@include editor-icon;
+            &::before{
+                content: '\e806';
+            }
+		}
+		.option.justify-full > i{
+			@include editor-icon;
+            &::before{
+                content: '\e808';
+            }
+		}
+		.option.subscript > i{
+			@include editor-icon;
+            &::before{
+                content: '\e80d';
+            }
+		}
+		.option.superscript > i{
+			@include editor-icon;
+            &::before{
+                content: '\e80c';
+            }
+		}
+		.option.quote > i{
+			@include editor-icon;
+            &::before{
+                content: '\e816';
+            }
+		}
+		.option.ulist i{
+			@include editor-icon;
+            &::before{
+                content: '\e809';
+            }
+		}
+		.option.olist > i{
+			@include editor-icon;
+            &::before{
+                content: '\e80a';
+            }
+		}
+		.option.image> i{
+			@include editor-icon;
+            &::before{
+                content: '\e817';
+            }
+		}
+		.option.sound > i{
+			@include editor-icon;
+            &::before{
+                content: '\e80f';
+            }
+		}
+		.option.table{
+            popover{
+                > i{
+				    @include editor-icon;
+                    top: -6px;
+                    &::before{
+                        content: '\e814';
+                        color: black;
+                    }
+			    }
+            }
+		}
+		.option.linker{
+			> i{
+				@include editor-icon;
+                &::before{
+                    content: '\e812';
+                }
+			}
+		}
+		.option.smileys{
+			> i {
+				@include editor-icon;
+                &::before{
+                    content: '\e813';
+                }
+			}
+		}
+		.option.unlink > i{
+			@include editor-icon;
+            &::before{
+                content: '\e811';
+            }
+		}
+		.option.embed > i{
+			@include editor-icon;
+            &::before{
+                content: '\e810';
+            }
+		}
+		.option.audio > i{
+			@include editor-icon;
+            &::before{
+                content: '\e839';
+            }
+		}
+        .option.color > i{
+			@include editor-icon;
+            &::before{
+                content: '\e80b';
+            }
+		}
+        .option.background-color > i{
+			@include editor-icon;
+            &::before{
+                content: '\e80b';
+            }
+            color: #fff;
+		}
+	}
+}
+
+@media screen and (max-width: $tablette){
+    body editor{
+        editor-toolbar{
+            select-list .selected-value{
+                width: 44px;
+                &::after{
+                    height: 44px;
+                    width: 30px;
+                    top: 0;
+                    left: 0;
+                    border: none;
+                }
+            }
+
+            .option.table{
+            popover{
+                > i{
+                    &::before{
+                        left: 7px;
+                        position: absolute;
+                    }
+			    }
+            }
+		}
+
+            .option.font{
+                select-list .selected-value{
+                    @include editor-icon();
+                    &::after{
+                        content: '\e8c4';
+                        color: black;
+                    }
+                }
+            }
+
+            .option.font-size{
+                select-list .selected-value{
+                    @include editor-icon();
+                    &::after{
+                        content: '\e8c7';
+                        color: black;
+                    }
+                }
+            }
+
+            .option.format{
+                select-list .selected-value{
+                    @include editor-icon();
+                    &::after{
+                        content: '\e8c8';
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.download-attachments{
+    .download{
+        @include edit-icon;
+        font-size: 20px;
+        vertical-align: top;
+    }
+    .download::before{
+        content: '\e86e';
     }
 }
