@@ -74,7 +74,7 @@ body editor{
 		z-index: 10;
 		width: 52px;
 		> [popover-opener]{
-			width: 39px;
+			width: 52px;
 		}
 
 		ul{
@@ -96,6 +96,7 @@ body editor{
 			width: 180px;
 			left: -165px;
 			margin-top: 15px;
+			background: #fff;
 		}
 		popover-content::before{
 			left: auto;
@@ -161,6 +162,7 @@ body editor{
         border-top-width: 2px;
         white-space: pre-wrap;
         word-break: break-word;
+		font-size: 16px;
         .tag{
             padding-left: 0;
         }
@@ -413,6 +415,7 @@ select-list{
 		left: 0;
 		min-width: 100%;
 		box-sizing: border-box;
+		box-shadow: 1px 1px 8px rgba(0,0,0,0.4);
 		opt{
 			padding: 5px;
 			display: block;
@@ -664,6 +667,7 @@ body editor{
 		> [popover-opener]{
             &.tools{
                 @include editor-icon;
+				font-size: 25px;
                 &::before{
                     content: '\e815'
                 }
@@ -767,6 +771,36 @@ body editor{
                 content: '\e80f';
             }
 		}
+		.option.remove-format > i{
+			height: 100%;
+  			width: 100%;
+			background-image: url('../../entcore-css-lib/editor-resources/img/remove-format.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-block;
+			box-sizing: border-box;
+			vertical-align: middle;
+		}
+		.option.mathjax > i{
+			height: 100%;
+  			width: 100%;
+			background-image: url('../../entcore-css-lib/editor-resources/img/mathjax.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-block;
+			box-sizing: border-box;
+			vertical-align: middle;
+		}
+		.option.templates > i{
+			height: 100%;
+  			width: 100%;
+			background-image: url('../../entcore-css-lib/editor-resources/img/templates.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			display: inline-block;
+			box-sizing: border-box;
+			vertical-align: middle;
+		}
 		.option.table{
             popover{
                 > i{
@@ -817,6 +851,12 @@ body editor{
 			@include editor-icon;
             &::before{
                 content: '\e80b';
+            }
+		}
+		.option.attachment > i{
+			@include editor-icon;
+            &::before{
+                content: '\e80e';
             }
 		}
         .option.background-color > i{
