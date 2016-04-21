@@ -62,6 +62,10 @@ body editor{
                 opacity: 1;
                 pointer-events: all;
 			}
+            .option, .option > select-list .selected-value{
+                opacity: 1;
+                pointer-events: all;
+            }
         }
     }
     &.focus.edit editor-toolbar.inline, &.focus.both editor-toolbar.inline, &.focus.html editor-toolbar.inline{
@@ -255,7 +259,7 @@ body editor{
 			top: 0;
             opacity: 0;
 			@include run-transition(opacity);
-			select-list, popover{
+			select-list, popover, .option, .option > select-list .selected-value{
 				display: inline-block;
                 opacity: 0;
                 pointer-events: none;
