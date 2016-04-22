@@ -126,6 +126,9 @@ textarea{
 .centered-text{
 	text-align: center !important;
 }
+.strong-text{
+	font-size: $baseFontSize + 8px;
+}
 
 .badge{
 	@include border-radius(10px);
