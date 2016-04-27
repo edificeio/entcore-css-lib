@@ -1560,6 +1560,7 @@ em[contenteditable=true]{
 div.hidden-content{
 	height: 0px;
 	width: 0px;
+	z-index: 1;
 	> *{
 		opacity: 0;
 	}
