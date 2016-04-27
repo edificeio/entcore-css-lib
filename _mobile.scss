@@ -97,7 +97,7 @@
 			left: 300px;
 		}
 
-		.logo{
+		header .logo{
 			display: none;
 		}
 
@@ -269,6 +269,14 @@
 			left: 0;
 			margin-left:0;
 		}
+	}
+	.whereami{
+		display: block;
+		float: left;
+		margin-top: 5px;
+		margin-bottom: 0;
+		font-size: 15px;
+		font-weight: bold;
 	}
 }
 
