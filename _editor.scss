@@ -459,7 +459,7 @@ select-list{
         margin-top:0;
 
 		> popover{
-			display: none;
+			display: none !important;
 		}
 
 		editor-toolbar{
