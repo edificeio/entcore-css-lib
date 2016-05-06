@@ -4321,35 +4321,6 @@ side-panel + app-title{
     }
 }
 
-.microbox-wrapper{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 10002;
-	box-sizing: border-box;
-}
-.microbox-content{
-	width: 80%;
-	margin: 30px auto;
-	padding: 30px;
-	box-sizing: border-box;
-	overflow: hidden;
-
-	i.close-2x{
-		float: right;
-		cursor: pointer;
-	}
-
-	.microbox-material{
-		overflow: hidden;
-		padding-bottom: 20px;
-	}
-}
-button.microbox-close{
-	float: right;
-}
 
 .datepicker, .bootstrap-timepicker-widget{
     z-index: 100001;
