@@ -1,14 +1,12 @@
-@media screen and (max-width: $small-mobile){
-	.drop-down-filters{
-		display: none !important;
-	}
-
-	body{
-		.list-view{
-			.content{
-				max-width: 90px;
-			}
-		}
-	}
-
+@media screen and (max-width: $small-mobile) {
+    .drop-down-filters {
+        display: none !important;
+    }
+    body {
+        .list-view {
+            .content {
+                max-width: 90px;
+            }
+        }
+    }
 }
