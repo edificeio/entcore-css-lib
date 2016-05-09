@@ -336,6 +336,20 @@
         }
     }
 
+	.account{
+		.avatar{
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			width: 90px;
+			height: 90px;
+			padding: 0;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+	}
+
+
 
     .whereami {
         display: block;
