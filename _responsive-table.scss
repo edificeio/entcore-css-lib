@@ -79,6 +79,13 @@
 		background: transparent;
 	}
 }
+
+.share .responsive-table{
+	thead tr{
+		border-top: none;
+		color: $white;
+	}
+}
 @media screen and (max-width: $fat-mobile) {
 
     .responsive-table {
