@@ -6,19 +6,29 @@
 }
 .responsive-table {
     margin: 30px 0;
-
+	border: 1px solid $grayLight;
+	line-height: 18px;
+	font-size: 14px;
     .fixed-head{
         margin-bottom: 0;
+		background: $white;
+        border-collapse: initial;
+		//	z-index: 99;
+
         th{
             text-align: center;
             padding: 10px;
+			width: 20%;
         }
         tr{
             border: none;
         }
-        tbody tr:hover{
-            background: transparent;
-        }
+		tr:hover{
+			background: transparent;
+		}
+		td:hover{
+			background: transparent;
+		}
     }
 
     table {
@@ -28,14 +38,29 @@
         margin-bottom: 0;
 
         thead{
+			tr{
+				font-weight: bold;
+				color: $black;
+				border-top: 1px solid $grayLight;
+			}
             td {
                 padding: 10px;
                 position: relative;
+				font-size: 14px;
             }
         }
+		tbody{
+			tr{
+				td{
+					padding: 10px;
+					font-size: 14px;
+				}
+			}
+		}
         td{
             text-align: center;
             width: 20%;
+
         }
         td:first-child{
             text-align: left;
@@ -49,11 +74,17 @@
 		cursor: pointer;
 	}
 }
+.row.my-notifications .responsive-table {
+	.fixed-head tbody tr:hover{
+		background: transparent;
+	}
+}
 @media screen and (max-width: $fat-mobile) {
 
     .responsive-table {
+		border: 0;
 
-        table.fixed-head {
+		table.fixed-head {
             display: none;
         }
 
@@ -66,7 +97,7 @@
             }
             tr {
                 margin: 10px 2px;
-                box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.4);
+                box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.4);
                 border: none;
             }
             thead td, td {
@@ -80,11 +111,19 @@
                 text-transform: uppercase;
             }
             td:first-child {
+				padding: 15px 25px;
                 text-transform: uppercase;
                 font-weight: bold;
                 font-size: 16px;
                 text-align: center;
+				border-bottom: 1px solid $grayLight;
             }
+            tbody{
+				td:first-child {
+					border-top: 1px solid $grayLight;
+	            }
+			}
+
         }
     }
 }
