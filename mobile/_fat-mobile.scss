@@ -41,6 +41,13 @@
         .tooltip {
             display: none !important;
         }
+
+        .responsive-table{
+            thead.slided + tbody{
+                //cause display block slide
+                display: block!important;
+            }
+        }
         //specific share table
         .share .responsive-table {
             table {
