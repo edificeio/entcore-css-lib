@@ -4186,10 +4186,7 @@ side-panel{
 		@include run-transition(transform);
 		@include run-transition(-webkit-transform);
 	}
-	.opener:hover{
-		transform: rotate(-90deg);
-		-webkit-transform: rotate(-90deg);
-	}
+
 	.opener::after{
 		content: "\25B2";
 		display: block;
@@ -4202,10 +4199,6 @@ side-panel{
 		.opener{
 			transform: rotate(-90deg);
 			-webkit-transform: rotate(-90deg);
-		}
-		.opener:hover{
-			transform: rotate(90deg);
-			-webkit-transform: rotate(90deg);
 		}
 	}
 	.toggle{
