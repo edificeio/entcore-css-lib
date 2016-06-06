@@ -474,6 +474,37 @@ article.media{
 	border: 2px dashed #ccc;
 }
 
+body article.editor-media{
+    overflow: visible !important;
+    editor[inline]{
+        > div{
+            height: 100%;
+        }
+        > popover{
+            display: none
+        }
+        editor-toolbar{
+            border-right-width: 1px !important;
+            .option.subscript{
+                display: none;
+            }
+            .option.superscript{
+                display: none;
+            }
+            .option.templates{
+                display: none;
+            }
+            
+        }
+        margin: 0 !important;
+        height: 100%;
+        [contenteditable]{
+            min-height: 0 !important;
+            border: none !important;
+        }
+    }
+}
+
 .mood-widget{
 	padding-top: 25px;
 	margin-bottom: 15px;
