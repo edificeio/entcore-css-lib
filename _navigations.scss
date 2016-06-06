@@ -320,7 +320,8 @@ nav.floating{
 		}
 	}
 	.content{
-		height: 100%;
+        height: auto;
+        max-height: 100%;
 		width: 100%;
 		overflow: hidden;
 		box-sizing: border-box;
