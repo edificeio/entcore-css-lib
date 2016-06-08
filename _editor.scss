@@ -3,7 +3,7 @@
 @font-face {
     
 	font-family: 'editor';
-  src: url('../../entcore-css-lib/editor-resources/font/font/entcore-editor.woff');
+  src: url('../../entcore-css-lib/editor-resources/font2/font/entcore-editor.woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -940,6 +940,6 @@ body editor{
         vertical-align: top;
     }
     .download::before{
-        content: '\e86e';
+        content: '\e818';
     }
 }
