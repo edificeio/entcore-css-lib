@@ -672,6 +672,7 @@ body editor{
 		> [popover-opener]{
             &.tools{
                 @include editor-icon;
+				height: auto;
 				font-size: 25px;
                 &::before{
                     content: '\e815'
