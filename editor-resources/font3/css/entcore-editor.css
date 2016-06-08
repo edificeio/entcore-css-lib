@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'entcore-editor';
-  src: url('../font/entcore-editor.eot?84967072');
-  src: url('../font/entcore-editor.eot?84967072#iefix') format('embedded-opentype'),
-       url('../font/entcore-editor.woff2?84967072') format('woff2'),
-       url('../font/entcore-editor.woff?84967072') format('woff'),
-       url('../font/entcore-editor.ttf?84967072') format('truetype'),
-       url('../font/entcore-editor.svg?84967072#entcore-editor') format('svg');
+  src: url('../font/entcore-editor.eot?14988590');
+  src: url('../font/entcore-editor.eot?14988590#iefix') format('embedded-opentype'),
+       url('../font/entcore-editor.woff2?14988590') format('woff2'),
+       url('../font/entcore-editor.woff?14988590') format('woff'),
+       url('../font/entcore-editor.ttf?14988590') format('truetype'),
+       url('../font/entcore-editor.svg?14988590#entcore-editor') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'entcore-editor';
-    src: url('../font/entcore-editor.svg?84967072#entcore-editor') format('svg');
+    src: url('../font/entcore-editor.svg?14988590#entcore-editor') format('svg');
   }
 }
 */
@@ -80,3 +80,5 @@
 .icon-quote:before { content: '\e816'; } /* '' */
 .icon-picture:before { content: '\e817'; } /* '' */
 .icon-download:before { content: '\e818'; } /* '' */
+.icon-fontsize:before { content: '\e819'; } /* '' */
+.icon-header:before { content: '\e81a'; } /* '' */

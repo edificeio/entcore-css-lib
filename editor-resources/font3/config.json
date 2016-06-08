@@ -155,6 +155,18 @@
       "css": "download",
       "code": 59416,
       "src": "fontawesome"
+    },
+    {
+      "uid": "2c26914ed707706773028b28e8aa5bd6",
+      "css": "fontsize",
+      "code": 59417,
+      "src": "elusive"
+    },
+    {
+      "uid": "0c708edd8fae2376b3370aa56d40cf9e",
+      "css": "header",
+      "code": 59418,
+      "src": "fontawesome"
     }
   ]
 }

@@ -3,7 +3,7 @@
 @font-face {
     
 	font-family: 'editor';
-  src: url('../../entcore-css-lib/editor-resources/font2/font/entcore-editor.woff');
+  src: url('../../entcore-css-lib/editor-resources/font3/font/entcore-editor.woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -904,7 +904,7 @@ body editor{
                 select-list .selected-value{
                     @include editor-icon();
                     &::after{
-                        content: '\e8c4';
+                        content: '\e80b';
                         color: black;
                     }
                 }
@@ -914,7 +914,7 @@ body editor{
                 select-list .selected-value{
                     @include editor-icon();
                     &::after{
-                        content: '\e8c7';
+                        content: '\e819';
                         color: black;
                     }
                 }
@@ -924,7 +924,7 @@ body editor{
                 select-list .selected-value{
                     @include editor-icon();
                     &::after{
-                        content: '\e8c8';
+                        content: '\e81a';
                         color: black;
                     }
                 }
