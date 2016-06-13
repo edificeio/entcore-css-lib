@@ -1087,6 +1087,11 @@ ul.icons-tabs{
 		position: relative;
 		list-style-type: none;
 
+		.check-tool{
+			top: 5px;
+			right: 5px;
+		}
+
 		.container{
 			height: $icon-list-size;
 			width: $icon-list-size;
@@ -4289,6 +4294,7 @@ side-panel + app-title{
 		padding: 10px;
 		margin: 8px;
 		vertical-align: top;
+		position: relative;
 		.illustration{
 			margin-right: 10px;
 			margin-bottom: 10px;
@@ -4388,3 +4394,43 @@ label{
 .cell.my-notifications{
 	float: right;
 }
+
+
+///NEW CHECKBOXES
+.check-tool{
+	width: 30px;
+	height: 30px;
+	background: $accent;
+	color: $white;
+	line-height: 30px;
+	border-radius: 50%;
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	cursor: pointer;
+	box-shadow: 1px 1px 0px 0px $shadow-dark;
+	@include run-transition(all);
+	i{
+		&:before{
+			content:"+";
+			display: block;
+			width: 30px;
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+}
+.check-tool:hover{
+	transform: scale(1.1);
+}
+.selected .check-tool{
+	background: $alter-accent;
+	i{
+		&:before{
+			content:"-";
+			font-size: 35px;
+		}
+	}
+}
+
+/////
