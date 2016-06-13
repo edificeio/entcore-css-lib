@@ -495,7 +495,15 @@ body article.editor-media{
             .option.templates{
                 display: none;
             }
-            
+            .option.image{
+                display: none;
+            }
+            .option.sound{
+                display: none;
+            }
+            .option.embed{
+                display: none;
+            }
         }
         margin: 0 !important;
         height: 100%;
