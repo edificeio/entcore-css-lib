@@ -2101,6 +2101,9 @@ section.lightbox{
 		}
 	}
 	.linker{
+        input[type=text]{
+            margin: 0;
+        }
 		.found-resources {
 			position: relative;
 			height: 165px;
