@@ -2101,8 +2101,8 @@ section.lightbox{
 		}
 	}
 	.linker{
-        input[type=text]{
-            margin: 0;
+        input[type=text], select, label{
+            margin: 5px;
         }
 		.found-resources {
 			position: relative;
@@ -4080,6 +4080,9 @@ slider, slider.drawing-zone{
 }
 
 recorder{
+    input[type=text]{
+        margin: 0;
+    }
 	display: block;
 	padding: 5px;
 	.metadata{
