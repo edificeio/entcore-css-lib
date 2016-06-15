@@ -2101,8 +2101,13 @@ section.lightbox{
 		}
 	}
 	.linker{
+		input[type=checkbox]{
+			margin-left: 0;
+		}
         input[type=text], select, label{
             margin: 5px;
+			margin-left: 0;
+			margin-right: 0;
         }
 		.found-resources {
 			position: relative;
