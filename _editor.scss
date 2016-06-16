@@ -487,7 +487,7 @@ select-list{
 		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: 10001;
+		z-index: 10001 !important;
 
         select-list{
             .options{
@@ -595,6 +595,7 @@ select-list{
 			padding-top: 45px;
             position: absolute;
             overflow: auto;
+			background: #fff;
 		}
 	}
 
