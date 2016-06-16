@@ -946,3 +946,11 @@ body editor{
         content: '\e818';
     }
 }
+
+.conversation{
+	editor{
+		.option.attachment{
+			display: none !important;
+		}
+	}
+}
