@@ -17,6 +17,17 @@
 	position: relative;
 }
 
+@mixin text-border($b-color: $white){
+	text-shadow: 2px 0 0 $b-color,
+	-2px 0 0 $b-color,
+	0 2px 0 $b-color,
+	0 -2px 0 $b-color,
+	1px 1px $b-color,
+	-1px -1px 0 $b-color,
+	1px -1px 0 $b-color,
+	-1px 1px 0 $b-color;
+
+}
 
 @mixin grid-rigid-cell-width($cell-size: 1) {
 	width: (960px / 12 * $cell-size);
