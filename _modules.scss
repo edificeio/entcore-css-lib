@@ -1087,11 +1087,6 @@ ul.icons-tabs{
 		position: relative;
 		list-style-type: none;
 
-		.check-tool{
-			top: 5px;
-			right: 5px;
-		}
-
 		.container{
 			height: $icon-list-size;
 			width: $icon-list-size;
@@ -4398,37 +4393,42 @@ label{
 
 ///NEW CHECKBOXES
 .check-tool{
-	width: 30px;
-	height: 30px;
-	background: $accent;
-	color: $white;
-	line-height: 30px;
-	border-radius: 50%;
 	position: absolute;
-	right: -10px;
-	top: -10px;
+	right: -12px;
+	top: -11px;
+	padding: 5px;
 	cursor: pointer;
-	box-shadow: 1px 1px 0px 0px $shadow-dark;
-	@include run-transition(all);
+
 	i{
+		display: block;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		background: $grayLighter;
+		color: $white;
+		border-radius: 50%;
+		cursor: pointer;
+		box-shadow: 1px 1px 0px 0px $shadow-light;
+		@include run-transition(all);
+
 		&:before{
 			content:"+";
 			display: block;
-			width: 30px;
-			font-size: 18px;
+			font-size: 14px;
 			text-align: center;
 		}
 	}
 }
-.check-tool:hover{
+.check-tool i:hover{
 	transform: scale(1.1);
+	background: $accent;
 }
 .selected .check-tool{
-	background: $alter-accent;
 	i{
+		background: $alter-accent;
 		&:before{
 			content:"-";
-			font-size: 35px;
+			font-size: 25px;
 		}
 	}
 }
