@@ -477,6 +477,8 @@ article.media{
 body article.editor-media{
     overflow: visible !important;
     editor[inline]{
+		padding-top: 0 !important;
+			
         > div{
             height: 100%;
             overflow: hidden;
