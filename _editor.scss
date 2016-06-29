@@ -37,6 +37,10 @@ body editor{
 	margin: 10px auto 20px;
     -webkit-user-select: auto;
 	
+	> div{
+		position: relative;
+	}
+	
     input[type=color]{
         background: transparent;
         border: none;
@@ -117,6 +121,7 @@ body editor{
 		@include run-transition(width);
 		height: 300px;
         border: 1px solid #ddd !important;
+		top:0;
 		a{
 			img{
 				border: 1px dashed;
@@ -231,6 +236,8 @@ body editor{
 		z-index: 10;
 		background-color: $white;
 		@include run-transition(width);
+		box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+
 		ul{
 			margin: 0;
 			padding: 0;
