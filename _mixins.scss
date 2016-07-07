@@ -202,10 +202,11 @@
   transition: $property $speed $timing;
 }
 
-@mixin invert-colors(){
-	-webkit-filter: invert(100%);
-	-moz-filter: invert(100%);
-	filter: invert(100%);
+@mixin invert-colors($amount: 100%){
+	-webkit-filter: invert($amount);
+	-moz-filter: invert($amount);
+	-ms-filter: invert($amount);
+	filter: invert($amount);
 }
 
 ////////    UI ELEMENTS
