@@ -269,6 +269,7 @@ nav.vertical.floating.hash-magnet{
 	margin-right: 15px;
 }
 nav.floating{
+
 	.arrow.next{
 		position: absolute;
 		bottom: -30px;
@@ -329,6 +330,19 @@ nav.floating{
 		box-shadow: 0px 0px 1px 1px $grayLight;
 	}
 }
+.floating{
+	padding-left: 0;
+	padding-right: 20px;
+	li{
+		list-style-type: none;
+		padding: 3px;
+		padding: 5px;
+	}
+	li:first-child{
+		margin-top: 20px;
+	}
+}
+
 
 plus{
 	padding-left: 5px;

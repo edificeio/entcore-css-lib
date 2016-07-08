@@ -3823,18 +3823,6 @@ table{
 	}
 }
 
-.floating-navigation{
-	padding-left: 0;
-	padding-right: 20px;
-	li{
-		list-style-type: none;
-		padding: 3px;
-		padding: 5px;
-	}
-	li:first-child{
-		margin-top: 20px;
-	}
-}
 
 carousel{
 	.images{
@@ -4404,7 +4392,7 @@ label{
 		width: 20px;
 		height: 20px;
 		line-height: 20px;
-		background: $grayLighter;
+		background: darken($grayLighter, 7%);
 		color: $white;
 		border-radius: 50%;
 		cursor: pointer;
