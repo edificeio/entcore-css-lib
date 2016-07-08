@@ -324,6 +324,14 @@
 	border-radius: 5px;
 }
 
+@mixin triangle-right ($size: 50px, $color: $accent) {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: ($size*0.6) 0 ($size*0.6) $size;
+	border-color: transparent transparent transparent $color;
+}
+
 //bootsrap-adapter
 @mixin buttonBackground($top: #eee, $bottom: #ccc) {
 	@include vertical-gradient($top, $bottom);
