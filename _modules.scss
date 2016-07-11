@@ -478,7 +478,7 @@ body article.editor-media{
     overflow: visible !important;
     editor[inline]{
 		padding-top: 0 !important;
-			
+
         > div{
             height: 100%;
             overflow: hidden;
@@ -4386,6 +4386,7 @@ label{
 	top: -11px;
 	padding: 5px;
 	cursor: pointer;
+	z-index: 1;
 
 	i{
 		display: block;
