@@ -464,4 +464,11 @@
     section.subtitle-push {
         margin-top: 40px;
     }
+
+    .check-tool i:hover{
+        background: darken($grayLighter, 7%);
+    }
+    .check-tool i:active{
+        background: $accent;
+    }
 }
