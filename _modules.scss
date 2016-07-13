@@ -975,6 +975,12 @@ a{
 	position: fixed;
 	max-width: 100%;
 	@include run-transition(height);
+
+	-webkit-transition-delay: 250ms;
+	-moz-transition-delay: 250ms;
+	-ms-transition-delay: 250ms;
+	transition-delay: 250ms;
+
 	z-index: 8000;
 	.toggle{
 		padding: 10px;
