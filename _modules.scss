@@ -225,10 +225,6 @@ p{
 	}
 }
 
-.welcome-text{
-	display: none;
-}
-
 .browser{
   a{
 	display: inline-block;
@@ -4354,6 +4350,7 @@ side-panel + app-title{
 	img{
 		display: block;
         position: relative;
+        max-width: 100%;
 	}
     blockquote.quotation{
         background: #f5f5f5;
