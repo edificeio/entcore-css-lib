@@ -471,10 +471,36 @@
     .check-tool i:active{
         background: $accent;
     }
+
     //prevent hold to copy box on ios
-    explorer img{
+    // explorer img{
+    //     -webkit-user-select: none;
+    //     user-select: none;
+    //     pointer-events: none;
+    // }
+
+    //  explorer {
+    //     -webkit-touch-callout: none !important;
+    // }
+
+    //prevent ioscontext menu
+    .explorer:after{
+    	content: " ";
+    	display: block;
+    	width: 100%;
+    	height: 100%;
+    	position: absolute;
+    	top: 0;
+        z-index: 2;
+        //background: rgba(yellow, 0.3);
         -webkit-user-select: none;
         user-select: none;
-        pointer-events: none;
+        opacity: 1;
+    }
+    explorer{
+        span, strong{
+           user-select: none;
+           -webkit-user-select: none;
+       }
     }
 }
