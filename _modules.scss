@@ -1906,6 +1906,7 @@ span.no-style{
 	font-size: 12px;
 	text-align: center;
 	@include border-radius(10px);
+    max-width: 100%;
 }
 
 .info{
@@ -1915,6 +1916,7 @@ span.no-style{
 	font-size: 12px;
 	text-align: center;
 	@include border-radius(10px);
+    max-width: 100%;
 }
 
 em.low-importance{
