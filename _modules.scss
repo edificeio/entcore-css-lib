@@ -2564,8 +2564,8 @@ a.cke_smile img {
 	padding-left: 0;
 	padding-right: 0;
 	cursor: move;
-	outline: 1px dotted black;
-	outline-offset: -1px;
+	border: 1px dotted black;
+	box-sizing: border-box;
     editor.focus{
         z-index: 201;
     }
@@ -2675,7 +2675,7 @@ a.cke_smile img {
 	}
 	.drawing-grid.editor{
 		.media{
-			outline: 1px dotted black;
+			border: 1px dotted black;
 		}
 	}
 	nav.vertical{
