@@ -136,9 +136,6 @@ body editor{
         popover{
             display: none;
         }
-        > popover{
-            top: -35px;
-        }
         &.focus{
             popover{
                 display: inline-block;
