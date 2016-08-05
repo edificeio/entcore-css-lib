@@ -467,6 +467,10 @@ select-list{
 	body editor{
         margin-top:0;
 
+        > div{
+            height: 100%;
+        }
+
 		> popover{
 			display: none !important;
 		}
