@@ -479,4 +479,13 @@
         //-webkit-touch-callout: none;
     }
 
+    //structure main-col / rows
+
+    .rigid-grid .option-row{
+        float: right;
+    }
+    .rigid-grid .main-col, .rigid-grid .option-row {
+        padding-left: 0;
+    }
+
 }
