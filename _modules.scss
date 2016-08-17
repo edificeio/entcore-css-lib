@@ -962,15 +962,15 @@ a{
 }
 
 .toggle-buttons{
-	width: 960px;
+	width: 100%;
 	background: #ccc;
-	left: 50%;
-	margin-left: -(960px / 2);
-	height: 60px;
+	height: auto;
+	max-height: 150px;
+	left: 0;
 	bottom: 0;
 	position: fixed;
 	max-width: 100%;
-	@include run-transition(height);
+	@include run-transition(max-height);
 
 	-webkit-transition-delay: 250ms;
 	-moz-transition-delay: 250ms;
@@ -989,10 +989,12 @@ a{
 		opacity: 0;
 		@include run-transition(opacity);
 	}
+
 	.contextual-link{
 		float: right;
 		margin: 10px;
 	}
+
 	behaviour, resource-right{
 		float:left;
 	}
@@ -1053,8 +1055,8 @@ files-picker{
 }
 
 .toggle-buttons.hide{
-	height: 0px;
-	@include run-transition(height);
+	max-height: 0px;
+	@include run-transition(max-height);
 	overflow: hidden;
 }
 
