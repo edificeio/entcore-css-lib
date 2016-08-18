@@ -267,6 +267,7 @@ body editor{
 			position: absolute;
 			top: 0;
             opacity: 0;
+			pointer-events: none;
 			@include run-transition(opacity);
 			select-list, popover, .option, .option > select-list .selected-value{
 				display: inline-block;
