@@ -439,6 +439,7 @@ select-list{
 		height: 0 !important;
 		opacity: 0;
 		padding: 0 10px;
+        pointer-events: none;
 	}
 	.selected-value{
 		border-bottom: 1px solid #ddd;
