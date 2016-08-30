@@ -263,6 +263,7 @@ body editor{
 		border-bottom: 0;
         border-right: 52px solid $grayLighter;
         z-index: 2;
+        position: relative;
 		&.inline{
 			position: absolute;
 			top: 0;
