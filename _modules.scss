@@ -1807,7 +1807,7 @@ span.no-style{
 
 .tooltip{
 	position: absolute;
-	z-index: 20;
+	z-index: 99999;
 	display: none;
 	.content{
 		padding: 5px 10px;
