@@ -102,21 +102,6 @@ input[type=text], input[type=password], input[type=search], input[type=tel], inp
 	border: none;
 }
 
-.dominos{
-	.mood{
-		position: absolute;
-		top: 22px;
-		right: 5px;
-	}
-	.item{
-		max-width: 188px;
-		min-width: 154px;
-		.domino{
-			border: 1px solid #ccc;
-		}
-	}
-}
-
 textarea{
 	width: 100%;
 	height: 130px;
@@ -351,9 +336,24 @@ p{
 }
 
 .dominos{
+	.mood{
+		position: absolute;
+		top: 22px;
+		right: 5px;
+	}
+	.item{
+		max-width: 188px;
+		min-width: 154px;
+		.domino{
+			border: 1px solid #ccc;
+		}
+	}
+}
+.dominos{
 	margin-bottom: 30px;
 	width: 100%;
 	@include cell;
+	
 	.item{
 		@include grid-cell-width(2.4);
 		@include cell;
