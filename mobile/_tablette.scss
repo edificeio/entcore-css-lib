@@ -384,13 +384,16 @@
     button.microbox {
         float: right;
     }
+    .micro-left + button.microbox{
+        float: left;
+    }
     .microbox-wrapper {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 10002;
+        z-index: 100000;
         box-sizing: border-box;
         background: rgba($white, 0.6);
     }
