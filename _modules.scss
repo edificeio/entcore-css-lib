@@ -4555,8 +4555,9 @@ label{
     }
     section + i{
         position: absolute;
-        right: 10px;
-        bottom: 5px;
+		right: 0;
+		bottom: 0;
+		padding: 0px 10px 5px 12px;
         font-weight: bold;
         font-size: 22px;
         letter-spacing: 1px;
