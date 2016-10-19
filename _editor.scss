@@ -66,11 +66,11 @@ body editor{
                 opacity: 1;
                 pointer-events: all;
 			}
-            .option, .option > select-list .selected-value{
+            .option, .option > select-list .selected-value, .option > i{
                 opacity: 1;
                 pointer-events: all;
             }
-            .option.disabled{
+            .option.disabled, .option > i{
 			    opacity: 0.3;
 			    pointer-events: none;
 		    }
@@ -266,7 +266,7 @@ body editor{
             opacity: 0;
 			pointer-events: none;
 			@include run-transition(opacity);
-			select-list, popover, .option, .option > select-list .selected-value{
+			select-list, popover, .option, .option > select-list .selected-value, .option > i{
 				display: inline-block;
                 opacity: 0;
                 pointer-events: none;
