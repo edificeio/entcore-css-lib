@@ -59,18 +59,18 @@ body editor{
 			select-list{
 				display: inline;
                 opacity: 1;
-                pointer-events: all;
+                pointer-events: all !important;
 			}
 			popover, > popover{
 				display: inline-block;
                 opacity: 1;
-                pointer-events: all;
+                pointer-events: all !important;
 			}
             .option, .option > select-list .selected-value, .option > i{
                 opacity: 1;
-                pointer-events: all;
+                pointer-events: all !important;
             }
-            .option.disabled, .option > i{
+            .option.disabled{
 			    opacity: 0.3;
 			    pointer-events: none;
 		    }
@@ -264,12 +264,12 @@ body editor{
 			position: absolute;
 			top: 0;
             opacity: 0;
-			pointer-events: none;
+			pointer-events: none !important;
 			@include run-transition(opacity);
 			select-list, popover, .option, .option > select-list .selected-value, .option > i{
 				display: inline-block;
                 opacity: 0;
-                pointer-events: none;
+                pointer-events: none !important;
 			}
 		}
 
@@ -325,7 +325,7 @@ body editor{
 
 		.option.disabled{
 			opacity: 0.3;
-			pointer-events: none;
+			pointer-events: none !important;
 		}
 		.option:hover{
 			background-color: $grayLighter;
@@ -436,7 +436,7 @@ select-list{
 		height: 0 !important;
 		opacity: 0;
 		padding: 0 10px;
-        pointer-events: none;
+        pointer-events: none !important;
 	}
 	.selected-value{
 		border-bottom: 1px solid #ddd;
