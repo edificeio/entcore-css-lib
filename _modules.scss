@@ -4395,6 +4395,12 @@ side-panel + app-title{
         position: relative;
         max-width: 100%;
 	}
+    img.smiley{
+        height: 40px; 
+        width: 40px; 
+        display: inline-block; 
+        vertical-align: middle
+    }
     blockquote.quotation{
         background: #f5f5f5;
         padding: 15px;
