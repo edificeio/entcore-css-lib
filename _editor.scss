@@ -328,10 +328,6 @@ body editor{
 			opacity: 0.3;
 			pointer-events: none !important;
 		}
-		.option:hover{
-			background-color: $grayLighter;
-			cursor: pointer;
-		}
 		.option.toggled{
 			background-color: #e4e4e4;
 			box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
@@ -962,5 +958,12 @@ body editor{
 		.option.attachment{
 			display: none !important;
 		}
+	}
+}
+
+@media screen and (min-width: $tablette){
+	body editor.edit editor-toolbar .option:hover{
+		background-color: $grayLighter;
+		cursor: pointer;
 	}
 }
