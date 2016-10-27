@@ -618,7 +618,7 @@ select-list{
 
 body editor{
     .quote.option{
-        [contenteditable]{
+        > [contenteditable]{
             height: 200px;
             overflow: auto;
             margin-top: 50px;
