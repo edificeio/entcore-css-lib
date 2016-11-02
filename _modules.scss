@@ -4381,6 +4381,15 @@ side-panel + app-title{
 	height: auto;
 }
 
+.smileys{
+	img.smiley{
+        height: 40px; 
+        width: 40px; 
+        display: inline-block !important;
+        vertical-align: middle;
+    }
+}
+
 [contenteditable], [bind-html]{
 	audio{
 		display: block;
@@ -4400,8 +4409,8 @@ side-panel + app-title{
     img.smiley{
         height: 40px; 
         width: 40px; 
-        display: inline-block; 
-        vertical-align: middle
+        display: inline-block !important;
+        vertical-align: middle;
     }
     blockquote.quotation{
         background: #f5f5f5;
