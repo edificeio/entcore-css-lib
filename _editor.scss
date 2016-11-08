@@ -556,7 +556,7 @@ select-list{
 
 		 .close-focus{
 			 display: block;
-			 position: fixed;
+			 position: absolute;
 			 top: 0;
 			 left: 0;
 			 z-index: 2;
@@ -566,7 +566,7 @@ select-list{
 
 		.editor-toolbar-opener{
 			display: block;
-			position: fixed;
+			position: absolute;
 			top: 0;
 			right: 0;
 			z-index: 3;
