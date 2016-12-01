@@ -353,7 +353,7 @@ p{
 	margin-bottom: 30px;
 	width: 100%;
 	@include cell;
-	
+
 	.item{
 		@include grid-cell-width(2.4);
 		@include cell;
@@ -4041,8 +4041,8 @@ nav.hash-magnet.vertical{
 
 .smileys{
 	img.smiley{
-        height: 40px; 
-        width: 40px; 
+        height: 40px;
+        width: 40px;
         display: inline-block !important;
         vertical-align: middle;
     }
@@ -4065,8 +4065,8 @@ nav.hash-magnet.vertical{
         max-width: 100%;
 	}
     img.smiley{
-        height: 40px; 
-        width: 40px; 
+        height: 40px;
+        width: 40px;
         display: inline-block !important;
         vertical-align: middle;
     }
@@ -4223,9 +4223,3 @@ label{
         @include run-transition(all);
     }
 }
-
-@import "modules/cards";
-@import "modules/carousel";
-@import "modules/pills";
-@import "modules/recorder";
-@import "modules/side-panel";

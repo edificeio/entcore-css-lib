@@ -2,15 +2,13 @@
 @import "breakpoints";
 @import "variables";
 @import "mixins";
-@import "icons";
+
 @import "crisscross";
 @import "crisscross-mobile";
+
 @import "modules";
-//@import "bootstrap-adapter";
-@import "responsive-table";
-@import "datepicker";
-@import "timepicker";
-@import "navigations";
-@import "editor";
-@import "mobile";
+@import "modules/modules";
+@import "mobile/mobile";
 @import "app";
+
+//@import "bootstrap-adapter";
