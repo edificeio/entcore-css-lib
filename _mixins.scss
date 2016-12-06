@@ -209,6 +209,16 @@
 	filter: invert($amount);
 }
 
+@keyframes fade-in{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+
 @keyframes shockwave-animation{
     from {
       transform: scale(1);
