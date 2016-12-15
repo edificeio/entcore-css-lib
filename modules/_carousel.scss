@@ -1,4 +1,67 @@
-﻿carousel.slide{
+﻿carousel{
+	.images{
+		width: 100%;
+		position: relative;
+		height: 0;
+		padding-bottom: 45%;
+		.image{
+			position: absolute;
+			left: 0;
+			top: 0;
+			@include run-transition(all);
+			text-align: center;
+			display: none;
+			padding: 8px;
+			border: 1px solid #ddd;
+			background: #fff;
+			box-sizing: border-box;
+			.image-container{
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+	nav{
+		ul{
+			padding: 0;
+			margin-top: 10px;
+			text-align: center;
+			li{
+				display: inline-block;
+			}
+			li::after{
+				content: "\2022";
+				font-size: 80px;
+			}
+		}
+	}
+}
+
+carousel.squares{
+	nav{
+		ul{
+			li::after{
+				content: "\2024";
+			}
+		}
+	}
+}
+
+carousel.triangles{
+	nav{
+		ul{
+			li::after{
+				content: "\2023";
+			}
+		}
+	}
+}
+
+carousel.slide{
 	.image.previous{
 		display: block;
 		width: 30%;
