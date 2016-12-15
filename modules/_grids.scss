@@ -1,4 +1,3 @@
-
 .grid-exemple.row .article, .grid-exemple.row .absolute{
 	font-size: 14px;
 	padding: 10px;
@@ -9,8 +8,6 @@
 	text-align: left;
 }
 
-
-
 .grid-guides{
 	position: absolute;
 	height: 100%;
@@ -19,6 +16,7 @@
 	padding-top: 2px;
 	border-top: 1px dashed #888;
 	box-sizing: border-box;
+	opacity: 0.5;
 	.cell{
 		background: #bbb;
 		opacity: 0.1;
@@ -41,137 +39,30 @@
 	border-left: 1px solid #ddd;
 }
 
-.grid-view{
-	.grid-add-row{
-		display: none;
-	}
-	.media{
-		outline: none;
-		cursor: default;
-	}
-}
-
-.grid-add-row{
-	@include grid-cell-width(12);
-	@include cell;
-	margin: 0;
-	border: 0;
-	padding: 12px;
-}
-
 .nested-grid{
 	height: 100%;
 	cursor: inherit;
 	min-height: 60px;
 	position: relative;
 	z-index: 100;
-	.drawing-grid > .row:last-child{
-		min-height: 0;
-		.grid-add-row{
-			position: absolute;
-			bottom: -47px;
-		}
-	}
-}
-
-
-
-grid-cell{
-	overflow: hidden;
 }
 
 grid-cell.height-undefined{
     overflow: visible;
 }
 
-.sub-grid{
-	overflow: visible !important;
-	padding: 0 !important;
-	height: auto !important;
-}
-
-.sub-grid > .media-wrapper{
-	padding: 0;
-	position: relative !important;
-}
-
-.sub-grid{
-	.square-menu-actions{
-		padding: 0;
-	}
-	.guide-line{
-		border: none;
-	}
-}
-
 .grid-wrapper{
 	height: 100%;
 	position: relative;
-	.square-menu{
-		display: block;
-		position: absolute;
-		left: -55px;
-	}
-	.square-menu-actions{
-		display: block;
-	}
 }
 
 .grid-media{
-	-o-transition: width 150ms ease, padding-bottom 150ms ease, margin-left 100ms ease;
-	-moz-transition: width 150ms ease, padding-bottom 150ms ease, margin-left 100ms ease;
-	-webkit-transition: width 150ms ease, padding-bottom 150ms ease, margin-left 100ms ease;
-	transition: width 150ms ease, padding-bottom 150ms ease, margin-left 100ms ease;
-
+	transition: width 150ms ease, padding-bottom 150ms ease, margin-left 100ms ease, border 250ms ease;
 }
 
 .drawing-grid{
 	height: auto;
 	.row{
 		min-height: 60px;
-	}
-}
-
-
-.edit-grid{
-	button,i,input[button]{
-		opacity: 1;
-		pointer-events: all;
-	}
-	.grid-media{
-		pointer-events: all;
-	}
-	.square-menu button, .grid-add-row{
-		display: block;
-	}
-}
-
-.blur-grid{
-	button,i,input[button]{
-		pointer-events: none;
-	}
-	.grid-guides{
-		opacity: 0.3
-	}
-	.grid-media{
-		pointer-events: none;
-	}
-	.square-menu button, .grid-add-row{
-		display: none;
-	}
-}
-
-.blur-grid{
-	.edit-grid{
-		button,i,input[button]{
-			opacity: 1;
-			pointer-events: all;
-		}
-		.grid-media{
-			pointer-events: all;
-		}
-		.square-menu button, .grid-add-row{
-			display: block;
-		}
 	}
 }

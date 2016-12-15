@@ -1,7 +1,6 @@
 /// <reference path="app.scss">
 
 @font-face {
-
     font-family: 'editor';
     src: url('../../entcore-css-lib/editor-resources/font3/font/entcore-editor.woff');
     font-weight: normal;
@@ -962,16 +961,11 @@ body editor {
             }
         }
 
-        .option.embed {
-            .lightbox > .content {
-                overflow: hidden;
-            }
-		}
 		.option.embed {
             .lightbox > .content{
                 overflow: hidden;
             }
-            
+
             > i{
 			    @include editor-icon;
                 &::before{

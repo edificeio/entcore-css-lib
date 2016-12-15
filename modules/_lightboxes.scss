@@ -61,6 +61,7 @@ section.lightbox{
 		margin-top: 80px;
 		padding: 15px;
 		float: none !important;
+        overflow: visible;
 	}
 	.content::after{
 		clear:both;
