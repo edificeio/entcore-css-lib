@@ -1,0 +1,33 @@
+
+
+.notification{
+	article{
+		margin-bottom: 12px;
+		margin-top: 12px;
+		padding: 9px;
+		height: 84px;
+	}
+	.avatar{
+		width: 84px;
+		height: 84px;
+		float: left;
+		margin-right: 5px;
+		img{
+			height: auto;
+		}
+	}
+	.content{
+		float: none;
+		width: 100%;
+	}
+	i.type {
+		float: left;
+	}
+}
+.notification-date{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 200px;
+	text-align: right;
+}
