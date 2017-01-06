@@ -393,3 +393,138 @@ plus{
 		}
 	}
 }
+
+
+nav.illustrated-links{
+	ul{
+		li{
+			list-style-type: none;
+			display: table;
+			margin-bottom: 12px;
+
+			.illustration{
+				position: relative;
+				width: auto;
+				display: table-cell;
+				min-width: 120px;
+				height: 120px;
+				img{
+					position: absolute;
+					width: 120px;
+					height: 120px
+				}
+			}
+			.content{
+				padding: 8px;
+				padding-left: 15px;
+				display: table-cell;
+				vertical-align: top;
+				width: 100%;
+				position: relative;
+				min-height: 0;
+				h1, h2{
+					margin: 0px;
+					font-size: 22px;
+				}
+				em, strong{
+					font-size: 12px;
+					font-weight: normal;
+				}
+				p{
+					color: #666;
+					font-size: 12px;
+					margin: 0;
+				}
+				em{
+					color: #aaa;
+				}
+			}
+		}
+	}
+}
+
+
+.menu-items{
+	padding: 0;
+    padding-right: 30px;
+	margin: 0;
+	font-size: 12px;
+	li{
+		min-height: 30px;
+		line-height: 30px;
+		list-style-type: none;
+		cursor: pointer !important;
+	}
+	li:hover{
+		color: #000;
+	}
+	i.text{
+		@include icon(text-icon, 30px);
+		background-size: 60% auto;
+		background-color: transparent;
+		border: none;
+	}
+	i.image, input[type=button].image{
+		@include icon(picture-icon, 30px);
+	}
+	i.sound, input[type=button].sound{
+		@include icon(music-icon, 30px);
+	}
+	i.video{
+		@include icon(video-icon, 30px);
+		background-color: transparent;
+		border: none;
+	}
+	i.grid{
+		@include icon(glyphicons_099_vector_path_all, 30px);
+		background-size: 60% auto;
+		background-color: transparent;
+		border: none;
+	}
+	i.sniplet {
+		@include icon(glyphicons_155_show_big_thumbnails, 30px);
+		background-size: 60% auto;
+		background-color: transparent
+	}
+	> li > div > input[type=button]{
+		background-position: 4px !important;
+		padding-left: 29px;
+		background-size: 19px;
+		background-color: transparent;
+		border: none;
+		width: 100% !important;
+		text-align: left;
+		font-size: 12px;
+	}
+	> li > div > input[type=button]:hover{
+		color: #000;
+	}
+}
+
+.hash-magnet, nav.hash-magnet.vertical{
+	margin-top: -80px;
+	padding-top: 80px;
+	display: block;
+	pointer-events: none;
+	clear: none;
+	> *{
+		pointer-events: all;
+	}
+}
+nav.hash-magnet.vertical{
+	margin-top: 0;
+	padding-top: 0;
+}
+
+
+.pagination{
+	input[type=text]{
+		width: 20px;
+	}
+}
+
+
+//mobile !!
+.whereami{
+	display: none;
+}

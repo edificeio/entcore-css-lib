@@ -1,4 +1,70 @@
 
+table{
+	border-collapse: collapse;
+	margin-bottom: 20px;
+
+	tr{
+		border-top: 1px solid #ccc;
+		background: transparent;
+		@include run-transition(background);
+	}
+	tr.checked{
+		background: #eee;
+	}
+	tr.disabled{
+		color: #999;
+	}
+    tr.overline{
+        border-bottom: none;
+    }
+
+    tr.underline{
+        border-top: none;
+    }
+}
+
+
+td.icon{
+	width: 25px !important;
+	height: 25px !important;
+	position: relative;
+}
+
+td.text{
+	min-width: 150px !important;
+}
+
+td.main-cell{
+	width: 100% !important;
+}
+
+
+
+
+.light-style{
+	tr{
+		border: 1px solid #fff;
+	}
+}
+
+
+.table-condensed{
+	font-size: 12px;
+	tr{
+		td, th{
+			padding: 0;
+		}
+	}
+}
+
+.blogs-posts-list table{
+	table-layout: fixed;
+}
+
+
+
+
+
 .fixed-head{
 	& + .row{
 		-webkit-overflow-scrolling: touch;

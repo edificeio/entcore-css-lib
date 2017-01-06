@@ -119,3 +119,19 @@
 		}
 	}
 }
+
+
+.date-picker-icon{
+	a{
+		height: 39px;
+		width: 50px;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.datepicker, .bootstrap-timepicker-widget{
+    z-index: 100001;
+}

@@ -1,0 +1,61 @@
+
+
+.explorer{
+	position: relative;
+	cursor: pointer;
+}
+
+.action-cell{
+	width:30px;
+	height: 30px;
+}
+
+
+
+
+section.selected, article.selected{
+	background: $grayLight;
+}
+
+
+article.media{
+	border: 2px dashed $grayLight;
+}
+
+article{
+	border: 1px solid $grayLight;
+	padding: 8px;
+}
+
+article.preview{
+	height: 140px;
+	min-height: 140px;
+	overflow: hidden;
+	@include run-transition(height);
+	&.expanded{
+	}
+}
+
+.user-infos{
+	line-height: 25px;
+	input[type=text]{
+		margin: 0;
+	}
+}
+
+
+.bookmarked-apps{
+	min-height: 48px;
+	padding: 5px;
+	margin-bottom: 30px;
+	border: 2px dashed #ddd;
+	font-size: 24px;
+	text-align: center;
+	line-height: 30px;
+	color: #ccc;
+	font-weight: bold;
+	.icons-view.apps{
+		margin-top: 0;
+	}
+
+}

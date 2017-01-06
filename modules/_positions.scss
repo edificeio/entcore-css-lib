@@ -1,0 +1,26 @@
+
+.fixed{
+	@include absolute;
+}
+
+
+.v-center-container{
+	display: table;
+	.v-center{
+		display: table-cell;
+		vertical-align: middle;
+		margin: 0;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+.clear{
+  clear: both;
+}
+
+
+.bottom-locked{
+	@include bottom-locked;
+}

@@ -1,12 +1,68 @@
 /// <reference path="app.scss">
 
 @font-face {
-    
-	font-family: 'editor';
-  src: url('../../entcore-css-lib/editor-resources/font3/font/entcore-editor.woff');
-  font-weight: normal;
-  font-style: normal;
+
+    font-family: 'editor';
+    src: url('../../entcore-css-lib/editor-resources/font3/font/entcore-editor.woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
+
+
+[contenteditable]:focus{
+	cursor: text !important;
+}
+
+[contenteditable].drawing-zone{
+	height: auto;
+}
+
+[contenteditable], [bind-html]{
+	audio{
+		display: block;
+        max-width: 100%;
+	}
+	audio::before{
+		content: " ";
+	}
+	a img{
+		cursor: pointer !important;
+	}
+	img{
+		display: block;
+        position: relative;
+        max-width: 100%;
+	}
+    img.smiley{
+        height: 40px;
+        width: 40px;
+        display: inline-block !important;
+        vertical-align: middle;
+    }
+    blockquote.quotation{
+        background: #f5f5f5;
+        padding: 15px;
+        border-left: 5px solid #444;
+        footer{
+            text-align: right;
+            font-style: italic;
+            color: #666;
+        }
+    }
+    table{
+		max-width: 100%;
+        td{
+            padding: 5px;
+            border: 1px solid #eee;
+        }
+    }
+    iframe{
+        max-width: 100%;
+    }
+}
+
+
 
 [contenteditable] mathjax, [bind-html] mathjax{
     display: inline-block;
@@ -28,6 +84,17 @@
     user-select: none;
 }
 
+.editor{
+	.viewer{
+		.media{
+			opacity: 1;
+		}
+	}
+	iframe{
+		pointer-events: none;
+	}
+}
+
 body editor{
 	@include run-transition(padding);
 	display: block;
@@ -36,11 +103,11 @@ body editor{
 	width: 100%;
 	margin: 10px auto 20px;
     -webkit-user-select: auto;
-	
+
 	> div{
 		position: relative;
 	}
-	
+
     input[type=color]{
         background: transparent;
         border: none;
@@ -283,7 +350,7 @@ body editor{
 		.option{
 			display: inline-block;
 			padding: 6px 5px;
-			
+
 			user-select: none;
 			position: relative;
 			@include run-transition(all);
@@ -533,11 +600,11 @@ select-list{
                     margin-left: -61px;
                 }
             }
-            
+
             .option.color > i{
                 left: 0;
             }
-            
+
             .option.background-color > i{
                 left: 0;
             }

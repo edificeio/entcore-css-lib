@@ -23,6 +23,14 @@ $shadow-darker: rgba(0, 0, 0, 0.6) !default;
 ////////    FONTS
 
 
+@font-face {
+	font-family: EcritureA;
+	src: url(/public/fonts/EcritureA-Romain-Orne.otf);
+	font-size-adjust: 80;
+}
+
+
+
 //bootsrap-adapter
 $baseFontSize: 12px !default;
 

@@ -3,18 +3,18 @@
     margin-top: 0;
     li{
         cursor: pointer;
-        background: #d0d0d0;
-        color: #fff;
+        background: $grayLight;
+        color: $white;
         border-radius: 25px;
         list-style-type: none;
         display: inline-block;
         transition: all 250ms ease;
         margin: 1px;
         &:hover{
-            background: #aaa;
+            background: darken($grayLight, 20%);
         }
         &.selected{
-            background: blue;
+            background: $accent;
         }
         label{
             padding: 10px;

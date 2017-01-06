@@ -1,3 +1,31 @@
+.drop-down.hidden{
+	height: 0;
+	ul{
+		height: 0;
+	}
+}
+
+.drop-down.expanded{
+	overflow: visible;
+}
+
+.drop-down{
+	@include drop-down();
+	overflow: hidden;
+}
+
+
+//twitter bootstrap adapter
+.dropdown-menu{
+	@include drop-down;
+	height: auto;
+	@include reduce-block(6px);
+}
+
+
+
+//// TIMELINE CHIPS
+
 .drop-down-block{
     margin-bottom: 30px;
 
