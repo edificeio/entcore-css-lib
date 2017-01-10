@@ -1,0 +1,16 @@
+.vertical-card{
+    figure{
+        margin: 0;
+    }
+    i, img{
+        width: 65px;
+        max-width: 65px;
+        height: 65px;
+        margin: auto;
+        background: $accent;
+        color: $white;
+    }
+    img{
+        display: block;
+    }
+}

@@ -139,6 +139,15 @@ dl{
 	margin-top: 15px;
 }
 
+.round{
+	border-radius: 50%;
+	overflow: hidden;
+	img{
+		display: block;
+	}
+}
+
+
 
 div.hidden-content{
 	height: 0px;
