@@ -1,13 +1,18 @@
 .vertical-card{
     figure{
-        margin: 0;
+        margin: 5px 0 0;
+    }
+    figcaption{
+        margin: 15px 10px 0;
+        padding: 15px 0px 10px;
+        border-top: 1px solid $grayLight;
     }
     i, img{
-        width: 65px;
-        max-width: 65px;
-        height: 65px;
+        width: 85px;
+        max-width: 85px;
+        height: 85px;
         margin: auto;
-        background: $accent;
+        font-size: 35px;
         color: $white;
     }
     img{

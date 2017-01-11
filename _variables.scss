@@ -9,6 +9,8 @@ $grayLighter: #eee !default;
 $white: #fff !default;
 $accent: turquoise !default;
 $alter-accent: darken($accent, 30%) !default;
+//$secondary: complement($accent) !default;
+$secondary-color: adjust-hue($accent, 90%) !default;
 
 
 

@@ -1,5 +1,16 @@
 
 
+///////// COLORS ELEMENTS
+
+.bg-primary{
+	background-color: $accent;
+}
+.bg-secondary{
+	background-color: $secondary-color;
+}
+
+///////// CURSOR STYLES
+
 [draggable]{
 	cursor: move;
 	[contenteditable=true]{
