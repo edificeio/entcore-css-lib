@@ -37,6 +37,9 @@
 			@include border-radius();
 			max-width: none;
 			display: block;
+			.element{
+			    display: inline-block;
+			}
 		}
 
 		> div{
