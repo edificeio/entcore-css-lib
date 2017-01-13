@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'ong-icons';
   src:
-    url('fonts/ong-icons.ttf?en2pav') format('truetype'),
-    url('fonts/ong-icons.woff?en2pav') format('woff'),
-    url('fonts/ong-icons.svg?en2pav#ong-icons') format('svg');
+    url('fonts/ong-icons.ttf?iy30ge') format('truetype'),
+    url('fonts/ong-icons.woff?iy30ge') format('woff'),
+    url('fonts/ong-icons.svg?iy30ge#ong-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,45 +23,6 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.workspace:before {
-  content: "\e90d";
-}
-.workspace-large:before {
-  content: "\e90d";
-}
-.cahier-de-textes:before {
-  content: "\e90e";
-}
-.cahier-de-texte-large:before {
-  content: "\e90e";
-}
-.eye-slash:before {
-  content: "\e904";
-}
-.email:before {
-  content: "\e90a";
-}
-.archive:before {
-  content: "\e907";
-}
-.stats-dots:before {
-  content: "\e909";
-}
-.library:before {
-  content: "\e908";
-}
-.sad:before {
-  content: "\e906";
-}
-.emoticon:before {
-  content: "\e906";
-}
-.smiley:before {
-  content: "\e906";
-}
-.face:before {
-  content: "\e906";
-}
 .person:before {
   content: "\e905";
 }
@@ -69,10 +30,10 @@ i {
   content: "\e903";
 }
 .ccn:before {
-  content: "\e90c";
+  content: "\e90f";
 }
 .hiboutheque:before {
-  content: "\e90b";
+  content: "\e90e";
 }
 .grades:before {
   content: "\e614";
@@ -736,5 +697,59 @@ i {
 }
 .comment-empty:before {
   content: "\f0e5";
+}
+.view_carousel:before {
+  content: "\e90d";
+}
+.grid_on:before {
+  content: "\e90c";
+}
+.email:before {
+  content: "\e90a";
+}
+.archive:before {
+  content: "\e907";
+}
+.stats-dots:before {
+  content: "\e909";
+}
+.library:before {
+  content: "\e908";
+}
+.sad:before {
+  content: "\e906";
+}
+.emoticon:before {
+  content: "\e906";
+}
+.smiley:before {
+  content: "\e906";
+}
+.face:before {
+  content: "\e906";
+}
+.workspace:before {
+  content: "\e911";
+}
+.workspace-large:before {
+  content: "\e911";
+}
+.cahier-de-textes:before {
+  content: "\e910";
+}
+.cahier-de-texte-large:before {
+  content: "\e910";
+}
+.eye-slash:before {
+  content: "\e904";
+}
+.file:before {
+  content: "\e90b";
+}
+.new:before {
+  content: "\e90b";
+}
+.add:before {
+  content: "\e90b";
 }
 
