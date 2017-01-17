@@ -27,7 +27,7 @@
 			align-self: center;
 			width: auto;
 			height: auto;
-			margin: 15px 20px -15px 10px;
+			margin: 15px 20px 15px 10px;
 
 			img, i.system-avatar {
 				height: 75px;
@@ -45,9 +45,9 @@
 		margin: 20px 0;
     }
 	i.sticker.app {
-		position: relative;
-		top: -25px;
-		left: 50px;
+		position: absolute;
+		bottom: 10px;
+		left: 60px;
 		width: 30px;
 		height: 30px;
 		line-height: 30px;
