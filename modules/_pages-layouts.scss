@@ -122,7 +122,9 @@
 	@include reduce-block(8px);
 }
 
-
+.no-margin{
+	margin: 0!important;
+}
 
 
 body{
@@ -196,6 +198,7 @@ dl{
 .round{
 	border-radius: 50%;
 	overflow: hidden;
+	border: 1px solid $grayLighter;
 	img{
 		display: block;
 	}
