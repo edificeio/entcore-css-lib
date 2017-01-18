@@ -1,5 +1,18 @@
 
 
+.vertical-divider{
+	display: block;
+	&:before{
+		content: "";
+	    display: block;
+	    box-sizing: border-box;
+	    border-right: 1px solid;
+	    height: calc(100% - 20px);
+	    position: absolute;
+	    right: 50%;
+	}
+}
+
 ///////// COLORS ELEMENTS
 
 .bg-primary{
@@ -45,6 +58,16 @@
 .horizontal-spacing-twice{
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+.horizontal-margin{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.horizontal-margin-twice{
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .vertical-spacing{
