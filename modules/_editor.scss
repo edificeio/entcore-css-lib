@@ -965,7 +965,7 @@ body editor {
             .lightbox > .content{
                 overflow: hidden;
             }
-
+            
             > i{
 			    @include editor-icon;
                 &::before{
