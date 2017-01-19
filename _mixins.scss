@@ -104,6 +104,23 @@
 ////////    GRAPHIKS
 
 
+@mixin border-gradient($to, $from, $width) {
+	border-left: $width solid $to;
+	border-right: $width solid $from;
+	background-image:
+	// both needed for top & bottom
+	linear-gradient(to left, $from, $to),
+	linear-gradient(to left, $from, $to);
+
+	// 100% left & right, $width px top & bottom
+	background-size: 100% $width;
+	background-position: 0 100%, 0 0;
+	background-repeat: no-repeat;
+	background-clip: border-box;
+}
+
+
+
 @mixin border-radius($radius: 5px) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
