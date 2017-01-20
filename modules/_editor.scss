@@ -968,7 +968,7 @@ body editor {
             }
 
             .embedder-help {
-                color: #999;
+                color: #444;
                 font-size: 14px;
                 margin-bottom: 30px;
             }
@@ -980,22 +980,44 @@ body editor {
                 i.copy {
                     position: absolute;
                     top: -4px;
-                    right: 10px;
+                    left: 10px;
                     height: 100%;
                     display: flex;
                     align-items: center;
+                    float: left;
 
                     &::before {
                         content: '\e820';
                         display: block;
                         height: 30px;
                         font-size: 30px;
-                        color: #bbb;
+                        color: #666;
+                        transition: color 250ms ease;
+                    }
+                }
+
+                label {
+                    pointer-events: none;
+                    position: absolute;
+                    top: 26px;
+                    left: 60px;
+                    font-size: 14px;
+                    color: #aaa;
+                    transition: all 250ms ease;
+
+                    &.move {
+                        top: -20px;
+                        font-size: 12px;
                     }
                 }
 
                 textarea {
                     height: 58px;
+                    margin-left: 60px;
+                    width: 662px;
+                    border: none;
+                    border-bottom: 1px solid #888;
+                    padding: 0;
                 }
 
                 .others {
