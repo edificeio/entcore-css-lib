@@ -10,7 +10,7 @@ $colorz: $cyan, $green, $yellow, $orange, $pink, $purple, $indigo;
     body.wayf #credentials-content li:nth-child(#{length($colorz)}n+#{$i}) a{
         background: nth($colorz, $i);
         &:before{
-            @include triangle-right (42px, nth($colorz, $i))
+            @include triangle-right (80px, nth($colorz, $i))
         }
     }
 
@@ -73,9 +73,9 @@ body.wayf{
 
     .vertical-divider{
         &:before{
-            top: 55px;
+            top: 75px;
             right: calc(50% - 4px);
-            height: calc(100% - 80px);
+            height: calc(100% - 100px);
             border-right: 4px solid silver;
             border-left: 4px solid silver;
         }
@@ -90,7 +90,7 @@ body.wayf{
 
             width: 50%;
             position: relative;
-            height: 50px;
+            height: 110px;
             margin: 20px 0;
             display: flex;
 
@@ -100,10 +100,10 @@ body.wayf{
                 align-items: center;
                 min-width: 270px;
                 box-sizing: border-box;
-                padding: 0 20px;
-                border-radius: 25px;
-                line-height: 16px;
-                font-size: 14px;
+                padding: 0 40px 0;
+                border-radius: 60px;
+                line-height: 21px;
+                font-size: 17px;
                 text-shadow: 1px 1px 5px rgba($black, 0.65);
                 @include run-transition(all);
 
@@ -116,7 +116,7 @@ body.wayf{
                     display: block;
                     position: absolute;
                     top: 50%;
-                    margin-top: -25px;
+                    margin-top: -48px;
                     border-radius: 20px;
                 }
             }
@@ -134,7 +134,7 @@ body.wayf{
                 }
                 a:before{
                     transform: rotate(180deg);
-                    left: -24px;
+                    left: -51px;
                 }
             }
             &:nth-child(even){
@@ -150,7 +150,7 @@ body.wayf{
                     }
                 }
                 a:before{
-                    right: -24px;
+                    right: -51px;
                 }
             }
 
@@ -187,6 +187,8 @@ body.wayf{
 
                 a{
                     width: 90%;
+                    font-size: 15px;
+                    line-height: 17px;
                 }
             }
         }
@@ -200,5 +202,27 @@ body.wayf{
         .container{
             padding: 25px 20px 10px;
         }
+
+        ul{
+            li{
+                width: 100%!important;
+                text-align: center!important;
+                justify-content: center!important;
+                left: auto!important;
+                right: auto!important;
+
+                a{
+                    justify-content: center!important;
+                    text-align: center!important;
+                    right: auto!important;
+                    left: auto!important;
+                    
+                    &:before{
+                        display: none;
+                    }
+                }
+            }
+        }
+
     }
 }
