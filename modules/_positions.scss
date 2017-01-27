@@ -6,6 +6,16 @@
 	&.flex-start{
 		align-items: flex-start;
 	}
+	&.flex-center{
+		align-items: center;
+	}
+	
+	&.justify-start{
+		justify-content: flex-start;
+	}
+	&.justify-center{
+		justify-content: center;
+	}
 }
 
 
