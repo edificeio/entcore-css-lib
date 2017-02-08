@@ -18,12 +18,12 @@
 	box-sizing: border-box;
 	opacity: 0.5;
 	.cell{
-		background: #bbb;
-		opacity: 0.1;
+		background: #ddd;
+		opacity: 0.2;
 		border-right: 1px solid #000;
-		border-bottom: 1px solid #000;
+		//border-bottom: 1px solid #000;
 		margin-left: -1px;
-		margin-top: -1px;
+		//margin-top: -1px;
 	}
 	.cell:last-child{
 		border-left: none;
@@ -60,7 +60,7 @@ grid-cell.height-undefined{
 	transition: width 150ms ease,
 				padding-bottom 150ms ease,
 				margin-left 100ms ease,
-				border 250ms ease, 
+				border 250ms ease,
 				box-shadow 250ms ease;
 }
 
