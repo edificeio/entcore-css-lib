@@ -1,0 +1,15 @@
+assistant{
+    .close-lightbox{
+        display: none;
+    }
+    .ignore{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    lightbox{
+        .content{
+            border: 20px solid blue;
+        }
+    }
+}

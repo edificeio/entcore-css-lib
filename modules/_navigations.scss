@@ -528,3 +528,24 @@ nav.hash-magnet.vertical{
 .whereami{
 	display: none;
 }
+
+nav.dots{
+	ul{
+		display: flex;
+		justify-content: center;
+		margin: 0;
+	}
+	li.dot{
+		display: inline-block;
+		list-style-type: none;
+		width: 40px;
+	}
+	li.dot::before{
+		content: "\2022";
+		font-size: 75px;
+		color: #ccc;
+	}
+	li.dot.active::before{
+		color: blue;
+	}
+}
