@@ -57,7 +57,11 @@ grid-cell.height-undefined{
 }
 
 .grid-media{
-	transition: width 150ms ease, padding-bottom 150ms ease, margin-left 100ms ease, border 250ms ease;
+	transition: width 150ms ease,
+				padding-bottom 150ms ease,
+				margin-left 100ms ease,
+				border 250ms ease, 
+				box-shadow 250ms ease;
 }
 
 .drawing-grid{
