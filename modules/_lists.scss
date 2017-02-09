@@ -58,7 +58,7 @@ ul.list-view{
 		background: #fff;
 		position: relative;
 		list-style-type: none;
-		> div > .cell{
+		> div > .cell.text{
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
