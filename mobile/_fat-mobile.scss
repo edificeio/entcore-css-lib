@@ -1,5 +1,7 @@
 @media screen and (max-width: $fat-mobile) {
+
     body {
+
         .auth .panel {
             @include border-radius(0);
             box-sizing: border-box;
@@ -33,9 +35,12 @@
                 }
             }
         }
+
+
         .tooltip {
             display: none !important;
         }
+
 
         .responsive-table{
             thead.slided + tbody{
@@ -108,6 +113,10 @@
                 }
             }
         }
+
+
+//// ACCOUNT
+
         &.account {
             .user-infos .sheet {
                 .four.cell {
@@ -159,5 +168,8 @@
                 }
             }
         }
+
+////
+
     }
 }
