@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'editor';
-    src: url('../../entcore-css-lib/editor-resources/font3/font/entcore-editor.woff');
+    src: url('../../../entcore-css-lib/editor-resources/font3/font/entcore-editor.woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -889,7 +889,7 @@ body editor {
         .option.remove-format > i {
             height: 100%;
             width: 100%;
-            background-image: url('../../entcore-css-lib/editor-resources/img/remove-format.png');
+            background-image: url('../../../entcore-css-lib/editor-resources/img/remove-format.png');
             background-repeat: no-repeat;
             background-position: center;
             display: inline-block;
@@ -900,7 +900,7 @@ body editor {
         .option.mathjax > i {
             height: 100%;
             width: 100%;
-            background-image: url('../../entcore-css-lib/editor-resources/img/mathjax.png');
+            background-image: url('../../../entcore-css-lib/editor-resources/img/mathjax.png');
             background-repeat: no-repeat;
             background-position: center;
             display: inline-block;
@@ -911,7 +911,7 @@ body editor {
         .option.templates > i {
             height: 100%;
             width: 100%;
-            background-image: url('../../entcore-css-lib/editor-resources/img/templates.png');
+            background-image: url('../../../entcore-css-lib/editor-resources/img/templates.png');
             background-repeat: no-repeat;
             background-position: center;
             display: inline-block;
