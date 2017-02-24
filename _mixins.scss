@@ -213,7 +213,7 @@
 
 
 @mixin icon($icon-name: icon, $icon-size: 40px, $icons-extension: ".png") {
-  $icons-root: "../img/icons/";
+  $icons-root: "../../img/icons/";
 
   height: $icon-size;
   width: $icon-size;
