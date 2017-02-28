@@ -2,6 +2,14 @@
 
 /// GLOBAL
 
+.widgets-friend{
+	margin-left: 276px;
+	@include run-transition(margin-left);
+}
+
+.widgets-friend.widgets-enemy{
+	margin-left: 15px;
+}
 
 .widgets{
 	width: 276px;
@@ -18,14 +26,6 @@
 	width: 0;
 }
 
-.widgets-friend{
-	margin-left: 276px;
-	@include run-transition(margin-left);
-}
-
-.widgets-friend.widgets-enemy{
-	margin-left: 15px;
-}
 
 .widget-container{
 	width: 259px;
