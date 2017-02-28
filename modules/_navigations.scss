@@ -533,19 +533,30 @@ nav.dots{
 	ul{
 		display: flex;
 		justify-content: center;
-		margin: 0;
+		margin: 30px 0 20px;
+		padding: 0;
 	}
 	li.dot{
-		display: inline-block;
 		list-style-type: none;
-		width: 40px;
+    	margin: 0 10px;
 	}
 	li.dot::before{
-		content: "\2022";
-		font-size: 75px;
-		color: #ccc;
+		content: " ";
+	    display: block;
+	    width: 17px;
+	    height: 17px;
+		background: transparent;
+	    border: 2px solid silver;
+	    border-radius: 50%;
+	    box-sizing: border-box;
+		@include run-transition(all);
 	}
 	li.dot.active::before{
-		color: blue;
+		border-color: $accent;
+	}
+	li.dot:hover{
+		 &::before{
+			border-color: blue;
+		}
 	}
 }
