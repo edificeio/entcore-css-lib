@@ -17,6 +17,7 @@
 	position: relative;
 }
 
+
 @mixin text-border($b-color: $white){
 	text-shadow: 2px 0 0 $b-color,
 	-2px 0 0 $b-color,
@@ -104,6 +105,45 @@
 ////////    GRAPHIKS
 
 
+@mixin font-gradient($from, $to, $dir) {
+  background: -webkit-linear-gradient($dir, $from, $to);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+@mixin hr-border-gradient($to, $from, $width) {
+	border-left: $width solid $to;
+	border-right: $width solid $from;
+	background-image:
+	// both needed for top & bottom
+	linear-gradient(to left, $from, $to),
+	linear-gradient(to left, $from, $to);
+
+	// 100% left & right, $width px top & bottom
+	background-size: 100% $width;
+	background-position: 0 100%, 0 0;
+	background-repeat: no-repeat;
+	background-clip: border-box;
+}
+
+@mixin vr-border-gradient($to, $from, $width) {
+	border-top: $width solid $to;
+	border-bottom: $width solid $from;
+	background-image:
+	// both needed for top & bottom
+	linear-gradient(to top, $from, $to),
+	linear-gradient(to top, $from, $to);
+
+	// 100% left & right, $width px top & bottom
+	background-size: $width 100%;
+	background-position: 0 0, 100% 0;
+	background-repeat: no-repeat;
+	background-clip: border-box;
+}
+
+
+
 @mixin border-radius($radius: 5px) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -173,7 +213,7 @@
 
 
 @mixin icon($icon-name: icon, $icon-size: 40px, $icons-extension: ".png") {
-  $icons-root: "../img/icons/";
+  $icons-root: "../../img/icons/";
 
   height: $icon-size;
   width: $icon-size;

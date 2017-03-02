@@ -1,5 +1,7 @@
 
-
+.overflow-hd{
+	overflow: hidden;
+}
 .vertical-divider{
 	display: block;
 	&:before{
@@ -50,6 +52,10 @@
 	display: block!important;
 }
 
+.margin-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
 .horizontal-spacing{
 	padding-left: 10px;
 	padding-right: 10px;
@@ -79,12 +85,22 @@
 	margin-top: 10px !important;
 	margin-bottom: 10px !important;
 }
+
+
 .bottom-spacing{
 	margin-bottom: 5px !important;
 }
 
 .bottom-spacing-twice{
 	margin-bottom: 10px !important;
+}
+
+.top-spacing{
+	margin-top: 5px !important;
+}
+
+.top-spacing-twice{
+	margin-top: 10px !important;
 }
 
 
@@ -112,7 +128,9 @@
 	@include reduce-block(8px);
 }
 
-
+.no-margin{
+	margin: 0!important;
+}
 
 
 body{
@@ -186,6 +204,7 @@ dl{
 .round{
 	border-radius: 50%;
 	overflow: hidden;
+	border: 1px solid $grayLighter;
 	img{
 		display: block;
 	}

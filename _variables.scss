@@ -2,6 +2,20 @@
 ////////    COLORS
 
 
+// ONE COLORS
+
+$cyan: #46afe6 !default;
+$green: #6fbe2e !default;
+$yellow: #eac403 !default;
+$orange: #ff8d2e !default;
+$pink: #ff3a55 !default;
+$purple: #a348c0 !default;
+$indigo: #4f2691 !default;
+
+//////////
+
+
+
 // also bootsrap-adapter
 $black: #000 !default;
 $grayLight: #ccc !default;
@@ -11,7 +25,6 @@ $accent: turquoise !default;
 $alter-accent: darken($accent, 30%) !default;
 //$secondary: complement($accent) !default;
 $secondary-color: adjust-hue($accent, 90%) !default;
-
 
 
 $btnPrimaryBackground: $grayLight !default;

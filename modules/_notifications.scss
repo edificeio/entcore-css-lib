@@ -59,6 +59,12 @@
     i.type {
         float: left;
     }
+    hr.underlined{
+        border-top: 1px solid $grayLighter;
+        margin-left: 20px;
+        width: 95%;
+        padding: 0;
+    }
 }
 .notification div.notification-actions {
     position: absolute;
@@ -126,7 +132,7 @@
 
 @media screen and (max-width: $fat-mobile) {
     body {
-        .notification {
+        .notification article{
             min-height: 95px;
             .avatar {
                 width: 50px;
@@ -137,6 +143,16 @@
                     width: 50px;
                     height: 50px;
                 }
+
+                i.sticker.app {
+                    top: auto;
+                    bottom: -10px;
+                    left: 30px;
+                    width: 25px!important;
+                    height: 25px!important;
+                    line-height: 25px;
+                    font-size: 10px;
+                }
             }
             .content {
                 margin: 15px 10px 5px;
@@ -144,14 +160,6 @@
             .notification-date em {
                 font-size: 10px!important;
                 line-height: 7px;
-            }
-            i.sticker.app {
-                top: -20px;
-                left: 30px;
-                width: 25px;
-                height: 25px;
-                line-height: 25px;
-                font-size: 10px;
             }
         }
         .notification div.notification-actions>.actions>.action {

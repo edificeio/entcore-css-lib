@@ -1,9 +1,8 @@
 /// <reference path="app.scss">
 
 @font-face {
-
     font-family: 'editor';
-    src: url('../../entcore-css-lib/editor-resources/font3/font/entcore-editor.woff');
+    src: url('../../../entcore-css-lib/editor-resources/font3/font/entcore-editor.woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -743,299 +742,272 @@ body editor{
     line-height: 44px;
 }
 
-body editor{
-	> popover{
-		> [popover-opener]{
-            &.tools{
+body editor {
+    > popover {
+        > [popover-opener] {
+            &.tools {
                 @include editor-icon;
-				height: auto;
-				font-size: 25px;
-                &::before{
+                height: auto;
+                font-size: 25px;
+
+                &::before {
                     content: '\e815';
                 }
             }
-		}
-	}
-	&.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar{
-		.option.undo > i{
-			@include editor-icon;
-            &::before{
+        }
+    }
+
+    &.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar {
+        .option.undo > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e800';
             }
-		}
-		.option.redo > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.redo > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e801';
             }
-		}
-		.option.bold > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.bold > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e802';
             }
-		}
-		.option.italic > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.italic > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e803';
             }
-		}
-		.option.underline > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.underline > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e804';
             }
-		}
-		.option.justify-left > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.justify-left > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e805';
             }
-		}
-		.option.justify-right > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.justify-right > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e807';
             }
-		}
-		.option.justify-center > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.justify-center > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e806';
             }
-		}
-		.option.justify-full > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.justify-full > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e808';
             }
-		}
-		.option.subscript > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.subscript > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e80d';
             }
-		}
-		.option.superscript > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.superscript > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e80c';
             }
-		}
-		.option.quote > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.quote > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e816';
             }
-		}
-		.option.ulist i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.ulist i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e809';
             }
-		}
-		.option.olist > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.olist > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e80a';
             }
-		}
-		.option.image> i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.image > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e817';
             }
-		}
-		.option.sound > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.sound > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e80f';
             }
-		}
-		.option.remove-format > i{
-			height: 100%;
-  			width: 100%;
-			background-image: url('../../entcore-css-lib/editor-resources/img/remove-format.png');
-			background-repeat: no-repeat;
-			background-position: center;
-			display: inline-block;
-			box-sizing: border-box;
-			vertical-align: middle;
-		}
-		.option.mathjax > i{
-			height: 100%;
-  			width: 100%;
-			background-image: url('../../entcore-css-lib/editor-resources/img/mathjax.png');
-			background-repeat: no-repeat;
-			background-position: center;
-			display: inline-block;
-			box-sizing: border-box;
-			vertical-align: middle;
-		}
-		.option.templates > i{
-			height: 100%;
-  			width: 100%;
-			background-image: url('../../entcore-css-lib/editor-resources/img/templates.png');
-			background-repeat: no-repeat;
-			background-position: center;
-			display: inline-block;
-			box-sizing: border-box;
-			vertical-align: middle;
-		}
-		.option.table{
-            popover{
-                > i{
-				    @include editor-icon;
+        }
+
+        .option.remove-format > i {
+            height: 100%;
+            width: 100%;
+            background-image: url('../../../entcore-css-lib/editor-resources/img/remove-format.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+
+        .option.mathjax > i {
+            height: 100%;
+            width: 100%;
+            background-image: url('../../../entcore-css-lib/editor-resources/img/mathjax.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+
+        .option.templates > i {
+            height: 100%;
+            width: 100%;
+            background-image: url('../../../entcore-css-lib/editor-resources/img/templates.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+
+        .option.table {
+            popover {
+                > i {
+                    @include editor-icon;
                     top: -6px;
-                    &::before{
+
+                    &::before {
                         content: '\e814';
                         color: black;
                     }
-			    }
+                }
             }
-		}
-		.option.linker{
-			> i{
-				@include editor-icon;
-                &::before{
+        }
+
+        .option.linker {
+            > i {
+                @include editor-icon;
+
+                &::before {
                     content: '\e812';
                 }
-			}
-		}
-		.option.smileys{
-			> i {
-				@include editor-icon;
-                &::before{
+            }
+        }
+
+        .option.smileys {
+            > i {
+                @include editor-icon;
+
+                &::before {
                     content: '\e813';
                 }
-			}
-		}
-		.option.unlink > i{
-			@include editor-icon;
-            &::before{
+            }
+        }
+
+        .option.unlink > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e811';
             }
-		}
+        }
+
 		.option.embed {
             .lightbox > .content{
                 overflow: hidden;
             }
-            .provider{
-                display: none;
-                width: 100%;
-                textarea{
-                    height: 58px;
-                }
-                .others{
-                    @include editor-icon;
-                    display: block;
-                    position: relative;
-                    font-size: 35px;
-                    height: 80px;
-                    width: 80px;
-                    margin-bottom: 20px;
-                    margin-top: 20px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    float: none;
-                    box-shadow: 3px 3px 0px rgba(200,200,200,1);
-                    background-color: #eee;
-                    transition: all 200ms ease;
-                    line-height: 80px;
-                    border-radius: 5px;
-                    color: #888;
-                    &:hover{
-                        box-shadow: none;
-                    }
-                    &::before{
-                        content: '\e815';
-                    }
-                }
-                .invalid-preview{
-                    font-size: 35px;
-                    color: #d6d6d6;
-                    font-weight: bold;
-                    background: #eee;
-                    height: 315px;
-                    margin-top: 20px;
-                    margin-bottom: 30px;
-                    text-align: center;
-                    line-height: 350px;
-                    border-radius: 5px;
-                }
-                .preview{
-                    iframe{
-                        margin-left: auto;
-                        margin-right: auto;
-                        display: block;
-                        margin-top: 30px;
-                        margin-bottom: 30px;
-                        max-width: 100%;
-                    }
-                }
-                &.visible{
-                    display: block;
-                }
-            }
-            .provider-content{
-                width: 100%;
-                min-width: 300px;
-            }
-            .pick{
-                ul{
-                    margin: 0;
-                    padding: 0;
-                    text-align: center;
-                    width: 80%;
-                    margin: auto;
-                }
-                li{
-                    opacity: 0.7;
-                    list-style-type: none;
-                    max-width: 20%;
-                    display: inline-block;
-                    padding: 10px;
-                    box-sizing: border-box;
-                    transition: opacity 500ms ease;
-                    &:hover{
-                        opacity: 1;
-                    }
-                }
-            }
+            
             > i{
 			    @include editor-icon;
                 &::before{
                     content: '\e810';
                 }
-		    }
-		}
-		.option.audio > i{
-			@include editor-icon;
-            &::before{
+            }
+        }
+
+        .option.audio > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e839';
             }
-		}
-        .option.color > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.color > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e80b';
             }
-		}
-		.option.attachment > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.attachment > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e80e';
             }
-		}
-        .option.background-color > i{
-			@include editor-icon;
-            &::before{
+        }
+
+        .option.background-color > i {
+            @include editor-icon;
+
+            &::before {
                 content: '\e80b';
             }
+
             color: #fff;
-		}
-	}
+        }
+    }
 }
 
 @media screen and (max-width: $tablette){

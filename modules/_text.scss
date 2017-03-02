@@ -37,6 +37,9 @@ label{
 .centered-text{
 	text-align: center !important;
 }
+.left-text{
+	text-align: left !important;
+}
 .strong-text{
 	font-size: $baseFontSize + 8px;
 }
@@ -71,7 +74,9 @@ label{
 	white-space: nowrap;
 	overflow: hidden;
 }
-
+strong.cell-ellipsis{
+	display: block;
+}
 
 .inline-editing{
 	color: darken($grayLight, 40%);
