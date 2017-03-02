@@ -111,6 +111,11 @@ pulsar{
         .arrow{
             top: -13px;
         }
+        &.center{
+            .arrow{
+                left: calc(50% - 21px);
+            }
+        }
     }
     &.bottom.right, &.bottom.left{
         .arrow{
