@@ -159,6 +159,12 @@ $stroke: 6px;
 $pulsedelay: 0.3s;
 $pulseanim: 1s;
 
+
+.pulsar-button.hidden{
+    display: none;
+}
+
+
 .pulsar-button{
     position: absolute;
     z-index: 100000;
