@@ -8,37 +8,6 @@
 	text-align: left;
 }
 
-.grid-guides{
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	padding-top: 2px;
-	border-top: 1px dashed #888;
-	box-sizing: border-box;
-	opacity: 0.5;
-	.cell{
-		background: #ddd;
-		opacity: 0.2;
-		border-right: 1px solid #000;
-		//border-bottom: 1px solid #000;
-		margin-left: -1px;
-		//margin-top: -1px;
-	}
-	.cell:last-child{
-		border-left: none;
-	}
-	.row{
-		min-height: 0 !important;
-	}
-}
-
-.guide-line{
-	border-bottom: 4px solid #ccc;
-	border-right: 1px solid #ddd;
-	border-left: 1px solid #ddd;
-}
-
 .nested-grid{
 	height: 100%;
 	cursor: inherit;
