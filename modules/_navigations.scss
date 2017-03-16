@@ -553,10 +553,13 @@ nav.dots{
 	}
 	li.dot.active::before{
 		border-color: $accent;
+		background: $accent;
 	}
 	li.dot:hover{
 		 &::before{
-			border-color: blue;
+			border-color: $accent;
+			//border-color: $primary;
+			background: transparent;
 		}
 	}
 }
