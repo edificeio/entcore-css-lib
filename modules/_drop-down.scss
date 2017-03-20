@@ -15,14 +15,6 @@
 	height: auto;
 }
 
-// cheat for use dropdown with scroll in lightbox
-.exercizer div[data-drop-down]{
-	z-index: 100000;
-	max-height: 350px;
-	overflow-y: scroll;
-	background-color: white;
-}
-
 
 //twitter bootstrap adapter
 .dropdown-menu{
