@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'generic-icons';
   src:
-    url('fonts/generic-icons.ttf?2mi9lu') format('truetype'),
-    url('fonts/generic-icons.woff?2mi9lu') format('woff'),
-    url('fonts/generic-icons.svg?2mi9lu#generic-icons') format('svg');
+    url('fonts/generic-icons.ttf?6569nh') format('truetype'),
+    url('fonts/generic-icons.woff?6569nh') format('woff'),
+    url('fonts/generic-icons.svg?6569nh#generic-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,6 +23,18 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.competences:before {
+  content: "\e927";
+}
+.sort-asc:before {
+  content: "\e924";
+}
+.sort-desc:before {
+  content: "\e925";
+}
+.sort:before {
+  content: "\e926";
+}
 .hashtag:before {
   content: "\e921";
 }
@@ -56,17 +68,41 @@ i {
 .eye-slash:before {
   content: "\e904";
 }
-.dots-three-horizontal:before {
-  content: "\e913";
+.file-upload:before {
+  content: "\e922";
 }
-.email:before {
-  content: "\e90a";
+.file-interactive:before {
+  content: "\e923";
 }
-.archive:before {
-  content: "\e907";
+.panda-filled:before {
+  content: "\e91f";
 }
-.dots-three-vertical:before {
-  content: "\e912";
+.panda:before {
+  content: "\e920";
+}
+.stats-dots:before {
+  content: "\e909";
+}
+.library:before {
+  content: "\e908";
+}
+.sad:before {
+  content: "\e906";
+}
+.emoticon:before {
+  content: "\e906";
+}
+.smiley:before {
+  content: "\e906";
+}
+.face:before {
+  content: "\e906";
+}
+.star-empty:before {
+  content: "\e9d7";
+}
+.star-full:before {
+  content: "\e9d9";
 }
 .chat:before {
   content: "\e914";
@@ -88,6 +124,27 @@ i {
 }
 .add:before {
   content: "\e90b";
+}
+.nature_people:before {
+  content: "\e91c";
+}
+.group_add:before {
+  content: "\e91d";
+}
+.chat3:before {
+  content: "\e91e";
+}
+.person:before {
+  content: "\e905";
+}
+.warning:before {
+  content: "\e903";
+}
+.ccn:before {
+  content: "\e90f";
+}
+.hiboutheque:before {
+  content: "\e90e";
 }
 .new_releases:before {
   content: "\e91a";
@@ -785,28 +842,16 @@ i {
 .grid_on:before {
   content: "\e90c";
 }
-.panda-filled:before {
-  content: "\e91f";
+.dots-three-horizontal:before {
+  content: "\e913";
 }
-.panda:before {
-  content: "\e920";
+.email:before {
+  content: "\e90a";
 }
-.stats-dots:before {
-  content: "\e909";
+.archive:before {
+  content: "\e907";
 }
-.library:before {
-  content: "\e908";
-}
-.sad:before {
-  content: "\e906";
-}
-.emoticon:before {
-  content: "\e906";
-}
-.smiley:before {
-  content: "\e906";
-}
-.face:before {
-  content: "\e906";
+.dots-three-vertical:before {
+  content: "\e912";
 }
 
