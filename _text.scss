@@ -107,6 +107,16 @@ strong.cell-ellipsis{
 	}
 }
 
+.alert{
+	color: #ff3030;
+	background: #ffefe7;
+	padding: 7px;
+	font-size: 12px;
+	text-align: center;
+	@include border-radius(10px);
+    max-width: 100%;
+}
+
 .warning{
 	color: #c60c17;
 	background: #FFE7E8;
