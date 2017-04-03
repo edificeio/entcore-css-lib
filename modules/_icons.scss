@@ -92,8 +92,9 @@ i.remove{
 }
 
 i.shared{
-	@include icon(shared, 18px);
+	@include icon(shared, 15px);
 	background-position: center;
+	background-size: contain;
 	display: block;
 	position: absolute;
 	bottom: -2px;
