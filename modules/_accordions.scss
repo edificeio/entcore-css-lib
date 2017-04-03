@@ -15,12 +15,12 @@
 			color: #666;
 		}
 		.toggle{
-			height: 0px;
+			max-height: 0px;
 			overflow: hidden;
 			padding: 0px;
 			border: 0;
 			background: #333;
-			@include run-transition(height);
+			transition: max-height 250ms ease;
 			@include grid-cell-width(12);
 			@include cell;
 			.content{
@@ -43,7 +43,7 @@
 			color: #ccc;
 		}
 		.toggle{
-			height: 350px;
+			max-height: 350px;
 			padding: 10px;
 			overflow: hidden;
 			border: 1px solid #555;
