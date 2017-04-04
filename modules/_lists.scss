@@ -83,6 +83,9 @@ ul.list-view{
 		line-height: 40px;
 		list-style-type: none;
 		box-sizing: border-box;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	li.selected{
 		color: #fff;
