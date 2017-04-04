@@ -527,27 +527,3 @@ nav.hash-magnet.vertical{
 .whereami{
 	display: none;
 }
-
-nav.subnavbar{
-	margin: 10px 0;
-	ul{
-		margin: 0;
-		padding: 0;
-
-		li{
-			list-style-type: none;
-			display: inline-block;
-			padding: 0;
-			margin: 0 15px;
-			text-transform: uppercase;
-			font-size: 14px;
-			font-weight: bold;
-			position: relative;
-			padding: 10px 0;
-
-			&:first-child{
-				margin: 0 15px 0 0;
-			}
-		}
-	}
-}
