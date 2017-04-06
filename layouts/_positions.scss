@@ -3,6 +3,8 @@
 	display: flex;
 	position: relative;
 
+// .flex-[foo] classes deprecated, use .align-[foo] classes instead
+
 	&.flex-start, &.align-start{
 		align-items: flex-start;
 	}
