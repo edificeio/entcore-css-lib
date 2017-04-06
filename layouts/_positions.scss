@@ -3,13 +3,13 @@
 	display: flex;
 	position: relative;
 
-	&.flex-start{
+	&.flex-start, &.align-start{
 		align-items: flex-start;
 	}
-	&.flex-center{
+	&.flex-center, &.align-center{
 		align-items: center;
 	}
-	&.flex-end{
+	&.flex-end, &.align-end{
 		align-items: flex-end;
 	}
 
