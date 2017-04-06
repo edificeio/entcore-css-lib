@@ -5,6 +5,7 @@ popover{
 	z-index: 10002;
 	popover-content{
 		&::before{
+			font-family: none;  //unicode not from generic icon font
 			content: "\25b2";
 			display: block;
 			position: absolute;
@@ -12,7 +13,7 @@ popover{
             width: 40px;
 			font-size: 20px;
 			left: 50%;
-			margin-left: -17px;
+			margin-left: -21px;
 			color: #fff;
 			z-index: 0;
 		}
