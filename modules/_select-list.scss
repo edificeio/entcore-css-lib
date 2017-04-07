@@ -5,6 +5,8 @@ select-list{
     &.button {
         .selected-value{
             border: none;
+			box-shadow: 1px 1px 2px rgba(0,0,0,0.35);
+            background: #efefef;
             padding: 5px;
             padding-right: 25px;
             padding-left: 15px;
@@ -30,6 +32,7 @@ select-list{
 		left: 0;
 		min-width: 105%;
 		box-sizing: border-box;
+		box-shadow: 1px 1px 8px rgba(0,0,0,0.4);
 		opt{
 			padding: 2px;
             padding-left: 10px;
@@ -49,6 +52,7 @@ select-list{
         pointer-events: none !important;
 	}
 	.selected-value{
+		border-bottom: 1px solid #ddd;
 		min-width: 100px;
 		min-height: 24px;
 		pointer-events: all;
@@ -62,6 +66,7 @@ select-list{
             height: 0;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
+			border-top: 6px solid #888;
             content: " ";
             position: absolute;
             right: 6px;
