@@ -4,35 +4,35 @@
 
 // ONE COLORS
 
-$cyan: #46afe6 !default;
-$green: #6fbe2e !default;
-$yellow: #eac403 !default;
-$orange: #ff8d2e !default;
-$pink: #ff3a55 !default;
-$purple: #a348c0 !default;
-$indigo: #4f2691 !default;
+$cyan: 				#46afe6 !default;
+$green: 			#6fbe2e !default;
+$yellow: 			#eac403 !default;
+$orange: 			#ff8d2e !default;
+$pink: 				#ff3a55 !default;
+$purple: 			#a348c0 !default;
+$indigo: 			#4f2691 !default;
 
 //////////
 
 
 
 // also bootsrap-adapter
-$black: #000 !default;
-$grayLight: #ccc !default;
-$grayLighter: #eee !default;
-$white: #fff !default;
-$accent: turquoise !default;
-$alter-accent: darken($accent, 30%) !default;
-//$secondary: complement($accent) !default;
-$secondary-color: adjust-hue($accent, 90%) !default;
+$black: 			#000 !default;
+$grayLight: 		#ccc !default;
+$grayLighter: 		#eee !default;
+$white: 			#fff !default;
+$accent: 			turquoise !default;
+$alter-accent: 		darken($accent, 30%) !default;
+//$secondary: 		complement($accent) !default;
+$secondary-color: 	adjust-hue($accent, 90%) !default;
 
 
 $btnPrimaryBackground: $grayLight !default;
 
-$shadow-light: rgba(0, 0, 0, 0.1) !default;
-$shadow: rgba(0, 0, 0, 0.26) !default;
-$shadow-dark: rgba(0, 0, 0, 0.4) !default;
-$shadow-darker: rgba(0, 0, 0, 0.6) !default;
+$shadow-light: 		rgba(0, 0, 0, 0.1) !default;
+$shadow: 			rgba(0, 0, 0, 0.26) !default;
+$shadow-dark: 		rgba(0, 0, 0, 0.4) !default;
+$shadow-darker: 	rgba(0, 0, 0, 0.6) !default;
 
 
 ////////    FONTS
