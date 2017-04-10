@@ -28,7 +28,7 @@
 
 
 .side-tabs-content{
-	@include border-radius(0);
+	border-radius: 0;
 	z-index: 1;
 	border: 1px solid #ccc;
 	margin-left: -1px;

@@ -12,7 +12,7 @@
 	left: 0;
 	padding: 4px;
 	margin-top: 1px;
-	@include border-radius(4px);
+	border-radius: 4px;
 	&:before {
 		content: '';
 		display: inline-block;
@@ -73,7 +73,7 @@
 			float: left;
 			margin: 2px;
 			cursor: pointer;
-			@include border-radius(4px);
+			border-radius: 4px;
 			&:hover {
 				background: $grayLighter;
 			}

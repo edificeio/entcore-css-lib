@@ -69,7 +69,7 @@ input-password{
 	width: 415px;
 	margin-left:auto;
 	margin-right: auto;
-	@include border-radius;
+	border-radius: 5px;
 	padding: 15px;
 
 	input[type=text], input[type=password], input[type=tel], input[type=email]{

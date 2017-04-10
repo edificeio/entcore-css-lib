@@ -53,7 +53,7 @@ nav.horizontal{
 	input[type=submit], input[type=button]{
 		height: 25px;
 		line-height: 18px;
-		@include border-radius(0);
+		border-radius: 0;
 		@include border-radius-right(5px);
 		border-left: 0;
 	}
@@ -199,7 +199,7 @@ nav.vertical, .app-menu{
 				left: 0px !important;
 			}
 			input[type=text], input[type=search]{
-				@include border-radius(0px);
+				border-radius: 0;
 				margin-left: 0;
 				box-sizing: border-box;
 				width: 100%;
