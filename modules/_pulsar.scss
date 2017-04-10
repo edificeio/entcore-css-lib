@@ -4,7 +4,7 @@ pulsar{
      z-index: 200000;
      position: absolute;
      pointer-events: all;
-     
+
      nav.dots{
          ul{
              margin: 15px 0 25px;
@@ -285,7 +285,7 @@ $pulseanim: 1s;
     width: 100px;
     height: 100px;
     margin: 50px auto;
-    background: cadetblue;
+    background: $accent;
     z-index: 9999;
 }
 
