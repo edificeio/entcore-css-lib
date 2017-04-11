@@ -164,9 +164,6 @@
 }
 
 @mixin vertical-gradient($top-color: blue, $bottom-color: white) {
-	background: -webkit-linear-gradient($top-color, $bottom-color);
-	background: -moz-linear-gradient($top-color, $bottom-color);
-	background: -o-linear-gradient($top-color, $bottom-color);
 	background:  linear-gradient($top-color, $bottom-color);
 }
 
@@ -195,16 +192,10 @@
 
 
 @mixin run-transition($property: color, $speed: 250ms, $timing: ease) {
-  -o-transition: $property $speed $timing;
-  -moz-transition: $property $speed $timing;
-  -webkit-transition: $property $speed $timing;
   transition: $property $speed $timing;
 }
 
 @mixin invert-colors($amount: 100%){
-	-webkit-filter: invert($amount);
-	-moz-filter: invert($amount);
-	-ms-filter: invert($amount);
 	filter: invert($amount);
 }
 
@@ -422,6 +413,45 @@
 	border-width: 0 ($size*0.6) $size ($size*0.6);
 	border-color: transparent transparent $color transparent;
 }
+
+///////
+
+@mixin syleRadio-WIP($bg-on: $accent, $border-on: $white, $bg-off: $grayLight, $border-off: $white){
+
+    input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #ffa500;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+}
+
+
+
+
+
 
 //bootsrap-adapter
 @mixin buttonBackground($top: #eee, $bottom: #ccc) {
