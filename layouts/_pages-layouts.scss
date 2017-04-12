@@ -18,10 +18,7 @@
 ///////// COLORS ELEMENTS
 
 .bg-primary{
-	background-color: $accent;
-}
-.bg-secondary{
-	background-color: $secondary-color;
+	background-color: $primary;
 }
 
 ///////// CURSOR STYLES
@@ -204,7 +201,7 @@ dl{
 .round{
 	border-radius: 50%;
 	overflow: hidden;
-	border: 1px solid $grayLighter;
+	border: 1px solid $light-grey;
 	img{
 		display: block;
 	}

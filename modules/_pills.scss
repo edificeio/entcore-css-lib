@@ -3,7 +3,7 @@
     margin-top: 0;
     li{
         cursor: pointer;
-        background: $grayLight;
+        background: $medium-grey;
         color: $white;
         border-radius: 25px;
         list-style-type: none;
@@ -11,7 +11,7 @@
         transition: all 250ms ease;
         margin: 1px;
         &:hover{
-            background: darken($grayLight, 20%);
+            background: darken($medium-grey, 20%);
         }
         &.selected{
             background: $accent;

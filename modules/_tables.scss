@@ -72,7 +72,7 @@ td.main-cell{
 }
 .responsive-table {
     margin: 30px 0;
-	border: 1px solid $grayLight;
+	border: 1px solid $medium-grey;
 	line-height: 18px;
 	font-size: 14px;
     .fixed-head{
@@ -107,7 +107,7 @@ td.main-cell{
 			tr{
 				font-weight: bold;
 				color: $black;
-				border-top: 1px solid $grayLight;
+				border-top: 1px solid $medium-grey;
 			}
             td {
                 padding: 10px;
@@ -189,11 +189,11 @@ td.main-cell{
                 font-weight: bold;
                 font-size: 16px;
                 text-align: center;
-				border-bottom: 1px solid $grayLight;
+				border-bottom: 1px solid $medium-grey;
             }
             tbody{
 				td:first-child {
-					border-top: 1px solid $grayLight;
+					border-top: 1px solid $medium-grey;
 	            }
 			}
 

@@ -18,7 +18,7 @@
 		display: inline-block;
 		border-left:   7px solid transparent;
 		border-right:  7px solid transparent;
-		border-bottom: 7px solid $grayLight;
+		border-bottom: 7px solid $medium-grey;
 		border-bottom-color: rgba(0,0,0,.2);
 		position: absolute;
 		top: -7px;
@@ -49,15 +49,15 @@
 	}
 	td {
 		&.day:hover {
-			background: $grayLighter;
+			background: $light-grey;
 			cursor: pointer;
 		}
 		&.day.disabled {
-			color: $grayLighter;
+			color: $light-grey;
 		}
 		&.old,
 		&.new {
-			color: $grayLight;
+			color: $medium-grey;
 		}
 		&.active,
 		&.active:hover {
@@ -75,7 +75,7 @@
 			cursor: pointer;
 			border-radius: 4px;
 			&:hover {
-				background: $grayLighter;
+				background: $light-grey;
 			}
 			&.active {
 				@include buttonBackground($btnPrimaryBackground, adjust-hue($btnPrimaryBackground, 20));
@@ -83,7 +83,7 @@
 				text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 			}
 			&.old {
-				color: $grayLight;
+				color: $medium-grey;
 			}
 		}
 	}
@@ -94,14 +94,14 @@
 		}
 		&.next,
 		&.prev {
-			font-size: $baseFontSize * 1.5;
+			font-size: $font-size * 1.5;
 		}
 	}
 
 	thead tr:first-child th {
 		cursor: pointer;
 		&:hover{
-			background: $grayLighter;
+			background: $light-grey;
 		}
 	}
 	/*.dow {

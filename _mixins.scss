@@ -416,7 +416,7 @@
 
 ///////
 
-@mixin syleRadio-WIP($bg-on: $accent, $border-on: $white, $bg-off: $grayLight, $border-off: $white){
+@mixin syleRadio-WIP($bg-on: $accent, $border-on: $white, $bg-off: $medium-grey, $border-off: $white){
 
     input[type='radio']:after {
         width: 15px;

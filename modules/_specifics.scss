@@ -7,16 +7,16 @@
 
 
 section.selected, article.selected{
-	background: $grayLight;
+	background: $medium-grey;
 }
 
 
 article.media{
-	border: 2px dashed $grayLight;
+	border: 2px dashed $medium-grey;
 }
 
 article{
-	border: 1px solid $grayLight;
+	border: 1px solid $medium-grey;
 	padding: 8px;
 }
 

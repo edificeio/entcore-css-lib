@@ -14,7 +14,7 @@
 		width: 20px;
 		height: 20px;
 		line-height: 20px;
-		background: darken($grayLighter, 7%);
+		background: darken($light-grey, 7%);
 		color: $white;
 		border-radius: 50%;
 		cursor: pointer;
@@ -36,7 +36,7 @@
 }
 .selected .check-tool{
 	i{
-		background: $alter-accent;
+		background: $dark-accent;
 		&:before{
 			content:"-";
 			font-size: 25px;

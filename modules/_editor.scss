@@ -165,7 +165,7 @@ body editor{
 				@include run-transition(background);
 			}
 			li:hover{
-				background: $grayLighter;
+				background: $light-grey;
 			}
 		}
 		popover-content{
@@ -307,7 +307,7 @@ body editor{
 				list-style-type: none;
 			}
 			li:hover{
-				background: $grayLighter;
+				background: $light-grey;
 			}
 		}
 	}
@@ -323,7 +323,7 @@ body editor{
 		border: 1px solid #ddd;
 		box-sizing: border-box;
 		border-bottom: 0;
-        border-right: 52px solid $grayLighter;
+        border-right: 52px solid $light-grey;
         z-index: 2;
         position: relative;
 		&.inline{
@@ -1037,7 +1037,7 @@ body editor {
 
 @media screen and (min-width: $tablette){
 	body editor.edit editor-toolbar .option:hover{
-		background-color: $grayLighter;
+		background-color: $light-grey;
 		cursor: pointer;
 	}
 }
