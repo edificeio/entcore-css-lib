@@ -1,0 +1,369 @@
+.scrapbook-infos,
+nav.scrapbook-buttons{
+
+    button.colors-opener {
+        height: 35px;
+        width: 25px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: none;
+        display: inline-block;
+        float: left;
+        @include run-transition(transform);
+        &:hover{
+            transform: rotate(180deg);
+        }
+    }
+}
+
+
+/* svg mode cover */
+.scrapbook.cover .bloc-svg {
+    .scrapbook-svg {
+        .scrapbook-sheets {
+            fill: transparent;
+        }
+        .scrapbook-pagelines {
+            stroke: transparent;
+        }
+    }
+}
+
+/*mode normal*/
+.bloc-svg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /*fix IE*/
+    height: 0;
+    padding-top: 70%;
+    /*fix IE*/
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /* scrapbook style */
+    .scrapbook-svg {
+        /* cover */
+        .scrapbook-cover {
+            fill: $cyan;
+        }
+        &.orange .scrapbook-cover {
+            fill: $orange;
+        }
+
+        &.pink .scrapbook-cover {
+            fill: $red;
+        }
+
+        &.purple .scrapbook-cover {
+            fill: $purple;
+        }
+
+        &.blue .scrapbook-cover {
+            fill: $cyan;
+        }
+
+        &.green .scrapbook-cover {
+            fill: $green;
+        }
+
+        &.black .scrapbook-cover {
+            fill: $black;
+        }
+
+        &.white .scrapbook-cover {
+            fill: $white;
+        }
+
+        &.transparent .scrapbook-cover {
+            fill: transparent;
+        }
+        // bordure
+        .scrapbook-cover {
+            stroke: $grey;
+        }
+        /* ombre portee spirales */
+        image {
+            opacity: 0.4!important;
+        }
+
+        .scrapbook-sheets {
+            fill: $white;
+        }
+
+        .scrapbook-pagelines {
+            stroke: $solid-grey;
+            fill: none;
+        }
+    }
+}
+
+
+/* mode edit scrapbook properties/ CREATE */
+.row.preview {
+    margin-bottom: 60px;
+}
+
+.scrapbook-infos.centered {
+    width: 85%;
+    overflow: hidden;
+
+    input {
+        margin: 5px auto 15px;
+        float: none;
+    }
+
+    h3 {
+        float: left;
+        line-height: 33px;
+        margin: 0 15px;
+    }
+}
+
+//scrapbook container
+.preview .scrapbook {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    top: 10px;
+    padding-bottom: 60px;
+
+    .bloc-svg {
+        position: relative;
+    }
+
+    .tools-layer {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding-top: 5%;
+
+        .centered {
+            width: 90%;
+
+            .small.button {
+                margin-top: 15px;
+                float: none;
+                display: inline-block;
+            }
+        }
+
+        image-select img {
+            max-height: 280px;
+            max-width: 60%;
+        }
+    }
+}
+
+// scrapbook Read
+section.scrapbook {
+    width: 900px;
+    max-width: 100%;
+    height: 630px;
+    position: relative;
+    margin: 55px auto 15px;
+    padding: 20px 45px 35px 65px;
+    box-sizing: border-box;
+
+    .drawing-zone {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        article {
+            .image-container img {
+                pointer-events: none;
+            }
+
+            p {
+                margin-top: 9px;
+                margin-bottom: 9px;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            p {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+            border: 1px solid transparent;
+            padding: 0;
+
+            audio {
+                margin: 10px;
+            }
+
+            [bind-html] {
+                padding: 15px;
+                box-sizing: border-box;
+            }
+        }
+
+        .media {
+            outline: 0;
+        }
+
+        article.media {
+            audio {
+                width: auto;
+                margin: 10px 35px 10px 10px;
+            }
+        }
+
+        .cke_focus {
+            cursor: text !important;
+        }
+
+        & article {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .flip-left:hover,
+    .flip-right:hover {
+        opacity: 1;
+        @include run-transition(opacity);
+    }
+
+    .flip-right {
+        .right-arrow {
+            color: $primary;
+        }
+    }
+
+    .flip-left {
+        .left-arrow {
+            color: $primary;
+        }
+    }
+
+    .left-arrow.disabled,
+    .right-arrow.disabled {
+        color: $medium-grey;
+    }
+
+    .cover {
+        overflow: hidden;
+        position: absolute;
+        border-box: 5px;
+        left: 50px;
+        top: 10px;
+        height: 598px;
+        width: 838px;
+        max-width: 100%;
+        padding: 20px;
+        text-align: center;
+        z-index: 2;
+        box-sizing: border-box;
+
+        img {
+            max-width: 80%;
+            max-height: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 10px solid $white;
+        }
+
+        h2 {
+            font-size: 27px;
+            color: $text-lightest;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: $text-lightest;
+            text-transform: none;
+        }
+    }
+
+    .scrapbook-pagination {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .drawing-zone {
+        overflow: visible;
+
+        &.orange {
+            background-color: $orange;
+        }
+
+        &.pink {
+            background-color: $red;
+        }
+
+        &.purple {
+            background-color: $purple;
+        }
+
+        &.blue {
+            background-color: $cyan;
+        }
+
+        &.green {
+            background-color: $green;
+        }
+
+        &.black {
+            background-color: $black;
+        }
+
+        &.white {
+            background-color: $white;
+        }
+
+        &.transparent {
+            background-color: transparent;
+        }
+
+        article.media {
+            padding: 0;
+            border: 1px dashed $warning-color-hover;
+
+            iframe {
+                pointer-events: none;
+            }
+
+            .loading-panel {
+                width: 200px;
+                height: 200px;
+                position: relative;
+                float: left;
+
+                h1 {
+                    text-transform: none;
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    font-size: 20px;
+                }
+
+                img {
+                    width: 50%;
+                    height: 50%;
+                }
+            }
+
+            div.close-lightbox {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}
