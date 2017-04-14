@@ -133,7 +133,7 @@ strong.cell-ellipsis{
 	padding: 7px;
 	font-size: 12px;
 	text-align: center;
-	@include border-radius(10px);
+	border-radius: 10px;
     max-width: 100%;
 }
 
