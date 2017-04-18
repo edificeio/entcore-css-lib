@@ -142,6 +142,40 @@
 }
 
 
+
+.scrapbook-thumbnails {
+    section.lightbox > div.content {
+        width: 160px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            height: 100px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+            .scrapbook {
+                transform: scale(0.13);
+                position: absolute;
+                top: -327px;
+                left: -391px;
+                background-color: $white;
+                max-width: none;
+            }
+        }
+
+        li.hide {
+            display: none;
+        }
+    }
+}
+
+
+
 // scrapbook Read
 section.scrapbook {
     width: 900px;
