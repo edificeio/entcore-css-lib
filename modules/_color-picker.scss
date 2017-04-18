@@ -13,12 +13,13 @@
 		margin: 0px;
 		padding: 0;
 		border-radius: 50%;
-		background-image: url("../../img/icons/colorpicker.png");
+		background-image: url("../../img/icons/colorpicker.svg");
 		background-size: contain;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-color: transparent;
 		border: none;
+		box-shadow: none;
 		display: inline-block;
 		float: left;
 		opacity: 1;
@@ -47,10 +48,12 @@
 			border-radius: 50%;
 			border: 1px solid transparent;
 			box-sizing: border-box;
-			@include run-transition(border-color);
+			box-shadow: none;
+			@include run-transition(all);
 		}
 		button:hover {
             border: 1px solid $primary;
+			transform: scale(1.3);
         }
 	}
 
