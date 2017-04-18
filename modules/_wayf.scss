@@ -3,8 +3,6 @@ $light-tone: #8eefff !default;
 $medium-tone : #0f9df1 !default;
 
 
-$colorz: $cyan, $green, $yellow, $orange, $pink, $purple, $indigo;
-
 @for $i from 1 through length($colorz) {
 
     body.wayf #credentials-content li:nth-child(#{length($colorz)}n+#{$i}) a{
@@ -216,7 +214,7 @@ body.wayf{
                     text-align: center!important;
                     right: auto!important;
                     left: auto!important;
-                    
+
                     &:before{
                         display: none;
                     }

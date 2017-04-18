@@ -141,7 +141,47 @@
     }
 }
 
+nav.scrapbook-buttons{
+    .option{
+        margin: 0 3px;
+        > i{
+            position: absolute;
+            z-index: 1;
+            font-size: 20px;
+            left: 6px;
+            top: 4px;
+            pointer-events: none;
+            color: $white;
+        }
+        > i.text{
+            font-size: 23px;
+            left: 10px;
+            top: 2px;
+        }
 
+        input.scrapbook-media{
+            height: 29px;
+            width: 32px;
+            border-radius: 0;
+            border: none;
+            padding: 0;
+            @include run-transition(all);
+        }
+
+    }
+
+
+    @for $i from 1 through length($colorz) {
+
+        .option:nth-child(#{length($colorz)}n+#{$i}) input.scrapbook-media{
+            background: nth($colorz, $i);
+            &:hover, &:active{
+                background: darken(nth($colorz, $i), 15%);
+            }
+        }
+
+    }
+}
 
 .scrapbook-thumbnails {
     section.lightbox > div.content {
@@ -176,7 +216,6 @@
 
 
 
-// scrapbook Read
 section.scrapbook {
     width: 900px;
     max-width: 100%;
