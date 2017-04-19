@@ -181,6 +181,23 @@ nav.scrapbook-buttons{
         }
 
     }
+
+    .scrapbook-addpage{
+        text-align: center;
+
+        > button{
+            float: none;
+            display: inline-block;
+            margin: 0;
+            vertical-align: middle;
+        }
+        plus{
+            float: none!important;
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 0;
+        }
+    }
 }
 
 .scrapbook-thumbnails {
