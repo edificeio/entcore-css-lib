@@ -1,6 +1,7 @@
 .tipbox{
     display: flex;
     align-items: flex-start;
+    backface-visibility: hidden;
 
     i{
         font-size: 26px;
