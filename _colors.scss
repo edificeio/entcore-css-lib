@@ -3,6 +3,10 @@
 .bg-primary{
 	background-color: $primary;
 }
+//for old compatibility
+.bg-secondary{
+	background-color: $primary;
+}
 .bg-accent{
 	background-color: $accent;
 }
