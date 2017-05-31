@@ -220,6 +220,7 @@ body editor{
         padding: 10px;
 		white-space: pre-wrap;
 		word-break: break-word;
+        overflow: hidden;
 	}
     > code.language-html{
         position: absolute;
@@ -264,6 +265,7 @@ body editor{
 		> textarea{
 			width: 100%;
             border: 1px solid #ddd;
+            overflow: hidden;
 		}
         > code{
             width: 100%;
@@ -277,6 +279,7 @@ body editor{
 			width: 50%;
 			border-left-width: 0;
             border: 1px solid #ddd;
+            overflow: hidden;
 		}
         > code {
             width: 50%;
