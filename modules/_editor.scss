@@ -25,6 +25,9 @@
 	audio::before{
 		content: " ";
 	}
+    video{
+        max-width: 100%;
+    }
 	a img{
 		cursor: pointer !important;
 	}
