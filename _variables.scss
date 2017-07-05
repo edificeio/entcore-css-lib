@@ -1,8 +1,18 @@
 
+////////    BREAKPOINTS
+
+
+$tablette: 800px;
+$small-tablette: 650px;
+$fat-mobile: 550px;
+$small-mobile: 420px;
+
+
+
 ////////    COLORS
 
 
-// ONE COLORS -> wayf
+// ONE COLORS -> for wayf module
 
 $cyan: 							#46afe6 !default;
 $green: 						#6fbe2e !default;
@@ -97,11 +107,3 @@ $font-size: 12px !default;
 
 //datePicker
 $btnPrimaryBackground: $medium-grey !default;
-
-
-////// ONLY bootsrap-adapter ??
-//bootsrap-adapter
-$base-FontSize: 12px !default;
-
-$grayLight: 		#ccc !default;
-$grayLighter: 		#eee !default;
