@@ -1,14 +1,4 @@
 
-////////    BREAKPOINTS
-
-
-$tablette: 800px;
-$small-tablette: 650px;
-$fat-mobile: 550px;
-$small-mobile: 420px;
-
-
-
 ////////    COLORS
 
 
@@ -76,19 +66,6 @@ $block-disabled-color: 			$primary-lighter !default;
 
 
 $colorz: $cyan, $green, $yellow, $orange, $pink, $purple, $indigo;
-
-
-
-
-
-////////    FONTS
-
-
-@font-face {
-	font-family: EcritureA;
-	src: url(/public/fonts/EcritureA-Romain-Orne.otf);
-	font-size-adjust: 80;
-}
 
 
 
