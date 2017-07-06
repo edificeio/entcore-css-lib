@@ -7,8 +7,13 @@
 .bg-secondary{
 	background-color: $primary;
 }
+
+
 .bg-accent{
 	background-color: $accent;
+}
+.bg-color{
+	background-color: $background;
 }
 
 
@@ -28,6 +33,7 @@
     color: $valid-color;
 }
 
+
 .warning-bg-color{
     background-color: $warning-color;
 }
@@ -39,4 +45,14 @@
 }
 .valid-bg-color{
     background-color: $valid-color;
+}
+
+
+
+.valid-color, .valid-color em, .valid-color i{
+    color: $valid-color!important;
+}
+
+.accent-color, .accent-color em, .accent-color i{
+    color: $accent!important;
 }
