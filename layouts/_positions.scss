@@ -3,15 +3,13 @@
 	display: flex;
 	position: relative;
 
-// .flex-[foo] classes deprecated, use .align-[foo] classes instead
-
-	&.flex-start, &.align-start{
+	&.align-start{
 		align-items: flex-start;
 	}
-	&.flex-center, &.align-center{
+	&.align-center{
 		align-items: center;
 	}
-	&.flex-end, &.align-end{
+	&.align-end{
 		align-items: flex-end;
 	}
 
