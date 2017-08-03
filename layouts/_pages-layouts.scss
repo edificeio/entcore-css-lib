@@ -1,3 +1,4 @@
+
 .no-margin{
 	margin: 0!important;
 }
@@ -46,6 +47,8 @@
 .block-container{
 	padding: 10px;
 }
+
+//padding: $size
 .reduce-block-two{
 	@include reduce-block(2px);
 }
@@ -73,6 +76,7 @@
 .block{
 	display: block!important;
 }
+
 .overflow-hd{
 	overflow: hidden;
 }
@@ -211,4 +215,12 @@ div.hidden-content{
         width: 114px;
         height: 40px;
     }
+}
+
+@media screen and (max-width: $tablette) {
+    body {
+		.block-mobile{
+			display: block!important;
+		}
+	}
 }
