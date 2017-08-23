@@ -4,3 +4,106 @@ i.cloud-upload{
         content: '\e9c3'
     }
 }
+
+i.undo, .undo > i{
+    @include fonticon;
+    &::before {
+        content: '\e8be';
+    }
+}
+
+i.redo, .redo > i{
+    @include fonticon;
+    &::before {
+        content: '\e8bd';
+    }
+}
+i.loaded{
+    @include fonticon;
+    transform: rotate(0deg);
+    &::before{
+        content: '\e915';
+    }
+}
+
+i.loading{
+    animation: rotate 1000ms linear infinite;
+    @include fonticon;
+    &::before{
+        content: '\e85a';
+    }
+}
+
+i.back{
+    @include fonticon;
+    &::before{
+        content: '\e84c';
+    }
+}
+
+i.rotate{
+    @include fonticon;
+    &::before{
+        content: '\e92b';
+    }
+}
+
+i.crop{
+    @include fonticon;
+    &::before{
+        content: '\ea57';
+    }
+}
+
+i.blur{
+    @include fonticon;
+    &::before{
+        content: '\e92e';
+    }
+}
+
+i.resize{
+    @include fonticon;
+    &::before{
+        content: '\e865';
+    }
+}
+
+i.properties{
+    @include fonticon;
+    &::before{
+        content: '\e854';
+    }
+}
+
+.option.justify-left > i, i.justify-left {
+    @include fonticon;
+
+    &::before {
+        content: '\e8b8';
+    }
+}
+
+.option.justify-right > i, i.justify-right {
+    @include fonticon;
+
+    &::before {
+        content: '\e8b6';
+    }
+}
+
+.option.justify-center > i, i.justify-center {
+    @include fonticon;
+
+    &::before {
+        content: '\e8b7';
+    }
+}
+
+.option.justify-full > i, i.justify-full {
+    @include fonticon;
+
+    &::before {
+        content: '\e8b5';
+    }
+}

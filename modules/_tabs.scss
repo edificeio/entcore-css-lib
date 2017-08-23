@@ -3,7 +3,18 @@
 	header{
 		display: inline-block;
 		padding: 6px;
-		background: #eee;
+        background: #eee;
+        i{
+            font-weight: normal;
+            font-size: 24px;
+            margin-top: -2px;
+            margin-right: 6px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        i18n{
+            display: inline-block;
+        }
 	}
 	header.selected{
 		border: 1px solid;
@@ -35,6 +46,7 @@
         text-align: center;
         margin: 0 4px;
         padding: 10px 15px;
+        transition: color 250ms ease;
 
         a{
             vertical-align: middle;

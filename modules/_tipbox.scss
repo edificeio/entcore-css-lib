@@ -19,6 +19,11 @@
         background: white;
         z-index: 10000;
     }
+    &.left{
+        .tipbox-content{
+            right: 40px;
+        }
+    }
 }
 .tipbox:hover{
     .tipbox-content{
@@ -26,5 +31,6 @@
         width: auto;
         height: auto;
         transition: opacity 400ms;
+        min-width: 250px;
     }
 }

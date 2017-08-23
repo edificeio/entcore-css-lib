@@ -18,6 +18,22 @@
 }
 
 [contenteditable], [bind-html]{
+    .image-container{
+        display: inline-block;
+        user-select: all;
+        padding: 5px;
+        overflow: hidden;
+        border: 2px dashed transparent;
+        transition: border-color 250ms ease;
+        img{
+            width: 100%;
+        }
+    }
+    .column{
+        .image-container{
+            max-width: 100%;
+        }
+    }
 	audio{
 		display: block;
         max-width: 100%;
@@ -105,6 +121,12 @@ body editor{
 	margin: 10px auto 20px;
     -webkit-user-select: auto;
 
+    .column{
+        .image-container{
+            max-width: 100%;
+        }
+    }
+
 	> div{
 		position: relative;
 	}
@@ -119,12 +141,19 @@ body editor{
         padding: 0;
     }
 
+    .image-container{
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+
 	.editor-toolbar-opener, .close-focus{
 		display: none;
 	}
     &.focus.edit, &.focus.both, &.focus.html{
         editor-toolbar.inline{
-			select-list{
+			-list{
 				display: inline;
                 opacity: 1;
                 pointer-events: all !important;
@@ -134,7 +163,7 @@ body editor{
                 opacity: 1;
                 pointer-events: all !important;
 			}
-            .option, .option > select-list .selected-value, .option > i{
+            .option, .option > -list .ed-value, .option > i{
                 opacity: 1;
                 pointer-events: all !important;
             }
@@ -338,7 +367,7 @@ body editor{
             opacity: 0;
 			pointer-events: none !important;
 			@include run-transition(opacity);
-			select-list, popover, .option, .option > select-list .selected-value, .option > i{
+			-list, popover, .option, .option > -list .ed-value, .option > i{
 				display: inline-block;
                 opacity: 0;
                 pointer-events: none !important;
@@ -405,7 +434,7 @@ body editor{
 		}
 		.option.font{
 			width: 140px;
-            select-list .selected-value{
+            -list .ed-value{
                 width: 115px;
             }
 			&:hover{
@@ -517,12 +546,9 @@ body editor{
 
         select-list{
             .options{
-                position: fixed;
-                min-width: 0;
-                top: 80px;
+                right: 100%;
                 width: 200px;
-                margin-left: -100px;
-                left: 50%;
+                left: auto;
             }
         }
 
@@ -538,7 +564,7 @@ body editor{
             border-left: 1px solid #ddd;
             border-right: none;
             display: block;
-            &.opened .option i{
+            &.opened .option > i{
                 width: 40px;
             }
 
@@ -595,9 +621,6 @@ body editor{
 			font-size: 22px;
 			height: 38px;
 			width: 44px;
-            -webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
 			user-select: none;
 			&::before{
 				content: "+";
@@ -678,18 +701,8 @@ body editor{
     }
 }
 
-
-//editor icons
-
-@mixin edit-icon(){
-	font-family: "editor";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image: none;
-}
-
 @mixin editor-icon(){
-	@include edit-icon;
+	@include fonticon;
     display: block;
     position: absolute;
     text-align: center;
@@ -714,18 +727,10 @@ body editor {
     &.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar {
         .option.undo > i {
             @include editor-icon;
-
-            &::before {
-                content: '\e800';
-            }
         }
 
         .option.redo > i {
             @include editor-icon;
-
-            &::before {
-                content: '\e801';
-            }
         }
 
         .option.bold > i {
@@ -749,38 +754,6 @@ body editor {
 
             &::before {
                 content: '\e804';
-            }
-        }
-
-        .option.justify-left > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e805';
-            }
-        }
-
-        .option.justify-right > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e807';
-            }
-        }
-
-        .option.justify-center > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e806';
-            }
-        }
-
-        .option.justify-full > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e808';
             }
         }
 
@@ -967,7 +940,7 @@ body editor {
 @media screen and (max-width: $tablette){
     body editor{
         editor-toolbar{
-            select-list .selected-value{
+            -list .ed-value{
                 width: 44px;
                 &::after{
                     height: 44px;
@@ -1024,7 +997,7 @@ body editor {
 
 .download-attachments{
     .download{
-        @include edit-icon;
+        @include fonticon;
         font-size: 20px;
         vertical-align: top;
     }
@@ -1046,4 +1019,78 @@ body editor {
 		background-color: $light-grey;
 		cursor: pointer;
 	}
+}
+
+@keyframes slideIn{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+.lightbox-opened .image-contextual-menu{
+    opacity: 0;
+}
+
+.lightbox-opened .image-contextual-menu{
+    display: none;
+}
+
+.image-contextual-menu{
+    position: absolute;
+    background: #eee;
+    padding: 5px;
+    border-radius: 5px;
+    animation: slideIn 1 250ms;
+    transform-origin: top;
+    z-index: 100001;
+    button, i{
+        user-select: none;
+        margin-bottom: 0;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+    }
+    button{
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-left: 13px;
+        background: transparent;
+        box-shadow: none;
+        border-right: 1px solid rgba(255,255,255, 0.3);
+        &:hover{
+            background: #fff;
+        }
+    }
+    i{
+        transition: 250ms ease;
+        line-height: 37px;
+        display: inline-block;
+        height: 38px;
+        box-sizing: border-box;
+        width: 35px;
+        text-align: center;
+        vertical-align: text-bottom;
+        border-radius: 3px;
+        &.large{
+            font-size: 30px;
+        }
+        &.medium{
+            font-size: 23px;
+        }
+        &.ed{
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.2) inset;
+            &:hover{
+                box-shadow: none;
+            }
+        }
+    }
+
+    i.resize-image{
+        @include fonticon();
+        &::before{
+            content: '\e929';
+        }
+    }
 }
