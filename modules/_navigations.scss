@@ -139,6 +139,7 @@ nav.vertical, .app-menu{
 			font-weight: normal;
 			width: 100% !important;
 			top: 0;
+
 			a{
 				display: block;
 				position: relative;
@@ -179,7 +180,7 @@ nav.vertical, .app-menu{
 			}
 			a.selected{
 				background: #ccc;
-				i{
+				i {
 					opacity: 1;
 				}
 			}
@@ -205,7 +206,7 @@ nav.vertical, .app-menu{
 				width: 100%;
 			}
 		}
-  }
+  	}
 }
 
 nav.double-content-stamps{
