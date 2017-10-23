@@ -34,12 +34,32 @@
 						box-sizing: border-box;
 					}
 					&:hover{
+						.icon{
+							i{
+								opacity: 0;
+							}
+							i.edit{
+								opacity: 1;
+							}
+						}
 						.close{
 							opacity: 1;
 						}
 					}
 					.size{
 						width: 55px;
+					}
+				}
+			}
+			.icon{
+				i{
+					position: absolute;
+					transition: all 250ms ease;
+				}
+				i.edit{
+					opacity: 0;
+					&::before{
+						font-size: 22px;
 					}
 				}
 			}

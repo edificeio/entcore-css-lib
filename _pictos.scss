@@ -41,6 +41,14 @@ i.back{
     }
 }
 
+i.forward{
+    @include fonticon;
+    transform: rotate(180deg);
+    &::before{
+        content: '\e84c';
+    }
+}
+
 i.rotate{
     @include fonticon;
     &::before{
