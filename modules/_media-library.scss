@@ -14,7 +14,7 @@
 			width: 100%;
 			transition: 150ms linear;
 			float: left;
-			height: 513px;
+			height: 565px;
 			overflow: auto;
 			padding-right: 15px;
 			box-sizing: border-box;
@@ -32,6 +32,12 @@
 						align-items: center;
 						padding: 8px;
 						box-sizing: border-box;
+						border-radius: 0;
+						background: none;
+						color: $red;
+						&:hover{
+							background: $red;
+						}
 					}
 					&:hover{
 						.icon{
@@ -92,15 +98,19 @@
 			box-sizing: border-box;
 			border: 1px solid #ddd;
 			margin-bottom: 25px;
-			height: 513px;
+			height: 565px;
 			.compression-view{
 				padding: 15px;
 				width: 470px;
 				position: absolute;
 				top: 0;
 				right: 0;
+				> button{
+					margin-bottom: 15px;
+				}
 			}
 			.to-list{
+				line-height: 37px;
 				i.show-list{
 					float: left !important;
 					margin-right: 7px;
@@ -170,6 +180,7 @@
 			top: 39%;
 			height: 70px;
 			transition: 500ms ease;
+			box-sizing: border-box;
 			.select-file{
 				margin: 0;
 			}
@@ -226,6 +237,21 @@
 		}
 	}
 	.browse{
+		.explorer{
+            .highlight{
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity 700ms ease;
+                &.show{
+                    opacity: 1;
+                }
+            }
+        }
         .icons-view{
             margin: 0;
         }
@@ -243,6 +269,74 @@
 		position: relative;
 		float: left;
 	}
+}
+
+.media-library {
+    nav.vertical ul li a {
+        text-indent: 0;
+    }
+    .browse{
+        .explorer{
+            .highlight{
+                background: $accent;
+            }
+        }
+    }
+    section.media-library {
+        h2 {
+            font-size: 20px;
+            font-weight: normal;
+        }
+        header + section.medium-text {
+            text-align: left;
+        }
+        slider {
+            padding: 0;
+        }
+        .select-file {
+            h2 {
+                margin-bottom: 10px;
+            }
+            button.file-button {
+                float: left!important;
+            }
+            input[type=text] {
+                margin: 0;
+            }
+        }
+        .compression{
+            .nav-arrow{
+                background: $primary;
+            }
+        }
+    }
+    .import-files{
+        .cloud-upload{
+            color: $primary;
+        }
+    }
+    .import-files.dragover{
+        border-color: $accent;
+    }
+    .loading-list{
+        i.loaded{
+            color: $green;
+        }
+        i.loading{
+            color: $cyan;
+        }
+        ul li.image-file{
+            border-color: $primary;
+            &:hover{
+                border-color: $accent;
+                .icon{
+                    i.edit{
+                        color: $accent;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $tablette) {

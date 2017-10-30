@@ -7,9 +7,15 @@ image-editor{
     }
     .zoom-info{
         position: absolute;
-        bottom: 65px;
+        bottom: 15px;
         font-size: 14px;
         font-style: italic;
+    }
+    section.lightbox .tabs label{
+        margin-bottom: 0
+    }
+    section.lightbox .tabs label + input[type=text]{
+        margin-top: 0;
     }
     .output{
         background-size: 20px 20px;
@@ -37,6 +43,7 @@ image-editor{
         right: 0;
         border-radius: 3px;
         background: #ddd;
+        width: 116px;
     }
 
     .tools{
@@ -47,16 +54,19 @@ image-editor{
         border-radius: 3px;
         input[type=text]{
             background: #fff;
+            padding: 3px;
+            border: none;
+            height: 25px;
         }
         .row > div{
             padding: 1px;
         }
         button{
             width: 100%;
-            padding: 6px;
-            background: #fff;
-            color: #666;
             margin-left: 0;
+            margin-top: 8px;
+            padding-left: 6px;
+            padding-right: 6px;
             &:disabled{
                 background: #888;
                 box-shadow: none;
@@ -119,7 +129,7 @@ image-editor{
             height: 100%;
             width: 100%;
             opacity: 0;
-            transition: border-color 250ms ease, top 250ms ease, left 250ms ease, width 250ms ease, height 250ms ease;
+            transition: border-color 250ms ease, top 200ms ease, left 200ms ease, width 200ms ease, height 200ms ease;
             &.show{
                 opacity: 1;
             }
@@ -146,6 +156,60 @@ legend.user-image{
         box-sizing: border-box;
         &.hidden{
             transform: scaleY(0);
+        }
+    }
+}
+
+image-editor{
+    .overlay{
+        .handle{
+            border: 2px dashed $primary;
+            &.top{
+                border-top-color: $accent;
+            }
+            &.left{
+                border-left-color: $accent;
+            }
+            &.right{
+                border-right-color: $accent;
+            }
+            &.bottom{
+                border-bottom-color: $accent;
+            }
+            &.top-left{
+                border-top-color: $accent;
+                border-left-color: $accent;
+                .corner.nw{
+                    background-color: $accent;
+                }
+            }
+            &.top-right{
+                border-right-color: $accent;
+                border-top-color: $accent;
+                .corner.ne{
+                    background-color: $accent;
+                }
+            }
+            &.bottom-left{
+                border-bottom-color: $accent;
+                border-left-color: $accent;
+                .corner.sw{
+                    background-color: $accent;
+                }
+            }
+            &.bottom-right{
+                border-bottom-color: $accent;
+                border-right-color: $accent;
+                .corner.se{
+                    background-color: $accent;
+                }
+            }
+        }
+        .corner{
+            background: $primary;
+            &:hover{
+                background: $accent;
+            }
         }
     }
 }

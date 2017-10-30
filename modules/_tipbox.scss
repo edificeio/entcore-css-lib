@@ -5,6 +5,7 @@
 
     i{
         font-size: 26px;
+        color: $primary;
     }
     .tipbox-content{
         position: absolute;
@@ -14,10 +15,12 @@
         width: 0;
         height: 0;
         overflow: hidden;
-        border: 1px solid cyan;
         border-radius: 3px;
         background: white;
         z-index: 10000;
+        border: 1px solid $primary-light;
+        background: $white;
+        box-shadow: 0 1px 3px $shadow;
     }
     &.left{
         .tipbox-content{

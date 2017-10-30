@@ -25,6 +25,7 @@
         overflow: hidden;
         border: 2px dashed transparent;
         transition: border-color 250ms ease;
+        vertical-align: middle;
         img{
             width: 100%;
         }
@@ -367,7 +368,7 @@ body editor{
             opacity: 0;
 			pointer-events: none !important;
 			@include run-transition(opacity);
-			-list, popover, .option, .option > -list .ed-value, .option > i{
+			select-list, popover, .option, .option > -list .ed-value, .option > i{
 				display: inline-block;
                 opacity: 0;
                 pointer-events: none !important;
@@ -702,7 +703,6 @@ body editor{
 }
 
 @mixin editor-icon(){
-	@include fonticon;
     display: block;
     position: absolute;
     text-align: center;
@@ -718,101 +718,19 @@ body editor {
                 font-size: 25px;
 
                 &::before {
-                    content: '\e815';
+                    content: '\e8c3';
                 }
             }
         }
     }
 
     &.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar {
-        .option.undo > i {
-            @include editor-icon;
+        .option > i{
+            display: block;
+            position: absolute;
+            text-align: center;
+            line-height: 44px;
         }
-
-        .option.redo > i {
-            @include editor-icon;
-        }
-
-        .option.bold > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e802';
-            }
-        }
-
-        .option.italic > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e803';
-            }
-        }
-
-        .option.underline > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e804';
-            }
-        }
-
-        .option.subscript > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e80d';
-            }
-        }
-
-        .option.superscript > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e80c';
-            }
-        }
-
-        .option.quote > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e816';
-            }
-        }
-
-        .option.ulist i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e809';
-            }
-        }
-
-        .option.olist > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e80a';
-            }
-        }
-
-        .option.image > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e817';
-            }
-        }
-
-        .option.sound > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e80f';
-            }
-        }
-
         .option.remove-format > i {
             height: 100%;
             width: 100%;
@@ -849,42 +767,8 @@ body editor {
         .option.table {
             popover {
                 > i {
-                    @include editor-icon;
                     top: -6px;
-
-                    &::before {
-                        content: '\e814';
-                        color: black;
-                    }
                 }
-            }
-        }
-
-        .option.linker {
-            > i {
-                @include editor-icon;
-
-                &::before {
-                    content: '\e812';
-                }
-            }
-        }
-
-        .option.smileys {
-            > i {
-                @include editor-icon;
-
-                &::before {
-                    content: '\e813';
-                }
-            }
-        }
-
-        .option.unlink > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e811';
             }
         }
 
@@ -892,47 +776,6 @@ body editor {
             .lightbox > .content{
                 overflow: hidden;
             }
-            
-            > i{
-			    @include editor-icon;
-                &::before{
-                    content: '\e810';
-                }
-            }
-        }
-
-        .option.audio > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e839';
-            }
-        }
-
-        .option.color > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e80b';
-            }
-        }
-
-        .option.attachment > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e80e';
-            }
-        }
-
-        .option.background-color > i {
-            @include editor-icon;
-
-            &::before {
-                content: '\e80b';
-            }
-
-            color: #fff;
         }
     }
 }
@@ -1053,8 +896,6 @@ body editor {
         cursor: pointer;
     }
     button{
-        padding-top: 9px;
-        padding-bottom: 9px;
         padding-left: 13px;
         background: transparent;
         box-shadow: none;
@@ -1091,6 +932,50 @@ body editor {
         @include fonticon();
         &::before{
             content: '\e929';
+        }
+    }
+}
+
+.image-contextual-menu{
+    background: $accent;
+    i:hover, i.selected{
+        background: $dark-accent;
+    }
+    button:hover{
+        color: $accent;
+    }
+}
+
+body editor [contenteditable]{
+    .image-container{
+        border: 2px dashed $primary;
+        &.top{
+            border-top-color: $accent;
+        }
+        &.left{
+            border-left-color: $accent;
+        }
+        &.right{
+            border-right-color: $accent;
+        }
+        &.bottom{
+            border-bottom-color: $accent;
+        }
+        &.top-left{
+            border-top-color: $accent;
+            border-left-color: $accent;
+        }
+        &.top-right{
+            border-right-color: $accent;
+            border-top-color: $accent;
+        }
+        &.bottom-left{
+            border-bottom-color: $accent;
+            border-left-color: $accent;
+        }
+        &.bottom-right{
+            border-bottom-color: $accent;
+            border-right-color: $accent;
         }
     }
 }

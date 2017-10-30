@@ -18,9 +18,13 @@
 	i{
 		margin-left: 3px;
 		margin-right: 3px;
+		&.close::before{
+			font-size: 22px;
+			float: right;
+		}
 	}
 	.file{
-		margin-top: 30px;
+		margin-top: 20px;
 	}
 	.default-viewer{
 		padding: 30px;
@@ -29,6 +33,10 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+	}
+	.controls{
+		padding: 10px;
+		height: 38px;
 	}
 }
 
@@ -64,13 +72,18 @@ pdf-viewer{
 	margin-top: 30px;
 	.file-controls, .pagination{
 		position: absolute;
-		top: -30px;
+		top: -72px;
+		i{
+			display: inline-block;
+			font-size: 22px;
+			margin-right: 10px;
+		}
 	}
 	.file-controls{
-		right: 65px;
+		left: 65px;
 	}
-	.pagination{
-		right: 5px;
+	canvas{
+		max-width: 100%;
 	}
 }
 
