@@ -40,14 +40,6 @@
 						}
 					}
 					&:hover{
-						.icon{
-							i{
-								opacity: 0;
-							}
-							i.edit{
-								opacity: 1;
-							}
-						}
 						.close{
 							opacity: 1;
 						}
@@ -229,6 +221,14 @@
 				&.image-file{
 					box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 					cursor: pointer;
+					&:hover .icon{
+						i{
+							opacity: 0;
+						}
+						i.edit{
+							opacity: 1;
+						}
+					}
 				}
 				&.loading{
 					color: #888;
