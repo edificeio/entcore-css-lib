@@ -435,24 +435,24 @@ body editor{
 		}
 		.option.font{
 			width: 140px;
-            -list .ed-value{
+            select-list .selected-value{
                 width: 115px;
             }
 			&:hover{
 				background: none;
-				border: none;
+				border-color: transparent;
 			}
 		}
 		.option.font-size{
 			&:hover{
 				background: none;
-				border: none;
+				border-color: transparent;
 			}
 		}
 		.option.format{
 			&:hover{
 				background: none;
-				border: none;
+				border-color: transparent;
 			}
 			h1, h2, h3, p{
 				margin: 0;
