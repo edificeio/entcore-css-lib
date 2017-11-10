@@ -882,17 +882,19 @@ body editor {
 
 .image-contextual-menu{
     position: absolute;
-    background: #eee;
     padding: 5px;
     border-radius: 5px;
     animation: slideIn 1 250ms;
     transform-origin: top;
     z-index: 100001;
+    background: #f9f9f9;
+    color: #222;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     button, i{
         user-select: none;
         margin-bottom: 0;
         background: transparent;
-        color: #fff;
+        color: #222;
         cursor: pointer;
     }
     button{
@@ -901,7 +903,7 @@ body editor {
         box-shadow: none;
         border-right: 1px solid rgba(255,255,255, 0.3);
         &:hover{
-            background: #fff;
+            background: #ccc;
         }
     }
     i{
@@ -937,12 +939,11 @@ body editor {
 }
 
 .image-contextual-menu{
-    background: $accent;
     i:hover, i.selected{
-        background: $dark-accent;
+        background: #ddd;
     }
     button:hover{
-        color: $accent;
+        color: #222;
     }
 }
 
