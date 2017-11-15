@@ -2,6 +2,14 @@ image-editor{
     h2{
         border-bottom: 1px solid #eee;
         padding-bottom: 15px;
+        i.back{
+            font-size: 30px;
+            float: left;
+            margin-right: 11px;
+            &:hover{
+                color: $accent;
+            }
+        }
     }
     .tabs{
         animation: fade-in 1 1500ms;
