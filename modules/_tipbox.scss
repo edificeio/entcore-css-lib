@@ -37,3 +37,11 @@
         min-width: 250px;
     }
 }
+
+@media screen and (max-width: $tablette) {
+    .tipbox:hover{
+        .tipbox-content{
+            min-width: 180px;
+        }
+    }
+}

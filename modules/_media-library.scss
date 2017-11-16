@@ -148,7 +148,7 @@
 				.title{
 					width: 78px;
 				}
-				.loading, .loaded{
+				i.loading, i.loaded{
 					margin-top: -9px;
 				}
 				.size{
@@ -384,6 +384,7 @@
 							display: block;
 							overflow: hidden;
 							text-overflow: ellipsis;
+							white-space: nowrap;
 							i.back{
 								margin-right: 10px;
 								font-size: 30px;
@@ -394,6 +395,7 @@
 
 				.loading-list{
 					height: 380px;
+					padding: 0;
 					
 					.close{
 						opacity: 1;
@@ -401,8 +403,8 @@
 					.title{
 						width: 78px;
 					}
-					.loading, .loaded{
-						margin-top: -9px;
+					i.loading, i.loaded{
+						margin-top: -8px;
 					}
 					.size{
 						position: absolute;

@@ -125,7 +125,7 @@ nav.vertical, .app-menu{
 	h1{
 		margin-top: 0;
 	}
-	ul:first-child, div ul:first-child{
+	> ul, > div > ul{
 		padding-left: 0;
 	}
 	ul{
