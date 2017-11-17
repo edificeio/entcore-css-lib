@@ -19,7 +19,7 @@
 
 [contenteditable], [bind-html]{
     .image-container{
-        display: inline-block;
+        display: inline-block !important;
         user-select: all;
         padding: 5px;
         overflow: hidden;
