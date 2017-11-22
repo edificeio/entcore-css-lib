@@ -226,3 +226,29 @@ image-editor{
         }
     }
 }
+
+@media screen and (max-width: $tablette) {
+    body image-editor{
+        .image-actions-zone{
+            margin-top: 80px;
+        }
+        .tools-background{
+            display: none;
+        }
+        .output{
+            width: 100% !important;
+        }
+        .tools{
+            width: 100%;
+            float: left;
+            padding: 0;
+            button{
+                width: auto;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+    
