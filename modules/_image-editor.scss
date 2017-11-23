@@ -19,7 +19,7 @@ image-editor{
     }
     .zoom-info{
         position: absolute;
-        bottom: 15px;
+        bottom: 6px;
         font-size: 14px;
         font-style: italic;
     }
@@ -233,7 +233,7 @@ image-editor{
             margin-top: 80px;
         }
         .tools-background{
-            display: none;
+            display: none !important;
         }
         .output{
             width: 100% !important;
@@ -242,6 +242,7 @@ image-editor{
             width: 100%;
             float: left;
             padding: 0;
+            top: -80px;
             button{
                 width: auto;
                 padding-left: 15px;
