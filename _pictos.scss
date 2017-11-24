@@ -77,6 +77,13 @@ i.resize{
     }
 }
 
+i.trash{
+    @include fonticon;
+    &::before{
+        content: '\e8cf';
+    }
+}
+
 i.properties{
     @include fonticon;
     &::before{
