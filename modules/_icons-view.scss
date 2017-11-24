@@ -13,6 +13,10 @@
 		overflow: hidden;
 		width: $icon-list-size + ($icon-list-padding * 2) + 2px + 12px;
 		margin: 2px;
+		i{
+			background-size: contain;
+			background-position: 0px 2px;
+		}
 	}
 	explorer{
 		display: inline-block;
