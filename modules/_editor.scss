@@ -713,6 +713,8 @@ body editor {
     > popover {
         > [popover-opener] {
             &.tools {
+                background: none;
+                @include fonticon;
                 @include editor-icon;
                 height: auto;
                 font-size: 25px;
