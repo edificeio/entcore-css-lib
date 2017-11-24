@@ -14,9 +14,7 @@ image-editor{
     .tabs{
         animation: fade-in 1 1500ms;
     }
-    .image-properties{
-        margin-top: -50px;
-    }
+    
     strong{
         text-align: center;
     }
@@ -232,6 +230,9 @@ image-editor{
 
 @media screen and (max-width: $tablette) {
     body image-editor{
+        .image-properties{
+            margin-top: -50px;
+        }
         .image-actions-zone{
             margin-top: 80px;
         }
