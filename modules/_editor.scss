@@ -950,6 +950,9 @@ body editor {
 }
 
 body editor [contenteditable]{
+    .image-template .image-container{
+        border: none !important;
+    }
     .image-container{
         border: 2px dashed $primary;
         &.top{
