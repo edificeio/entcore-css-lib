@@ -14,12 +14,15 @@ image-editor{
     .tabs{
         animation: fade-in 1 1500ms;
     }
+    .image-properties{
+        margin-top: -50px;
+    }
     strong{
         text-align: center;
     }
     .zoom-info{
         position: absolute;
-        bottom: 6px;
+        bottom: 0;
         font-size: 14px;
         font-style: italic;
     }
