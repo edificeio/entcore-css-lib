@@ -22,6 +22,11 @@
 			ul{
 				margin-top: 0;
 				li{
+					transition: 250ms ease;
+					&.selected{
+						background: $primary;
+						color: #fff;
+					}
 					.close{
 						position: absolute;
 						right: 0;
