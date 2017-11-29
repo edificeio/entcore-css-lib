@@ -59,6 +59,9 @@
 					position: absolute;
 					transition: all 250ms ease;
 					background-position: top left;
+					min-width: 17px;
+					text-align: center;
+					line-height: 23px;
 				}
 				i.edit{
 					opacity: 0;
@@ -76,6 +79,10 @@
 				text-overflow: ellipsis;
 				position: absolute;
 				left: 30px;
+				line-height: 25px;
+			}
+			.size{
+				line-height: 25px;
 			}
 			i.loading, i.loaded, i.failed{
 				font-size: 22px;
