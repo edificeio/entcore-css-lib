@@ -144,11 +144,13 @@
 				transition: opacity 250ms ease;
 				margin: 10px;
 				background: $primary;
+				left: 0;
 				&:hover{
 					opacity: 1;
 				}
 				&.forward{
 					right: 0;
+					left: auto;
 				}
 			}
 		}
