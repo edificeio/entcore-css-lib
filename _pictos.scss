@@ -217,7 +217,6 @@ i.properties{
     popover{
         > i{
             @include fonticon;
-            top: -6px;
             &::before{
                 content: '\e8b3';
                 color: black;

@@ -766,14 +766,6 @@ body editor {
             vertical-align: middle;
         }
 
-        .option.table {
-            popover {
-                > i {
-                    top: -6px;
-                }
-            }
-        }
-
 		.option.embed {
             .lightbox > .content{
                 overflow: hidden;
