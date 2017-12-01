@@ -110,3 +110,13 @@ strong.cell-ellipsis{
 .single-line{
 
 }
+
+h2 > i.back{
+	font-size: 26px;
+    margin-right: 7px;
+    display: block;
+	float: left;
+	&:hover{
+		color: $accent;
+	}
+}
