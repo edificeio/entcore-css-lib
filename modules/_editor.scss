@@ -27,7 +27,8 @@
         transition: border-color 250ms ease;
         vertical-align: middle;
         img{
-            width: 100%;
+            width: 99.99%;
+            min-width: 20px;
         }
     }
     .column{
@@ -143,6 +144,7 @@ body editor{
     }
 
     .image-container{
+        user-select: none;
         overflow: hidden;
         img{
             width: 100%;
