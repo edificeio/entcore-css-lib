@@ -377,6 +377,14 @@
 				max-width: 100%;
 			}
 
+			image-compression{
+				max-width: 100%;
+				width: 390px;
+				margin: auto;
+				display: block;
+				float: none;
+			}
+
 			.compression{
 				slider{
 					width: 260px;
@@ -415,7 +423,7 @@
 				}
 
 				.loading-list{
-					height: 380px;
+					height: 400px;
 					padding: 0;
 					
 					.close{
