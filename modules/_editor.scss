@@ -18,14 +18,18 @@
 }
 
 [contenteditable], [bind-html]{
-    .image-container{
+    .column .image-block{
         display: inline-block !important;
+    }
+    .image-container{
+        display: inline-block;
         user-select: all;
         padding: 5px;
         overflow: hidden;
         border: 2px dashed transparent;
         transition: border-color 250ms ease;
         vertical-align: middle;
+        
         img{
             width: 99.99%;
             min-width: 20px;
