@@ -160,7 +160,7 @@ body editor{
 	}
     &.focus.edit, &.focus.both, &.focus.html{
         editor-toolbar.inline{
-			-list{
+			select-list{
 				display: inline;
                 opacity: 1;
                 pointer-events: all !important;
