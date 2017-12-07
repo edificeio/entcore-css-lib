@@ -29,6 +29,7 @@ i.loaded{
 i.loading{
     animation: rotate 1000ms linear infinite;
     @include fonticon;
+    display: inline-block;
     &::before{
         content: '\e85a';
     }

@@ -175,6 +175,15 @@ legend.user-image{
 }
 
 image-editor{
+    .image-loading{
+        display: block;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        font-size: 40px;
+        z-index: 5;
+        color: $primary;
+    }
     .overlay{
         .handle{
             border: 2px dashed $primary;
