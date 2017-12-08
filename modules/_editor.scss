@@ -39,6 +39,7 @@
     .column{
         .image-container{
             max-width: 100%;
+            padding: 0;
         }
     }
 	audio{
@@ -783,6 +784,7 @@ body editor {
 
 @media screen and (max-width: $tablette){
     body editor{
+        box-sizing: border-box;
         editor-toolbar{
             -list .ed-value{
                 width: 44px;
