@@ -8,7 +8,7 @@
     padding: 0 15px;
     cursor: pointer;
     i{
-        margin-left: -5px;
+        margin-left: 10px;
         margin-right: 3px;
         font-size: 14px;
     }
@@ -32,6 +32,51 @@
     word-spacing: 5px;
 }
 
+.chip.removable{
+    border: 1px solid $medium-grey;
+    background: $white;
+    box-shadow: none;
+    text-shadow: none;
+    span{
+        color: $black;
+    }
+    i{
+        &:before{
+            color: $solid-grey!important;
+            text-shadow: none!important;
+            font-size: 10px;
+            vertical-align: top;
+            @include run-transition;
+        }
+    }
+    &:hover{
+        i:before{
+            color: $warning-color!important;
+        }
+    }
+}
+
+.chip-input{
+    margin-bottom: 5px !important
+}
+
+form label{
+    display: inline-block;
+    white-space: nowrap;
+}
+
+form.input-help{
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+my-directive.focus{
+    label{
+        color: $accent;
+    }
+}
+
 @media screen and (max-width: $small-mobile){
     body{
         .chip{
@@ -41,6 +86,7 @@
             max-width: 200px;
             line-height: 28px;
             padding: 0 20px;
+            @include run-transition(all);
             i{
                 margin-right: 10px;
                 font-size: 14px;
