@@ -172,7 +172,7 @@ body editor{
                 opacity: 1;
                 pointer-events: all !important;
 			}
-            .option, .option > -list .ed-value, .option > i{
+            .option, .option > select-list .selected-value, .option > i{
                 opacity: 1;
                 pointer-events: all !important;
             }
@@ -376,7 +376,7 @@ body editor{
             opacity: 0;
 			pointer-events: none !important;
 			@include run-transition(opacity);
-			select-list, popover, .option, .option > -list .ed-value, .option > i{
+			select-list, popover, .option, .option > select-list .selected-value, .option > i{
 				display: inline-block;
                 opacity: 0;
                 pointer-events: none !important;
@@ -786,7 +786,7 @@ body editor {
     body editor{
         box-sizing: border-box;
         editor-toolbar{
-            -list .ed-value{
+            select-list .selected-value{
                 width: 44px;
                 &::after{
                     height: 44px;
