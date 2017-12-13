@@ -35,18 +35,18 @@ image-select{
 	}
 	i.trash{
 		right: 10px;
-		top: 10px;
+	    top: 3px;
 		&::before{
-			font-size: 24px;
+			font-size: 15px;
 		}
 	}
 	i.edit{
-		right: 40px;
-		top: 10px;
+		right: 34px;
+	    top: 4px;
 		border: none;
 		padding: 0;
 		&::before{
-			font-size: 24px;
+			font-size: 18px;
 			line-height: 24px;
 		}
 	}
