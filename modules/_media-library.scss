@@ -376,9 +376,16 @@
 						}
 					}
 				}
+				.drop{
+					display: none;
+				}
 				.default{
 					background: transparent;
 					box-shadow: none;
+					width: 100%;
+					box-sizing: border-box;
+					position: relative;
+					padding: 0;
 					i, div:last-child{
 						display: none;
 					}
