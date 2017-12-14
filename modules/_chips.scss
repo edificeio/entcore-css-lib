@@ -56,33 +56,6 @@
     }
 }
 
-input.chip-input{
-    border: 0 !important;
-    margin-bottom: 5px !important;
-}
-
-form label{
-    display: inline-block;
-    white-space: nowrap;
-}
-
-form.input-help{
-    position: relative;
-    display: inline-block;
-    margin-left: 5px;
-}
-
-my-directive{
-    border-bottom: 1px solid #ddd;
-}
-
-my-directive.focus{
-    border-bottom: 2px solid $accent;
-    label{
-        color: $accent;
-    }
-}
-
 @media screen and (max-width: $small-mobile){
     body{
         .chip{
