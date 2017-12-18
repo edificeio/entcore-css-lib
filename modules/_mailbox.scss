@@ -30,3 +30,18 @@ article.list-view.mailbox, article.mail {
         }
     }
 }
+
+article.mail, article.write-mail {
+    padding: 1.5em 3em 1.5em 3em;
+
+    .avatar {
+        width: 80px;
+        height:80px;
+        display: inline-block;
+        margin-right: 1em;
+    }
+
+    .text-flow {
+        vertical-align: top;
+    }
+}
