@@ -1,0 +1,192 @@
+.split-screen{
+    .loading-list{
+        width: 100%;
+        transition: 150ms linear;
+        float: left;
+        height: 520px;
+        overflow: auto;
+        padding-right: 15px;
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        ul{
+            margin-top: 0;
+            li{
+                transition: 250ms ease;
+                &.selected{
+                    background: $primary;
+                    color: #fff;
+                }
+                .close{
+                    position: absolute;
+                    right: 0;
+                    border-left: 1px solid #ddd;
+                    height: 100%;
+                    top: 0;
+                    display: flex;
+                    align-items: center;
+                    padding: 8px;
+                    box-sizing: border-box;
+                    border-radius: 0;
+                    background: none;
+                    color: $red;
+                    &:hover{
+                        background: $red;
+                    }
+                }
+                &:hover{
+                    .close{
+                        opacity: 1;
+                    }
+                }
+                .size{
+                    width: 55px;
+                }
+            }
+        }
+        .icon{
+            i{
+                position: absolute;
+                transition: all 250ms ease;
+                background-position: top left;
+                min-width: 17px;
+                text-align: center;
+                line-height: 23px;
+            }
+            i.edit{
+                opacity: 0;
+                &::before{
+                    font-size: 22px;
+                }
+            }
+        }
+        .title{
+            width: 510px;
+            float: left;
+            margin-left: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: absolute;
+            left: 30px;
+            line-height: 25px;
+        }
+        .size{
+            line-height: 25px;
+        }
+        i.loading, i.loaded, i.failed{
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        .close{
+            opacity: 0;
+            transition: 250ms ease;
+        }
+    }
+    &.split{
+        .loading-list{
+            width: 30%;
+            .close{
+                opacity: 1;
+            }
+            .title{
+                width: 78px;
+            }
+            i.loading, i.loaded{
+                margin-top: -9px;
+            }
+            .size{
+                position: absolute;
+                right: 35px;
+                font-size: 12px;
+                bottom: 3px;
+                width: 40px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.loading-list{
+    ul{
+        padding: 0;
+        li{
+            list-style-type: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            cursor: default;
+            height: 20px;
+            padding-right: 35px;
+            transition: color 250ms ease-out;
+            position: relative;
+            &.image-file{
+                box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+                cursor: pointer;
+                &:hover .icon{
+                    i{
+                        opacity: 0;
+                    }
+                    i.edit{
+                        opacity: 1;
+                    }
+                }
+            }
+            &.loading{
+                color: #888;
+            }
+        }
+    }
+
+    i.loaded{
+        color: $green;
+    }
+    i.loading{
+        color: $cyan;
+    }
+    ul li.image-file{
+        border-color: $primary;
+        &:hover{
+            border-color: $accent;
+            .icon{
+                i.edit{
+                    color: $accent;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablette) {
+    .split-screen{
+        &.split{
+            .loading-list{
+                width: 0%;
+                opacity: 0;
+                pointer-events: none;
+            }
+        }        
+		.loading-list{
+			height: 400px;
+			padding: 0;
+
+			.close{
+				opacity: 1;
+			}
+			.title{
+				width: 78px;
+			}
+			i.loading, i.loaded{
+				margin-top: -8px;
+			}
+			.size{
+				position: absolute;
+				right: 35px;
+				font-size: 12px;
+				bottom: 3px;
+				width: 40px;
+				text-align: center;
+			}
+		}
+    }
+}
