@@ -29,6 +29,12 @@ article.list-view.mailbox, article.mail {
             background: none;
         }
     }
+
+    label.checkbox {
+        float: none;
+        text-align: center;
+        line-height: 20px;
+    }
 }
 
 article.mail, article.write-mail {
