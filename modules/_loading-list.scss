@@ -2,8 +2,13 @@
     &.split{
         .loading-list{
             width: 30%;
-            .close{
-                opacity: 1;
+            ul li{
+                .status-infos{
+                    flex-direction: column-reverse;
+                }
+                .close{
+                    opacity: 1;
+                }
             }
         }
     }
@@ -17,7 +22,7 @@
     float: left;
     height: 520px;
     overflow: auto;
-    padding-right: 15px;
+    padding: 10px;
     box-sizing: border-box;
     margin-bottom: 25px;
 
@@ -32,7 +37,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             padding: 15px;
             padding-right: 35px;
             border: 1px solid #ddd;
@@ -58,15 +63,26 @@
                 i.edit{
                     position: absolute;
                     top: -10px;
-                    background: $accent;
+                    left: -10px;
+                    border: 1px solid $primary;
+                    color: $primary;
+                    width: 20px;
+                    height: 20px;
+                    background: $white;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
                     &::before{
-                        font-size: 15px;
+                        font-size: 11px;
                     }
                 }
             }
 
             .title{
                 width: 100%;
+                min-width: 55px;
                 margin-left: 15px;
                 white-space: nowrap;
                 overflow: hidden;
@@ -77,7 +93,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
+                min-width: 60px;
                 white-space: nowrap;
+                margin-right: 5px;
             }
 
             &.loading{
@@ -85,7 +103,6 @@
             }
             i.loading, i.loaded, i.failed{
                 font-size: 22px;
-                margin-right: 10px;
             }
 
             .close{
@@ -104,12 +121,19 @@
                 opacity: 0;
                 transition: 250ms ease;
                 &:hover{
+                    opacity: 1!important;
                     background: $red;
                 }
             }
             &:hover{
+                i.edit{
+                    color: $accent;
+                    border-color: $accent;
+                    transform: scale(1.1);
+                }
+
                 .close{
-                    opacity: 1;
+                    opacity: 0.4;
                 }
             }
         }
@@ -148,10 +172,15 @@
     }
     .loading-list{
         height: 400px;
-        padding: 0;
+        ul li{
+            .status-infos{
+                flex-direction: column-reverse;
+            }
 
-        .close{
-            opacity: 1;
+            &:hover .close, .close{
+                opacity: 1;
+            }
         }
+
     }
 }
