@@ -1,4 +1,11 @@
 .split-screen{
+
+    .loading-list{
+        width: 100%;
+        height: 540px;
+        overflow: auto;
+        float: left;
+    }
     &.split{
         .loading-list{
             width: 30%;
@@ -17,11 +24,7 @@
 
 
 .loading-list{
-    width: 100%;
     transition: 150ms linear;
-    float: left;
-    height: 520px;
-    overflow: auto;
     padding: 10px;
     box-sizing: border-box;
     margin-bottom: 25px;
@@ -161,26 +164,27 @@
 
 @media screen and (max-width: $tablette) {
     .split-screen{
+        .loading-list{
+        }
         &.split{
             .loading-list{
-                //must disappear
+                // must disappear
+                // means only compression view on mobile
                 width: 0%;
                 opacity: 0;
                 pointer-events: none;
+                height: 540px;
             }
         }
     }
     .loading-list{
-        height: 400px;
         ul li{
             .status-infos{
                 flex-direction: column-reverse;
             }
-
             &:hover .close, .close{
                 opacity: 1;
             }
         }
-
     }
 }
