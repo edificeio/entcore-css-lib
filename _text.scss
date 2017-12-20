@@ -47,6 +47,12 @@ label{
 	margin-bottom: 0;
 }
 
+.strong-title {
+	font-size: 27px;
+	font-weight: bold;
+	color: $grey;
+}
+
 .comment{
 	padding: 10px;
 	margin-top: 15px;
@@ -119,4 +125,9 @@ h2 > i.back{
 	&:hover{
 		color: $accent;
 	}
+}
+
+.indication {
+	color: $solid-grey;
+	font-size: 13px;
 }
