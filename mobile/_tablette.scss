@@ -88,7 +88,7 @@
 			min-height: 0;
 			margin-bottom: 10px;
         }
-        
+
         width: 100%;
         min-height: 100%;
         @include run-transition(left);
@@ -478,14 +478,6 @@
         margin-top: 40px;
     }
 
-
-
-    .check-tool i:hover{
-        background: darken($light-grey, 7%);
-    }
-    .check-tool i:active{
-        background: $accent;
-    }
 
 
     //structure main-col / rows

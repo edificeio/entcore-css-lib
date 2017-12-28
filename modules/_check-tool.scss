@@ -3,8 +3,8 @@
 
 .check-tool{
 	position: absolute;
-	right: -12px;
-	top: -11px;
+	right: -2px;
+	top: -3px;
 	padding: 5px 5px 10px 10px;
 	cursor: pointer;
 	z-index: 1;
@@ -45,3 +45,13 @@
 }
 
 /////
+@media screen and (max-width: $tablette) {
+    body{
+	    .check-tool i:hover{
+	        background: darken($light-grey, 7%);
+	    }
+	    .check-tool i:active{
+	        background: $accent;
+	    }
+	}
+}
