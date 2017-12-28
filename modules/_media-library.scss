@@ -149,6 +149,9 @@
 		display: block;
 		position: relative;
 		float: left;
+		hr.row{
+			min-height: 0;
+		}
 	}
 }
 
