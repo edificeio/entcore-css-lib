@@ -75,7 +75,7 @@
     height: 100%;
 }
 .notification div.notification-actions:not(.opened) {
-    display: none;
+    width: 0;
 }
 .notification:hover div.notification-actions {
     display: block;
