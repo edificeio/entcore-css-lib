@@ -280,3 +280,9 @@ i.help-large::before, i.type.help::before, i.help::before{
     content: '\e835';
     cursor: pointer;
 }
+i.others{
+    @include fonticon;
+    &::before {
+        content: '\e815';
+    }
+}
