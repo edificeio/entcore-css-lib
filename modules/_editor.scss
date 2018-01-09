@@ -30,7 +30,7 @@
         transition: border-color 250ms ease;
         vertical-align: middle;
         background: transparent;
-        
+
         img{
             width: 99.99%;
             min-width: 20px;
@@ -783,9 +783,11 @@ body editor {
 }
 
 @media screen and (max-width: $tablette){
+
     body editor{
         box-sizing: border-box;
         editor-toolbar{
+
             select-list .selected-value{
                 width: 44px;
                 &::after{
@@ -797,46 +799,18 @@ body editor {
                 }
             }
 
+
             .option.table{
-            popover{
-                > i{
-                    &::before{
-                        left: 7px;
-                        position: absolute;
-                    }
-			    }
-            }
-		}
-
-            .option.font{
-                select-list .selected-value{
-                    @include editor-icon();
-                    &::after{
-                        content: '\e80b';
-                        color: black;
+                popover{
+                    > i{
+                        &::before{
+                            left: 7px;
+                            position: absolute;
+                        }
                     }
                 }
             }
 
-            .option.font-size{
-                select-list .selected-value{
-                    @include editor-icon();
-                    &::after{
-                        content: '\e819';
-                        color: black;
-                    }
-                }
-            }
-
-            .option.format{
-                select-list .selected-value{
-                    @include editor-icon();
-                    &::after{
-                        content: '\e81a';
-                        color: black;
-                    }
-                }
-            }
         }
     }
 }

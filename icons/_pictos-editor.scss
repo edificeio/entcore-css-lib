@@ -1,96 +1,11 @@
-i.cloud-upload{
+@mixin editor-icon(){
     @include fonticon;
-    &::before{
-        content: '\e9c3'
-    }
+    display: block;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
 }
 
-i.undo, .undo > i{
-    @include fonticon;
-    &::before {
-        content: '\e8be';
-    }
-}
-
-i.redo, .redo > i{
-    @include fonticon;
-    &::before {
-        content: '\e8bd';
-    }
-}
-i.loaded{
-    @include fonticon;
-    transform: rotate(0deg);
-    &::before{
-        content: '\e915';
-    }
-}
-
-i.loading{
-    animation: rotate 1000ms linear infinite;
-    @include fonticon;
-    display: inline-block;
-    &::before{
-        content: '\e85a';
-    }
-}
-
-i.back{
-    @include fonticon;
-    &::before{
-        content: '\e84c';
-    }
-}
-
-i.forward{
-    @include fonticon;
-    transform: rotate(180deg);
-    &::before{
-        content: '\e84c';
-    }
-}
-
-i.rotate{
-    @include fonticon;
-    &::before{
-        content: '\e92b';
-    }
-}
-
-i.crop{
-    @include fonticon;
-    &::before{
-        content: '\ea57';
-    }
-}
-
-i.blur{
-    @include fonticon;
-    &::before{
-        content: '\e92e';
-    }
-}
-
-i.resize{
-    @include fonticon;
-    &::before{
-        content: '\e865';
-    }
-}
-
-i.trash{
-    @include fonticon;
-    &::before{
-        content: '\e8cf';
-    }
-}
-
-i.properties{
-    @include fonticon;
-    &::before{
-        content: '\e854';
-    }
-}
 
 .option.justify-left > i, i.justify-left {
     @include fonticon;
@@ -273,16 +188,40 @@ i.properties{
     color: #fff;
 }
 
-i.help-large, i.help.cas, i.help{
-    @include fonticon;
-}
-i.help-large::before, i.type.help::before, i.help::before{
-    content: '\e835';
-    cursor: pointer;
-}
-i.others{
-    @include fonticon;
-    &::before {
-        content: '\e815';
+
+
+@media screen and (max-width: $tablette){
+
+    body editor editor-toolbar{
+
+        .option.font{
+            select-list .selected-value{
+                @include editor-icon();
+                &::after{
+                    content: '\e8c4';
+                    color: black;
+                }
+            }
+        }
+
+        .option.font-size{
+            select-list .selected-value{
+                @include editor-icon();
+                &::after{
+                    content: '\e8c7';
+                    color: black;
+                }
+            }
+        }
+
+        .option.format{
+            select-list .selected-value{
+                @include editor-icon();
+                &::after{
+                    content: '\e8c8';
+                    color: black;
+                }
+            }
+        }
     }
 }
