@@ -1,8 +1,13 @@
 article.list-view.mailbox, article.mail {
+
+    .row {
+        margin-bottom: 0;
+    }
+
     .avatar {
         position: relative;
-        width: 55px;
-        height:55px;
+        width: 65px;
+        height:65px;
 
         img, i {
             border-radius: 50%;
@@ -10,6 +15,7 @@ article.list-view.mailbox, article.mail {
             background: $primary;
             width: 100%;
             height: 100%;
+            border: none;
         }
 
         i {
@@ -20,7 +26,7 @@ article.list-view.mailbox, article.mail {
         label {
             position: absolute;
             bottom: -8px;
-            left: 40px;
+            left: 55px;
             width: 25px;
             height: 25px;
             line-height: 30px;
@@ -30,10 +36,21 @@ article.list-view.mailbox, article.mail {
         }
     }
 
-    label.checkbox {
-        float: none;
+    i {
+        font-size: 25px;
+    }
+
+    div.states {
+        width: 6em;
         text-align: center;
-        line-height: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    div.notification-attachment {
+        position: absolute;
+        right: 35px;
+        bottom: 8px;
     }
 }
 
