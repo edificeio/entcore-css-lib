@@ -1,139 +1,143 @@
 .split-screen{
+
     .loading-list{
         width: 100%;
-        transition: 150ms linear;
-        float: left;
-        height: 520px;
+        height: 540px;
         overflow: auto;
-        padding-right: 15px;
-        box-sizing: border-box;
-        margin-bottom: 25px;
-        ul{
-            margin-top: 0;
-            li{
-                transition: 250ms ease;
-                &.selected{
-                    background: $primary;
-                    color: #fff;
-                }
-                .close{
-                    position: absolute;
-                    right: 0;
-                    border-left: 1px solid #ddd;
-                    height: 100%;
-                    top: 0;
-                    display: flex;
-                    align-items: center;
-                    padding: 8px;
-                    box-sizing: border-box;
-                    border-radius: 0;
-                    background: none;
-                    color: $red;
-                    &:hover{
-                        background: $red;
-                    }
-                }
-                &:hover{
-                    .close{
-                        opacity: 1;
-                    }
-                }
-                .size{
-                    width: 55px;
-                }
-            }
-        }
-        .icon{
-            i{
-                position: absolute;
-                transition: all 250ms ease;
-                background-position: top left;
-                min-width: 17px;
-                text-align: center;
-                line-height: 23px;
-            }
-            i.edit{
-                opacity: 0;
-                &::before{
-                    font-size: 22px;
-                }
-            }
-        }
-        .title{
-            width: 510px;
-            float: left;
-            margin-left: 15px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            position: absolute;
-            left: 30px;
-            line-height: 25px;
-        }
-        .size{
-            line-height: 25px;
-        }
-        i.loading, i.loaded, i.failed{
-            font-size: 22px;
-            margin-right: 10px;
-        }
-
-        .close{
-            opacity: 0;
-            transition: 250ms ease;
-        }
+        float: left;
     }
     &.split{
         .loading-list{
             width: 30%;
-            .close{
-                opacity: 1;
-            }
-            .title{
-                width: 78px;
-            }
-            i.loading, i.loaded{
-                margin-top: -9px;
-            }
-            .size{
-                position: absolute;
-                right: 35px;
-                font-size: 12px;
-                bottom: 3px;
-                width: 40px;
-                text-align: center;
+            ul li{
+                .status-infos{
+                    flex-direction: column-reverse;
+                }
+                .close{
+                    opacity: 1;
+                }
             }
         }
     }
 }
 
+
+
 .loading-list{
+    transition: 150ms linear;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+
     ul{
+        margin-top: 0;
         padding: 0;
+
         li{
             list-style-type: none;
-            padding: 15px;
-            border: 1px solid #ddd;
-            margin-bottom: 10px;
-            cursor: default;
-            height: 20px;
-            padding-right: 35px;
-            transition: color 250ms ease-out;
             position: relative;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 15px;
+            padding: 15px;
+            padding-right: 35px;
+            border: 1px solid #ddd;
+            transition: all 250ms ease-out;
+            cursor: default;
+
             &.image-file{
                 box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
                 cursor: pointer;
-                &:hover .icon{
-                    i{
-                        opacity: 0;
-                    }
-                    i.edit{
-                        opacity: 1;
+            }
+            &.selected{
+                background: $primary;
+                color: #fff;
+            }
+
+            .icon{
+                i{
+                    background-position: top left;
+                    min-width: 17px;
+                    text-align: center;
+                    transition: all 250ms ease;
+                }
+                i.edit{
+                    position: absolute;
+                    top: -10px;
+                    left: -10px;
+                    border: 1px solid $primary;
+                    color: $primary;
+                    width: 20px;
+                    height: 20px;
+                    background: $white;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    &::before{
+                        font-size: 11px;
                     }
                 }
             }
+
+            .title{
+                width: 100%;
+                min-width: 55px;
+                margin-left: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .status-infos{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                min-width: 60px;
+                white-space: nowrap;
+                margin-right: 5px;
+            }
+
             &.loading{
                 color: #888;
+            }
+            i.loading, i.loaded, i.failed{
+                font-size: 22px;
+            }
+
+            .close{
+                position: absolute;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                right: 0;
+                height: 100%;
+                top: 0;
+                padding: 8px;
+                border-radius: 0;
+                border-left: 1px solid #ddd;
+                background: none;
+                color: $red;
+                opacity: 0;
+                transition: 250ms ease;
+                &:hover{
+                    opacity: 1!important;
+                    background: $red;
+                }
+            }
+            &:hover{
+                i.edit{
+                    color: $accent;
+                    border-color: $accent;
+                    transform: scale(1.1);
+                }
+
+                .close{
+                    opacity: 0.4;
+                }
             }
         }
     }
@@ -157,36 +161,30 @@
     }
 }
 
+
 @media screen and (max-width: $tablette) {
     .split-screen{
+        .loading-list{
+        }
         &.split{
             .loading-list{
+                // must disappear
+                // means only compression view on mobile
                 width: 0%;
                 opacity: 0;
                 pointer-events: none;
+                height: 540px;
             }
         }
-		.loading-list{
-			height: 400px;
-			padding: 0;
-
-			.close{
-				opacity: 1;
-			}
-			.title{
-				width: 78px;
-			}
-			i.loading, i.loaded{
-				margin-top: -8px;
-			}
-			.size{
-				position: absolute;
-				right: 35px;
-				font-size: 12px;
-				bottom: 3px;
-				width: 40px;
-				text-align: center;
-			}
-		}
+    }
+    .loading-list{
+        ul li{
+            .status-infos{
+                flex-direction: column-reverse;
+            }
+            &:hover .close, .close{
+                opacity: 1;
+            }
+        }
     }
 }
