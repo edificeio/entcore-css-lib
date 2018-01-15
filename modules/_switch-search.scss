@@ -1,37 +1,44 @@
 switch-search {
     .search-pagination {
-        justify-content: space-between !important;
-        transition: all 2s linear;
-    }
-
-    .hide-search {
-        input {
-            width: 0 !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        i {
-            left: 0 !important;
-        }
-
-        i.close-2x {
-            display: none !important;
-        }
-    }
-
-    :not(.hide-search) {
-        ng-transclude {
-            display: none !important;
-            opacity: 0;
-        }
+        justify-content: space-between;
     }
 }
 
-@media screen and (min-width: $tablette){
+@media screen and (max-width: $tablette) {
     switch-search {
-        input, i {
-            display: none !important;
+        input {
+            transition: all 250ms ease !important;
+        }
+    
+        i.search {
+            transition: all 250ms ease;
+            left: calc(100% - 35px);
+        }
+    
+        ng-transclude > * {
+            transition: all 250ms ease !important;
+            max-width: 100vw;
+        }
+    
+        .hide-search {
+            input {
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+    
+            i.search {
+                transition: left 250ms;
+                left: 0;
+            }
+        }
+    
+        :not(.hide-search) {
+            ng-transclude > * {
+                max-width: 0px;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
         }
     }
 }
