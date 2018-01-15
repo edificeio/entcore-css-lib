@@ -32,6 +32,9 @@
 .fixed{
 	@include absolute;
 }
+.relative{
+	position: relative;
+}
 
 
 .v-center-container{
