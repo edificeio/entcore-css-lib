@@ -5,8 +5,69 @@ article.solid form .right-magnet {
 }
 
 
+.mailbox-tools{
+    .check-col{
+        width: 72px;
+    }
+    .status-filter{
+        width: 80px;
+        .chip{
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            white-space: nowrap;
+        }
+    }
+}
 
-article.mailbox, article.mail {
+.mailbox .notification{
+    article{
+        width: auto;
+        .avatar {
+            //width 72 for check-col
+            margin: 0;
+            padding: 5px;
+            img{
+                width: 60px;
+                height: 60px;
+            }
+
+            /// for custom checkbox
+            // label {
+            //     position: absolute;
+            //     bottom: -10px;
+            //     left: 60px;
+            //     width: 25px;
+            //     height: 25px;
+            //     line-height: 25px;
+            //     text-align: center;
+            //     font-size: 12px;
+            //     background: none;
+            // }
+        }
+    }
+
+
+    .states {
+        width: 80px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+    }
+    .notification-date {
+        right: 15px;
+    }
+    .notification-attachment {
+        position: absolute;
+        right: 15px;
+        bottom: 8px;
+    }
+}
+
+
+
+//opened mail wrapper
+article.mail {
     padding: 0;
 
     .row {
@@ -55,13 +116,14 @@ article.mailbox, article.mail {
         display: flex;
         justify-content: space-around;
     }
-
     div.notification-attachment {
         position: absolute;
         right: 35px;
         bottom: 8px;
     }
 }
+
+
 
 article.mail, article.write-mail {
     padding: 1.5em 3em 1.5em 3em;
@@ -79,9 +141,12 @@ article.mail, article.write-mail {
 }
 
 
+
+
 @media screen and (max-width: $tablette) {
     body {
 
+// DEPRECATED !!!!!!!!
         article.list-view.mailbox {
             thead {
                 display: none;
