@@ -105,3 +105,9 @@ i.others{
         content: '\e815';
     }
 }
+i.search-2{
+    @include fonticon;
+    &::before {
+        content: '\e930';
+    }
+}
