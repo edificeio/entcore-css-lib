@@ -1,3 +1,11 @@
+
+//write mail
+article.solid form .right-magnet {
+    margin: 10px;
+}
+
+
+
 article.mailbox, article.mail {
     padding: 0;
 
@@ -12,7 +20,7 @@ article.mailbox, article.mail {
 
         img, i {
             border-radius: 50%;
-            -moz-border-radius:50%; 
+            -moz-border-radius:50%;
             background: $primary;
             width: 100%;
             height: 100%;
@@ -67,5 +75,86 @@ article.mail, article.write-mail {
 
     .text-flow {
         vertical-align: top;
+    }
+}
+
+
+@media screen and (max-width: $tablette) {
+    body {
+
+        article.list-view.mailbox {
+            thead {
+                display: none;
+            }
+            table,
+            tbody,
+            tr,
+            td {
+                display: block;
+            }
+            tbody {
+                tr {
+                    position: relative;
+                    overflow: hidden;
+                    min-height: 70px;
+                }
+                td {
+                    width: auto;
+                    max-width: none;
+                }
+                td.icon {
+                    position: absolute;
+                    padding: 27px 0;
+                    height: 100%!important;
+                    width: 45px!important;
+                    text-align: center;
+                }
+                td.icon.sysmail {
+                    top: 0;
+                    right: -10px;
+                }
+                td.user {
+                    margin-left: 45px;
+                    padding-top: 15px;
+                    padding-bottom: 0;
+                    max-width: calc(70% - 45px);
+                }
+                td.content {
+                    margin-left: 45px;
+                    padding: 5px 15px 10px 12px;
+                    font-size: 12px;
+                    max-width: calc(80% - 45px);
+                }
+                td.attach {
+                    position: absolute;
+                    right: 8px;
+                    bottom: 7px;
+                    padding: 0;
+                    i.attachment {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+                td.date {
+                    position: absolute;
+                    right: 0;
+                    top: 2px;
+                    padding: 0 5px 0 0;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $small-mobile) {
+    body{
+        article.list-view.mailbox {
+            tbody {
+                td.date {
+                    font-size: 10px;
+                }
+            }
+        }
     }
 }
