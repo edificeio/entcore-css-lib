@@ -8,6 +8,10 @@ article.solid form .right-magnet {
 .mailbox-tools{
     .check-col{
         width: 72px;
+        > div{
+            width: 24px;
+            margin: auto;
+        }
     }
     .status-filter{
         width: 80px;
@@ -21,13 +25,38 @@ article.solid form .right-magnet {
 }
 
 .mailbox .notification{
+    @include run-transition(background-color, filter);
+    &.checked{
+        background-color: $primary-lighter;
+    }
+    &.new-element{
+        background-color: $primary-lighter;
+        .mail:before {
+            color: $primary;
+        }
+        span{
+            font-weight: bold;
+        }
+    }
+    &:hover{
+        filter: invert(0.05);
+    }
+
+
     article{
         width: auto;
         .avatar {
             //width 72 for check-col
             margin: 0;
             padding: 5px;
+            &:hover{
+                img{
+                    border-color: $white;
+                    box-shadow: 4px 4px 5px $shadow-darker;
+                }
+            }
             img{
+                @include run-transition(all);
                 width: 60px;
                 height: 60px;
             }
@@ -46,8 +75,6 @@ article.solid form .right-magnet {
             // }
         }
     }
-
-
     .states {
         width: 80px;
         text-align: center;
