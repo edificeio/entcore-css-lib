@@ -1,6 +1,11 @@
 
-.no-margin{
+.no-margin, .nomargin{
 	margin: 0!important;
+}
+
+.aligned {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .margin-auto{
