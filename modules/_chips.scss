@@ -36,12 +36,12 @@
     background: $white;
     box-shadow: none;
     text-shadow: none;
+    padding-right: 0;
     span{
         color: $black;
     }
     i{
-        margin-left: 10px;
-
+        padding: 0 12px;
         &:before{
             color: $solid-grey!important;
             text-shadow: none!important;
