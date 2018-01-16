@@ -40,6 +40,8 @@
         color: $black;
     }
     i{
+        margin-left: 10px;
+
         &:before{
             color: $solid-grey!important;
             text-shadow: none!important;
@@ -47,10 +49,11 @@
             vertical-align: top;
             @include run-transition;
         }
-    }
-    &:hover{
-        i:before{
-            color: $warning-color!important;
+
+        &:hover{
+            &:before{
+                color: $warning-color!important;
+            }
         }
     }
 }
