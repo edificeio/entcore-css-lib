@@ -1,26 +1,29 @@
 recipient-list{
-    border-bottom: 1px solid #ddd;
-}
-
-recipient-list.focus{
-    border-bottom: 2px solid $accent;
-    label{
-        color: $accent;
+    div {
+        border-bottom: 1px solid #ddd;
+        transition: all 250ms linear !important;
+        flex-wrap: wrap;
     }
-}
 
-input.chip-input{
-    border: 0 !important;
-    margin-bottom: 5px !important;
-}
+    div.focus {
+        box-shadow: inset 0px -1px 0 0px $accent;
+        border-bottom: 1px solid $accent;
+    }
 
-form.input-help label{
-    display: inline-block;
-    white-space: nowrap;
-}
+    input.chip-input {
+        border: 0 !important;
+        margin: 0 !important;
+    }
 
-form.input-help{
-    position: relative;
-    display: inline-block;
-    margin-left: 5px;
+    form label {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    form {
+        position: relative;
+        display: inline-block;
+        margin-left: 5px;
+        flex: auto;
+    }
 }
