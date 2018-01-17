@@ -1,25 +1,24 @@
-recipient-list{
+recipient-list {
     div {
         border-bottom: 1px solid #ddd;
-        transition: all 250ms linear !important;
+        transition: all 250ms linear;
         flex-wrap: wrap;
     }
-
     div.focus {
         box-shadow: inset 0px -1px 0 0px $accent;
         border-bottom: 1px solid $accent;
     }
-
     input.chip-input {
         border: 0 !important;
         margin: 0 !important;
+        min-height: 40px;
     }
-
     form label {
         display: inline-block;
         white-space: nowrap;
+        transition: none !important;
+        top: 10px !important;
     }
-
     form {
         position: relative;
         display: inline-block;
