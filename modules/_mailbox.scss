@@ -10,7 +10,7 @@ article.solid form .right-magnet {
         width: 72px;
         .wrapping-checkbox{
             top: 5px;
-            i18n:after{
+            span:after{
                 top: -6px;
             }
         }
@@ -59,7 +59,7 @@ article.solid form .right-magnet {
         width: auto;
 
         label.wrapping-checkbox{
-            i18n{
+            span{
                 position: absolute;
                 bottom: -2px;
                 right: 7px;
