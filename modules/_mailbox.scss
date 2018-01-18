@@ -25,6 +25,17 @@ article.solid form .right-magnet {
             white-space: nowrap;
         }
     }
+    .search-pagination {
+        a {
+            overflow: hidden;
+            width: 0;
+            transition: all 250ms ease;
+
+            &.show-close {
+                width: 40px;
+            }
+        }
+    }
 }
 
 .mailbox .notification{
