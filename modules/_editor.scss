@@ -924,6 +924,17 @@ body editor {
         color: #222;
     }
 }
+@media screen and (max-width: $tablette) {
+    body{
+        .image-contextual-menu{
+            pointer-events: none;
+            button, i{
+                pointer-events: all;
+            }
+        }
+    }
+}
+
 
 body editor [contenteditable]{
     .image-template .image-container{
