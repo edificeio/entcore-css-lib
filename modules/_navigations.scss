@@ -584,3 +584,37 @@ nav.subnavbar{
 		}
 	}
 }
+
+nav.prev-next{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: $primary;
+	button{
+		width: 38px;
+		height: 38px;
+		border-radius: 38px;
+		background: $primary;
+		padding: 0;
+		margin: 0;
+		i{
+			color: $white;
+		}
+	}
+	.pagination{
+		margin: 0 5px;
+	}
+}
+@media screen and (max-width: $tablette) {
+    body {
+		nav.prev-next{
+			button{
+				background: transparent;
+				box-shadow: none;
+				i{
+					color: $primary;
+				}
+			}
+		}
+	}
+}

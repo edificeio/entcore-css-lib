@@ -233,7 +233,7 @@ div.hidden-content{
 // For special elements that are only visible for mobiles
 @media screen and (min-width: $tablette){
 	body {
-		.hidden-desktop{
+		.zero-desktop{
 			display: none!important;
 		}
 	}
