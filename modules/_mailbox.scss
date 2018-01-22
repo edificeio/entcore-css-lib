@@ -46,16 +46,22 @@ article.solid form .right-magnet {
     -ms-transition: -ms-filter 250ms ease;
     transition: filter 250ms ease;
 
+    .undo:before {
+        @include run-transition(color);
+        color: #555;
+    }
+    .mail:before {
+        @include run-transition(color);
+        color: $primary-dark;
+    }
+
     &.new-element{
         background-color: $primary-lighter;
-        .mail:before {
-            @include run-transition(color);
-            color: $primary;
-        }
         span{
             font-weight: bold;
         }
     }
+
     &.checked{
         background-color: $primary-light;
         .mail:before, .undo:before {
