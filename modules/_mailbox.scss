@@ -57,7 +57,7 @@ article.solid form .right-magnet {
     }
     &.checked{
         background-color: $primary-light;
-        .mail:before {
+        .mail:before, .undo:before {
             color: $white;
             text-shadow: 1px 1px 1px $primary-dark;
         }
@@ -99,7 +99,10 @@ article.solid form .right-magnet {
         width: 80px;
         text-align: center;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        i{
+            padding: 0 4px:
+        }
     }
     .notification-date {
         right: 15px;
