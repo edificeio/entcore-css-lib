@@ -4,11 +4,17 @@
 @media screen and (max-width: $tablette) {
     body{
         .whereami {
-        	display: block;
+        	display: flex;
+            justify-content: flex-start;
+            align-items: center;
         	font-size: 15px;
         	font-weight: bold;
             margin: 5px 5px 13px;
             line-height: 16px;
+            span.badge{
+                margin-left: 5px;
+                background-color: $accent;
+            }
         }
 
     }
