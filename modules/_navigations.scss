@@ -602,7 +602,7 @@ nav.prev-next{
 		}
 	}
 	.pagination{
-		margin: 0 5px;
+		margin: 0 10px;
 	}
 }
 @media screen and (max-width: $tablette) {
@@ -614,6 +614,9 @@ nav.prev-next{
 				i{
 					color: $primary;
 				}
+			}
+			.pagination{
+				margin: 0 0;
 			}
 		}
 	}
