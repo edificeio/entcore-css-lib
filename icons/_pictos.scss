@@ -111,3 +111,9 @@ i.search{
         content: '\e930';
     }
 }
+i.file-text, i.draft{
+    @include fonticon;
+    &:before{
+        content: '\e919';
+    }
+}

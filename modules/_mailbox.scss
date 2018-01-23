@@ -68,6 +68,11 @@ article.solid form .right-magnet {
             color: $white;
             text-shadow: 1px 1px 1px $primary-dark;
         }
+        .flex-all-remains{
+            i{
+                color: $white!important;
+            }
+        }
     }
     &:hover{
         filter: invert(0.05);
@@ -109,6 +114,24 @@ article.solid form .right-magnet {
         justify-content: center;
         i{
             padding: 0 4px;
+        }
+    }
+    .flex-all-remains{
+        i{
+            @include run-transition(all);
+            &:before{
+                font-size: 12px;
+                vertical-align: top;
+            }
+        }
+        i.draft{
+            color: #999;
+        }
+        i.mail-in{
+            color: $primary-dark;
+        }
+        i.mail-out{
+            color: $primary-darkest;
         }
     }
     .notification-date {
