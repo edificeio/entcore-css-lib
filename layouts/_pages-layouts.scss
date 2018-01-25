@@ -1,4 +1,53 @@
 
+.row{
+	width: 100%;
+	position: relative;
+	clear: both;
+	box-sizing: border-box;
+}
+
+.row:after{
+	clear:both;
+	content: " ";
+	display: block;
+	width: 100%;
+}
+
+.cell{
+	box-sizing: border-box;
+	float: left;
+	display: block;
+	position: relative;
+}
+
+.right-magnet{
+	float: right !important;
+}
+
+.bottom-magnet{
+	position: absolute;
+	bottom: 0;
+}
+
+
+.square-small{
+	width: 20px;
+	max-width: 20px!important;
+	height: 20px;
+}
+.square-medium{
+	width: 40px;
+	max-width: 40px!important;
+	height: 40px;
+}
+.square-large{
+	width: 80px;
+	max-width: 80px!important;
+	height: 80px;
+}
+
+
+
 .no-margin, .nomargin{
 	margin: 0!important;
 }
@@ -8,9 +57,9 @@
     vertical-align: middle;
 }
 
-.margin-auto{
-	margin-left: auto;
-	margin-right: auto;
+.centered, .margin-auto{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .horizontal-margin{
@@ -84,6 +133,24 @@
 
 .overflow-hd{
 	overflow: hidden;
+}
+
+.absolute{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.absolute-w{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.fluid{
+	position: relative !important;
 }
 
 
@@ -206,7 +273,6 @@ dl{
 }
 
 
-
 div.hidden-content{
 	height: 0px;
 	width: 0px;
@@ -220,6 +286,20 @@ div.hidden-content{
         width: 114px;
         height: 40px;
     }
+}
+
+.hollow{
+	visibility: hidden;
+	opacity: 0;
+	@include run-transition(all);
+	&.reveal{
+		visibility: visible;
+		animation: fade-in 1 500ms;
+		animation: fade-out 1 500ms 2s;
+		&-stay{
+			animation-fill-mode: forwards;
+		}
+	}
 }
 
 @media screen and (max-width: $tablette) {
