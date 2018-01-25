@@ -294,11 +294,7 @@ div.hidden-content{
 	@include run-transition(all);
 	&.reveal{
 		visibility: visible;
-		animation: fade-in 1 500ms;
-		animation: fade-out 1 500ms 2s;
-		&-stay{
-			animation-fill-mode: forwards;
-		}
+		animation: transient-display 1 5s;
 	}
 }
 
