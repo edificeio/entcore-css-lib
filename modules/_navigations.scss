@@ -611,7 +611,7 @@ nav.prev-next{
     body {
 		nav.prev-next{
 			button{
-				background: transparent;
+				background: transparent !important;
 				box-shadow: none;
 				i{
 					color: $primary;
