@@ -7,7 +7,7 @@
     background: $white;
 
     &.checked{
-        background-color: $primary-light;
+        background-color: $primary-light !important;
     }
 
     article {
