@@ -594,9 +594,11 @@ nav.prev-next{
 		width: 38px;
 		height: 38px;
 		border-radius: 38px;
-		background: $primary;
 		padding: 0;
 		margin: 0;
+		&:enabled {
+			background-color: $primary;
+		}
 		i{
 			color: $white;
 		}
