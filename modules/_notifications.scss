@@ -128,14 +128,17 @@
     }
 
     .flex-all-remains{
-        i.draft{
-            color: #999;
-        }
-        i.mail-in{
-            color: $primary-dark;
-        }
-        i.mail-out{
-            color: $primary-darkest;
+        i {
+            margin-right: 0.5em;
+            &.draft{
+                color: #999;
+            }
+            &.mail-in{
+                color: $primary-dark;
+            }
+            &.mail-out{
+                color: $primary-darkest;
+            }
         }
     }
 
