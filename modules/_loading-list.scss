@@ -26,6 +26,11 @@ media-library .loading-list ul{
         padding-right: 35px;
     }
 }
+.loading-list ul{
+    li.removable{
+        padding-right: 35px;
+    }
+}
 
 .loading-list{
     transition: 150ms linear;
@@ -110,7 +115,7 @@ media-library .loading-list ul{
                 .small-text{
                     font-size: 12px!important;
                     line-height: 17px;
-                }                
+                }
             }
 
             &.loading{
