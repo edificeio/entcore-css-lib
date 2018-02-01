@@ -621,6 +621,11 @@ nav.prev-next{
 				i{
 					color: $primary;
 				}
+				&[disabled]{
+					i{
+						color: transparent;
+					}
+				}
 			}
 			.pagination{
 				margin: 0 0;
