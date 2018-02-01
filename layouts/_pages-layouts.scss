@@ -51,6 +51,9 @@
 .no-margin, .nomargin{
 	margin: 0!important;
 }
+.no-padding, .nopadding{
+	padding: 0!important;
+}
 
 .aligned {
     display: inline-block;
@@ -204,6 +207,15 @@ hr{
 	width: 100%;
     border: none;
     padding: 10px;
+}
+hr.line{
+	display: block;
+	box-sizing: border-box;
+	clear: both;
+	width: 100%;
+    border: none;
+    padding: 5px;
+    border-top: 1px solid $primary;
 }
 
 

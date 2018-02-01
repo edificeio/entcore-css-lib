@@ -85,6 +85,13 @@ i.trash{
     }
 }
 
+.download-disk{
+    @include fonticon;
+    &:before{
+        content: '\e86e';
+    }
+}
+
 i.properties{
     @include fonticon;
     &::before{

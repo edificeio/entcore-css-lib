@@ -21,7 +21,11 @@
     }
 }
 
-
+media-library .loading-list ul{
+    li{
+        padding-right: 35px;
+    }
+}
 
 .loading-list{
     transition: 150ms linear;
@@ -39,10 +43,10 @@
             height: 20px;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: space-between;
             margin-bottom: 15px;
             padding: 15px;
-            padding-right: 35px;
+            color: $text-color;
             border: 1px solid #ddd;
             transition: all 250ms ease-out;
             cursor: default;
@@ -54,6 +58,9 @@
             &.selected{
                 background: $primary;
                 color: #fff;
+            }
+            &.no-margin{
+                margin-top: -1px!important;
             }
 
             .icon{
@@ -86,10 +93,11 @@
             .title{
                 width: 100%;
                 min-width: 55px;
-                margin-left: 15px;
+                margin: 0 40px 0 15px;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                font-size: 14px;
             }
 
             .status-infos{
@@ -99,6 +107,10 @@
                 min-width: 60px;
                 white-space: nowrap;
                 margin-right: 5px;
+                .small-text{
+                    font-size: 12px!important;
+                    line-height: 17px;
+                }                
             }
 
             &.loading{
