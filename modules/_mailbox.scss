@@ -1,10 +1,17 @@
 
-//write mail
-article.solid form .right-magnet {
-    margin: 10px;
+article.write-mail {
+    .receivers, .subject {
+        label.two {
+            margin-top: 20px;
+        }
+    }
+    .subject input {
+        min-height: 40px;
+    }
 }
 
 
+// list mails header
 .mailbox-tools{
     .check-col{
         width: 72px;
@@ -42,9 +49,10 @@ article.solid form .right-magnet {
 
 
 article.mail, article.write-mail {
-
     padding: 15px 30px;
+}
 
+article.mail{
     .avatar {
         width: auto;
         height:auto;
@@ -56,35 +64,32 @@ article.mail, article.write-mail {
             border-radius: 50%;
         }
     }
-
 }
 
 
 
-
-//opened mail wrapper
-article.mail {
-
-    div.states {
-        width: 6em;
-        text-align: center;
-        display: flex;
-        justify-content: space-around;
-    }
-    div.notification-attachment {
-        position: absolute;
-        right: 35px;
-        bottom: 8px;
-    }
-}
-
-article.write-mail {
-    .receivers, .subject {
-        label.two {
-            margin-top: 20px;
+@media screen and (max-width: $tablette) {
+    body{
+        article.mail, article.write-mail {
+            padding: 15px 20px;
         }
-    }
-    .subject input {
-        min-height: 40px;
+        article.mail{
+            em.small-text{
+                font-size: 12px !important;
+            }
+            .avatar {
+                img{
+                    width: 50px;
+                    min-width: 50px;
+                    height: 50px
+                }
+                & + div{
+                    strong, a, span{
+                        font-size: 14px!important;
+                        line-height: 22px!important;
+                    }
+                }
+            }
+        }
     }
 }

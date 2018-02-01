@@ -142,3 +142,12 @@ h2 > i.back{
 		margin-right: 0.5em;
 	}
 }
+
+
+@media screen and (max-width: $tablette) {
+	body{
+		.text-title {
+			font-size: 22px;
+		}
+	}
+}
