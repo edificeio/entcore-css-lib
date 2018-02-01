@@ -109,3 +109,11 @@
 .fade-in{
 	animation: fade-in 1 500ms;
 }
+
+.fade-in-hover{
+	@include run-transition(all);
+	opacity: 0.6;
+	&:hover{
+		opacity: 1;
+	}
+}
