@@ -602,6 +602,11 @@ nav.prev-next{
 		i{
 			color: $white;
 		}
+		&[disabled]{
+			pointer-events: none;
+			background-color: $neutral-grey;
+			box-shadow: none;
+		}
 	}
 	.pagination{
 		margin: 0 10px;
