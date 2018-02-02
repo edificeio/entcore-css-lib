@@ -1,3 +1,6 @@
+article.mail, article.write-mail {
+    padding: 15px 30px;
+}
 
 article.write-mail {
     .receivers, .subject {
@@ -7,6 +10,20 @@ article.write-mail {
     }
     .subject input {
         min-height: 40px;
+    }
+}
+//read
+article.mail{
+    .avatar {
+        width: auto;
+        height:auto;
+        img{
+            width: 75px;
+            min-width: 75px;
+            height: 75px;
+            border: 1px solid $light-grey;
+            border-radius: 50%;
+        }
     }
 }
 
@@ -48,30 +65,15 @@ article.write-mail {
 
 
 
-article.mail, article.write-mail {
-    padding: 15px 30px;
-}
-
-article.mail{
-    .avatar {
-        width: auto;
-        height:auto;
-        img{
-            width: 75px;
-            min-width: 75px;
-            height: 75px;
-            border: 1px solid $light-grey;
-            border-radius: 50%;
-        }
-    }
-}
-
-
 
 @media screen and (max-width: $tablette) {
     body{
         article.mail, article.write-mail {
             padding: 15px 20px;
+        }
+        article.write-mail {
+            background: transparent;
+            box-shadow: none;
         }
         article.mail{
             em.small-text{
