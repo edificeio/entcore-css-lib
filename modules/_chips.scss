@@ -20,6 +20,19 @@
 
 }
 
+.chip:hover, .chip:active{
+    box-shadow: 2px 2px 4px 0px $shadow-darker inset;
+}
+
+.chip.selected{
+    box-shadow: 2px 2px 1px 0px  $shadow;
+    background: $primary;
+}
+.chip.selected:hover{
+    box-shadow: 2px 2px 1px 0px  $shadow-darker;
+}
+
+
 .chip.multiselect{
     text-transform: uppercase;
     margin-right: 12px;
