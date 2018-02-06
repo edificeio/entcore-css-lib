@@ -826,14 +826,6 @@ body editor {
     }
 }
 
-.conversation{
-	editor{
-		.option.attachment{
-			display: none !important;
-		}
-	}
-}
-
 @media screen and (min-width: $tablette){
 	body editor.edit editor-toolbar .option:hover{
 		background-color: $light-grey;
