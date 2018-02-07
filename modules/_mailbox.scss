@@ -2,16 +2,7 @@ article.mail, article.write-mail {
     padding: 15px 30px;
 }
 
-article.write-mail {
-    .receivers, .subject {
-        label.two {
-            margin-top: 20px;
-        }
-    }
-    .subject input {
-        min-height: 40px;
-    }
-}
+
 //read
 article.mail{
     .avatar {
