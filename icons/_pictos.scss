@@ -159,3 +159,17 @@ i.attachment{
         content: '\e805';
     }
 }
+
+
+i.warning{
+    @include fonticon;
+    &::before{
+        content: '\e903';
+    }
+}
+i.check-circle{
+    @include fonticon;
+    &::before{
+        content: "\e916";
+    }
+}
