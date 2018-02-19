@@ -143,13 +143,17 @@ nav.vertical, .app-menu{
 				display: block;
 				position: relative;
 				line-height: 20px;
-				padding: 5px;
-				padding-left: 10px;
 				box-sizing: border-box;
 				width: 100%;
 				margin: 0;
 				margin-top: 5px;
 				margin-bottom: 5px;
+				padding: 5px;
+				padding-left: 10px;
+				padding-right: 45px;
+				overflow: hidden;
+    			text-overflow: ellipsis;
+    			white-space: nowrap;
 
 				i{
 					display: block;
@@ -170,6 +174,15 @@ nav.vertical, .app-menu{
 					display: block;
 					margin-right: 6px;
 					font-family: Arial;
+				}
+				i.close,
+				i.edit {
+					position: absolute;
+					right: 5px;
+					top: 1px;
+				}
+				i.edit {
+					right: 30px;
 				}
 
 				img{
