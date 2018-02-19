@@ -1,5 +1,12 @@
 article.mail, article.write-mail {
     padding: 15px 30px;
+
+    //answers
+    p.medium-text{
+        span, em{
+            color: $grey;
+        }
+    }
 }
 
 
