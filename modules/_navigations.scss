@@ -175,14 +175,17 @@ nav.vertical, .app-menu{
 					margin-right: 6px;
 					font-family: Arial;
 				}
-				i.close,
-				i.edit {
+				i.trash, i.edit {
 					position: absolute;
-					right: 5px;
-					top: 1px;
 				}
 				i.edit {
+					top: 1px;
 					right: 30px;
+				}
+				i.trash{
+					top: 3px;
+					right: 5px;
+					font-size: 12px;
 				}
 
 				img{
