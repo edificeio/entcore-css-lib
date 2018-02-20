@@ -284,6 +284,8 @@ div.hidden-content{
 	}
 }
 
+
+
 @media screen and (max-width: $tablette) {
     body {
 		.block-mobile{
@@ -292,10 +294,27 @@ div.hidden-content{
 	}
 }
 
-// For special elements that are only visible for mobiles
+// For special elements that are only visible on desktop and tablettes
+@media screen and (max-width: $fat-mobile){
+	body {
+		.zero-mobile-fat-mobile{
+			display: none!important;
+		}
+	}
+}
+// For special elements that are only visible on mobiles and tablettes
 @media screen and (min-width: $tablette){
 	body {
 		.zero-desktop{
+			display: none!important;
+		}
+	}
+}
+
+// For special elements that are only visible on mobile and fat-mobiles
+@media screen and (min-width: $fat-mobile){
+	body {
+		.mobile-fat-mobile{
 			display: none!important;
 		}
 	}
