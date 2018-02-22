@@ -56,8 +56,10 @@ label{
 	color: $grey;
 }
 .text-title {
+	word-wrap: break-word;
 	font-size: 27px;
 	color: $grey;
+    line-height: normal;
 }
 
 .comment{
@@ -127,6 +129,10 @@ strong.cell-ellipsis{
 }
 .single-line{
 
+}
+
+.escape_cke{
+	word-wrap: break-word;
 }
 
 h2 > i.back{
