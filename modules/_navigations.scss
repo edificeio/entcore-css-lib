@@ -140,7 +140,7 @@ nav.vertical, .app-menu{
 			width: 100% !important;
 			top: 0;
 			a{
-				display: block;
+				display: flex;
 				position: relative;
 				line-height: 20px;
 				box-sizing: border-box;
@@ -153,7 +153,17 @@ nav.vertical, .app-menu{
 				padding-right: 45px;
 				overflow: hidden;
     			text-overflow: ellipsis;
-    			white-space: nowrap;
+				white-space: nowrap;
+				
+				.link-name{
+					max-width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					padding: 0;
+					background: none;
+					border: none;
+					margin: 0;
+				}
 
 				i{
 					display: block;
