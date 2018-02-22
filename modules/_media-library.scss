@@ -119,6 +119,9 @@
 	}
 	.browse{
 		.explorer{
+			img{
+				pointer-events: none;
+			}
             .highlight{
                 display: block;
                 height: 100%;
@@ -299,6 +302,7 @@
 			.icons-view .element {
 				padding: 0;
 				margin: 5px;
+				
 				.container{
 					width: 105px;
 					height: 105px;
