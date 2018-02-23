@@ -111,9 +111,16 @@ embedder{
             display: inline-block;
             padding: 10px;
             box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 20px;
             transition: opacity 500ms ease;
             &:hover{
                 opacity: 1;
+            }
+            img{
+                display: block;
             }
         }
     }
