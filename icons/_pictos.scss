@@ -113,7 +113,7 @@ i.others{
     }
 }
 i.search{
-    @include fonticon
+    @include fonticon;
     &::before {
         content: '\e930';
     }
