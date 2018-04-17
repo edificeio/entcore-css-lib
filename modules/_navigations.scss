@@ -152,8 +152,11 @@ nav.vertical, .app-menu{
 				padding-left: 10px;
 				padding-right: 45px;
 				overflow: hidden;
-    			text-overflow: ellipsis;
-				white-space: nowrap;
+				text-overflow: ellipsis;
+
+				&.folder-list-item {
+					white-space: nowrap;
+				}
 				
 				.link-name{
 					max-width: 100%;
