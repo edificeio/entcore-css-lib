@@ -310,6 +310,14 @@ div.hidden-content{
 		}
 	}
 }
+// For special elements that are only visible on desktop
+@media screen and (max-width: $tablette){
+	body {
+		.only-desktop{
+			display: none!important;
+		}
+	}
+}
 
 // For special elements that are only visible on mobile and fat-mobiles
 @media screen and (min-width: $fat-mobile){
