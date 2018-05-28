@@ -47,6 +47,17 @@
 }
 
 
+.spacer-small {
+	@include spacer(20px);
+}
+.spacer-medium {
+	@include spacer(40px);
+}
+.spacer-large {
+	@include spacer(80px);
+}
+
+
 
 .no-margin, .nomargin{
 	margin: 0!important;
@@ -249,15 +260,47 @@ dl{
 	margin-top: 15px;
 }
 
-.round{
+.round {
 	border-radius: 50%;
 	overflow: hidden;
 	border: 1px solid $light-grey;
-	img{
+	background-color: $white;
+	img {
 		display: block;
+	}
+	&.active {
+		border-color: $primary;
+		padding: 4px;
+	}
+	&.inactive {
+		img {
+			opacity: 0.25;
+		}
+		&.animated {
+			@include run-transition(all);
+		}
+		&:hover {
+			padding: 4px;
+		}
 	}
 }
 
+.img-shadow {
+	box-shadow: 4px 4px 5px $shadow-light;
+	border-width: 3px;
+}
+
+.border-shadow {
+	box-shadow: 0 1px 3px $shadow;
+}
+
+.high-index {
+	z-index: 1000;
+
+	&.active {
+		z-index: 1001;
+	}
+}
 
 div.hidden-content{
 	height: 0px;
@@ -283,8 +326,6 @@ div.hidden-content{
 		animation: transient-display 1 5s;
 	}
 }
-
-
 
 @media screen and (max-width: $tablette) {
     body {
