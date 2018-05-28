@@ -277,7 +277,7 @@ dl{
 			opacity: 0.25;
 		}
 		&.animated {
-			@include run-transition(all);
+			transition: left 250ms ease, top 250ms ease, margin-top 250ms ease, padding 250ms ease;
 		}
 		&:hover {
 			padding: 4px;
@@ -315,6 +315,12 @@ div.hidden-content{
         width: 114px;
         height: 40px;
     }
+}
+
+div.invisible-content{
+	> *{
+		opacity: 0;
+	}
 }
 
 .hollow{
