@@ -66,10 +66,18 @@ label{
     line-height: normal;
 }
 
+.text-underline-hover:hover {
+	text-decoration: underline;
+}
+
 .comment{
 	padding: 10px;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+
+.low-text {
+	text-transform: none;
 }
 
 .user-content{
