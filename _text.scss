@@ -65,6 +65,16 @@ label{
 	color: $grey;
     line-height: normal;
 }
+.underlined-title {
+	color: $primary;
+	font-size: 15px;
+	color: $primary;
+	border-bottom: 1px solid $primary;
+
+	strong {
+		color: $primary;
+	}
+}
 
 .text-underline-hover:hover {
 	text-decoration: underline;
