@@ -1,13 +1,9 @@
 .dominos{
+	margin-top: 90px;
 	margin-bottom: 30px;
+	margin-left: 30px;
 	width: 100%;
 	@include cell;
-
-	.mood{
-		position: absolute;
-		top: 22px;
-		right: 5px;
-	}
 
 	.item{
 		max-width: 188px;
@@ -16,6 +12,12 @@
 		@include cell;
 		padding: 5px;
 		overflow: hidden;
+		box-shadow: 0 1px 3px $shadow;
+
+		&:hover {
+			box-shadow: 0 1px 3px $shadow-darker;
+		}
+
 		.domino{
 			border: 1px solid $medium-grey;
 			@include cell;
@@ -47,6 +49,12 @@
 					left: 0;
 					padding: 5px;
 					box-sizing: border-box;
+
+					.bottom-locked {
+						i {
+							font-size: 22px;
+						}
+					}
 				}
 			}
 		}
