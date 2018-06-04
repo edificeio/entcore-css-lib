@@ -320,3 +320,55 @@
 		}
 	}
 }
+
+@media screen and (min-width: $fat-mobile) and (max-width: $tablette) {
+	body{
+		.one-tablette-mobile{
+			@include grid-cell-width(1);
+		}
+
+		.two-tablette-mobile{
+			@include grid-cell-width(2);
+		}
+
+		.three-tablette-mobile{
+			@include grid-cell-width(3);
+		}
+
+		.four-tablette-mobile{
+			@include grid-cell-width(4);
+		}
+
+		.five-tablette-mobile{
+			@include grid-cell-width(5);
+		}
+
+		.six-tablette-mobile{
+			@include grid-cell-width(6);
+		}
+
+		.seven-tablette-mobile{
+			@include grid-cell-width(7);
+		}
+
+		.eight-tablette-mobile{
+			@include grid-cell-width(8);
+		}
+
+		.nine-tablette-mobile{
+			@include grid-cell-width(9);
+		}
+
+		.ten-tablette-mobile{
+			@include grid-cell-width(10);
+		}
+
+		.eleven-tablette-mobile{
+			@include grid-cell-width(11);
+		}
+
+		.twelve-tablette-mobile{
+			@include grid-cell-width(12);
+		}
+	}
+}

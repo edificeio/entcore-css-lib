@@ -356,6 +356,19 @@ div.invisible-content{
 	}
 }
 
+// Center component on page only for tablettes
+@media screen and (min-width: $fat-mobile) and (max-width: $tablette) {
+    body {
+		.center-component-tablette{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
+}
+
 @media screen and (max-width: $tablette) {
     body {
 		.block-mobile{
