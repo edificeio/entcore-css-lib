@@ -29,6 +29,11 @@
 	bottom: 0;
 }
 
+.absolute-magnet {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 
 .square-small{
 	width: 20px;
@@ -187,6 +192,10 @@
 	width: 100%;
 	top: 0;
 	left: 0;
+}
+.absolute-position-w{
+	position: absolute;
+	width: 100%;
 }
 
 .fluid{
@@ -354,6 +363,10 @@ div.invisible-content{
 		visibility: visible;
 		animation: transient-display 1 5s;
 	}
+}
+
+.divide-opacity {
+	opacity: 0.5;
 }
 
 // Center component on page only for tablettes
