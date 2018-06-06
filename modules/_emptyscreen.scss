@@ -1,17 +1,18 @@
 .emptyscreen {
+    padding-top: 90px;
     text-align: center;
 
-    & > img {
-        margin-top: -30px;
-    }
-
-    .header {
+    .emptyscreen-header {
         font-size: 28px;
-        margin-top: -70px;
     }
 
-    .content {
-        font-size: 22px;
+    .emptyscreen-image {
+        max-width: 50%;
+    }
+
+    .emptyscreen-footer {
+        font-size: 18px;
         line-height: 1.5;
+        color: $darkest-grey;
     }
 }
