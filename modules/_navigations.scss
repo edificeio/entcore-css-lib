@@ -642,6 +642,34 @@ nav.prev-next{
 		margin: 0 10px;
 	}
 }
+
+nav.removable-list {
+	border-top: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	cursor: pointer;
+	&.wrapper {
+		height: 216px;
+		overflow: auto;
+	}
+	.row {
+		border-bottom: 1px solid #DDDDDD;
+		color: $primary;
+		i {
+			opacity: 0;
+			color: $white;
+			transition: opacity 250ms ease;
+		}
+		&:hover {
+			color: $white;
+			background-color: $primary;
+			i {
+				opacity: 1;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: $tablette) {
     body {
 		nav.prev-next{
