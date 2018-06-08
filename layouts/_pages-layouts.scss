@@ -35,6 +35,11 @@
 	right: 0;
 }
 
+.square-mini{
+	width: 10px;
+	max-width: 10px!important;
+	height: 10px;
+}
 .square-small{
 	width: 20px;
 	max-width: 20px!important;
@@ -304,6 +309,10 @@ dl{
 	margin-top: 15px;
 }
 
+.circle {
+	border-radius: 50%;
+}
+
 .round {
 	border-radius: 50%;
 	overflow: hidden;
@@ -326,6 +335,9 @@ dl{
 	}
 	&.animated {
 		transition: left 250ms ease, top 250ms ease, margin-top 250ms ease, padding 250ms ease;
+	}
+	&.group {
+		border-color: $primary;
 	}
 }
 
