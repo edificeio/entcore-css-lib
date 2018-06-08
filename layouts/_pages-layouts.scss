@@ -176,7 +176,9 @@
 	padding-left: 20px;
 	padding-right: 20px;
 }
-
+.min-w-zero {
+	min-width: 0px;
+}
 
 
 .block{
@@ -374,6 +376,11 @@ div.invisible-content{
 
 .divide-opacity {
 	opacity: 0.5;
+}
+
+.divider-border {
+	background-color: $neutral-grey;
+	width: 1px;
 }
 
 // Center component on page only for tablettes
