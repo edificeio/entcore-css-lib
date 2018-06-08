@@ -1,7 +1,5 @@
 .dominos{
-	margin-top: 90px;
 	margin-bottom: 30px;
-	margin-left: 30px;
 	width: 100%;
 	@include cell;
 
@@ -32,7 +30,38 @@
 					width: 100%;
 					top: 0;
 					left: 0;
+
+					&.domino-group {
+						position: static;
+						width: 40%;
+						margin-top: 10px;
+						border-width: 3px;
+					}
 				}
+			}
+			.top.domino-group {
+				@include grid-cell-height(9);
+				color: $white;
+				
+				.nb-users {
+					span {
+						position: absolute;
+						right: 18px;
+						bottom: 2px;
+						font-size: 12px;
+					}
+
+					i {
+						position: absolute;
+						right: 0;
+						font-size: 22px;
+					}
+				}
+			}
+			.center {
+				font-size: 14px !important;
+				color: $white;
+				word-spacing: 100vw;
 			}
 			.bottom{
 				@include fixed-block;
@@ -49,6 +78,7 @@
 					left: 0;
 					padding: 5px;
 					box-sizing: border-box;
+					font-size: 14px;
 
 					.bottom-locked {
 						i {
