@@ -116,6 +116,11 @@
     }
 }
 
+.scroll-nine-chips {
+    max-height: 310px;
+    overflow: auto;
+}
+
 @media screen and (max-width: $small-mobile){
     body{
 
