@@ -649,7 +649,7 @@ nav.removable-list {
 	border-right: 1px solid $neutral-grey;
 	cursor: pointer;
 	&.wrapper {
-		height: 216px;
+		max-height: 216px;
 		overflow: auto;
 	}
 	.row {
