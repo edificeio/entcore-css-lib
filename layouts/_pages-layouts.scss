@@ -45,6 +45,12 @@
 	max-width: 20px!important;
 	height: 20px;
 }
+.square-normal{
+	width: 30px;
+	max-width: 30px!important;
+	height: 30px;
+	line-height: 27px;
+}
 .square-medium{
 	width: 40px;
 	max-width: 40px!important;
@@ -143,6 +149,10 @@
 
 .right-spacing-twice{
 	margin-right: 20px !important;
+}
+
+.right-spacing-three{
+	margin-right: 35px !important;
 }
 
 .right-spacing-four{
