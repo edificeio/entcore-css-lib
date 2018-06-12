@@ -78,25 +78,27 @@
         &:before{
             color: $solid-grey!important;
             text-shadow: none!important;
-            font-size: 10px;
             vertical-align: top;
             @include run-transition;
-        }
-        &:hover{
-            &:before{
-                color: $warning-color!important;
-            }
         }
     }
 }
 
 .chip.removable { 
-    i{
-        &:before{
+    i {
+        &:before {
             font-size: 10px;
         }
-        &:hover{
-            &:before{
+        &:hover {
+            &:before {
+                color: $warning-color!important;
+            }
+        }
+    }
+    &.chip-hover {
+        cursor: pointer;
+        &:hover {
+            i:before {
                 color: $warning-color!important;
             }
         }
@@ -110,6 +112,14 @@
         }
         &:hover{
             &:before{
+                color: $valid-color!important;
+            }
+        }
+    }
+    &.chip-hover {
+        cursor: pointer;
+        &:hover {
+            i:before {
                 color: $valid-color!important;
             }
         }
