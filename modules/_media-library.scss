@@ -1,6 +1,9 @@
 .media-library {
-	slider{
+	slider.drawing-zone {
 		width: 85%;
+		* {
+			overflow: auto;
+		}
 	}
 	.tipbox{
 		float: right;
@@ -19,7 +22,7 @@
 			box-sizing: border-box;
 			border: 1px solid #ddd;
 			margin-bottom: 25px;
-			height: 540px;
+			height:455px;
 			.compression-view{
 				padding: 15px;
 				width: 470px;
@@ -256,7 +259,7 @@
 
 			.compression{
 				slider{
-					width: 260px;
+					max-width: 350px;
 				}
 			}
 
@@ -264,6 +267,7 @@
 				&.split{
 					.compression{
 						width: 100%;
+						max-height: 400px;
 						padding: 0;
 						border: none;
 						.compression-view{
@@ -283,6 +287,133 @@
 								font-size: 30px;
 							}
 						}
+					}
+					.loading-list.drop-zone{
+						max-height: 360px;
+					}
+				}
+			}
+
+			.media-library > h2 {
+				display: none;
+			}
+			.search {
+				hr {
+					display: none;
+				}
+				h2 {
+					display: none;
+				}
+			}
+
+			.icons-view .element {
+				padding: 0;
+				margin: 5px;
+				
+				.container{
+					width: 105px;
+					height: 105px;
+					margin: 0;
+					i{
+						width: 105px!important;
+						height: 105px!important;
+					}
+				}
+				legend{
+					box-sizing: border-box;
+					left: 0;
+					bottom: 0;
+					position: absolute!important;
+					a.medium-text{
+						font-size: 12px!important;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+@media screen and (max-width: $small-mobile){
+	body{
+		.media-library {
+			.browse{
+				.browse-list{
+					padding-bottom: 480px;
+				}
+			}
+			.import-files{
+				> article{
+					.select-file{
+						width: 100%;
+						button{
+							margin: auto;
+							float: none;
+							display: block;
+						}
+					}
+				}
+				.drop{
+					display: none;
+				}
+				.default{
+					background: transparent;
+					box-shadow: none;
+					width: 100%;
+					box-sizing: border-box;
+					position: relative;
+					padding: 0;
+					i, div:last-child{
+						display: none;
+					}
+				}
+			}
+
+			canvas{
+				max-width: 100%;
+			}
+
+			image-compression{
+				max-width: 100%;
+				width: 390px;
+				margin: auto;
+				display: block;
+				float: none;
+			}
+
+			.compression{
+				slider{
+					max-width: 300px;
+				}
+			}
+
+			.split-screen{
+				&.split{
+					.compression{
+						width: 100%;
+						max-height: 370px;
+						padding: 0;
+						border: none;
+						.compression-view{
+							padding: 0;
+							width: 100%;
+							.to-list{
+								display: none;
+							}
+						}
+						.document-title{
+							display: block;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+							i.back{
+								margin-right: 10px;
+								font-size: 30px;
+							}
+						}
+					}
+					.loading-list.drop-zone{
+						max-height: 400px;
 					}
 				}
 			}
