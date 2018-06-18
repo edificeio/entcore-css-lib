@@ -406,7 +406,7 @@ div.invisible-content{
 }
 
 // Center component on page only for tablettes
-@media screen and (min-width: $fat-mobile) and (max-width: $tablette) {
+@media screen and (min-width: $fat-mobile) and (max-width: $wide-screen) {
     body {
 		.center-component-tablette{
 			display: flex;
@@ -418,6 +418,7 @@ div.invisible-content{
 	}
 }
 
+// Deprecated
 @media screen and (max-width: $tablette) {
     body {
 		.block-mobile{
@@ -450,11 +451,34 @@ div.invisible-content{
 		}
 	}
 }
-
 // For special elements that are only visible on mobile and fat-mobiles
 @media screen and (min-width: $fat-mobile){
 	body {
 		.mobile-fat-mobile{
+			display: none!important;
+		}
+	}
+}
+// Only visible for mobile and landscape tablets
+@media screen and (min-width: $wide-screen) {
+	body {
+		.zero-large-desktop {
+			display: none!important;
+		}
+	}
+}
+// Only visible in wide screen
+@media screen and (min-width: $wide-screen), screen and (max-width: $tablette) {
+	body {
+		.only-wide-screen {
+			display: none!important;
+		}
+	}
+}
+// For special elements that are only visible on desktop and tablettes
+@media screen and (max-width: $wide-screen){
+	body {
+		.only-large-desktop{
 			display: none!important;
 		}
 	}
