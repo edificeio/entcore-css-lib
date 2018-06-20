@@ -104,6 +104,23 @@
 	margin-left: 20px;
 	margin-right: 20px;
 }
+.horizontal-margin-four{
+	margin-left: 40px;
+	margin-right: 40px;
+}
+.horizontal-margin-height{
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+@media screen and (max-width: $tablette){
+	body {
+		.horizontal-margin-zero-mobile {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
 
 .vertical-spacing{
 	margin-top: 5px !important;
@@ -407,6 +424,12 @@ div.invisible-content{
 .divider-border {
 	background-color: $neutral-grey;
 	width: 1px;
+}
+
+.divider-border-horizontal {
+	background-color: $neutral-grey;
+	height: 1px;
+	width: 100%;
 }
 
 // Center component on page only for tablettes
