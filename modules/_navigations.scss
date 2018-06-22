@@ -667,6 +667,22 @@ nav.removable-list {
 				opacity: 1;
 			}
 		}
+		&.active {
+			color: $white;
+			background-color: $primary;
+		}
+	}
+}
+
+removable-list[disabled] {
+	cursor: default;
+	nav.removable-list .row:hover {
+		color: $primary;
+		background-color: transparent;
+		i {
+			opacity: 0;
+			color: $white;
+		}
 	}
 }
 
