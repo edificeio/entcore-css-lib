@@ -27,6 +27,14 @@
 .chip.selected{
     box-shadow: 2px 2px 1px 0px  $shadow;
     background: $primary;
+
+    i{
+        &:hover{
+            &:before{
+                color: $black!important;
+            }
+        }
+    }
 }
 .chip.selected:hover{
     box-shadow: 2px 2px 1px 0px  $shadow-darker;
