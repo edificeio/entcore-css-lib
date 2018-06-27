@@ -12,6 +12,23 @@ a.button, button, input[type=button], input[type=submit]{
 	@include cell;
 }
 
+.button.is-light {
+	background-color: $light-grey;
+	color: $primary;
+	box-shadow: none;
+	text-transform: none;
+
+	&:hover {
+		background-color: $primary;
+		color: $white;
+	}
+}
+
+.button.is-light[disabled] {
+	color: $solid-grey;
+    background: $grey;
+    cursor: default;
+}
 
 input[type=search]{
 	padding: 3px;
