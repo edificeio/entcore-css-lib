@@ -18,6 +18,10 @@ a.button, button, input[type=button], input[type=submit]{
 	box-shadow: none;
 	text-transform: none;
 
+	&.uppercase {
+		text-transform: uppercase;
+	}
+
 	&:hover {
 		background-color: $primary;
 		color: $white;
