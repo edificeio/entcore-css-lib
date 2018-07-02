@@ -12,28 +12,6 @@ a.button, button, input[type=button], input[type=submit]{
 	@include cell;
 }
 
-.button.is-light {
-	background-color: $light-grey;
-	color: $primary;
-	box-shadow: none;
-	text-transform: none;
-
-	&.uppercase {
-		text-transform: uppercase;
-	}
-
-	&:hover {
-		background-color: $primary;
-		color: $white;
-	}
-}
-
-.button.is-light[disabled] {
-	color: $solid-grey;
-    background: $grey;
-    cursor: default;
-}
-
 input[type=search]{
 	padding: 3px;
 }
@@ -54,7 +32,7 @@ input[type=search]{
 	position: fixed;
 	max-width: 100%;
 	@include run-transition(max-height);
-
+	
 	-webkit-transition-delay: 250ms;
 	-moz-transition-delay: 250ms;
 	-ms-transition-delay: 250ms;
@@ -230,4 +208,8 @@ button.select-button {
     &:not(.selected):hover {
         color: $text-light;
     }
+}
+
+.is-light {
+    padding: 10px;
 }
