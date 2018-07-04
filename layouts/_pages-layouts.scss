@@ -422,8 +422,7 @@ div.invisible-content{
 }
 
 .divider-border {
-	background-color: $neutral-grey;
-	width: 1px;
+	border-right: 1px solid $neutral-grey;
 }
 
 .divider-border-horizontal {
