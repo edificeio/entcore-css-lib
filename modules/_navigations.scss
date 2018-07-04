@@ -642,6 +642,50 @@ nav.prev-next{
 		margin: 0 10px;
 	}
 }
+
+nav.removable-list {
+	border-top: 1px solid $neutral-grey;
+	border-left: 1px solid $neutral-grey;
+	border-right: 1px solid $neutral-grey;
+	cursor: pointer;
+	&.wrapper {
+		max-height: 216px;
+		overflow: auto;
+	}
+	.row {
+		border-bottom: 1px solid $neutral-grey;
+		color: $primary;
+		i {
+			opacity: 0;
+			color: $white;
+			transition: opacity 250ms ease;
+		}
+		&:hover {
+			color: $white;
+			background-color: $primary;
+			i {
+				opacity: 1;
+			}
+		}
+		&.active {
+			color: $white;
+			background-color: $primary;
+		}
+	}
+}
+
+removable-list[disabled] {
+	cursor: default;
+	nav.removable-list .row:hover {
+		color: $primary;
+		background-color: transparent;
+		i {
+			opacity: 0;
+			color: $white;
+		}
+	}
+}
+
 @media screen and (max-width: $tablette) {
     body {
 		nav.prev-next{

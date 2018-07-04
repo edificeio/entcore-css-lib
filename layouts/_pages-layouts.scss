@@ -29,11 +29,27 @@
 	bottom: 0;
 }
 
+.absolute-magnet {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 
+.square-mini{
+	width: 10px;
+	max-width: 10px!important;
+	height: 10px;
+}
 .square-small{
 	width: 20px;
 	max-width: 20px!important;
 	height: 20px;
+}
+.square-normal{
+	width: 30px;
+	max-width: 30px!important;
+	height: 30px;
+	line-height: 30px;
 }
 .square-medium{
 	width: 40px;
@@ -44,6 +60,17 @@
 	width: 80px;
 	max-width: 80px!important;
 	height: 80px;
+}
+
+
+.spacer-small {
+	@include spacer(20px);
+}
+.spacer-medium {
+	@include spacer(40px);
+}
+.spacer-large {
+	@include spacer(80px);
 }
 
 
@@ -65,6 +92,10 @@
   margin-right: auto;
 }
 
+.horizontal-margin-small{
+	margin-left: 5px;
+	margin-right: 5px;
+}
 .horizontal-margin{
 	margin-left: 10px;
 	margin-right: 10px;
@@ -72,6 +103,23 @@
 .horizontal-margin-twice{
 	margin-left: 20px;
 	margin-right: 20px;
+}
+.horizontal-margin-four{
+	margin-left: 40px;
+	margin-right: 40px;
+}
+.horizontal-margin-height{
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+@media screen and (max-width: $tablette){
+	body {
+		.horizontal-margin-zero-mobile {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
 }
 
 .vertical-spacing{
@@ -81,6 +129,10 @@
 .vertical-spacing-twice{
 	margin-top: 10px !important;
 	margin-bottom: 10px !important;
+}
+.vertical-spacing-four{
+	margin-top: 15px !important;
+	margin-bottom: 15px !important;
 }
 
 .bottom-spacing{
@@ -96,13 +148,42 @@
 	margin-top: 10px !important;
 }
 
+.left-spacing{
+	margin-left: 10px !important;
+}
 
+.left-spacing-twice{
+	margin-left: 20px !important;
+}
+
+.left-spacing-four{
+	margin-left: 40px !important;
+}
+
+.right-spacing{
+	margin-right: 10px !important;
+}
+
+.right-spacing-twice{
+	margin-right: 20px !important;
+}
+
+.right-spacing-three{
+	margin-right: 35px !important;
+}
+
+.right-spacing-four{
+	margin-right: 40px !important;
+}
 
 .mini-block-container{
 	padding: 7px;
 }
 .block-container{
 	padding: 10px;
+}
+.big-block-container{
+	padding: 15px;
 }
 
 //padding: $size
@@ -127,7 +208,9 @@
 	padding-left: 20px;
 	padding-right: 20px;
 }
-
+.min-w-zero {
+	min-width: 0px;
+}
 
 
 .block{
@@ -136,6 +219,10 @@
 
 .overflow-hd{
 	overflow: hidden;
+}
+
+.absolute-position {
+	position: absolute;
 }
 
 .absolute{
@@ -150,6 +237,10 @@
 	width: 100%;
 	top: 0;
 	left: 0;
+}
+.absolute-position-w{
+	position: absolute;
+	width: 100%;
 }
 
 .fluid{
@@ -249,15 +340,51 @@ dl{
 	margin-top: 15px;
 }
 
-.round{
+.circle {
+	border-radius: 50%;
+}
+
+.round {
 	border-radius: 50%;
 	overflow: hidden;
 	border: 1px solid $light-grey;
-	img{
+	background-color: $white;
+	img {
 		display: block;
+	}
+	&.active {
+		border-color: $primary;
+		padding: 4px;
+	}
+	&.inactive {
+		img {
+			opacity: 0.25;
+		}
+		&:hover {
+			padding: 4px;
+		}
+	}
+	&.animated {
+		transition: left 250ms ease, top 250ms ease, margin-top 250ms ease, padding 250ms ease;
+	}
+	&.group {
+		border-color: $primary;
 	}
 }
 
+// Used for pastilles or any avatar with shadow
+.img-shadow {
+	box-shadow: 4px 4px 5px $shadow-light;
+	border-width: 3px;
+}
+
+.high-index {
+	z-index: 1000;
+
+	&.active {
+		z-index: 1001;
+	}
+}
 
 div.hidden-content{
 	height: 0px;
@@ -274,6 +401,12 @@ div.hidden-content{
     }
 }
 
+div.invisible-content{
+	> *{
+		opacity: 0;
+	}
+}
+
 .hollow{
 	visibility: hidden;
 	opacity: 0;
@@ -284,8 +417,35 @@ div.hidden-content{
 	}
 }
 
+.divide-opacity {
+	opacity: 0.5;
+}
 
+.divider-border {
+	background-color: $neutral-grey;
+	width: 1px;
+}
 
+.divider-border-horizontal {
+	background-color: $neutral-grey;
+	height: 1px;
+	width: 100%;
+}
+
+// Center component on page only for tablettes
+@media screen and (min-width: $fat-mobile) and (max-width: $wide-screen) {
+    body {
+		.center-component-tablette{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
+}
+
+// Deprecated
 @media screen and (max-width: $tablette) {
     body {
 		.block-mobile{
@@ -318,11 +478,34 @@ div.hidden-content{
 		}
 	}
 }
-
 // For special elements that are only visible on mobile and fat-mobiles
 @media screen and (min-width: $fat-mobile){
 	body {
 		.mobile-fat-mobile{
+			display: none!important;
+		}
+	}
+}
+// Only visible for mobile and landscape tablets
+@media screen and (min-width: $wide-screen) {
+	body {
+		.zero-large-desktop {
+			display: none!important;
+		}
+	}
+}
+// Only visible in wide screen
+@media screen and (min-width: $wide-screen), screen and (max-width: $tablette) {
+	body {
+		.only-wide-screen {
+			display: none!important;
+		}
+	}
+}
+// For special elements that are only visible on desktop and tablettes
+@media screen and (max-width: $wide-screen){
+	body {
+		.only-large-desktop{
 			display: none!important;
 		}
 	}

@@ -21,6 +21,13 @@
         border: 1px solid $primary-light;
         background: $white;
         box-shadow: 0 1px 3px $shadow;
+        bottom: 70px;
+        right: 25px;
+
+        &.tipbox-right {
+			bottom: unset;
+			right: unset;
+		}
     }
     &.left{
         .tipbox-content{

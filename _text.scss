@@ -50,7 +50,9 @@ label{
 .strong-text{
 	font-size: $font-size + 8px;
 }
-
+.italic-text{
+	font-style: italic;
+}
 .upper-title{
 	margin-bottom: 0;
 }
@@ -65,11 +67,29 @@ label{
 	color: $grey;
     line-height: normal;
 }
+.underlined-title {
+	color: $primary;
+	font-size: 15px;
+	color: $primary;
+	border-bottom: 1px solid $primary;
+
+	strong {
+		color: $primary;
+	}
+}
+
+.text-underline-hover:hover {
+	text-decoration: underline;
+}
 
 .comment{
 	padding: 10px;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+
+.low-text {
+	text-transform: none;
 }
 
 .user-content{
@@ -156,6 +176,10 @@ h2 > i.back{
 	i {
 		margin-right: 0.5em;
 	}
+}
+
+.white-text {
+	color: $white;
 }
 
 

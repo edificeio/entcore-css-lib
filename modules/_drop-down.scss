@@ -12,7 +12,26 @@
 .drop-down{
 	@include drop-down();
 	overflow: hidden;
-	height: auto;
+    height: auto;
+
+    li {
+        i.add-favorite {
+            margin: 0 10px 0 0;
+            &::before {
+                color: $primary;
+            }
+        }
+        &:hover {
+            color: $white;
+            background-color: $accent;
+            a {
+                color: $white;
+            }
+            i.add-favorite::before {
+                color: $white;
+            }
+        }
+    }
 }
 
 

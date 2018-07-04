@@ -70,6 +70,11 @@ nav.vertical .check-tool{
 	}
 }
 
+.scroll-seven-checks {
+    max-height: 220px;
+    overflow: auto;
+}
+
 /////
 @media screen and (max-width: $tablette) {
     body{

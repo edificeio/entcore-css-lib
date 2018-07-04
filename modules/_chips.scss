@@ -1,4 +1,4 @@
-.chip{
+.chip, contact-chip{
     width: auto;
     height: auto;
     margin: 5px;
@@ -20,18 +20,22 @@
 
 }
 
-.chip:hover, .chip:active{
-    box-shadow: 2px 2px 4px 0px $shadow-darker inset;
+.chip, contact-chip {
+    &:hover, &:active {
+        box-shadow: 2px 2px 4px 0px $shadow-darker inset;
+    }
+    &.selected {
+        box-shadow: 2px 2px 1px 0px  $shadow;
+        background: $primary;
+        i{
+            &:hover{
+                &:before{
+                    color: $black!important;
+                }
+            }
+        }
+    }
 }
-
-.chip.selected{
-    box-shadow: 2px 2px 1px 0px  $shadow;
-    background: $primary;
-}
-.chip.selected:hover{
-    box-shadow: 2px 2px 1px 0px  $shadow-darker;
-}
-
 
 .chip.multiselect{
     text-transform: uppercase;
@@ -40,37 +44,92 @@
     word-spacing: 5px;
 }
 
-.chip.removable{
-    border: 1px solid $medium-grey;
-    background: $white;
-    box-shadow: none;
-    text-shadow: none;
-    padding-right: 0;
-    span{
-        color: $black;
-    }
-    i{
-        padding: 0 12px;
-        &:before{
-            color: $solid-grey!important;
-            text-shadow: none!important;
-            font-size: 10px;
-            vertical-align: top;
-            @include run-transition;
+.chip, contact-chip {
+    &.removable, &.movable{
+        border: 1px solid $medium-grey;
+        background: $white;
+        box-shadow: none;
+        text-shadow: none;
+        padding-right: 0;
+        padding-left: 5px;
+        padding-bottom: 0;
+        line-height: 27px;
+        cursor: default;
+        span{
+            &.round {
+                margin-top: 4px;
+            }
+            &.circle {
+                margin-top: 9px;
+                margin-left: 6px;
+            }
+            &.cell-ellipsis {
+                color: $black;
+                padding-left: 10px;
+                margin-right: 40px;
+            }
         }
-
-        &:hover{
+        i{
+            cursor: pointer;
+            padding: 0 12px;
             &:before{
-                color: $warning-color!important;
+                color: $solid-grey!important;
+                text-shadow: none!important;
+                vertical-align: top;
+                @include run-transition;
+            }
+        }
+    }
+    &.removable { 
+        i {
+            &:before {
+                font-size: 10px;
+            }
+            &:hover {
+                &:before {
+                    color: $warning-color!important;
+                }
+            }
+        }
+        &.chip-hover {
+            cursor: pointer;
+            &:hover {
+                i:before {
+                    color: $warning-color!important;
+                }
+            }
+        }
+    }
+    &.movable { 
+        i{
+            &:before{
+                font-size: 14px;
+            }
+            &:hover{
+                &:before{
+                    color: $valid-color!important;
+                }
+            }
+        }
+        &.chip-hover {
+            cursor: pointer;
+            &:hover {
+                i:before {
+                    color: $valid-color!important;
+                }
             }
         }
     }
 }
 
+.scroll-nine-chips {
+    max-height: 326px;
+    overflow: auto;
+}
+
 @media screen and (max-width: $small-mobile){
     body{
-
-        .chip{
+        .chip, contact-chip{
             margin: 10px auto;
             display: block;
             width: 75%;
@@ -84,13 +143,15 @@
             }
         }
 
-        recipient-list .chip{
-            margin: 10px;
-            max-width: none;
-            line-height: 28px;
-            padding-right: 5px;
-            i{
-                margin-right: 0;
+        recipient-list {
+            .chip, contact-chip {
+                margin: 10px;
+                max-width: none;
+                line-height: 28px;
+                padding-right: 5px;
+                i{
+                    margin-right: 0;
+                }
             }
         }
 

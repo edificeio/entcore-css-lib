@@ -1,23 +1,25 @@
 
 .autocomplete {
-	em{
+	div{
 		font-style: normal;
 		display: block;
-		padding: 3px;
-		padding-left: 15px;
+		padding: 10px;
 		border: 1px solid transparent;
-	}
-	em.low-importance{
-		border: none;
-		font-style: italic;
-	}
-	em:hover{
-		border-top: 1px solid #ccc;
-		border-bottom: 1px solid #ccc;
-	}
-	em.low-importance:hover{
-		background: transparent;
-		border: none;
+		
+		&:hover {
+			border-top: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+		}
+
+		em.low-importance{
+			border: none;
+			font-style: italic;
+
+			&:hover {
+				background: transparent;
+				border: none;
+			}
+		}
 	}
 
     ul{

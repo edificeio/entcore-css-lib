@@ -124,3 +124,14 @@ input-password{
 		float: right;
 	}
 }
+
+// Avoid red borders in firefox
+@-moz-document url-prefix() {
+    input[type=text],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=email] {
+        box-shadow: none;
+    }
+}

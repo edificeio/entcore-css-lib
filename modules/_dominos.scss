@@ -3,12 +3,6 @@
 	width: 100%;
 	@include cell;
 
-	.mood{
-		position: absolute;
-		top: 22px;
-		right: 5px;
-	}
-
 	.item{
 		max-width: 188px;
 		min-width: 154px;
@@ -16,6 +10,12 @@
 		@include cell;
 		padding: 5px;
 		overflow: hidden;
+		box-shadow: 0 1px 3px $shadow;
+
+		&:hover {
+			box-shadow: 0 1px 3px $shadow-darker;
+		}
+
 		.domino{
 			border: 1px solid $medium-grey;
 			@include cell;
@@ -30,7 +30,39 @@
 					width: 100%;
 					top: 0;
 					left: 0;
+
+					&.domino-group {
+						position: static;
+						width: 40%;
+						margin-top: 10px;
+						border-width: 3px;
+					}
 				}
+			}
+			.top.domino-group {
+				@include grid-cell-height(9);
+				color: $white;
+				
+				.nb-users {
+					span {
+						position: absolute;
+						right: 25px;
+						bottom: 5px;
+						font-size: 12px;
+					}
+
+					i {
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						font-size: 30px;
+					}
+				}
+			}
+			.center {
+				font-size: 14px !important;
+				color: $white;
+				word-spacing: 100vw;
 			}
 			.bottom{
 				@include fixed-block;
@@ -47,6 +79,13 @@
 					left: 0;
 					padding: 5px;
 					box-sizing: border-box;
+					font-size: 14px;
+
+					.bottom-locked {
+						i {
+							font-size: 22px;
+						}
+					}
 				}
 			}
 		}
@@ -91,4 +130,25 @@
 			}
 		}
 	}
+}
+
+.dominos alphabetical .item {
+    max-width: 230px;
+    width: 20%;
+    .domino {
+        border-radius: 0;
+        padding: 0;
+        img {
+            background-color: $primary;
+        }
+        .bottom {
+            margin: 0;
+            div.content {
+                padding: 0;
+            }
+        }
+    }
+    .domino:hover {
+        box-shadow: 0 2px 6px $shadow-darker;
+    }
 }
