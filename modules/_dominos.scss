@@ -60,9 +60,12 @@
 				}
 			}
 			.center {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				font-size: 14px !important;
 				color: $white;
-				word-spacing: 100vw;
+				height: 46px;
 			}
 			.bottom{
 				@include fixed-block;
