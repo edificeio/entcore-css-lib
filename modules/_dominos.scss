@@ -10,11 +10,6 @@
 		@include cell;
 		padding: 5px;
 		overflow: hidden;
-		box-shadow: 0 1px 3px $shadow;
-
-		&:hover {
-			box-shadow: 0 1px 3px $shadow-darker;
-		}
 
 		.domino{
 			border: 1px solid $medium-grey;
