@@ -437,6 +437,27 @@ div.invisible-content{
 	width: 100%;
 }
 
+.size-auto {
+	width: auto !important;
+	height: auto !important;
+}
+
+/* 
+	MULTILINE ELLIPSIS
+*/
+
+.multiline-ellipsis-two {
+	@include multiline-ellipsis(2);
+}
+
+.multiline-ellipsis-three {
+	@include multiline-ellipsis(3);
+}
+
+/* 
+	SPECIAL MEDIA QUERIES
+*/
+
 // Center component on page only for tablettes
 @media screen and (min-width: $fat-mobile) and (max-width: $wide-screen) {
     body {

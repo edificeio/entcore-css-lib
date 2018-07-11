@@ -360,6 +360,30 @@
 	border-color: transparent transparent $color transparent;
 }
 
+@mixin multiline-ellipsis ($max-lines: 1, $line-height: 1.5em) {
+	overflow: hidden;
+	position: relative; 
+	line-height: $line-height;
+	max-height: ($line-height * $max-lines);
+	padding-right: 1em;
+	&:before {
+		content: '...';
+		position: absolute;
+		right: 0;
+		bottom: 1px;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		width: 1em;
+		height: 1em;
+		margin-top: 0.2em;
+		background: $white;
+	}
+}
+
+
 ///////
 
 @mixin syleRadio-WIP($bg-on: $accent, $border-on: $white, $bg-off: $medium-grey, $border-off: $white){
