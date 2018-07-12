@@ -9,7 +9,6 @@
     }
     .tipbox-content{
         position: absolute;
-        margin-left: 40px; // less than tipbox i width
         padding: 10px 15px;
         opacity: 0;
         width: 0;
@@ -21,13 +20,6 @@
         border: 1px solid $primary-light;
         background: $white;
         box-shadow: 0 1px 3px $shadow;
-        bottom: 50px;
-        right: 25px;
-
-        &.tipbox-right {
-			bottom: unset;
-			right: unset;
-		}
     }
     &.left{
         .tipbox-content{
@@ -42,6 +34,12 @@
         height: auto;
         transition: opacity 400ms;
         min-width: 250px;
+        margin-left: 40px; // less than tipbox i width
+
+        &.top {
+            bottom: 40px;
+            right: 30px;
+        }
     }
 }
 
