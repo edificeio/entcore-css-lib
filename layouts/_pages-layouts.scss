@@ -459,7 +459,7 @@ div.invisible-content{
 */
 
 // Center component on page only for tablettes
-@media screen and (min-width: $fat-mobile) and (max-width: $wide-screen) {
+@media screen and (min-width: ($fat-mobile +1)) and (max-width: $wide-screen) {
     body {
 		.center-component-tablette{
 			display: flex;
@@ -489,7 +489,7 @@ div.invisible-content{
 	}
 }
 // For special elements that are only visible on mobiles and tablettes
-@media screen and (min-width: $tablette){
+@media screen and (min-width: ($tablette +1)){
 	body {
 		.zero-desktop{
 			display: none!important;
@@ -505,7 +505,7 @@ div.invisible-content{
 	}
 }
 // For special elements that are only visible on mobile and fat-mobiles
-@media screen and (min-width: $fat-mobile){
+@media screen and (min-width: ($fat-mobile +1)){
 	body {
 		.mobile-fat-mobile{
 			display: none!important;
@@ -513,7 +513,7 @@ div.invisible-content{
 	}
 }
 // Only visible for mobile and landscape tablets
-@media screen and (min-width: $wide-screen) {
+@media screen and (min-width: ($wide-screen +1)) {
 	body {
 		.zero-large-desktop {
 			display: none!important;
@@ -521,7 +521,7 @@ div.invisible-content{
 	}
 }
 // Only visible in wide screen
-@media screen and (min-width: $wide-screen), screen and (max-width: $tablette) {
+@media screen and (min-width: ($wide-screen +1)), screen and (max-width: $tablette) {
 	body {
 		.only-wide-screen {
 			display: none!important;
