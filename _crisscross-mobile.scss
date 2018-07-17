@@ -321,7 +321,7 @@
 	}
 }
 
-@media screen and (min-width: $fat-mobile) and (max-width: $wide-screen) {
+@media screen and (min-width: $fat-mobile +1) and (max-width: $wide-screen) {
 	body{
 		.one-tablette-wide{
 			@include grid-cell-width(1);
