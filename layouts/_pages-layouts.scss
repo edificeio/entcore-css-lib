@@ -442,6 +442,13 @@ div.invisible-content{
 	height: auto !important;
 }
 
+.center-component {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 /* 
 	MULTILINE ELLIPSIS
 */
