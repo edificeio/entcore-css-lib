@@ -83,6 +83,15 @@
 						i {
 							font-size: 22px;
 						}
+
+						.send-mail::before {
+							color: $primary;
+						}
+						.send-mail:hover{
+							&::before{
+								color: $accent;
+							}
+						}
 					}
 				}
 			}
