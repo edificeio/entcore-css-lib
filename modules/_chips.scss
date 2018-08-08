@@ -26,19 +26,7 @@
     }
     &.selected {
         box-shadow: 2px 2px 1px 0px  $shadow;
-        background: $primary;
-    }
-}
-
-contact-chip {
-    &.selected {
-        i{
-            &:hover{
-                &:before{
-                    color: $black!important;
-                }
-            }
-        }
+        background: $primary !important;
     }
 }
 
@@ -60,6 +48,9 @@ contact-chip {
         padding-bottom: 0;
         line-height: 27px;
         cursor: default;
+        &[action-icon] {
+            cursor: pointer;
+        }
         span{
             &.round {
                 margin-top: 4px;
@@ -83,6 +74,11 @@ contact-chip {
                 vertical-align: top;
                 @include run-transition;
             }
+        }
+    }
+    &.selected {
+        span.cell-ellipsis, i:before {
+            color: $white !important;
         }
     }
     &.removable {
