@@ -197,7 +197,7 @@ i.person{
 
 i.send-mail{
     @include fonticon;
-    margin: 7px;
+    margin-right: 7px;
     @include run-transition(background);
 }
 i.send-mail::before{
