@@ -227,7 +227,7 @@ i.send-mail:hover{
 
 i.add-favorite {
     @include fonticon;
-    margin: 7px;
+    margin-right: 7px;
     @include run-transition(background);
 }
   
