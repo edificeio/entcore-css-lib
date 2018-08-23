@@ -246,6 +246,11 @@ i.add-favorite:hover{
         color: $accent;
     }
 }
+i.add-favorite.no-hover:hover {
+    &::before{
+        color: $primary;
+    }
+}
 .action-item{
     i.add-favorite{
         line-height: 43px;
