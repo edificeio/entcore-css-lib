@@ -72,6 +72,10 @@
                     &:before {
                         display: none;
                     }
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 td:last-child {
                     display: none;
