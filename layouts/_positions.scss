@@ -49,6 +49,9 @@
 	position: relative;
 }
 
+.no-shrink {
+	flex-shrink: 0;
+}
 
 .v-center-container{
 	display: table;
