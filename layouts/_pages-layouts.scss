@@ -478,7 +478,25 @@ div.invisible-content{
 }
 
 /* 
-	SPECIAL MEDIA QUERIES
+	Overflows
+*/
+
+.overflow-vertical-height-list {
+	max-height: 195px;
+	overflow: auto;
+}
+
+/* 
+	Force sizes
+*/
+
+// Also : width-medium-no-mobile-fat-mobile
+.width-medium {
+	width: 200px;
+}
+
+/* 
+	SPECIAL MEDIA QUERIES HIDE
 */
 
 // Center component on page only for tablettes
@@ -556,6 +574,19 @@ div.invisible-content{
 	body {
 		.only-large-desktop{
 			display: none!important;
+		}
+	}
+}
+
+/* 
+	SPECIAL MEDIA QUERIES RESTRICTIONS CLASSES
+*/
+
+// Classes restrictions for no mobile and fat mobile
+@media screen and (min-width: ($fat-mobile +1)){
+	body {
+		.width-medium-no-mobile-fat-mobile{
+			width: 200px;
 		}
 	}
 }
