@@ -35,6 +35,9 @@
 	&.f-row{
 		flex-direction: row;
 	}
+	&.f-wrap {
+		flex-wrap: wrap;
+	}
 
 	.flex-all-remains{
 		flex: 1;
