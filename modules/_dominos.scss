@@ -159,3 +159,9 @@
         box-shadow: 0 2px 6px $shadow-darker;
     }
 }
+
+@media screen and (min-width: $wide-screen) {
+    .dominos-infos {
+        margin-top: 82px;
+	}
+}
