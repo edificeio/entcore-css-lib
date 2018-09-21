@@ -1,6 +1,13 @@
 a{
 	color: $accent;
 	@include run-transition(color);
+
+	&.hover-icon:hover {
+		i:before {
+			@include run-transition(color);
+			color: $accent !important;
+		}
+	}
 }
 
 span.no-style{
