@@ -1,11 +1,24 @@
-.split-screen{
-
-    .loading-list{
+.split-screen, .file-picker  {
+    .loading-list {
         width: 100%;
-        height: 455px;
         overflow: auto;
         float: left;
     }
+}
+
+.split-screen  {
+    .loading-list {
+        height: 455px;
+    }
+}
+
+.file-picker  {
+    .loading-list {
+        max-height: 170px;
+    }
+}
+
+.split-screen{
     &.split{
         .loading-list{
             width: 30%;
@@ -21,7 +34,7 @@
         }
     }
 }
-    
+
 .loading-list ul{
     li.removable{
         padding-right: 35px;

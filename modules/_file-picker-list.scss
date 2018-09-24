@@ -1,0 +1,19 @@
+file-picker-list {
+    .media-library {
+        .import-files {
+            padding: unset;
+            height: 130px;
+            margin-bottom: 20px;
+
+            & > article {
+                top: 30px;
+                left: 70px;
+            }
+        }
+
+        .loading-list {
+            overflow-y: scroll;
+            max-height: 170px;
+        }
+    }
+}

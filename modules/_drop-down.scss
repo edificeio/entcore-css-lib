@@ -95,6 +95,12 @@
     }
 }
 
+.lightbox-opened div[data-drop-down]{
+	z-index: 100000;
+	max-height: 350px;
+	overflow-y: scroll;
+	background-color: white;
+}
 
 @media screen and (max-width: $small-mobile){
     body{
