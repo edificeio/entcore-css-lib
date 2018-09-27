@@ -207,7 +207,13 @@ button.select-button {
 
     &:not(.selected):hover {
         color: $primary;
-    }
+	}
+	
+	&[disabled] {
+		background-color: $light-grey !important;
+		color: $grey !important;
+		cursor: default;
+	}
 }
 
 .is-light {
