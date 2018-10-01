@@ -80,6 +80,11 @@
         span.cell-ellipsis, i:before {
             color: $white !important;
         }
+        span.cell-ellipsis {
+            a {
+                color: $white !important;
+            }
+        }
     }
     &.removable {
         i {
