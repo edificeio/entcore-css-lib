@@ -2,18 +2,26 @@ file-picker-list {
     .media-library {
         .import-files {
             padding: unset;
-            height: 130px;
-            margin-bottom: 20px;
+            height: 112px;
+            margin-bottom: 10px;
 
             & > article {
-                top: 30px;
+                top: 22px;
                 left: 70px;
             }
         }
 
         .loading-list {
             overflow-y: scroll;
-            max-height: 170px;
+            max-height: 112px;
+            margin-bottom: 10px;
+
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    padding: 5px 5px 5px 20px;
+                }
+            }
         }
     }
 }
