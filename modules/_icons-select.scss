@@ -45,7 +45,7 @@
 	.current{
 		padding-left: 20px;
 		i{
-			transition: padding-left 250ms ease;
+			transition: margin-left 250ms ease;
 			vertical-align: middle;
 			max-height: 100%;
 			background-size: auto 100%;
@@ -55,12 +55,15 @@
 			padding-top: 10px;
 			width: auto;
 		}
+		a {
+			transition: none;
+		}
 		&:hover, &.editing {
 			a {
 				color: $accent;
 			}
-			i {
-				padding-left: 5px;
+			div.flex-row {
+				margin-left: 5px !important;
 			}
 		}
 	}
