@@ -380,8 +380,12 @@
 		right: 0;
 		width: 1em;
 		height: 1em;
-		margin-top: 0.2em;
+		margin-top: ($line-height * 0.3);
 		background: $white;
+	}
+	& * {
+		word-wrap: break-word;
+		display: inline;
 	}
 }
 
