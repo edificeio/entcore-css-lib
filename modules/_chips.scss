@@ -24,10 +24,6 @@
     &:hover, &:active {
         box-shadow: 2px 2px 4px 0px $shadow-darker inset;
     }
-    &.selected {
-        box-shadow: 2px 2px 1px 0px  $shadow;
-        background: $primary !important;
-    }
 }
 
 .chip.multiselect{
@@ -77,6 +73,9 @@
         }
     }
     &.selected {
+        box-shadow: 2px 2px 1px 0px  $shadow;
+        background: $primary;
+        
         span.cell-ellipsis, i:before {
             color: $white !important;
         }
