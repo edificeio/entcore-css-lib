@@ -189,6 +189,10 @@ h2 > i.back{
 	color: $white;
 }
 
+.text-word-break {
+	word-wrap: break-word;
+}
+
 
 @media screen and (max-width: $tablette) {
 	body{
