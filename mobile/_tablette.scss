@@ -229,7 +229,7 @@
 
 
         .mobile-nav-opener {
-            @include icon(glyphicons_113_justify, 50px);
+            @include icon(glyphicons_113_justify, 30px);
             float: left;
             display: none;
             &.visible {
