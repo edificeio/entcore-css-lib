@@ -75,8 +75,12 @@
 
 
 
-.no-margin, .nomargin, .no-margin-all * {
+.no-margin, .nomargin {
 	margin: 0!important;
+}
+
+.no-margin-all * {
+	margin: 0;
 }
 .no-padding, .nopadding{
 	padding: 0!important;
