@@ -107,6 +107,13 @@
 	position: relative;
 }
 
+@mixin square($size) {
+	width: $size;
+	min-width: $size!important;
+	max-width: $size!important;
+	height: $size;
+}
+
 ////////    FONTS
 
 @mixin fonticon {

@@ -36,30 +36,20 @@
 }
 
 .square-mini{
-	width: 10px;
-	max-width: 10px!important;
-	height: 10px;
+	@include square(10px);
 }
 .square-small{
-	width: 20px;
-	max-width: 20px!important;
-	height: 20px;
+	@include square(20px);
 }
 .square-normal{
-	width: 30px;
-	max-width: 30px!important;
-	height: 30px;
+	@include square(30px);
 	line-height: 30px;
 }
 .square-medium{
-	width: 40px;
-	max-width: 40px!important;
-	height: 40px;
+	@include square(40px);
 }
 .square-large{
-	width: 80px;
-	max-width: 80px!important;
-	height: 80px;
+	@include square(80px);
 }
 
 
