@@ -98,10 +98,10 @@ i.properties{
     }
 }
 
-i.help-large, i.help.cas, i.help{
+i.help-large, i.help.cas, i.help, i.navbar-help{
     @include fonticon;
 }
-i.help-large::before, i.type.help::before, i.help::before{
+i.help-large::before, i.type.help::before, i.help::before, i.navbar-help::before{
     content: '\e835';
     cursor: pointer;
 }
