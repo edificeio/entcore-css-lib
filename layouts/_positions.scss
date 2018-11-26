@@ -44,7 +44,9 @@
 	}
 }
 
-
+.flex-one {
+	flex: 1;
+}
 .fixed{
 	@include absolute;
 }

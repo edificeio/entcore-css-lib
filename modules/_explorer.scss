@@ -2,7 +2,52 @@
 	position: relative;
 	cursor: pointer;
 }
+explorer.radius a,
+explorer.radius img {
+	border-radius: 20px;
+}
 
+explorer.radius legend {
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+explorer.explorer-hover a.container:hover,
+explorer.explorer-hover legend:hover + a.container{
+	border: 1px #4bafd5 dashed !important;
+}
+explorer.explorer-hover i.folder-large:hover,
+explorer.explorer-hover i.unknown-large:hover,
+explorer.explorer-hover i.audio-large:hover{
+	color: $orange !important;
+}
+explorer.explorer-hover legend{
+	z-index: 1;
+}
+explorer.explorer-droppable{
+	position: relative;
+}
+explorer .explorer-badge-drop{
+	display: none; 
+}
+explorer.explorer-droppable .explorer-badge-drop{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: -6px;
+	right: -6px;
+	border-radius: 100%;
+	text-align: center;
+	font-size: 12px;
+	line-height: 20px;
+	background: $orange;
+	color: $white;
+}
+.droptarget explorer.explorer-droppable .explorer-badge-drop{
+	display: block;
+}
+.droptarget explorer.explorer-droppable a.container{
+	border: 1px $orange dashed !important;
+}
 @media screen and (max-width: $tablette) {
 	body {
 		explorer{

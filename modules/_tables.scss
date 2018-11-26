@@ -68,6 +68,44 @@ td.main-cell{
 }
 
 
+table.sticky-header thead tr th,
+table.sticky-header thead tr td {
+	background: $cyan;
+	color: $white;
+	border: none;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+table th .sortable {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+table th .sortable .icons {
+	display: flex;
+	flex-direction: column;
+	float: left;
+}
+
+table th .sortable .icons i {
+	margin: 0;
+	height: 18px;
+}
+
+table th .sortable .icons i.arrow:before {
+	font-size: 10px;
+}
+table.darkgrey tbody tr *,
+table.darkgrey tbody tr.checked *,
+table.darkgrey tbody tr.checked:hover * {
+	color: $darkest-grey;
+}
+table.primary-hover tbody tr:hover * {
+	color: $orange;
+}
 
 
 
