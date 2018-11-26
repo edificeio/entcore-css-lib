@@ -215,7 +215,10 @@ button.select-button {
 		cursor: default;
 	}
 }
-
+.disabled-color,
+i.disabled-color::before {
+	color: $grey !important
+}
 .is-light {
     padding: 10px;
 }

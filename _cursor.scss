@@ -21,3 +21,7 @@
 [sortable-element].animated{
 	@include run-transition(margin-top);
 }
+
+.cursor-notallowed{
+	cursor: not-allowed;
+}
