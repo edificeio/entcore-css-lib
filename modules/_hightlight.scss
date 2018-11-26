@@ -1,0 +1,85 @@
+/**
+* Highlight title in nav with count
+**/
+nav.vertical .highlight-title .count-badge {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: -12px;
+    left: calc(100% - 12px);
+    border-radius: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    background: $orange;
+    color: $white;
+}
+nav.vertical .highlight-title {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    width: calc(100% - 70px);
+    border-radius: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+nav.vertical ul li.highlight-title-wrapper {
+    position: relative;
+}
+nav.vertical .highlight-title-border{
+    border: 2px dashed $orange;
+}
+nav.vertical .droptarget + .highlight-title-border{
+    display: block;
+}
+nav.vertical.nav-droppable ul li a.folder-list-item{
+    z-index: 2;
+}
+@keyframes hightlight-title {
+    0% {
+        border: 0px solid $orange;
+    }
+    10% {
+        border: 2px solid $orange;
+    }
+    90% {
+        border: 2px solid $orange;
+    }
+    100% {
+        border: 0px solid $orange;
+    }
+}
+nav.vertical .highlight-title-3s {
+    display: block;
+    animation: hightlight-title 3s ease-in-out 0ms 1;
+}
+
+@keyframes hightlight-border {
+    0% {
+        border: 0px solid $orange;
+        box-shadow: none;
+    }
+    10% {
+        border: 1px solid $orange;
+        box-shadow: 0px 0px 25px $orange;
+    }
+    90% {
+        border: 1px solid $orange;
+        box-shadow: 0px 0px 25px $orange;
+    }
+    100% {
+        border: 0px solid $orange;
+        box-shadow: none;
+    }
+}
+
+.highlight-border-3s {
+    animation: hightlight-border 3s ease-in-out 0ms 1;
+    border-radius: 20px;
+}
+
+.highlight-border-3s * {
+    border: none !important;
+}

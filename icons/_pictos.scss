@@ -270,3 +270,14 @@ i.add-favorite.no-hover:hover {
 .action-item:hover span{
     color: $accent;
 }
+		
+.icon-off {
+    opacity: 0.3;
+}
+
+i.spinner, .spinner > i{
+    @include fonticon;
+    &::before {
+		content: "\e85a";
+    }
+}

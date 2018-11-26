@@ -79,6 +79,9 @@
 .no-margin-bottom {
 	margin-bottom: 0px !important;
 }
+.no-padding-bottom{
+	padding-bottom: 0px !important;
+}
 
 .no-border {
 	border: none !important;
@@ -367,6 +370,9 @@ dl{
 		margin-bottom: 15px;
 	}
 }
+.justified-text{
+	text-align: justify;
+}
 
 .content-line{
 	margin-bottom: 15px;
@@ -478,6 +484,10 @@ div.invisible-content{
 	align-items: center;
 }
 
+.centered-bloc-text{
+	display: block;
+	text-align: center;
+}
 /* 
 	MULTILINE ELLIPSIS
 */
@@ -498,7 +508,12 @@ div.invisible-content{
 	max-height: 195px;
 	overflow: auto;
 }
-
+.overflowx-hd {
+	overflow-x: hidden !important;
+}
+.overflowy-hd {
+	overflow-y: hidden !important;
+}
 /* 
 	Force sizes
 */
@@ -507,7 +522,41 @@ div.invisible-content{
 .width-medium {
 	width: 200px;
 }
-
+/*HEIGHT**/
+.height-minus200 {
+	height: calc(100vh - 200px);
+	overflow-y: scroll;
+}
+.height-minus300 {
+	height: calc(100vh - 300px);
+	overflow-y: scroll;
+}
+.height-minus200.no-overflow{
+	overflow: hidden;
+}
+.height-minus300.no-overflow{
+	overflow: hidden;
+}
+.maxheight-minus450 {
+	max-height: calc(100vh - 450px);
+	overflow-y: scroll;
+}
+.maxheight-minus400 {
+	max-height: calc(100vh - 400px);
+	overflow-y: scroll;
+}
+.maxheight-minus350 {
+	max-height: calc(100vh - 350px);
+	overflow-y: scroll;
+}
+.maxheight-half-vh {
+	max-height: 50vh;
+	overflow-y: scroll;
+}
+/*ZOOM*/
+.zoomout-2x {
+	transform: scale(0.5)
+}
 /* 
 	SPECIAL MEDIA QUERIES HIDE
 */
