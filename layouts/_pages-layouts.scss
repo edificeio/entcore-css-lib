@@ -553,6 +553,16 @@ div.invisible-content{
 	max-height: 50vh;
 	overflow-y: scroll;
 }
+.minheight-100{
+	min-height:100px;
+}
+.minheight-500{
+	min-height:500px;
+}
+/*WIDTH*/
+.minwidth-400{
+	min-width:400px;
+}
 /*ZOOM*/
 .zoomout-2x {
 	transform: scale(0.5)
@@ -590,6 +600,10 @@ div.invisible-content{
 			display: none!important;
 		}
 	}
+	.maxheight-minus200-mobile{
+        max-height: calc(100vh - 200px);
+        overflow-y: scroll;
+    }
 }
 // For special elements that are only visible on mobiles and tablettes
 @media screen and (min-width: ($tablette +1)){
