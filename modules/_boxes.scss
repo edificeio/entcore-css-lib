@@ -46,14 +46,19 @@
 }
 /*HELPBOX*/
 .helpbox-highlight-message{
-	box-shadow: 0 0 0 99999px $shadow-darker;
-	z-index: 98;
-	position: relative;
+    background: rgba(0,0,0,0.6);
+	z-index: 100002;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 .helpbox-highlight {
-	z-index: 99;
-	position: relative;
-	background: $white;
+	z-index: 100003 !important;
+	position: fixed !important;
+	background: $white !important;
+	margin: 0 !important;
 }
 
 /*DROP ZONE**/
@@ -72,4 +77,10 @@
 	outline: 2px dashed $orange;
 	background: rgba(250, 250, 250, 0.4);
 	z-index: 99;
+}
+
+@media screen and(max-width: $fat-mobile) {
+	.helpbox-highlight {
+		display: none !important;
+	}
 }
