@@ -1,5 +1,4 @@
 .tipbox{
-    display: flex;
     align-items: flex-start;
     backface-visibility: hidden;
 
@@ -33,7 +32,6 @@
         width: auto;
         height: auto;
         transition: opacity 400ms;
-        min-width: 250px;
         margin-left: 40px; // less than tipbox i width
 
         &.top {
