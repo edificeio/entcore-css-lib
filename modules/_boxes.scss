@@ -54,6 +54,9 @@
     top: 0;
     left: 0;
 }
+.helpbox-highlight-message .left-text{
+	text-align: left;
+}
 .helpbox-highlight {
 	z-index: 100003 !important;
 	position: fixed !important;
