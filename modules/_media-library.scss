@@ -314,9 +314,11 @@
 					width: 105px;
 					height: 105px;
 					margin: 0;
+					padding: 0 !important;
 					i{
-						width: 105px!important;
-						height: 105px!important;
+						width: 103px!important;
+						height: 103px!important;						
+						background-size: 89px;
 					}
 				}
 				legend{
