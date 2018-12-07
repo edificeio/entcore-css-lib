@@ -4,7 +4,7 @@
 
     i{
         font-size: 26px;
-        color: $primary;
+        color: $disabled-color;
     }
     .tipbox-content{
         position: absolute;
@@ -44,8 +44,18 @@
         }
     }
 }
+@media screen and (min-width: $tablette) {
+    
+    tr:hover .tipbox i{
+        color: $primary;
+    }
+}
 
 @media screen and (max-width: $tablette) {
+    .tipbox  i{
+        color: $primary;
+    }
+
     .tipbox:hover{
         .tipbox-content{
             min-width: 180px;
