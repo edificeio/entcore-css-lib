@@ -109,7 +109,6 @@ embedder{
             list-style-type: none;
             max-width: 20%;
             display: inline-block;
-            padding: 10px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 10px;
@@ -123,5 +122,12 @@ embedder{
                 display: block;
             }
         }
+    }
+}
+
+@media screen and (max-width: $fat-mobile) {
+    embedder .pick li {
+        max-width: 25%;
+        padding: 10px;
     }
 }
