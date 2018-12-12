@@ -1,12 +1,11 @@
-.tipbox{
+.tipbox {
     align-items: flex-start;
     backface-visibility: hidden;
-
-    i{
+    i {
         font-size: 26px;
-        color: $disabled-color;
+        color: $primary;
     }
-    .tipbox-content{
+    .tipbox-content {
         position: absolute;
         padding: 10px 15px;
         opacity: 0;
@@ -20,20 +19,20 @@
         background: $white;
         box-shadow: 0 1px 3px $shadow;
     }
-    &.left{
-        .tipbox-content{
+    &.left {
+        .tipbox-content {
             right: 40px;
         }
     }
 }
-.tipbox:hover{
-    .tipbox-content{
+
+.tipbox:hover {
+    .tipbox-content {
         opacity: 1;
         width: auto;
         height: auto;
         transition: opacity 400ms;
         margin-left: 40px; // less than tipbox i width
-
         &.top {
             bottom: 40px;
             right: 30px;
@@ -44,21 +43,12 @@
         }
     }
 }
+
 @media screen and (min-width: $tablette) {
-    
-    tr:hover .tipbox i{
-        color: $primary;
+    tr .tipbox i {
+        color: $disabled-color;
     }
-}
-
-@media screen and (max-width: $tablette) {
-    .tipbox  i{
+    tr:hover .tipbox i {
         color: $primary;
-    }
-
-    .tipbox:hover{
-        .tipbox-content{
-            min-width: 180px;
-        }
     }
 }
