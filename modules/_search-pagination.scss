@@ -11,12 +11,11 @@
         top: 0;
         right: 0;
         transform: scaleX(-1);
-        width: 35px;
         height: 100%;
         color: $primary;
         margin-right: 0;
         margin-top: 0;
-        padding: 0 3px;
+        padding: 0 10px;
         font-size: 22px;
         @include run-transition(all);
         &:hover{
