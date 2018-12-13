@@ -74,6 +74,7 @@ section.lightbox{
 		float: none !important;
 		overflow: visible;
 		z-index: 1;
+		max-width: initial;
 	}
 	.content::after{
 		clear:both;
