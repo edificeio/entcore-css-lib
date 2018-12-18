@@ -36,15 +36,15 @@ i.loading{
 }
 
 i.loadingCopy{
-    animation: rotate 1000ms linear infinite;
-    @include fonticon;
     font-size: 350%;
     margin-left: 40px;
     margin-top: 20px;
-    display: inline-block;
-    &::before{
-        content: '\e85a';
-    }
+}
+
+i.loadingMove{
+    font-size: 350%;
+    margin-left: 70px;
+    margin-top: 20px;
 }
 
 i.back{
