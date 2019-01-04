@@ -4,13 +4,18 @@
 }
 explorer.radius a,
 explorer.radius img {
-	border-radius: 20px;
+	border-radius: 15px;
 }
 
 explorer.radius legend {
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
+explorer.radius legend > a {
+	border-radius: 0;
+	padding: 0 3px!important;
+}
+
 explorer.explorer-hover a.container:hover,
 explorer.explorer-hover legend:hover + a.container{
 	border: 1px #4bafd5 dashed !important;
