@@ -293,13 +293,12 @@ div:not(.simple-notifications) > .notification{
                 right: 10px;
                 top: 8px;
             }
-            div.notification-actions {
-                display: block !important;
-                width: 30px;
-            }
             div.notification-date {
                 margin-right: 30px;
             }
+        }
+        .notification div.notification-actions:not(.opened) {
+          width: 30px;
         }
     }
 }
