@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  display: flex;
+  color: #002D38;
+}
+.container {
+  width: calc(100% - 300px);
+  margin: 50px 50px 50px 350px;
+}
+.container__title {
+  margin: -50px -50px 50px -50px;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding: 150px 50px;
+  background-color: #4bafd5;
+  background-image: url(../images/bg.svg);
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+.container img {
+  border: 1px solid #ccc;
+}
+.container a {
+  color: #4bafd5;
+}
+h1 {
+  font-size: 40px;
+  color: #4bafd5;
+}
+h1::after {
+  content: "";
+  border-top: 1px solid #4bafd5;
+  display: block;
+  margin-top: -30px;
+}
+h1 span {
+  background-color: white;
+  padding-right: 10px;
+}
+h2 {
+  font-size: 30px;
+  margin-top: 50px;
+}
+img {
+  max-width: 100%;
+}
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+table.full {
+  width: 100%;
+}
+table th {
+  background-color: #4bafd5;
+  padding: 25px;
+}
+table th + th {
+  border-left: 1px solid #2d98c0;
+}
+table tr + tr {
+  border-top: 1px solid #ccc;
+}
+table tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+table td {
+  padding: 10px 20px;
+}
+table td + td {
+  border-left: 1px solid #ccc;
+}
+table td:first-of-type {
+  font-weight: bold;
+}
+table td img {
+  border: none!important;
+  color: #ddd;
+  vertical-align: middle;
+}
+.logo {
+  padding: 35px 0 0 25px;
+}
+nav {
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  background-color: #F2F2F2;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.35);
+  width: 300px;
+  z-index: 1000;
+}
+nav a {
+  display: block;
+  padding: 10px 25px;
+  color: #555;
+  text-decoration: none;
+}
+nav a:first-child {
+  margin-top: 25px;
+  color: #333;
+}
+nav a:not(:first-child) {
+  padding-left: 50px;
+}
+nav a:hover {
+  color: white;
+  background-color: #4bafd5;
+}
+nav strong {
+  font-size: 20px;
+}
+iframe {
+  width: 100%;
+  min-height: 350px;
+  border: none;
+  overflow: hidden!important;
+}
+code,
+.path {
+  vertical-align: middle;
+  background-color: #333;
+  padding: 5px 15px;
+  color: #ccc;
+  font-weight: normal;
+  border-radius: 5px;
+}
+code {
+  font-size: 14px;
+}
+.path {
+  font-size: 16px;
+}
+.hljs {
+  font-size: 14px;
+  padding: 0 25px;
+}

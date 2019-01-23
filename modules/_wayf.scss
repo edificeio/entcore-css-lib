@@ -37,12 +37,6 @@ body.wayf{
         font-size: 2.0vh;
     }
 
-    a{
-        color: $white!important;
-        font-size: 1.8vh;
-        line-height: 80%;
-    }
-
     #credentials-content{
         position: relative;
         max-width: 900px;
@@ -65,6 +59,13 @@ body.wayf{
         min-width: unset;
         float: unset;
         width: unset;
+        box-shadow: unset;
+    }
+
+    .dominos .item a{
+        color: $white!important;
+        font-size: 1.8vh;
+        line-height: 80%;
     }
 
     .dominos .item .domino {

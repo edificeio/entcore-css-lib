@@ -107,6 +107,13 @@
 	position: relative;
 }
 
+@mixin square($size) {
+	width: $size;
+	min-width: $size!important;
+	max-width: $size!important;
+	height: $size;
+}
+
 ////////    FONTS
 
 @mixin fonticon {
@@ -195,6 +202,8 @@
 
   height: $icon-size;
   width: $icon-size;
+  min-height: $icon-size;
+  min-width: $icon-size;
   background-image: url("#{$icons-root}#{$icon-name}#{$icons-extension}");
   background-repeat: no-repeat;
   background-position: center;
@@ -293,6 +302,7 @@
 	.display-more{
 		background: #eee;
 		text-align: center;
+		list-style-type: none;
 	}
 	ul{
 		padding: 10px 0;
@@ -359,6 +369,34 @@
 	border-width: 0 ($size*0.6) $size ($size*0.6);
 	border-color: transparent transparent $color transparent;
 }
+
+@mixin multiline-ellipsis ($max-lines: 1, $line-height: 1.5em) {
+	overflow: hidden;
+	position: relative; 
+	line-height: $line-height;
+	max-height: ($line-height * $max-lines);
+	padding-right: 1em;
+	&:before {
+		content: '...';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		width: 1em;
+		height: 1em;
+		margin-top: ($line-height * 0.3);
+		background: $white;
+	}
+	& * {
+		word-wrap: break-word;
+		display: inline;
+	}
+}
+
 
 ///////
 

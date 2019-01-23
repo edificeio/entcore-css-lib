@@ -1,19 +1,32 @@
 .emptyscreen {
-    padding-top: 90px;
     text-align: center;
 
     .emptyscreen-header {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .emptyscreen-image {
-        max-width: 50%;
-        max-height: 40vh;
+        max-width: 40%;
+        max-height: 30vh;
+        margin-top: 35px;
+        margin-bottom: 20px;
     }
 
     .emptyscreen-footer {
-        font-size: 18px;
+        font-size: 14px;
         line-height: 1.5;
-        color: $darkest-grey;
+        color: $solid-grey;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: $fat-mobile) {
+    .emptyscreen {
+        .emptyscreen-header {
+            font-size: 18px;
+        }
+
+        .emptyscreen-footer {
+            font-size: 12px;
+        }
     }
 }

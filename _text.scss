@@ -1,6 +1,13 @@
 a{
 	color: $accent;
 	@include run-transition(color);
+
+	&.hover-icon:hover {
+		i:before {
+			@include run-transition(color);
+			color: $accent !important;
+		}
+	}
 }
 
 span.no-style{
@@ -180,6 +187,10 @@ h2 > i.back{
 
 .white-text {
 	color: $white;
+}
+
+.text-word-break {
+	word-wrap: break-word;
 }
 
 

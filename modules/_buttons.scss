@@ -206,10 +206,19 @@ button.select-button {
     }
 
     &:not(.selected):hover {
-        color: $text-light;
-    }
+        color: $primary;
+	}
+	
+	&[disabled] {
+		background-color: $light-grey !important;
+		color: $grey !important;
+		cursor: default;
+	}
 }
-
+.disabled-color,
+i.disabled-color::before {
+	color: $grey !important
+}
 .is-light {
     padding: 10px;
 }

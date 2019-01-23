@@ -24,17 +24,6 @@
     &:hover, &:active {
         box-shadow: 2px 2px 4px 0px $shadow-darker inset;
     }
-    &.selected {
-        box-shadow: 2px 2px 1px 0px  $shadow;
-        background: $primary;
-        i{
-            &:hover{
-                &:before{
-                    color: $black!important;
-                }
-            }
-        }
-    }
 }
 
 .chip.multiselect{
@@ -55,6 +44,9 @@
         padding-bottom: 0;
         line-height: 27px;
         cursor: default;
+        &[action-icon] {
+            cursor: pointer;
+        }
         span{
             &.round {
                 margin-top: 4px;
@@ -80,7 +72,20 @@
             }
         }
     }
-    &.removable { 
+    &.selected {
+        box-shadow: 2px 2px 1px 0px  $shadow;
+        background: $primary;
+        
+        span.cell-ellipsis, i:before {
+            color: $white !important;
+        }
+        span.cell-ellipsis {
+            a {
+                color: $white !important;
+            }
+        }
+    }
+    &.removable {
         i {
             &:before {
                 font-size: 10px;
@@ -100,7 +105,7 @@
             }
         }
     }
-    &.movable { 
+    &.movable {
         i{
             &:before{
                 font-size: 14px;
@@ -131,7 +136,6 @@
     body{
         .chip, contact-chip{
             margin: 10px auto;
-            display: block;
             width: 75%;
             max-width: 200px;
             line-height: 28px;

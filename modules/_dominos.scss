@@ -10,11 +10,6 @@
 		@include cell;
 		padding: 5px;
 		overflow: hidden;
-		box-shadow: 0 1px 3px $shadow;
-
-		&:hover {
-			box-shadow: 0 1px 3px $shadow-darker;
-		}
 
 		.domino{
 			border: 1px solid $medium-grey;
@@ -30,12 +25,13 @@
 					width: 100%;
 					top: 0;
 					left: 0;
+					background: $white;
 
 					&.domino-group {
 						position: static;
-						width: 40%;
-						margin-top: 10px;
+						width: 60%;
 						border-width: 3px;
+						margin-top: 20px;
 					}
 				}
 			}
@@ -60,9 +56,12 @@
 				}
 			}
 			.center {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				font-size: 14px !important;
 				color: $white;
-				word-spacing: 100vw;
+				height: 46px;
 			}
 			.bottom{
 				@include fixed-block;
@@ -84,6 +83,15 @@
 					.bottom-locked {
 						i {
 							font-size: 22px;
+						}
+
+						.send-mail::before {
+							color: $primary;
+						}
+						.send-mail:hover{
+							&::before{
+								color: $accent;
+							}
 						}
 					}
 				}
@@ -151,4 +159,10 @@
     .domino:hover {
         box-shadow: 0 2px 6px $shadow-darker;
     }
+}
+
+@media screen and (min-width: $wide-screen) {
+    .dominos-infos {
+        margin-top: 82px;
+	}
 }

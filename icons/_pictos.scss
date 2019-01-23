@@ -35,6 +35,18 @@ i.loading{
     }
 }
 
+i.loadingCopy{
+    font-size: 350%;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+i.loadingMove{
+    font-size: 350%;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
 i.back{
     @include fonticon;
     &::before{
@@ -44,9 +56,8 @@ i.back{
 
 i.forward{
     @include fonticon;
-    transform: rotate(180deg);
     &::before{
-        content: '\e84c';
+        content: '\e867';
     }
 }
 
@@ -99,10 +110,10 @@ i.properties{
     }
 }
 
-i.help-large, i.help.cas, i.help{
+i.help-large, i.help.cas, i.help, i.navbar-help{
     @include fonticon;
 }
-i.help-large::before, i.type.help::before, i.help::before{
+i.help-large::before, i.type.help::before, i.help::before, i.navbar-help::before{
     content: '\e835';
     cursor: pointer;
 }
@@ -198,7 +209,7 @@ i.person{
 
 i.send-mail{
     @include fonticon;
-    margin: 7px;
+    margin-right: 7px;
     @include run-transition(background);
 }
 i.send-mail::before{
@@ -228,7 +239,7 @@ i.send-mail:hover{
 
 i.add-favorite {
     @include fonticon;
-    margin: 7px;
+    margin-right: 7px;
     @include run-transition(background);
 }
   
@@ -245,6 +256,11 @@ i.add-favorite::before {
 i.add-favorite:hover{
     &::before{
         color: $accent;
+    }
+}
+i.add-favorite.no-hover:hover {
+    &::before{
+        color: $primary;
     }
 }
 .action-item{
@@ -265,4 +281,15 @@ i.add-favorite:hover{
 
 .action-item:hover span{
     color: $accent;
+}
+		
+.icon-off {
+    opacity: 0.3;
+}
+
+i.spinner, .spinner > i{
+    @include fonticon;
+    &::before {
+		content: "\e85a";
+    }
 }

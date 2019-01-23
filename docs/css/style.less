@@ -1,0 +1,166 @@
+// COLORS
+@cyan:   #4bafd5;
+@green:  #46bfaf;
+@yellow: #ecbe30;
+@orange: #FF8500;
+@red:    #e13a3a;
+@pink:   #b930a2;
+@purple: #763294;
+@indigo: #1a22a2;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	line-height: 1.8;
+	margin: 0;
+	display: flex;
+	color: #002D38;
+}
+
+.container {
+	width: calc(~"100% - 300px");
+	margin: 50px 50px 50px 350px;
+	&__title {
+		margin: -50px -50px 50px -50px;
+		color: white;
+		font-size: 50px;
+		text-align: center;
+		padding: 150px 50px;
+		background-color: @cyan;
+		background-image: url(../images/bg.svg);
+		text-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+	}
+	img {
+		border: 1px solid #ccc;
+	}
+	a {
+		color: @cyan;
+	}
+}
+
+h1 {
+	font-size: 40px;
+	color: @cyan;
+	&::after {
+		content: "";
+		border-top: 1px solid @cyan;
+		display: block;
+		margin-top: -30px;
+	}
+	span {
+		background-color: white;
+		padding-right: 10px;
+	}
+}
+
+h2 {
+	font-size: 30px;
+	margin-top: 50px;
+}
+
+img {
+	max-width: 100%;
+}
+
+table {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	&.full {
+		width: 100%;
+	}
+	th {
+		background-color: @cyan;
+		padding: 25px;
+		& + th {
+			border-left: 1px solid darken(@cyan, 10%);
+		}
+	}
+	& tr + tr {
+		border-top: 1px solid #ccc;
+	}
+	tr:nth-of-type(odd) {
+		background-color: #f9f9f9;
+	}
+	td {
+		padding: 10px 20px;
+		& + td {
+			border-left: 1px solid #ccc;
+		}
+		&:first-of-type {
+			font-weight: bold;
+		}
+		img {
+			border: none!important;
+			color: #ddd;
+			vertical-align: middle;
+		}
+	}
+}
+
+.logo {
+	padding: 35px 0 0 25px;
+}
+
+nav {
+	height: 100vh;
+	overflow-y: auto;
+	position: fixed;
+	background-color: #F2F2F2;
+	box-shadow: 1px 1px 20px rgba(0,0,0,0.35);
+	width: 300px;
+	z-index: 1000;
+	a {
+		display: block;
+		padding: 10px 25px;
+		color: #555;
+		text-decoration: none;
+		&:first-child {
+			margin-top: 25px;
+			color: #333;
+		}
+		&:not(:first-child) {
+			padding-left: 50px;
+		}
+		&:hover {
+			color: white;
+			background-color: @cyan;
+		}
+	}
+	strong {
+		font-size: 20px;
+	}
+}
+
+iframe {
+	width: 100%;
+	min-height: 350px;
+	border: none;
+}
+
+code,
+.path {
+	vertical-align: middle;
+	background-color: #333;
+	padding: 5px 15px;
+	color: #ccc;
+	font-weight: normal;
+	border-radius: 5px;
+}
+
+code {
+	font-size: 14px;
+}
+
+.path {
+	font-size: 16px;
+}
+
+.hljs {
+	font-size: 14px;
+	padding: 0 25px;
+}

@@ -35,13 +35,18 @@
 	&.f-row{
 		flex-direction: row;
 	}
+	&.f-wrap {
+		flex-wrap: wrap;
+	}
 
 	.flex-all-remains{
 		flex: 1;
 	}
 }
 
-
+.flex-one {
+	flex: 1;
+}
 .fixed{
 	@include absolute;
 }
@@ -49,6 +54,9 @@
 	position: relative;
 }
 
+.no-shrink {
+	flex-shrink: 0;
+}
 
 .v-center-container{
 	display: table;

@@ -7,7 +7,9 @@
 	}
 }
 [ng-click], [data-ng-click], [call], [complete-click]{
-	cursor: pointer;
+	&:not([disabled]) {
+		cursor: pointer;
+	}
 }
 
 [data-reload]{
@@ -18,4 +20,8 @@
 }
 [sortable-element].animated{
 	@include run-transition(margin-top);
+}
+
+.cursor-notallowed{
+	cursor: not-allowed;
 }
