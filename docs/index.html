@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles/hybrid.css">
+		<script src="highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<link rel="stylesheet" href="css/style.css">
+		<title>ODE CSS Framework</title>
+	</head>
+	<body>
+		<nav>
+			<div class="sticky">
+				<img class="logo" src="images/logo.svg" alt="Logo ODE">
+				<section>
+					<a href="#elements"><strong>Elements</strong></a>
+					<a href="#typography">Typography</a>
+					<a href="#colors">Colors</a>
+					<a href="#tables">Tables</a>
+					<a href="#buttons">Buttons</a>
+					<a href="#forms">Forms</a>
+					<a href="#font-icon">Font-icon</a>
+					<a href="#label">Labels</a>
+				</section>
+				<section>
+					<a href="#layouts"><strong>Layouts</strong></a>
+					<a href="#flexbox">Flexbox grid</a>
+					<a href="#responsive">Responsive</a>
+					<a href="#navbar">Navbar</a>
+				</section>
+				<section>
+					<a href="components"><strong>Components</strong></a>
+					<a href="#accordions">Accordions</a>
+					<a href="#alphabetical">Alphabetical</a>
+					<a href="#apps-view">Apps view</a>
+					<a href="#articles">Articles</a>
+					<a href="#assistant">Assistant</a>
+					<a href="#badge">Badge</a>
+					<a href="#bubble-container">Bubble container</a>
+					<a href="#cards">Cards</a>
+					<a href="#checkboxes">Checkboxes</a>
+					<a href="#chips">Chips</a>
+					<a href="#color-picker">Color picker</a>
+					<a href="#dominos">Dominos</a>
+					<a href="#dots-menu">Dots menu</a>
+					<a href="#dropdown">Dropdown</a>
+					<a href="#dropdown-buttons">Dropdown buttons</a>
+					<a href="#embedder">Embedder</a>
+					<a href="#explorer">Explorer</a>
+					<a href="#flashmsg">Flashmsg</a>
+					<a href="#forms">Forms</a>
+					<a href="#help">Help</a>
+					<a href="#icons-view">Icons view</a>
+					<a href="#illustrated-links">Illustrated links</a>
+					<a href="#illustrated-list">Illustrated list</a>
+					<a href="#images">Images</a>
+					<a href="#infotips">Infotips</a>
+					<a href="#letter-picker">Letter picker</a>
+					<a href="#lightbox">Lightbox</a>
+					<a href="#"></a>
+				</section>
+			</div>
+		</nav>
+		<div class="container">
+			<h1 class="container__title">ODE CSS Documentation</h1>
+			<section id="elements">
+				<h1><span>Elements</span></h1>
+
+				<h2 id="typography">Typography</h2>
+				<img src="images/font-roboto.png" alt="Roboto font">
+				<h3>Web Content Accessibility Guidelines (WCAG)</h3>
+				<p>The minimum size of typography is 14px. If in doubt, 16px font with 1.5 line height is pretty good safe for body copy.</p>
+				<p>The medium level of contrast is implemented : WCAG AA. Take a look at our color guidelines !</p>
+				<p>As much as possible, using multiples of 6 to define our spacing is a great way to achieve vertical rhythm (ex : Title { line-height = 30px}, body { line-height = 24px})</p>
+
+				<h2 id="colors">Colors</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Color</th>
+							<th>Name color</th>
+							<th>Hexadecimal</th>
+						</tr>
+					</thead>
+					<tr>
+						<td><img src="images/color/colorscheme-cyan.png" alt="Cyan"></td>
+						<td><code>$cyan</code></td>
+						<td>#4bafd5</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-green.png" alt="Green"></td>
+						<td><code>$green</code></td>
+						<td>#46bfaf</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-yellow.png" alt="Yellow"></td>
+						<td><code>$yellow</code></td>
+						<td>#ecbe30</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-orange.png" alt="Orange"></td>
+						<td><code>$orange</code></td>
+						<td>#ff8500</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-red.png" alt="Red"></td>
+						<td><code>$red</code></td>
+						<td>#e13a3a</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-pink.png" alt="Pink"></td>
+						<td><code>$pink</code></td>
+						<td>#b930a2</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-purple.png" alt="Purple"></td>
+						<td><code>$purple</code></td>
+						<td>#763294</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-indigo.png" alt="Indigo"></td>
+						<td><code>$indigo</code></td>
+						<td>#1a22a2</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-white.png" alt="White"></td>
+						<td><code>$white</code></td>
+						<td>#ffffff</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-lightest-grey.png" alt="Lightest grey"></td>
+						<td><code>$lightest-grey</code></td>
+						<td>#f9f9f9</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-light-grey.png" alt="Light grey"></td>
+						<td><code>$light-grey</code></td>
+						<td>#F0F0F0</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-neutral-grey.png" alt="Neutral grey"></td>
+						<td><code>$neutral-grey</code></td>
+						<td>#dddddd</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-medium-grey.png" alt="Medium grey"></td>
+						<td><code>$medium-grey</code></td>
+						<td>#cccccc</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-solid-grey.png" alt="Solid grey"></td>
+						<td><code>$solid-grey</code></td>
+						<td>#aaaaaa</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-grey.png" alt="Grey"></td>
+						<td><code>$grey</code></td>
+						<td>#555555</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-darkest-grey.png" alt="Darkest grey"></td>
+						<td><code>$darkest-grey</code></td>
+						<td>#333333</td>
+					</tr>
+					<tr>
+						<td><img src="images/color/colorscheme-black.png" alt="Black"></td>
+						<td><code>$black</code></td>
+						<td>#2222222</td>
+					</tr>
+				</table>
+
+				<h2 id="buttons">Buttons</h2>
+				<table class="full">
+					<thead>
+						<tr>
+							<th>Button type</th>
+							<th>Class to apply</th>
+							<th>State initial</th>
+							<th>State hover</th>
+							<th>State inactive</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>Button primary</td>
+						<td><code>???</code></td>
+						<td><img src="images/button-main.png" alt="Button primary"></td>
+						<td><img src="images/button-main--hover.png" alt="Button primary hover"></td>
+						<td><img src="images/button-main--inactive.png" alt="Button primary inactive"></td>
+					</tr>
+					<tr>
+						<td>Button secondary</td>
+						<td><code>.classic-link</code></td>
+						<td><img src="images/button-secondary.png" alt="Button secondary"></td>
+						<td><img src="images/button-secondary--hover.png" alt="Button secondary hover"></td>
+						<td><img src="images/button-secondary--inactive.png" alt="Button secondary inactive"></td>
+					</tr>
+					<tr>
+						<td>Button tertiary</td>
+						<td><code>.comment</code></td>
+						<td><img src="images/button-tertiary.png" alt="Button tertiary"></td>
+						<td><img src="images/button-tertiary--hover.png" alt="Button tertiary hover"></td>
+						<td><img src="images/button-tertiary--inactive.png" alt="Button tertiary inactive"></td>
+					</tr>
+					<tr>
+						<td>Button quartenary</td>
+						<td><code>???</code></td>
+						<td><img src="images/button-quartenary.png" alt="Button quartenary"></td>
+						<td><img src="images/button-quartenary--hover.png" alt="Button quartenary hover"></td>
+						<td><img src="images/button-quartenary--inactive.png" alt="Button quartenary inactive"></td>
+					</tr>
+				</table>
+			</section>
+			<section id="layouts">
+				<h1><span>Layouts</span></h1>
+
+				<h2>Breakpoints</h2>
+				<p><code>$wide-screen: 1200px;</code>Beginning wide desktop screen</p>
+				<p><code>$tablette: 800px;</code> Beginning landscape tablet and / or small desktop screen</p>
+				<p><code>$small-tablette: 650px;</code> Beginning large tablet portrait</p>
+				<p><code>$fat-mobile: 550px;</code> Beginning small tablet portrait</p>
+				<p><code>$small-mobile: 420px;</code> Beginning fat mobile portrait</p>
+
+				<h2>Flexbox grid</h2>
+				<p>Coming soon !</p>
+
+				<h2>Responsive</h2>
+				<p>Coming soon !</p>
+
+				<h2>Navbar</h2>
+				<p>Coming soon !</p>
+			</section>
+			<section id="components">
+				<h1 id="components"><span>Components</span></h1>
+
+				<h2 id="accordions">Accordions</h2>
+				<iframe src="components/accordion.html"></iframe>
+
+				<h2 id="alphabetical">Alphabetical</h2>
+				<p>Obsolète</p>
+				<iframe src="components/alphabetical.html"></iframe>
+
+				<h2 id="apps-view">Apps view</h2>
+				<iframe scrolling="no" src="components/apps-view.html"></iframe>
+
+				<h2 id="articles">Articles</h2>
+				<!-- <iframe src="components/articles.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="assistant">Assistant</h2>
+				<!-- <iframe src="components/assistant.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="badge">Badge</h2>
+				<!-- <iframe src="components/badge.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="bubble-container">Bubble container</h2>
+				<!-- <iframe src="components/bubble-container.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="cards">Cards</h2>
+				<iframe src="components/cards.html"></iframe>
+
+				<h2 id="checkboxes">Checkboxes</h2>
+				<iframe height="100" src="components/checkboxes.html"></iframe>
+
+				<h2 id="chips">Chips</h2>
+				<iframe src="components/chips.html"></iframe>
+
+				<h2 id="color-picker">Color picker</h2>
+				<iframe src="components/color-picker.html"></iframe>
+
+				<h2 id="dominos">Dominos</h2>
+				<iframe src="components/dominos.html"></iframe>
+
+				<h2 id="dots-menu">Dots menu</h2>
+				<!-- <iframe src="components/dots-menu.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="dropdown">Dropdown</h2>
+				<!-- <iframe src="components/dropdown.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="dropdown-buttons">Dropdown buttons</h2>
+				<!-- <iframe src="components/dropdown-buttons.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="embedder">Embedder</h2>
+				<!-- <iframe src="components/embedder.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="explorer">Explorer</h2>
+				<iframe src="components/explorer.html"></iframe>
+
+				<h2 id="flashmsg">Flashmsg</h2>
+				<!-- <iframe src="components/flashmsg.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="forgot-panel">Forgot panel</h2>
+				<!-- <iframe src="components/forgot-panel.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="forms">Forms</h2>
+				<iframe src="components/forms.html"></iframe>
+
+				<h2 id="help">Help</h2>
+				<iframe src="components/help.html"></iframe>
+
+				<h2 id="icons-view">Icons view</h2>
+				<iframe src="components/icons-view.html"></iframe>
+
+				<h2 id="illustrated-links">Illustrated links</h2>
+				<iframe src="components/illustrated-links.html"></iframe>
+
+				<h2 id="illustrated-list">Illustrated list</h2>
+				<!-- <iframe src="components/illustrated-list.html"></iframe> -->
+
+				<h2 id="images">Images</h2>
+				<!-- <iframe src="components/images.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="infotips">Infotips</h2>
+				<iframe src="components/infotips.html"></iframe>
+
+				<h2 id="infotuto">Info tuto (obsolète ?)</h2>
+				<!-- <iframe src="components/info-tuto.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="letter-picker">Letter picker</h2>
+				<!-- <iframe src="components/letter-picker.html"></iframe> -->
+				<p>Coming soon !</p>
+
+				<h2 id="lightboxr">Lightbox</h2>
+				<iframe src="components/lightbox.html"></iframe>
+
+				<!-- _accordions.scss _alphabetical.scss _apps-view.scss _articles.scss _assistant.scss _badges.scss _bubble-container.scss _buttons.scss _buttons-set.scss _cards.scss _checkboxes-custom.scss _chips.scss _color-picker.scss _dominos.scss _dots-menu.scss _dropdown-buttons.scss _drop-down.scss _embedder.scss _explorer.scss _flashmsg.scss _forgot-panel.scss _forms.scss _help.scss _icons-view.scss _illustrated-links.scss _illustrated-list.scss _images.scss _infotips.scss _info-tuto.scss _letter-picker.scss _lightbox.scss /// _lists.scss _loading-list.scss _loading-panel.scss _mailbox.scss _modules.scss _multi-combo.scss _navigations.scss _notifications.scss _panel.scss _pills.scss _pulsar.scss _recipient-list.scss _ribbon.scss _schedule.scss _select-blocks.scss _select-list.scss _side-panel.scss _sniplets.scss _sticky-row.scss _tabs.scss _timeline-story.scss _toaster.scss _toggle-panel.scss _tooltips.scss _widgets.scss -->
+			</section>
+		</div>
+	</body>
+</html>
