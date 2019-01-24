@@ -20,7 +20,10 @@
 
 }
 
-.chip, contact-chip {
+.chip,
+contact-chip,
+.chip.selected,
+contact-chip.selected {
     &:hover, &:active {
         box-shadow: 2px 2px 4px 0px $shadow-darker inset;
     }
