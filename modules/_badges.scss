@@ -18,3 +18,16 @@ nav.vertical{
 .label-badge{
 	display: inline-block;
 }
+
+.badge-info{
+	border-radius: 10px;
+	background: $primary;
+	color: $white;
+	font-weight: bold;
+	padding: 3px 5px;
+	display: inline-block;
+	text-align: center;
+	text-shadow: 0px 0px 2px rgba($black, 0.5);
+	line-height: 12px;
+	margin-left: 6px;
+}
