@@ -525,7 +525,7 @@ div.invisible-content{
 /*HEIGHT**/
 .height-minus200 {
 	height: calc(100vh - 200px);
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 .height-minus300 {
 	height: calc(100vh - 300px);
