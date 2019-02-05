@@ -17233,7 +17233,7 @@ calendar-daily-events .days .day .daily-events .item .content {
  left:10px;
  z-index:9999
 }
-.changeDisplayModeButtons button:not(.cyan) {
+.changeDisplayModeButtons button.grey:not(.cyan) {
  background-color:#aaa
 }
 .next-previous {
