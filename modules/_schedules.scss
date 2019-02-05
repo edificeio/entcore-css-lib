@@ -8,9 +8,7 @@
 	}
 	.next-timeslots {
 		width: 100%;
-		position: absolute;
-		left: 0;
-		bottom: 0;
+		position: relative;
 		z-index: 800;
 		height: 17px;
 	}
@@ -269,24 +267,24 @@
 }
 
 .calendar-current-week {
-	position: absolute;
-	top: -72px;
-	height: 46px;
 	background: #efefef;
 	width: 100%;
 	text-align: right;
 	font-weight: bold;
-	line-height: 46px;
 	padding-right: 8px;
+	line-height: 46px;
+	max-height: 46px;
 	box-sizing: border-box;
+	.calendarFiltersButtons {
+		float: left;
+		max-height: 46px;
+	}
 }
 
-.changeDisplayModeButtons {
-	position: absolute;
-	top: -68px;
-	left: 10px;
-	z-index: 9999;
+.calendarFiltersButtons{
+	button {margin-bottom:0;}
 }
+
 
 lightbox.schedules-more-items section.lightbox > div.content {
 	max-width: 300px;
