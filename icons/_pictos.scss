@@ -47,6 +47,11 @@ i.loadingMove{
     margin-top: 20px;
 }
 
+i.loadingExport{
+    font-size: 450%;
+    margin-top: 50px;
+}
+
 i.back{
     @include fonticon;
     &::before{
