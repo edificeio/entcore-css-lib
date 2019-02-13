@@ -129,4 +129,15 @@ section.lightbox{
 			}
 		}
 	}
+	.search-pagination{
+		input{
+			padding-right: 45px!important;
+			padding-left: 45px!important;
+			margin: 0!important;
+			box-sizing: border-box;
+		}
+		.show-close{
+			position: absolute;
+		}
+	}
 }
