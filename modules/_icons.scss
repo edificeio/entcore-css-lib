@@ -1,7 +1,4 @@
 
-
-
-
 i{
 	font-style: normal;
 }
@@ -21,21 +18,6 @@ p{
 		width: 25px !important;
 		float: none !important;
 	}
-}
-
-i.show-details{
-	float:right !important;
-	margin: 1px;
-}
-
-i.show-icons{
-	float: right;
-	margin: 1px;
-}
-
-i.show-list{
-	float: right;
-	margin: 1px;
 }
 
 i.home{
@@ -58,7 +40,6 @@ i.liquid{
 	height: auto;
 	background-size: 100% auto;
 }
-
 
 i.drag-anchor{
 	@include icon(glyphicons_186_move, 15px);
@@ -113,11 +94,9 @@ i.important::after{
 	position: relative;
 }
 
-
 .left-arrow.disabled, .right-arrow.disabled{
 	color: $medium-grey;
 }
-
 
 //FLAGS
 
