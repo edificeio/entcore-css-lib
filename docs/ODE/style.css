@@ -9325,6 +9325,8 @@ recorder .controls i:first-child {
  top:15px
 }
 .week-switcher .date-picker-icon {
+ position: absolute;
+ margin-bottom: 25px;
  margin-right:8px
 }
 .calendar-current-week {
