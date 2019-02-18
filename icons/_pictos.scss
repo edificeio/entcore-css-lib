@@ -247,10 +247,10 @@ i.add-favorite {
     margin-right: 7px;
     @include run-transition(background);
 }
-  
+
 i.add-favorite::before {
     content: '\e80c';
-    color: $white;  
+    color: $white;
 }
 
 .domino{
@@ -287,7 +287,7 @@ i.add-favorite.no-hover:hover {
 .action-item:hover span{
     color: $accent;
 }
-		
+
 .icon-off {
     opacity: 0.3;
 }
@@ -297,4 +297,11 @@ i.spinner, .spinner > i{
     &::before {
 		content: "\e85a";
     }
+}
+
+i.folder-close {
+  @include fonticon;
+  &::before {
+    content: "\e81b";
+  }
 }
