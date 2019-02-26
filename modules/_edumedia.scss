@@ -1,0 +1,210 @@
+/*EDUMEDIA EXPLORER ELEMENT ROOT*/
+edumedia-explorer-element.root{
+    width: 22%;
+    text-align: center;
+    margin: 1% !important;
+    overflow: hidden;
+    height: 100px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    border: solid 2px grey;
+}
+edumedia-explorer-element.root > div{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+edumedia-explorer-element:hover{
+    box-shadow: 0 2px 20px rgba(0,0,0,.3);
+}
+edumedia-explorer-element.root:nth-child(2) {
+  border-color: #228fcc;
+    color: #228fcc;
+}
+edumedia-explorer-element.root:nth-child(3) {
+     border-color: #41a796;
+    color: #41a796;
+}
+
+edumedia-explorer-element.root:nth-child(4) {
+    border-color: #60bf5f;
+    color: #60bf5f;
+}
+
+edumedia-explorer-element.root:nth-child(5){
+  border-color: #7dd628;
+    color: #7dd628;
+}
+edumedia-explorer-element.root:nth-child(6){
+      border-color: #c4b520;
+    color: #c4b520;
+}
+edumedia-explorer-element.root:nth-child(7){
+    border-color: #dd972f;
+    color: #dd972f;
+}
+edumedia-explorer-element.root:nth-child(8){
+    border-color: #dd602c;
+    color: #dd602c;
+}
+edumedia-explorer-element.root:nth-child(9){
+      border-color: #dd2929;
+    color: #dd2929;
+}
+edumedia-explorer-element.root:nth-child(10) {
+  border-color: #228fcc;
+    color: #228fcc;
+}
+edumedia-explorer-element.root:nth-child(11) {
+     border-color: #41a796;
+    color: #41a796;
+}
+
+/*EDUMEDIA EXPLORER ELEMENT FOLDER*/
+
+edumedia-explorer-element.folder {
+    border: solid 1px #228fcc;
+    align-self:stretch;
+    width: 100%;
+    margin: 6px 0px;
+    border-radius: 8px;
+  color:rgb(51, 51, 51);
+  cursor: pointer;
+}
+
+edumedia-explorer-element.folder > div{
+  padding:24px;
+}
+edumedia-explorer-element.folder p::after{
+  margin-left: 12px;
+  font-weight: 700;
+  content:'\0203A'
+}
+
+/*EDUMEDIA EXPLORER ELEMENT MEDIA*/
+edumedia-explorer-element.media{
+    width: 31%;
+    text-align: center;
+    margin: 1% !important;
+    overflow: hidden;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(51, 51, 51);
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+}
+edumedia-explorer-element.media div{
+  display:flex;
+}
+edumedia-explorer-element.media div img{
+  flex:1
+}
+edumedia-explorer-element.media div p{
+  flex:1;
+  padding-top:12px;
+  color:rgb(51, 51, 51);
+  text-align:center;
+}
+edumedia-explorer-element.media.selected{
+  color:#228fcc;
+  border-color: #228fcc;
+    box-shadow: 0 2px 20px rgba(0,0,0,.3);
+}
+edumedia-explorer-element.media.selected p{
+  color:#228fcc;
+}
+
+/*EDUMEDIA EXPLORER*/
+edumedia-explorer > div > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 430px;
+    overflow-y: scroll;
+}
+
+/*EDUMEDIA STACK*/
+.edumedia-header-stack{
+ display: flex;
+ justify-content:space-between;
+ align-items:center;
+ padding: 16px;
+ padding-bottom: 0;
+}
+.edumedia-header-stack header{
+  float: left;
+  padding-right: 4px;
+}
+.edumedia-header-stack header span{
+  padding-right: 4px;
+}
+/*EDUMEDIA TITLE*/
+.edumedia-header-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  padding-top: 16px;
+}
+.edumedia-header-title input{
+  margin-top: 5px;
+}
+.edumedia-header-title h2{
+      font-size: 1.5em !important;
+      font-weight: 600 !important;
+      margin: 0!important;
+      cursor: pointer;
+}
+.edumedia-header-title h2 span{
+  padding-right: 12px
+}
+/*TEXT EDITOR*/
+.edumedia-container{
+ display: inline-block; 
+}
+/*EDUMEDIA FULLSCREEN*/
+#edumedia-fullscreen-lightbox{
+    display: block;
+    z-index: 100001;
+}
+[edumedia-fullscreen-jquery]{
+    position: relative;
+    bottom: 0;
+    left:2px;
+    font-size: 16px !important;
+    margin: 0!important;
+    font-weight: normal;
+    cursor: pointer;
+}
+#edumedia-fullscreen-lightbox .background{
+  background: black;
+  display: block;
+}
+.edumedia-fullscreen-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100002;
+    width: 100%;
+    position: fixed;
+}
+#edumedia-fullscreen-lightbox .close-2x{
+  color: white;
+}
+#edumedia-fullscreen-lightbox .close-lightbox{
+  z-index: 100003;
+}
