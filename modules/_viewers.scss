@@ -19,8 +19,9 @@
 		margin-left: 3px;
 		margin-right: 3px;
 		&.close::before{
-			font-size: 22px;
+			font-size: 28px;
 			float: right;
+			padding-right: 10px;
 		}
 	}
 	.file{
@@ -41,6 +42,7 @@
 
 
 .embedded-viewer.fullscreen{
+	background-color: inherit;
 	position: fixed;
 	z-index: 100101;
 	left: 0;
@@ -48,8 +50,9 @@
 	height: 40px;
 	padding: 0;
 	.controls{
-		line-height: 38px;
+		line-height: 60px;
 		padding-right: 10px;
+		box-shadow: 1px 1px 10px $shadow-light;
 	}
 }
 
@@ -58,9 +61,9 @@
 	z-index: 100001;
 	width: 100%;
 	background: rgba(0,0,0,0.7);
-	top: 40px;
+	top: 60px;
 	left: 0;
-	min-height: calc(100% - 40px);
+	min-height: calc(100vh - 60px);
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +82,7 @@ pdf-viewer{
 	margin-top: 30px;
 	.file-controls, .pagination{
 		position: absolute;
-		top: -72px;
+		top: -70px;
 		i{
 			display: inline-block;
 			font-size: 22px;
