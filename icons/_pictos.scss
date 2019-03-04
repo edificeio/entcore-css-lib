@@ -305,3 +305,12 @@ i.folder-close {
     content: "\e81b";
   }
 }
+
+i.settings-class-large,
+i.settings-class {
+    @include fonticon;
+
+    &::before {
+        content: "\e942";
+    }
+}
