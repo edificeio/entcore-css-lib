@@ -222,3 +222,23 @@ i.disabled-color::before {
 .is-light {
     padding: 10px;
 }
+
+//Big button with icon inside
+.button-big {
+  border-radius: 5px;
+  display: inline-flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 35px 15px;
+  text-align: center;
+  &::before {
+    font-size: 30px;
+    padding: 10px 5px;
+  }
+  i {
+    display: block;
+    font-size: 40px;
+    font-weight: normal;
+    padding: 15px 5px 0;
+  }
+}

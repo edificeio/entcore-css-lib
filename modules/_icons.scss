@@ -107,3 +107,22 @@ $flags: fr, en, pt, es, it, de;
 		background-image: url(../../img/icons/flags/#{nth($flags, $i)}.svg);
 	}
 }
+
+i.users {
+	@include fonticon;
+	&::before {
+    content: '\e822';
+	}
+}
+i.file {
+	@include fonticon;
+	&::before {
+		content: "\e919";
+	}
+}
+i.lock {
+	@include fonticon;
+	&::before {
+		content: "\e860";
+	}
+}
