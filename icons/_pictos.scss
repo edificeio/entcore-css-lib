@@ -314,3 +314,31 @@ i.settings-class {
         content: "\e942";
     }
 }
+
+i.add-page {
+  @include fonticon;
+ &::before {
+    content: "\e90b";
+  }
+}
+
+i.add-user {
+  @include fonticon;
+  &::before {
+    content: "\e937";
+  }
+}
+
+i.card-user {
+  @include fonticon;
+  &::before {
+    content: "\e943";
+  }
+}
+
+i.import-file {
+  @include fonticon;
+  &::before {
+    content: "\e944";
+  }
+}

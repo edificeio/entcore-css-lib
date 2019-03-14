@@ -121,6 +121,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-image: none;
+    font-weight: normal!important;
 }
 
 @mixin placeholder{
