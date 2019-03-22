@@ -342,3 +342,10 @@ i.import-file {
     content: "\e944";
   }
 }
+
+i.file-solid {
+  @include fonticon;
+  &::before {
+    content: "\e945";
+  }
+}
