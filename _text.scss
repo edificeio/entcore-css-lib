@@ -106,11 +106,9 @@ label{
 	white-space: pre-line;
 }
 
-
 .inline{
 	margin: 0;
 }
-
 
 .text-flow{
 	display: inline-block !important;
@@ -161,9 +159,6 @@ strong.cell-ellipsis{
 		font-size: 18px;
 	}
 }
-.single-line{
-
-}
 
 .escape_cke{
 	word-wrap: break-word;
@@ -196,6 +191,9 @@ h2 > i.back{
 	word-wrap: break-word;
 }
 
+.bold {
+	font-weight: bold;
+}
 
 @media screen and (max-width: $tablette) {
 	body{
