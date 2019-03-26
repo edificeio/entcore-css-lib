@@ -349,3 +349,24 @@ i.file-solid {
     content: "\e945";
   }
 }
+
+i.pdf{
+  @include fonticon;
+  &::before {
+    content: "\e857";
+  }
+}
+
+i.xls {
+  @include fonticon;
+  &::before {
+    content: "\e881";
+  }
+}
+
+i.mail-o {
+  @include fonticon;
+  &::before {
+    content: "\e807";
+  }
+}
