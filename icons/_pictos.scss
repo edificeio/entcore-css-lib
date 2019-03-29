@@ -350,14 +350,14 @@ i.file-solid {
   }
 }
 
-i.pdf{
+i.file-pdf{
   @include fonticon;
   &::before {
     content: "\e857";
   }
 }
 
-i.xls {
+i.file-xls {
   @include fonticon;
   &::before {
     content: "\e881";
