@@ -1,62 +1,54 @@
-infotip{
-    position: relative;
-    display: none;
-    i.close{
-        transition: color 250ms ease;
-        cursor: pointer;
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        &:hover{
-            color: $accent;
-        }
+infotip {
+  position: relative;
+  display: none;
+  i.close {
+    transition: color 250ms ease;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    &:hover {
+      color: $accent;
     }
+  }
 }
 
+.alert,
+.warning,
+.info,
+.success {
+  padding: 15px 30px 15px 15px;
+  font-size: 12px;
+  text-align: center;
+	border-radius: 10px;
+  max-width: 100%;
+  i.warning,
+  i.check-circle {
+    border: 0;
+    padding: 0;
+    font-size: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
 
-.alert{
+.alert {
 	color: $warning-color;
 	background: lighten($warning-color, 35%);
-	padding: 7px;
-	font-size: 12px;
-	text-align: center;
-	border-radius: 10px;
-    max-width: 100%;
 }
 
-.warning{
+.warning {
 	color: $warning-color-hover;
 	background: lighten($warning-color-hover, 55%);
-	padding: 7px;
-	font-size: 12px;
-	text-align: center;
-	border-radius: 10px;
-    max-width: 100%;
-
-    i.warning{
-        padding: 0;
-        margin-right: 10px;
-        color: $warning-color;
-        border: 0;
-        font-size: 20px;
-        vertical-align: middle;
-    }
+  i.warning {
+    color: $warning-color;
+  }
 }
 
-.info{
+.info {
 	color: $primary;
 	background: lighten($primary, 35%);
-	padding: 7px;
-	font-size: 12px;
-	text-align: center;
-	border-radius: 10px;
-    max-width: 100%;
-    i.check-circle{
-        padding: 0;
-        margin-right: 10px;
-        color: $primary;
-        border: 0;
-        font-size: 18px;
-        vertical-align: middle;
-    }
+  i.check-circle{
+    color: $primary;
+  }
 }
