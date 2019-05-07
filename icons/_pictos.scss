@@ -370,3 +370,24 @@ i.mail-o {
     content: "\e807";
   }
 }
+
+i.right {
+  @include fonticon;
+  &::before {
+    content: "\e823";
+  }
+}
+
+i.plus {
+  @include fonticon;
+  &::before {
+    content: "\e85e";
+  }
+}
+
+i.cancel {
+  @include fonticon;
+  &::before {
+    content: "\e866";
+  }
+}
