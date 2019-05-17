@@ -17,7 +17,7 @@
 			width: 100%;
 			.top{
 				@include fixed-block;
-	            @include grid-cell-height(11);
+	      @include grid-cell-height(11);
 				@include row;
 				overflow: hidden;
 				img{
@@ -38,7 +38,7 @@
 			.top.domino-group {
 				@include grid-cell-height(9);
 				color: $white;
-				
+
 				.nb-users {
 					span {
 						position: absolute;
@@ -65,21 +65,23 @@
 			}
 			.bottom{
 				@include fixed-block;
-	            @include grid-cell-height(9);
+	      @include grid-cell-height(9);
 				@include row;
 				background: #fff;
 				overflow: hidden;
 				margin-top: 5px;
+				display: flex;
 				div.content{
-					position: absolute;
-					width: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
 					height: 100%;
-					top: 0;
-					left: 0;
-					padding: 5px;
+					width: 100%;
+					margin: auto 0;
+					min-width: 0;
+					padding: 15px;
 					box-sizing: border-box;
 					font-size: 14px;
-
 					.bottom-locked {
 						i {
 							font-size: 22px;
@@ -108,11 +110,9 @@
 	@include ribbon();
 }
 
-
-
 .dominos.fallen{
 	.item{
-		min-width: 290px;
+		min-width: 300px;
 		width: 25%;
 		.domino{
 			.top, .bottom{
