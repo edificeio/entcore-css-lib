@@ -414,7 +414,8 @@ i.public {
   }
 }
 
-i.share {
+i.share,
+i.ic-share {
   @include fonticon;
   &::before {
     content:'\e815';

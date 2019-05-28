@@ -108,12 +108,13 @@
 	@include ribbon();
 }
 
-.dominos.fallen{
-	.item{
+.dominos.fallen {
+	.item {
 		min-width: 300px;
 		width: 25%;
 		.domino{
-			.top, .bottom{
+			.top,
+			.bottom{
 				clear: none;
 				padding-bottom: 0;
 			}
