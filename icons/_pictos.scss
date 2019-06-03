@@ -435,3 +435,16 @@ i.manage {
     content: "\e854";
   }
 }
+
+i.fullscreen-on {
+  @include fonticon;
+  &::before {
+    content: "\e947";
+  }
+}
+i.fullscreen-off {
+  @include fonticon;
+  &::before {
+    content: "\e946";
+  }
+}
