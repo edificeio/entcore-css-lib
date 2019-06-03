@@ -9,6 +9,7 @@
 	top: 40%;
 	opacity: 0.5;
 	@include run-transition(opacity);
+	@include box-shadow(1px,1px,5px);
 }
 
 .flip-right:hover, .flip-left:hover{
