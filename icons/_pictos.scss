@@ -448,3 +448,10 @@ i.fullscreen-off {
     content: "\e946";
   }
 }
+
+i.resize-full {
+  @include fonticon;
+  &::before {
+    content: "\e836";
+  }
+}
