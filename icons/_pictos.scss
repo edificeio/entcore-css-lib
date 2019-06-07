@@ -455,3 +455,11 @@ i.resize-full {
     content: "\e836";
   }
 }
+
+i.dico,
+i.dicodelazone-widget-icon {
+  @include fonticon;
+  &::before {
+    content: "\e812";
+  }
+}
