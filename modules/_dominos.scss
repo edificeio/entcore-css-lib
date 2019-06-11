@@ -12,6 +12,8 @@
 		overflow: hidden;
 
 		.domino{
+			background-clip: content-box!important;
+			overflow: hidden;
 			border: 1px solid $medium-grey;
 			@include cell;
 			width: 100%;
@@ -77,8 +79,8 @@
 					width: 100%;
 					margin: auto 0;
 					min-width: 0;
-					padding: 15px;
-					box-sizing: border-box;
+					padding: 10px;
+					box-sizing: content-box;
 					font-size: 14px;
 					.bottom-locked {
 						i {
