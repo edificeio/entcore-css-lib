@@ -172,9 +172,11 @@ nav.vertical, .app-menu{
 				i{
 					display: block;
 					float: right;
-					margin-top: 2px;
 					opacity: 0;
 					@include run-transition(opacity);
+					&.ic-share {
+						opacity: 1!important;
+					}
 				}
 
 				i.arrow{
