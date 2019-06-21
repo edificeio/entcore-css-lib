@@ -217,7 +217,7 @@
 }
 
 // UI ELEMENTS
-@mixin box-shadow($shadow-size-x: 0, $shadow-size-y: 0, $blur-size: 5px) {
+@mixin box-shadow3($shadow-size-x: 0, $shadow-size-y: 0, $blur-size: 5px) {
     box-shadow: $shadow-size-x $shadow-size-y $blur-size $shadow-light;
 }
 
