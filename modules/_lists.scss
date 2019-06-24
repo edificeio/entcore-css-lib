@@ -54,7 +54,7 @@
 		width: 20px;
 		line-height: 20px;
 		text-align: center;
-		@include box-shadow(1px,1px,3px);
+		@include box-shadow3(1px,1px,3px);
 	}
 }
 
