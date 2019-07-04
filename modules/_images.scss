@@ -34,16 +34,16 @@ image-select{
 		transition: color 250ms ease;
 	}
 	i.trash{
-		right: 10px;
-		top: 3px;
+		right: 26px;
+		top: 10px;
 		line-height: 24px;
 		&::before{
 			font-size: 15px;
 		}
 	}
 	i.edit{
-		right: 34px;
-	    top: 4px;
+		right: 52px;
+	    top: 10px;
 		border: none;
 		padding: 0;
 		&::before{
