@@ -13,7 +13,6 @@
 
 		.domino{
 			background-clip: content-box!important;
-			overflow: hidden;
 			border: 1px solid $medium-grey;
 			@include cell;
 			width: 100%;
