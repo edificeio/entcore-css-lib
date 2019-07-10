@@ -1,5 +1,7 @@
 /*EDUMEDIA EXPLORER ELEMENT ROOT*/
 edumedia-explorer-element.root{
+    box-sizing: border-box;
+    padding: 10px;
     width: 22%;
     text-align: center;
     margin: 1% !important;
@@ -13,57 +15,150 @@ edumedia-explorer-element.root{
     border-radius: 8px;
     text-decoration: none;
     border: solid 2px grey;
+    color: grey;
 }
 edumedia-explorer-element.root > div{
-  display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
 edumedia-explorer-element:hover{
-    box-shadow: 0 2px 20px rgba(0,0,0,.3);
+    box-shadow: 0 2px 10px $shadow-light;
+}
+edumedia-explorer-element.root:nth-child(1) {
+    border-color: #228fcc;
+    color: #228fcc;
+    &:hover {
+      border-color: lighten(#228fcc, 10%);
+      background-color: lighten(#228fcc, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#228fcc, 5%);
+      background-color: darken(#228fcc, 5%);
+    }
 }
 edumedia-explorer-element.root:nth-child(2) {
-  border-color: #228fcc;
-    color: #228fcc;
-}
-edumedia-explorer-element.root:nth-child(3) {
-     border-color: #41a796;
+    border-color: #41a796;
     color: #41a796;
+    &:hover {
+      border-color: lighten(#41a796, 10%);
+      background-color: lighten(#41a796, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#41a796, 5%);
+      background-color: darken(#41a796, 5%);
+    }
 }
 
-edumedia-explorer-element.root:nth-child(4) {
+edumedia-explorer-element.root:nth-child(3) {
     border-color: #60bf5f;
     color: #60bf5f;
+    &:hover {
+      border-color: lighten(#60bf5f, 10%);
+      background-color: lighten(#60bf5f, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#60bf5f, 5%);
+      background-color: darken(#60bf5f, 5%);
+    }
 }
 
-edumedia-explorer-element.root:nth-child(5){
-  border-color: #7dd628;
+edumedia-explorer-element.root:nth-child(4){
+    border-color: #7dd628;
     color: #7dd628;
+    &:hover {
+      border-color: lighten(#7dd628, 10%);
+      background-color: lighten(#7dd628, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#7dd628, 5%);
+      background-color: darken(#7dd628, 5%);
+    }
+}
+edumedia-explorer-element.root:nth-child(5){
+    border-color: #c4b520;
+    color: #c4b520;
+    &:hover {
+      border-color: lighten(#c4b520, 10%);
+      background-color: lighten(#c4b520, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#c4b520, 5%);
+      background-color: darken(#c4b520, 5%);
+    }
 }
 edumedia-explorer-element.root:nth-child(6){
-      border-color: #c4b520;
-    color: #c4b520;
-}
-edumedia-explorer-element.root:nth-child(7){
     border-color: #dd972f;
     color: #dd972f;
+    &:hover {
+      border-color: lighten(#dd972f, 10%);
+      background-color: lighten(#dd972f, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#dd972f, 5%);
+      background-color: darken(#dd972f, 5%);
+    }
 }
-edumedia-explorer-element.root:nth-child(8){
+edumedia-explorer-element.root:nth-child(7){
     border-color: #dd602c;
     color: #dd602c;
+    &:hover {
+      border-color: lighten(#dd602c, 10%);
+      background-color: lighten(#dd602c, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#dd602c, 5%);
+      background-color: darken(#dd602c, 5%);
+    }
 }
-edumedia-explorer-element.root:nth-child(9){
-      border-color: #dd2929;
+edumedia-explorer-element.root:nth-child(8){
+    border-color: #dd2929;
     color: #dd2929;
+    &:hover {
+      border-color: lighten(#dd2929, 10%);
+      background-color: lighten(#dd2929, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#dd2929, 5%);
+      background-color: darken(#dd2929, 5%);
+    }
 }
+
+edumedia-explorer-element.root:nth-child(9) {
+    border-color: #f06595;
+    color: #f06595;
+    &:hover {
+      border-color: lighten(#f06595, 10%);
+      background-color: lighten(#f06595, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#f06595, 5%);
+      background-color: darken(#f06595, 5%);
+    }
+}
+
 edumedia-explorer-element.root:nth-child(10) {
-  border-color: #228fcc;
-    color: #228fcc;
-}
-edumedia-explorer-element.root:nth-child(11) {
-     border-color: #41a796;
-    color: #41a796;
+    border-color: #9775fa;
+    color: #9775fa;
+    &:hover {
+      border-color: lighten(#9775fa, 10%);
+      background-color: lighten(#9775fa, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#9775fa, 5%);
+      background-color: darken(#9775fa, 5%);
+    }
 }
 
 /*EDUMEDIA EXPLORER ELEMENT FOLDER*/
@@ -74,14 +169,14 @@ edumedia-explorer-element.folder {
     width: 100%;
     margin: 6px 0px;
     border-radius: 8px;
-  color:rgb(51, 51, 51);
-  cursor: pointer;
+    color: #333;
+    cursor: pointer;
 }
 
-edumedia-explorer-element.folder > div{
-  padding:24px;
+edumedia-explorer-element.folder > div {
+  padding: 20px;
 }
-edumedia-explorer-element.folder p::after{
+edumedia-explorer-element.folder p::after {
   margin-left: 12px;
   font-weight: 700;
   content:'\0203A'
@@ -118,7 +213,7 @@ edumedia-explorer-element.media div p{
 edumedia-explorer-element.media.selected{
   color:#228fcc;
   border-color: #228fcc;
-    box-shadow: 0 2px 20px rgba(0,0,0,.3);
+    box-shadow: 0 2px 15px $shadow-light;
 }
 edumedia-explorer-element.media.selected p{
   color:#228fcc;
@@ -131,7 +226,7 @@ edumedia-explorer > div > div {
     flex-wrap: wrap;
     justify-content: center;
     max-height: 430px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 /*EDUMEDIA STACK*/
@@ -139,16 +234,16 @@ edumedia-explorer > div > div {
  display: flex;
  justify-content:space-between;
  align-items:center;
- padding: 16px;
+ padding: 20px;
  padding-bottom: 0;
+  header span {
+    padding-right: 4px;
+  }
+  button {
+    overflow: inherit;
+  }
 }
-.edumedia-header-stack header{
-  float: left;
-  padding-right: 4px;
-}
-.edumedia-header-stack header span{
-  padding-right: 4px;
-}
+
 /*EDUMEDIA TITLE*/
 .edumedia-header-title{
   display: flex;
@@ -156,22 +251,23 @@ edumedia-explorer > div > div {
   justify-content: space-between;
   padding: 12px;
   padding-top: 16px;
+  input {
+    margin-top: 5px;
+  }
+  h2 {
+    font-size: 1.5em !important;
+    font-weight: 600 !important;
+    margin: 0!important;
+    cursor: pointer;
+    span {
+      padding-right: 12px
+    }
+  }
 }
-.edumedia-header-title input{
-  margin-top: 5px;
-}
-.edumedia-header-title h2{
-      font-size: 1.5em !important;
-      font-weight: 600 !important;
-      margin: 0!important;
-      cursor: pointer;
-}
-.edumedia-header-title h2 span{
-  padding-right: 12px
-}
+
 /*TEXT EDITOR*/
 .edumedia-container{
- display: inline-block; 
+ display: inline-block;
 }
 /*EDUMEDIA FULLSCREEN*/
 #edumedia-fullscreen-lightbox{
@@ -180,12 +276,13 @@ edumedia-explorer > div > div {
 }
 [edumedia-fullscreen-jquery]{
     position: relative;
-    bottom: 0;
-    left:2px;
+    bottom: 5px;
+    left:5px;
     font-size: 16px !important;
     margin: 0!important;
     font-weight: normal;
     cursor: pointer;
+    color: $cyan;
 }
 #edumedia-fullscreen-lightbox .background{
   background: black;
@@ -207,4 +304,8 @@ edumedia-explorer > div > div {
 }
 #edumedia-fullscreen-lightbox .close-lightbox{
   z-index: 100003;
+}
+
+.tabs header:hover {
+  color: $cyan;
 }

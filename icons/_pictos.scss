@@ -463,3 +463,17 @@ i.dicodelazone-widget-icon {
     content: "\e812";
   }
 }
+
+i.ic-edumedia {
+  @include fonticon;
+  &::before {
+    content: "\e887";
+  }
+}
+
+i.dashboard {
+  @include fonticon;
+  &::before {
+    content: "\e94b";
+  }
+}
