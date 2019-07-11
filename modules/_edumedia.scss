@@ -220,11 +220,11 @@ edumedia-explorer-element.media.selected p{
 }
 
 /*EDUMEDIA EXPLORER*/
-edumedia-explorer > div > div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+edumedia-explorer .edumedia-scrollable-area {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
     max-height: 430px;
     overflow-y: auto;
 }
