@@ -200,13 +200,16 @@ edumedia-explorer-element.media{
 }
 edumedia-explorer-element.media div{
   display:flex;
+  width: 100%;
+  height: 100%;
 }
 edumedia-explorer-element.media div img{
   flex:1
 }
 edumedia-explorer-element.media div p{
   flex:1;
-  padding-top:12px;
+  align-self: center;
+  padding: 5px 10px;
   color:rgb(51, 51, 51);
   text-align:center;
 }
@@ -227,6 +230,22 @@ edumedia-explorer .edumedia-scrollable-area {
     justify-content: center !important;
     max-height: 430px;
     overflow-y: auto;
+    &.edumedia-search {
+      img {
+        width: 50px;
+        padding-right: 10px;
+      }
+      edumedia-explorer-element.root {
+        text-align: left;
+        font-weight: normal;
+        border-color: grey;
+        color: #333;
+        background-color: white;
+        & > div {
+          justify-content: flex-start;
+        }
+      }
+    }
 }
 
 /*EDUMEDIA STACK*/
