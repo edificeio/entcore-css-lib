@@ -289,6 +289,29 @@ edumedia-explorer .edumedia-scrollable-area {
 .edumedia-container{
  display: inline-block;
 }
+.edumedia-content-header{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  position: relative;
+  padding: 0px 16px;
+  top: -10px;
+  left: 0;
+}
+.edumedia-content-header [edumedia-fullscreen-jquery]{
+  display: flex;
+  align-items: center;
+  position: initial;
+  top: initial;
+  left: initial;
+}
+[edumedia-delete-jquery],lightbox [edumedia-delete-jquery],edumedia-explorer edumedia-explorer-media [edumedia-delete-jquery]{
+  display:none;
+}
+editor [edumedia-delete-jquery]{
+  display:block;
+  cursor:pointer;
+}
 /*EDUMEDIA FULLSCREEN*/
 #edumedia-fullscreen-lightbox{
     display: block;
