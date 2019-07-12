@@ -183,7 +183,7 @@
 }
 
 @mixin vertical-gradient($top-color: blue, $bottom-color: white) {
-	background:  linear-gradient($top-color, $bottom-color);
+	background-image:  linear-gradient($top-color, $bottom-color);
 }
 
 @mixin icon($icon-name: icon, $icon-size: 40px, $icons-extension: ".png") {
