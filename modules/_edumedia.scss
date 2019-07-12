@@ -232,12 +232,13 @@ edumedia-explorer .edumedia-scrollable-area {
     overflow-y: auto;
     &.edumedia-search {
       img {
-        width: 50px;
+        height: 100%;
         padding-right: 10px;
       }
       edumedia-explorer-element.root {
+        padding: 0 5px 0 0;
+        width: 31%;
         text-align: left;
-        font-weight: normal;
         border-color: grey;
         color: #333;
         background-color: white;
