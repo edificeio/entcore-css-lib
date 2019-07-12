@@ -176,6 +176,10 @@ edumedia-explorer-element.folder {
 edumedia-explorer-element.folder > div {
   padding: 20px;
 }
+edumedia-explorer-element.folder > div p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 edumedia-explorer-element.folder p::after {
   margin-left: 12px;
   font-weight: 700;
@@ -199,7 +203,7 @@ edumedia-explorer-element.media{
     text-decoration: none;
 }
 edumedia-explorer-element.media div{
-  display:flex;
+  display:flex !important;
   width: 100%;
   height: 100%;
 }
@@ -209,7 +213,7 @@ edumedia-explorer-element.media div img{
 edumedia-explorer-element.media div p{
   flex:1;
   align-self: center;
-  padding: 5px 10px;
+  padding: 5px 10px !important;
   color:rgb(51, 51, 51);
   text-align:center;
 }
@@ -251,7 +255,7 @@ edumedia-explorer .edumedia-scrollable-area {
 
 /*EDUMEDIA STACK*/
 .edumedia-header-stack{
- display: flex;
+ display: flex !important;
  justify-content:space-between;
  align-items:center;
  padding: 20px;
@@ -266,7 +270,7 @@ edumedia-explorer .edumedia-scrollable-area {
 
 /*EDUMEDIA TITLE*/
 .edumedia-header-title{
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: space-between;
   padding: 12px;
@@ -290,7 +294,7 @@ edumedia-explorer .edumedia-scrollable-area {
  display: inline-block;
 }
 .edumedia-content-header{
-  display: flex;
+  display: flex !important;
   align-items: baseline;
   justify-content: space-between;
   position: relative;
