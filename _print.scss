@@ -1,0 +1,126 @@
+  $grey-dark: #575e73;
+  $grey-light: #f2f4f7;
+  $grey-lightest: #F2F3F4;
+
+  html.print {
+    body {
+      color: $grey-dark;
+      -webkit-print-color-adjust: exact;
+      line-height: 1.6;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+    .main {
+      padding: 0;
+    }
+    img {
+      page-break-inside: avoid;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: bold;
+      text-transform: none;
+    }
+
+    h1 {
+      color: $cyan;
+      font-size: 26px;
+      &.app-title {
+        font-size: 28px;
+        /* color: $orange; */
+        padding: 25px;
+        text-align: center;
+        /* border-bottom: 1px solid lighten($grey-dark, 40%); */
+        background-color: $grey-lightest;
+        color: $grey-dark;
+      }
+      i,
+      i::before,
+      i::after {
+        display: inline-block!important;
+        color: $grey-dark!important;
+        vertical-align: top;
+      }
+    }
+    h2 {
+      font-size: 24px;
+      color: $grey-dark;
+    }
+
+    h3 {
+      font-size: 22px;
+      color: $cyan;
+    }
+
+    h4 {
+      font-size: 20px;
+      color: $grey-dark;
+    }
+
+    h5 {
+      font-size: 18px;
+      color: $cyan;
+    }
+
+    h6 {
+      font-size: 16px;
+      color: $grey-dark;
+    }
+
+    .title-background {
+      padding: 10px 0;
+      margin-bottom: 15px;
+      h2 {
+        font-size: 26px;
+        color: $cyan;
+        margin-top: 15px;
+      }
+      .subtitle {
+        color: lighten($grey-dark, 10%);
+        display: block;
+        margin: 5px 0 0!important;
+      }
+    }
+
+    article {
+      /* page-break-after: always; */
+			padding: 0px!important;
+			margin: 15px auto!important;
+			border-radius: inherit!important;
+			border: none!important;
+			box-shadow: none!important;
+      & + article {
+        border-top: 15px solid $grey-lightest!important;
+      }
+		}
+    .print--videos {
+      img,
+      a {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      a {
+        padding: 0 10px;
+      }
+    }
+    .print--comments {
+      padding: 0 25px;
+      margin-top: 15px;
+      border-top: 1px solid $grey-lightest;
+      .comments {
+        margin: 0!important;
+        padding: 10px 25px!important;
+        border-top: none!important;
+        & + .comments {
+          border-top: 2px solid $grey-lightest!important;
+        }
+      }
+      i.chat {
+        padding-right: 10px;
+        &::before {
+          color: inherit;
+        }
+      }
+    }
+  }
