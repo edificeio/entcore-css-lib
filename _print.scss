@@ -2,23 +2,16 @@
   $grey-light: #f2f4f7;
   $grey-lightest: #F2F3F4;
 
-  html.print {
-    * {
-      box-sizing: border-box;
-    }
+  .print { // To put on the balise <html> for optimal rendering
+    * {box-sizing: border-box;}
     body {
       color: $grey-dark;
       -webkit-print-color-adjust: exact;
       line-height: 1.6;
       font-size: 16px;
     }
-    .main {
-      padding: 0;
-    }
-
-    .row {
-      width: inherit;
-    }
+    .main {padding: 0;}
+    .row {width: inherit;}
 
     img {
       page-break-inside: avoid;
@@ -30,9 +23,7 @@
 
     h1 {
       font-size: 26px;
-      &.app-title {
-        font-size: 28px;
-      }
+      &.app-title {font-size: 28px;}
       i,
       i::before,
       i::after {
@@ -64,6 +55,12 @@
       color: $grey-dark;
     }
 
+    article {
+      border: 1px solid $shadow-light;
+      padding: 15px!important;
+      margin: 15px 0!important;
+    }
+
     .title-background {
       padding: 10px 0;
       margin-bottom: 15px;
@@ -78,12 +75,6 @@
       }
     }
 
-    article {
-      /* page-break-after: always; */
-      border: 1px solid $shadow-light;
-			padding: 15px!important;
-			margin: 15px 0!important;
-		}
     .print--videos {
       img,
       a {
@@ -111,12 +102,13 @@
         }
       }
     }
-
     [contenteditable] {
       padding: 10px 20px!important;
       margin: 10px!important;
       border: 1px solid #ddd!important;
     }
+
+    // ICON STYLE
     i.info-pic {
       font-size: 10px;
       position: absolute;
@@ -143,12 +135,6 @@
       &__summary {
         margin: 15px;
       }
-      &__answer {
-        &--explanation,
-        &--tint {
-          padding: 10px;
-        }
-      }
       &__info [contenteditable] {
         border-color: lighten($green, 10%)!important;
         background-color: lighten($green, 40%)!important;
@@ -156,6 +142,38 @@
       &__help [contenteditable] {
         border-color: lighten($cyan, 10%)!important;
         background-color: lighten($cyan, 35%)!important;
+      }
+    }
+  }
+
+  //TIMELINE GENERATOR
+  .print--timeline {
+    article {
+      position: relative;
+      margin: 0 15px!important;
+      padding: 25px 25px 25px 40px!important;
+      border: none!important;
+      border-left: 5px solid $cyan!important;
+      box-shadow: none!important;
+      border-radius: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: -15px;
+        width: 25px;
+        height: 25px;
+        background-color: $cyan;
+        border: 1px solid $cyan;
+        border-radius: 50%;
+      }
+      & img,
+      & video {
+        width: 50%;
+        max-width: 450px;
+        float: left;
+        margin: 0 15px 15px 0;
+        box-shadow: 1px 1px 10px $shadow-light;
       }
     }
   }
