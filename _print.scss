@@ -9,6 +9,9 @@ $grey-lightest: #F2F3F4;
     -webkit-print-color-adjust: exact;
     line-height: 1.6;
     font-size: 16px;
+    .container {
+      width: inherit;
+    }
   }
   .main {padding: 0;}
   .row {width: inherit;}
