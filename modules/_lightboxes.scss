@@ -26,7 +26,8 @@ section.lightbox-window{
 }
 
 
-section.lightbox{
+section.lightbox,
+section.tiny-lightbox {
 	width: 100%;
 	height: 100%;
 	overflow: auto;
@@ -87,6 +88,16 @@ section.lightbox{
 		content: " ";
 		display: block;
 		width: 100%;
+	}
+}
+
+section.tiny-lightbox div.content {
+	width: 420px;
+	i.congrats::before {
+		float: left;
+		font-size: 105px;
+		color: $yellow;
+		margin: 0 15px;
 	}
 }
 

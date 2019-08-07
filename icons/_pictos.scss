@@ -477,3 +477,10 @@ i.dashboard {
     content: "\e94b";
   }
 }
+
+i.congrats {
+  @include fonticon;
+  &::before {
+    content: "\e877";
+  }
+}
