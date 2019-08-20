@@ -126,9 +126,10 @@ $grey-lightest: #F2F3F4;
   }
   i.help {
     color: $cyan;
-    font-size: 25px;
+    font-size: 28px;
     position: absolute;
     left: 5px;
+    top: -5px;
     z-index: 1000;
   }
 
