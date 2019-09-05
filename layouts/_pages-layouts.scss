@@ -586,15 +586,32 @@ div.invisible-content{
 .minwidth-400{
 	min-width:400px;
 }
+
+/* Reset size : height & width */
+.reset {
+	&__min-height {
+		min-height: none!important;
+	}
+	&__max-height {
+		max-height: none!important;
+	}
+	&__min-width {
+		min-width: none!important;
+	}
+	&__max-width {
+		max-width: none!important;
+	}
+}
+
 /*ZOOM*/
 .zoomout-2x {
 	transform: scale(0.5)
 }
-+// TODO move to workspace specific css 
++// TODO move to workspace specific css
 .margin-left-search-in-all-button-workspace {
-	margin-left: 40px; 
+	margin-left: 40px;
 }
-/* 
+/*
 	SPECIAL MEDIA QUERIES HIDE
 */
 
