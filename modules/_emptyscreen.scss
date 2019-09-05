@@ -5,6 +5,8 @@
   align-content: center;
   text-align: center;
   height: inherit;
+  align-items: center;
+  margin-top: 50px;
   &-header {
     font-size: 26px;
   }
@@ -24,6 +26,7 @@
     line-height: 1.5;
     color: #333;
     margin: 25px 50px;
+    max-width: 500px;
   }
 }
 @media screen and (max-width: $fat-mobile) {
