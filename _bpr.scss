@@ -1,0 +1,51 @@
+.bpr {
+  textarea {
+    resize: vertical;
+    height: 100px;
+  }
+
+  .loading-list {
+    overflow: auto!important;
+  }
+
+  button.select-button {
+    & span {
+      font-size: 14px;
+      &.active {
+        color: inherit;
+      }
+    }
+  }
+
+  .multiline-ellipsis-two {
+    line-height: 1;
+    font-size: 14px!important;
+  }
+
+  .search-pagination input + i.search {
+    font-size: 18px;
+  }
+
+  .smaller-text {
+    font-size: 12px!important;
+  }
+
+  .lightbox-view .search-pagination input, .lightbox .search-pagination input {
+    padding-left: 0!important;
+  }
+
+  .noUi-connect {
+    background: #FF8500!important;
+  }
+  .noUi-horizontal {
+    height: 10px;
+  }
+  .noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 20px;
+  }
+  .noUi-handle:before,
+  .noUi-handle:after {
+    width: 0;
+  }
+}
