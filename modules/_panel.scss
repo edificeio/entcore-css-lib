@@ -1,15 +1,18 @@
 .themes-list {
+    display: inline-block;
+    vertical-align: top;
+    width: 47%;
+    margin: 1.5%;
+    box-sizing: border-box;
     .theme {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 15px;
+        display: block;
+        padding: 15px;
         transition: 500ms ease;
         background: transparent;
         cursor: pointer;
         border-radius: 5px;
-        display: block;
         &:hover {
-            background: #eee;
+            background: $lightest-grey;
         }
         &::after {
             content: " ";
@@ -19,9 +22,10 @@
         }
         img {
             display: block;
-            margin: auto;
-            max-width: 60%;
-            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            max-width: 100%;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             transition: 500ms ease;
             border-radius: 4px;
             &:hover {
@@ -31,9 +35,9 @@
     }
 }
 
-@media screen and (max-width: $small-mobile) {
-    .themes-list .theme img {
-        max-width: 80%;
-        margin-top: 5px;
+@media screen and (max-width: $tablette) {
+  .themes-list {
+      width: 100%;
+      margin: 0;
     }
 }
