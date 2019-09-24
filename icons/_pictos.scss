@@ -484,3 +484,10 @@ i.congrats {
     content: "\e877";
   }
 }
+
+i.file-image {
+  @include fonticon;
+  &::before {
+    content: "\e882";
+  }
+}

@@ -2,6 +2,7 @@
   textarea {
     resize: vertical;
     height: 100px;
+    margin-top: 0;
   }
 
   .loading-list {
@@ -35,7 +36,7 @@
   }
 
   .noUi-connect {
-    background: #FF8500!important;
+    background: $accent !important;
   }
   .noUi-horizontal {
     height: 10px;
@@ -47,5 +48,42 @@
   .noUi-handle:before,
   .noUi-handle:after {
     width: 0;
+  }
+
+  file-picker-list .media-library .import-files {
+    height: 70px;
+    margin-right: 20px;
+    & > article {
+      top: 10px;
+      left: 30px;
+      height: 55px;
+      & .cloud-upload {
+        visibility: hidden;
+      }
+      & .help {
+        font-size: 0.7em;
+      }
+    }
+  }
+
+  .file-picker_preview {
+    max-width: 120px;
+  }
+
+  .file-image {
+    font-size: 64px;
+    opacity: 0.3;
+  }
+
+  .licence_image {
+    height: 21px;
+    max-width: unset;
+  }
+
+  .info-pic {
+    color: $primary;
+    &:before {
+      font-size: 21px;
+    }
   }
 }
