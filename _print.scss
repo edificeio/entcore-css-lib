@@ -2,7 +2,7 @@ $grey-dark: #575e73;
 $grey-light: #f2f4f7;
 $grey-lightest: #F2F3F4;
 
-.print { // To put on the balise <html> for optimal rendering
+.print { // Put on the balise <html> for optimal rendering
   * {box-sizing: border-box;}
   body {
     color: $grey-dark;
@@ -16,9 +16,9 @@ $grey-lightest: #F2F3F4;
   .main {padding: 0;}
   .row {width: inherit;}
 
-  img {
-    page-break-inside: avoid;
-  }
+  img {page-break-inside: avoid;}
+  video {border: 1px solid $grey-light}
+
   h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: bold;
@@ -40,25 +40,20 @@ $grey-lightest: #F2F3F4;
     font-size: 24px;
     color: $grey-dark;
   }
-
   h3 {
     font-size: 22px;
   }
-
   h4 {
     font-size: 20px;
     color: $grey-dark;
   }
-
   h5 {
     font-size: 18px;
   }
-
   h6 {
     font-size: 16px;
     color: $grey-dark;
   }
-
   article {
     border: 1px solid $shadow-light;
     padding: 15px!important;
