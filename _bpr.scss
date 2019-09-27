@@ -53,10 +53,11 @@
   file-picker-list .media-library .import-files {
     height: 70px;
     margin-right: 20px;
+    border: none;
     & > article {
-      top: 10px;
-      left: 30px;
-      height: 55px;
+      top: 5px;
+      left: 3px;
+      width: 400px;
       & .cloud-upload {
         visibility: hidden;
       }
@@ -80,10 +81,21 @@
     max-width: unset;
   }
 
-  .info-pic {
-    color: $primary;
-    &:before {
-      font-size: 21px;
+  .language,
+  .description {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-family: "Roboto";
+    font-size: 14px;
+  }
+  .licence-condition {
+    color: $grey;
+    .info-pic {
+      color: $grey;
+      &:before {
+        font-size: 21px;
+      }
     }
   }
 }
