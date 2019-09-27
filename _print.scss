@@ -17,7 +17,14 @@ $grey-lightest: #F2F3F4;
   .row {width: inherit;}
 
   img {page-break-inside: avoid;}
-  video {border: 1px solid $grey-light}
+
+  video,
+  iframe[src*="youtube"],
+  iframe[src*="dailymotion"],
+  iframe[src*="vimeo"] {
+    border: 1px solid $shadow-light;
+    box-shadow: 1px 1px 10px $shadow-light;
+  }
 
   h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
