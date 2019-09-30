@@ -6,7 +6,7 @@
   text-align: center;
   height: inherit;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 25px;
   &-header {
     font-size: 26px;
   }
@@ -16,8 +16,7 @@
     margin-top: 35px;
     margin-bottom: 20px;
     &__mini {
-      max-width: 150px;
-      max-height: 150px;
+      max-height: 200px;
       margin: 25px;
     }
   }
