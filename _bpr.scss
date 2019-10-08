@@ -4,18 +4,27 @@
     height: 100px;
     margin-top: 0;
   }
+  & > div.content {
+    padding: 15px 30px;
+  }
 
   .loading-list {
     overflow: auto!important;
   }
 
   button.select-button {
+    border-radius: 5px;
     & span {
       font-size: 14px;
       &.active {
         color: inherit;
       }
     }
+  }
+  button.select-button,
+  select {
+    border-radius: 5px;
+    padding: 5px 10px;
   }
 
   .multiline-ellipsis-two {
