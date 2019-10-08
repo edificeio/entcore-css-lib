@@ -371,7 +371,12 @@ i.mail-o {
     content: "\e807";
   }
 }
-
+i.left {
+  @include fonticon;
+  &::before {
+    content: "\e87b";
+  }
+}
 i.right {
   @include fonticon;
   &::before {

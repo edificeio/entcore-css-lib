@@ -1,21 +1,22 @@
-
 .embedded-viewer{
-	padding: 15px;
 	box-sizing: border-box;
 	width: 100%;
 	position: relative;
+	input {
+		margin: 0!important;
+	}
 	img{
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 	}
-    video{
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-	i{
+	video{
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	i {
 		margin-left: 3px;
 		margin-right: 3px;
 		&.close::before{
@@ -23,9 +24,6 @@
 			float: right;
 			padding-right: 10px;
 		}
-	}
-	.file{
-		margin-top: 20px;
 	}
 	.default-viewer{
 		padding: 30px;
@@ -37,22 +35,64 @@
 	}
 	.controls{
 		height: 60px;
+		&__navbar {
+			position: sticky;
+			top: 0;
+			z-index: 999;
+			background-color: white;
+			padding: 15px;
+			border-bottom: 1px solid $shadow-light;
+			box-shadow: 1px 1px 10px $shadow-light;
+			button {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.file {
+		box-sizing: border-box;
+		padding: 15px;
+	}
+	.pagination__area {
+		position: fixed;
+		right: 55px;
+		background-color: white;
+		padding: 10px;
+		margin-top: -15px;
+		.file-controls {
+			padding: 5px 10px;
+			&:hover * {
+				color: $primary;
+			}
+		}
 	}
 }
 
-
 .embedded-viewer.fullscreen{
-	background-color: inherit;
+	background-color: white;
 	z-index: 100101;
-	left: 0;
 	top: 0;
-	height: 40px;
+	left: 0;
+	right: 0;
+	height: 60px;
+	line-height: 60px;
 	padding: 0;
-	.controls{
+	.controls {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
 		line-height: 60px;
 		padding-right: 10px;
 		box-shadow: 1px 1px 10px $shadow-light;
 	}
+	.pagination__area {
+		position: fixed;
+		left: 30px;
+		top: 15px;
+		right: inherit;
+		height: 60px;
+		padding: 0;
+		}
 }
 
 .fullscreen-viewer{
@@ -79,24 +119,10 @@ pdf-viewer{
 	display: block;
 	width: 100%;
 	position: relative;
-	margin-top: 30px;
-	.file-controls, .pagination{
-		position: absolute;
-		top: -70px;
-		i{
-			display: inline-block;
-			font-size: 22px;
-			margin-right: 10px;
-		}
-	}
-	.file-controls{
-		left: 65px;
-	}
 	canvas{
 		max-width: 100%;
 	}
 }
-
 
 .editor-view{
 	.viewer{
@@ -139,7 +165,6 @@ pdf-viewer{
 		padding: 0;
 	}
 }
-
 
 .drawing-grid{
 	.viewer{
