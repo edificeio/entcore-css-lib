@@ -46,6 +46,13 @@
 			button {
 				margin-bottom: 0;
 			}
+			@media screen and (max-width: $tablette) {
+				flex-direction: column;
+				align-items: flex-start;
+				div:nth-of-type(2) {
+					align-self: flex-end;
+				}
+			}
 		}
 	}
 	.file {
@@ -63,6 +70,10 @@
 			&:hover * {
 				color: $primary;
 			}
+		}
+		@media screen and (max-width: $tablette) {
+			position: absolute;
+			right: -15px;
 		}
 	}
 }
