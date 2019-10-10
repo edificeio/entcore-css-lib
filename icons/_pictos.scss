@@ -496,3 +496,11 @@ i.file-image {
     content: "\e882";
   }
 }
+
+i.website,
+i.website-large {
+  @include fonticon;
+  &::before {
+  content: "\e94a";
+  }
+}
