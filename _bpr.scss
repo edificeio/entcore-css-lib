@@ -11,7 +11,9 @@
   .loading-list {
     overflow: auto!important;
   }
-
+  .select-file button {
+    min-width: 100%;
+  }
   button.select-button {
     border-radius: 5px;
     & span {
@@ -105,6 +107,10 @@
       &:before {
         font-size: 21px;
       }
+    }
+    li {
+      margin: 10px 0;
+      line-height: 1.6;
     }
   }
   i.congrats {
