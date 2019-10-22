@@ -5,6 +5,7 @@
     margin-top: 0;
   }
   & > div.content {
+    width: 800px!important;
     padding: 15px 30px;
   }
 
@@ -12,7 +13,7 @@
     overflow: auto!important;
   }
   .select-file button {
-    min-width: 100%;
+    min-width: 100px;
   }
   button.select-button {
     border-radius: 5px;
@@ -117,6 +118,6 @@
     float: left;
     color: $yellow;
     font-size: 100px;
-    margin: -10px 15px 0;
+    margin: -10px 25px 0;
   }
 }
