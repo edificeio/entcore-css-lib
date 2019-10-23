@@ -4,8 +4,12 @@
     height: 100px;
     margin-top: 0;
   }
-  & > div.content {
+  & .lightbox > div.content {
     width: 800px!important;
+    padding: 15px 30px;
+  }
+  & .tiny-lightbox > div.content {
+    width: 500px!important;
     padding: 15px 30px;
   }
 
@@ -120,13 +124,6 @@
     color: $yellow;
     font-size: 100px;
     margin: -10px 25px 0;
-  }
-}
-
-.tiny-lightbox {
-  & > div.content {
-    width: 800px!important;
-    padding: 15px 20px;
   }
 }
 
