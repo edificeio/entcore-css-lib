@@ -121,3 +121,10 @@
     margin: -10px 25px 0;
   }
 }
+
+.tiny-lightbox {
+  & > div.content {
+    width: 800px!important;
+    padding: 15px 20px;
+  }
+}
