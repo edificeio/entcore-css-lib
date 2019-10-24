@@ -19,6 +19,10 @@
       max-height: 200px;
       margin: 25px;
     }
+    &[src*="trash"] {
+      max-height: 35vh;
+
+    }
   }
   &-footer {
     font-size: 14px;
