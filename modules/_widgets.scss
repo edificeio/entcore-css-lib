@@ -16,7 +16,7 @@
 	@include cell;
 	@include reduce-block(6px);
 	@include run-transition(width);
-	height: 1800px;
+	min-height: 100vh;
 	padding: 10px;
 	display: table-cell;
 
