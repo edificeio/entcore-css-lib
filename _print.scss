@@ -12,6 +12,9 @@ $grey-lightest: #F2F3F4;
     .container {
       width: inherit;
     }
+    &.added-margin {
+      margin: 1.5cm;
+    }
   }
   .main {padding: 0;}
   .row {width: inherit;}
