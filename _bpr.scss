@@ -1,8 +1,14 @@
 .bpr {
+  h2 {
+    margin: 0!important;
+  }
   textarea {
     resize: vertical;
     height: 100px;
     margin-top: 0;
+  }
+  & section.lightbox label {
+    margin-bottom: 0!important;
   }
   & .lightbox > div.content {
     width: 800px!important;
@@ -17,7 +23,7 @@
     overflow: auto!important;
   }
   .select-file button {
-    min-width: 100px;
+    min-width: 120px;
   }
   button.select-button {
     border-radius: 5px;
@@ -37,6 +43,9 @@
   .multiline-ellipsis-two {
     line-height: 1;
     font-size: 14px!important;
+    &::before {
+      content:"";
+    }
   }
 
   .search-pagination input + i.search {
@@ -48,7 +57,7 @@
   }
 
   .lightbox-view .search-pagination input, .lightbox .search-pagination input {
-    padding-left: 0!important;
+    padding-left: 10px!important;
   }
 
   .noUi-connect {
@@ -103,7 +112,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
-    font-family: "Roboto";
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 14px;
   }
   .licence-condition {
