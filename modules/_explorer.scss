@@ -102,3 +102,15 @@ explorer.explorer-no-droppable {
 		}
 	}
 }
+
+// Fix table display
+table, thead, tbody, tr
+{
+  &[explorer]
+  {
+    & > .explorer
+    {
+      display: contents;
+    }
+  }
+}
