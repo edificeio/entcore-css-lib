@@ -37,6 +37,43 @@ body {
 	right: 0;
 }
 
+/*
+ * Usage:
+ * <div class="flex-magnet-container">
+ *   <div> MAIN CONTENT </div>
+ *   <div class="flex-magnet-<POS>"> MAGNET </div>
+ * </div>
+ */
+.flex-magnet-container
+{
+	display: flex;
+	justify-content: space-between;
+
+	& > .flex-magnet-bottom-right
+	{
+		order: 1;
+		align-self: flex-end;
+	}
+
+	& > .flex-magnet-top-right
+	{
+		order: 1;
+		align-self: flex-start;
+	}
+
+	& > .flex-magnet-top-left
+	{
+		order: -1;
+		align-self: flex-start;
+	}
+
+	& > .flex-magnet-bottom-left
+	{
+		order: -1;
+		align-self: flex-end;
+	}
+}
+
 .square-mini{
 	@include square(10px);
 }
