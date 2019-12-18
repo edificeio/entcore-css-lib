@@ -65,3 +65,10 @@
 	opacity: 0.6;
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
 }
+
+@media screen and (max-width: $tablette) {
+	.humane,
+	.humane-original {
+		left: calc(25% - 10px);
+	}
+}
