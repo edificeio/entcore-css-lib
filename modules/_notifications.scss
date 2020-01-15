@@ -222,6 +222,7 @@ div:not(.simple-notifications) > .notification{
     right: 0;
     height: 100%;
     background-color: white;
+    box-shadow: -5px 0 10px rgba(0,0,0,0.1);
     @include run-transition(width, 0.3s);
 
     .report a[disabled] {
@@ -242,8 +243,8 @@ div:not(.simple-notifications) > .notification{
     text-align: center;
     width: 30px;
     float: left;
-    border-left: 1px solid $medium-grey;
-    border-right: 1px solid $medium-grey;
+    border-left: 1px solid $shadow-light;
+    border-right: 1px solid $shadow-light;
     color: $accent;
     background-color: $white;
     @include run-transition(all);
