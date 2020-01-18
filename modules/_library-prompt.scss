@@ -1,0 +1,29 @@
+library-prompt {
+    z-index: 100001 !important;
+    position: relative;
+    .close-lightbox{
+        display: none;
+    }
+    .ignore{
+        position: absolute;
+        right: 0px;
+        font-size: 13px;
+    }
+    lightbox{
+        .content{
+            border: 10px solid $primary;
+            .apps {
+                display: flex;
+                padding-left: 10%;
+                i {
+                    font-size: 100px;
+                }
+            }
+            p {
+                line-height: 25px;
+                padding-left: 10%;
+                text-align: center;
+            }
+        }
+    }
+}
