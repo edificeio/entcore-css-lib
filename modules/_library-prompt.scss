@@ -15,6 +15,9 @@ library-prompt {
             .apps {
                 display: flex;
                 padding-left: 10%;
+                .container {
+                    padding-top: 35px;
+                }
                 i {
                     font-size: 100px;
                 }
