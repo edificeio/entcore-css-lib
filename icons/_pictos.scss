@@ -30,6 +30,7 @@ i.loading{
     animation: rotate 1000ms linear infinite;
     @include fonticon;
     display: inline-block;
+    height: inherit!important;
     &::before{
         content: '\e85a';
     }
