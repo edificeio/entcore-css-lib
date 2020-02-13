@@ -14,12 +14,21 @@ library-prompt {
             border: 10px solid $primary;
             .apps {
                 display: flex;
-                padding-left: 10%;
+                padding-left: 5%;
                 .container {
-                    padding-top: 35px;
+                    padding-right: 50px;
+                }
+                .content1 {
+                    font-size:19px;
                 }
                 i {
                     font-size: 100px;
+                }
+                img {
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: table-cell;
+                    padding-top: 20px;
                 }
             }
             p {
