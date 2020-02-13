@@ -72,7 +72,8 @@ section.tiny-lightbox {
 		margin-top: 20px;
 		padding: 15px;
 		float: none !important;
-		overflow: visible;
+		overflow: auto;
+		max-height: calc(100vh - 75px);
 		z-index: 1;
 		max-width: initial;
 	}
