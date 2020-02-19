@@ -779,7 +779,7 @@ body editor {
 
 		.option.embed {
             .lightbox > .content{
-                overflow: hidden;
+                overflow: auto;
             }
         }
     }
