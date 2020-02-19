@@ -2,6 +2,9 @@ embedder{
     .lightbox > .content {
         overflow: hidden;
     }
+    .lightbox > .content .browser{
+        max-width: 100%;
+    }
 
     .embedder-help {
         color: #444;
