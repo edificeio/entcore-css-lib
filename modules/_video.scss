@@ -1,0 +1,41 @@
+﻿.videocontroller {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-content: center;
+	.controls{
+		display: flex; 
+		justify-content: center; 
+		margin-top: 20px;
+		button{
+			width: 50px;
+			height: 50px;
+			background: orange;
+			background-color: #ff8d2e;
+			background-repeat:no-repeat;background-position:center;
+			display:inline-block;
+			box-sizing:border-box;
+			vertical-align:middle;
+			box-shadow: 0px 1px 3px rgba(0,0,0,0.12), 0px 1px 3px rgba(0,0,0,0.24);
+			margin: 0 5px;
+		}
+		button i{
+			margin: 0;
+		}
+		button[disabled]{
+			opacity: 0.4;
+		}
+		.pause{
+			background-image:url("../../img/icons/glyphicons_174_pause.png");
+		}
+		.play{
+			background-image:url("../../img/icons/glyphicons_173_play.png");
+		}
+		.remove{
+			background-image:url("../../img/icons/glyphicons_443_floppy_disk.png");
+		}
+		.save{
+			background-image:url("../../img/icons/glyphicons_207_remove_2_accent.png");
+		}
+	}
+}
