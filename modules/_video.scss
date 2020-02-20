@@ -10,9 +10,10 @@
 		button{
 			width: 50px;
 			height: 50px;
-			background: orange;
-			background-color: #ff8d2e;
-			background-repeat:no-repeat;background-position:center;
+			background: $orange;
+			background-color: $orange;
+			background-repeat:no-repeat;
+			background-position:center;
 			display:inline-block;
 			box-sizing:border-box;
 			vertical-align:middle;
@@ -24,6 +25,8 @@
 		}
 		button[disabled]{
 			opacity: 0.4;
+			background-repeat:no-repeat;
+			background-position:center;
 		}
 		.pause{
 			background-image:url("../../img/icons/glyphicons_174_pause.png");
@@ -31,10 +34,10 @@
 		.play{
 			background-image:url("../../img/icons/glyphicons_173_play.png");
 		}
-		.remove{
+		.save{
 			background-image:url("../../img/icons/glyphicons_443_floppy_disk.png");
 		}
-		.save{
+		.remove{
 			background-image:url("../../img/icons/glyphicons_207_remove_2_accent.png");
 		}
 	}
