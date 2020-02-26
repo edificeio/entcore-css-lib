@@ -126,3 +126,10 @@ i.lock {
 		content: "\e860";
 	}
 }
+
+i.pause {
+	@include fonticon;
+	&::before {
+		content: "\e856";
+	}
+}
