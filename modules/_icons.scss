@@ -127,6 +127,13 @@ i.lock {
 	}
 }
 
+i.stop {
+	@include fonticon;
+	&::before {
+		content: "\e94e";
+	}
+}
+
 i.pause {
 	@include fonticon;
 	&::before {
