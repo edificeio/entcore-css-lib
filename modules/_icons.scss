@@ -133,3 +133,10 @@ i.pause {
 		content: "\e856";
 	}
 }
+
+i.play {
+	@include fonticon;
+	&::before {
+		content: "\e85d";
+	}
+}
