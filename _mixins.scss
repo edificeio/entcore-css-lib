@@ -201,6 +201,22 @@
   vertical-align: middle;
 }
 
+@mixin icon-widget($icon-name: icon, $icon-size: 40px, $icons-extension: ".svg") {
+	$icons-root: "../../img/icons/widgets/";
+  
+	height: $icon-size;
+	width: $icon-size;
+	min-height: $icon-size;
+	min-width: $icon-size;
+	background-image: url("#{$icons-root}#{$icon-name}#{$icons-extension}");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: middle;
+  }
+
 @mixin cell-ellipsis{
 	text-overflow: ellipsis;
 	white-space: nowrap;
