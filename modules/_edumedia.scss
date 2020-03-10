@@ -254,14 +254,28 @@ edumedia-explorer .edumedia-scrollable-area {
 }
 
 /*EDUMEDIA STACK*/
-.edumedia-header-stack{
+.tabs .edumedia-header-stack{
  display: flex !important;
  justify-content:space-between;
  align-items:center;
- padding: 20px;
+ padding: 10px;
  padding-bottom: 0;
-  header span {
-    padding-right: 4px;
+  header {
+    padding: 0;
+    padding: 0;
+    border: none;
+    text-transform: none;
+    color: $grey;
+    &:hover {
+      color: $orange;
+    }
+    &::after {
+      height: 0;
+    }
+  }
+  header + header::before {
+    content: "»";
+    padding-right: 10px;
   }
   button {
     overflow: inherit;
