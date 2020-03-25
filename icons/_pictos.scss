@@ -520,3 +520,30 @@ i.move {
     content: "\e847";
   }
 }
+i.save {
+  @include fonticon;
+  &::before {
+    content: "\e955";
+  }
+}
+
+i.record-video {
+  @include fonticon;
+  &::before {
+    content: "\e94f";
+  }
+}
+i.record-audio {
+  @include fonticon;
+  &::before {
+    content: "\e950";
+  }
+}
+
+i.suspend,
+i.pause {
+  @include fonticon;
+  &::before {
+    content: "\e952";
+  }
+}

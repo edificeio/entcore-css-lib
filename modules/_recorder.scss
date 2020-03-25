@@ -1,74 +1,136 @@
-﻿recorder{
-    input[type=text]{
-        margin: 0;
-    }
-	display: block;
-	padding: 5px;
-	.metadata{
-		float: left;
-		width: 100%;
-		padding: 3px;
-		box-sizing: border-box;
-		input[type=text]{
-			width: 100%;
-			box-sizing: border-box;
-		}
-		::-webkit-input-placeholder { /* WebKit browsers */
-			color: #fff;
-		}
-		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-			color: #fff;
-			opacity:  1;
-		}
-		:-ms-input-placeholder { /* Internet Explorer 10+ */
-			color: #fff;
-		}
-	}
-	.controls{
-		width: 100%;
-		height: 60px;
-		i{
-			margin: 10px 3px 3px;
-		}
-		.play{
-			@include icon(glyphicons_173_play, 20px);
-		}
-		.record{
-			@include icon(glyphicons_169_record, 20px);
-		}
-		.pause{
-			@include icon(glyphicons_174_pause, 20px);
-		}
-		.save{
-			@include icon(glyphicons_443_floppy_disk, 20px);
-		}
-		.remove{
-			@include icon(glyphicons_207_remove_2_accent, 20px);
-		}
-	}
-	.view{
-		height: 40px;
-	}
-	.elapsed-time{
-		float: right;
-		padding-top: 10px;
-	}
-	.status{
-		width: 100%;
-		height: 30px;
-		padding: 3px;
-		box-sizing: border-box;
-		float: left;
+﻿/* DOCUMENTATION
+.recorder--audio : component for audio recorder
+.recorder--video : component for video recorder
 
-		.status{
-			float: left;
-		}
-	}
-	.controls{
-		padding: 2px;
-		box-sizing: border-box;
-		i:first-child{
-			margin-left: 0;
-		}
-	}
+.recorder--viewer : only for .recorder--video, show the video
+.recorder--timer : show timer
+
+.recorder--controls : control bar
+    .recorder--control : define style on button for control bar
+        &.start
+        &.suspend
+        &.redo
+        &.play
+        &.pause
+        &.save
+        &.disabled
+
+HTML EXEMPLE
+<section class="recorder--video">
+    <section class="recorder--viewer">
+        <div class=".recorder--timer">00:00</div>
+    </section>
+    <section class="recorder--controls">
+        <button class="recorder-control start"></button>
+        <button class="recorder-control suspend"></button>
+    </section>
+</section>
+END DOCUMENTATION */
+
+
+// RECORDER COMPONENT
+.recorder {
+    &--activation {
+        p {
+            text-align: center;
+            margin: 10px;
+        }
+        &__auth {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 300px;
+            background-color: $light-grey;
+
+        }
+    }
+    &--controls {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 75px 0;
+    }
+    &--control {
+        width: 150px;
+        height: inherit; // remove height on default buttons
+        background: none!important;
+        text-align: center;
+        padding: 10px;
+        i {
+            display: block;
+            margin: auto;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid transparent;
+        }
+        span {
+            display: inline-block;
+            color: $dark-grey;
+            line-height: inherit;
+        }
+        i.redo::before {
+            content: '\e954'!important;
+        }
+    }
+    &--viewer {
+        text-align: center;
+        p {margin: 10px 0 20px}
+        video {width: 100%;}
+    }
+    &--timer {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        .rec {
+            display: inline-block;
+            vertical-align: middle;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $red;
+            margin-right: 5px;
+            -webkit-animation: pulsate-fwd 0.75s ease-in-out infinite both;
+            animation: pulsate-fwd 0.75s ease-in-out infinite both;
+        }
+    }
+    &--video {
+        position: relative;
+        .recorder {
+            &--timer {
+                position: absolute;
+                left: 0;
+                background-color: rgba(black, 0.5);
+                color: white;
+                padding: 10px 25px;
+                border-radius: 0 0 10px 0;
+            }
+
+        }
+    }
+    &--audio {
+        border: 1px solid $light-grey;
+        max-width: 500px;
+        margin: 25px auto;
+        padding: 25px;
+        .recorder--controls {
+            margin: 25px 25px 0;
+        }
+        .recorder--timer.recording i {
+            color: $red;
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    .recorder {
+        &--controls {
+            flex-wrap: wrap;
+            margin: 10px 0 0;
+        }
+        &--control {
+            width: 50%
+        }
+    }
 }
