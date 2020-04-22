@@ -160,9 +160,9 @@
         section.lightbox {
             > div.content {
                 padding: 20px;
-                min-height: calc(100% - 60px);
-                width: 90%;
-                margin-bottom: 30px;
+                min-height: calc(100% - 50px);
+                width: calc(100% - 50px);
+                margin: 25px;
                 border-radius: 0;
                 box-sizing: border-box;
             }
