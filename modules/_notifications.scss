@@ -308,6 +308,9 @@ div:not(.simple-notifications) > .notification{
           width: 30px;
         }
     }
+    .notification div.notification-actions {
+        box-shadow: none;
+    }
 }
 
 @media screen and (max-width: $fat-mobile) {
