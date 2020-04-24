@@ -1,33 +1,29 @@
-.dominos{
-	margin-bottom: 30px;
-	width: 100%;
-	@include cell;
-
-	.item{
-		max-width: 188px;
-		min-width: 154px;
-		@include grid-cell-width(2.4);
-		@include cell;
-		padding: 5px;
-		overflow: hidden;
-
-		.domino{
+.dominos {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	.item,
+	.folder {
+		display: inline-block;
+		width: 295px;
+		margin: 10px;
+		.domino {
+			position: relative;
 			background-clip: content-box!important;
 			border: 1px solid $medium-grey;
-			@include cell;
-			width: 100%;
 			.top{
-				@include fixed-block;
-	      @include grid-cell-height(11);
-				@include row;
-				overflow: hidden;
+				i {
+					color: white;
+					&::before {
+						line-height: 120px;
+					}
+				}
 				img{
 					position: absolute;
-					width: 100%;
+					width: 120px;
 					top: 0;
 					left: 0;
 					background: $white;
-
 					&.domino-group {
 						position: static;
 						width: 60%;
@@ -39,7 +35,6 @@
 			.top.domino-group {
 				@include grid-cell-height(9);
 				color: $white;
-
 				.nb-users {
 					span {
 						position: absolute;
@@ -65,27 +60,27 @@
 				height: 46px;
 			}
 			.bottom{
-				@include fixed-block;
-	      @include grid-cell-height(9);
-				@include row;
-				background: #fff;
-				overflow: hidden;
-				margin-top: 5px;
 				display: flex;
+				background: #fff;
+				strong {
+					font-size: 15px;
+				}
 				div.content{
+					display: flex;
+					flex-direction: column;
 					justify-content: center;
 					height: 100%;
 					width: 100%;
 					margin: auto 0;
 					min-width: 0;
-					padding: 10px;
+					padding: 10px 10px 10px 15px;
 					box-sizing: border-box;
 					font-size: 14px;
 					.bottom-locked {
 						i {
 							font-size: 22px;
+							text-shadow: 1px 1px 10px rgba(black, 0.25);
 						}
-
 						.send-mail::before {
 							color: $primary;
 						}
@@ -95,11 +90,47 @@
 							}
 						}
 					}
+					.icons {
+						position: absolute;
+						bottom: 5px;
+						right: 10px;
+						color: $medium-grey;
+						.inline {
+							padding: 0 5px;
+						}
+					}
 				}
 			}
 		}
 	}
-
+	&.fallen {
+		.item {
+			.domino{
+				.top,
+				.bottom{
+					clear: none;
+					padding-bottom: 0;
+				}
+				.top{
+					width: 120px;
+					height: 120px;
+					margin: 0;
+					float: left;
+				}
+				.bottom{
+					margin: 0 0 0 120px;
+					height: 120px;
+					width: auto;
+	
+					.title-icon i{
+						font-size: 21px;
+						padding-right: 5px;
+						float: left;
+					}
+				}
+			}
+		}
+	}
 }
 
 .domino .top:hover .ribbon{
@@ -107,37 +138,6 @@
 }
 .ribbon{
 	@include ribbon();
-}
-
-.dominos.fallen {
-	.item {
-		min-width: 290px;
-		width: 25%;
-		.domino{
-			.top,
-			.bottom{
-				clear: none;
-				padding-bottom: 0;
-			}
-			.top{
-				width: 120px;
-				height: 120px;
-				margin: 0;
-				float: left;
-			}
-			.bottom{
-				margin: 0 0 0 120px;
-				height: 120px;
-				width: auto;
-
-				.title-icon i{
-					font-size: 21px;
-    				padding-right: 5px;
-					float: left;
-				}
-			}
-		}
-	}
 }
 
 .dominos alphabetical .item {
@@ -164,5 +164,16 @@
 @media screen and (min-width: $wide-screen) {
     .dominos-infos {
         margin-top: 82px;
+	}
+}
+
+@media screen and (max-width: $fat-mobile) {
+	.dominos {
+		flex-direction: column;
+		.item,
+		.folder {
+			display: block;
+			width: auto;
+		}
 	}
 }
