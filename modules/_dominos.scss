@@ -32,25 +32,6 @@
 					}
 				}
 			}
-			.top.domino-group {
-				@include grid-cell-height(9);
-				color: $white;
-				.nb-users {
-					span {
-						position: absolute;
-						right: 25px;
-						bottom: 5px;
-						font-size: 12px;
-					}
-
-					i {
-						position: absolute;
-						right: 0;
-						bottom: 0;
-						font-size: 30px;
-					}
-				}
-			}
 			.center {
 				display: flex;
 				align-items: center;
@@ -146,6 +127,7 @@
 		min-width: inherit;
 		.domino {
 			.top {
+				position: relative;
 				height: 120px;
 			}
 			.center {
@@ -153,8 +135,39 @@
 				height: inherit;
 			}
 			.bottom {
+				text-align: left;
 				height: 70px;
 				padding: 0;
+			}
+		}
+		.group {
+			.domino {
+				.top.domino-group {
+					color: $white;
+					img.domino-group {
+						margin-top: 15px;
+					}
+					.nb-users {
+						span {
+							position: absolute;
+							right: 30px;
+							bottom: 0px;
+							font-size: 12px;
+						}
+						i {
+							position: absolute;
+							right: 0;
+							bottom: 5px;
+							font-size: 30px;
+							&::before {
+								line-height: inherit;
+							}
+						}
+					}
+				}
+				.center {
+					height: 45px;
+				}
 			}
 		}
 	}
