@@ -140,15 +140,15 @@
 				padding: 0;
 			}
 		}
-		.group {
+		&.group {
 			.domino {
 				.top.domino-group {
-					color: $white;
 					img.domino-group {
 						margin-top: 15px;
 					}
 					.nb-users {
 						span {
+							color: $white;
 							position: absolute;
 							right: 30px;
 							bottom: 0px;
@@ -167,6 +167,9 @@
 				}
 				.center {
 					height: 45px;
+				}
+				.bottom {
+					height: 100px;
 				}
 			}
 		}
