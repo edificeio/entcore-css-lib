@@ -140,6 +140,26 @@
 	@include ribbon();
 }
 
+.dominos.centered-text {
+	.item {
+		width: 120px;
+		min-width: inherit;
+		.domino {
+			.top {
+				height: 120px;
+			}
+			.center {
+				padding: 10px;
+				height: inherit;
+			}
+			.bottom {
+				height: 70px;
+				padding: 0;
+			}
+		}
+	}
+}
+
 .dominos alphabetical .item {
     max-width: 230px;
     width: 20%;
