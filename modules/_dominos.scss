@@ -57,9 +57,9 @@
 					box-sizing: border-box;
 					font-size: 14px;
 					.bottom-locked {
+						right: 0;
 						i {
 							font-size: 22px;
-							text-shadow: 1px 1px 10px rgba(black, 0.25);
 						}
 						.send-mail::before {
 							color: $primary;
