@@ -101,22 +101,16 @@
             display: none;
         }
         .application-title {
-            position: fixed;
-            color: #fff;
-            top: 0;
-            left: 10px;
-            z-index: 10001;
-            line-height: 50px;
-            margin-top: 0;
-            &.move-right {
-                margin-left: 30px;
+            margin-left: 25px;
+            span {
+                color: $primary!important;
             }
             i {
                 display: none !important;
             }
             a,
             a:hover {
-                color: #FFF;
+                color: $orange;
             }
         }
 
