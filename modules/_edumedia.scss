@@ -231,7 +231,7 @@ edumedia-explorer .edumedia-scrollable-area {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
-    justify-content: center !important;
+    justify-content: space-between !important;
     max-height: 430px;
     overflow-y: auto;
     &.edumedia-search {
@@ -253,12 +253,16 @@ edumedia-explorer .edumedia-scrollable-area {
     }
 }
 
+.edumedia-explorer-container {
+  padding: 0 10px;  
+}
+
 /*EDUMEDIA STACK*/
 .tabs .edumedia-header-stack{
  display: flex !important;
  justify-content:space-between;
  align-items:center;
- padding: 10px;
+ padding: 10px 0;
  padding-bottom: 0;
   header {
     padding: 0;
@@ -287,8 +291,7 @@ edumedia-explorer .edumedia-scrollable-area {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
-  padding: 12px;
-  padding-top: 16px;
+  padding: 20px 0 0 0;
   input {
     margin-top: 5px;
   }
@@ -303,6 +306,13 @@ edumedia-explorer .edumedia-scrollable-area {
   }
 }
 
+.edumedia-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
 /*TEXT EDITOR*/
 .edumedia-container{
  display: inline-block;
@@ -312,7 +322,7 @@ edumedia-explorer .edumedia-scrollable-area {
   align-items: baseline;
   justify-content: space-between;
   position: relative;
-  padding: 0px 16px;
+  padding-top: 20px;
   top: -10px;
   left: 0;
 }
