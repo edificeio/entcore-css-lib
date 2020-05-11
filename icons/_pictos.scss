@@ -554,3 +554,10 @@ i.burger-icon {
     content: "\e956";
   }
 }
+
+i.visioconf {
+  @include fonticon;
+  &::before {
+    content: "\e957";
+  }
+}
