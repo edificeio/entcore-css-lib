@@ -555,9 +555,3 @@ i.burger-icon {
   }
 }
 
-i.visioconf {
-  @include fonticon;
-  &::before {
-    content: "\e957";
-  }
-}
