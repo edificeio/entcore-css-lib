@@ -197,3 +197,32 @@ $grey-lightest: #F2F3F4;
     margin-bottom: 50px;
   }
 }
+
+// PAGES
+.print--pages {
+  font-size: 16px;
+  .row {
+    width: 100%;
+  }
+  .drawing-grid.view.pages-grid {
+    width: 100%;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+  .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
+    width: 100%;
+  }
+  // Hide buttons, useless on print
+  button,
+  .button,
+  input[type="button"],
+  .plus,
+  .drop-down-button,
+  a[ng-click*="Comment"] {
+    display: none;
+  }
+  .articles-sniplet hr {
+    display: none;
+  }
+}
