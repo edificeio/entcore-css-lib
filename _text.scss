@@ -1,7 +1,7 @@
 a{
 	color: $accent;
 	@include run-transition(color);
-
+	cursor: pointer;
 	&.hover-icon:hover {
 		i:before {
 			@include run-transition(color);
