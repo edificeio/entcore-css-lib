@@ -362,11 +362,11 @@ body editor{
 		width: 200px;
 	}
 	&.edit editor-toolbar, &.both editor-toolbar, &.html editor-toolbar{
-        color: black;
+        color: $darkest-grey;
 		display: block;
 		float: left;
 		width: 100%;
-		background: #f5f5f5;
+		background: $lightest-grey;
 		border: 1px solid #ddd;
 		box-sizing: border-box;
 		border-bottom: 0;
