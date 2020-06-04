@@ -555,3 +555,10 @@ i.burger-icon {
   }
 }
 
+i.recurrent {
+  @include fonticon;
+  &::before {
+    content: "\e958";
+  }
+}
+

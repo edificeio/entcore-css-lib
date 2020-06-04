@@ -1,0 +1,69 @@
+.modal {
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    border: 1px solid $light-grey;
+    padding: 20px;
+    color: $dark-grey;
+    box-shadow: 5px 5px 15px rgba(black, 0.1);
+    max-width: 400px;
+    font-size: 14px;
+    font-weight: normal;
+    .close {
+        @include fonticon;
+        position: absolute;
+        top: 5px;
+        right: 10px!important;
+        z-index: 101;
+        color: $grey!important;
+        font-size: 10px;
+        &::before {
+            content: "\e866";
+        }
+    }
+    &--buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 20px;
+        > *:not(:last-child) {
+            margin: 0 5px;
+        }
+        i {
+            font-size: 14px;
+            vertical-align: top;
+        }
+    }
+}
+
+.modal--small {
+    max-width: 200px;
+}
+
+.modal--big {
+    max-width: 600px;
+}
+
+// Alignement en haut à gauche
+.modal--lt {
+    left: 0;
+    top: 0;
+}
+
+// Alignement en haut à droite 
+.modal--rt {
+    right: 0;
+    top: 0;
+}
+
+// Alignement en bas à gauche
+.modal--lb {
+    left: 0;
+    bottom: 0;
+}
+
+// Alignement en bas à droite
+.modal--rb {
+    right: 0;
+    bottom: 0;
+}
