@@ -128,12 +128,12 @@
 .mood-widget{
 	padding-top: 25px;
 	margin-bottom: 15px;
-	height: 45px;
+	height: 55px;
 	width: 215px;
 
 	h1{
 		position: absolute;
-		left: 65px;
+		left: 80px;
 		top: 16px;
 		white-space: nowrap;
 		color: transparent;
@@ -143,14 +143,13 @@
 		.options-list{
 			top: 25px;
 			width: 450px;
-
 		}
 
 		.current {
 			span{
 				position: absolute;
 				top: 0px;
-				left: 65px;
+				left: 80px;
 				height: 20px;
 				width: 128px;
 				text-align: left;
