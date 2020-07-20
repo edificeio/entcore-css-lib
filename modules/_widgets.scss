@@ -99,8 +99,6 @@
 
 .calendar.widget{
 	height: 160px;
-	@include widget-container(55px);
-
 	.content{
 		@include absolute;
 		height: 104px;
