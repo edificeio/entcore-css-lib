@@ -177,12 +177,18 @@
 }
 
 .dominos alphabetical .item {
+	width: 200px;
     .domino {
         border-radius: 0;
         padding: 0;
-        img {
-            background-color: $primary;
-        }
+		.top {
+			height: 200px;
+			img {
+				width: 200px;
+				height: 200px;
+				background-color: $primary;
+			}
+		}
         .bottom {
             margin: 0;
             div.content {
