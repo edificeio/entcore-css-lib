@@ -2,7 +2,7 @@
 popover{
 	position: relative;
 	display: inline-block;
-	z-index: 10002;
+	z-index: 10000;
 	popover-content{
 		&::before{
 			font-family: none;  //unicode not from generic icon font
