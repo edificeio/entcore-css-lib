@@ -57,6 +57,25 @@
 					padding: 10px 10px 10px 15px;
 					box-sizing: border-box;
 					font-size: 14px;
+					.ressource-name,
+					.owner,
+					.date {
+						display: block;
+					}
+					/*strong*/.ressource-name {
+						font-weight: bold;
+						color: $dark-grey;
+						@extend .cell-ellipsis;
+					}
+					/*span*/.owner {
+						color: $primary;
+						@extend .cell-ellipsis;
+					}
+					/*span*/.date {
+						color: $grey;
+						font-size: 90%;
+						font-style: italic;
+					}
 					.bottom-locked {
 						right: 0;
 						i {
