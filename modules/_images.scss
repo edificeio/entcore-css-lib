@@ -32,22 +32,27 @@ image-select{
 		text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
 		cursor: pointer;
 		transition: color 250ms ease;
+		background-color: rgba($black, 0.3);
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+		text-align: center;
 	}
 	i.trash{
-		right: 26px;
+		right: 10px;
 		top: 10px;
 		line-height: 24px;
 		&::before{
-			font-size: 15px;
+			font-size: 12px;
 		}
 	}
 	i.edit{
-		right: 52px;
+		right: 40px;
 	    top: 10px;
 		border: none;
 		padding: 0;
 		&::before{
-			font-size: 18px;
+			font-size: 16px;
 			line-height: 24px;
 		}
 	}
