@@ -3791,7 +3791,7 @@ body article.editor-media editor[inline] [contenteditable] {
 [contenteditable] audio::before,[bind-html] audio::before {
  content:" "
 }
-[contenteditable] video,[bind-html] video {
+[contenteditable] video,[bind-html] video, [compile] video {
  max-width:100%
 }
 [contenteditable] a img,[bind-html] a img {
