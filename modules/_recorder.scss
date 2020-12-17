@@ -47,8 +47,9 @@ END DOCUMENTATION */
     }
     &--controls {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: 20px 75px 0;
+        align-items: flex-end;
     }
     &--control {
         width: 150px;
