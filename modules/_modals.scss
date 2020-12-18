@@ -1,22 +1,22 @@
 .modal {
     position: absolute;
-    z-index: 100;
+    z-index: 1000;
     background-color: white;
     border: 1px solid $light-grey;
     padding: 20px;
     color: $dark-grey;
     box-shadow: 5px 5px 15px rgba(black, 0.1);
-    max-width: 400px;
+    width: 400px;
     font-size: 14px;
     font-weight: normal;
     .close {
         @include fonticon;
-        position: absolute;
-        top: 5px;
+        position: absolute!important;
+        top: 10px!important;
         right: 10px!important;
-        z-index: 101;
+        z-index: 1001;
         color: $grey!important;
-        font-size: 10px;
+        font-size: 16px!important;
         &::before {
             content: "\e866";
         }
@@ -37,11 +37,11 @@
 }
 
 .modal--small {
-    max-width: 200px;
+    width: 200px;
 }
 
 .modal--big {
-    max-width: 600px;
+    width: 600px;
 }
 
 // Alignement en haut à gauche
@@ -66,4 +66,14 @@
 .modal--rb {
     right: 0;
     bottom: 0;
+}
+
+@media screen and (max-width: $tablette) {
+    .modal {
+        position: fixed;
+        width: calc(100% - 50px);
+        top: 100px;
+        left: 25px;
+        box-shadow: 0 0 100px 1000px rgba(0,0,0,0.6);
+    }
 }
