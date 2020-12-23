@@ -16460,7 +16460,7 @@ nav.horizontal #my-photo {
 }
 @media screen and (max-height: 650px) {
  nav.horizontal popover-content {
-  max-height:220px;
+  max-height:240px;
   overflow-x:hidden;
   overflow-y:auto
  }
