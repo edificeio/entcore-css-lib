@@ -53,7 +53,7 @@ END DOCUMENTATION */
     }
     &--control {
         width: 150px;
-        height: inherit; // remove height on default buttons
+        height: inherit !important; // remove height on default buttons
         background: none!important;
         text-align: center;
         padding: 10px;
@@ -131,7 +131,7 @@ END DOCUMENTATION */
             margin: 10px 0 0;
         }
         &--control {
-            width: 50%
+            width: 45%; // We want 2 controls per row, so it should be 50%. But 45% is enough and allows a little overflow during final computation.
         }
     }
 }
