@@ -110,6 +110,10 @@ END DOCUMENTATION */
             }
 
         }
+        select {
+            min-width: 240px;
+            align-self: center;
+        }
     }
     &--audio {
         border: 1px solid $light-grey;
