@@ -78,7 +78,8 @@ END DOCUMENTATION */
     }
     &--viewer {
         text-align: center;
-        p {margin: 10px 0 20px}
+        margin-top: 10px;
+        p {margin: 10px 0;}
         video {width: 100%;}
     }
     &--timer {
@@ -136,6 +137,9 @@ END DOCUMENTATION */
         }
         &--control {
             width: 45%; // We want 2 controls per row, so it should be 50%. But 45% is enough and allows a little overflow during final computation.
+        }
+        &--viewer {
+            p {display: none;}
         }
     }
 }
