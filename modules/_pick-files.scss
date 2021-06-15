@@ -24,11 +24,3 @@ files-picker{
 .file-selector{
 	cursor: pointer;
 }
-
-@media screen and (max-width: $tablette) {
-	.select-file {
-		button {
-			padding: 15px 10px;
-		}
-	}
-}
