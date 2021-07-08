@@ -305,13 +305,6 @@
 			> .height-twelve-tablette{
 				@include grid-cell-height(12);
 			}
-
-			> .margin-one, > .margin-two, > .margin-three, > .margin-four,
-			> .margin-five, > .margin-six, > .margin-seven, > .margin-eight,
-			> .margin-nine, > .margin-ten, > .margin-eleven, > .margin-twelve
-			{
-				margin: 0;
-			}
 		}
 
 		nav.vertical{
