@@ -133,10 +133,10 @@ END DOCUMENTATION */
     .recorder {
         &--controls {
             flex-wrap: wrap;
-            margin: 10px 0 0;
+            margin: 10px 0 0!important;
         }
         &--control {
-            width: 45%; // We want 2 controls per row, so it should be 50%. But 45% is enough and allows a little overflow during final computation.
+            width: inherit; // Reinit the width to let the flex calculate on its own
         }
         &--viewer {
             p {display: none;}
