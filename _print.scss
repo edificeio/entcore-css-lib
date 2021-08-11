@@ -225,4 +225,20 @@ $grey-lightest: #F2F3F4;
   .articles-sniplet hr {
     display: none;
   }
+  // SCRAPBOOK
+  .print .app--scrapbook {
+    section.scrapbook {
+      padding: 0 50px!important;
+      font-size: 14px!important;
+      article {
+        padding: 0!important;
+      }
+      .drawing-zone {
+        position: relative!important;
+      }
+    }
+    .scrapbook-pagination {
+      right: -50px!important;
+    }
+  }
 }
