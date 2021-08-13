@@ -7,10 +7,9 @@
 		display: inline-block;
 		width: 295px;
 		margin: 10px;
+		border: 1px solid $light-grey;
 		.domino {
 			position: relative;
-			background-clip: content-box!important;
-			border: 1px solid $medium-grey;
 			.top{
 				i {
 					color: white;
