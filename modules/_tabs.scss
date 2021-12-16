@@ -1,13 +1,13 @@
-
-.tabs{
+.tabs {
     text-align: center;
+
     >* {
         text-align: initial;
     }
 
-	header{
-		display: inline-block;
-		padding: 6px;
+    header {
+        display: inline-block;
+        padding: 6px;
         background: #eee;
         font-size: 14px;
         font-weight: bold;
@@ -15,12 +15,14 @@
         background: transparent;
         margin-right: 10px;
         position: relative;
-        &:hover{
-            &::after{
+
+        &:hover {
+            &::after {
                 transform: scaleX(1);
             }
         }
-        i{
+
+        i {
             font-weight: normal;
             font-size: 24px;
             margin-top: -2px;
@@ -28,10 +30,12 @@
             display: inline-block;
             vertical-align: middle;
         }
-        i18n{
+
+        i18n {
             display: inline-block;
         }
-        &::after{
+
+        &::after {
             content: " ";
             display: block;
             transform: scaleX(0);
@@ -42,48 +46,51 @@
             left: 0;
             transition: transform 250ms ease;
         }
-	}
-	header.selected {
-        &::after{
+    }
+
+    header.selected {
+        &::after {
             transform: scaleX(1);
         }
     }
-	section{
-		margin-top: -1px;
-		border: 1px solid;
+
+    section {
+        margin-top: -1px;
+        border: 1px solid;
         padding: 6px;
         position: relative;
-	}
+    }
 }
 
 .tabs.heading-tabs {
-	box-sizing: border-box;
     display: flex;
-    justify-content: flex-start;
-    margin-bottom: 20px!important;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 2rem !important;
     overflow-x: auto;
-    >* {
+
+    > * {
         text-align: initial;
     }
+
     header {
-        width: 100%; //tabs centered in whole space
-        //width: auto;    // tabs align right
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        cursor: pointer;
+        flex: 1;
         text-align: center;
         white-space: nowrap;
-        margin: 0 4px;
-        padding: 10px 15px;
+        margin: 0 .4rem;
+        padding: .625rem 1.5rem;
         transition: color 250ms ease;
 
-        a{
+        a {
             vertical-align: middle;
-            i{
+
+            i {
                 font-size: 15px;
                 margin-right: 5px;
             }
-            &:hover{
+
+            &:hover {
                 color: $primary;
             }
         }
@@ -91,17 +98,18 @@
 }
 
 
-@media screen and (max-width: $tablette){
+@media screen and (max-width: $tablette) {
     .tabs.heading-tabs {
-        header{
+        header {
             font-size: 12px;
         }
     }
 }
-@media screen and (max-width: $fat-mobile){
+
+@media screen and (max-width: $fat-mobile) {
     .tabs.heading-tabs {
-        header{
-            &.selected{
+        header {
+            &.selected {
                 order: -1;
             }
         }
