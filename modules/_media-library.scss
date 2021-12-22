@@ -157,6 +157,11 @@
 			min-height: 0;
 		}
 	}
+
+	&-toolbar {
+		position: sticky;
+		bottom: 0;
+	}
 }
 
 .media-library {
