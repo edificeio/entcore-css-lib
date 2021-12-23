@@ -3,7 +3,8 @@
 	cursor: pointer;
 }
 explorer.radius a,
-explorer.radius img {
+explorer.radius img,
+explorer.radius a .cell.video {
 	border-radius: 15px;
 }
 

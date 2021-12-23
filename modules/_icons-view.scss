@@ -28,6 +28,11 @@
 		list-style-type: none;
 	}
 	explorer, .element{
+		div.video {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
 
 		.container{
 			height: $icon-list-size;
