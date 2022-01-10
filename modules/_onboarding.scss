@@ -79,10 +79,6 @@
     pointer-events: all;
 }
 
-.highlight-video * {
-    pointer-events: none;
-}
-
 .highlight-video .header.main {
     z-index: 1;
 }
@@ -116,6 +112,10 @@
 
     .highlight-video .toast.toast--video {
         display: block;
+    }
+    
+    .highlight-video * {
+        pointer-events: none;
     }
 }
 
