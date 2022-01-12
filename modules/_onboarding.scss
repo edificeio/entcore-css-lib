@@ -117,6 +117,9 @@
     .highlight-video * {
         pointer-events: none;
     }
+    .highlight-video.actualites .tabs.heading-tabs {
+        z-index: 0;
+    }
 }
 
 @media (max-width: 800px) {
