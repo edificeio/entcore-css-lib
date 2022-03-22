@@ -1,0 +1,17 @@
+.flashmsg {
+  &.red {
+    background: $flash-red;
+  }
+  &.orange {
+    background: $flash-orange;
+  }
+  &.green {
+    background: $flash-green;
+  }
+  &.blue {
+    background: $flash-blue;
+  }
+  &.grey-dark {
+    background: $flash-grey;
+  }
+}

@@ -1,16 +1,15 @@
 @font-face {
-  font-family: 'generic-icons';
-  src:
-    url('fonts/generic-icons.ttf?cw38te') format('truetype'),
-    url('fonts/generic-icons.woff?cw38te') format('woff'),
-    url('fonts/generic-icons.svg?cw38te#generic-icons') format('svg');
+  font-family: "generic-icons";
+  src: url("fonts/generic-icons.ttf?cw38te") format("truetype"),
+    url("fonts/generic-icons.woff?cw38te") format("woff"),
+    url("fonts/generic-icons.svg?cw38te#generic-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'generic-icons' !important;
+  font-family: "generic-icons" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

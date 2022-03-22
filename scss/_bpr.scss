@@ -1,0 +1,142 @@
+.bpr {
+  h2 {
+    margin: 0 !important;
+  }
+  textarea {
+    resize: vertical;
+    height: 100px;
+    margin-top: 0;
+  }
+  & section.lightbox label {
+    margin-bottom: 0 !important;
+  }
+  & .lightbox > div.content {
+    width: 800px !important;
+    padding: 15px 30px;
+  }
+  & .tiny-lightbox > div.content {
+    width: 500px !important;
+    padding: 15px 30px;
+  }
+
+  .loading-list {
+    overflow: auto !important;
+  }
+  .select-file button {
+    min-width: 120px;
+  }
+  button.select-button {
+    border-radius: 5px;
+    & span {
+      font-size: 14px;
+      &.active {
+        color: inherit;
+      }
+    }
+  }
+  button.select-button,
+  select {
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  .multiline-ellipsis-two {
+    line-height: 1;
+    font-size: 14px !important;
+    &::before {
+      content: "";
+    }
+  }
+
+  .search-pagination input + i.search {
+    font-size: 18px;
+  }
+
+  .smaller-text {
+    font-size: 12px !important;
+  }
+
+  .lightbox-view .search-pagination input,
+  .lightbox .search-pagination input {
+    padding-left: 10px !important;
+  }
+
+  .noUi-connect {
+    background: $accent !important;
+  }
+  .noUi-horizontal {
+    height: 10px;
+  }
+  .noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 20px;
+  }
+  .noUi-handle:before,
+  .noUi-handle:after {
+    width: 0;
+  }
+
+  file-picker-list .media-library .import-files {
+    height: 70px;
+    margin-right: 20px;
+    border: none;
+    background-color: transparent;
+    & > article {
+      top: 0;
+      left: 5px;
+      width: 380px;
+      & .cloud-upload {
+        visibility: hidden;
+      }
+      & .help {
+        font-size: 0.7em;
+      }
+    }
+  }
+
+  .file-picker_preview {
+    max-width: 120px;
+  }
+
+  .file-image {
+    font-size: 64px;
+    opacity: 0.3;
+  }
+
+  .licence_image {
+    height: 21px;
+    max-width: unset;
+  }
+
+  .language,
+  .description {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+  }
+  .licence-condition {
+    .info-pic {
+      &:before {
+        font-size: 21px;
+      }
+    }
+    li {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+  }
+  i.congrats {
+    float: left;
+    color: $yellow;
+    font-size: 100px;
+    margin: 0 25px 0 10px;
+  }
+}
+
+@media screen and (max-width: $tablette) {
+  file-picker-list .media-library .import-files > article {
+    width: inherit;
+  }
+}

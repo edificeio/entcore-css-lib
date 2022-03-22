@@ -1,0 +1,149 @@
+.flex-row {
+  display: flex;
+  position: relative;
+
+  &.align-start {
+    align-items: flex-start;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.align-end {
+    align-items: flex-end;
+  }
+
+  &.justify-start {
+    justify-content: flex-start;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+
+  &.justify-around {
+    justify-content: space-around;
+  }
+
+  &.f-column {
+    flex-direction: column;
+  }
+
+  &.f-row {
+    flex-direction: row;
+  }
+
+  &.f-wrap {
+    flex-wrap: wrap;
+  }
+
+  .flex-all-remains {
+    flex: 1;
+  }
+}
+
+.flex-one {
+  flex: 1;
+}
+
+.fixed {
+  @include absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.no-shrink {
+  flex-shrink: 0;
+}
+
+.v-center-container {
+  display: table;
+
+  .v-center {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.v-middle {
+  vertical-align: middle;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+.bottom-locked {
+  @include bottom-locked;
+}
+
+@media screen and (max-width: $tablette) {
+  body {
+    .flex-row {
+      &.mobile-align-start {
+        align-items: flex-start;
+      }
+
+      &.mobile-align-center {
+        align-items: center;
+      }
+
+      &.mobile-align-end {
+        align-items: flex-end;
+      }
+
+      &.mobile-justify-start {
+        justify-content: flex-start;
+      }
+
+      &.mobile-justify-center {
+        justify-content: center;
+      }
+
+      &.mobile-justify-end {
+        justify-content: flex-end;
+      }
+
+      &.mobile-f-row {
+        flex-direction: row;
+      }
+
+      &.mobile-f-row-reverse {
+        flex-direction: row-reverse;
+      }
+
+      &.mobile-f-column {
+        flex-direction: column;
+      }
+
+      &.mobile-f-column-reverse {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

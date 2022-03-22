@@ -1,0 +1,19 @@
+//begin generateTemplate
+task generateTemplate(type: Copy) {
+  Map<String,String> extra = new HashMap(project.properties);
+  String npmToken = "${System.env.NEXUS_ODE_USERNAME}:${System.env.NEXUS_ODE_PASSWORD}"
+  extra.put('npmToken', npmToken.bytes.encodeBase64().toString());
+  extra.keySet().each{
+      if(extra[it]!=null && extra[it] instanceof String)
+        extra[it] = extra[it].replace("%generateVersion%",new Date().format( 'yyyyMMddHHmm' ))
+  }
+  from('.') {
+      include '*.template'
+      expand(extra)
+  }
+  into '.'
+  rename { String fileName ->
+      fileName.replace(".template", "")
+  }
+}
+//end generateTemplate

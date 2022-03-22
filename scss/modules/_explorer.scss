@@ -1,0 +1,118 @@
+.explorer {
+  position: relative;
+  cursor: pointer;
+}
+explorer.radius a,
+explorer.radius img,
+explorer.radius a .cell.video {
+  border-radius: 15px;
+}
+
+explorer.radius legend {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+explorer.radius legend > a {
+  border-radius: 0;
+  padding: 0 3px !important;
+}
+
+explorer.explorer-hover a.container:hover,
+explorer.explorer-hover legend:hover + a.container {
+  border: 1px solid $orange !important;
+  box-shadow: 0 0 10px rgba($black, 0.1);
+}
+explorer.explorer-hover i.folder-large:hover,
+explorer.explorer-hover i.unknown-large:hover,
+explorer.explorer-hover i.audio-large:hover {
+  color: $orange !important;
+}
+explorer.explorer-hover legend {
+  z-index: 1;
+}
+explorer.explorer-droppable {
+  position: relative;
+}
+explorer .explorer-badge-drop {
+  display: none;
+}
+explorer.explorer-droppable .explorer-badge-drop {
+  position: absolute;
+  z-index: 1000;
+  width: 20px;
+  height: 20px;
+  top: -6px;
+  right: -6px;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  background: $orange;
+  color: $white;
+  text-shadow: 0px 0px 2px rgba($black, 0.5);
+}
+
+explorer.explorer-no-droppable {
+  border-radius: 15px;
+  border: 1px solid $red;
+  &::after {
+    @include fonticon;
+    content: "\e83a";
+    font-size: 24px;
+    display: block;
+    background-color: $red;
+    color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+  }
+  .container,
+  .explorer {
+    cursor: not-allowed !important;
+    opacity: 0.5;
+    background-color: rgba($red, 0.5);
+    border-radius: 15px;
+    &:hover {
+      border-color: $red;
+    }
+    & i {
+      color: $red !important;
+      &:hover {
+        color: darken($red, 5%) !important;
+      }
+    }
+  }
+}
+
+.droptarget explorer.explorer-droppable .explorer-badge-drop {
+  display: block;
+}
+.droptarget explorer.explorer-droppable a.container {
+  border: 1px $orange dashed !important;
+}
+@media screen and (max-width: $tablette) {
+  body {
+    explorer {
+      display: block;
+      user-select: none;
+      -webkit-user-select: none;
+      //-webkit-touch-callout: none;
+    }
+  }
+}
+
+// Fix table display
+table,
+thead,
+tbody,
+tr {
+  &[explorer] {
+    & > .explorer {
+      display: contents;
+    }
+  }
+}

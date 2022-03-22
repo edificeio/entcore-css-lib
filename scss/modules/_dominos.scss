@@ -1,0 +1,248 @@
+.dominos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .item,
+  .folder {
+    display: inline-block;
+    width: 295px;
+    margin: 10px;
+    border: 1px solid $light-grey;
+    .domino {
+      position: relative;
+      .top {
+        i {
+          color: white;
+          &::before {
+            line-height: 120px;
+          }
+        }
+        img {
+          position: absolute;
+          width: 120px;
+          top: 0;
+          left: 0;
+          background: $white;
+          &.domino-group {
+            position: static;
+            width: 60%;
+            border-width: 3px;
+            margin-top: 20px;
+          }
+        }
+      }
+      .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 14px !important;
+        color: $white;
+        height: 35px !important;
+        .discipline {
+          font-size: 12px;
+        }
+      }
+      .bottom {
+        display: flex;
+        background: #fff;
+        strong {
+          font-size: 15px;
+          color: $dark-grey;
+        }
+        div.content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+          width: 100%;
+          margin: auto 0;
+          min-width: 0;
+          padding: 10px 10px 10px 15px;
+          box-sizing: border-box;
+          font-size: 14px;
+          .ressource-name,
+          .owner,
+          .date {
+            display: block;
+          }
+          /*strong*/
+          .ressource-name {
+            font-weight: bold;
+            color: $dark-grey;
+            @extend .cell-ellipsis;
+          }
+          /*span*/
+          .owner {
+            color: $primary;
+            @extend .cell-ellipsis;
+          }
+          /*span*/
+          .date {
+            color: $grey;
+            font-size: 90%;
+            font-style: italic;
+          }
+          .bottom-locked {
+            right: 0;
+            i {
+              font-size: 22px;
+            }
+            .send-mail::before {
+              color: $primary;
+            }
+            .send-mail:hover {
+              &::before {
+                color: $accent;
+              }
+            }
+          }
+          .icons {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            color: $medium-grey;
+            .inline {
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.fallen {
+    .item {
+      .domino {
+        .top,
+        .bottom {
+          clear: none;
+          padding-bottom: 0;
+        }
+        .top {
+          width: 120px;
+          height: 120px;
+          margin: 0;
+          float: left;
+        }
+        .bottom {
+          margin: 0 0 0 120px;
+          height: 120px;
+          width: auto;
+
+          .title-icon i {
+            font-size: 21px;
+            padding-right: 5px;
+            float: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+.domino .top:hover .ribbon {
+  @include ribbon-up;
+}
+.ribbon {
+  @include ribbon();
+}
+
+.dominos.centered-text {
+  .item {
+    width: 150px !important;
+    min-width: inherit;
+    .domino {
+      .top {
+        position: relative;
+        height: 150px;
+      }
+      .center {
+        padding: 5px;
+        height: inherit;
+        line-height: 1;
+      }
+      .bottom {
+        text-align: left;
+        height: 70px;
+        padding: 0;
+        .content {
+          line-height: 1;
+        }
+      }
+    }
+    &.group {
+      .domino {
+        .top.domino-group {
+          img.domino-group {
+            margin-top: 15px;
+          }
+          .nb-users {
+            span {
+              color: $white;
+              position: absolute;
+              right: 30px;
+              bottom: 0px;
+              font-size: 12px;
+            }
+            i {
+              position: absolute;
+              right: 0;
+              bottom: 5px;
+              font-size: 30px;
+              &::before {
+                line-height: inherit;
+              }
+            }
+          }
+        }
+        .center {
+          height: 45px;
+        }
+        .bottom {
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+
+.dominos alphabetical .item {
+  width: 200px;
+  .domino {
+    border-radius: 0;
+    padding: 0;
+    .top {
+      height: 200px;
+      img {
+        width: 200px;
+        height: 200px;
+        background-color: $primary;
+      }
+    }
+    .bottom {
+      margin: 0;
+      div.content {
+        padding: 0;
+      }
+    }
+  }
+  .domino:hover {
+    box-shadow: 0 2px 6px $shadow-darker;
+  }
+}
+
+@media screen and (min-width: $wide-screen) {
+  .dominos-infos {
+    margin-top: 82px;
+  }
+}
+
+@media screen and (max-width: $fat-mobile) {
+  .dominos {
+    flex-direction: column;
+    .item,
+    .folder {
+      display: block;
+      width: auto;
+    }
+  }
+}

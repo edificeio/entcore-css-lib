@@ -1,0 +1,154 @@
+.details label {
+  font-weight: bold;
+}
+
+.details p {
+  margin-top: 2px;
+  margin-bottom: 12px;
+  padding: 5px 0;
+}
+
+p.placeholder {
+  font-style: italic;
+}
+
+.accordions .accordion.opened .toggle {
+  overflow: auto !important;
+}
+
+.content {
+  margin: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+div.disabled {
+  color: #888;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.scrollable-content {
+  max-height: 350px;
+  overflow: auto;
+}
+
+.scrollable-content-small {
+  max-height: 220px;
+  overflow: auto;
+}
+
+nav.vertical ul li i.caret {
+  height: 20px;
+  width: 25px;
+  display: block;
+  float: left !important;
+  color: #fff;
+  font-size: 25px;
+  font-family: Arial;
+  font-weight: 900;
+  line-height: 12px;
+}
+
+nav.vertical ul li i.caret::before {
+  content: "▸";
+}
+
+nav.vertical ul li i.caret.expanded::before {
+  content: "▾";
+}
+
+table.colored i.pending-icon::before {
+  content: "?";
+  height: 20px;
+  width: 20px;
+  display: block;
+  color: #000;
+  font-size: 21px;
+  font-family: Arial;
+  font-weight: 900;
+}
+
+div.schedule-item-content i.pending-status::before {
+  bottom: 12px !important;
+  right: 12px !important;
+  z-index: 502;
+}
+div.schedule-item-content i.validated-status {
+  bottom: 14px !important;
+  right: 12px !important;
+  z-index: 502;
+}
+
+div.schedule-item-content i.refused-status {
+  bottom: 15px !important;
+  right: 14px !important;
+  z-index: 502;
+}
+
+div.schedule-item-content {
+  padding: 5px !important;
+  text-align: left !important;
+  text-overflow: ellipsis;
+  white-space: initial !important;
+}
+
+div.schedule-item-content .checkbox {
+  position: absolute;
+  bottom: 12px;
+  z-index: 504;
+}
+
+.filters div.dates {
+  position: absolute;
+  right: 0px;
+  top: 4px;
+}
+
+.filters div.dates div.cell {
+  margin-right: 5px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+.form-section select {
+  padding: 3px 1px;
+}
+
+.form-section input[type="radio"] {
+  margin-top: 7px;
+}
+
+ul.colored a.notselected {
+  color: #fff !important;
+}
+
+ul.colored a.notselected:hover {
+  color: #fff !important;
+}
+
+ul.colored a.selected {
+  color: #fff !important;
+}
+
+.down-open {
+  padding-left: 5px;
+}
+
+.multi-combo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.warningEventView {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

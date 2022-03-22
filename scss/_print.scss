@@ -1,0 +1,270 @@
+$grey-dark: #575e73;
+$grey-light: #f2f4f7;
+$grey-lightest: #f2f3f4;
+
+.print {
+  // Put on the balise <html> for optimal rendering
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    color: $grey-dark;
+    -webkit-print-color-adjust: exact;
+    line-height: 1.6;
+    font-size: 16px;
+    .container {
+      width: inherit;
+    }
+    &.added-margin {
+      margin: 1.5cm;
+    }
+  }
+  .main {
+    padding: 0;
+  }
+  .row {
+    width: inherit;
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  video,
+  iframe[src*="youtube"],
+  iframe[src*="dailymotion"],
+  iframe[src*="vimeo"] {
+    border: 1px solid $shadow-light;
+    box-shadow: 1px 1px 10px $shadow-light;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: 26px;
+    &.app-title {
+      font-size: 28px;
+    }
+    i,
+    i::before,
+    i::after {
+      display: inline-block !important;
+      color: inherit !important;
+      vertical-align: top;
+    }
+  }
+  h2 {
+    font-size: 24px;
+    color: $grey-dark;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 20px;
+    color: $grey-dark;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+    color: $grey-dark;
+  }
+  article {
+    border: 1px solid $shadow-light;
+    padding: 15px !important;
+    margin: 15px 0 !important;
+    box-shadow: none;
+  }
+
+  .title-spacing {
+    margin-bottom: 15px;
+    h2 {
+      font-size: 26px;
+      margin-top: 15px;
+    }
+    .subtitle {
+      color: lighten($grey-dark, 10%);
+      display: block;
+      margin: 5px 0 0 !important;
+    }
+  }
+
+  .print--videos {
+    img,
+    a {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    a {
+      padding: 0 10px;
+    }
+  }
+  .print--comments {
+    padding: 0 25px;
+    margin-top: 15px;
+    border-top: 1px solid $grey-light;
+    .comments {
+      padding: 10px 25px !important;
+      h4 {
+        margin-top: 10px;
+      }
+    }
+    i.chat {
+      padding-right: 10px;
+      &::before {
+        color: inherit;
+      }
+    }
+  }
+  [contenteditable] {
+    padding: 10px 20px !important;
+    margin: 10px !important;
+    border: 1px solid #ddd !important;
+  }
+
+  // ICON STYLE
+  i.info-pic {
+    font-size: 10px;
+    position: absolute;
+    left: 5px;
+    z-index: 1000;
+    background-color: $green;
+    color: white;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 23px;
+    border-radius: 50%;
+  }
+  i.help {
+    color: $cyan;
+    font-size: 28px;
+    position: absolute;
+    left: 5px;
+    top: -5px;
+    z-index: 1000;
+  }
+
+  // EXERCIZER
+  .print--exercizer {
+    &__summary {
+      margin: 15px;
+    }
+    &__info [contenteditable] {
+      border-color: lighten($green, 10%) !important;
+      background-color: lighten($green, 40%) !important;
+    }
+    &__help [contenteditable] {
+      border-color: lighten($cyan, 10%) !important;
+      background-color: lighten($cyan, 35%) !important;
+    }
+  }
+}
+
+//TIMELINE GENERATOR
+.print--timeline {
+  article {
+    position: relative;
+    margin: 0 15px !important;
+    padding: 25px 25px 25px 40px !important;
+    border: none !important;
+    border-left: 5px solid $cyan !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 38px;
+      left: -15px;
+      width: 25px;
+      height: 25px;
+      background-color: $cyan;
+      border: 1px solid $cyan;
+      border-radius: 50%;
+    }
+    & img,
+    & video {
+      width: 50%;
+      max-width: 450px;
+      float: left;
+      margin: 0 15px 15px 0;
+      box-shadow: 1px 1px 10px $shadow-light;
+    }
+  }
+}
+
+// COLLABORATIVE WALL
+.print--collaborativewall {
+  &__desc img {
+    width: 100%;
+  }
+  .board {
+    margin-bottom: 50px;
+  }
+}
+
+// PAGES
+.print--pages {
+  font-size: 16px;
+  .row {
+    width: 100%;
+  }
+  .drawing-grid.view.pages-grid {
+    width: 100%;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+  .one,
+  .two,
+  .three,
+  .four,
+  .five,
+  .six,
+  .seven,
+  .eight,
+  .nine,
+  .ten,
+  .eleven {
+    width: 100%;
+  }
+  // Hide buttons, useless on print
+  button,
+  .button,
+  input[type="button"],
+  .plus,
+  .drop-down-button,
+  a[ng-click*="Comment"] {
+    display: none;
+  }
+  .articles-sniplet hr {
+    display: none;
+  }
+}
+// SCRAPBOOK
+.print .app--scrapbook {
+  section.scrapbook {
+    padding: 0 50px !important;
+    font-size: 14px !important;
+    article {
+      padding: 0 !important;
+    }
+    .drawing-zone {
+      position: relative !important;
+    }
+  }
+  .scrapbook-pagination {
+    right: -50px !important;
+  }
+}

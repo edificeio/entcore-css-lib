@@ -1,0 +1,364 @@
+@media screen and (max-width: $tablette) {
+  body {
+    .lightbox-window .tabs,
+    .lightbox .content .tabs {
+      margin: 0;
+      header {
+        max-width: 100%;
+        margin-right: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        box-sizing: border-box;
+        font-size: 12px;
+      }
+      section {
+        padding: 10px 5px;
+      }
+    }
+  }
+
+  ////
+
+  * {
+    -ms-scroll-chaining: none;
+  }
+
+  ////
+
+  body {
+    .widgets,
+    .widgets-picker {
+      display: none;
+    }
+    .widgets-friend {
+      margin-left: 0 !important;
+    }
+
+    .drop-down-filters {
+      .wrapper {
+        i {
+          height: 55px !important;
+          width: 55px !important;
+          background-size: 60px 60px;
+        }
+        p {
+          display: none;
+        }
+        label {
+          width: 59px;
+        }
+      }
+    }
+
+    .navbar .welcome-message {
+      display: none;
+    }
+
+    .cards-list .card {
+      max-width: 250px;
+    }
+
+    grid-cell.media {
+      .media-wrapper,
+      .text-wrapper h1,
+      .text-wrapper h2 {
+        padding: 0;
+        .media-container {
+          min-height: 0;
+        }
+      }
+      table {
+        width: 100% !important;
+      }
+    }
+
+    .media.height-undefined,
+    .media.height-zero {
+      min-height: 0;
+    }
+    .drawing-grid .row {
+      min-height: 0;
+      margin-bottom: 10px;
+    }
+
+    width: 100%;
+    min-height: 100%;
+    @include run-transition(left);
+    left: 0;
+    position: relative !important;
+    &.slide {
+      left: 300px;
+    }
+    header .logo {
+      display: none;
+    }
+    .application-title {
+      position: fixed;
+      color: #fff;
+      top: 0;
+      left: 10px;
+      z-index: 10001;
+      line-height: 50px;
+      margin-top: 0;
+      width: calc(100% - 280px);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      &.move-right {
+        margin-left: 30px;
+      }
+      i {
+        display: none !important;
+      }
+      a,
+      a:hover {
+        color: #fff;
+      }
+    }
+
+    side-panel + app-title {
+      float: left;
+      margin-top: 0;
+      margin-left: auto;
+    }
+
+    table,
+    ul.list-view {
+      th,
+      td {
+        padding: 7px;
+      }
+    }
+    .list-view {
+      .content {
+        max-width: 180px;
+      }
+    }
+
+    .share {
+      table thead th,
+      table thead td {
+        padding: 5px;
+        font-size: 10px;
+      }
+      td:first-child,
+      th:first-child {
+        padding: 5px;
+        font-size: 10px;
+      }
+    }
+
+    section.lightbox {
+      > div.content {
+        padding: 20px;
+        min-height: calc(100% - 50px);
+        width: calc(100% - 50px);
+        margin: 25px;
+        border-radius: 0;
+        box-sizing: border-box;
+      }
+    }
+
+    .icons-view .element {
+      legend {
+        line-height: 18px;
+        a {
+          font-size: 12px;
+        }
+        strong {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .toggle-buttons {
+      height: auto;
+      .button,
+      button {
+        padding: 5px;
+        font-size: 0.9em;
+      }
+    }
+
+    .mobile-nav-opener {
+      @include icon(glyphicons_113_justify, 30px);
+      float: left;
+      display: none;
+      &.visible {
+        display: inline-block;
+      }
+    }
+
+    nav.vertical {
+      ul {
+        li {
+          a {
+            padding-top: 3px;
+            padding-bottom: 3px;
+          }
+        }
+      }
+    }
+
+    nav.vertical[side-nav] {
+      position: fixed;
+      left: 0;
+      top: 50px;
+      z-index: 10001;
+      @include run-transition(all);
+      box-sizing: border-box;
+      width: 0;
+      overflow: hidden;
+      padding: 0;
+      > ul,
+      > div > ul,
+      a.classic-link,
+      a.button {
+        width: 270px;
+      }
+      a.classic-link {
+        white-space: nowrap;
+      }
+      a.button {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      &.slide {
+        width: 305px;
+        padding: 10px;
+        overflow: auto;
+      }
+    }
+    .toggle-buttons {
+      left: 0;
+      margin-left: 0;
+    }
+  }
+
+  section.main-col {
+    nav.contextual-buttons {
+      .action-buttons {
+      }
+    }
+  }
+
+  .account {
+    .avatar {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 120px;
+      height: 120px;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+
+  /// MICROBOX
+
+  button.microbox {
+    float: right;
+  }
+  .micro-left + button.microbox {
+    float: left;
+  }
+  .microbox-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    box-sizing: border-box;
+    background: rgba($white, 0.6);
+  }
+  .microbox-content {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: $white;
+    box-shadow: 0 0 3px 2px rgba($black, 0.2);
+    i.close-2x {
+      float: right;
+      cursor: pointer;
+    }
+    .microbox-material {
+      overflow: hidden;
+      padding-bottom: 20px;
+    }
+  }
+  // specific DOM content
+  .microbox-content {
+    container {
+      float: none;
+      text-align: left;
+      .checkbox-filters {
+        height: auto;
+        display: block;
+        ul li {
+          display: block;
+          padding: 20px;
+        }
+      }
+    }
+  }
+  button.microbox-close {
+    float: right;
+  }
+
+  [subtitle] {
+    display: block;
+    background: silver;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    position: fixed;
+    left: 0;
+    text-align: center;
+    font-size: 17px;
+    height: 35px;
+    line-height: 35px;
+    cursor: default;
+    overflow: hidden;
+    color: $white;
+  }
+  h2[subtitle] {
+    text-align: left;
+  }
+  .subtitle-item {
+    color: $white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .subtitle-item:first-child {
+    text-align: right;
+  }
+  section.subtitle-push {
+    margin-top: 40px;
+  }
+
+  //structure main-col / rows
+
+  .rigid-grid .option-row {
+    float: right;
+  }
+  .rigid-grid .main-col,
+  .rigid-grid .option-row {
+    padding-left: 0;
+  }
+
+  nav.subnavbar {
+    ul {
+      li {
+        margin: 0 0;
+      }
+    }
+  }
+}

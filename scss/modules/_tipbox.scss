@@ -1,0 +1,54 @@
+.tipbox {
+  align-items: flex-start;
+  backface-visibility: hidden;
+  i {
+    font-size: 26px;
+    color: $primary;
+  }
+  .tipbox-content {
+    position: absolute;
+    padding: 10px 15px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-radius: 3px;
+    background: white;
+    z-index: 10000;
+    border: 1px solid $primary-light;
+    background: $white;
+    box-shadow: 0 1px 3px $shadow;
+  }
+  &.left {
+    .tipbox-content {
+      right: 40px;
+    }
+  }
+}
+
+.tipbox:hover {
+  .tipbox-content {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    transition: opacity 400ms;
+    margin-left: 40px; // less than tipbox i width
+    &.top {
+      bottom: 40px;
+      right: 30px;
+    }
+    &.bot {
+      top: 40px;
+      right: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $tablette) {
+  tr .tipbox i {
+    color: $disabled-color;
+  }
+  tr:hover .tipbox i {
+    color: $primary;
+  }
+}

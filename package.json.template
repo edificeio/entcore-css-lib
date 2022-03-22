@@ -1,0 +1,47 @@
+{
+  "name": "${modname}",
+  "version": "${npmVersion}",
+  "description": "Open Digital Education Legacy CSS framework",
+  "scripts": {
+    "copy-fonts": "cpr node_modules/entcore-generic-icons/fonts/ assets/fonts/generic-icons/ -o",
+    "sass:watch": "sass --source-map -w scss/index.scss docs/index.css",
+    "sass:build:debug": "sass --source-map scss/index.scss docs/index.css",
+    "sass:build:release": "sass --style=compressed scss/index.scss dist/index.css",
+    "dev:prepare": "npm run sass:build:debug && npm run copy-fonts && cpr assets/ docs/ -o",
+    "dev:watch": "npm run dev:prepare && concurrently  \" npm run sass:watch \" \" npm run dev:serve  \" ",
+    "dev:serve": "live-server --open=docs/ --ignore=**/node_modules/**,**/dist/**,**/package.json,**/.git/**",
+    "dev:lint": "stylelint scss/**/*.scss || echo \"lint faild for some file(s).\"",
+    "dev:lint-fix": "stylelint scss/**/*.scss --fix || echo \"lint faild for some file(s).\"",
+    "prettier:check": "npx prettier --check .",
+    "prettier:write": "npx prettier --write .",
+    "release:clean": "rimraf dist",
+    "release:prepare": "npm run release:clean && npm run copy-fonts && cpr assets/ dist/",
+    "release:build": "npm run release:prepare && npm run sass:build:release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opendigitaleducation/entcore-css-lib"
+  },
+  "keywords": [
+    "ODE",
+    "CSS lib",
+    "framework"
+  ],
+  "author": "OpenDigitalEducation",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opendigitaleducation/entcore-css-lib/issues"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "copyfiles": "^2.2.0",
+    "cpr": "^3.0.1",
+    "prettier": "2.6.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.49.9"
+  },
+  "dependencies": {
+    "entcore-generic-icons": "opendigitaleducation/generic-icons"
+  }
+}

@@ -1,0 +1,43 @@
+.emptyscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  height: inherit;
+  align-items: center;
+  margin-top: 25px;
+  &-header {
+    font-size: 26px;
+  }
+  &-image {
+    max-width: 40%;
+    max-height: 30vh;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    &__mini {
+      max-height: 200px;
+      margin: 25px;
+    }
+    &[src*="trash"] {
+      max-height: 35vh;
+    }
+  }
+  &-footer {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $darkest-grey;
+    margin: 25px 50px;
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: $fat-mobile) {
+  .emptyscreen {
+    &-header {
+      font-size: 20px;
+    }
+    &-footer {
+      font-size: 12px;
+    }
+  }
+}
