@@ -1,0 +1,35 @@
+// INPUTS
+
+.input-response-correct,
+.input-response-incorrect {
+    padding: 5px 15px;
+    height: inherit;
+}
+
+.input-response-correct {
+    color: darken($green, 10%) !important;
+    border: 1px solid $green !important;
+    background-color: rgba($green, 0.1);
+}
+
+.input-response-incorrect {
+    color: darken($red, 10%) !important;
+    border: 1px solid $red !important;
+    background-color: rgba($red, 0.1);
+}
+
+// TEXTAREAS
+
+editor>textarea {
+    font-family: monospace;
+  }
+
+  textarea {
+    background-color: white;
+    border: 1px solid rgba(black, 0.1);
+    font-family: sans-serif;
+
+    &[disabled] {
+      color: $darkest-grey;
+    }
+  }
