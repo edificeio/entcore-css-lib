@@ -1,0 +1,39 @@
+/* FILTER STYLE */
+.custom-filter-button {
+    margin-right: 20px;
+    border: 1px solid lightgray;
+    background-color: lightgray;
+    border-radius: 2px;
+    min-width: 150px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+.custom-filter-button-library {
+    border: 1px solid lightgray;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+    background-color: lightgray;
+    border-radius: 2px;
+    text-align: center;
+    width: 100%;
+}
+
+.custom-filter-button-correction {
+    border: 1px solid lightgray;
+    padding: 5px;
+    margin: 5px;
+    background-color: lightgray;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.custom-filter-button.custom-selected,
+.custom-filter-button-library.custom-selected,
+.custom-filter-button-correction.custom-selected {
+    background-color: $orange;
+    color: white;
+}
