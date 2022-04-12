@@ -43,6 +43,12 @@
 			box-sizing: border-box;
 		}
 
+		.img.container.video {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
 		.video.container {
 			
 			.video {
