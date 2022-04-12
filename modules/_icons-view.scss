@@ -1,21 +1,24 @@
-.icons-view{
+.icons-view {
 	margin-top: 15px;
 	text-align: center;
 	@include row;
 	padding-left: 0;
-	.element{
+
+	.element {
 		display: inline-block;
 		box-sizing: border-box;
 		position: relative;
 		overflow: hidden;
 		margin: 2px;
 		vertical-align: top;
-		i{
+
+		i {
 			background-size: contain;
 			background-position: 0px 2px;
 		}
 	}
-	explorer{
+
+	explorer {
 		display: inline-block;
 		box-sizing: border-box;
 		position: relative;
@@ -25,24 +28,10 @@
 		margin: 2px;
 		list-style-type: none;
 	}
-	explorer, .element{
-		div.video {
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
 
-			.icon-video {
-				margin-top: -1rem;
-				fill: #009fcd;
-			}
-		}
-
-		.container{
+	explorer,
+	.element {
+		.container {
 			height: $icon-list-size;
 			width: $icon-list-size;
 			display: block;
@@ -53,11 +42,27 @@
 			float: none;
 			box-sizing: border-box;
 		}
-		.img.container{
+
+		.video.container {
+			
+			.video {
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				height: 100%;
+			}
+
+			.icon-video {
+				fill: #009fcd;
+			}
+		}
+
+		.img.container {
 			border: 1px solid #ccc;
 			position: relative;
 			height: 120px;
-			> div{
+
+			>div {
 				height: 100%;
 				width: 100%;
 				position: relative;
@@ -65,14 +70,16 @@
 			}
 		}
 
-		img, i{
+		img,
+		i {
 			float: none !important;
 			margin-left: auto;
 			margin-right: auto;
 			cursor: pointer;
 			max-width: 100%;
 		}
-		legend{
+
+		legend {
 			float: left;
 			width: 100%;
 			height: 36px;
@@ -80,7 +87,8 @@
 			padding: 5px !important;
 			line-height: 20px !important;
 			background: none;
-			a{
+
+			a {
 				display: block;
 				text-align: center;
 				margin: 0;
@@ -92,48 +100,49 @@
 				text-overflow: ellipsis;
 			}
 		}
-		a{
-			i.shared{
+
+		a {
+			i.shared {
 				bottom: 2px;
 			}
 
-			i.inline{
+			i.inline {
 				display: inline-block;
 				position: relative;
 				height: 20px;
 				width: 20px;
 			}
 
-			i{
+			i {
 				width: $icon-list-size;
 				height: $icon-list-size;
 				background-size: auto 100%;
 			}
 		}
 
-		input[type=checkbox]{
+		input[type=checkbox] {
 			position: absolute;
 			left: 20px;
 			top: 20px;
 		}
 
-		em{
+		em {
 			display: none;
 		}
 	}
 }
 
-.icons-view:after{
-	clear:both;
+.icons-view:after {
+	clear: both;
 	content: " ";
 	display: block;
 	width: 100%;
 }
 
-.icons-view.absolute{
+.icons-view.absolute {
 	position: absolute;
 }
 
-.icons-view.apps{
+.icons-view.apps {
 	text-align: left;
 }
