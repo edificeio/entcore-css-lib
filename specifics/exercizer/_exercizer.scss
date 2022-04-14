@@ -11,8 +11,48 @@ body.exercizer {
     }
   }
 
+  h1 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: $purple;
+
+    i {
+      margin-right: 10px;
+    }
+
+    i,
+    i:before {
+      display: inline-block !important;
+    }
+  }
+
   h2 {
     font-size: 18px;
+  }
+
+  button {
+    border-radius: 4px;
+    margin-left: .5em;
+    margin-right: .5em;
+
+    &.right-magnet:first-of-type,
+    &:not(.right-magnet):last-of-type {
+      margin-right: 0;
+    }
+    &.right-magnet:last-of-type,
+    &:not(.right-magnet):first-of-type {
+      margin-left: 0;
+    }
+    &>* {
+      vertical-align: middle;
+    }
+    &>i {
+      margin-right: 8px;
+    }
+    &.label-badge {
+      padding: 8px 16px;
+    }
   }
 
   .chip {
