@@ -271,8 +271,11 @@ body.exercizer {
   }
 
   ul.thought-out-actions li {
-    padding: 15px;
-    margin: 5px 0;
+    padding: 12px;
+    margin: 4px 0;
+    border-radius: 4px;
+    background-color: #FAFAFA;
+    border: 1px solid $lightest-grey;
 
     &::after {
       @include fonticon;
@@ -282,10 +285,6 @@ body.exercizer {
       right: 25px;
       top: calc(50% - 12px);
       opacity: 0.75;
-    }
-
-    &:hover {
-      color: white;
     }
   }
 
