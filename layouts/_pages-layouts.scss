@@ -647,6 +647,56 @@ div.invisible-content{
 	}
 }
 
+// NEW MODERN RULES
+.flex {
+	display: flex;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+.justify-space-between {
+	justify-content: space-between;
+}
+
+.grid {
+	display: grid;
+}
+
+.grid-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+// SPACERS
+$spacers: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64;
+
+@each $space in $spacers {
+  .mt-#{$space} {
+    margin-top: $space + px !important;
+  }
+  .mb-#{$space} {
+    margin-bottom: $space + px !important;
+  }
+  .m-#{$space} {
+    margin-top: $space + px !important;
+    margin-bottom: $space + px !important;
+  }
+  .pt-#{$space} {
+    padding-top: $space + px !important;
+  }
+  .pb-#{$space} {
+    padding-bottom: $space + px !important;
+  }
+  .p-#{$space} {
+    padding-top: $space + px !important;
+    padding-bottom: $space + px !important;
+  }
+  .gap-#{$space} {
+	gap: $space + px !important;
+  }
+}
+
 /*ZOOM*/
 .zoomout-2x {
 	transform: scale(0.5)
