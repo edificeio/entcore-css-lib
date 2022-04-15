@@ -1,0 +1,38 @@
+.sticky-nav {
+    position: sticky;
+    top: 80px;
+}
+
+nav {
+
+    &.floating-navigation,
+    &.vertical {
+        padding-right: 15px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+    &.vertical.floating.hash-magnet {
+        margin-bottom: 0;
+    }
+
+    &.mobile-navigation {
+        padding-right: 0px !important;
+        border-left: 0 !important;
+
+        ul li.selected {
+            background: rgba(0, 0, 0, 0.26);
+            font-weight: bold;
+        }
+    }
+
+    /* Floating nav selected */
+    &.floating-navigation li.selected {
+        background: $orange;
+        box-shadow: none;
+
+        & a {
+            color: white;
+        }
+    }
+}

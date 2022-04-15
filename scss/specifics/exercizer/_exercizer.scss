@@ -1,13 +1,58 @@
-body.exercizer.dragging {
-  [drop-item].drag-over {
-    background: $orange;
-    color: #fff;
-  }
-}
-
 body.exercizer {
+
+  @import './components/';
+  @import './views/';
+
+  &.dragging {
+
+    [drop-item].drag-over {
+      background: $orange;
+      color: #fff;
+    }
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: $purple;
+
+    i {
+      margin-right: 10px;
+    }
+
+    i,
+    i:before {
+      display: inline-block !important;
+    }
+  }
+
   h2 {
     font-size: 18px;
+  }
+
+  button {
+    border-radius: 4px;
+    margin-left: .5em;
+    margin-right: .5em;
+
+    &.right-magnet:first-of-type,
+    &:not(.right-magnet):last-of-type {
+      margin-right: 0;
+    }
+    &.right-magnet:last-of-type,
+    &:not(.right-magnet):first-of-type {
+      margin-left: 0;
+    }
+    &>* {
+      vertical-align: middle;
+    }
+    &>i {
+      margin-right: 8px;
+    }
+    &.label-badge {
+      padding: 8px 16px;
+    }
   }
 
   .chip {
@@ -47,162 +92,14 @@ body.exercizer {
     }
   }
 
-  edit-fill-text {
-    editor.edit,
-    editor.both,
-    editor.html {
-      editor-toolbar {
-        border-left: 52px #eee solid;
-
-        .option.filltext {
-          position: absolute;
-          left: -52px;
-          box-sizing: border-box;
-          top: 0;
-          height: 100%;
-          width: 52px;
-
-          & > i {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-
-            &::before {
-              font-size: 28px;
-              @include fonticon;
-              content: "\e858";
-              color: $orange;
-            }
-          }
-        }
-      }
-
-      fill-zone {
-        cursor: pointer;
-
-        text-zone {
-          pointer-events: none;
-          user-select: none;
-
-          &::after {
-            content: " ";
-            display: block;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 2;
-          }
-        }
-      }
-    }
-  }
-
   [drag-item] {
     cursor: move;
   }
 
-  image-zone {
-    @media screen and (min-width: $wide-screen), print {
-      width: 100px;
-      height: 100px;
-    }
-
-    @media screen and (max-width: $wide-screen), print {
-      width: 70px;
-      height: 70px;
-    }
-
-    float: left;
-    position: relative;
-    float: left;
-    position: relative;
-    background: rgba(255, 255, 255, 0.8);
-    margin: 8px;
-    border-radius: 3px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-    z-index: 20;
-    overflow: hidden;
-
-    img {
-      border-radius: 3px;
-      pointer-events: none;
-    }
-
-    button.add-answer {
-      box-shadow: none;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      margin: 0;
-    }
-
-    &.error::after {
-      content: " ";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: $red;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.3;
-    }
-
-    &.success::after {
-      content: " ";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: $green;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.3;
-    }
-
-    i.close {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      color: #fff;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-      z-index: 3;
-    }
-
-    .actions {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      font-size: 14px;
-      padding-left: 11px;
-      background: rgba(0, 0, 0, 0.5);
-      height: 35px;
-      line-height: 35px;
-      color: #fff;
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 3px;
-      box-sizing: border-box;
-
-      i {
-        padding-right: 3px;
-        margin-top: 1px;
-      }
-
-      &:hover {
-        color: $orange;
-      }
-    }
-  }
-
   .base-image {
-    @media screen and (min-width: $wide-screen), print {
+
+    @media screen and (min-width: $wide-screen),
+    print {
       width: 760px;
       height: 600px;
     }
@@ -235,12 +132,15 @@ body.exercizer {
       border: 1px dashed transparent;
       border-radius: 5px;
 
-      > img {
-        @media screen and (min-width: $wide-screen), print {
+      >img {
+
+        @media screen and (min-width: $wide-screen),
+        print {
           width: 100%;
         }
 
-        @media screen and (max-width: $wide-screen), print {
+        @media screen and (max-width: $wide-screen),
+        print {
           margin-left: auto;
           margin-right: auto;
           display: block;
@@ -253,25 +153,28 @@ body.exercizer {
         border: 1px dashed $orange;
       }
 
-      > image-select {
+      >image-select {
         width: 100%;
         height: 100%;
 
-        > div {
+        >div {
           width: 100%;
           height: 100%;
           display: flex;
           align-items: center;
 
-          > img {
-            @media screen and (min-width: $wide-screen), print {
+          >img {
+
+            @media screen and (min-width: $wide-screen),
+            print {
               width: 100%;
             }
 
             max-height: 100%;
             border: none;
 
-            @media screen and (max-width: $wide-screen), print {
+            @media screen and (max-width: $wide-screen),
+            print {
               border-radius: 0;
               width: initial;
               margin-left: auto;
@@ -282,21 +185,24 @@ body.exercizer {
         }
       }
 
-      > div {
+      >div {
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
 
-        > img {
-          @media screen and (min-width: $wide-screen), print {
+        >img {
+
+          @media screen and (min-width: $wide-screen),
+          print {
             width: 100%;
           }
 
           max-height: 100%;
           border: none;
 
-          @media screen and (max-width: $wide-screen), print {
+          @media screen and (max-width: $wide-screen),
+          print {
             border-radius: 0;
             width: initial;
             margin-left: auto;
@@ -307,7 +213,7 @@ body.exercizer {
       }
     }
 
-    > img {
+    >img {
       width: 100%;
       height: auto;
     }
@@ -336,6 +242,7 @@ body.exercizer {
   }
 
   .add-option {
+
     input[type="text"],
     button {
       float: left;
@@ -355,24 +262,21 @@ body.exercizer {
     }
   }
 
-  fill-zone {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    position: relative;
-  }
-
   .options text-zone {
     width: auto;
   }
 
   .eight-desktop {
-    @media screen and (min-width: $wide-screen), print {
+
+    @media screen and (min-width: $wide-screen),
+    print {
       width: 66.66667%;
     }
   }
 
   article {
+    border-radius: 8px;
+    padding: 24px;
     transition: z-index 0s 0.35s;
   }
 
@@ -394,133 +298,6 @@ body.exercizer {
     }
   }
 
-  text-zone {
-    max-width: 150px;
-    min-width: 150px;
-
-    @media screen and (min-width: $wide-screen), print {
-      max-height: 30px;
-      min-height: 30px;
-    }
-
-    @media screen and (max-width: $wide-screen), print {
-      max-height: 25px;
-      min-height: 25px;
-    }
-
-    background: #fff;
-    margin: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-    padding: 5px 15px;
-    color: #666;
-    display: inline-flex;
-    flex-direction: row-reverse;
-    position: relative;
-    box-sizing: border-box;
-    line-height: 20px;
-    transition: all 250ms ease, max-width 0.15s 0.15s ease-out,
-      max-height 0.15s 0s ease-in;
-
-    span {
-      overflow: hidden;
-      display: block;
-      padding-right: 1em;
-      position: relative;
-      max-height: 20px;
-      background: inherit;
-      transition: max-height 0.15s 0s ease-in;
-
-      &::before {
-        content: "...";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        width: 1em;
-        height: 1em;
-        margin-top: 0.2em;
-        background: inherit;
-      }
-    }
-
-    &.selected {
-      background: $primary;
-      color: #fff;
-    }
-
-    input[type="text"],
-    select {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: block;
-      border-bottom: none;
-    }
-
-    input[type="text"] {
-      box-sizing: border-box;
-      padding-left: 1px;
-    }
-
-    input[type="text"]:focus {
-      border-bottom: 1px solid $orange;
-    }
-
-    [drop-item] {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      box-sizing: border-box;
-      line-height: 33px;
-      text-align: center;
-      background: transparent;
-      transition: background 250ms ease;
-    }
-
-    &.error {
-      background: $red;
-      border-color: $red;
-      color: #e8e8e8;
-      border-left: 0;
-    }
-
-    &.success {
-      background: $green;
-      border-color: $green;
-      color: #fff;
-      border-left: 0;
-      font-size: 16px;
-    }
-
-    > i {
-      display: inline;
-      transition: color 250ms ease;
-      z-index: 300;
-      pointer-events: all;
-
-      &:hover {
-        color: $orange;
-      }
-
-      &.edit {
-        margin: 0 5px;
-      }
-
-      &.close {
-        margin-right: -10px;
-      }
-    }
-  }
-
   .order-index {
     height: 40px;
     width: 40px;
@@ -536,8 +313,11 @@ body.exercizer {
   }
 
   ul.thought-out-actions li {
-    padding: 15px;
-    margin: 5px 0;
+    padding: 12px;
+    margin: 4px 0;
+    border-radius: 4px;
+    background-color: #FAFAFA;
+    border: 1px solid $lightest-grey;
 
     &::after {
       @include fonticon;
@@ -548,66 +328,11 @@ body.exercizer {
       top: calc(50% - 12px);
       opacity: 0.75;
     }
-
-    &:hover {
-      color: white;
-    }
-  }
-
-  perform-order .answer {
-    line-height: 25px;
-    min-height: 40px;
-  }
-
-  edit-order input[type="text"] {
-    margin-bottom: 0;
-    margin-top: 6px;
-  }
-
-  perform-order,
-  edit-order {
-    ul.thought-out-actions > li:hover {
-      color: #fff;
-
-      .order-index {
-        background-color: white;
-        color: $primary;
-      }
-    }
   }
 
   // Delete border from Order question in correction
   input[data-ng-model="filled_answer.order_by"] {
     border: none;
-  }
-
-  perform-qcm {
-    .checkbox {
-      margin-top: 6px;
-      margin-right: 25px;
-    }
-
-    input[type="text"] {
-      border: none;
-      margin-bottom: 0;
-      height: 30px;
-      line-height: 30px;
-    }
-
-    div[type="text"] {
-      line-height: 30px;
-      font-size: 14px;
-      word-break: break-word;
-    }
-  }
-
-  view-qcm {
-    div[type="text"] {
-      line-height: 30px;
-      font-size: 14px;
-      word-break: break-word;
-      border-bottom: 1px solid #ddd;
-    }
   }
 
   grain-copy-footer {
@@ -646,7 +371,7 @@ body.exercizer {
     }
   }
 
-  .flex-row.justify-center.centered > button.flat-button.five {
+  .flex-row.justify-center.centered>button.flat-button.five {
     span {
       float: none;
       display: inline-block;
@@ -666,10 +391,7 @@ body.exercizer {
     font-size: 16px;
     color: #555;
   }
-}
 
-/// TCM inner App css
-body.exercizer {
   /*  COLOR CORRECTED / CORRECTION ON GOING / HAS BEEN START / IS SUBMITTED */
   .dominos .item .domino .due-date {
     padding: 10px 0;
@@ -679,7 +401,7 @@ body.exercizer {
       color: inherit;
     }
 
-    & > * {
+    &>* {
       display: inline-block;
     }
 
@@ -731,24 +453,28 @@ body.exercizer {
       opacity: 0;
       transition: opacity 0.5s ease-in 0s;
 
-      @media screen and (max-width: $tablette), print {
+      @media screen and (max-width: $tablette),
+      print {
         display: block;
         left: 35px;
 
-        @media screen and (max-width: $fat-mobile), print {
+        @media screen and (max-width: $fat-mobile),
+        print {
           top: 50px;
         }
 
-        @media screen and (min-width: $fat-mobile), print {
+        @media screen and (min-width: $fat-mobile),
+        print {
           top: 35px;
         }
       }
 
-      @media screen and (min-width: $tablette), print {
+      @media screen and (min-width: $tablette),
+      print {
         left: 50px;
         top: 40px;
 
-        > i18n {
+        >i18n {
           white-space: nowrap;
         }
       }
@@ -759,11 +485,14 @@ body.exercizer {
     }
 
     &:hover {
-      @media screen and (max-width: $tablette), print {
+
+      @media screen and (max-width: $tablette),
+      print {
         width: 140px;
       }
 
-      @media screen and (min-width: $tablette), print {
+      @media screen and (min-width: $tablette),
+      print {
         width: 250px;
       }
 
@@ -806,88 +535,6 @@ body.exercizer {
     color: $orange;
   }
 
-  .input-response-correct,
-  .input-response-incorrect {
-    padding: 5px 15px;
-    height: inherit;
-  }
-
-  .input-response-correct {
-    color: darken($green, 10%) !important;
-    border: 1px solid $green !important;
-    background-color: rgba($green, 0.1);
-  }
-
-  .input-response-incorrect {
-    color: darken($red, 10%) !important;
-    border: 1px solid $red !important;
-    background-color: rgba($red, 0.1);
-  }
-
-  /* FILTER STYLE */
-  .custom-filter-button {
-    margin-right: 20px;
-    border: 1px solid lightgray;
-    background-color: lightgray;
-    border-radius: 2px;
-    min-width: 150px;
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 7px;
-    padding-top: 7px;
-  }
-
-  .custom-filter-button-library {
-    border: 1px solid lightgray;
-    padding: 5px;
-    margin: 5px 0 5px 0;
-    background-color: lightgray;
-    border-radius: 2px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .custom-filter-button-correction {
-    border: 1px solid lightgray;
-    padding: 5px;
-    margin: 5px;
-    background-color: lightgray;
-    border-radius: 2px;
-    text-align: center;
-  }
-
-  .custom-filter-button.custom-selected,
-  .custom-filter-button-library.custom-selected,
-  .custom-filter-button-correction.custom-selected {
-    background-color: $orange;
-    color: white;
-  }
-
-  nav.floating-navigation,
-  nav.vertical {
-    padding-right: 15px;
-  }
-
-  nav.mobile-navigation {
-    padding-right: 0px !important;
-    border-left: 0 !important;
-
-    ul li.selected {
-      background: rgba(0, 0, 0, 0.26);
-      font-weight: bold;
-    }
-  }
-
-  /* Floating nav selected */
-  .floating-navigation li.selected {
-    background: $orange;
-    box-shadow: none;
-
-    & a {
-      color: white;
-    }
-  }
 
   /* Custom tags for subject library list */
   .subject-library-tag {
@@ -959,14 +606,14 @@ body.exercizer {
   }
 
   // & body
-  editor.small-editor.edit > [contenteditable] {
+  editor.small-editor.edit>[contenteditable] {
     width: 100%;
     max-height: 100px !important;
     min-height: 100px !important;
     overflow-y: scroll;
   }
 
-  editor.small-editor.edit > [contenteditable]:focus {
+  editor.small-editor.edit>[contenteditable]:focus {
     width: 100%;
     max-height: none !important;
     min-height: 250px !important;
@@ -1003,7 +650,8 @@ body.exercizer {
     width: 10px;
   }
 
-  @media screen and (max-width: $wide-screen), print {
+  @media screen and (max-width: $wide-screen),
+  print {
     .cell-initial-float {
       float: initial;
     }
@@ -1026,20 +674,6 @@ body.exercizer {
     display: table;
     width: 100%;
     table-layout: fixed;
-  }
-
-  editor > textarea {
-    font-family: monospace;
-  }
-
-  textarea {
-    background-color: white;
-    border: 1px solid rgba(black, 0.1);
-    font-family: sans-serif;
-
-    &[disabled] {
-      color: $darkest-grey;
-    }
   }
 
   .good-answer {
@@ -1103,49 +737,6 @@ body.exercizer {
     }
   }
 
-  // TAP TAP STYLE : Replace D&D on responsive touch
-  .tap-tap {
-    background-color: $primary;
-    color: white;
-    padding: 25px;
-    position: fixed;
-    z-index: 1000;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-height: 40vh;
-    margin: 0 !important;
-    border: none;
-    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
-
-    &__item {
-      cursor: pointer;
-      display: inline-block;
-      background-color: white;
-      border: none;
-      padding: 10px 30px;
-      margin: 10px;
-      color: $darkest-grey;
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-
-      &:hover,
-      &:active {
-        background-color: $orange;
-        color: white;
-        border: none;
-      }
-    }
-
-    &__target {
-      border-color: $orange;
-    }
-
-    &__explanation {
-      font-size: 13px;
-      font-style: italic;
-    }
-  }
-
   .grain-correction {
     background-color: rgba($green, 0.1);
     border: 1px solid $green !important;
@@ -1171,7 +762,8 @@ body.exercizer {
     }
   }
 
-  @media screen and (max-width: $tablette), print {
+  @media screen and (max-width: $tablette),
+  print {
     .main-col {
       padding-left: 0 !important;
     }
@@ -1190,7 +782,8 @@ body.exercizer {
     }
   }
 
-  @media screen and (max-width: $fat-mobile), print {
+  @media screen and (max-width: $fat-mobile),
+  print {
     .association {
       flex-direction: column;
       padding: 10px;
@@ -1238,7 +831,8 @@ body.exercizer {
     margin-left: 5px;
   }
 
-  @media screen and (max-width: $fat-mobile), print {
+  @media screen and (max-width: $fat-mobile),
+  print {
     .text-zone-size {
       font-size: 70%;
     }
@@ -1249,24 +843,26 @@ body.exercizer {
     outline: 0;
   }
 
-  @media screen and (max-width: $wide-screen), print {
-    .rigid-grid > .twelve {
+  @media screen and (max-width: $wide-screen),
+  print {
+    .rigid-grid>.twelve {
       width: 100%;
     }
 
     .rigid-grid {
-      > .margin-one,
-      > .margin-two,
-      > .margin-three,
-      > .margin-four,
-      > .margin-five,
-      > .margin-six,
-      > .margin-seven,
-      > .margin-eight,
-      > .margin-nine,
-      > .margin-ten,
-      > .margin-eleven,
-      > .margin-twelve {
+
+      >.margin-one,
+      >.margin-two,
+      >.margin-three,
+      >.margin-four,
+      >.margin-five,
+      >.margin-six,
+      >.margin-seven,
+      >.margin-eight,
+      >.margin-nine,
+      >.margin-ten,
+      >.margin-eleven,
+      >.margin-twelve {
         margin: 0;
       }
     }
@@ -1310,7 +906,7 @@ body.exercizer {
   .final-score-list {
     display: flex;
 
-    > div {
+    >div {
       display: flex;
       margin-left: auto;
       margin-right: auto;
@@ -1360,24 +956,26 @@ body.exercizer {
     }
   }
 
-  .input-block input + i.loaded {
+  .input-block input+i.loaded {
     font-size: 20px;
     padding-left: 5px;
     padding-right: 5px;
     color: #46bfaf;
   }
 
-  @media screen and (max-width: $tablette), print {
+  @media screen and (max-width: $tablette),
+  print {
     .mobile-row {
       @include row;
 
-      > div > input {
+      >div>input {
         padding: 0;
       }
     }
   }
 
-  @media screen and (min-width: $wide-screen), print {
+  @media screen and (min-width: $wide-screen),
+  print {
     .desktop-three {
       width: 25%;
     }

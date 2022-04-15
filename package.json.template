@@ -12,8 +12,9 @@
     "dev:serve": "live-server --open=docs/ --ignore=**/node_modules/**,**/dist/**,**/package.json,**/.git/**",
     "dev:lint": "stylelint scss/**/*.scss || echo \"lint faild for some file(s).\"",
     "dev:lint-fix": "stylelint scss/**/*.scss --fix || echo \"lint faild for some file(s).\"",
-    "prettier:check": "npx prettier --check .",
-    "prettier:write": "npx prettier --write .",
+    "prettier:check": "npx prettier --check scss/**/*.scss",
+    "prettier:write": "npx prettier --write scss/**/*.scss",
+    "prettier:all": "npm run prettier:write && npm run prettier:check",
     "release:clean": "rimraf dist",
     "release:prepare": "npm run release:clean && npm run copy-fonts && cpr assets/ dist/",
     "release:build": "npm run release:prepare && npm run sass:build:release"
