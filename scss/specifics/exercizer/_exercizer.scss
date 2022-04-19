@@ -968,9 +968,9 @@ body.exercizer {
     .mobile-row {
       @include row;
 
-      >div>input {
+      /* >div>input {
         padding: 0;
-      }
+      } */
     }
   }
 
