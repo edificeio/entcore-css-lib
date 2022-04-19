@@ -668,6 +668,12 @@ $spacers: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64;
   .mb-#{$space} {
     margin-bottom: $space + px !important;
   }
+  .ml-#{$space} {
+    margin-left: $space + px !important;
+  }
+  .mr-#{$space} {
+    margin-right: $space + px !important;
+  }
   .m-#{$space} {
     margin-top: $space + px !important;
     margin-bottom: $space + px !important;

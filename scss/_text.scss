@@ -111,6 +111,10 @@ label {
   white-space: pre-line;
 }
 
+.text-preline {
+  white-space: pre-line;
+}
+
 .inline {
   margin: 0;
 }
@@ -208,5 +212,14 @@ h2 > i.back {
     .text-title {
       font-size: 22px;
     }
+  }
+}
+
+// FONT SIZE
+$fontsizes: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+@each $fontsize in $fontsizes {
+  .fs-#{$fontsize} {
+    font-size: $fontsize + rem !important;
   }
 }
