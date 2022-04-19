@@ -262,6 +262,20 @@ i.person {
 
 /* actions icons */
 
+i.distribute{
+  @include fonticon;
+  &::before{
+      content: '\e849';
+  }
+}/*  */
+
+i.switch{
+  @include fonticon;
+  &::before{
+      content: '\e874';
+  }
+}
+
 i.send-mail {
   @include fonticon;
   margin-right: 7px;
