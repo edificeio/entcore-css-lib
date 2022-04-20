@@ -1,0 +1,8 @@
+$svgs: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64;
+
+@each $svg in $svgs {
+  .svg-#{$svg} {
+    width: $svg + px !important;
+    height: $svg + px !important;
+  }
+}
