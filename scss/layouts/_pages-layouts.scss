@@ -678,6 +678,14 @@ $spacers: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64;
   .mr-#{$space} {
     margin-right: $space + px !important;
   }
+  .mx-#{$space} {
+    margin-left: $space + px !important;
+    margin-right: $space + px !important;
+  }
+  .my-#{$space} {
+    margin-top: $space + px !important;
+    margin-bottom: $space + px !important;
+  }
   .m-#{$space} {
     margin-top: $space + px !important;
     margin-bottom: $space + px !important;
@@ -686,6 +694,20 @@ $spacers: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64;
     padding-top: $space + px !important;
   }
   .pb-#{$space} {
+    padding-bottom: $space + px !important;
+  }
+  .pl-#{$space} {
+    padding-left: $space + px !important;
+  }
+  .pr-#{$space} {
+    padding-right: $space + px !important;
+  }
+  .px-#{$space} {
+    padding-left: $space + px !important;
+    padding-right: $space + px !important;
+  }
+  .py-#{$space} {
+    padding-top: $space + px !important;
     padding-bottom: $space + px !important;
   }
   .p-#{$space} {
