@@ -1,0 +1,41 @@
+// Component ALERT BS5
+$alert-info: 197, 65%, 47%;
+$alert-warning: 27, 100%, 59%;
+$alert-error: 352, 100%, 61%;
+$alert-success: 93, 61%, 46%;
+
+.alert-message {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem .75rem;
+    font-size: .875rem;
+    line-height: 1.3rem;
+    border: 1px solid lightgrey;
+    border-left-width: .5rem;
+    border-radius: .5rem;
+
+    > p {
+        margin: 0;
+    }
+
+    &-info {
+        border-color: hsla(197, 65%, 47%, 50%);
+        border-left-color: hsl(197, 65%, 47%);
+    }
+
+    &-warning {
+        border-color: hsla(27, 100%, 59%, 50%);
+        border-left-color: hsl(27, 100%, 59%);
+    }
+
+    &-error {
+        border-color: hsla(352, 100%, 61%, 50%);
+        border-left-color: hsl(352, 100%, 61%);
+    }
+
+    &-success {
+        border-color: hsla(93, 61%, 46%, 50%);
+        border-left-color: hsl(93, 61%, 46%);
+    }
+}
