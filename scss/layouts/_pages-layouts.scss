@@ -662,6 +662,30 @@ div.invisible-content {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.border-0{
+  border: 0px !important;
+}
+.border-top-0{
+  border-top: 0px !important;
+}
+.border-bottom-0{
+  border-bottom: 0px !important;
+}
+.border-left-0{
+  border-left: 0px !important;
+}
+.border-right-0{
+  border-right: 0px !important;
+}
+.overflow-auto{
+  overflow: auto;
+}
+.overflow-visible{
+  overflow: visible;
+}
+.overflow-hidden{
+  overflow: hidden;
+}
 // SPACERS
 $spacers: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64;
 
@@ -711,11 +735,21 @@ $spacers: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64;
     padding-bottom: $space + px !important;
   }
   .p-#{$space} {
-    padding-top: $space + px !important;
-    padding-bottom: $space + px !important;
+    padding: $space + px !important;
   }
   .gap-#{$space} {
     gap: $space + px !important;
+  }
+  .radius-#{$space} {
+    border-radius: $space + px !important;
+  }
+  .radius-top-#{$space} {
+    border-top-left-radius: $space + px !important;
+    border-top-right-radius: $space + px !important;
+  }
+  .radius-bottom-#{$space} {
+    border-bottom-left-radius: $space + px !important;
+    border-bottom-right-radius: $space + px !important;
   }
 }
 
