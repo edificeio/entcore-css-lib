@@ -262,17 +262,17 @@ i.person {
 
 /* actions icons */
 
-i.distribute{
+i.distribute {
   @include fonticon;
-  &::before{
-      content: '\e849';
+  &::before {
+    content: "\e849";
   }
-}/*  */
+} /*  */
 
-i.switch{
+i.switch {
   @include fonticon;
-  &::before{
-      content: '\e874';
+  &::before {
+    content: "\e874";
   }
 }
 
