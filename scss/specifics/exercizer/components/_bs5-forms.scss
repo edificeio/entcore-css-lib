@@ -1,10 +1,10 @@
 // Generic Class Form Elements
 input[type="text"]:not(.score),
 textarea {
+  font-family: "Work Sans";
   flex: 1;
   padding: 12px 16px;
   margin-bottom: 0;
-  // height: 48px;
   height: 48px !important;
   border-radius: 8px;
   font-size: 14px;
@@ -71,22 +71,20 @@ editor > textarea {
   font-family: monospace;
 }
 
-/* textarea {
-  font-family: "Roboto", Arial, sans-serif;
-  border-radius: 8px;
-  font-size: 16px;
-  color: $grey-black;
-  border: 1px solid $grey-cloudy;
-  box-shadow: none;
-  background-color: $white;
+textarea {
   resize: none;
-  height: 48px;
-  transition: border 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 
-  &:focus {
-    border: 1px solid $grey-stone !important;
-  }
+.form-label {
+  color: $grey-black;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 22px;
+}
 
-  &[disabled] {
-    color: $darkest-grey;
-  }*/
+.form-info {
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 20px;
+  color: $grey-graphite;
+}

@@ -22,20 +22,36 @@ $alert-success: 93, 61%, 46%;
     &-info {
         border-color: hsla(197, 65%, 47%, 30%);
         border-left-color: hsl(197, 65%, 47%);
+
+        .icon-info {
+            fill: hsl(197, 65%, 47%);
+        }
     }
 
     &-warning {
         border-color: hsla(27, 100%, 59%, 30%);
         border-left-color: hsl(27, 100%, 59%);
+
+        .icon-warning {
+            fill: hsl(27, 100%, 59%);
+        }
     }
 
     &-error {
         border-color: hsla(352, 100%, 61%, 30%);
         border-left-color: hsl(352, 100%, 61%);
+
+        .icon-error {
+            fill: hsl(352, 100%, 61%);
+        }
     }
 
     &-success {
         border-color: hsla(93, 61%, 46%, 30%);
         border-left-color: hsl(93, 61%, 46%);
+
+        .icon-success {
+            fill: hsl(93, 61%, 46%);
+        }
     }
 }
