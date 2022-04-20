@@ -53,6 +53,19 @@ body.exercizer {
     }
   }
 
+  .in-place-toaster {
+    position: relative;
+    margin: -15px -25px 0 -25px;
+    top: 25px;
+    background-color: #FAFAFA;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid $lightest-grey;
+
+    .btns {
+      border-radius: 8px;
+    }
+  }
+
   .chip {
     &.selected {
       box-shadow: 2px 2px 1px 0px $shadow;
