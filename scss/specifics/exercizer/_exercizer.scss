@@ -300,6 +300,75 @@ body.exercizer {
     }
   }
 
+  .edit-order-list {
+    header {
+      font-weight: bold;
+      background-color: #E4F4FF;
+      vertical-align: middle;
+      padding: 0 16px;
+      border-radius: 4px;
+
+      .cell:first-of-type {
+        width: 71px;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      > li {
+        @include grid-cell-width(12);
+        @include cell;
+        list-style-type: none;
+        padding: 4px 12px;
+        border-radius: 4px;
+
+        &::after {
+          @include fonticon;
+          content: "\e847";
+          font-size: 20px;
+          position: absolute;
+          right: 40px;
+          top: calc(50% - 12px);
+        }
+
+        &:hover {
+          background-color: #E4F4FF;
+        }
+
+        .edit-order-index {
+          height: 32px;
+          width: 32px;
+          margin: 8px 25px 8px 4px;
+          float: left;
+          font-size: 15px;
+          text-align: center;
+          line-height: 32px;
+          border: 2px solid $primary;
+          border-radius: 50%;
+          color: $primary;
+        }
+
+        input[type="text"] {
+          margin-top: 2px;
+        }
+
+        .edit-order-delete {
+          top: 15px;          
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  ul.order-list {
+    padding: 12px;
+    margin: 4px 0;
+    border-radius: 4px;
+    background-color: #fafafa;
+    border: 1px solid $lightest-grey;
+  }
+
   .order-index {
     height: 40px;
     width: 40px;
