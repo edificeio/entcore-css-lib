@@ -216,10 +216,21 @@ h2 > i.back {
 }
 
 // FONT SIZE
-$fontsizes: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+$display-font-sizes: (
+  1: .625rem,
+  2: .75rem,
+  3: .875rem,
+  4: 1rem,
+  5: 1.125rem,
+  6: 1.25rem,
+  7: 1.5rem,
+  8: 1.75rem,
+  9: 1.875rem,
+  10: 2rem
+) !default;
 
-@each $fontsize in $fontsizes {
-  .fs-#{$fontsize} {
-    font-size: $fontsize + rem !important;
+@each $display, $font-size in $display-font-sizes {
+  .fs-#{$display} {
+    font-size: $font-size !important
   }
 }
