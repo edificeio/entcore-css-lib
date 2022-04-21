@@ -669,17 +669,17 @@ body.exercizer {
   }
 
   // & body
-  editor.small-editor.edit > [contenteditable] {
+  editor.small-editor.edit [contenteditable] {
     width: 100%;
     max-height: 100px !important;
     min-height: 100px !important;
     overflow-y: scroll;
   }
 
-  editor.small-editor.edit > [contenteditable]:focus {
+  editor.small-editor.edit [contenteditable]:focus {
     width: 100%;
     max-height: none !important;
-    min-height: 250px !important;
+    min-height: 100px !important;
     overflow: visible;
   }
 
