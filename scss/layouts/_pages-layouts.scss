@@ -741,40 +741,41 @@ $spacers: 0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64;
     gap: $space + px !important;
   }
   .radius-#{$space},
-  editor.edit.radius-#{$space}:not(.focus)>div>[contenteditable] {
+  editor.edit.radius-#{$space}:not(.focus) > div > [contenteditable] {
     border-radius: $space + px !important;
   }
   .radius-top-#{$space},
-  editor.edit.radius-top-#{$space}:not(.focus)>div>[contenteditable] {
+  editor.edit.radius-top-#{$space}:not(.focus) > div > [contenteditable] {
     border-top-left-radius: $space + px !important;
     border-top-right-radius: $space + px !important;
   }
   .radius-bottom-#{$space},
-  editor.edit.radius-bottom-#{$space}:not(.focus)>div>[contenteditable] {
+  editor.edit.radius-bottom-#{$space}:not(.focus) > div > [contenteditable] {
     border-bottom-left-radius: $space + px !important;
     border-bottom-right-radius: $space + px !important;
   }
 }
 // SIZING
-$sizes: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 100;
+$sizes: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
+  100;
 
 @each $size in $sizes {
-  .w-#{$size}{
+  .w-#{$size} {
     width: $size * 1% !important;
   }
-  .maxw-#{$size}{
+  .maxw-#{$size} {
     max-width: $size * 1% !important;
   }
-  .minw-#{$size}{
+  .minw-#{$size} {
     min-width: $size * 1% !important;
   }
-  .h-#{$size}{
+  .h-#{$size} {
     height: $size * 1% !important;
   }
-  .maxh-#{$size}{
+  .maxh-#{$size} {
     max-height: $size * 1% !important;
   }
-  .minh-#{$size}{
+  .minh-#{$size} {
     min-height: $size * 1% !important;
   }
 }
