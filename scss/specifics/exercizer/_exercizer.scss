@@ -70,6 +70,14 @@ body.exercizer {
     }
   }
 
+  editor [contentEditable=true][placeholder]:empty:before {
+    content: attr(placeholder);
+    opacity: 0.3;
+    font-family: Work Sans;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
   .chip {
     &.selected {
       box-shadow: 2px 2px 1px 0px $shadow;
