@@ -57,12 +57,16 @@ body.exercizer {
     position: relative;
     margin: -15px -25px 0 -25px;
     top: 25px;
+    padding: 0 16px;
     background-color: #fafafa;
     border-radius: 0 0 8px 8px;
     border-top: 1px solid $lightest-grey;
 
     .btns {
       border-radius: 8px;
+      &:hover {
+        color: $hover;
+      }
     }
   }
 
@@ -273,7 +277,7 @@ body.exercizer {
 
   article {
     border-radius: 8px;
-    padding: 24px;
+    padding: 16px 24px;
     transition: z-index 0s 0.35s;
 
     header {
