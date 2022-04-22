@@ -5,7 +5,7 @@ textarea {
   flex: 1;
   padding: 12px 16px;
   margin-bottom: 0;
-  height: 48px !important;
+  height: 48px;
   border-radius: 8px;
   font-size: 14px;
   color: $grey-black;
@@ -73,6 +73,7 @@ editor > textarea {
 
 textarea {
   resize: none;
+  height: inherit;
 }
 
 .form-label {

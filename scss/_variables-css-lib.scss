@@ -74,10 +74,11 @@ $btnPrimaryBackground: $medium-grey !default;
 $fonts-path: "fonts" !default;
 
 // Color Exercizer
-$grey-black: #4a4a4a;
-$grey-cloudy: #e4e4e4;
-$grey-stone: #b0b0b0;
-$grey-graphite: #909090;
+$grey-black: hsl(0, 0%, 29%);
+$grey-cloudy: hsl(0, 0%, 89%);
+$grey-stone: hsl(0, 0%, 69%);
+$grey-graphite: hsl(0, 0%, 56%);
+$pale-cyan: hsl(204, 100%, 95%);
 
 @font-face {
   font-family: "generic-icons";
