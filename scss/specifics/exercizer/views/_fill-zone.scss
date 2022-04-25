@@ -1,6 +1,8 @@
 fill-zone {
   display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  position: relative;
+}
+
+edit-fill-text editor.edit fill-zone text-zone {
+  background: transparent;
+  box-shadow: none;
 }

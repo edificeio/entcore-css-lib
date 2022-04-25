@@ -7,12 +7,12 @@ text-zone {
   color: $grey-black;
   display: inline-flex;
   flex-direction: row-reverse;
-  position: relative;
   box-sizing: border-box;
   border: 1px solid $grey-cloudy;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   line-height: 20px;
-  transition: all 250ms ease, max-width 0.15s 0.15s ease-out,
+  transition: all 250ms ease, 
+    max-width 0.15s 0.15s ease-out,
     max-height 0.15s 0s ease-in;
 
   span {
@@ -42,6 +42,12 @@ text-zone {
     }
   }
 
+  div.edit {
+    display: inline-block;
+    padding-right: .5em;
+    background: inherit;
+  }
+
   &.selected {
     background: $primary;
     color: #fff;
@@ -49,18 +55,17 @@ text-zone {
 
   input[type="text"],
   select {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-bottom: none;
+    font-size: 1em;
+    border: 0;
+    margin: 0;
+    padding: 0 4px;
+    width: 90px;
+    height: unset;
+    line-height: unset;
   }
 
   input[type="text"] {
     box-sizing: border-box;
-    padding-left: 1px;
   }
 
   input[type="text"]:focus {
@@ -100,17 +105,10 @@ text-zone {
     transition: color 250ms ease;
     z-index: 300;
     pointer-events: all;
+    margin: 0 4px;
 
     &:hover {
       color: $orange;
-    }
-
-    &.edit {
-      margin: 0 5px;
-    }
-
-    &.close {
-      margin-right: -10px;
     }
   }
 }

@@ -1,5 +1,5 @@
 // Generic Class Form Elements
-input[type="text"]:not(.score),
+:not(text-zone)>input[type="text"]:not(.score),
 textarea {
   font-family: "Work Sans";
   flex: 1;
@@ -89,4 +89,26 @@ textarea {
   font-weight: 400;
   line-height: 20px;
   color: $grey-graphite;
+}
+
+editor [contentEditable=true][placeholder]:empty:before {
+  content: attr(placeholder);
+  opacity: 0.3;
+  font-family: Work Sans;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+// SELECT
+:not(text-zone)>select {
+  padding: 12px 8px 12px 16px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid $grey-cloudy;
+
+  &:focus {
+    border-width: 2px;
+    border-color: $grey-stone;
+    box-shadow: none;
+  }
 }
