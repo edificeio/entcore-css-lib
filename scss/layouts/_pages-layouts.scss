@@ -653,13 +653,21 @@ div.invisible-content {
 .justify-space-between {
   justify-content: space-between;
 }
-
+@media (min-width: $tablette) {
 .grid {
   display: grid;
+}
 }
 
 .grid-2 {
   grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: $wide-screen) {
+  .grid-layout-2 {
+    grid-template-columns: 3fr 7fr;
+    gap: 1.6rem;
+  }
 }
 
 .border-0 {

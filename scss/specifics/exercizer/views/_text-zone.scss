@@ -1,26 +1,16 @@
 text-zone {
-  max-width: 150px;
-  min-width: 150px;
-
-  @media screen and (min-width: $wide-screen), print {
-    max-height: 30px;
-    min-height: 30px;
-  }
-
-  @media screen and (max-width: $wide-screen), print {
-    max-height: 25px;
-    min-height: 25px;
-  }
-
-  background: #fff;
-  margin: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-  padding: 5px 15px;
-  color: #666;
+  width: 150px;
+  height: 40px;
+  background: $grey-fog;
+  border-radius: 4px;
+  padding:8px;
+  color: $grey-black;
   display: inline-flex;
   flex-direction: row-reverse;
   position: relative;
   box-sizing: border-box;
+  border: 1px solid $grey-cloudy;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   line-height: 20px;
   transition: all 250ms ease, max-width 0.15s 0.15s ease-out,
     max-height 0.15s 0s ease-in;

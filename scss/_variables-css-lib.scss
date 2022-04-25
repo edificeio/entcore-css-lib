@@ -75,9 +75,11 @@ $fonts-path: "fonts" !default;
 
 // Color Exercizer
 $grey-black: hsl(0, 0%, 29%);
-$grey-cloudy: hsl(0, 0%, 89%);
-$grey-stone: hsl(0, 0%, 69%);
 $grey-graphite: hsl(0, 0%, 56%);
+$grey-stone: hsl(0, 0%, 69%);
+$grey-cloudy: rgb(227, 227, 227);
+$grey-pearl: rgb(242, 242, 242);
+$grey-fog: hsl(0, 0%, 98%);
 $pale-cyan: hsl(204, 100%, 95%);
 
 @font-face {

@@ -19,6 +19,10 @@ $alert-success: 93, 61%, 46%;
     margin: 0;
   }
 
+  > svg {
+    flex-shrink: 0;
+  }
+
   &-info {
     border-color: hsla(197, 65%, 47%, 30%);
     border-left-color: hsl(197, 65%, 47%);
