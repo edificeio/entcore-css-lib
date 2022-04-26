@@ -1,7 +1,10 @@
 // Generic Class Form Elements
+button, input, textarea, select {
+  font-family: "Work Sans";
+}
+
 :not(text-zone)>input[type="text"]:not(.score),
 textarea {
-  font-family: "Work Sans";
   flex: 1;
   padding: 12px 16px;
   margin-bottom: 0;
@@ -94,17 +97,23 @@ textarea {
 editor [contentEditable=true][placeholder]:empty:before {
   content: attr(placeholder);
   opacity: 0.3;
-  font-family: Work Sans;
   font-style: italic;
   font-size: 0.9rem;
 }
 
 // SELECT
 :not(text-zone)>select {
+  min-width: 10rem;
   padding: 12px 8px 12px 16px;
   height: 48px;
   border-radius: 8px;
   border: 1px solid $grey-cloudy;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right .75em center;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjAxIDUuMTUzYTEuMTI1IDEuMTI1IDAgMCAxIDEuNTg3LjEwNkw5IDEwLjI5Mmw0LjQwMy01LjAzM2ExLjEyNSAxLjEyNSAwIDEgMSAxLjY5NCAxLjQ4MmwtNS4yNSA2YTEuMTI1IDEuMTI1IDAgMCAxLTEuNjk0IDBsLTUuMjUtNmExLjEyNSAxLjEyNSAwIDAgMSAuMTA2LTEuNTg4WiIgZmlsbD0iIzRBNEE0QSIvPgo8L3N2Zz4K);
 
   &:focus {
     border-width: 2px;

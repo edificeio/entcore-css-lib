@@ -51,6 +51,10 @@ text-zone {
   &.selected {
     background: $flash-blue;
     color: $white;
+
+    > svg[class*="icon"] {
+      fill: $white;
+    }
   }
 
   input[type="text"],
