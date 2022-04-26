@@ -49,8 +49,8 @@ text-zone {
   }
 
   &.selected {
-    background: $primary;
-    color: #fff;
+    background: $flash-blue;
+    color: $white;
   }
 
   input[type="text"],
@@ -100,15 +100,7 @@ text-zone {
     font-size: 16px;
   }
 
-  > i {
-    display: inline;
-    transition: color 250ms ease;
-    z-index: 300;
-    pointer-events: all;
-    margin: 0 4px;
-
-    &:hover {
-      color: $orange;
-    }
+  > svg {
+    flex-shrink: 0;
   }
 }

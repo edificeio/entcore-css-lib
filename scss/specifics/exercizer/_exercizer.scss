@@ -1,4 +1,5 @@
 body.exercizer {
+
   @import "./components/";
   @import "./views/";
 
@@ -31,6 +32,10 @@ body.exercizer {
 
   h2 {
     font-size: 18px;
+  }
+
+  .lightbox>.content h2 {
+    color: $grey-black;
   }
 
   button {
@@ -77,6 +82,14 @@ body.exercizer {
         color: $hover;
       }
     }
+  }
+
+  editor [contentEditable=true][placeholder]:empty:before {
+    content: attr(placeholder);
+    opacity: 0.3;
+    font-family: 'Work Sans';
+    font-style: italic;
+    font-size: 0.9rem;
   }
 
   .chip {
@@ -132,6 +145,7 @@ body.exercizer {
     article {
       background: transparent;
       margin: 0 !important;
+      overflow: inherit;
     }
 
     .image-container {
@@ -212,53 +226,6 @@ body.exercizer {
       width: 100%;
       height: auto;
     }
-  }
-
-  .options {
-    min-height: 150px;
-    margin-bottom: 20px;
-    background: $lightest-grey;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 3px;
-    transition: background 250ms ease;
-
-    ul {
-      padding: 0;
-      list-style-type: none;
-      flex-wrap: wrap;
-      justify-content: center;
-      display: flex;
-
-      li {
-        z-index: 20;
-      }
-    }
-  }
-
-  .add-option {
-
-    input[type="text"],
-    button {
-      float: left;
-    }
-
-    input[type="text"] {
-      border: 1px solid #ddd;
-    }
-
-    button {
-      border-radius: 0;
-      box-shadow: none;
-      width: 32px;
-      padding: 5px;
-      margin-left: 0;
-      height: 29px;
-    }
-  }
-
-  .options text-zone {
-    width: auto;
   }
 
   .eight-desktop {
