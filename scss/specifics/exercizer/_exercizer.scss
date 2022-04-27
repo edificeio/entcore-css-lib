@@ -207,31 +207,22 @@ body.exercizer {
         align-items: center;
 
         >img {
-
-          @media screen and (min-width: $wide-screen),
-          print {
-            width: 100%;
-          }
-
+          width: 100%;
           max-height: 100%;
           border: none;
 
-          @media screen and (max-width: $wide-screen),
+          /* @media screen and (max-width: $wide-screen),
           print {
             border-radius: 0;
             width: initial;
             margin-left: auto;
             margin-right: auto;
             display: block;
-          }
+          } */
         }
       }
     }
 
-    >img {
-      width: 100%;
-      height: auto;
-    }
   }
 
   .eight-desktop {
@@ -749,7 +740,8 @@ body.exercizer {
     }
 
     &__delete {
-      right: 0;
+      right: 8px;
+      display: inline-flex;
     }
   }
 
@@ -1017,24 +1009,26 @@ body.exercizer {
       margin-bottom: 1rem;
       display: flex;
       flex-wrap: wrap;
+      
 
       >button {
         margin: 0 !important
       }
 
-      > .options {
+      >.options {
         margin: 0 !important;
         flex: 1;
         align-self: stretch;
 
         @media screen and (max-width: $tablette),
-      print {
-        flex-basis: 100%;
-      }
+        print {
+          flex-basis: 100%;
+        }
       }
 
       @media screen and (min-width: $tablette),
       print {
+        width: 15rem;
         margin-top: 0;
         margin-bottom: 0;
         flex-direction: column;
@@ -1049,10 +1043,6 @@ body.exercizer {
   print {
     .mobile-row {
       @include row;
-
-      /* >div>input {
-        padding: 0;
-      } */
     }
   }
 

@@ -1,6 +1,6 @@
 .options {
     min-height: 150px;
-    background: $lightest-grey;
+    background: $grey-fog;
     // margin-bottom: 20px;
     // background: $lightest-grey;
     // padding: 10px;
@@ -30,17 +30,25 @@
         }
     }
 
-    &.center {
-        padding: 0;
+    &.right {
         display: flex;
+        gap: 1rem;
+        padding: .75rem;
         margin: 0;
-        place-content: center;
-        place-items: center;
+        margin-top: 1rem;
+        border-radius: .25rem;
+        border: 1px solid $grey-grey;
 
         ul {
-            gap: 12px;
+            gap: .75rem;
             margin: 0;
+            display: flex;
+            flex-direction: column;
             justify-content: flex-start;
+        }
+
+        image-zone {
+            margin: 0;
         }
     }
 
@@ -57,7 +65,7 @@
             width: 46px;
             background: $flash-blue;
             box-shadow: none;
-            border-radius: 0 8px 8px 0;
+            border-radius: 0 .5rem .5rem 0;
 
             &[disabled] {
                 background-color: $grey-grey;

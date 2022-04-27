@@ -663,10 +663,15 @@ div.invisible-content {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-zone-image {
+  grid-template-columns: 3fr 1fr;
+}
+
 @media (min-width: $wide-screen) {
   .grid-layout-2 {
-    grid-template-columns: 3fr 7fr;
-    gap: 1.6rem;
+    // grid-template-columns: 3fr 7fr;
+    grid-template-columns: minmax(400px, 3fr) minmax(880px, 7fr);
+    gap: 1.5rem;
   }
 }
 
