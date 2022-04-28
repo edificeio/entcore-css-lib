@@ -1,4 +1,5 @@
 body.exercizer {
+  color: $grey-black;
 
   @import "./components/";
   @import "./views/";
@@ -242,6 +243,12 @@ body.exercizer {
       color: $dark-grey;
       font-weight: 600;
     }
+  }
+
+  .grain-divider {
+    border-bottom: 1px solid $grey-cloudy;
+    padding: 1.6rem;
+    margin: -1.6rem -1.6rem 1.6rem;
   }
 
   article.textZoneOpen {
