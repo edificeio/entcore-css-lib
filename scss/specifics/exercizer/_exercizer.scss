@@ -999,7 +999,8 @@ body.exercizer {
     color: #46bfaf;
   }
 
-  .zone-image {
+  .zone-image,
+  .zone-text {
 
     @media (min-width: $tablette),
     print {
@@ -1042,6 +1043,16 @@ body.exercizer {
         align-items: flex-start;
         flex-wrap: wrap;
         justify-content: flex-start;
+      }
+    }
+  }
+
+  .zone-image {
+    i {
+      &.trash,
+      &.edit.pick-file {
+        display: none;
+        visibility: hidden;
       }
     }
   }

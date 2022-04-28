@@ -94,4 +94,12 @@ image-zone {
       color: $orange;
     }
   }
+
+  .icon-close {
+    position: absolute;
+    background: rgba($grey-black, 0.7);
+    border-radius: 4px;
+    right: 0;
+    fill: $white;
+  }
 }
