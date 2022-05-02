@@ -153,6 +153,7 @@ body.exercizer {
       background: transparent;
       margin: 0 !important;
       overflow: inherit;
+      z-index: 2 !important;
     }
 
     .image-container {
@@ -256,15 +257,14 @@ body.exercizer {
     transition: z-index 0s;
 
     text-zone {
-      max-width: 450px;
-      max-height: 300px;
-      transition: all 250ms ease, max-width 0.15s 0s ease-in,
-        max-height 0.15s 0.15s ease-out;
-
+      
       span {
+        max-width: 280px;
+        max-height: 40px;
+        transition: all 250ms ease, max-width 0.15s 0s ease-in,
+          max-height 0.15s 0.15s ease-out;
         white-space: normal;
-        max-height: 300px;
-        transition: max-height 0.15s 0.15s ease-out;
+        text-overflow: inherit;
       }
     }
   }

@@ -1,9 +1,11 @@
 text-zone {
-  width: 150px;
-  height: 40px;
+  /* max-width: 150px;
+  max-height: 40px;
+  min-width: 150px;
+  min-height: 40px; */
   background: $grey-fog;
   border-radius: 4px;
-  padding:8px;
+  padding: 8px;
   color: $grey-black;
   display: inline-flex;
   flex-direction: row-reverse;
@@ -11,35 +13,21 @@ text-zone {
   border: 1px solid $grey-cloudy;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   line-height: 20px;
-  transition: all 250ms ease, 
-    max-width 0.15s 0.15s ease-out,
-    max-height 0.15s 0s ease-in;
 
   span {
+    display: inline-block;
+    vertical-align: middle;
     overflow: hidden;
-    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 20px;
+    max-width: 75px;
     padding-right: 1em;
     position: relative;
-    max-height: 40px;
     background: inherit;
-    transition: max-height 0.15s 0s ease-in;
-
-    &::before {
-      content: "...";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      width: 1em;
-      height: 1em;
-      margin-top: 0.2em;
-      background: inherit;
-    }
+    transition: all 250ms ease,
+    max-width 0.15s 0.15s ease-out,
+    max-height 0.15s 0s ease-in;
   }
 
   div.edit {
@@ -52,7 +40,7 @@ text-zone {
     background: $flash-blue;
     color: $white;
 
-    > svg[class*="icon"] {
+    >svg[class*="icon"] {
       fill: $white;
     }
   }
@@ -77,17 +65,21 @@ text-zone {
   }
 
   [drop-item] {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+    min-height: 40px;
+    padding: 8px;
+    position: relative;
+    margin: -8px;
     box-sizing: border-box;
-    line-height: 33px;
-    text-align: center;
     background: transparent;
     border-radius: 4px;
     transition: background 250ms ease;
+
+    text-zone span {
+      max-width: 125px;
+    }
   }
 
   &.error {
@@ -105,7 +97,7 @@ text-zone {
     font-size: 16px;
   }
 
-  > svg {
+  >svg {
     flex-shrink: 0;
 
     &:hover {
