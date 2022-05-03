@@ -1,4 +1,5 @@
 text-zone {
+  position: relative;
   background: $grey-fog;
   border-radius: 4px;
   padding: 8px;
@@ -9,8 +10,10 @@ text-zone {
   border: 1px solid $grey-cloudy;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   line-height: 20px;
+  min-width: 150px!important;
 
   span {
+    border-radius: 4px;
     display: inline-block;
     vertical-align: middle;
     overflow: hidden;
@@ -44,12 +47,18 @@ text-zone {
   input[type="text"],
   select {
     font-size: 1em;
-    border: 0;
+    border: 0 ;
     margin: 0;
     padding: 0 4px;
-    width: 90px;
+    width: 150px;
     height: unset;
     line-height: unset;
+    background-color: transparent !important;
+  }
+
+  input[type="text"].filled,
+  select.filled {
+    background-color: #fff !important;
   }
 
   input[type="text"] {
@@ -65,9 +74,7 @@ text-zone {
     align-items: center;
     min-width: 150px;
     min-height: 40px;
-    padding: 8px;
     position: relative;
-    margin: -8px;
     box-sizing: border-box;
     background: transparent;
     border-radius: 4px;
@@ -75,6 +82,12 @@ text-zone {
 
     text-zone span {
       max-width: 125px;
+    }
+
+    &.no-responsive.droppable,
+    &.no-desktop.droppable {
+      margin: -8px;
+      padding: 8px;
     }
   }
 
@@ -101,16 +114,38 @@ text-zone {
     }
   }
 
+  .filled {
+    background-color: $white;
+    border: 0;
+  }
+
   &.perform-text-zone {
+    padding: 0;
     border: 0;
     background: hsla(0, 100%, 100%, 40%);
+
+    /* [drop-item] {
+      padding: 8px;
+    } */
+
+    input[type="text"],
+    select {
+      border: 0 !important;
+      height: 40px !important;
+    }
+
+    span {
+      padding: 8px;
+    }
   }
 
   &.option-text-zone {
     background-color:$white;
     border: 1px dashed $grey-grey;
+    min-width: unset !important;
 
     span {
+      padding-right: 0;
       max-width: inherit;
       text-overflow: inherit;
       max-height: inherit;

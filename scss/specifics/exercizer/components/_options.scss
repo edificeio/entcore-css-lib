@@ -37,10 +37,13 @@
         gap: 1rem;
         padding: .75rem;
         margin: 0;
-        margin-top: 1rem;
         border-radius: .25rem;
         background-color: $grey-fog;
         border: 1px solid $grey-grey;
+
+        @media screen and (min-width: $fat-tablette), print {
+            margin-top: 1rem;
+        }
 
         ul {
             gap: .75rem;
@@ -80,10 +83,10 @@
         }
 
     }
-}
 
-.options text-zone {
-    width: auto;
-    box-shadow: none;
-    background-color: $white;
+    text-zone {
+        width: auto !important;
+        box-shadow: none;
+        background-color: $white;
+    }
 }
