@@ -1,8 +1,4 @@
 text-zone {
-  /* max-width: 150px;
-  max-height: 40px;
-  min-width: 150px;
-  min-height: 40px; */
   background: $grey-fog;
   border-radius: 4px;
   padding: 8px;
@@ -102,6 +98,24 @@ text-zone {
 
     &:hover {
       fill: $accent;
+    }
+  }
+
+  &.perform-text-zone {
+    border: 0;
+    background: hsla(0, 100%, 100%, 40%);
+  }
+
+  &.option-text-zone {
+    background-color:$white;
+    border: 1px dashed $grey-grey;
+
+    span {
+      max-width: inherit;
+      text-overflow: inherit;
+      max-height: inherit;
+      font-size: 14px;
+      white-space: normal;
     }
   }
 }

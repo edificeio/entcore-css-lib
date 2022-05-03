@@ -39,6 +39,7 @@
         margin: 0;
         margin-top: 1rem;
         border-radius: .25rem;
+        background-color: $grey-fog;
         border: 1px solid $grey-grey;
 
         ul {
@@ -83,4 +84,6 @@
 
 .options text-zone {
     width: auto;
+    box-shadow: none;
+    background-color: $white;
 }
