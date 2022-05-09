@@ -1,0 +1,44 @@
+.dominos {
+
+    .item {
+        width: 100%;
+        max-width: none;
+        margin: 16px 0 0 0;
+        border-radius: 8px;
+        overflow-x: clip;
+        box-shadow: 0px 2px 6px rgb(0 0 0 / 15%);
+
+        .domino .bottom .content {
+            flex-direction: row;
+            justify-content: space-between !important;
+            padding: 16px 16px 16px 12px;
+
+            & > div:nth-child(1) {
+                max-width: 80%;
+            }
+            & > div:nth-child(2) {
+                text-align: right;
+            }
+
+            .custom-ellipsis strong {
+                color: $primary;
+            }
+
+            span.no-style {
+                color: initial;
+            }
+
+            div.due-date {
+                i18n:not(:first-child) span {
+                    color: inherit;
+                }
+            }
+        }
+
+        .domino .bottom .title-icon i {
+            padding-right: 8px;
+        }
+
+    }
+}
+

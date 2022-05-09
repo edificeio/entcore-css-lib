@@ -456,11 +456,6 @@ body.exercizer {
 
     &.delay {
       color: $red;
-
-      &::before {
-        @include fonticon;
-        content: "\e426";
-      }
     }
   }
 
