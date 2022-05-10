@@ -258,8 +258,8 @@ body.exercizer {
 
     text-zone {
       
-      span {
-        max-width: 280px;
+      .text-zone-size {
+        max-width: 200px;
         max-height: 40px;
         transition: all 250ms ease, max-width 0.15s 0s ease-in,
           max-height 0.15s 0.15s ease-out;

@@ -14,6 +14,7 @@
         flex-wrap: wrap;
         justify-content: center;
         display: flex;
+        gap: 1rem;
 
         li {
             z-index: 20;
@@ -87,6 +88,19 @@
     text-zone {
         width: auto !important;
         box-shadow: none;
-        background-color: $white;
+        background-color:$white;
+        border: 1px dashed $grey-grey;
+        min-width: unset !important;
+        max-width: unset !important;
+
+        .text-zone-size {
+            padding-right: 0;
+            max-width: inherit;
+            text-overflow: inherit;
+            max-height: inherit;
+            white-space: normal;
+        }
     }
+
+    
 }

@@ -34,7 +34,7 @@ edit-fill-text {
       cursor: pointer;
 
       text-zone {
-        pointer-events: none;
+        //pointer-events: none;
         user-select: none;
 
         &::after {
