@@ -646,6 +646,10 @@ div.invisible-content {
   display: inline-flex;
 }
 
+.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -670,7 +674,7 @@ div.invisible-content {
 @media (min-width: $wide-screen) {
   .grid-layout-2 {
     // grid-template-columns: 3fr 7fr;
-    grid-template-columns: minmax(400px, 3fr) minmax(880px, 7fr);
+    grid-template-columns: minmax(400px, 3fr) minmax(710px, 7fr);
     gap: 1.5rem;
   }
 }

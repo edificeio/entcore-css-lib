@@ -1,4 +1,5 @@
 text-zone {
+  cursor: pointer;
   position: relative;
   background: $grey-fog;
   border-radius: 4px;
@@ -10,6 +11,7 @@ text-zone {
   border: 1px solid $grey-cloudy;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   line-height: 20px;
+  // pointer-events: none;
   // max-width: 150px;
 
   .text-zone-size {
