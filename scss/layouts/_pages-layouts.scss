@@ -657,6 +657,17 @@ div.invisible-content {
 .justify-space-between {
   justify-content: space-between;
 }
+
+
+// FLEW GROW
+$fgrows: 0, 1, 2, 3, 4, 5;
+
+@each $fgrow in $fgrows {
+  .flex-grow-#{$fgrow} {
+    flex-grow: $fgrow !important;
+  }
+}
+
 @media (min-width: $tablette) {
 .grid {
   display: grid;
