@@ -37,6 +37,11 @@ edit-fill-text {
         //pointer-events: none;
         user-select: none;
 
+        span {
+          font-size: 14px;
+          padding-right: 1rem;
+        }
+
         &::after {
           content: " ";
           display: block;
