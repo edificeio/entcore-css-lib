@@ -1,13 +1,13 @@
 $fills: (
-  "primary": $primary, 
-  "accent": $accent, 
-  "background": $background, 
-  "alert": $warning-color, 
-  "warning": $forewarn-color, 
+  "primary": $primary,
+  "accent": $accent,
+  "background": $background,
+  "alert": $warning-color,
+  "warning": $forewarn-color,
   "success": $valid-color,
   "white": $white,
   "shadow": $shadow,
-  "black": $black
+  "black": $black,
 );
 
 @each $fill, $color in $fills {

@@ -1,7 +1,7 @@
 .list-view {
   margin-top: 15px;
 
-  >table {
+  > table {
     margin: 0;
   }
 
@@ -82,7 +82,7 @@ ul.list-view {
     position: relative;
     list-style-type: none;
 
-    >div>.cell.text {
+    > div > .cell.text {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -178,13 +178,13 @@ ul.thought-out-actions {
   padding: 0;
   margin: 0;
 
-  >li {
+  > li {
     @include grid-cell-width(12);
     @include cell;
     margin-bottom: 1px;
     list-style-type: none;
     padding: 8px;
-    font-size: .875em;
+    font-size: 0.875em;
 
     h2 {
       margin: 0;
