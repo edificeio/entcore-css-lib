@@ -1,0 +1,244 @@
+.dominos.fallen {
+    &.index {
+        display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+        gap: .5rem;
+
+        .item {
+            margin: 0;
+
+            .domino .top img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    &.large {
+        gap: 16px;
+
+        .item {
+            .domino {
+                .top {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+    .item {
+        .domino {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .top {
+                /* width: 150px;
+                height: 150px; */
+                float: none;
+                aspect-ratio: 1 / 1;
+
+                img {
+                    width: 100%;
+                    position: static !important;
+                }
+
+                @media (max-width:$tablette) {
+                    display: none;
+                }
+            }
+
+            .correction-status {
+                font-weight: 600;
+            }
+
+            .bottom {
+                align-self: stretch;
+                flex: 1;
+                height: auto;
+                margin-left: 0;
+
+                strong {
+                    font-size: 1rem;
+                }
+
+                .content {
+                    padding: .75rem;
+
+                    em {
+                        color: $grey-graphite;
+                    }
+
+                    >div:nth-child(2) {
+                        flex-shrink: 0;
+                    }
+
+                    .buttons {
+                        position: absolute;
+                        top: .625rem;
+                        right: .625rem;
+                        height: calc(100% - 20px);
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                    }
+                }
+
+                .title-icon i {
+                    color: $text-light;
+                }
+            }
+        }
+    }
+}
+
+.dominos .item .domino .due-date {
+    padding: 10px 0;
+    color: $grey;
+
+    strong {
+        color: inherit;
+    }
+
+    &>* {
+        display: inline-block;
+    }
+
+    &::before {
+        @include fonticon;
+        content: "\f017";
+        font-size: 20px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+    &.delay {
+        color: $red;
+    }
+}
+
+.dominos .item .domino .bottom .content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $darkest-grey;
+}
+
+.dominos .item .domino .score {
+    font-size: 20px;
+}
+
+.dominos .item .domino .right-glider {
+    overflow: hidden;
+    font-size: 2em;
+    color: white;
+    height: 100%;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    transition: width 1s ease;
+    width: 1%;
+    min-width: 13px;
+
+    a {
+        font-size: large;
+        position: absolute;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.5s ease-in 0s;
+
+        @media screen and (max-width: $tablette),
+        print {
+            display: block;
+            left: 35px;
+
+            @media screen and (max-width: $fat-mobile),
+            print {
+                top: 50px;
+            }
+
+            @media screen and (min-width: $fat-mobile),
+            print {
+                top: 35px;
+            }
+        }
+
+        @media screen and (min-width: $tablette),
+        print {
+            left: 50px;
+            top: 40px;
+
+            >i18n {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    span {
+        color: white !important;
+    }
+
+    &:hover {
+
+        @media screen and (max-width: $tablette),
+        print {
+            width: 140px;
+        }
+
+        @media screen and (min-width: $tablette),
+        print {
+            width: 250px;
+        }
+
+        a {
+            opacity: 1;
+            transition: all 1s ease-in 0s;
+        }
+    }
+
+    &.green {
+        background-color: $green;
+    }
+
+    &.grey {
+        background-color: $grey;
+    }
+
+    span {
+        top: 40%;
+        position: relative;
+    }
+}
+
+/* .dominos {
+    .domino {
+        &.correction {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .top {
+                width: 150px;
+                height: 150px;
+                float: none;
+                aspect-ratio: 1 / 1;
+            }
+
+            .bottom {
+                flex: 1;
+                height: auto;
+                margin-left: 0;
+
+                .content {
+                    padding: 12px;
+                }
+            }
+
+            .correction-status {
+                font-weight: 600;
+            }
+        }
+    }
+} */

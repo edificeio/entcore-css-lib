@@ -122,3 +122,22 @@ editor [contentEditable=true][placeholder]:empty:before {
     box-shadow: none;
   }
 }
+
+.option-edited-dates {
+  input[type="text"] {
+    padding: 0 10px !important;
+    height: auto !important;
+  }
+
+  .one {
+    width: 80px !important;
+  }
+
+  .two {
+    width: 100px !important;
+  }
+}
+
+.input-date {
+  width: 120px;
+}

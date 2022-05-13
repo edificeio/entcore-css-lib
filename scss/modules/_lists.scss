@@ -1,18 +1,21 @@
 .list-view {
   margin-top: 15px;
 
-  > table {
+  >table {
     margin: 0;
   }
+
   width: 100%;
   list-style-type: none;
 
   tr.underline {
     padding-bottom: 15px;
+
     td {
       vertical-align: bottom;
     }
   }
+
   td {
     h2 {
       clear: both;
@@ -23,27 +26,33 @@
     img {
       vertical-align: middle;
     }
+
     a {
       word-break: break-all;
     }
   }
+
   td.user,
   th.user {
     max-width: 100px;
     @include cell-ellipsis;
   }
+
   td.icon,
   th.icon {
     width: 25px;
     height: 25px;
   }
+
   td.content,
   th.content {
     @include cell-ellipsis;
   }
+
   .date {
     text-align: right;
   }
+
   .ic-share {
     font-size: 12px;
     background-color: $white;
@@ -61,6 +70,7 @@
 
 ul.list-view {
   padding-left: 0;
+
   li {
     width: 100%;
     float: left;
@@ -71,12 +81,14 @@ ul.list-view {
     background: #fff;
     position: relative;
     list-style-type: none;
-    > div > .cell.text {
+
+    >div>.cell.text {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
   }
+
   li.date {
     text-align: right;
   }
@@ -88,6 +100,7 @@ ul.list-view {
   top: 0;
   left: 0;
   width: 100%;
+
   li {
     display: block;
     height: 40px;
@@ -99,12 +112,15 @@ ul.list-view {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
   li.selected {
     color: #fff;
+
     a {
       color: #fff;
     }
   }
+
   img {
     height: 40px;
     width: 40px !important;
@@ -130,6 +146,7 @@ ul.list-view {
 .selectable-list {
   @include row;
   padding: 0;
+
   li {
     list-style-type: none;
     padding: 5px;
@@ -146,9 +163,11 @@ ul.list-view {
 ul.toc {
   padding: 0;
   margin: 0;
+
   li {
     list-style-type: none;
     padding: 3px;
+
     a {
       font-size: 16px;
     }
@@ -158,18 +177,20 @@ ul.toc {
 ul.thought-out-actions {
   padding: 0;
   margin: 0;
-  > li {
+
+  >li {
     @include grid-cell-width(12);
     @include cell;
     margin-bottom: 1px;
     list-style-type: none;
     padding: 8px;
     font-size: .875em;
-    
+
     h2 {
       margin: 0;
       font-size: 20px;
     }
+
     p {
       margin: 0;
       font-size: 12px;

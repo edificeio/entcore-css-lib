@@ -21,11 +21,12 @@
             }
 
             .custom-ellipsis strong {
-                color: $primary;
+                color: $grey-black;
+                font-weight: 600;
             }
 
             span.no-style {
-                color: initial;
+                color: $grey-black;
             }
 
             div.due-date {
