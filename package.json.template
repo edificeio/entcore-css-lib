@@ -43,6 +43,6 @@
     "sass": "^1.49.9"
   },
   "dependencies": {
-    "entcore-generic-icons": "opendigitaleducation/generic-icons"
+    "entcore-generic-icons": "git+https://github.com/opendigitaleducation/generic-icons.git"
   }
 }
