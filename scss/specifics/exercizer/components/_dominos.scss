@@ -3,10 +3,11 @@
         display: grid;
         // grid-template-columns: repeat(3, 1fr);
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
-        gap: .5rem;
+        gap: 1rem;
 
         .item {
             margin: 0;
+            background-color: $white;
 
             .domino .top img {
                 object-fit: cover;
@@ -15,7 +16,7 @@
     }
 
     &.large {
-        gap: 16px;
+        gap: 1rem;
 
         .item {
             .domino {
@@ -31,7 +32,7 @@
         .domino {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
 
             .top {
                 /* width: 150px;

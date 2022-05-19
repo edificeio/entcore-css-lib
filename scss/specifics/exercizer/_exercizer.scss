@@ -15,8 +15,17 @@ body.exercizer {
     }
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1;
+  }
+
   h1 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     line-height: 28px;
     color: $purple;
@@ -31,9 +40,14 @@ body.exercizer {
     }
   }
 
+  h2,
+  h3,
+  h4 {
+    color: $grey-black;
+  }
+
   h2 {
     font-size: 18px;
-    color: $grey-black;
   }
 
   h4 {

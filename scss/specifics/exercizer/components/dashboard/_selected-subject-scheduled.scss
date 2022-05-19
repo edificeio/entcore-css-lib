@@ -1,5 +1,5 @@
 .selected-subject-scheduled {
-    padding: 4px;
+    padding: 6px 8px;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -20,7 +20,7 @@
 
     button {
         margin: 0;
-        padding: 0;
+        padding: 2px 3px;
         float:none;
         background-color: transparent;
         box-shadow: none;
@@ -31,14 +31,12 @@
         aspect-ratio: 1 / 1;
 
         &.download {
-            padding: 2px 4px;
             border-color: $flash-blue;
             [class*="icon"] {
                 fill: $flash-blue;
             }
         }
         &.remove {
-            padding: 2px 4px;
             border-color: $red;
 
             [class*="icon"] {

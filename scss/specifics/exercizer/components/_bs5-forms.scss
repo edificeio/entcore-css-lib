@@ -1,8 +1,3 @@
-// Generic Class Form Elements
-button, input, textarea, select {
-  font-family: "Work Sans";
-}
-
 :not(text-zone)>input[type="text"]:not(.score),
 textarea {
   flex: 1;
@@ -97,7 +92,6 @@ textarea {
 editor [contentEditable=true][placeholder]:empty:before {
   content: attr(placeholder);
   opacity: 0.3;
-  font-family: 'Work Sans';
   font-style: italic;
   font-size: 0.9rem;
 }
@@ -140,4 +134,5 @@ editor [contentEditable=true][placeholder]:empty:before {
 
 .input-date {
   width: 120px;
+  max-width: 120px;
 }
