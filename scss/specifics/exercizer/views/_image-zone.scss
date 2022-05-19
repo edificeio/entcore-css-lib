@@ -25,6 +25,9 @@ image-zone {
   img {
     border-radius: 3px;
     pointer-events: none;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 
   button.add-answer {
