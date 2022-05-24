@@ -12,13 +12,23 @@ nav {
     padding: 0;
   }
 
+  &.floating-navigation {
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
   &.mobile-navigation {
     padding-right: 0 !important;
     border-left: 0 !important;
 
     ul li.selected {
-      background: rgba(0, 0, 0, 0.26);
-      font-weight: bold;
+      // background: rgba(0, 0, 0, 0.26);
+      background: $pale-cyan;
+
+      a {
+        font-weight: bold;
+      }
     }
   }
 }

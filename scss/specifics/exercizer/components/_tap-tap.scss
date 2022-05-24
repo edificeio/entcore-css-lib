@@ -1,7 +1,5 @@
 // TAP TAP STYLE : Replace D&D on responsive touch
 .tap-tap {
-  display: flex;
-  flex-wrap: wrap;
   border-radius: 20px 20px 0 0;
   background-color: $primary;
   color: white;
@@ -16,16 +14,22 @@
   border: none;
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
 
+  &__inner {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
   &__item {
     cursor: pointer;
     display: inline-block;
     background-color: white;
     border: none;
     padding: 8px 12px;
-    margin: 10px;
+    margin: 0;
     font-size: .875rem;
     color: $grey-black;
-    border: 1px solid $grey-grey;
+    // border: 1px solid $grey-grey;
 
     &:hover,
     &:active {
@@ -33,6 +37,11 @@
       color: white;
       border: none;
     }
+  }
+
+  image-zone.tap-tap__item {
+    aspect-ratio: 1/1;
+    padding: 0;
   }
 
   &__target {

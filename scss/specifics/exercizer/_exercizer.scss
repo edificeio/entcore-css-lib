@@ -1,5 +1,6 @@
 body.exercizer {
   color: $grey-black;
+  line-height: 24px !important;
 
   @import "./components/";
   @import "./views/";
@@ -13,6 +14,15 @@ body.exercizer {
       background: $orange;
       color: #fff;
     }
+  }
+
+  svg[class*="icon"] {
+    flex-shrink: 0;
+  }
+
+  editor {
+    margin: 0;
+    line-height: 28px !important;
   }
 
   h1,
@@ -57,6 +67,7 @@ body.exercizer {
   }
 
   .lightbox>.content h2 {
+    font-size: 1.125rem;
     color: $grey-black;
   }
 
@@ -106,45 +117,12 @@ body.exercizer {
     }
   }
 
-  .chip {
-    &.selected {
-      box-shadow: 2px 2px 1px 0px $shadow;
-      background: $primary;
-
-      i {
-        &:hover {
-          &:before {
-            color: $black !important;
-          }
-        }
-      }
-    }
-
-    &.deletable {
-      box-shadow: 2px 2px 1px 0px $shadow;
-      background: $white;
-
-      span {
-        color: $black;
-      }
-
-      i {
-        &:before {
-          color: $solid-grey !important;
-          @include run-transition;
-        }
-
-        &:hover {
-          &:before {
-            color: $red !important;
-          }
-        }
-      }
-    }
-  }
-
   [drag-item] {
     cursor: move;
+  }
+
+  .image-select-radius img {
+    border-radius: 4px;
   }
 
   .base-image {
@@ -264,9 +242,10 @@ body.exercizer {
     border-radius: .5rem;
     padding: 1.6rem;
     transition: z-index 0s 0.35s;
+    box-shadow: 2px 6x rgba($color: #000000, $alpha: .5);
 
     header {
-      color: $dark-grey;
+      color: $grey-black;
       font-weight: 600;
     }
 
@@ -303,11 +282,12 @@ body.exercizer {
 
   .edit-order-list {
     header {
-      font-weight: bold;
+      font-weight: 600;
       background-color: #e4f4ff;
       vertical-align: middle;
       padding: 0 16px;
       border-radius: 4px;
+      font-size: .875rem;
 
       .cell:first-of-type {
         width: 71px;
@@ -324,16 +304,6 @@ body.exercizer {
         list-style-type: none;
         padding: 4px 12px;
         border-radius: 4px;
-
-        &::after {
-          @include fonticon;
-          content: "\e847";
-          font-size: 20px;
-          position: absolute;
-          // right: 40px;
-          right: 3rem;
-          top: calc(50% - 12px);
-        }
 
         &:hover {
           background-color: #e4f4ff;
@@ -393,7 +363,7 @@ body.exercizer {
     background-color: $grey-fog;
     border: 1px solid $lightest-grey;
 
-    &::after {
+    /* &::after {
       @include fonticon;
       content: "\e847";
       font-size: 20px;
@@ -401,7 +371,7 @@ body.exercizer {
       right: 25px;
       top: calc(50% - 12px);
       opacity: 0.75;
-    }
+    } */
   }
 
   // Delete border from Order question in correction
@@ -463,7 +433,7 @@ body.exercizer {
 
   /* Custom tags for subject library list */
   .subject-library-tag {
-    font-size: 12px;
+    font-size: .8125rem;
     color: white;
     background-color: $orange;
     border-radius: 2px;
@@ -473,9 +443,6 @@ body.exercizer {
   }
 
   /* OVERWRITE THEME */
-  .tabs header.selected {
-    background-color: transparent !important;
-  }
 
   .down-open:hover {
     color: $orange;
@@ -578,18 +545,26 @@ body.exercizer {
   }
 
   // & body
-  editor.small-editor.edit [contenteditable] {
+  editor.small-editor.edit div[contenteditable] {
     width: 100%;
     max-height: 100px !important;
     min-height: 100px !important;
     overflow-y: auto;
   }
 
-  editor.small-editor.edit [contenteditable]:focus {
+  editor.small-editor.edit div[contenteditable] {
+    padding: .75rem 1rem;
+  }
+
+  editor.small-editor.edit div[contenteditable]:focus {
     width: 100%;
     max-height: none !important;
     min-height: 100px !important;
     overflow: visible;
+  }
+
+  table tbody tr:hover {
+    background-color: transparent;
   }
 
   table.scores {
@@ -792,11 +767,21 @@ body.exercizer {
   }
 
   .item-selected {
-    border-color: #ff8500 !important;
+    background-color: rgba(42,154,198,0.2) !important;
+    border: 2px dashed #2a9cc8 !important;
+
+    .text-zone-size {
+      background-color: transparent;
+    }
   }
 
   .left-margin-5 {
     margin-left: 5px;
+  }
+
+  .default-img image-select i.trash {
+    color: $dark-grey;
+    pointer-events: none;
   }
 
   @media screen and (max-width: $fat-mobile),
@@ -929,6 +914,12 @@ body.exercizer {
     padding-left: 5px;
     padding-right: 5px;
     color: #46bfaf;
+  }
+
+  .zone-image {
+    image-zone {
+      border: 1px solid $white;
+    }
   }
 
   .zone-image,

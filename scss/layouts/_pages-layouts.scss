@@ -639,11 +639,11 @@ div.invisible-content {
 
 // NEW MODERN RULES
 .flex {
-  display: flex;
+  display: flex !important;
 }
 
 .flex-inline {
-  display: inline-flex;
+  display: inline-flex !important;
 }
 
 .flex-wrap-wrap {
@@ -656,6 +656,10 @@ div.invisible-content {
 
 .justify-space-between {
   justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
 }
 
 // FLEW GROW

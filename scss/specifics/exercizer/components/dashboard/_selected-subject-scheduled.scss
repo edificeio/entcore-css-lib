@@ -7,9 +7,12 @@
     border: 1px solid $grey-grey;
     border-radius: 12px;
 
-    span {
+    span,
+    label {
+        display: inline-block;
         font-size: .8125rem;
-        width: 100%;
+        width: 200px;
+        overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }

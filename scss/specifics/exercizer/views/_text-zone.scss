@@ -6,6 +6,7 @@ text-zone {
   padding: 8px;
   color: $grey-black;
   display: inline-flex;
+  gap: 4px;
   flex-direction: row-reverse;
   box-sizing: border-box;
   border: 1px solid $grey-cloudy;
@@ -69,7 +70,8 @@ text-zone {
   }
 
   input[type="text"]:focus {
-    border-bottom: 1px solid $orange;
+    border-bottom: 0;
+    box-shadow: none;
   }
 
   [drop-item] {
@@ -85,6 +87,7 @@ text-zone {
 
     .text-zone-size {
       max-width: 125px;
+      pointer-events: none;
     }
 
     &.no-responsive.droppable,
@@ -147,4 +150,13 @@ text-zone {
   min-width: 150px;
   min-height: 40px;
   justify-content: flex-end;
+}
+
+.edit-text-zone {
+  padding: 0;
+  position: absolute;
+  border: 0;
+  height: 20px;
+  inset: 0;
+  opacity: 0;
 }

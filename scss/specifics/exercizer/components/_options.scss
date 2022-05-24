@@ -42,7 +42,7 @@
         background-color: $grey-fog;
         border: 1px solid $grey-grey;
 
-        @media screen and (min-width: $fat-tablette), print {
+        @media screen and (max-width: $fat-tablette), print {
             margin-top: 1rem;
         }
 
@@ -62,6 +62,7 @@
 
     .add-option {
         input[type="text"] {
+            border-right: 0;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
         }
@@ -86,6 +87,7 @@
     }
 
     text-zone {
+        cursor: move;
         width: auto !important;
         box-shadow: none;
         background-color:$white;

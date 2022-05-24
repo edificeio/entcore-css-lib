@@ -1,4 +1,9 @@
 image-zone {
+
+  .icon-close {
+    padding: 3px;
+  }
+  
   @media screen and (min-width: $wide-screen), print {
     min-width: 100px;
     width: 100px;
@@ -17,13 +22,13 @@ image-zone {
   position: relative;
   background: rgba(255, 255, 255, 0.8);
   margin: 8px;
-  border-radius: 3px;
+  border-radius: 6px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   z-index: 20;
   overflow: hidden;
 
   img {
-    border-radius: 3px;
+    border-radius: 6px;
     pointer-events: none;
     object-fit: cover;
     width: 100%;
@@ -106,7 +111,13 @@ image-zone {
     fill: $white;
   }
 
-  &.droppable {
+  &.droppable,
+  &.drop-zone {
+    margin: 0;
     background-color: hsla(0, 100%, 100%, 40%);
+  }
+
+  &.drop-zone {
+    border: 2px dashed $grey-cloudy;
   }
 }
