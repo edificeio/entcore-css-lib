@@ -1,0 +1,36 @@
+.minetestDelete {
+  .responsive-table table thead tr {
+    color: $minetest-white;
+  }
+
+  .responsive-table table td {
+    text-align: left;
+  }
+
+  .custom-cancel {
+    color: $minetest-orange;
+    background: $minetest-grey;
+    font-size: 14px;
+    box-shadow: none;
+  }
+
+  .custom-cancel:hover {
+    background: $minetest-orange;
+    color: $minetest-white;
+    font-size: 14px;
+    box-shadow: none;
+  }
+
+  .custom-button {
+    background: $minetest-orange;
+    color: $minetest-white;
+    font-size: 14px;
+  }
+
+  .custom-button:hover {
+    background-color: $minetest-dark-orange;
+    box-shadow: none;
+    color: $minetest-white;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,113 @@
+#display-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+
+  .sidebar-header {
+    color: $edt-white;
+    background-color: $edt-dark-blue;
+    display: flex;
+    padding: 5px 0 5px 10px;
+    font-size: 12pt;
+    margin-bottom: 10px;
+
+    &.top {
+      border-radius: 8px 8px 0 0;
+    }
+  }
+
+  .sidebar-section {
+    &.full {
+      height: 83%;
+    }
+
+    &.half {
+      height: 38%;
+
+      .edt-filters {
+        height: 55% !important;
+      }
+
+    }
+
+    &#teacher-section {
+      height: fit-content;
+      max-height: 38%;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    &#group-section {
+      flex: auto !important;
+    }
+
+    .section-content {
+      padding: 10px;
+
+      &.scroll {
+        overflow-y: scroll;
+        height: 70%;
+      }
+
+      .teacher-results {
+        padding: 5px;
+        margin: 0;
+        font-weight: bold;
+        font-size: 14px;
+        list-style-type: none;
+        display: flow-root;
+
+        .teacher-name {
+          float: left;
+          max-width: 80%;
+        }
+
+        .close {
+          cursor: pointer;
+          float: right;
+        }
+      }
+    }
+
+    #select-all-groups {
+      height: 30px;
+      margin-left: 10px;
+    }
+  }
+
+
+  .deselect-button {
+    width: fit-content;
+    border-radius: 5px;
+  }
+
+  .edt-filters {
+
+    .class-filter {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .group-filter {
+      font-size: 11px;
+    }
+
+    .button-filter {
+      color: white;
+      border-radius: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 3px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.unactive {
+        background-color: $edt-filter-unactive !important;
+      }
+    }
+  }
+}

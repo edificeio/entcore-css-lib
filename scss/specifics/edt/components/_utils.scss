@@ -1,0 +1,121 @@
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.datepicker table thead tr {
+  background: $edt-dark-blue;
+
+  th:hover {
+    background: $edt-dark-blue;
+  }
+}
+
+
+.calendar-current-week {
+  background: $white;
+  padding-right: 0;
+  margin-bottom: 8px;
+  line-height: 39px;
+
+  .cyan {
+    background-color: $edt-dark-blue;
+
+    &:hover {
+      background-color: $edt-dark-blue;
+    }
+  }
+
+  .calendarFiltersButtons {
+
+    background: $edt-dark-blue;
+
+    .displayModeButtons {
+      margin: 0px;
+    }
+
+    .nextPrevious {
+      button {
+        background-color: $edt-dark-blue;
+
+        &:hover {
+          background-color: $edt-dark-blue;
+        }
+      }
+    }
+  }
+
+  button {
+    color: $white;
+    border-radius: 0px;
+    padding: 8px 15px 8px;
+
+    i18n {
+      text-transform: uppercase;
+    }
+  }
+
+  span[ng-if="display.mode === 'week'"] {
+    color: $white;
+    background: $edt-dark-blue;
+    height: 100%;
+    display: inline-block;
+    padding: 0 10px;
+  }
+
+}
+
+.next-timeslots, .previous-timeslots {
+  margin-bottom: 0;
+  background: $edt-light-grey;
+
+  &:hover {
+    background: $edt-light-grey;
+  }
+
+  &:disabled {
+    background: $edt-light-grey;
+
+    &:hover {
+      background: $edt-light-grey;
+    }
+
+    &::before {
+      content: " ";
+    }
+  }
+}
+
+
+.form-row {
+  padding: 10px 0;
+}
+
+.small {
+  font-size: 0.9em;
+}
+
+.normal {
+  font-size: 1em;
+}
+
+.large {
+  font-size: 1.1em;
+}
+
+.float-left {
+  float: left;
+}
+
+.pointer {
+  cursor: pointer;
+}
+*.one.cell.edit-icone{
+  cursor: pointer;
+}

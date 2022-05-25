@@ -1,0 +1,206 @@
+$pmb-screen-mobile: 500px;
+$pmb-screen-tablet: 800px;
+$pmb-screen-laptop: 1200px;
+
+$pmb-white: white;
+$pmb-orange: #FF8500;
+$pmb-blue: #2a9bc7;
+$pmb-blue-light: #c1e3f0;
+$pmb-blue-transparent: rgba(75, 175, 213, 0.3);
+
+$pmb-grey-dark: #5b6472; // from body text color
+$pmb-grey: #b1b6bf; // from disabled button
+$pmb-grey-light: #c9ced5; // from medium-grey from moodle ?
+$pmb-grey-very-light: #e9ebef; // from cancel button
+
+$pmb-red: #b50000;
+$pmb-green: green;
+
+body.pmb section.toggle-buttons {
+
+  button{
+    @media screen and (max-width: $pmb-screen-mobile) {
+      min-height: unset;
+    }
+  }
+}
+
+body.pmb section.main {
+
+  .error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    a { text-decoration: underline; }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .img_mini {
+    max-height: 300px;
+    margin: 25px;
+  }
+
+  .main-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+
+    .date {
+      font-size: 12px;
+      height: fit-content;
+      background: $pmb-blue-transparent;
+      margin-right: 10px;
+      padding: 0 10px;
+    }
+  }
+
+  .blueButton {
+    background-color: $pmb-blue;
+  }
+
+  .fab {
+    width: 45px;
+    height: 45px;
+    background-color: #ff8500;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+    cursor:pointer;
+    font-size: 35px;
+    line-height: 45px;
+    color: white;
+    text-align: center;
+
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 1;
+
+    transition: all 0.1s ease-in-out;
+  }
+
+  .fab:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.26);
+    transition : all 0.3s cubic-bezier(.25, .8, .25, 1)
+  }
+
+  lightbox {
+    h2 { margin-bottom: 20px !important; }
+
+    .action-buttons {
+      margin-top: 10px;
+      float: right;
+    }
+  }
+
+  .folder-info {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .table {
+    table-layout: fixed;
+    margin: 10px;
+  }
+
+  .toaster-right { float: right; }
+
+  i.dropbtn {
+    color: black;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  nav.vertical[side-nav].slide {
+    width: 160px;
+    padding: 0px 10px;
+    overflow: unset;
+  }
+
+  nav.vertical[side-nav] {
+    background-color: #F0F0F0;
+    border-radius: 2px;
+    border-left: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.26);
+  }
+
+  nav.vertical ul li a {
+    padding-left: 20px;
+  }
+
+  .heightNavBar{
+    height: 80px !important;
+  }
+
+  .text-font{
+    font-weight: bolder;
+  }
+
+  .titleSideNav{
+    padding-left: 25px;
+  }
+
+  .tabs header {
+    margin-right: 0;
+  }
+
+  .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .city-list {
+    margin-left: 50px;
+
+    .city {
+      margin-top: 50px;
+
+      .main-school {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+
+        .uainame {
+          margin-right: 300px;
+        }
+      }
+
+      .secondary-schools {
+        margin-left: 100px;
+      }
+
+      i.trash::before {
+        @include fonticon();
+        content: '\e8cf';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-image: none;
+        // color: darkorange;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  section.lightbox div.content {
+    height: 500px;
+
+    h2 { margin-bottom: 20px !important; }
+
+    .action-buttons {
+      margin-top: 10px;
+      float: right;
+    }
+
+    .attach-list {
+      margin-top: 25px;
+    }
+  }
+}

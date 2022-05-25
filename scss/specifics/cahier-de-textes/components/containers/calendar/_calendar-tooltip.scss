@@ -1,0 +1,46 @@
+.calendar-tooltip {
+  width: 220px;
+  max-height: 450px;
+  overflow: hidden;
+  position: fixed;
+  visibility: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.26);
+  background-color: rgba($diary-white, .9);
+  z-index: 800;
+  box-sizing: border-box;
+
+  .calendar-sources {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  &-title {
+    border-radius: 5px 5px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+    justify-content: center;
+    color: $diary-white;
+    padding: 5px;
+    &.homework {
+      border-radius: 0;
+    }
+  }
+
+  &-content {
+    padding: 5px;
+    min-height: 20px;
+    font-size: 10px;
+    line-height: 14px;
+    max-height: 150px;
+    overflow: hidden;
+    iframe {
+      width: 150px;
+      height: 150px;
+    }
+    img {
+      width: 100px;
+      height: 50px;
+    }
+  }
+}

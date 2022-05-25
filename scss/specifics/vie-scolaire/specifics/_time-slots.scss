@@ -1,0 +1,97 @@
+/* View from time slots '/viescolaire/public/templates/viescolaire/param_time_slots.html' */
+
+.times-slot {
+  &-class {
+    &-add-section {
+      select {
+        margin: 5px 10px;
+      }
+    }
+
+    &-list {
+      &-element {
+        &-name {
+          p {
+            text-align: start;
+          }
+        }
+
+        multi-combo {
+          min-height: 1.5em;
+          height: unset;
+
+          > button.multi-combo-root-button {
+            margin: 0;
+          }
+
+          > div.multi-combo-root-panel {
+            > div.multi-combo-panel-opts {
+              > button {
+                display: none;
+              }
+            }
+          }
+          button {
+            height: auto;
+          }
+        }
+
+        &-classes {
+          i.mdi-close {
+            font-size: 1.5em;
+          }
+
+          &-error {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+
+  &-choiceSchedule {
+    display: flex;
+    align-items: center;
+  }
+
+  &-schedule {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0 32px 0;
+
+    &-title {
+      display: flex;
+      text-align: center;
+      position: relative;
+      align-items: center;
+      background-color: $white;
+      color: $black;
+      box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.3);
+      height: 30px;
+      border: 1px solid $vsco-grey-clear;
+
+      span {
+        flex: 1;
+      }
+    }
+
+    &-list {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      height: 30px;
+      border-bottom: 1px solid $vsco-grey-invisible;
+
+      &:nth-child(even) {
+        background-color: $white;
+      }
+
+      span {
+        flex: 1
+      }
+    }
+  }
+}

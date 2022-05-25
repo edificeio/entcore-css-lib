@@ -1,0 +1,71 @@
+$edt-dark-blue: rgba(22, 46, 174, 1);
+$edt-white: rgba(255, 255, 255, 1);
+$edt-black: rgba(0, 0, 0, 1);
+$edt-light-grey: rgba(170, 170, 170, 1);
+$edt-lighter-grey: rgba(246, 246, 246, 1);
+$edt-light-orange: rgba(254, 164, 127, 1);
+$edt-solid-orange: rgba(249, 127, 81, 1);
+$edt-spiro-blue: rgba(37, 204, 247, 1);
+$edt-honey-orange: rgba(234, 181, 67, 1);
+$edt-garden-blue: rgba(85, 230, 193, 1);
+$edt-sky-blue: rgba(27, 156, 252, 1);
+$edt-keppel-blue: rgba(88, 177, 159, 1);
+$edt-marine-black: rgba(44, 58, 71, 1);
+$edt-fuchsia: rgba(179, 55, 113, 1);
+$edt-indigo: rgba(59, 59, 152, 1);
+$edt-peach-orange: rgba(253, 114, 114, 1);
+$edt-light-purple: rgba(214, 162, 232, 1);
+$edt-magenta: rgba(109, 33, 79, 1);
+$edt-darker-blue: rgba(24, 44, 97, 1);
+$edt-pink: rgba(252, 66, 123, 1);
+$edt-solid-purple: rgba(130, 88, 159, 1);
+$edt-exceptionnal: rgba(153, 102, 51, 1);
+$edt-light-orange-lighter: rgba(254, 164, 127, 0.7);
+$edt-solid-orange-lighter: rgba(249, 127, 81, 0.7);
+$edt-spiro-blue-lighter: rgba(37, 204, 247, 0.7);
+$edt-garden-blue-lighter: rgba(85, 230, 193, 0.7);
+$edt-light-grey-lighter: rgba(202, 211, 200, 0.7);
+$edt-sky-blue-lighter: rgba(27, 156, 252, 0.7);
+$edt-keppel-blue-lighter: rgba(88, 177, 159, 0.7);
+$edt-marine-black-lighter: rgba(44, 58, 71, 0.7);
+$edt-fuchsia-lighter: rgba(179, 55, 113, 0.7);
+$edt-indigo-lighter: rgba(59, 59, 152, 0.7);
+$edt-peach-orange-lighter: rgba(253, 114, 114, 0.7);
+$edt-light-purple-lighter: rgba(214, 162, 232, 0.7);
+$edt-magenta-lighter: rgba(109, 33, 79, 0.7);
+$edt-darker-blue-lighter: rgba(24, 44, 97, 0.7);
+$edt-pink-lighter: rgba(252, 66, 123, 0.7);
+$edt-solid-purple-lighter: rgba(130, 88, 159, 0.7);
+$edt-filter-unactive : rgba(160, 167, 179, 1);
+
+@mixin keyframes($animationName){
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@include keyframes(spinner) {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobileMini {
+  @media (max-width: 350px) {
+    @content;
+  }
+}

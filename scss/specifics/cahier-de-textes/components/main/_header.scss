@@ -1,0 +1,49 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-result-search {
+    position: absolute;
+    top: 42px;
+    z-index: 1;
+  }
+}
+
+.structure-title {
+  position: absolute;
+  font-size: 18px;
+  font-weight: normal;
+  width: max-content;
+
+  // structure name aside title
+  &.side {
+    position: initial;
+    margin-left: 24px;
+  }
+
+  // main.html design
+  &.main {
+    top: 45px;
+    left: 70px;
+    line-height: 20px;
+    width: 280px;
+  }
+
+  // list-view.html design
+  &.manage-list {
+    bottom: -10px;
+    left: 70px;
+    font-size: 16px;
+  }
+
+  // admin-main.html design
+  &.admin-main {
+    top: 50px;
+    left: 70px;
+    line-height: 20px;
+    width: 250px;
+    text-align: initial;
+  }
+}
+

@@ -1,0 +1,249 @@
+.global-administrator-page {
+  &-header {
+    position: relative;
+  }
+  h1 {
+    flex-shrink: 0;
+    font-weight: bold;
+    margin-bottom: 0;
+    line-height: 0;
+    color: $black;
+  }
+  .title-area-simple {
+    display: flex;
+  }
+
+  .title-area-complete {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-height: 56px;
+      margin-right: 10px;
+    }
+
+    h1 {
+      font-size: 36px;
+      a {
+        color: $black;
+      }
+    }
+  }
+
+  i.published {
+    color: $diary-darkgreen;
+  }
+
+  i.unpublished {
+    color: $diary-grey;
+  }
+
+  .homework-slot, .session-slot {
+    .time-slot-type {
+      border-radius: 7px 0 0 7px;
+    }
+
+    .time-slot-title {
+      text-align: left;
+    }
+  }
+
+  .shadowed {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .img-none {
+    max-width: 60%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .empty-list {
+    justify-content: start !important;
+    font-size: 16px;
+    color: $diary-grey;
+  }
+
+  #list-diary-to-pdf {
+    opacity: 0;
+    z-index: -5;
+    position: absolute;
+    width: 790.28px;
+  }
+
+  #canvas-diary-to-pdf {
+    opacity: 0;
+    z-index: -5;
+    position: absolute;
+  }
+
+  .svg-green {
+    color: $diary-darkgreen;
+    fill: $diary-darkgreen;
+  }
+
+  .button-checkbox {
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.unactive {
+      background-color: $diary-grey;
+
+      &:hover {
+        background-color: $diary-darkengreen;
+      }
+    }
+
+    &.active {
+      &:hover {
+        background-color: $diary-darkengreen;
+      }
+
+      background-color: $diary-darkgreen;
+    }
+  }
+
+  .time-slot-type {
+    fill: $white;
+  }
+
+  .homework-slot {
+    .time-slot-type {
+      background-color: $diary-darkorange;
+    }
+
+    .time-slot-title {
+      background-color: $diary-orange;
+    }
+  }
+
+  .session-slot {
+    .time-slot-type {
+      background-color: $diary-darkgreen;
+    }
+
+    .time-slot-title {
+      background-color: $diary-green;
+    }
+  }
+
+  .create-visa {
+    textarea:focus {
+      outline: none !important;
+      border: 1px solid $diary-darkgreen;
+      box-shadow: 0 0 10px $diary-darkgreen;
+    }
+
+    button {
+      background-color: $diary-darkgreen;
+    }
+  }
+
+
+  .session-modal {
+
+    .close-lightbox {
+      color: $diary-dark-grey;
+    }
+
+    .content {
+      width: 97%;
+      min-height: 91%;
+      align-items: stretch;
+
+      .twelve.cell {
+        display: flex;
+
+        .modal-include {
+          align-items: stretch;
+
+          .back, .next {
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            width: 10%;
+            justify-content: center;
+            top: 50vh;
+
+            i {
+              color: $diary-grey;
+              cursor: pointer;
+              font-size: 45px;
+
+              &:hover {
+                color: $session-grey;
+              }
+
+              &.disabled {
+                cursor: default;
+                color: rgba($diary-grey, 0.3);
+
+                &:hover {
+                  color: rgba($diary-grey, 0.3);
+                }
+              }
+            }
+          }
+
+          .back {
+            left: 0;
+          }
+
+          .next {
+            right: 0;
+          }
+
+          .session-content {
+            display: inline-flex;
+            width: 80%;
+            align-items: stretch;
+            padding-right: 10%;
+            padding-left: 10%;
+
+            .main-content {
+              min-height: 0;
+
+              .head {
+                height: 25px;
+
+                .edit-button {
+                  justify-content: flex-end;
+                }
+              }
+
+              .title {
+                font-size: 26px;
+                font-weight: bold;
+                height: 50px;
+              }
+
+              .description {
+                align-items: stretch;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.administrator-page-list {
+  display: flex;
+  flex-flow: wrap;
+  height: 60px;
+  &-item {
+    display: inline;
+    margin: 0 5px;
+  }
+}
+

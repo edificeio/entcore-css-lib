@@ -1,0 +1,18 @@
+button, a.button {
+  color: $edt-white;
+  background: $edt-dark-blue;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $edt-dark-blue;
+  }
+
+  &:disabled {
+    background: $edt-light-grey;
+  }
+
+  &.cancel {
+    background: $edt-light-grey;
+    color: $edt-white;
+  }
+}

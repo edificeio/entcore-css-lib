@@ -1,0 +1,42 @@
+section.lightbox {
+  .content {
+    padding: 0;
+
+    .lightbox-container {
+      padding: 15px;
+    }
+
+    .lightbox-header {
+      color: $edt-white;
+      background-color: $edt-dark-blue;
+      width: 100%;
+      display: inline-block;
+      padding: 5px 0 5px 10px;
+      font-size: 15pt;
+      margin-bottom: 10px;
+
+      &.top {
+        border-radius: 8px 8px 0 0;
+      }
+    }
+
+    .close-lightbox {
+      color: $edt-white;
+    }
+  }
+
+  section.head {
+    background: $edt-dark-blue;
+    padding: 1px 15px !important;
+    border-radius: 5px 5px 0 0;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $edt-white;
+    }
+  }
+
+  section.body {
+    padding: 8px 20px;
+  }
+}
+

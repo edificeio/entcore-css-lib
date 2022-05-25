@@ -1,0 +1,114 @@
+i {
+  &.diary-view-calendar::before {
+    content: "\e8b3";
+  }
+
+  &.diary-view-list::before {
+    content: "\e8b8";
+  }
+
+  &.diary-view-carousel::before {
+    content: "\e90d";
+  }
+
+  &.diary-view-puzzle-piece::before {
+    content: "\e918";
+  }
+
+  &.diary-view-chart-bar::before {
+    content: "\e810";
+  }
+
+  &.diary-view-window::before {
+    content: "\f56e";
+  }
+
+  &.open-bloc::before {
+    content: "\e932";
+  }
+
+  &.close-bloc::before {
+    content: "\e931";
+  }
+
+  &.diary-up::before {
+    content: "\e838";
+  }
+
+  &.diary-calendar::before {
+    content: "\e917";
+  }
+
+  &.diary-file::before {
+    content: "\e945";
+  }
+
+  &.diary-folder::before {
+    content: "\e81b";
+  }
+
+  &.diary-user::before {
+    content: "\e870";
+  }
+
+  &.arrow-right::before {
+    content: "\e823";
+  }
+
+  &.arrow-left::before {
+    content: "\e87b";
+  }
+
+  &.arrow-up::before {
+    content: "\e840";
+  }
+
+  &.arrow-down::before {
+    content: "\e841";
+  }
+
+  &.right-open::before {
+    content: "\e823";
+  }
+
+  &.visible:before {
+    font-family: 'material-icons';
+    content: "\F208";
+  }
+
+  &.invisible:before {
+    font-family: 'material-icons';
+    content: "\F6D0";
+  }
+
+  &.dashboard:before {
+    font-family: 'material-icons';
+    content: "\F56E";
+  }
+
+  &.nav-diary-calendar:before {
+    font-family: 'material-icons';
+    content: "\F4EB";
+  }
+
+  &.notebook:before {
+    font-family: 'material-icons';
+    content: "\F82D";
+  }
+
+  &.progression:before {
+    font-family: 'material-icons';
+    content: "\F8B4";
+  }
+
+
+  &.file-pdf:before {
+    content: "\e857";
+  }
+
+  &.notebook-archive:before {
+    font-family: 'material-icons';
+    content: "\F3D4";
+  }
+
+}

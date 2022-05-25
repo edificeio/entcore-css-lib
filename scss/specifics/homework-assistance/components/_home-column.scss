@@ -1,0 +1,114 @@
+.home-column {
+  display: flex;
+  flex: 1 1 0px;
+  float: left;
+  width: 46%;
+  margin-left: 2%;
+  margin-right: 2%;
+  align-self: stretch;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    margin: 0 0 5% 0;
+  }
+
+  .style-bord-with-over-effect {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+
+  article {
+    width: 100%;
+    padding: 10px 0px 0px 30px !important;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 500px) {
+      padding: 10px 0px 0px 10px !important;
+    }
+
+    section {
+      padding-top: 4%;
+      margin-top: auto;
+      @media screen and (max-width: 500px) {
+        padding-top: 0;
+      }
+
+      .multilines {
+        white-space: pre-line;
+        cursor: text !important;
+        @media screen and (max-width: 800px) {
+          text-align: center;
+        }
+      }
+
+      .flex-header {
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 800px) {
+          flex-direction: column-reverse;
+        }
+      }
+
+      .flex-info {
+        display: flex;
+        align-items: flex-end;
+        @media screen and (min-width: 800px) and (max-width: 1000px) {
+          flex-direction: column;
+        }
+        @media screen and (max-width: 500px) {
+          flex-direction: column;
+          margin-top: 2%;
+        }
+
+        .column {
+          float: left;
+          padding-left: 2%;
+        }
+
+        .info-txt {
+          flex: 1 1 0;
+          align-self: flex-start;
+          @media screen and (min-width: 800px) and (max-width: 1000px) {
+            align-self: center;
+          }
+          @media screen and (max-width: 500px) {
+            align-self: center;
+            margin-top: 2%;
+          }
+        }
+      }
+
+      &#offer {
+        text-align: center;
+        padding-right: 15%;
+        padding-left: 15%;
+        @media screen and (max-width: 500px) {
+          padding-right: 5%;
+          padding-left: 5%;
+        }
+      }
+
+      #availabilityTitle {
+        font-size: 18px;
+        color: black;
+        @media screen and (max-width: 500px) {
+          font-size: 14px;
+        }
+      }
+
+      p {
+        @media screen and (max-width: 500px) {
+          margin: 0;
+          margin-bottom: 2%;
+        }
+      }
+    }
+
+    section:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+

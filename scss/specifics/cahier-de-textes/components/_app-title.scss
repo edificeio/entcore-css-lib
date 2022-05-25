@@ -1,0 +1,10 @@
+app-title, .title-area-complete {
+  @include mobile {
+    display: flex;
+  }
+  i18n {
+    @include mobile {
+      font-size: 5vw;
+    }
+  }
+}

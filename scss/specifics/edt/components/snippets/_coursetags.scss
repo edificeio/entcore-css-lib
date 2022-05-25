@@ -1,0 +1,106 @@
+.snippet-course-tags {
+
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-form {
+    span {
+      margin: 10px 0 10px 0;
+    }
+
+    &-input-tag {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+
+      input[type="text"] {
+        width: 20%;
+        margin-top: 10px;
+      }
+    }
+
+    &-input-choice {
+      display: flex;
+      flex-direction: column;
+
+
+    }
+
+    &-button {
+      width: fit-content;
+      margin: 16px 0 16px 0;
+    }
+  }
+
+  &-list {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+    display: flex;
+    flex-flow: wrap;
+
+    &-item {
+      list-style: none;
+      display: flex;
+      width: 50%;
+      line-height: 25px;
+      justify-content: space-between;
+
+      &-title {
+        align-self: center;
+        display: flex;
+
+        .edit {
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0.3s linear, opacity 0.3s linear;
+          margin-left: 10px;
+        }
+
+        &:hover .edit {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      &-icons {
+        width: 100px;
+      }
+    }
+  }
+
+  &-lightbox {
+
+    .content {
+      padding: 0 !important;
+      overflow: hidden;
+    }
+
+    &-head {
+      color: $edt-white;
+      background-color: $edt-dark-blue;
+      width: 100%;
+      display: inline-block;
+      padding: 5px 0 5px 10px;
+      font-size: 15pt;
+      margin-bottom: 10px;
+    }
+
+    &-body {
+      padding: 15px;
+
+      &-input-tag {
+        display: flex;
+        flex-direction: column;
+
+        input[type="text"] {
+          width: 20%;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

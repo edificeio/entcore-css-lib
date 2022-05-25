@@ -1,0 +1,71 @@
+/* New colors for button in calendar */
+$diary-darkgreen: #00ab6f;
+$diary-darkengreen: #009256;
+$diary-green: rgba($diary-darkgreen, 0.18);
+$diary-darkorange: #ff9700;
+$diary-orange: rgba($diary-darkorange, 0.18);
+$diary-white: #fff;
+$diary-black: #222;
+$diary-grey: #AAA;
+$diary-middle-grey: #929292;
+$diary-dark-grey: #555;
+$diary-light-grey: #e6e6e6;
+$diary-blue: #4bafd5;
+$diary-blue-light: #78daff;
+$diary-blue-dark: #2a9cc8;
+$diary-red: #e61610;
+$diary-purple: #9c29b7;
+
+/* New colors for session in calendar */
+$session-forestgreen: #00ab6f;
+$session-orange: #ff9700;
+$session-grey: #7E7E7E;
+
+
+/* ----------------------------
+    Spacing
+---------------------------- */
+$select-size: 172px;
+$spacing-XXL: 68px;
+$spacing-XML: 60px;
+$spacing-XM: 48px;
+$spacing-XL: 42px;
+$spacing-L: 24px;
+$spacing-M: 16px;
+$spacing-S: 12px;
+$spacing-XLXS: 10px;
+$spacing-LXS: 8px;
+$spacing-XXS: 4px;
+
+@mixin keyframes($animationName){
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@include keyframes(spinner) {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobileMini {
+  @media (max-width: 350px) {
+    @content;
+  }
+}

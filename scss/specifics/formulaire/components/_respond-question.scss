@@ -1,0 +1,79 @@
+// Respond-question
+
+.respond-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .question {
+    padding: 2% 3% 2% 3%;
+    background: $formulaire-white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2%;
+
+    &rgpd {
+      margin-top: 2%;
+    }
+
+    &-main {
+      display: flex;
+      flex-direction: column;
+      font-size: 12px;
+
+      textarea {
+        width: 100%;
+        height: 60px;
+        resize: none;
+        background: none;
+      }
+
+      .import-files .default {
+        @media screen and (max-width: $formulaire-screen-mobile) {
+          position: inherit;
+          height: inherit;
+        }
+      }
+    }
+
+    &-edit {
+      text-align: end;
+      margin-top: 1%;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 0;
+
+    &.alone {
+      justify-content: end !important;
+    }
+  }
+}
+
+.respond-question .section, .result-element .section {
+  &-top {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2%;
+
+    .title {
+      background-color: $formulaire-blue;
+      padding: 1% 3%;
+
+      h4 {
+        color: white;
+        margin: 0;
+      }
+    }
+
+    .description {
+      padding: 2% 3% 2% 3%;
+      background: $formulaire-white;
+    }
+  }
+
+  &-main {
+
+  }
+}

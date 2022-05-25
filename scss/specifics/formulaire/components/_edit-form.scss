@@ -1,0 +1,260 @@
+// Edit-form
+
+.main-button button {
+  @media screen and (max-width: $formulaire-screen-mobile) {
+    padding: 8px 8px 8px;
+  }
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+
+  [sortable-element] {
+    cursor: default;
+
+    :not(.disabled) .grab {
+      cursor: grab;
+    }
+  }
+
+  .elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .question-item, .section-item {
+      margin: auto;
+
+      .domino, .question-item .domino {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        background: $formulaire-white;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+        &.questionError, &.sectionError {
+          border-left: solid 3px red;
+        }
+
+        &:not(.disabled) question-title h4, .section-top:not(.disabled) h4 {
+          margin-top: 0;
+        }
+
+        .question-top, .section-top {
+          display: flex;
+          justify-content: center;
+
+          .dots {
+            display: flex;
+            flex-direction: column;
+            line-height: 2px;
+            padding-top: 1%;
+
+            @media screen and (max-width: $formulaire-screen-mobile) {
+              margin-top: 10px;
+            }
+          }
+        }
+
+        &.disabled .question-main {
+          padding: 2% 3% 2% 3%;
+        }
+
+        .question-main {
+          display: flex;
+          flex-direction: column;
+          padding: 0 3% 2% 3%;
+
+          .question-title {
+            display: flex;
+            justify-content: space-between;
+
+            &.onedition {
+              margin-top: 7px;
+            }
+
+            .empty {
+              font-weight: normal;
+              font-style: italic;
+              color: $formulaire-grey;
+            }
+          }
+
+          .question-type {
+            font-size: 12px;
+
+            .choice {
+              display: flex;
+              align-items: center;
+
+              select {
+                margin-left: 6%;
+              }
+
+              i.i-cancel {
+                margin: auto 1%;
+              }
+            }
+
+            textarea {
+              width: 100%;
+              height: 60px;
+              resize: none;
+              background: none;
+            }
+          }
+
+          .question-bottom, .section-bottom {
+            display: flex;
+            justify-content: flex-end;
+
+            .mandatory, .conditional {
+              margin-right: 2%;
+            }
+          }
+        }
+      }
+    }
+
+    .section-item {
+      margin: auto;
+      align-items: center;
+
+      .domino {
+        background: linear-gradient(to bottom right, #f0f2f4, #e9ebef) fixed;
+        box-shadow: none;
+      }
+
+      .section-top {
+        flex-direction: column;
+        background-color: $formulaire-blue;
+
+        &-dots {
+          display: flex;
+          justify-content: center;
+
+          .dots {
+            align-self: center;
+          }
+        }
+
+        &-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 3%;
+
+          .title i {
+            margin-left: 5%;
+          }
+
+          .flex-spaced {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+          }
+        }
+
+        i::before, h4, input, input::placeholder {
+          color: white !important;
+        }
+      }
+
+      .nofocusable {
+        border: 2px solid rgba(0, 0, 0, 0.1);
+
+        .description {
+          padding: 1% 3%;
+
+          .nodescription {
+            font-size: 14px;
+            font-style: italic;
+          }
+        }
+
+        .questions {
+          display: flex;
+          flex-direction: column;
+          padding: 0 5%;
+        }
+
+        .addQuestion {
+          text-align: right;
+          padding: 1%;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .flexend {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.drag {
+  ul {
+    list-style: none;
+    height: auto;
+    padding: 0;
+
+    .hidden {
+      visibility: hidden;
+    }
+
+    .row-shadow-effect {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.01);
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: -2px 5px 5px #bfbfbf7d;
+      z-index: 0;
+      cursor: grab;
+      margin: 1%;
+      width: auto;
+    }
+
+    .top {
+      width: 6%;
+      display: flex;
+      @media screen and (max-width: $formulaire-screen-mobile) {
+        width: 15%;
+      }
+
+      .dots {
+        display: flex;
+        flex-direction: column;
+        line-height: 6px;
+        transform: rotate(90deg);
+      }
+    }
+
+    .main {
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        width: 86%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .container-arrow {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}

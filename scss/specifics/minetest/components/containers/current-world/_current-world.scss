@@ -1,0 +1,15 @@
+.minetestCurrent {
+  .custom-cancel {
+    color: $minetest-orange;
+    background: $minetest-grey;
+    font-size: 14px;
+    box-shadow: none;
+  }
+
+  .custom-cancel:hover {
+    background: $minetest-orange;
+    color: $minetest-white;
+    font-size: 14px;
+    box-shadow: none;
+  }
+}

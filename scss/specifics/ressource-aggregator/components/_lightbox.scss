@@ -1,0 +1,31 @@
+section.lightbox {
+  > div.content {
+    .lightbox-title {
+      padding: 10px;
+      background-color: $primary;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      color: $white;
+      font-size: 20px;
+    }
+  }
+}
+
+lightbox.visibleoverflow {
+  section.lightbox {
+    overflow: visible;
+    > div.content {
+      overflow: visible;
+    }
+  }
+}
+
+lightbox.nopadding {
+  section.lightbox {
+    height: auto !important;
+    > div.content {
+      padding: 0;
+      max-height: fit-content;
+    }
+  }
+}

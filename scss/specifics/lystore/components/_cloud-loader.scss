@@ -1,0 +1,169 @@
+@include keyframes(movingData) {
+  from {
+    top: 125px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.cloud-loader {
+  width: 100%;
+  height: 200px;
+
+  .cloud {
+    height: 115px;
+    margin: 40px auto;
+    position: relative;
+    width: 200px;
+
+    &:before {
+      background-color: $white;
+      border-radius: 50%;
+      content: '';
+      height: 50px;
+      left: 35px;
+      position: absolute;
+      top: 45px;
+      width: 50px;
+      z-index: 1;
+    }
+
+    &:after {
+      position: absolute;
+      top: 30px;
+      left: 80px;
+      background-color: $white;
+      border-radius: 50%;
+      content: '';
+      width: 75px;
+      height: 75px;
+      z-index: 1;
+    }
+
+    div {
+      border: solid 10px $primary-dark;
+    }
+
+    .bottom_cloud, .animation-container {
+      border-radius: 50px;
+      height: 75px;
+      position: absolute;
+      width: 175px;
+      overflow: hidden;
+    }
+
+    .bottom_cloud {
+      z-index: 0;
+      top: 60px;
+      left: 10px;
+      background-color: $white;
+    }
+
+    .animation-container {
+      z-index: 2;
+      border: none;
+      left: 20px;
+      top: 20px;
+      height: 125px;
+
+      .data {
+        position: absolute;
+        top: 125px;
+        border: none;
+        color: $primary-dark;
+        opacity: 1;
+        animation: movingData 1.25s ease-out infinite;
+
+        &:nth-child(0) {
+          left: 20px;
+          font-size: 12px;
+          animation-delay: 0.5s;
+        }
+
+        &:nth-child(1) {
+          left: 50px;
+          font-size: 10px;
+          animation-delay: 0.75s;
+        }
+
+        &:nth-child(2) {
+          left: 75px;
+          font-size: 16px;
+          animation-delay: 0.25s;
+        }
+
+        &:nth-child(3) {
+          left: 100px;
+          font-size: 12px;
+        }
+
+        &:nth-child(4) {
+          left: 140px;
+          font-size: 10px;
+          animation-delay: 0.15s;
+        }
+      }
+
+      .arrow {
+        border: none;
+        width: 15px;
+        height: 50px;
+        background-color: $primary-dark;
+        margin: 95px auto;
+        z-index: 2;
+        position: relative;
+
+        &:before {
+          content: '';
+          background-color: $primary-dark;
+          width: 48px;
+          height: 15px;
+          display: block;
+          position: absolute;
+          left: -28px;
+          transform: rotate(-45deg);
+          top: -4px;
+          border-radius: 15px;
+        }
+
+        &:after {
+          content: '';
+          background-color: $primary-dark;
+          width: 48px;
+          height: 15px;
+          display: block;
+          position: absolute;
+          left: -5px;
+          transform: rotate(45deg);
+          top: -4px;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .right_cloud {
+      background-color: $white;
+      border-radius: 100%;
+      height: 75px;
+      left: 70px;
+      position: absolute;
+      top: 20px;
+      width: 75px;
+      z-index: -1;
+    }
+
+    .left_cloud {
+      background-color: $white;
+      border-radius: 100%;
+      height: 50px;
+      left: 25px;
+      position: absolute;
+      top: 35px;
+      width: 50px;
+      z-index: -1;
+    }
+  }
+}

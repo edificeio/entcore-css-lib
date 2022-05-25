@@ -1,0 +1,21 @@
+.sidebar {
+  &-article {
+    @include mobile {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .progression-container {
+      max-height: 32vh;
+    }
+
+    .audiences-container {
+      max-height: 12vh;
+      overflow: auto;
+
+      ul {
+        list-style-type: none;
+      }
+    }
+  }
+}

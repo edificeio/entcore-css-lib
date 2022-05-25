@@ -1,0 +1,71 @@
+@mixin hiddenVisibility($visibilityValue, $opacityValue) {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility $visibilityValue linear, opacity $opacityValue linear
+}
+
+@mixin showVisibility() {
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+}
+
+.student-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 16px 0 16px;
+
+  &-content {
+    display: flex;
+    position: relative;
+    margin-bottom: 12px;
+
+    &-background {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      background: $white;
+      width: 11px;
+      height: 11px;
+
+      @include hiddenVisibility(0.2s, 0.4s);
+    }
+
+    &-remove {
+      font-size: 24px;
+      color: $orange;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @include hiddenVisibility(0.3s, 0.3s);
+    }
+
+    &:hover {
+      visibility: visible;
+      .student-picture-content-background, .student-picture-content-remove {
+        @include showVisibility();
+      }
+    }
+
+    &-img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+
+    &-button {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &-name {
+    text-align: center;
+    font-weight: bold;
+    width: 140px;
+  }
+}

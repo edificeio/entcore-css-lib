@@ -1,0 +1,25 @@
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  span.no-style {
+    width: 100%;
+  }
+}
+
+.form-row {
+  padding: 10px 0;
+}
+
+.sub-text {
+  font-style: italic;
+  color: #666;
+}

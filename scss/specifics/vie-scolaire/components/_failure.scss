@@ -1,0 +1,24 @@
+.failure {
+  display: flex;
+  width: 100%;
+
+  .error-photo {
+    max-width: 8%;
+    margin-right: 20px;
+  }
+  .error-info {
+    &-name {
+      margin: 5px;
+      font-weight: bold;
+    }
+    &-path {
+      margin: 5px;
+    }
+    display: flex;
+    flex-direction: column;
+
+    &-search {
+      flex-shrink: 2;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import './sniplet';
+
+body.lool {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10%;
+    padding: 2% 5% 0 5%;
+
+    @media (max-width: $tablette) {
+      grid-template-columns: 1fr;
+    }
+
+    .data {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .filename {
+        vertical-align: sub;
+        margin-bottom: 2%;
+
+        input {
+          width: 70%;
+        }
+      }
+
+      .folders {
+        &-tree {
+          max-height: 50vh;
+          overflow-y: auto;
+        }
+      }
+
+      .type {
+        margin-top: 10%;
+
+        .document-type-list {
+          justify-content: space-between;
+
+          label {
+            padding: 10% 5%;
+
+            .text::after {
+              display: none;
+            }
+
+            &:hover {
+              box-shadow: none !important;
+
+              .text {
+                &::after {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-height: 300px;
+      }
+    }
+  }
+}

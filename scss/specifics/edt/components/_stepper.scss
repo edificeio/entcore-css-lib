@@ -1,0 +1,114 @@
+@keyframes step-appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.steps {
+  position: relative;
+
+  &::before {
+    height: 100%;
+    position: absolute;
+    width: 2px;
+    background-color: $dark-grey;
+    left: -4.166665%;
+    top: 0;
+    content: ' ';
+  }
+
+  .a-step {
+    margin-bottom: 50px;
+
+    .a-step-content {
+      margin-bottom: 75px;
+      @include run-transition(all);
+      opacity: 0;
+      display: none;
+    }
+
+    &.active {
+      animation: step-appearance 0.5s ease;
+
+      .a-step-content {
+        margin-bottom: 0;
+        display: block;
+        opacity: 1;
+
+        article {
+          padding: 15px;
+        }
+      }
+    }
+
+    &:not(.active) {
+      .a-step-circle:before {
+        @include run-transition(color);
+        color: $white;
+        cursor: pointer;
+      }
+
+      .a-step-header {
+        &:hover {
+          .a-step-circle {
+            &::before {
+              color: $white;
+            }
+
+            &.valid::before {
+              background-color: $cyan;
+              color: $white;
+              content: '\e858';
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+
+    .a-step-header {
+      .a-step-circle {
+        &::before {
+          @include fonticon;
+          content: '\e858';
+          padding: 1px 7px;
+          background-color: $cyan;
+          display: block;
+          position: absolute;
+          margin-top: -10px;
+          border-radius: 50%;
+          left: calc(-4.166665% - 21px);
+          color: $cyan;
+          font-size: 12px;
+          border: solid 10px $lightest-grey;
+        }
+
+        &.valid{
+          &::before {
+            background-color: $green;
+            content: '\e871';
+            color: $white;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    &.disabled {
+      .a-step-circle::before, .a-step-circle:hover::before {
+        background-color: $medium-grey !important;
+        color: $medium-grey !important;
+      }
+    }
+
+    .a-step:last-child {
+      .a-step-content {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

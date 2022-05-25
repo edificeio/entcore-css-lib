@@ -1,0 +1,277 @@
+$memento-bg-color: #f7f6f6;
+$memento-avatar-height: 170px;
+$memento-font-size: 17px;
+$memento-scrollbar-color: #4bafd5;
+$memento-scrollbar-color-hover: #1898c9;
+
+@mixin memento-menu-color($color) {
+  .memento {
+    .menu {
+      ul {
+        li {
+          &.focused, &.focused i:before, &.focused i:after {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  @include memento-menu-color($black);
+
+  &.presences {
+    @include memento-menu-color(#ffb600);
+  }
+
+  &.edt {
+    @include memento-menu-color(#162eae);
+  }
+
+  &.diary {
+    @include memento-menu-color(#00ab6f);
+  }
+
+  &.competences {
+    @include memento-menu-color(#ff5300);
+  }
+}
+
+.memento {
+  background-color: $memento-bg-color;
+  position: fixed;
+  top: 64px;
+  width: 100%;
+  height: calc(100% - 64px);
+  z-index: 100000;
+  left: 0;
+  overflow-y: auto;
+  color: $black !important;
+  font-size: $memento-font-size;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+
+    &-track {
+      box-shadow: inset 0 0 5px $vsco-grey;
+      border-radius: 10px;
+    }
+
+    &-thumb {
+      background: $memento-scrollbar-color;
+      border-radius: 10px;
+
+      &:hover {
+        background: $memento-scrollbar-color-hover;
+      }
+    }
+  }
+
+  .accommodation-field {
+    text-transform: lowercase;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    > div {
+      flex: 1;
+    }
+
+    .user-comment {
+      padding: 10px;
+      background-color: $white;
+
+      i18n {
+        margin-left: 9px;
+        font-size: 15px;
+      }
+
+      textarea {
+        height: 80px;
+        font-family: Roboto, sans-serif;
+        border: none;
+        margin: 0;
+      }
+    }
+
+    .actions {
+      align-self: flex-start;
+
+      i.close::before {
+        font-size: 38px;
+        margin-right: 0;
+        cursor: pointer;
+      }
+
+      .async-autocomplete {
+        padding: 10px;
+        background-color: $white;
+        width: 80%;
+        float: right;
+
+        input[type="text"] {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .menu {
+      ul {
+        border-left: solid 1px rgba(0, 0, 0, 0.15);
+        list-style-type: none;
+
+        li {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .card {
+    font-size: $memento-font-size;
+  }
+
+  .section-title {
+    font-size: 20px;
+    color: $black;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .student {
+    display: flex;
+    align-items: center;
+    font-size: $memento-font-size;
+
+    .avatar {
+      height: $memento-avatar-height;
+      width: $memento-avatar-height;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+
+    .groups > span {
+      &::after {
+        content: ',';
+      }
+
+      &:last-child::after {
+        content: ''
+      }
+    }
+
+    h4 {
+      font-size: 28px;
+      color: $black !important;
+    }
+  }
+
+  .relatives {
+    display: flex;
+    padding: 5px;
+
+    .relative {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      border-right: solid 1px rgba(0, 0, 0, 0.15);
+
+      &:last-child {
+        border-right: none;
+      }
+
+      .data {
+        .contact-info.disabled {
+          opacity: 0.60;
+        }
+
+        .contact-info > div {
+          margin: 10px 0 auto 0;;
+        }
+      }
+
+      h4 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .contact-priority {
+        display: flex;
+        margin-top: 48px;
+      }
+    }
+  }
+
+  i {
+    &::after, &::before {
+      font-family: "material-icons";
+      font-size: 20px;
+      margin-right: 5px;
+      color: $black;
+    }
+
+    &.birth-date::after {
+      content: "\F0EB"
+    }
+
+    &.school::after {
+      content: "\F474"
+    }
+
+    &.accommodation::after {
+      content: "\F4A3";
+    }
+
+    &.bus::after {
+      content: "\F0034";
+      font-size: 22px;
+    }
+
+    &.email::after {
+      content: "\F1EE";
+    }
+
+    &.mobile::after {
+      content: "\F11C";
+    }
+
+    &.phone::after {
+      content: "\F3F2"
+    }
+
+    &.address::after {
+      content: "\F2DC";
+    }
+
+    &.relatives-icon::after {
+      content: "\FEF4";
+    }
+
+    &.absences::before {
+      content: "\F15A";
+      color: $black;
+    }
+
+    &.marks::after {
+      content: "\F128"
+    }
+
+    &.sanctions::after {
+      content: "\F241";
+    }
+
+    &.teachers-conference::after {
+      content: "\F366";
+    }
+
+    &.close::before {
+      content: "\F5AD";
+    }
+  }
+}

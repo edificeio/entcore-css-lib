@@ -1,0 +1,528 @@
+/*!
+ * Copyright (c) Région Hauts-de-France, Département de la Seine-et-Marne, Région Nouvelle Aquitaine, Mairie de Paris, CGI, 2016.
+ * This file is part of OPEN ENT NG. OPEN ENT NG is a versatile ENT Project based on the JVM and ENT Core Project.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation (version 3 of the License).
+ * For the sake of explanation, any module that communicate over native
+ * Web protocols, such as HTTP, with OPEN ENT NG is outside the scope of this
+ * license and could be license under its own terms. This is merely considered
+ * normal use of OPEN ENT NG, and does not fall under the heading of "covered work".
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
+
+body.viescolaire {
+  .center{
+    text-align: center !important;
+  }
+
+  .no-indent {
+    text-indent: 0 !important;
+  }
+  .sous-titre {
+    font-size: small;
+  }
+
+  .selectable-list li:hover {
+    background: $white;
+    color: $orange;
+    border-bottom-color: grey;
+  }
+
+  .selectable-list li.selected:hover {
+    background: $orange !important;
+    color: $white !important;
+    border-bottom-color: grey;
+  }
+
+  .devoirToDelete {
+    height: 200px;
+    overflow-y: scroll;
+  }
+  .suivi-eleve-item:hover dots-menu {
+    opacity: 1;
+  }
+  .suivi-eleve-item dots-menu {
+    opacity: 0;
+  }
+  dots-menu {
+    vertical-align: top;
+    .options {
+
+      right: 0px;
+      left: 20px;
+    }
+  }
+  .param-margin {
+    margin-left: 16.66667%;
+    z-index: 20;
+  }
+  .responsive-table table thead i {
+    top: 13%;
+    margin-top: 0px;
+  }
+  .margin-top-0-5em {
+    margin-top: 0px;
+  }
+  .margin-top-05em {
+    margin-top: 0.5em !important;;
+  }
+  .mask-item {
+    color: #a4a7a6;
+  }
+  .item {
+    color: #000000;
+  }
+  table.fixed-head tr {
+    background: #FFF;
+  }
+
+  table thead tr {
+    background: #c7edfc;
+    border: none;
+  }
+
+  table thead tr:hover {
+    background: #97defa;
+    border: none;
+  }
+
+  .responsive-table table.bigLibelle tbody tr td:first-child {
+    padding-left: 45px;
+    text-indent: unset;
+  }
+
+  .responsive-table table tbody tr td:first-child {
+    text-indent: 45px;
+  }
+
+  .responsive-table .fixed-head {
+    border-collapse: collapse;
+  }
+
+  td i.close-2x {
+    color: red;
+  }
+  td i.ok {
+    color: green;
+  }
+  .head-param-periode {
+    > div {
+      margin-bottom: 3%;
+      text-align: center;
+    }
+  }
+  .head-tableau-periode {
+    border-bottom: solid;
+    margin-bottom: 8px;
+    border-left: solid;
+    border-right: solid;
+    border-width: thin;
+    border-color: #ccc;
+  }
+
+
+  //    Général    //
+
+  .remove-padding {
+    padding: 0;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .margin-top-lg {
+    margin-top: 15px;
+  }
+
+  //    Periodes    //
+  .config-periode {
+
+    & article > * {
+      margin-bottom: 0;
+    }
+
+    .expandable-list-item-main, .expandable-list-item-expand > .row {
+      padding: 0;
+      overflow: hidden;
+      height: 40px;
+
+      & > div {
+        padding: 10px;
+        width: 13.331%;
+        text-align: center;
+      }
+
+      & > div:nth-child(2) {
+        width: 10%;
+      }
+
+      & > div:nth-child(3) {
+        color: $primary;
+        font-weight: bold;
+      }
+
+      & > div:first-child, & > div:last-child {
+        width: 5%;
+        text-align: center;
+      }
+    }
+
+    .expandable-list-header {
+      padding: 0;
+      overflow: hidden;
+      height: 65px;
+
+      & > div {
+        padding: 10px;
+        width: 13.331%;
+        text-align: center;
+      }
+
+      & > div:nth-child(2) {
+        width: 10%;
+      }
+
+      & > div:nth-child(3) {
+        color: $primary;
+        font-weight: bold;
+      }
+
+      & > div:first-child, & > div:last-child {
+        width: 5%;
+        text-align: center;
+      }
+    }
+
+    .text-overflow {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .expandable-list-header > div {
+      background-color: $primary;
+      color: $white !important;
+      font-weight: bold;
+      > label.checkbox {
+        > input[type="checkbox"]:checked + span::before {
+          border-color: $white;
+        }
+      }
+      min-height: 65px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .expandable-list-item {
+      border-bottom: solid 1px $grey;
+
+      .classe {
+        height: 25px;
+        background-color: $primary-lighter;
+        border-radius: 12px;
+        padding: 0 5px;
+        text-align: center;
+        @include box-shadow(0px 1px 1px rgba(0, 0, 0, 0.8));
+
+        span {
+          margin: 5px;
+        }
+      }
+
+      .expandable-list-item-main {
+        color: $black;
+        font-weight: bold;
+
+        .down-open::before {
+          opacity: 0.8;
+          background-color: inherit;
+          color: $grey;
+          display: block;
+        }
+
+        &:hover .down-open::before {
+          color: $cyan;
+        }
+      }
+
+      &:not(.displayed) {
+
+        .down-open::before {
+          transform: rotate(90deg);
+          @include transition(rotate 1s ease);
+        }
+
+        .expandable-list-item-expand {
+          @include transition(max-height 1s ease);
+          max-height: 0;
+          overflow: hidden
+        }
+      }
+
+      &.displayed > .expandable-list-item-expand > .row:first-child {
+
+        div {
+          border-top: solid 2px $primary;
+        }
+
+        div:nth-child(1), div:nth-child(2) {
+          border-top: none;
+        }
+      }
+    }
+  }
+
+
+  //lightBox Periode
+  @media screen and (min-device-width:$tablette ) {
+    .widthLightBox div.content{
+      width: 60% !important;
+    }
+  }
+
+
+  //    Tableau Bilan Périodique    //
+
+  .trSniplet {
+    background: $cyan !important;
+  }
+
+  //      -----     //
+
+  .selected-item {
+    background-color: #95BCF2;
+    white-space: normal !important;
+  }
+  .padding-left {
+    padding-left: 3em;
+    min-width: 60%;
+  }
+  .header-class {
+    & > div {
+      height: 30px;
+      font-weight: bold;
+      > label.checkbox {
+        > input[type="checkbox"]:checked + span::before {
+          border-color: $white;
+        }
+      }
+    }
+    & > div:first-child {
+      padding: 5px;
+    }
+    & > div:last-child {
+      //width: 10%;
+      padding: 5px 0px 5px 0px;
+    }
+  }
+  .list-classes {
+    margin-left: 5px;
+  }
+
+  .rounded {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    transition: all 200ms ease;
+  }
+
+  .openedSectionDom {
+    height: 0 !important;
+    overflow: hidden !important;
+
+  }
+
+  .Domaine {
+
+    &::before {
+      @include fonticon;
+      margin-right: 0.5%;
+      content: "\e841";
+      font-size: 10px;
+      float: left;
+    }
+    &.openedDom {
+      &::before {
+        @include fonticon;
+        margin-right: 1%;
+        content: "\e823";
+        font-size: 10px;
+        float: left;
+      }
+    }
+  }
+  .patchwork .content {
+    width: 40% !important;
+  }
+  opt i::after {
+    margin-right: 3px;
+    font-size: 18px !important;
+  }
+  opt i.eye-open {
+    font-size: 18px;
+  }
+  .humane,
+  .humane-original {
+    position: fixed;
+    -moz-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    z-index: 100000;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  }
+  .humane,
+  .humane-original {
+    line-height: 40px;
+    font-size: 25px;
+    top: 25%;
+    left: 25%;
+    opacity: 0;
+    width: 50%;
+    min-height: 40px;
+    padding: 10px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+  }
+  .humane p,
+  .humane-original p,
+  .humane ul,
+  .humane-original ul {
+    margin: 0;
+    padding: 0;
+  }
+  .humane ul,
+  .humane-original ul {
+    list-style: none;
+  }
+  .humane.humane-original-info,
+  .humane-original.humane-original-info {
+    background-color: #00D;
+  }
+  .humane.humane-original-success,
+  .humane-original.humane-original-success {
+    background-color: #030;
+  }
+  .humane.humane-original-error,
+  .humane-original.humane-original-error {
+    background-color: #D00;
+  }
+  .humane.humane-animate,
+  .humane-original.humane-original-animate {
+    opacity: 0.8;
+  }
+  .humane.humane-animate:hover,
+  .humane-original.humane-original-animate:hover {
+    opacity: 0.6;
+  }
+  .humane.humane-js-animate,
+  .humane-original.humane-original-js-animate {
+    opacity: 0.8;
+  }
+  .humane.humane-js-animate:hover,
+  .humane-original.humane-original-js-animate:hover {
+    opacity: 0.6;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  }
+
+  .grid-exemple.row .article, .grid-exemple.row .absolute {
+    font-size: 14px;
+    padding: 10px;
+    color: #888;
+    border: #fff solid 5px;
+    border-radius: 12px;
+    background: #eee;
+    text-align: left;
+  }
+
+  .cke_float.cke_chrome {
+    box-shadow: none;
+    z-index: 7000 !important;
+    .cke_inner {
+      background: #F6F6F6;
+      box-shadow: none !important;
+      border: 1px solid #ccc;
+
+      .cke_top {
+        background: none;
+        border: none;
+        box-shadow: none;
+        border-bottom: none;
+        .cke_toolgroup {
+          box-shadow: none;
+        }
+        span {
+          border: none;
+          background: none;
+        }
+        .cke_combo_arrow {
+          border-left: 3px solid transparent;
+          border-right: 3px solid transparent;
+          border-top: 3px solid #474747;
+        }
+        .cke_combo_button {
+          background: #fff;
+          border: 1px solid #ddd;
+        }
+        .cke_button_on {
+          background: #ddd;
+          box-shadow: inset 1px 1px 2px #999;
+        }
+      }
+    }
+  }
+
+  .warning {
+    color: #c60c17;
+    background: #FFE7E8;
+    padding: 7px;
+    font-size: 12px;
+    text-align: center;
+    @include border-radius(10px);
+    max-width: 100%;
+  }
+
+  .info {
+    color: #2F8CC9;
+    background: #EBF4F9;
+    padding: 7px;
+    font-size: 12px;
+    text-align: center;
+    @include border-radius(10px);
+    max-width: 100%;
+  }
+  i.trash {
+    margin-right: 7.5px;
+  }
+
+  //    Paramétrage dates année scolaire    //
+
+  .width-10 {
+    width: 10em;
+  }
+
+  // Changement de css pour les lightboxs utilisant les multi-combo
+
+  .line-heigth-23{
+    line-height: 23px;
+  }
+
+  lightbox.visible-overflow>section.lightbox>div.content {
+    overflow: visible;
+    max-height: fit-content;
+  }
+
+}

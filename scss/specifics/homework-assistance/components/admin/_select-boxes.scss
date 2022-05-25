@@ -1,0 +1,20 @@
+.select-boxes {
+  .custom-select-1 {
+    position: relative;
+    width: 100px;
+    margin-left: 10px !important;
+  }
+
+  .custom-select-2 {
+    position: relative;
+    width: 100px;
+    margin-right: 20px !important;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 800px) {
+    br { display: none }
+  }
+  @media screen and (min-width: 1200px) {
+    br { display: none }
+  }
+}

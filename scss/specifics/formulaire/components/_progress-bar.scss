@@ -1,0 +1,57 @@
+// Progress-bar
+
+.progressbar-container {
+  display: flex;
+  justify-content: center;
+
+  .progressbar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px;
+    padding: 0;
+  }
+  .progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    position: relative;
+    z-index: 0;
+  }
+  .progressbar li:before {
+    width: 22px;
+    height: 22px;
+    content: '';
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: $formulaire-blue-light;
+    @media screen and (max-width: $formulaire-screen-mobile) {
+      width: 11px;
+      height: 11px;
+    }
+  }
+  .progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: $formulaire-blue-light;
+    top: 10px;
+    left: -50%;
+    @media screen and (max-width: $formulaire-screen-mobile) {
+      top: 5px;
+    }
+  }
+  .progressbar li:first-child:after {
+    content: none;
+  }
+  .progressbar li.active {
+    z-index: 1;
+  }
+  .progressbar li.active:before {
+    background-color: $formulaire-blue;
+  }
+  .progressbar li.active:after {
+    background-color: $formulaire-blue;
+  }
+}

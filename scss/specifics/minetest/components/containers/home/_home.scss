@@ -1,0 +1,179 @@
+.minetest {
+
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    &-title {
+      margin-bottom: 0;
+    }
+    &-download {
+      font-size: 12px;
+      &-text {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .download {
+    &-description {
+      display: contents;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+  }
+
+}
+
+.empty-state {
+  margin: 20px;
+
+  &-button {
+    display: flex;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.empty-content {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+
+  img {
+    margin: auto;
+  }
+}
+
+.worlds {
+  .current-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    h2 {
+      font-size: 26px;
+    }
+    h6, a {
+      margin: 10px 0;
+      font-size: 13px;
+    }
+    .button {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .url-container {
+    display: flex;
+
+    .input-url {
+      padding-right: 15px;
+
+      input {
+        width: 100%;
+      }
+    }
+    a {
+      display: flex;
+      transition: all 250ms ease;
+      align-items: center;
+      i.copy {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+      &:hover {
+        fill: $minetest-orange;
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  margin: 25px 0;
+
+  .flex-card {
+    height: 130px;
+    display: flex;
+    &.active {
+      border-color: $minetest-orange;
+      background-color: $minetest-blue;
+      @include run-transition(all);
+    }
+    .icon {
+      display: flex;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .title {
+      width: 65%;
+      margin: 5px;
+      line-height: 20px;
+
+      .owner > h5 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 15px;
+      }
+    }
+    .ellipsis {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 300px;
+    }
+  }
+}
+
+.minetest-lightbox {
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+
+    &-upload {
+      display: flex;
+      width: 25%;
+      margin: 10px;
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      margin: 10px;
+
+      &-input-text {
+        display: flex;
+        &-title {
+          margin-right: 10px;
+        }
+      }
+
+      &-description {
+        margin: 10px 0;
+      }
+
+      &-input-checkbox-title {
+        margin-right: 10px;
+      }
+
+      &-password {
+        display: flex;
+        margin: 10px 25px;
+      }
+    }
+  }
+}

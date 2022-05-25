@@ -1,0 +1,154 @@
+/*!
+ * Copyright (c) Région Hauts-de-France, Département de la Seine-et-Marne, Région Nouvelle Aquitaine, Mairie de Paris, CGI, 2016.
+ * This file is part of OPEN ENT NG. OPEN ENT NG is a versatile ENT Project based on the JVM and ENT Core Project.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation (version 3 of the License).
+ * For the sake of explanation, any module that communicate over native
+ * Web protocols, such as HTTP, with OPEN ENT NG is outside the scope of this
+ * license and could be license under its own terms. This is merely considered
+ * normal use of OPEN ENT NG, and does not fall under the heading of "covered work".
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
+
+body.vsco--global {
+  i.check-empty::after{
+    content: "\e83d";
+  }
+  i.up-open::after{
+    font-size: large;
+    &:hover {
+      color: $cyan;
+    }
+  }
+  i.down-open::after{
+    font-size: large;
+    &:hover {
+      color: $cyan;
+    }
+  }
+  i.table::after{
+    content: '\e913';
+    color : #ffffff;
+  }
+  i.clock::after {
+    content: '\f017';
+  }
+  i.plus::after{
+    content:  '\e85e';
+    font-size: large;
+  }
+  i.moins::after{
+    content:  '-';
+    font-size: xx-large;
+  }
+  i.ok::after{
+    content:  '\e871';
+    font-size: large;
+  }
+  i.alerte::after{
+    content: '!';
+    font-size: xx-large;
+  }
+  i.warning::before, i.report::before {
+    content: '\e903';
+    font-size: 18px;
+  }
+
+  i.cancel::before {
+    content: '\e866';
+  }
+
+  i.eye-slash::before {
+    content: '\e904';
+  }
+
+  i.eye-open::before::before {
+    content: '\e873';
+  }
+  i.eye-open-orange::before {
+    content: '\e873';
+    color: #FF8500;
+  }
+  i.trash-orange::before{
+    content: '\e8cf';
+    color: #FF8500;
+  }
+
+  i.trash::before{
+    content: '\e8cf';
+  }
+
+  i.down-open {
+    content: '\e841';
+  }
+
+  .left-arrow::after {
+    content: "\e87b";
+    opacity: 0.8;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    color: $grey;
+    &:hover {
+      color: $cyan;
+    }
+  }
+
+  .right-arrow::after {
+    content: "\e823";
+    opacity: 0.8;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    color: $grey;
+    &:hover {
+      color: $cyan;
+    }
+  }
+
+  .clock::after {
+    content: "\f017";
+  }
+
+  i.arrows-cw::after {
+    content: '\e874';
+  }
+
+  i.phone::after {
+    content: '\f095';
+    cursor: pointer;
+  }
+  i.pencil::after {
+    content: '\e858';
+    cursor: pointer;
+  }
+  i.updateDomaine::after {
+    content: '\e806';
+    cursor: pointer;
+  }
+  i.manual-item::after {
+    content: '\e80c';
+  }
+  i.calendar-o::after {
+    content: "\e917";
+    color: #4bafd5;
+    padding: 0 5px;
+  }
+
+  // material icon
+  i {
+    &.mdi-close::before {
+      font-family: 'material-icons';
+      content: "\F156";
+    }
+    &.mdi-delete-forever::before {
+      font-family: 'material-icons';
+      content: "\F5E8";
+    }
+  }
+}

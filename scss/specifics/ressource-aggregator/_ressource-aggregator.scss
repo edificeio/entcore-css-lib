@@ -1,0 +1,485 @@
+$mediacentre-red: #f53b57;
+$mediacentre-dar-red: #c4374c;
+$mediacentre-yellow-star: rgb(254, 198, 61);
+$mediacentre-light-grey: #d6d6d6;
+$mediacentre-gar: #3b1d8f;
+$mediacentre-moodle: #ff8500;
+$mediacentre-pmb: #43b0a2;
+$mediacentre-grey: #232323;
+$mediacentre-white: #FFF;
+
+
+@font-face {
+  font-family: 'material-icons';
+  src: url('/mediacentre/public/font/material-design/fonts/materialdesignicons-webfont.eot');
+  src: url('/mediacentre/public/font/material-design/fonts/materialdesignicons-webfont.eot') format('embedded-opentype'),
+  url('/mediacentre/public/font/material-design/fonts/materialdesignicons-webfont.woff2') format('woff2'),
+  url('/mediacentre/public/font/material-design/fonts/materialdesignicons-webfont.woff2') format('woff'),
+  url('/mediacentre/public/font/material-design/fonts/materialdesignicons-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body.mediacentre-v2 {
+  @import './components/index';
+
+  i.refresh {
+    @include fonticon();
+
+    &::before {
+      content: "\e874";
+    }
+  }
+
+  section.main {
+    top: 64px !important;
+    padding: 0 !important;
+  }
+
+  @media (max-width: $tablette) {
+    section.main {
+      top: 50px !important;
+    }
+  }
+
+  .forbidden {
+    cursor: not-allowed;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  multi-combo {
+    display: inline-block;
+    min-width: 250px;
+
+    .multi-combo-root-panel > ul {
+      padding: 5px;
+
+      > li {
+
+        &::before {
+          width: 15px;
+          height: 15px;
+          color: #fff;
+          border-radius: 2px;
+          background-color: $mediacentre-light-grey;
+          content: "✓";
+          padding: 2px 5px;
+          font-size: 10px;
+          margin-right: 5px;
+        }
+
+        &.selected {
+          color: $mediacentre-red;
+
+          &::before {
+            background-color: $mediacentre-red;
+          }
+        }
+      }
+    }
+  }
+
+  /*  a.button.cancel, button.cancel {
+      background: $mediacentre-red;
+      color: $white;
+
+      &:hover {
+        color: $mediacentre-red;
+        background: $white;
+      }
+    }*/
+
+  .textbooks, .favorites, .external {
+
+    > .title {
+      display: flex;
+      align-items: center;
+    }
+
+    h2 {
+      color: $mediacentre-grey;
+      font-size: 20px !important;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      @media (max-width: $tablette) {
+        font-size: 14px !important;
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+
+    /* favorite */
+    &-flex {
+      display: flex;
+
+      &-card {
+        display: grid;
+        /*        grid-template-columns: 1fr 1fr 1fr 1fr;*/
+        grid-column-gap: 3rem;
+        align-items: flex-start;
+        flex: 9;
+      }
+
+      &-plus {
+        text-align: center;
+        align-self: center;
+        flex: 1;
+        cursor: pointer;
+        color: $mediacentre-red;
+        text-decoration: underline;
+      }
+    }
+
+    &-emptyState {
+      display: flex;
+      padding: 2rem;
+
+      img {
+        width: 17%;
+      }
+
+      &-flex {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-left: 2rem;
+        padding-bottom: 3rem;
+
+        span {
+          color: $mediacentre-grey;
+
+          &:nth-child(1) {
+            padding-top: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .textbooks, .external {
+    > .title {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .textbooks-empty {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    color: $mediacentre-grey;
+
+    img {
+      height: 200px;
+    }
+  }
+
+  multi-combo {
+    button {
+      @media (max-width: $tablette) {
+        max-width: 100%;
+      }
+    }
+
+    .multi-combo-panel-opts button {
+      background-color: $mediacentre-red;
+
+      &:hover {
+        background-color: $mediacentre-dar-red;
+      }
+    }
+  }
+
+  .seeMore {
+    color: red;
+    text-decoration: underline;
+    margin-left: 15px;
+  }
+
+  .seeFilter {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5%;
+
+    &::before {
+      @include fonticon();
+      content: url(/mediacentre/public/img/icons/filter-variant.svg);
+      display: inline-block;
+      transform: scale(1.3);
+      vertical-align: top;
+      margin-right: 5px;
+
+    }
+  }
+
+  .horizontal-margin-four {
+    margin-left: 40px;
+    margin-right: 40px;
+    @media (max-width: $small-tablette) {
+      margin-left: 20px;
+    }
+  }
+
+  // Forms-list
+
+  .folder-info {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .table {
+    table-layout: fixed;
+    margin: 10px;
+  }
+
+  .toaster-right {
+    float: right;
+  }
+
+  i.dropbtn {
+    color: black;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  nav.vertical[side-nav].slide {
+    width: 160px;
+    padding: 0px 10px;
+    overflow: unset;
+  }
+
+  nav.vertical[side-nav] {
+    background-color: #F0F0F0;
+    border-radius: 2px;
+    border-left: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.26);
+  }
+
+  nav.vertical ul li a {
+    padding-left: 20px;
+  }
+
+  .heightNavBar {
+    height: 80px !important;
+  }
+
+  .sideNavMyForms {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #F0F0F0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    top: 52px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.26);
+    border-radius: 3px;
+  }
+
+  .sideNavMyForms .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+  }
+
+  .text-font {
+    font-weight: bolder;
+  }
+
+  .titleSideNav {
+    padding-left: 25px;
+  }
+
+  .tabs header {
+    margin-right: 0;
+  }
+
+  .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .filter-forms {
+    width: 97%;
+
+    .drop-down-block, .drop-down-block .drop-down-label {
+      margin-bottom: 0;
+    }
+
+    .checkbox {
+      background-color: lightgray;
+      margin-right: 0;
+    }
+
+    label.chip.checkbox.selected {
+      background-color: $accent;
+    }
+
+    i.arrow {
+      margin-top: 0;
+    }
+
+    i.arrow:before {
+      font-size: 14px;
+    }
+  }
+
+  .main-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+
+  .add-to-favorite {
+    color: $mediacentre-light-grey;
+    cursor: pointer;
+
+    &::before {
+      @include fonticon();
+      content: '\e9d9';
+      font-size: 24px;
+    }
+  }
+
+  .remove-to-favorite {
+    color: $mediacentre-light-grey;
+    cursor: pointer;
+
+    &::before {
+      @include fonticon();
+      content: '\e9d9';
+      font-size: 24px;
+      color: $mediacentre-yellow-star;
+    }
+  }
+
+  .copy-clipboard::before {
+    @include fonticon();
+    content: '\e84d';
+    font-size: 24px;
+  }
+
+  .copy-clipboard, .action {
+    color: $mediacentre-red;
+  }
+
+  .clipboard-tooltip {
+    position: absolute;
+    background-color: rgba(75, 75, 75, 1);
+    border-radius: 4px;
+    bottom: -35px;
+    left: 50%;
+    width: 60px;
+    margin-left: -30px;
+    line-height: 30px;
+    text-align: center;
+    color: $white;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  .title-prop {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  div.select-blocks-cross {
+    margin: 10px 0px
+  }
+
+  div.select-blocks-cross>div {
+    margin-right: 2px;
+    padding: 5px 10px;
+    padding-right: 30px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background-color: #e9ebef;
+    color: #8c939e;
+    transition: all 0.25s ease-in-out
+  }
+
+  div.select-blocks-cross>div {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold
+  }
+  div.select-blocks-cross>div.partial {
+    background-color: #e9ebef
+  }
+
+  .Dupliquer::before {
+    font-family: 'material-icons';
+    content: '\F18F';
+    font-size: 24px;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .signet-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .img_mini {
+    max-height: 300px;
+    margin: 25px;
+  }
+
+  .fab {
+    width: 45px;
+    height: 45px;
+    background-color: #ff8500;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+    cursor:pointer;
+    font-size: 35px;
+    line-height: 45px;
+    color: white;
+    text-align: center;
+
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 1;
+
+    transition: all 0.1s ease-in-out;
+  }
+
+  .fab:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.26);
+    transition : all 0.3s cubic-bezier(.25, .8, .25, 1)
+  }
+}

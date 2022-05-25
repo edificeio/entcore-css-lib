@@ -1,0 +1,126 @@
+.trombinoscope {
+
+  .access-button {
+    float: right;
+  }
+
+  .import-settings {
+    &-desc {
+      margin-right: 10px;
+    }
+  }
+
+  .file-import {
+      &-input {
+        margin: 10px;
+      }
+      &-button {
+        float: right;
+      }
+  }
+
+  &-reports {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      color: $vsco-dark-yellow;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+
+    .report-button {
+      width: fit-content;
+      margin-top: 10px;
+    }
+
+  }
+
+  &-failures {
+    display: flex;
+    flex-direction: column;
+
+    &-clear {
+      width: 250px;
+      margin: 0;
+    }
+
+    &-item {
+      display: flex;
+      margin-top: 15px;
+    }
+  }
+
+  .lightbox-report {
+    .content {
+      width: 1030px !important;
+      height: 750px;
+      font-family: "Courier New", serif;
+    }
+  }
+}
+
+.trombinoscope-students {
+
+  .title-back {
+    .left-open {
+      position: absolute;
+      margin-top: 4px;
+    }
+    h4 {
+      margin-left: 15px;
+    }
+  }
+
+  &-search {
+
+    display: flex;
+
+    ul.search-input-ul {
+      padding: 5px;
+      margin: 0;
+      font-weight: bold;
+
+      li {
+        display: inline;
+        margin: 0 5px;
+      }
+    }
+
+    .search-students {
+      margin-bottom: 10px;
+      width: 300px;
+      margin-right: 50px;
+    }
+
+    .search-groups {
+      width: 300px;
+    }
+  }
+
+  &-list {
+
+    .group-name {
+      margin: 10px;
+      font-weight: bold;
+      font-size: x-large;
+    }
+
+    .group-students {
+      display: grid;
+      grid-template-columns: repeat(6, 15%);
+      grid-column-gap: 25px;
+      grid-gap: 16px;
+      grid-auto-rows: 280px;
+
+      &-item {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+    }
+  }
+}

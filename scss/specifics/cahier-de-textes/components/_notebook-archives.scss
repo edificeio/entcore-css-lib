@@ -1,0 +1,23 @@
+.notebook-archives {
+
+  .svg-green {
+    color: $diary-darkgreen;
+    fill: $diary-darkgreen;
+  }
+
+  .archive-list {
+
+    .img-none {
+      max-width: 60%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .empty-list {
+      justify-content: start !important;
+      font-size: 16px;
+      color: $diary-grey;
+    }
+  }
+
+}

@@ -1,0 +1,154 @@
+i {
+  &.icon-spacing {
+    padding-right: 15px;
+    padding-left: 15px;
+    @media screen and (min-width: 800px) and (max-width: 1200px) {
+      padding-right: 0px;
+    }
+  }
+
+  &.xs-icon {
+    font-size: 10px;
+  }
+
+  &.sm-icon {
+    font-size: 16px;
+  }
+
+  &.md-icon {
+    font-size: 20px;
+    @media screen and (max-width: 500px) {
+      font-size: 14px;
+    }
+  }
+
+  &.lg-icon {
+    font-size: 24px;
+    @media screen and (max-width: 500px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 800px) and (max-width: 1200px) {
+      font-size: 16px;
+    }
+  }
+
+  &.hg-icon {
+    font-size: 40px;
+    @media screen and (max-width: 500px) {
+      font-size: 30px;
+    }
+  }
+
+  &.dot-circled {
+    margin: 3%;
+  }
+
+  &.dot-circled::before {
+    @include fonticon();
+    content: '\e845';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+    color: darkorange;
+    vertical-align: middle;
+  }
+
+  &.calendar-o::before {
+    @include fonticon();
+    content: '\e917';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+    color: darkorange;
+    vertical-align: middle;
+  }
+
+  &.clock::before {
+    @include fonticon();
+    content: '\f017';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+    color: darkorange;
+    vertical-align: middle;
+  }
+
+  &.info-circled-1::before {
+    @include fonticon();
+    content: '\e8d3';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+    color: darkorange;
+    vertical-align: middle;
+  }
+
+  &.cahier-de-textes::before {
+    @include fonticon();
+    content: '\e910';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+    color: darkorange;
+    vertical-align: middle;
+  }
+
+  &.modif::before {
+    @include fonticon();
+    content: '\e858';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+    margin-right: 5px;
+    color: dimgrey;
+    vertical-align: middle;
+  }
+
+  &.suppr::before {
+    @include fonticon();
+    content: '\e8cf';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+    margin-right: 5px;
+    color: dimgrey;
+    vertical-align: middle;
+  }
+
+  &.plus::before {
+    @include fonticon();
+    content: '\e85e';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+    color: white;
+    vertical-align: middle;
+  }
+}
+
+.phone {
+  height: 24px;
+}
+
+.studying {
+  flex: 1 1 0;
+  @media screen and (min-width: 800px) and (max-width: 1000px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 60%;
+  }
+}
+
+input:invalid+span:after {
+  position: absolute; content: '✖';
+  padding-left: 5px;
+  color: #8b0000;
+}
+
+input:valid+span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+  color: #009000;
+}

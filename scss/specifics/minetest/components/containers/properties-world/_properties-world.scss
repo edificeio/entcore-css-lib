@@ -1,0 +1,47 @@
+.minetestProperties {
+  .custom-cancel {
+    color: $minetest-orange;
+    background: $minetest-grey;
+    font-size: 14px;
+  }
+
+  .custom-cancel:hover {
+    background: $minetest-orange;
+    color: $minetest-white;
+    font-size: 14px;
+  }
+
+  .custom-button {
+    background: $minetest-orange;
+    color: $minetest-white;
+    font-size: 14px;
+  }
+
+  .custom-button:hover {
+    background-color: $minetest-dark-orange;
+    box-shadow: none;
+    color: $minetest-white;
+    font-size: 14px;
+  }
+
+  .medium-text {
+    button[disabled=disabled] {
+      color: $minetest-orange;
+      background: $minetest-grey;
+      font-size: 14px;
+    }
+
+    button[disabled=disabled]:hover {
+      background-color: $minetest-dark-orange;
+      box-shadow: none;
+      color: $minetest-white;
+      font-size: 14px;
+    }
+
+    button {
+      background: $minetest-orange;
+      color: $minetest-white;
+      font-size: 14px;
+    }
+  }
+}

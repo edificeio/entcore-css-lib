@@ -1,0 +1,10 @@
+// remove box-shadow orange
+
+.remove-box-shadow {
+  &:focus {
+    box-shadow: none !important;
+  }
+  input[type="text"]:focus {
+    box-shadow: none !important;
+  }
+}

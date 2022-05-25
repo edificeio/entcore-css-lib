@@ -1,0 +1,306 @@
+/*!
+ * Copyright (c) Région Hauts-de-France, Département de la Seine-et-Marne, CGI, 2016.
+ *     This file is part of OPEN ENT NG. OPEN ENT NG is a versatile ENT Project based on the JVM and ENT Core Project.
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU Affero General Public License as
+ *   published by the Free Software Foundation (version 3 of the License).
+ *   For the sake of explanation, any module that communicate over native
+ *   Web protocols, such as HTTP, with OPEN ENT NG is outside the scope of this
+ *   license and could be license under its own terms. This is merely considered
+ *   normal use of OPEN ENT NG, and does not fall under the heading of "covered work".
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
+
+ /**
+* Angular JS slider directive
+*
+* (c) Rafal Zajac <rzajac$gmail.com>
+* (c) Valentin Hervieu <valentin$hervi.eu>
+* http://github.com/angular-slider/angularjs-slider
+*
+* Licensed under the MIT license
+*/
+
+$handleActiveColor: $primary-dark;
+$handleHoverColor: $white;
+$labelTextColor: $grey;
+$handleBgColor: $primary;
+$handleInnerColor: $white;
+$handleDisabledColor: $disabled-color;
+$limitLabelTextColor: $labelTextColor;
+$barFillColor: $handleBgColor;
+$barDisabledFillColor: $disabled-color;
+$barNormalColor: $neutral-grey;
+
+body.vsco--global {
+
+  $ticksColor: $barNormalColor;
+  $selectedTicksColor: $barFillColor;
+  $ticksWidth: 10px;
+  $ticksHeight: 10px;
+  $ticksValuePosition: -30px;
+  $ticksLegendPosition: 24px;
+  $ticksValuePositionOnVertical: 24px;
+
+  $handleSize: 22px;
+  $handlePointerSize: 8px;
+  $bubblePadding: 1px 3px;
+  $barDimension: 4px;
+
+  $withLegendMargin: 40px;
+
+  @mixin rounded($radius: 2px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+  }
+
+  .rzslider {
+    display: inline-block;
+    position: relative;
+    height: $barDimension;
+    width: 100%;
+    margin: 10px 0 30px 5px !important;
+    vertical-align: middle;
+    user-select: none;
+
+    &.with-legend {
+      margin-bottom: $withLegendMargin;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      .rz-pointer {
+        cursor: not-allowed;
+        background-color: $handleDisabledColor;
+      }
+      .rz-draggable {
+        cursor: not-allowed;
+      }
+      .rz-selection {
+        background: $barDisabledFillColor;
+      }
+      .rz-tick {
+        cursor: not-allowed;
+        &.rz-selected {
+          background: $barDisabledFillColor;
+        }
+      }
+    }
+
+    span {
+      white-space: nowrap;
+      position: absolute;
+      display: inline-block;
+    }
+
+    .rz-base {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+
+    .rz-bar-wrapper {
+      left: 0;
+      box-sizing: border-box;
+      margin-top: calc($handleSize / -2);
+      padding-top: calc($handleSize / 2);
+      width: 100%;
+      height: $handleSize;
+      z-index: 1;
+    }
+
+    .rz-draggable {
+      cursor: move;
+    }
+
+    .rz-bar {
+      left: 0;
+      width: 100%;
+      height: $barDimension;
+      z-index: 1;
+      background: $barNormalColor;
+      @include rounded(calc($barDimension/2));
+    }
+
+    .rz-selection {
+      z-index: 2;
+      background: $barFillColor;
+      @include rounded(calc($barDimension/2));
+    }
+
+    .rz-pointer {
+      cursor: pointer;
+      width: $handleSize;
+      height: $handleSize;
+      top: calc(($handleSize/-2) + ($barDimension/-2));
+      background-color: $primary;
+      z-index: 3;
+      @include rounded(calc($handleSize/2));
+      @include box-shadow(rgba(0,0,0,0.26) 0 1px 3px);
+      //  -webkit-transition:all linear 0.15s;
+      //  -moz-transition:all linear 0.15s;
+      //  -o-transition:all linear 0.15s;
+      //  transition:all linear 0.15s;
+
+      //&:after {
+      //  content: '';
+      //  width: $handlePointerSize;
+      //  height: $handlePointerSize;
+      //  position: absolute;
+      //  top: $handleSize/2 - $handlePointerSize/2;
+      //  left: $handleSize/2 - $handlePointerSize/2;
+      //  @include rounded($handlePointerSize/2);
+      //  background: $handleInnerColor;
+      //}
+      //&:hover:after {
+      //  background-color: $handleHoverColor;
+      //}
+      &.rz-active {
+        z-index: 4;
+        &:after {
+          background-color: $handleActiveColor;
+        }
+      }
+    }
+
+    .rz-bubble {
+      cursor: default;
+      bottom: calc($handleSize/2);
+      padding: $bubblePadding;
+      color: $labelTextColor;
+      &.rz-limit {
+        color: $limitLabelTextColor;
+      }
+    }
+
+    .rz-ticks {
+      box-sizing: border-box;
+      width: 100%;
+      height: 0;
+      position: absolute;
+      left: 0;
+      top: calc(($ticksHeight - $barDimension) / -2);
+      margin: 0;
+      z-index: 1;
+      list-style: none;
+    }
+
+    .rz-ticks-values-under {
+      .rz-tick-value {
+        top: initial;
+        bottom: $ticksValuePosition - 2;
+      }
+    }
+
+    .rz-tick {
+      text-align: center;
+      cursor: pointer;
+      width: $ticksWidth;
+      height: $ticksHeight;
+      background: $ticksColor;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: calc($handleSize / 2 - $ticksWidth / 2); // for centering*padding:
+      padding: 0;
+      &.rz-selected {
+        background: $selectedTicksColor;
+      }
+    }
+
+    .rz-tick-value {
+      position: absolute;
+      top: $ticksValuePosition;
+      transform: translate(-50%, 0);
+    }
+
+    .rz-tick-legend {
+      position: absolute;
+      top: $ticksLegendPosition;
+      transform: translate(-50%, 0);
+      max-width: 50px;
+      white-space: normal;
+    }
+
+    &.rz-vertical {
+      position: relative;
+      width: $barDimension;
+      height: 100%;
+      margin: 0 20px;
+      padding: 0;
+      vertical-align: baseline;
+
+      .rz-base {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+      }
+
+      .rz-bar-wrapper {
+        top: auto;
+        left: 0;
+        margin: 0 0 0 calc($handleSize / -2);
+        padding: 0 0 0 calc($handleSize / 2);
+        height: 100%;
+        width: $handleSize;
+      }
+
+      .rz-bar {
+        bottom: 0;
+        left: auto;
+        width: $barDimension;
+        height: 100%;
+      }
+
+      .rz-pointer {
+        left: calc($handleSize/-2 + $barDimension/2) !important;
+        top: auto;
+        bottom: 0;
+      }
+
+      .rz-bubble {
+        left: calc($handleSize/2) !important;
+        margin-left: 3px;
+        bottom: 0;
+      }
+
+      .rz-ticks {
+        height: 100%;
+        width: 0;
+        left: calc($ticksHeight - $barDimension / -2);
+        top: 0;
+        z-index: 1;
+      }
+      .rz-tick {
+        vertical-align: middle;
+        margin-left: auto;
+        margin-top: calc($handleSize / 2 - $ticksWidth / 2); // for centering
+      }
+      .rz-tick-value {
+        left: $ticksValuePositionOnVertical;
+        top: initial;
+        transform: translate(0, -28%);
+      }
+      .rz-tick-legend {
+        top: initial;
+        right: $ticksLegendPosition;
+        transform: translate(0, -28%);
+        max-width: none;
+        white-space: nowrap;
+      }
+      .rz-ticks-values-under {
+        .rz-tick-value {
+          bottom: initial;
+          left: initial;
+          right: $ticksValuePositionOnVertical;
+        }
+      }
+    }
+  }
+}

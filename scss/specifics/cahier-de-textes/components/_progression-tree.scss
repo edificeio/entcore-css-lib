@@ -1,0 +1,255 @@
+.manage-progression {
+  h1, h3 {
+    color: $diary-black;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 26px;
+  }
+
+  .white-space {
+    width: 3%;
+  }
+
+  h3 {
+    padding: 0;
+    &.folder-title {
+      color: $diary-black;
+
+      .icon {
+        color: $diary-grey;
+      }
+    }
+  }
+
+}
+
+.item-no-wrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.justified-content-end {
+  justify-content: flex-end !important;
+}
+
+.progression-tree {
+  text-align: start !important;
+  justify-content: flex-start;
+  padding-top: 3%;
+
+
+  .folder-content {
+    width: 100%;
+
+    .opened {
+      color: $diary-darkgreen;
+
+      &:hover {
+        color: rgba($diary-darkgreen, 0.7);
+      }
+    }
+
+    .folder-progressions.lvl-parents-hovers {
+      padding: 2px;
+      border: rgba($diary-darkgreen, 0.7) solid;
+    }
+
+  }
+
+  .folder, .session {
+    cursor: pointer;
+  }
+
+  .selected-item {
+    color: $diary-darkgreen;
+
+    &:hover {
+      color: rgba($diary-darkgreen, 0.7);
+    }
+  }
+
+  .folder {
+    color: $diary-darkgreen;
+
+    &:hover {
+      color: rgba($diary-darkgreen, 0.7);
+    }
+  }
+
+
+  @for $i from 0 through 6 {
+    .include-folders_#{$i} {
+      padding-left: calc(#{$i} * 20px);
+    }
+  }
+
+  .include-folders {
+    padding-left: calc(var(--deep-step) * 20px);
+  }
+
+  .first-item {
+    font-weight: bold;
+  }
+
+  .session-box {
+    box-shadow: 0px 2px 4px $diary-light-grey;
+    margin-bottom: 7px;
+    margin-top: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+
+
+    &:hover {
+      background-color: $diary-green;
+    }
+
+    .work {
+      background-color: $diary-darkorange;
+      color: $diary-white;
+      fill: $diary-white;
+      display: flex;
+      justify-content: center;
+    }
+
+    .no-work {
+      background-color: $diary-light-grey;
+      color: $diary-white;
+      fill: $diary-white;
+      display: flex;
+      justify-content: center;
+    }
+
+    .no-work {
+      background-color: $diary-light-grey;
+      color: $white;
+      fill: $white;
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
+
+}
+
+.side-bar-progression {
+  border-left: 15px solid $diary-darkgreen;
+  background-color: $diary-white;
+  border-radius: 10px;
+  padding-left: 5px;
+  height: max-content;
+  max-height: 65vh;
+  overflow: auto;
+  margin-top: 10px;
+
+  input {
+    width: 90%;
+  }
+
+}
+
+.progression-container {
+  background-color: $diary-white;
+  padding-left: 5px;
+  height: max-content;
+  max-height: 65vh;
+  overflow: auto;
+}
+
+.progression-content {
+  display: flex;
+}
+
+.create-folder-button {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.create-progression-button {
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
+
+  button[disabled=disabled] {
+    cursor: default;
+    background-color: rgba($diary-darkgreen, 0.3);
+    color: $diary-white;
+    margin-bottom: 0;
+  }
+}
+
+.folders-view {
+  border-bottom: 1px solid $diary-grey;
+  padding-bottom: 10px;
+
+  .flex-card {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 20px $diary-green;
+    }
+
+    &.sub-item-selected {
+      border: 3px solid $diary-darkgreen;
+      color: $diary-darkgreen;
+
+      .flex-title {
+        background-color: $diary-darkgreen;
+        border-radius: 0;
+        border-bottom: 1px solid $diary-darkgreen;
+        border-right: 1px solid $diary-darkgreen;
+      }
+    }
+  }
+}
+
+.progression-table {
+  width: 70%;
+
+  .flex-table {
+    margin-top: 15px;
+  }
+
+  .work_length {
+    background-color: $diary-darkorange;
+    font-size: 25px;
+    color: $white;
+    fill: $white;
+    text-align: center !important;
+
+    .work_full {
+      justify-content: center;
+      align-items: center;
+      box-shadow: none !important;
+    }
+  }
+
+  .work_empty {
+    background-color: rgba($diary-grey, 0.4);
+  }
+
+  .flex-head {
+    .title {
+      justify-content: start !important;
+    }
+  }
+
+  .flex-content {
+    .title {
+      justify-content: start !important;
+      color: $diary-darkgreen;
+
+      &:hover {
+        color: $diary-darkengreen;
+      }
+    }
+  }
+}
+
+.justified-button {
+  justify-content: center !important;
+}

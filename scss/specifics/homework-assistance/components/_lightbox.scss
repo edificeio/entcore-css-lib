@@ -1,0 +1,34 @@
+lightbox {
+  .content {
+    @media screen and (max-width: 800px) {
+      min-height: 10px !important;
+    }
+  }
+
+  .flex-lightbox {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+
+    .flex-column {
+      margin-bottom: 2%;
+    }
+  }
+
+  .dateSized {
+    width : 300px;
+    margin-bottom: 5px;
+  }
+
+  .stick-right {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,234 @@
+.light-orange{
+  background: $edt-light-orange;
+  color: $edt-white;
+}
+
+.solid-orange{
+  background: $edt-solid-orange;
+  color: $edt-white;
+}
+
+.spiro-blue{
+  background: $edt-spiro-blue;
+  color: $edt-white;
+}
+
+.honey-orange{
+  background: $edt-honey-orange;
+  color: $edt-white;
+}
+
+.garden-blue{
+  background: $edt-garden-blue;
+  color: $edt-white;
+}
+
+.light-grey{
+  background: $edt-light-grey;
+  color: $edt-white;
+}
+
+.lighter-grey{
+  background: $edt-lighter-grey !important;
+  color: $edt-black !important;
+}
+
+.sky-blue{
+  background: $edt-sky-blue;
+  color: $edt-white;
+}
+
+.keppel-blue{
+  background: $edt-keppel-blue;
+  color: $edt-white;
+}
+
+.marine-black{
+  background: $edt-marine-black;
+  color: $edt-white;
+}
+
+.fuchsia{
+  background: $edt-fuchsia;
+  color: $edt-white;
+}
+
+.indigo{
+  background: $edt-indigo;
+  color: $edt-white;
+}
+
+.peach-orange{
+  background: $edt-peach-orange;
+  color: $edt-white;
+}
+
+.light-purple{
+  background: $edt-light-purple;
+  color: $edt-white;
+}
+
+.magenta{
+  background: $edt-magenta;
+  color: $edt-white;
+}
+
+.dark-blue{
+  background: $edt-darker-blue;
+  color: $edt-white;
+}
+
+.pink{
+  background: $edt-pink;
+  color: $edt-white;
+}
+
+.solid-purple{
+  background: $edt-solid-purple;
+  color: $edt-white;
+}
+
+.light-orange-lighter{
+  background: $edt-light-orange-lighter;
+  color: $edt-white;
+}
+
+.solid-orange-lighter{
+  background: $edt-solid-orange-lighter;
+  color: $edt-white;
+}
+
+.spiro-blue-lighter{
+  background: $edt-spiro-blue-lighter;
+  color: $edt-white;
+}
+
+.garden-blue-lighter{
+  background: $edt-garden-blue-lighter;
+  color: $edt-white;
+}
+
+.sky-blue-lighter{
+  background: $edt-sky-blue-lighter;
+  color: $edt-white;
+}
+
+.keppel-blue-lighter{
+  background: $edt-keppel-blue-lighter;
+  color: $edt-white;
+}
+
+.marine-black-lighter{
+  background: $edt-marine-black-lighter;
+  color: $edt-white;
+}
+
+.fuchsia-lighter{
+  background: $edt-fuchsia-lighter;
+  color: $edt-white;
+}
+
+.indigo-lighter{
+  background: $edt-indigo-lighter;
+  color: $edt-white;
+}
+
+.peach-orange-lighter{
+  background: $edt-peach-orange-lighter;
+  color: $edt-white;
+}
+
+.light-purple-lighter{
+  background: $edt-light-purple-lighter;
+  color: $edt-white;
+}
+
+.magenta-lighter{
+  background: $edt-magenta-lighter;
+  color: $edt-white;
+}
+
+.dark-blue-lighter{
+  background: $edt-darker-blue-lighter;
+  color: $edt-white;
+}
+
+.pink-lighter{
+  background: $edt-pink-lighter;
+  color: $edt-white;
+}
+
+.solid-purple-lighter{
+  background: $edt-solid-purple-lighter;
+  color: $edt-white;
+}
+
+.solid-black{
+  background: $edt-black;
+  color: $edt-white;
+}
+
+.exceptionnal{
+  background: $edt-exceptionnal;
+  color: $edt-white;
+}
+
+.schedule-item-content.selected{
+  opacity: 0.33;
+}
+
+.schedule-item-content.cantDelete{
+  color: #aaa  !important;
+  background: #555  !important;
+  border-color: #000;
+  border-width: 1px;
+}
+
+.schedule-item-content {
+  padding: 3px !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  &-class-room-label {
+    display: flex;
+
+    .course-groups {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .course-room {
+      flex: auto;
+    }
+
+    .course-tag {
+      max-width: 40%;
+      float: right;
+      margin-right: 10px;
+      font-size: 12pt;
+      text-transform: uppercase;
+      text-align: end;
+
+      &-item {
+        display: flex;
+        flex-direction: row-reverse;
+
+        &-abbreviation {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+.past{
+  cursor : default !important;
+}

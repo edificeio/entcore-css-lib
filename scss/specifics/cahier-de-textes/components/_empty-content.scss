@@ -1,0 +1,49 @@
+.empty-content {
+  margin: 0 auto;
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description {
+    height: 300px;
+    font-size: 18px;
+    color: $diary-middle-grey;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      height: auto;
+      padding: 24px 0;
+    }
+  }
+}
+
+.bar {
+  &:first-child {
+    margin-right: 20px;
+  }
+
+  &:last-child {
+    margin-left: 20px;
+  }
+}
+
+.orange-bar {
+  display: block;
+  width: 50px;
+  height: 10px;
+  background: $diary-darkorange;
+  border-radius: 5px;
+}
+
+.green-bar {
+  display: block;
+  width: 50px;
+  height: 10px;
+  background: $diary-darkgreen;
+  border-radius: 5px;
+}

@@ -1,0 +1,59 @@
+.progression-item-scrollable{
+  background-color: $diary-blue-dark;
+  color: $white;
+  transition: background 250ms ease;
+  font-size: 12px;
+  padding: 2px;
+  border : 1px white solid;
+  transform: translate(0, 0);// Allow to erase the corner during drag
+  text-align: center;
+  z-index: 10;
+}
+
+.progression-list{
+  margin:0;
+  max-height: 200px;
+  overflow:auto;
+}
+
+.progression-search {
+  margin :1px;
+
+  &:focus {
+    border-bottom: 2px $diary-darkgreen solid;
+  }
+}
+/*.progression-settings:before{
+  @include fonticon();
+  content:'\e854';
+}*/
+
+.sidebar {
+
+  .ellipsis {
+    margin-right: 30px;
+  }
+
+  .plus-input::after {
+    content: "\e823";
+    position: absolute;
+    top: -9px;
+    right: 0px;
+  }
+
+  > .filter__input--icon {
+    position: relative;
+
+    &:after {
+      content: "\e8d0";
+      font-family: "generic-icons";
+      position: absolute;
+      top: 0;
+      right: 10px;
+      color: #888;
+    }
+    > input[type="text"] {
+      width: 100%;
+    }
+  }
+}

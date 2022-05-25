@@ -1,0 +1,90 @@
+.date-picker, .time-picker {
+  position: relative;
+  line-height: 30px;
+
+  &:before {
+    @include fonticon();
+    color: $homeworkassistance-main;
+    z-index: 1;
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  input[type="text"] {
+    width: 80px !important;
+    margin-bottom: 0;
+    box-sizing: border-box;
+  }
+
+  input[type="text"], input[type="time"] {
+    background-color: $homeworkassistance-white;
+    text-align: center;
+    height: 30px;
+    border: none;
+    box-shadow: none;
+    padding: 0 5px 0 0;
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.datepicker {
+  display: none;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+
+  table {
+    thead {
+      tr th {
+        color: $homeworkassistance-black;
+
+        &:hover {
+          background: $homeworkassistance-main !important;
+        }
+      }
+    }
+
+    td.day:hover {
+      background: #F0F0F0;
+      cursor: pointer;
+    }
+
+    tr td:hover {
+      background: #78daff !important;
+    }
+
+    tr .active {
+      background: $homeworkassistance-main;
+    }
+  }
+}
+
+.date-picker {
+  background-color: $homeworkassistance-white;
+  display: inline-block;
+  padding-left: 10px;
+  border: none;
+  border-bottom: solid 1px #aaa;
+
+  &:before {
+    content: "\e917";
+    border-bottom: none;
+  }
+}
+
+.time-picker {
+  text-indent: 10px;
+
+  &:before {
+    content: "\f017";
+    margin-right: 5px;
+  }
+}
+

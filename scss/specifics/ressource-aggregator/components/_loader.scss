@@ -1,0 +1,78 @@
+.loader {
+  animation: loader 1s cubic-bezier(.41, .25, .32, .83) infinite;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+  }
+
+  .loader-bubble {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+  }
+}
+
+.loaders {
+  display: flex;
+
+  .loader, .source-check {
+    width: 40px;
+    text-align: center;
+  }
+
+  .source-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: auto;
+    height: 35px;
+  }
+
+  .fr-openent-mediacentre-source-GAR {
+    .loader-bubble {
+      background: $mediacentre-gar;
+    }
+
+    .source-check {
+      color: $mediacentre-gar;
+    }
+  }
+
+  .fr-openent-mediacentre-source-Moodle {
+    .loader-bubble {
+      background: $mediacentre-moodle;
+    }
+
+    .source-check {
+      color: $mediacentre-moodle;
+    }
+  }
+
+  .fr-openent-mediacentre-source-PMB {
+    .loader-bubble {
+      background: $mediacentre-pmb;
+    }
+
+    .source-check {
+      color: $mediacentre-pmb;
+    }
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}

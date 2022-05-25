@@ -1,0 +1,33 @@
+.parameter {
+  display: flex;
+  flex-direction: column;
+  &-title {
+
+  }
+  &-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-table {
+    thead {
+      tr {
+        th {
+          text-align: center;
+        }
+      }
+    }
+    &-body {
+      tr {
+        th:nth-child(3),
+        th:nth-child(4) {
+          button {
+             display: inline-block!important;
+             float: none;
+             margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+

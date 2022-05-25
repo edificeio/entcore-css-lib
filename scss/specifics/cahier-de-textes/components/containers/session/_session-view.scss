@@ -1,0 +1,24 @@
+.session-view {
+  @include mobile {
+    padding: 8px;
+  }
+
+  &-description {
+    &-title {
+      color: $diary-darkgreen!important;
+      @include mobile {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.session-read-only {
+  @include mobile {
+    margin: 8px;
+  }
+  &-title {
+    color: $diary-darkgreen
+  }
+}

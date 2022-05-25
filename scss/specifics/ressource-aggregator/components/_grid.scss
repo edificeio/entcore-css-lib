@@ -1,0 +1,50 @@
+.grid, .textbooks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  padding: 1rem;
+  align-items: flex-start;
+}
+
+.search-grid, .favorites-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-column-gap: 3rem;
+  grid-row-gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.external-flex-card {
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+}
+
+@media (max-width: 1350px) {
+  .textbooks-grid, .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .external-flex-card {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .favorites-grid, .search-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .textbooks-grid, .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .external-flex-card {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: $tablette) {
+  .textbooks-grid, .grid {
+    grid-template-columns: 1fr;
+  }
+  .external-flex-card {
+    grid-template-columns: 1fr !important;
+  }
+}

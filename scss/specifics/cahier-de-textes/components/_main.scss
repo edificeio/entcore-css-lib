@@ -1,0 +1,543 @@
+body {
+  width: auto !important; /* Firefox will set width as auto */
+}
+
+.small {
+  font-size: 0.9em;
+}
+
+.normal {
+  font-size: 1em;
+}
+
+.large {
+  font-size: 1.1em;
+}
+
+.text-xl {
+  font-size: 1.5em;
+}
+
+.float-left {
+  float: left;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.margin10v {
+  margin: 10px 0;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.cursorDefault {
+  cursor: default;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.min-height-textarea {
+  min-height: 60px;
+}
+
+input[type="number"] {
+  min-width: 35px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+section.main {
+  margin-left: 63px;
+  @include mobile {
+    margin-left: 0;
+    padding: 0!important;
+  }
+}
+
+.remove-margin-left {
+  margin-left: -63px;
+}
+
+.schedule .days .day .timeslots .timeslot {
+  cursor: default;
+}
+
+.schedule .days .day.single {
+  width: 100%
+}
+
+.schedule .schedule-month {
+  padding-top: 0;
+}
+
+tr th label input[type=checkbox]:checked + span::before {
+  border-color: $white;
+}
+
+h1 {
+  flex-shrink: 0;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 40px;
+  font-size: 36px;
+  color: $black;
+}
+
+.list-search {
+  text-align: start !important;
+  min-height: 15px !important;
+  height: 15px;
+}
+
+.title-area-simple {
+  display: flex;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.title-area-complete {
+  display: flex;
+  align-items: center;
+
+  img {
+    max-height: 56px;
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 36px;
+    a {
+      color: $black;
+    }
+  }
+}
+
+.close {
+  cursor: pointer;
+}
+
+
+.sidebar {
+  margin-right: 20px;
+  @include mobile {
+    margin-right: 0;
+  }
+
+  switch {
+    section .row {
+      margin: 5px 0;
+    }
+
+    .switch .tick {
+      background: $diary-green;
+
+      &:before {
+        background: $diary-darkgreen;
+      }
+    }
+  }
+}
+
+
+.toggle-buttons {
+  background-color: $diary-darkgreen;
+
+  button {
+    &:hover {
+      color: $diary-darkgreen;
+      background: $white;
+    }
+
+    &:disabled {
+      cursor: default;
+      color: rgba($white, 0.4);
+
+      &:hover {
+        background-color: $diary-darkgreen;
+        color: rgba($white, 0.4);
+      }
+    }
+  }
+
+  /* use display to cancel 'hide' class */
+  &.display {
+    max-height: 150px;
+  }
+}
+
+.main-content {
+  .margin-container {
+    margin-top: -40px;
+  }
+  .schedule-month {
+    padding-top: 0;
+  }
+}
+
+.sidebar-content, .main-content {
+  padding-top: 20px;
+}
+
+.help {
+  content: '\e835';
+  font-family: "generic-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+
+.help-color-bloc {
+  width: 40px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  border: 1px solid $black;
+}
+
+i.rack2::before {
+  content: "\e80d";
+  font-family: "generic-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+
+i.cahier-textes2::before {
+  content: "\e86f";
+  font-family: "generic-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+
+.color-bloc {
+  width: 40px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  border: 1px solid $black;
+}
+
+.show-i-hover:hover {
+  i {
+    display: initial;
+  }
+}
+
+.show-i-hover {
+  i {
+    display: none;
+  }
+}
+
+.edit-visa-icons {
+  font-size: 20px;
+  color: #888;
+}
+
+.visa-being-updated {
+  background-color: rgba(255, 133, 0, 0.3803921569);
+}
+
+.diary-date-picker {
+  height: 30px;
+  line-height: 25px;
+  padding: 0!important;
+
+  input {
+    border-bottom: none;
+    box-shadow: none;
+
+    &:focus {
+      border-bottom: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.date-picker-sm {
+  width: 80px;
+}
+
+.week-switcher .date-picker-icon {
+  z-index: 1;
+}
+
+
+.tab-button {
+  display: inline-block;
+  text-align: right;
+  border: 2px solid $diary-blue;
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
+
+  &.selected {
+    background: $diary-blue !important;
+    color: $white;
+  }
+}
+
+.visa-diary {
+  .read-only-description {
+    max-height: none;
+  }
+}
+
+.read-only-description {
+  min-height: max-content;
+  max-height: max-content;
+  overflow-y: auto;
+  height: auto;
+  padding: 10px;
+  background: $white;
+  border: 1px dashed $diary-blue !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.workloadDay {
+  padding: 3px 8px;
+  font-size: 16px;
+  border: solid 1px $diary-grey;
+  color: #333;
+}
+
+.workloadDay.red {
+  background-color: tomato;
+}
+
+.workloadDay.yellow {
+  background-color: khaki;
+}
+
+.workloadDay.green {
+  background-color: limegreen;
+}
+
+.homework-progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.inside-homework-view {
+    flex-direction: row-reverse;
+    position: absolute;
+    right: 40px;
+    top: 6px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: $white;
+    border: 1px solid $diary-grey;
+    width: 135px;
+  }
+}
+
+.icon-upload-cloud:before {
+  content: '\e848';
+  font-family: "generic-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+
+.margin-bottom-7 {
+  margin-bottom: 7px;
+}
+
+span.no-style {
+  font-family: "Roboto";
+}
+
+.tooltip {
+  z-index: 90000;
+}
+
+.datepicker {
+  display: none;
+}
+
+// New version of button in calendar view
+.calendar-button {
+  border: none;
+  box-shadow: none;
+  background: $diary-darkgreen;
+
+  &:hover {
+    background-color: $diary-darkengreen;
+  }
+}
+
+// New version of search bar for Teacher and Class filter
+.search-input {
+  background: $white;
+  padding: 7px;
+  vertical-align: middle;
+  width: 100%;
+
+  input {
+    margin: auto;
+  }
+
+  &.small {
+    margin-right: 15px;
+
+    input {
+      max-width: 75px;
+    }
+  }
+}
+.title-buttons {
+  justify-content: flex-end !important;
+  .title-button {
+    margin-bottom: 0;
+  }
+}
+
+ul.search-input-ul {
+  padding: 5px;
+  margin: 0;
+  font-weight: bold;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+label.checkbox {
+  input[type=checkbox] {
+    + span:before {
+      @include fonticon();
+      border: 2px solid $diary-darkgreen;
+      border-radius: 3px;
+      color: $white;
+      height: 20px;
+      width: 20px;
+      margin-top: 0;
+      font-size: 12px;
+      text-align: center;
+      line-height: 16px;
+    }
+
+    &:checked + span::before {
+      content: "\e871";
+      transform: rotate(0deg);
+      border-color: $diary-darkgreen;
+      background-color: $diary-darkgreen;
+    }
+  }
+
+  &.half input[type="checkbox"] + span:before {
+    font-family: 'material-icons';
+    content: "\F374";
+    transform: rotate(0deg);
+    border-color: $diary-darkgreen;
+    background-color: $diary-darkgreen;
+  }
+}
+
+
+.multi-combo-root-button {
+  color: $diary-black;
+}
+
+#group-list-teacher {
+  > button {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .multi-combo-root-panel {
+    text-align: left;
+  }
+}
+
+.autocomplete-audiences {
+  flex-direction: column;
+}
+
+.autocomplete-selected {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .search-input-ul {
+    padding: 4px;
+  }
+
+}
+
+.custom-flex-table {
+  .custom-flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .custom-flex-col {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .custom-flex-head {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+    color: rgba($diary-grey, 0.7);
+  }
+
+  .padding-cell {
+    padding: 10px;
+  }
+
+  .centered {
+    justify-content: center;
+    text-align: center;
+  }
+  .text-centered {
+    text-align: center;
+  }
+
+  .bot-border {
+    border-bottom: 1px solid #ddd;
+  }
+  .right-border {
+    border-right: 1px solid #ddd;
+  }
+
+  .flex-text-left {
+    text-align: start;
+  }
+  .flex-text-right {
+    text-align: end;
+  }
+  .justified-content-center {
+    justify-content: center;
+  }
+}

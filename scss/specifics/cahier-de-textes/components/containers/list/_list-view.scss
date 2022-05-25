@@ -1,0 +1,261 @@
+.list-view {
+
+  .pedagogic-day {
+    border: 1px solid $black;
+    border-radius: 10px;
+    background: $white;
+
+    &.selected {
+      background: gray;
+      fill: gray;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  ul li i.icon {
+    font-size: 50px;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  i.rack2::before {
+    content: "\e80d";
+    font-family: "generic-icons";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+  }
+
+  i.session::before {
+    content: "\e86f";
+    font-family: "generic-icons";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+    color: $white;
+  }
+
+  i.cahier-textes2::before {
+    content: "\e86f";
+    font-family: "generic-icons";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: none;
+  }
+
+  .border-black {
+    border: 2px solid $black;
+  }
+
+  .list-view-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    > i {
+      z-index: 999;
+      position: absolute;
+      right: 10px;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    .right-side {
+      border-left: 1px solid #eeeeee;
+      margin-left: 5px;
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+
+  .timeline-story {
+    .list-view-item {
+      display: block;
+    }
+
+    .isDone {
+      color: #46bfaf !important;
+    }
+
+    .title-lesson {
+      text-transform: lowercase;
+
+      &:first-letter {
+        text-transform: uppercase;
+      }
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .hasDescription {
+      cursor: pointer;
+    }
+
+    .date-field {
+      top: 0;
+      line-height: 20px;
+
+      .label {
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 500;
+        color: #666;
+        padding-right: 5px;
+      }
+    }
+
+    .round {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      transition: all 200ms ease;
+      top: 0;
+      left: 50%;
+      margin-left: -13px;
+      margin-top: 0;
+      border: solid 3px #F9F9F9;
+      text-align: center;
+
+      &.green-text {
+        background: $diary-darkgreen;
+      }
+
+      &.yellow-text {
+        background: #ffd900;
+      }
+
+      &.red-text {
+        background: #ff2011;
+      }
+    }
+
+    .white-text {
+      color: $white;
+    }
+
+    &::before {
+      background-color: #bbb;
+      content: ' ';
+      position: absolute;
+      top: 12px;
+      width: 2px;
+      height: 100%;
+      left: 12.3%;
+    }
+
+    .date-label {
+      position: relative;
+      top: 0;
+    }
+
+    .event-row {
+      margin-top: 9px;
+    }
+
+    .event-row .date-field {
+      height: 54px;
+      width: 12.666%;
+    }
+
+    .event-row .event {
+      height: 54px;
+      width: 2% !important;
+      margin-right: 1%;
+      @include mobile {
+        width: 3% !important;
+        margin-right: 3%;
+        height: 1px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .timeline-story::before {
+      left: 13.444% !important;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .timeline-story::before {
+      left: 1% !important;
+    }
+  }
+
+  @media screen and (max-width: $tablette) {
+    .timeline-story {
+      .date-label {
+        display: block;
+      }
+    }
+  }
+
+  .hoursInView {
+    color: #666666;
+    padding-left: 5px;
+    @include mobile {
+      padding-left: 0;
+    }
+  }
+
+  .see-right {
+    text-decoration: underline;
+    position: absolute;
+    right: 18px;
+  }
+
+  .i-icon-right {
+    position: absolute;
+    right: 10px;
+  }
+}
+
+.list-view-date-picker {
+  @include mobile {
+    padding: 8px;
+  }
+}
+
+.pedagogic-item-article {
+  @include mobile {
+    margin: 16px;
+    padding: 12px;
+  }
+
+  &-title {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-content {
+    &-body {
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-homeworkState {
+        @include mobile {
+          display: flex;
+        }
+      }
+    }
+  }
+}

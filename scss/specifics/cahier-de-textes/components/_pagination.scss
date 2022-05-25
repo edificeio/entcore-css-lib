@@ -1,0 +1,61 @@
+$width-size: 24px;
+
+$font-size-item: 16px;
+$font-size-arrow: 24px;
+
+$line-heigh-size: 42px;
+
+
+.pagination {
+  font-size: 0;
+  text-align: center;
+
+  &-item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: $font-size-item;
+    font-weight: bold;
+    margin: 0 2px;
+
+    &.arrow > .pagination-item-link {
+      font-size: $font-size-arrow;
+      color: $diary-black;
+
+      &:hover {
+        background-color: $diary-darkgreen;
+        border-color: $diary-darkgreen;
+        color: $diary-white;
+      }
+    }
+
+    &-link {
+      position: relative;
+      display: block;
+      text-align: center;
+      min-width: $width-size;
+      line-height: $line-heigh-size;
+      color: $diary-middle-grey;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $diary-darkgreen;
+        border-color: $diary-darkgreen;
+        color: $diary-white;
+      }
+    }
+
+    &.active > .pagination-item-link {
+      background-color: $diary-darkgreen;
+      border-color: $diary-darkgreen;
+      color: $diary-white;
+    }
+
+    &:nth-child(3), &:nth-child(5) {
+      pointer-events: none;
+    }
+  }
+}
+
+.pagination-item:empty::before {
+  display: none;
+}

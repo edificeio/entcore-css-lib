@@ -1,0 +1,41 @@
+.homework-view {
+
+  @include mobile {
+    padding: 8px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    &-title {
+      color: $diary-darkgreen;
+      @include mobile {
+        display: flex;
+        font-size: 2vh;
+        line-height: 24px;
+      }
+      &-icon {
+        color: $diary-darkgreen;
+      }
+    }
+
+    &-tick {
+      @include mobile {
+        display: flex;
+        width: fit-content;
+      }
+    }
+
+    &-estimated {
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.homework-view-button {
+  @include mobile {
+    margin: 8px;
+  }
+}

@@ -1,0 +1,17 @@
+body.mindmap{
+    div.mindplot {
+        border : 1px solid #ddd;
+    }
+
+    div#toolbar {
+    	background-color: #f0f0f0;
+    	background-image: none;
+    	border-color: #f0f0f0;
+    	border-right: 2px solid #f0f0f0;
+    }
+
+    img.mindmap-icon-patch {
+        width: 97px !important;
+        height: 95px !important;
+    }
+}

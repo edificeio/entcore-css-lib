@@ -1,0 +1,664 @@
+.course-article{
+  width: 48%;
+  height: auto;
+  @media screen and (min-width: 800px) {
+    margin-right: 1.296%;
+  }
+  @media screen and (max-width: 800px) {
+    margin-right: 1%;
+  }
+}
+
+.folder-article{
+  width: 48%;
+  height: auto;
+  padding: 15px;
+  @media screen and (min-width: 800px) {
+    margin-right: 1.296%;
+  }
+  @media screen and (max-width: 800px) {
+    margin-right: 1%;
+  }
+}
+
+.folderCheckbox{
+  right: -15px;
+  position: absolute;
+}
+
+.folderCheckboxList{
+  top: -3px;
+  right: 0px;
+}
+
+.summary-list{
+  border-bottom-right-radius: 6%;
+  border-bottom-left-radius: 6%;
+  height: 100px;
+}
+
+.summary-color{
+    color: #757575;
+}
+
+.colorfolder{
+  color: #ff8500;
+}
+
+.image{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 70px;
+   height: 70px;
+}
+
+.style-bord-with-over-effect{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+  border-radius: 2px;
+}
+
+.style-bord-with-over-effect:hover{
+  box-shadow: 0 6px 18px rgba(0,0,0,0.26);
+  transition : all 0.3s cubic-bezier(.25, .8, .25, 1)
+}
+
+.style-bord-without-over-effect{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+  border-radius: 2px;
+}
+
+.image-dashboard{
+  display: block;
+  object-fit: cover;
+}
+
+@mixin pictureSize() {
+  width: 90px;
+}
+
+.activityRecentPicture{
+  width:75px;
+  padding-left: 10px;
+  background-color: #ff8500;
+}
+
+.activityToComePicture{
+  @media screen and (min-width: 800px) {
+    width:125px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 100px;
+  }
+  padding-left: 10px;
+  background-color: #ff8500;
+  cursor: auto;
+}
+
+.activityToDoSmallWidthPicture{
+  width:10px;
+  height: 130px;
+  padding-left:10px;
+  background-color: #ff8500;
+}
+
+.courseToDoSmallWidthPicture{
+  width:10px;
+  height: 130px;
+  padding-left:10px;
+  background-color: $primary;
+}
+
+.courseRecentPicture{
+  width:75px;
+  padding-left: 10px;
+  background-color: $primary;
+}
+
+.courseToComePicture{
+  @media screen and (min-width: 800px) {
+    width:125px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 100px;
+  }
+  padding-left: 10px;
+  background-color: $primary;
+  cursor: auto;
+}
+
+.activityToDoPicture{
+  @media screen and (min-width: 800px) {
+    width: 140px;
+    height: 130px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 100px;
+    height: 90px;
+  }
+  padding-left: 10px;
+  background-color: #ff8500;
+}
+
+.courseToDoPicture{
+  @media screen and (min-width: 800px) {
+    width: 140px;
+    height: 130px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 100px;
+    height: 90px;
+  }
+  padding-left: 10px;
+  background-color: $primary;
+}
+
+.activityPictureBackground{
+  @include pictureSize();
+  background-color: #ff8500;
+  padding-left: 10px;
+}
+
+.activitySharedPicture{
+  width: 110px;
+  padding-left: 10px;
+  background-color: #ff8500;
+}
+
+.coursePictureBackground{
+  @include pictureSize();
+  background-color: $primary;
+  padding-left: 10px;
+}
+
+.courseSharedPicture{
+  width: 110px;
+  padding-left: 10px;
+  background-color: $primary;
+}
+
+.recentPicture{
+  width:75px;
+  height: 55px;
+}
+
+.NoImageMine{
+  width:70px;
+  height:80px;
+}
+
+.NoImageShared{
+  width:90px;
+  height: 100px;
+}
+
+.NoImageToDo{
+  @media screen and (min-width: 800px) {
+    width:120px;
+    height: 130px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 80px;
+    height: 90px;
+  }
+}
+
+.NoImageToCome{
+  @media screen and (min-width: 800px) {
+    width: 105px;
+    height: 115px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 80px;
+    height: 90px;
+  }
+}
+
+.toDoPicture{
+  @media screen and (min-width: 800px) {
+    width: 130px;
+    height: 130px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.toComePicture{
+  @media screen and (min-width: 800px) {
+    width: 115px;
+    height: 115px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 90px;
+    height: 90px;
+  }
+
+}
+
+.defaultPicture{
+  width: 80px;
+  height: 80px;
+}
+
+.sharedPicture{
+  width: 100px;
+  height: 100px;
+}
+
+.NoImagePicture{
+  width: 55px;
+  height: 55px;
+}
+
+i.sort-desc::before {
+  content: "\e925";
+  font-family:"generic-icons";
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background-image:none;
+  font-size: 28px;
+}
+
+.icon-play::before {
+  content: '\e85d';
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background-image:none;
+  font-size: 16px;
+}
+
+.folderIcon::before {
+  content: '\e81b';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  color: #aaa;
+}
+
+i.eye-slash::before {
+  content: '\e904';
+}
+
+i.eye-open::before {
+  content: '\e873';
+}
+
+i.favorite::before {
+  content: '\e9d9';
+}
+
+i.unFavorite::before {
+  content: '\e9d7';
+}
+
+i.share {
+  margin-right: 3px;
+  font-size: 17px;
+}
+
+i.share::before {
+  content: '\e937';
+}
+
+i.course::before {
+  content: '\e90b';
+}
+
+.icon-off {
+  opacity: 0.15;
+}
+
+.order{
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.icons{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  float: left;
+}
+
+i.orderArrow {
+  margin: 0px -5px 0px 0px;
+}
+
+i.arrow:before {
+  font-family: none;
+  content: '\25B2';
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.top-margin{
+  margin-top: 10px;
+}
+
+.left-padding{
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.left-border-menu{
+  border-left-color: #ff8500;
+  border-left-style: outset;
+  padding-left: 5px;
+  margin-top: 55px !important;
+}
+
+.specific-border-lightbox{
+  border-color: #ff8500;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.number-width{
+  width:60px;
+  padding: 5px;
+}
+
+.colorActivity{
+   color: #ff8500;
+  font-weight: bold;
+}
+
+.colorCourse{
+   color: $primary;
+}
+
+.colorCourse:hover{
+  color: #ff8500;
+  font-weight: bold;
+}
+
+.colorButton{
+  color: $primary;
+  background: $white ;
+}
+
+.coursesInfoBackgroundList{
+  background: #ffffff;
+  width : 48%;
+  margin-right: 1.296%;
+  margin-bottom: 1.296%;
+}
+
+.infoBackground{
+  background: #ffffff;
+}
+
+.infoBackgroundTopMargin{
+  @media screen and (min-width: 800px) {
+    margin-top: 15px;
+  }
+  @media screen and (max-width: 800px) {
+    margin-top: 10px;
+  }
+}
+
+.bottomMarginTitle{
+  margin-bottom: 15px;
+}
+
+.coursesText{
+ width: 85%;
+}
+
+.text-font{
+  font-weight: bolder;
+}
+
+.text-italic{
+  font-style: italic;
+}
+
+.size-font{
+  @media screen and (min-width: 800px) {
+    font-size: 13px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+  }
+}
+
+.padding-left-corp{
+  @media screen and (min-width: 800px) {
+    padding-left: 50px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-right:0;
+  }
+}
+
+.left-margin{
+  @media screen and (min-width: 800px) {
+    margin-left: 15px;
+  }
+}
+
+.bottom-margin{
+  margin-bottom: 5px;
+}
+
+.right-course-margin{
+  @media screen and (min-width: 800px) {
+    margin-right: 1.296%;;
+  }
+}
+
+.left-magnet{
+  float: left;
+  color: #555;
+  font-weight: bold;
+  @media screen and (min-width: 800px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 800px) {
+    @media screen and (min-width: 360px) {
+      font-size: 17px;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 13px;
+    }
+  }
+}
+
+.big-folder{
+  color: #555;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.topFolderIcons{
+  top:15px;
+  left: 13px;
+}
+
+.topFolderList{
+  top: 17px;
+  left: 22px;
+}
+
+.folder-size{
+  font-size: 25px;
+}
+
+.big-folder-size{
+  font-size: 40px;
+}
+
+.specialDisable{
+  color: #555;
+  background: #aaa;
+}
+
+.import{
+  color: #555;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.rightPaddingMenu{
+  @media screen and (min-width: 800px) {
+    padding-right: 30px;
+  }
+}
+
+.stickyParent{
+  @media screen and (min-width: 800px) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.sticky{
+  @media screen and (min-width: 800px) {
+    position: sticky;
+    top: 50px;
+  }
+}
+
+.fab {
+  width: 45px;
+  height: 45px;
+  background-color: #ff8500;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+  cursor:pointer;
+  font-size: 35px;
+  line-height: 45px;
+  color: white;
+  text-align: center;
+
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.fab:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.26);
+  transition : all 0.3s cubic-bezier(.25, .8, .25, 1)
+}
+
+.fabDouble {
+  position: fixed;
+  width: 45px;
+  height: 45px;background-color: #ff8500;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+  cursor:pointer;
+  bottom: 5px;
+  right: 7px;
+}
+
+.fabDouble:hover .fab-buttons {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fabDouble:hover .fab-buttons__link {
+  transform: scaleY(1) scaleX(1) translateY(-16px) translateX(0px);
+}
+
+.fab-action-button:hover + .fab-buttons .fab-buttons__link:before {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: right center 0;
+  transition-delay: 0.3s;
+}
+
+.fab-action-button {
+  position: absolute;
+  bottom: 4px;
+  right: 7.5px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 35px;
+  color: white;
+  text-align: center;
+}
+
+.fab-buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.fab-buttons__item {
+  display: block;
+  text-align: center;
+  margin: 12px 0;
+}
+
+.fab-buttons__link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  transform: scaleY(0.5) scaleX(0.5) translateY(0px) translateX(0px);
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  font-size: 20px;
+}
+
+[data-tooltip]:before {
+  top: 50%;
+  margin-top: -11px;
+  font-weight: 600;
+  border-radius: 2px;
+  background: #585858;
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 12px;
+  text-decoration: none;
+  visibility: hidden;
+  opacity: 0;
+  padding: 4px 7px;
+  margin-right: 12px;
+  position: absolute;
+  transform: scale(0);
+  right: 100%;
+  white-space: nowrap;
+  transform-origin: top right;
+  transition: all .3s cubic-bezier(.25, .8, .25, 1);
+}
+
+[data-tooltip]:hover:before {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: right center 0;
+}
+
+.icon-material {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-top: 8px;
+}
+

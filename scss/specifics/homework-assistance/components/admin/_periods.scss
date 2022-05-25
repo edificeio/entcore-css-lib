@@ -1,0 +1,54 @@
+.periods {
+  margin-bottom: 0px !important;
+  min-height: 100px;
+  height: 100px; /*pour IE qui comprend rien, et qui ne reconnait pas min-height, mais qui comprend mal height*/
+  min-width: 300px;
+  width: 100%; /*pour IE qui comprend rien*/
+  overflow-y: scroll; /*pour activer les scrollbarres*/
+
+  .size-column-1 {
+    width: 400px;
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+      br { display: none }
+    }
+    @media screen and (min-width: 1200px) {
+      br { display: none }
+    }
+    @media screen and (max-width: 500px) {
+      br { display: none }
+      width: 200px;
+      font-size: 12px !important;
+    }
+  }
+
+  .size-column-2 {
+    width: 200px;
+    @media screen and (max-width: 400px) {
+      width: auto;
+    }
+  }
+
+  tr {
+    border: 0px transparent;
+  }
+
+  tr td:first-child {
+    font-size: 17px;
+  }
+
+  th, td {
+    padding: 5px;
+    text-align: left;
+  }
+
+  .delete-text {
+    @media screen and (max-width: 400px) {
+      display: none;
+    }
+  }
+}
+
+#add-period {
+  color: darkorange;
+  height: 30px;
+}

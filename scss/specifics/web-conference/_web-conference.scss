@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'material-icons';
+  src: url('/webconference/public/font/material-design/fonts/materialdesignicons-webfont.eot');
+  src: url('/webconference/public/font/material-design/fonts/materialdesignicons-webfont.eot') format('embedded-opentype'),
+  url('/webconference/public/font/material-design/fonts/materialdesignicons-webfont.woff2') format('woff2'),
+  url('/webconference/public/font/material-design/fonts/materialdesignicons-webfont.woff2') format('woff'),
+  url('/webconference/public/font/material-design/fonts/materialdesignicons-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wc {
+  .header {
+    display: flex;
+    height: 50px;
+    .button {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  .rooms {
+    .title-container {
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+      h2 {
+        font-size: 34px;
+      }
+      .button {
+        display: flex;
+        justify-content: flex-end;
+      }
+    } 
+    .url-container {
+      display: flex;
+
+      .input-url {
+        padding-right: 15px;
+  
+        input {
+          width: 100%;
+        }
+      }
+      a {
+        display: flex;
+        transition: all 250ms ease;
+        align-items: center;
+        i.copy {
+          font-size: 20px;
+          margin-right: 5px;
+        }
+        &:hover {
+          fill: $orange;
+        }
+      }
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+  
+    .flex-card {
+      height: 130px;
+      display: flex;
+      .icon {
+        width: 30%;
+        .img-container {
+          border-radius: 4px;
+          img, .img {
+            width: 25px;
+            height: 25px;
+            margin: 10px;
+            fill: white;
+          }
+        }
+      }
+      .title {
+        width: 60%;
+      }
+      .dots-menu {
+        width: 10%;
+      }
+    }
+  }
+  .red {
+    background-color: rgba($red, 0.75);
+  }
+  button {
+    margin: 1px; // separate buttons
+  }
+
+  .logos_div{
+    display: flex;
+    justify-content: space-evenly;
+    margin-block-start: auto;
+    margin-bottom: 15px;
+    margin-right: 5px;
+  }
+  i.sharing::before {
+    font-family: 'material-icons';
+    content: "\F497";
+    color: #5b6472;
+    font-size: 20px;
+    vertical-align: top;
+  }
+  i.waitingRoom::before {
+    font-family: 'material-icons';
+    content: "\FB32";
+    color: #5b6472;
+    font-size: 20px;
+    vertical-align: top;
+  }
+  lightbox {
+    .action-buttons {
+      margin-top: 10px;
+      float: right;
+    }
+  }
+  .emptyscreen{
+    margin-top:-25px;
+    img{
+      width:37%;
+      height:auto;
+    }
+  }
+}
+
+@media screen and (max-width: $tablette) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr)!important;
+  }
+  .rooms .title-container h2 {
+    font-size: 24px;
+  }
+  #clipboard-link-field {
+    font-size: 12px;
+    svg {
+      height: 15px;
+    }
+  }
+  .rooms > card {
+    padding-bottom: 15px;
+  }
+  .url-container {
+    width: auto;
+    display: inline-block;
+  }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+  }
+  .flex-space {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: $fat-mobile) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  dots-menu.right {
+    .options{
+        right: 20px;
+        left: auto;
+    }
+  }
+}

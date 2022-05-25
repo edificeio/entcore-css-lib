@@ -1,0 +1,25 @@
+.lightbox {
+  z-index: 100030;
+
+  .content {
+    padding: 0;
+  }
+
+  .close-lightbox {
+    color: $diary-white;
+  }
+
+  section.head {
+    background: $diary-darkgreen;
+    padding: 1px 15px !important;
+    border-radius: 5px 5px 0 0;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $diary-white;
+    }
+  }
+
+  section.body {
+    padding: 8px 20px;
+  }
+}

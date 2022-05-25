@@ -1,0 +1,58 @@
+multi-combo .multi-combo-root-button {
+  min-width: 50px;
+  color: black;
+  border: none !important;
+}
+
+multi-combo .multi-combo-root-panel {
+  position: fixed;
+  top: 128px !important;
+}
+.schedule .next-timeslots {
+  width: 100%;
+  position: relative;
+  z-index: 800;
+  height: 20px;
+  margin: 0;
+}
+.schedule .previous-timeslots {
+  width: 100%;
+  position: absolute;
+  height: 20px;
+  left: 0;
+  top: 60px;
+  z-index: 800;
+}
+
+.schedule {
+  .legend {
+    .month-day {
+      background-color: $edt-dark-blue;
+    }
+  }
+}
+
+#occurrences-creation {
+  td {
+    background: $edt-white;
+    color: black;
+  }
+}
+
+.manage-title {
+  display: contents;
+}
+
+.sidebar {
+  padding: 0;
+  margin-right: 10px;
+  border-radius: 8px;
+  height: 550px;
+  display: flex;
+}
+
+.no-cursor {
+  .timeslot {
+    cursor: default;
+  }
+}

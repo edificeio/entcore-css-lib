@@ -1,0 +1,56 @@
+//    Sniplet setting homework type
+
+.homework-type {
+
+  .right-button {
+    display: inline-block;
+    float: none;
+  }
+
+  .input-libelle {
+    width: 20%;
+  }
+
+  .cdt-settings-list {
+    padding-left: 0px;
+    list-style-type: none;
+    ul{
+      list-style-type: none;
+    }
+  }
+
+  .empty-state {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ul.settings-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .skills-list-proposition:hover dots-menu {
+    opacity: 1;
+  }
+  .skills-list-proposition dots-menu {
+    opacity: 0;
+  }
+
+  .icon-grey {
+    color: rgb(204, 204, 204);
+  }
+
+  .pencil {
+    margin-right: 7.5px;
+  }
+
+  .pencil:hover {
+    color: $diary-darkengreen;
+  }
+
+  .trash:hover {
+    color: $diary-darkengreen;
+  }
+}

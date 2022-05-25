@@ -1,0 +1,165 @@
+i {
+  margin: 0;
+
+  &.spaced {
+    &-right {
+      margin-right: 5px;
+    }
+
+    &-left {
+      margin-left: 5px;
+    }
+
+    &-both {
+      margin: 0 5px;
+    }
+  }
+
+  // Status
+
+  &.hide {
+    opacity: 0;
+  }
+
+  // Icons sizes
+
+  &.xs-icon::before {
+    font-size: 10px;
+  }
+
+  &.sm-icon::before {
+    font-size: 16px;
+  }
+
+  &.md-icon::before {
+    font-size: 20px;
+  }
+
+  &.lg-icon::before {
+    font-size: 24px;
+  }
+
+  &.hg-icon::before {
+    font-size: 36px;
+  }
+
+  &.selected::before {
+    color: darkgray !important;
+  }
+
+  // Icons color
+
+  &.dark-grey::before {
+    color: darkgray !important;
+  }
+
+  &.grey::before {
+    color: gray !important;
+  }
+
+  &.light-grey::before {
+    color: lightgray !important;
+  }
+
+  &.very-light-grey::before {
+    color: lightgray !important;
+  }
+
+  // Icons content
+
+  &.dropbtn::before{
+    content: '\e912';
+  }
+
+  &.bell::before {
+    font-family: 'material-icons';
+    content: "\F09C";
+  }
+
+  &.cancel::before {
+    font-family: 'material-icons';
+    content: "\F156";
+  }
+
+  &.chevron-down::before {
+    font-family: 'material-icons';
+    content: "\F140";
+  }
+
+  &.chevron-left::before {
+    font-family: 'material-icons';
+    content: "\F141";
+  }
+
+  &.chevron-right::before {
+    font-family: 'material-icons';
+    content: "\F142";
+  }
+
+  &.chevron-up::before {
+    font-family: 'material-icons';
+    content: "\F143";
+  }
+
+  &.clock::before {
+    font-family: 'material-icons';
+    content: "\F150";
+    color: darkgray;
+  }
+
+  &.delete::before {
+    font-family: 'material-icons';
+    content: "\F1C0";
+  }
+
+  &.download::before {
+    font-family: 'material-icons';
+    content: "\F1DA";
+    color: darkgray;
+  }
+
+  &.drag::before {
+    font-family: 'material-icons';
+    content: "\F1D8";
+    color: gray;
+  }
+
+  &.duplicate::before {
+    font-family: 'material-icons';
+    content: "\F18F";
+  }
+
+  &.plus-circle::before {
+    font-family: 'material-icons';
+    content: "\F417";
+  }
+
+  &.send::before {
+    font-family: 'material-icons';
+    content: "\F0108";
+    color: darkgray;
+  }
+
+  &.share::before {
+    font-family: 'material-icons';
+    content: "\F497";
+    color: darkgray;
+  }
+
+  &.view-cards::before {
+    font-family: 'material-icons';
+    content: "\FE4D";
+    color: lightgrey;
+  }
+
+  &.view-tab::before {
+    font-family: 'material-icons';
+    content: "\F572";
+    color: lightgrey;
+  }
+
+  &.undo::before {
+    font-family: 'material-icons';
+    content: "\F54C";
+  }
+}

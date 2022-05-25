@@ -1,0 +1,116 @@
+// Results-form
+
+.results-form {
+  .result-element {
+    display: flex;
+    flex-direction: column;
+
+    .question, .section {
+      margin: 10px;
+    }
+
+    .question {
+      padding: 2% 2% 2% 2%;
+      background: $formulaire-white;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: $formulaire-screen-mobile) {
+          flex-wrap: wrap;
+        }
+      }
+
+      .freetext {
+        border: thin solid $formulaire-grey-very-light;
+        padding: 5px 10px;
+        margin: 5px 0;
+      }
+
+      .distrib {
+        display: flex;
+        align-items: baseline;
+        border: thin solid $formulaire-grey-very-light;
+        padding: 5px 10px;
+        margin: 5px 0;
+        font-size: 14px;
+        @media screen and (max-width: $formulaire-screen-mobile) {
+          flex-direction: column;
+        }
+
+        .infos {
+          display: flex;
+          @media screen and (max-width: $formulaire-screen-mobile) {
+            flex-direction: column;
+          }
+        }
+
+        .results {
+          display: flex;
+          flex-direction: column;
+
+          .notLast {
+            margin-bottom: 5px;
+          }
+
+          a {
+            display: inline-flex;
+            align-items: center;
+          }
+        }
+      }
+
+      .choices {
+        display: flex;
+        border: thin solid $formulaire-grey-very-light;
+        flex-wrap: wrap;
+
+        .choice {
+          display: flex;
+          align-items: baseline;
+          padding: 5px 10px;
+          margin: 5px 0;
+          font-size: 14px;
+
+          .infos {
+            display: flex;
+            @media screen and (max-width: $formulaire-screen-mobile) {
+              flex-direction: column;
+            }
+          }
+
+          &-value {
+            @media screen and (max-width: $formulaire-screen-mobile) {
+              white-space: normal;
+            }
+          }
+        }
+      }
+    }
+
+    .graph {
+      &-bar {
+        height: 25px;
+        margin-left: 25px;
+      }
+
+      &-camembert {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 10px;
+
+      .goto {
+        color: $formulaire-grey-dark;
+        font-weight: bold;
+      }
+    }
+  }
+}

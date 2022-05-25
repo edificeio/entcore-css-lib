@@ -1,0 +1,176 @@
+.side-navbar {
+  position: fixed;
+  left: 0;
+  top: 64px;
+  height: calc(100% - 64px);
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+
+  .main-nav {
+    z-index: 1;
+    background-color: $white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    left: 0;
+    width: 80px;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 64px;
+    height: calc(100% - 64px);
+
+    .first-item {
+      margin-top: 20px;
+      position: absolute;
+      top: 0;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+
+      &.four_items {
+        height: 50%;
+      }
+      &.three_items {
+        height: 40%;
+      }
+      &.two_items {
+        height: 30%;
+      }
+    }
+
+    .item{
+      padding-top: 5px;
+      span {
+        display: block;
+        font-size: 12px;
+        padding: 5px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .item {
+    color: $black;
+    position: relative;
+    display: block;
+    font-size: 24px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:hover {
+      color: $diary-darkgreen;
+      fill: $diary-darkgreen;
+    }
+
+    &.active, &:hover {
+      .icon::after {
+        background-color: $diary-darkgreen;
+      }
+    }
+  }
+
+  i {
+    font-size: 24px;
+  }
+
+  .icon {
+    &:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      display: block;
+      background-color: transparent;
+      width: 5px;
+    }
+    svg path{
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
+  .sub-nav {
+    padding: 7px 0;
+    .icon::after {
+      left: -8px;
+    }
+  }
+
+  .sub-items {
+    position: absolute;
+    font-size: 16px;
+    display: block;
+    min-width: 200px;
+    text-align: left;
+    top: 0;
+    background-color: $white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    padding: 10px;
+    transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
+    left: -500%;
+
+    &-structure {
+      overflow: auto;
+      margin: 0 -10px 0 0;
+      max-height: 600px;
+    }
+
+    &.hovered {
+      left: 100%;
+    }
+
+    h2 {
+      color: $diary-darkgreen;
+      font-weight: bold;
+      line-height: 15px;
+    }
+
+    .sub-item {
+      padding: 7px 0;
+
+      .icon {
+        display: contents!important;
+      }
+
+      &:hover, &.active {
+        color: $diary-darkgreen !important;
+
+        i::after {
+          background-color: $diary-darkgreen;
+          left: -10px;
+        }
+      }
+
+      &:hover {
+        i {
+          color: $diary-darkgreen;
+        }
+      }
+
+
+      i {
+        font-size: 22px;
+        width: 40px;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+
+    .item {
+      span {
+        font-size: 16px;
+        padding: 5px 0;
+        line-height: 25px;
+      }
+    }
+
+  }
+}

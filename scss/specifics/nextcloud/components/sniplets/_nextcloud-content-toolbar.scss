@@ -1,0 +1,67 @@
+.nextcloud-content-toolbar {
+
+  @mixin size-button() {
+    padding: 8px 18px 10px;
+    margin-right: 2px;
+    font-size: 14px;
+  }
+
+  &.toolbar-display {
+    overflow: visible;
+    max-height: 150px;
+  }
+  .nextcloud-button {
+    &-confirm {
+      @include size-button();
+      background: $orange;
+      color: $white;
+      &:hover {
+        background-color: $dark-accent;
+        box-shadow: none;
+        color: $white;
+      }
+    }
+
+    &-cancel {
+      @include size-button();
+      border: none;
+      box-shadow: none;
+      color: $orange;
+      background: $light-grey;
+      &:hover {
+        background: $orange;
+        color: $white;
+      }
+    }
+  }
+
+  share-panel {
+    button {
+      @include size-button();
+      background: $orange;
+      color: $white;
+      margin-right: 2px;
+      margin-left: 2px;
+      &.panel-button {
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        background-color: $dark-accent;
+        box-shadow: none;
+        color: $white;
+      }
+      .cancel {
+        @include size-button();
+        border: none;
+        box-shadow: none;
+        color: $orange;
+        background: $light-grey;
+        &:hover {
+          background: $orange;
+          color: $white;
+        }
+      }
+    }
+  }
+}

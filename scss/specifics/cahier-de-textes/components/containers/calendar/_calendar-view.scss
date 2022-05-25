@@ -1,0 +1,491 @@
+.hide-session {
+  .schedule-item-content {
+    &.session {
+      display: none;
+    }
+  }
+}
+
+.schedule-item-content {
+  display: flex !important;
+  align-items: center;
+  padding: 0 !important;
+  .flex-col {
+    align-items: start;
+    height: 100%;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    &.homework-item {
+      background-color: $session-orange;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .icon-homework {
+        font-size: 16px;
+      }
+    }
+
+  }
+
+  .subject {
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block !important;
+  }
+
+  .audience {
+    font-size: 11px;
+  }
+
+  .publish-icon {
+    flex-grow: 2;
+    margin-right: 10px;
+  }
+
+  .text-item {
+    font-size: 11px;
+    color: rgba(0, 0, 0, .87);
+  }
+
+  .flex-row-cdt {
+    min-height: 15px;
+    max-height: 32px;
+    position: initial;
+    text-overflow: ellipsis;
+  }
+}
+
+.homework-by-days {
+  color: white;
+  background-color: $session-orange;
+  line-height: 39px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.bloc-homework {
+  height: 100%;
+}
+
+.diary-choice-view {
+  display: inline-flex;
+  align-items: center;
+}
+
+/*
+ Refacto calendar CDT, override des classes présentes dans la directive calendar -- DEBUT
+ */
+.datepicker table thead tr {
+  background: $diary-darkgreen;
+
+  th:hover {
+    background: $diary-darkengreen;
+  }
+}
+
+.calendar-container {
+  background-color: $white;
+
+  i.calendar::before {
+    color: $diary-darkgreen;
+  }
+
+  .calendar-current-week {
+    background: $white;
+    padding-right: 0;
+    margin-bottom: 8px;
+    line-height: 39px;
+
+    .cyan {
+      background-color: $diary-darkgreen;
+
+      &:hover {
+        background-color: $diary-darkengreen;
+      }
+    }
+
+    .calendarFiltersButtons {
+      .displayModeButtons {
+        margin: 0px;
+      }
+
+      .nextPrevious {
+        button {
+          background-color: $diary-darkgreen;
+
+          &:hover {
+            background-color: $diary-darkengreen;
+          }
+        }
+      }
+    }
+
+    button {
+      color: $white;
+      border-radius: 0px;
+      padding: 8px 15px 8px;
+
+      i18n {
+        text-transform: uppercase;
+      }
+    }
+
+    span[ng-if="display.mode === 'week'"] {
+      color: $white;
+      background: $diary-darkgreen;
+      height: 100%;
+      display: inline-block;
+      padding: 0 10px;
+    }
+  }
+
+  .next-timeslots, .previous-timeslots {
+    margin-bottom: 0;
+    background: $diary-darkgreen;
+
+    &:hover {
+      background: $diary-darkengreen;
+    }
+
+    &:disabled {
+      background: $diary-light-grey;
+
+      &:hover {
+        background: $diary-light-grey;
+      }
+
+      &::before {
+        content: " ";
+      }
+    }
+  }
+
+  .schedule {
+    legend.timeslots {
+      background: $white;
+      color: $black;
+      padding-top: 44px;
+    }
+  }
+
+  .days {
+    height: auto;
+
+    .day {
+      legend {
+        background: $white;
+        color: $black;
+        text-transform: uppercase;
+      }
+
+      .timeslots {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 41px;
+
+        .timeslot {
+          background: $white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}
+
+/*
+ Refacto calendar CDT, override des classes présentes dans la directive calendar -- FIN
+ */
+
+.title-sidebar {
+  background-color: $diary-darkgreen;
+
+  h5, i {
+    color: $white;
+    fill: $white;
+    text-transform: uppercase;
+  }
+
+  svg {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.display-background {
+  background-color: $diary-white;
+}
+
+.diary-search {
+  padding-bottom: 15px;
+  padding-top: 20px;
+  margin: 0px 5px;
+}
+
+.row-homework {
+  display: flex;
+  align-items: center;
+}
+
+.overlay-loader-calendar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  vertical-align: middle;
+  justify-content: center;
+  top: 60px;
+  height: calc(100% - 60px);
+}
+
+@media (max-width: 1125px) {
+  #dailyeventlongtitle {
+    display: none;
+  }
+
+  #dailyeventshorttitle {
+    display: inline;
+  }
+}
+
+@media (min-width: 1125px) {
+  #dailyeventlongtitle {
+    display: inline;
+  }
+
+  #dailyeventshorttitle {
+    display: none;
+  }
+}
+
+.diary-container button.previous-timeslots, .diary-container button.next-timeslots {
+  left: -3px;
+}
+
+
+.diary-container calendar-daily-events .days .day {
+  height: auto;
+  min-height: 100px;
+}
+
+.diary-container calendar-daily-events .days {
+  z-index: 998;
+}
+
+.diary-container .timeslots {
+  display: none;
+}
+
+.diary-container.diary-show-calendar .timeslots {
+  display: inline-block;
+}
+
+.diary-container.diary-show-calendar .homeworkpanel {
+  padding: 0px !important;
+}
+
+
+.diary-container.diary-show-homeworks:not(.diary-show-calendar) .daily-events {
+  display: none;
+}
+
+.diary-container.diary-show-homeworks .homeworks-row {
+  display: flex;
+  position: relative;
+  top: 127px;
+  z-index: 1;
+
+  .timeslot {
+    color: $black;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 130px;
+  }
+}
+
+.diary-container .previous-timeslots {
+  height: 20px;
+}
+
+.diary-container .schedule .days {
+  height: auto;
+}
+
+.diary-container .schedule-item {
+  margin-top: 40px;
+  border: 1px solid rgba(96, 96, 96, 0.15);
+}
+
+.diary-container [resizable] {
+  transition: none !important;
+}
+
+.diary-container.diary-show-calendar calendar-daily-events .days .day {
+  height: 40px;
+  min-height: 40px;
+  width: calc(100% / 7) !important;
+  background: #ffe5bf !important;
+
+  &.sixDays {
+    width: calc(100% / 6) !important;
+  }
+
+  &.fiveDays {
+    width: calc(100% / 5) !important;
+  }
+}
+
+.diary-container.diary-show-calendar.calendar-day-mode calendar-daily-events .days .day {
+  height: 40px;
+  min-height: 40px;
+  width: calc(100%) !important;
+  background: #ddd !important;
+}
+
+.diary-container calendar-daily-events {
+  position: static;
+  flex: 1 1 0;
+}
+
+calendar-daily-events {
+  padding-left: 0px !important;
+}
+
+.homework-content {
+  //height: 32px;
+  padding: 5px;
+  border: solid 2px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: left;
+  color: $white;
+}
+
+
+.homework-content-sm {
+  padding: 5px;
+  border: solid 2px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  width: 40px;
+  margin-right: 2px;
+}
+
+
+.filter2 {
+  height: 39px;
+  font-size: 30px;
+  line-height: 42px;
+  text-align: center;
+  width: 50px !important;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: none;
+  background: $diary-grey;
+  color: $white;
+}
+
+i.homework::before {
+  content: "\e80d";
+  font-family: "generic-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  color: $white;
+}
+
+.filter2.diary.selected {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26) inset;
+  background-color: #763294;
+}
+
+.filter2.homework.selected {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26) inset;
+  background-color: #46bfaf;
+}
+
+.week-item {
+  position: relative;
+
+  .left-side {
+    position: absolute;
+    left: 0px;
+    right: 30px;
+  }
+
+  .right-side {
+    position: absolute;
+    right: 0px;
+    width: 30px;
+  }
+}
+
+.timeslot {
+  cursor: default;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tooltip-course {
+  max-width: 400px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+  display: block;
+
+  .header {
+    color: white;
+    padding: 1px 6px;
+  }
+}
+
+.month-day .n-more {
+  display: none;
+}
+
+container[template="calendarDefaultDisplayOptionsTemplate"] {
+  > div {
+    float: left;
+    width: 100%;
+
+    h2 {
+      background: $diary-darkgreen;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 10px 5px;
+      color: $diary-white;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      text-indent: 20px;
+
+      ~ div {
+        padding-left: 20px;
+
+        &:last-child {
+          margin-bottom: 20px !important;
+        }
+      }
+    }
+  }
+}

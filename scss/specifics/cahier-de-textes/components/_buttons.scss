@@ -1,0 +1,18 @@
+button, a.button, input[type=button] {
+  color: $diary-white;
+  background: $diary-darkgreen;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $diary-darkengreen;
+  }
+
+  &:disabled {
+    background: $diary-dark-grey;
+  }
+
+  &.cancel {
+    background: $diary-grey;
+    color: $diary-white;
+  }
+}

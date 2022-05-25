@@ -1,0 +1,7 @@
+body.cdt, .sniplet.cdt {
+  input[type="radio"], .contentTab {
+    display: inline-block;
+  }
+  @import "./components/index";
+  @import "./generics/index";
+}

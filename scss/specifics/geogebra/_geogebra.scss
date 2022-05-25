@@ -1,0 +1,16 @@
+body.geogebra section.main {
+  @import './components/index';
+  .ggbmenubarwrapper {
+    button{
+      float: none;
+    }
+  }
+  .center-pmb {
+    display: flex;
+    align-items: center;
+    height: 38px;
+  }
+  .box-shadow-button {
+    box-shadow: 2px 2px 3px grey;
+  }
+}

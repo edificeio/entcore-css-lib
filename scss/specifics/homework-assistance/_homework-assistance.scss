@@ -1,0 +1,114 @@
+$homeworkassistance-main: #ffb600;
+$homeworkassistance-white: #ffffff;
+$homeworkassistance-black: rgba(0, 0, 0, .87);
+$homeworkassistance-grey: #d6d6d6;
+
+body.homework-assistance {
+  @import "./components/index";
+  @import "./generic/index";
+
+  @media screen and (max-width: 500px) {
+    font-size: 12px;
+  }
+
+  .material section.main {
+    padding-bottom: 20px;
+  }
+
+  .title-row {
+    @media screen and (max-width: 800px) {
+      text-align: center;
+    }
+  }
+
+  .main-row {
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .block-line {
+    margin-top: 2%;
+    padding-right: 10px;
+    @media screen and (max-width: 500px) {
+      margin: 0;
+    }
+  }
+
+  .block-line > p {
+    margin: 0% 0% 1% 0%;
+  }
+
+  .important-txt {
+    font-size: 18px;
+    color: black;
+    @media screen and (max-width: 500px) {
+      font-size: 14px;
+    }
+  }
+
+  .important-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5%;
+    @media screen and (max-width: 500px) {
+      font-size: 14px;
+    }
+  }
+
+  .inline {
+    display: inline;
+    list-style: none; /* pour enlever les puces sur IE7 */
+    margin: 5px;
+  }
+
+  button {
+    margin-right: 10px !important;
+    padding: 0 !important;
+  }
+
+  .classic-button {
+    background: none !important;
+    box-shadow: none;
+    margin: 0 0 10px 0 !important;
+    padding-right: 10px !important;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+
+  select {
+    min-width: 50px !important;
+    border: none;
+    border-bottom: solid 1px #aaa;
+
+    option:hover {
+      background-color: $homeworkassistance-main;
+      color: $homeworkassistance-white;
+    }
+  }
+
+  #date {
+    width: 25%;
+    @media screen and (max-width: 600px) {
+      width: 50%;
+    }
+    @media screen and (min-width: 800px) and (max-width: 1200px) {
+      width: 50%;
+    }
+  }
+
+  #other-informations {
+    width: 80%;
+  }
+
+  .sending-button {
+    float: right;
+    margin-right: 20px;
+  }
+}

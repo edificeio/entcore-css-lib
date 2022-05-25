@@ -1,0 +1,36 @@
+.main-header {
+  &-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    &.personal-display {
+      justify-content: space-between;
+    }
+
+    app-title {
+      display: flex;
+    }
+
+    .header-buttons {
+      display: flex;
+      button {
+        margin: 0;
+        padding: 8px 18px 10px;
+      }
+
+      #delete-section {
+        float: left ;
+      }
+
+      #add-section {
+        float: right;
+        margin-left: 10px;
+      }
+
+      .button-header {
+        width: fit-content;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,48 @@
+.search-bars {
+  padding: 10px;
+  display: flex;
+  margin-left: 50px;
+
+  &.small {
+    width: 45%;
+  }
+
+  &.full {
+    width: 60%;
+  }
+
+
+  label  {
+    margin-right: 10px;
+  }
+
+  .search-inputs {
+
+    display: flex;
+    width: 100%;
+
+    .search-input {
+      background: $white;
+      padding: 7px;
+      vertical-align: middle;
+      width: 100%;
+      height: fit-content;
+
+      input {
+        margin: auto;
+
+        &:focus {
+          box-shadow: 0 1px 0 0 $edt-dark-blue;
+        }
+      }
+
+      &.small {
+        margin-right: 15px;
+      }
+    }
+  }
+
+
+
+
+}

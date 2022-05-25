@@ -1,0 +1,87 @@
+@media screen and (max-width: $tablette) {
+  .block-mobile {
+    display: block !important;
+  }
+
+  .mobile-navigation {
+    display: block !important;
+  }
+
+  nav.mobile-navigation {
+    .notification-bull {
+      top: 0;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      font-size: 14px;
+      border-radius: 10px;
+      padding: 2px;
+      margin-left: 10px;
+    }
+  }
+
+  .responsive-table {
+    table {
+      td {
+        text-align: center !important;
+      }
+
+      tfoot {
+        display: block;
+      }
+    }
+  }
+
+  .agent-management,
+  .supplier-management,
+  .contract-management,
+  .tag-management,
+  .equipment-management,
+  .log-view,
+  .purse-management{
+
+    table {
+      thead td {
+        label.checkbox {
+          position: relative !important;
+        }
+      }
+    }
+
+    .color-tag {
+      margin: 0 auto;
+    }
+  }
+
+  .catalog-list {
+    .dominos {
+      .item {
+        max-width: unset !important;
+        width: 50% !important;
+      }
+    }
+
+    &.border-list {
+      display: none;
+    }
+  }
+
+  .catalog {
+    .left-detail-box {
+      left: 0 !important;
+      float: none !important;
+      width: 100% !important;
+      position: relative !important;
+    }
+  }
+
+  .empty-basket-message {
+    .four {
+      height: auto !important;
+    }
+
+    h4 {
+      line-height: normal !important;
+    }
+  }
+}

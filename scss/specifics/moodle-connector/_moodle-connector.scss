@@ -1,0 +1,748 @@
+body.moodle {
+  @import './specifics/atomic';
+
+  header.main{
+    z-index: 999;
+  }
+
+  section.lightbox>div.content{
+    height: auto;
+    min-height: 0px;
+  }
+
+  .lds-dual-ring {
+    display: inline-block;
+    height: 64px;
+    transform: scale(0.65);
+  }
+
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #555;
+    border-color: #555 transparent #555 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  nav.vertical[side-nav].slide {
+    width: 155px;
+    padding: 0px 10px;
+    overflow: unset;
+
+  }
+
+  nav.vertical[side-nav] {
+    background-color: #F0F0F0;
+    border-radius: 2px;
+    border-left: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.26);
+  }
+
+  .heightNavBar{
+    height: 80px !important;
+  }
+
+  section.main {
+    @media screen and (max-width: 800px) {
+      padding: 0 !important;
+      padding-bottom: 50px !important;
+      top: 52px !important;
+    }
+  }
+
+  .filter-course {
+    width: 97%;
+    .drop-down-block, .drop-down-block .drop-down-label {
+      margin-bottom: 0px;
+    }
+
+    .checkbox-course {
+      background-color: $medium-grey;
+      margin-right: 0px;
+    }
+
+    label.chip.checkbox-course.selected {
+      background-color: $primary;
+    }
+
+    .checkbox-activity {
+      background-color: $medium-grey;
+      margin-right: 0px;
+    }
+
+    label.chip.checkbox-activity.selected {
+      background-color: $accent;
+    }
+  }
+
+  .leftMarginLetter{
+    margin-left: 5px;
+    font-weight: bolder;
+  }
+
+  .select-type-buttons {
+    margin: 30px 0;
+  }
+
+  .label-input-row {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 12px;
+  }
+
+  .show-icons {
+    height: 24px;
+    width: 24px;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    opacity: 0.2;
+  }
+
+  .show-list {
+    height: 24px;
+    width: 24px;
+    font-size: 25px;
+    margin-left: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    opacity: 0.2;
+    background-size: 100% 93%;
+  }
+
+  .show-icons.selected {
+    opacity: 0.6;
+  }
+
+  .show-list.selected {
+    opacity: 0.6;
+  }
+
+  .changeWeekButton {
+    list-style: none;
+  }
+
+  .title-dashboard {
+    margin-right: 10px;
+  }
+
+  .list-dashboard {
+    margin: 15px 0px 15px 0px;
+  }
+
+  .duplicateCourse{
+    background: #a8a8a8;
+    color: #eee;
+  }
+
+  .whiteColor{
+    color: #eee;
+  }
+
+  .duplicationFailed{
+    background: #555;
+  }
+
+  .greyFilter{
+    filter: grayscale(100%);
+  }
+
+  .greyLoading{
+    background: #555 !important;
+  }
+
+  .bottomMarginLoading{
+    margin-bottom: 35px;
+  }
+
+  .lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    margin-top: -5px;
+    transform: scale(0.5);
+  }
+
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+
+  .lds-facebook div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+  }
+
+  .lds-facebook div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+  }
+
+  .lds-facebook div:nth-child(3) {
+    left: 45px;
+  }
+
+  @keyframes lds-facebook {
+    0% {
+      top: 6px;
+      height: 51px;
+    }
+    50%, 100% {
+      top: 19px;
+      height: 26px;
+    }
+  }
+
+  .right-align {
+    text-align: right;
+  }
+
+  .rightTop-margin {
+    margin-left: 10px;
+  }
+
+  .undefined-image-small-toDo-width {
+    width: 23.705%;
+    min-width: 211px;
+  }
+
+  .definedImageSmallToDoWidth {
+    @media screen and (min-width: 800px) {
+      width: 48.705%;
+      min-width: 380px;
+    }
+  }
+
+  .small-eleven {
+    right: 10px;
+    @media screen and (min-width: 800px) {
+      width: 63%;
+    }
+    @media screen and (max-width: 800px) {
+      width: 75%;
+      @media screen and (max-width: 450px) {
+        width: 64%;
+      }
+    }
+    position: absolute;
+  }
+
+  .pseudo-eleven {
+    right: 10px;
+    min-width: 200px;
+    width: 95%;
+    position: absolute;
+  }
+
+  .middle-eleven {
+    right: 10px;
+    position: absolute;
+  }
+
+  .overEleven {
+    width: 67%;
+  }
+
+  .big-big {
+    right: 10px;
+    min-width: 300px;
+    max-width: 96%;
+    position: absolute;
+  }
+
+  .specific-all-toCome-width {
+    right: 10px;
+    max-width: 79%;
+    position: absolute;
+  }
+
+  .specific-small-toCome-width {
+    right: 10px;
+    @media screen and (min-width: 350px) {
+      max-width: 70%;
+    }
+    @media screen and (max-width: 350px) {
+      max-width: 65%;
+    }
+    position: absolute;
+  }
+
+  .all-width {
+    width: 100%;
+    @media screen and (min-width: 800px) {
+      margin-right: 1.1%;
+    }
+  }
+
+  .small-width {
+    @media screen and (min-width: 800px) {
+      width: 48%;
+      min-width: 425px;
+      margin-right: 1.296%;
+    }
+  }
+
+  .specific-mine-shared-width {
+    width: 90%;
+  }
+
+  .minimal-mine-recent-width {
+    @media screen and (min-width: 800px) {
+      min-width: 300px;
+    }
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+
+  }
+
+  .big-right-margin {
+    margin-left: 95px;
+  }
+
+  .margin-left-file {
+    margin-left: 80px;
+  }
+
+  .right-magnet {
+    float: right;
+  }
+
+  .shared-margin-left {
+    margin-left: 115px;
+  }
+
+  .inside-margin {
+      margin-left: 80px;
+  }
+
+  .inside-margin-create {
+    @media screen and (min-width: 800px) {
+      margin-left: 80px;
+    }
+  }
+
+  .center-courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .responsive-button {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .initialFloat{
+    float: initial;
+  }
+
+  .next-previous-courses {
+    margin-top: 15px;
+  }
+
+  .progress {
+    width: 75%;
+    display: inline-block;
+  }
+
+  dots-menu {
+    vertical-align: top;
+    .options {
+      right: 0px;
+      left: 15px;
+      background:  #fff;
+
+      opt:hover {
+        background: #FF8500;
+        color: #fff;
+      }
+
+      opt{
+        color:#555;
+        border-bottom: none;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  dots-menu.opened .options {
+    width: 125px;
+  }
+
+  .rightDotsMenu{
+    top: 5px;
+    position: absolute;
+    right: 13px;
+  }
+
+  .display{
+    display:flex;
+  }
+
+  .special-selected{
+    font-size: 15px;
+    min-width: 85px;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.26);
+  }
+
+  .pagination-button{
+    background: #fff;
+    color: #555;
+  }
+
+  .pagination-button:hover{
+    background: #FF8500;
+    color: #fff;
+  }
+
+  progress-bar {
+    &.courseProgress{
+      .progress-bar {
+        background: $primary;
+        box-shadow: inset 0 0 100px 100px rgba(255,255,255,0.75);
+        .filled {
+          background: $primary;
+        }
+      }
+    }
+
+    &.activityProgress{
+      .progress-bar {
+        background: #FFC27F;
+
+        .filled {
+          background: #FF8500;
+        }
+      }
+    }
+
+    .progress-bar{
+      border: none;
+      height: 8px;
+      .filled {
+        height: 8px;
+        padding-right: unset;
+        padding-left: unset;
+      }
+    }
+  }
+
+  label.chip {
+    width:auto;
+    padding: 0px 10px;
+    display: inline-flex;
+    margin: 4px 0px 0px 0px;
+  }
+
+  label.chip.checkbox-activity.selected {
+    background-color: $accent;
+  }
+
+  label.chip.checkbox-activity.selected:hover {
+    color: white;
+  }
+
+  label.chip.checkbox-course.selected {
+    background-color: $primary;
+  }
+
+  .switch input[type=checkbox]:checked+.tick {
+    background: $primary;
+  }
+
+  .switch input[type=checkbox]:checked+.tick:before {
+    background: $primary;
+    filter: brightness(70%);
+  }
+
+  .move-up{
+    margin-top: -13px;
+  }
+
+  .notDraggable{
+    cursor:auto;
+  }
+
+  .searchBar{
+    @media screen and (min-width: 800px) {
+      margin: 0px 10px;
+    }
+    height: 35px;
+    padding: 5px;
+  }
+
+  .selectSearchBar{
+    @media screen and (min-width: 800px) {
+      margin: 0px 10px;
+    }
+    height: 35px;
+  }
+
+  .searchIcon{
+    margin-left: 5px;
+    opacity: 0.2;
+    font-size: 20px;
+  }
+
+  .noBorder{
+    border:none;
+  }
+
+  .courseButton {
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: $solid-grey;
+    color: $white;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    &.selected {
+      &.course {
+        background-color: $primary;
+      }
+
+      &.activity {
+        background-color: $accent;
+      }
+    }
+  }
+
+  ul.list-element-delete{
+    list-style-type: none;
+  }
+
+  .textError {
+    color: $primary;
+  }
+
+  .yellow-color{
+    color:#ffcc00
+  }
+
+  .grey-color{
+    color: #aaa
+  }
+
+  .littleMarginTop{
+    margin-top:-5px;
+  }
+
+  .noWrapSideNav{
+    width: 175px;
+    white-space: initial;
+  }
+
+  .titleSideNav{
+    padding-left: 25px;
+  }
+
+  .upNav{
+    margin-top:-40px;
+  }
+
+  .sideNavMyCourses {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #F0F0F0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    top: 52px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.26);
+    border-radius: 3px;
+  }
+
+  .sideNavMyCourses a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sideNavMyCourses a:hover {
+    color: black;
+  }
+
+  .sideNavMyCourses .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor:pointer;
+  }
+
+  i.dropbtn {
+    color: black;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  i.dropbtn::before{
+    content: '\e912';
+  }
+
+  #background{
+    position:absolute;
+    z-index:0;
+    display:block;
+    min-height:50%;
+    min-width:50%;
+    @media screen and (max-width: 800px) {
+      left: 105px;
+    }
+    @media screen and (min-width: 800px) {
+      left: 130px;
+    }
+  }
+
+  #bg-text {
+    color:lightgrey;
+    @media screen and (max-width: 800px) {
+      font-size: 40px;
+      margin-top: 60px;
+      @media screen and (max-width: 370px) {
+        font-size: 25px;
+      }
+    }
+    @media screen and (min-width: 800px) {
+      font-size:50px;
+      margin-top: 80px;
+    }
+  }
+
+  .coursesBottomPadding{
+    padding-bottom: 30px;
+  }
+
+  .hidder{
+    height: 179.36px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .arrow-bottom{
+    transform: rotate(180deg);
+  }
+
+  div.tipbox.up.relative{
+    position : static;
+  }
+  div.labels-in-ligne{
+    div::after {
+      top: 4px !important;
+    }
+  }
+
+  .courses-empty {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+
+    img {
+      height: 200px;
+    }
+  }
+
+
+  .convert {
+    @media screen and (max-width: 800px) {
+      margin: 20px;
+    }
+
+    &-logs {
+      display: block;
+    }
+    &-picker {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2%;
+
+      .file-picker {
+        display: flex;
+        align-content: center;
+        margin: 2% 0;
+
+        .loading-list {
+          padding-top: 0;
+          overflow: unset;
+          max-height: unset;
+        }
+
+        @media screen and (max-width: 800px) {
+          flex-direction: column;
+        }
+
+        .no-list {
+          display: flex;
+
+          @media screen and (max-width: 800px) {
+            justify-content: center;
+          }
+
+          i18n {
+            margin: auto 0 auto 10%;
+
+            @media screen and (max-width: 800px) {
+              margin: auto 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//TEMP FIX
+switch .switch input[type=checkbox]+.tick:before {
+  transform: rotate(0deg);
+  height: 20px;
+  width: 20px;
+  margin-top: 0;
+}
