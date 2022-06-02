@@ -61,7 +61,6 @@ body.exercizer {
   }
 
   h4 {
-    margin: 0;
     font-size: 16px;
     font-weight: 600;
   }
@@ -414,21 +413,21 @@ body.exercizer {
   /*  COLOR CORRECTED / CORRECTION ON GOING / HAS BEEN START / IS SUBMITTED */
   .color-corrected,
   .color-training-done {
-    color: $green;
+    color: $green !important;
   }
 
   .color-is-correction-on-going,
   .color-training-sided {
-    color: $purple;
+    color: $purple !important;
   }
 
   .color-is-submitted {
-    color: $cyan;
+    color: $cyan !important;
   }
 
   .color-has-been-started,
   .color-training-on-going {
-    color: $orange;
+    color: $orange !important;
   }
 
   /* Custom tags for subject library list */

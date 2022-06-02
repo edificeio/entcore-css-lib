@@ -96,6 +96,10 @@
                         }
                     }
 
+                    span {
+                        color: inherit;
+                    }
+
                     >div:nth-child(2) {
                         flex-shrink: 0;
                     }
