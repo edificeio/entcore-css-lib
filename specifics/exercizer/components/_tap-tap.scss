@@ -1,42 +1,55 @@
 // TAP TAP STYLE : Replace D&D on responsive touch
 .tap-tap {
-    background-color: $primary;
-    color: white;
-    padding: 25px;
-    position: fixed;
-    z-index: 1000;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-height: 40vh;
-    margin: 0 !important;
+  border-radius: 20px 20px 0 0;
+  background-color: $primary;
+  color: white;
+  padding: 25px;
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 40vh;
+  margin: 0 !important;
+  border: none;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+
+  &__inner {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    cursor: pointer;
+    display: inline-block;
+    background-color: white;
     border: none;
-    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    margin: 0;
+    font-size: .875rem;
+    color: $grey-black;
+    // border: 1px solid $grey-grey;
 
-    &__item {
-        cursor: pointer;
-        display: inline-block;
-        background-color: white;
-        border: none;
-        padding: 10px 30px;
-        margin: 10px;
-        color: $darkest-grey;
-        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-
-        &:hover,
-        &:active {
-            background-color: $orange;
-            color: white;
-            border: none;
-        }
+    &:hover,
+    &:active {
+      background-color: $orange;
+      color: white;
+      border: none;
     }
+  }
 
-    &__target {
-        border-color: $orange;
-    }
+  image-zone.tap-tap__item {
+    aspect-ratio: 1/1;
+    padding: 0;
+  }
 
-    &__explanation {
-        font-size: 13px;
-        font-style: italic;
-    }
+  &__target {
+    border-color: $orange;
+  }
+
+  &__explanation {
+    font-size: 13px;
+    font-style: italic;
+  }
 }

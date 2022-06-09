@@ -1,32 +1,23 @@
-// Generic Class Form Elements
-.form-control,
-div[type="text"] {
+:not(text-zone)>input[type="text"]:not(.score),
+textarea {
   flex: 1;
   padding: 12px 16px;
   margin-bottom: 0;
-  // height: 48px;
-  height: 48px !important;
+  height: 48px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 1rem;
+  line-height: 1.5rem !important;
   color: $grey-black;
   border: 1px solid $grey-cloudy;
   box-shadow: none;
   background-color: $white;
+  box-sizing: border-box;
   transition: border 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   &:focus {
-    border-width: 2px;
-    border-color: $grey-stone;
+    border-width: 2px !important;
+    border-color: $grey-stone !important;
     box-shadow: none;
-  }
-
-  &[textarea] {
-    height: 40px;
-    resize: none;
-  }
-
-  &[textarea]:focus {
-    border: 1px solid $grey-stone !important;
   }
 
   &[role="textbox"].drawing-zone {
@@ -39,15 +30,20 @@ div[type="text"] {
   }
 
   &::placeholder {
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.5rem !important;
     font-style: italic;
     color: $grey-stone;
+    opacity: 1;
   }
 
   &.ng-not-empty {
     border-color: $grey-stone;
+  }
+
+  &[disabled] {
+    color: $darkest-grey;
   }
 }
 
@@ -72,22 +68,79 @@ div[type="text"] {
 
 // TEXTAREAS
 
-editor>textarea {
+editor > textarea {
   font-family: monospace;
 }
 
 textarea {
-  font-family: "Roboto", Arial, sans-serif;
-  border-radius: 0 0 8px 8px;
-  font-size: 16px;
-  color: $grey-black;
-  border: 1px solid $grey-cloudy;
-  box-shadow: none;
-  background-color: $white;
   resize: none;
-  transition: border 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  height: inherit;
+}
 
-  &[disabled] {
-    color: $darkest-grey;
+.form-label {
+  color: $grey-black;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.form-info {
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 20px;
+  color: $grey-graphite;
+}
+
+editor [contentEditable=true][placeholder]:empty:before {
+  content: attr(placeholder);
+  font-style: italic;
+  font-size: 1rem;
+  color: $grey-stone;
+}
+
+// SELECT
+:not(text-zone)>select {
+  min-width: 10rem;
+  padding: 12px 8px 12px 16px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid $grey-cloudy;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: right .75em center;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjAxIDUuMTUzYTEuMTI1IDEuMTI1IDAgMCAxIDEuNTg3LjEwNkw5IDEwLjI5Mmw0LjQwMy01LjAzM2ExLjEyNSAxLjEyNSAwIDEgMSAxLjY5NCAxLjQ4MmwtNS4yNSA2YTEuMTI1IDEuMTI1IDAgMCAxLTEuNjk0IDBsLTUuMjUtNmExLjEyNSAxLjEyNSAwIDAgMSAuMTA2LTEuNTg4WiIgZmlsbD0iIzRBNEE0QSIvPgo8L3N2Zz4K);
+
+  &:focus {
+    border-width: 2px;
+    border-color: $grey-stone;
+    box-shadow: none;
   }
+}
+
+.option-edited-dates {
+  input[type="text"] {
+    padding: 0 10px !important;
+    height: auto !important;
+  }
+
+  .one {
+    width: 80px !important;
+  }
+
+  .two {
+    width: 100px !important;
+  }
+}
+
+.input-date {
+  font-size: .875rem !important;
+  width: 120px;
+  max-width: 120px;
+}
+
+.subject-edit-textarea {
+  min-height: 125px;
 }

@@ -1,129 +1,162 @@
 text-zone {
-    max-width: 150px;
-    min-width: 150px;
+  cursor: pointer;
+  position: relative;
+  background: $grey-fog;
+  border-radius: 4px;
+  padding: 8px;
+  color: $grey-black;
+  display: inline-flex;
+  gap: 4px;
+  flex-direction: row-reverse;
+  box-sizing: border-box;
+  border: 1px solid $grey-cloudy;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  line-height: 20px;
+  // pointer-events: none;
+  // max-width: 150px;
 
-    @media screen and (min-width: $wide-screen),
-    print {
-        max-height: 30px;
-        min-height: 30px;
-    }
-
-    @media screen and (max-width: $wide-screen),
-    print {
-        max-height: 25px;
-        min-height: 25px;
-    }
-
-    background: #fff;
-    margin: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-    padding: 5px 15px;
-    color: #666;
-    display: inline-flex;
-    flex-direction: row-reverse;
+  .text-zone-size {
+    padding-right: 0.8rem;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 20px;
+    max-width: 75px;
     position: relative;
-    box-sizing: border-box;
-    line-height: 20px;
+    background: inherit;
     transition: all 250ms ease,
     max-width 0.15s 0.15s ease-out,
     max-height 0.15s 0s ease-in;
+    font-size: 14px;
+  }
 
-    span {
-        overflow: hidden;
-        display: block;
-        padding-right: 1em;
-        position: relative;
-        max-height: 20px;
-        background: inherit;
-        transition: max-height 0.15s 0s ease-in;
+  div.edit {
+    display: inline-block;
+    padding-right: .5em;
+    background: inherit;
+  }
 
-        &::before {
-            content: "...";
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
+  &.selected {
+    background: $flash-blue;
+    color: $white;
 
-        &::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            width: 1em;
-            height: 1em;
-            margin-top: 0.2em;
-            background: inherit;
-        }
+    >svg[class*="icon"] {
+      fill: $white;
+    }
+  }
+
+  input[type="text"],
+  select {
+    font-size: 1em;
+    border: 0 ;
+    margin: 0;
+    padding: 0 8px;
+    width: 150px;
+    height: unset;
+    line-height: unset;
+    background-color: transparent !important;
+  }
+
+  input[type="text"].filled,
+  select.filled {
+    background-color: #fff !important;
+  }
+
+  input[type="text"] {
+    box-sizing: border-box;
+  }
+
+  input[type="text"]:focus {
+    border-bottom: 0;
+    box-shadow: none;
+  }
+
+  [drop-item] {
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+    min-height: 40px;
+    position: relative;
+    box-sizing: border-box;
+    background: transparent;
+    border-radius: 4px;
+    transition: background 250ms ease;
+
+    .text-zone-size {
+      max-width: 125px;
+      pointer-events: none;
     }
 
-    &.selected {
-        background: $primary;
-        color: #fff;
+    &.no-responsive.droppable,
+    &.no-desktop.droppable {
+      margin: -8px;
+      padding: 8px;
     }
+  }
 
-    input[type="text"],
-    select {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        border-bottom: none;
+  &.error {
+    background: $red;
+    border-color: $red;
+    color: #e8e8e8;
+    border-left: 0;
+  }
+
+  &.success {
+    background: $green;
+    border-color: $green;
+    color: #fff;
+    border-left: 0;
+    font-size: 16px;
+  }
+
+  >svg {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+
+    &:hover {
+      fill: $accent;
     }
+  }
 
-    input[type="text"] {
-        box-sizing: border-box;
-        padding-left: 1px;
-    }
+  .filled {
+    background-color: $white;
+    border: 0;
+  }
+}
 
-    input[type="text"]:focus {
-        border-bottom: 1px solid $orange;
-    }
+.perform-text-zone {
+  
+  text-zone {
+    max-width: inherit;
+    // padding: 0;
+    border: 0;
+    background: hsla(0, 100%, 100%, 40%);
+  }
 
-    [drop-item] {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        box-sizing: border-box;
-        line-height: 33px;
-        text-align: center;
-        background: transparent;
-        transition: background 250ms ease;
-    }
+  input[type="text"],
+  select {
+    margin: -8px !important;
+    padding: 8px !important;
+    border: 0 !important;
+    height: auto !important;
+  }
+}
 
-    &.error {
-        background: $red;
-        border-color: $red;
-        color: #e8e8e8;
-        border-left: 0;
-    }
+.view-text-zone text-zone {
+  min-width: 150px;
+  min-height: 40px;
+  justify-content: flex-end;
+}
 
-    &.success {
-        background: $green;
-        border-color: $green;
-        color: #fff;
-        border-left: 0;
-        font-size: 16px;
-    }
-
-    >i {
-        display: inline;
-        transition: color 250ms ease;
-        z-index: 300;
-        pointer-events: all;
-
-        &:hover {
-            color: $orange;
-        }
-
-        &.edit {
-            margin: 0 5px;
-        }
-
-        &.close {
-            margin-right: -10px;
-        }
-    }
+.edit-text-zone {
+  padding: 0;
+  position: absolute;
+  border: 0;
+  height: 20px;
+  inset: 0;
+  opacity: 0;
 }

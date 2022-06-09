@@ -1,0 +1,142 @@
+.button {
+    margin: 0 !important;
+    border-radius: .625rem;
+    padding: .625rem 1rem;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 20px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .625rem;
+    box-shadow: none;
+    font-family: var(--font-primary);
+
+    &::before {
+        display: none;
+    }
+
+    &-primary {
+        color: $white;
+        background-color: $flash-blue;
+
+        svg[class*="icon"] {
+            fill: $white;
+        }
+
+        &:hover {
+            background: darken($flash-blue, 10%);
+        }
+
+        &:active {
+            background: darken($flash-blue, 15%)
+        }
+
+        &.disabled {
+            background-color: $grey-cloudy;
+        }
+    }
+
+    &-secondary {
+        color: $accent;
+        background-color: $light-grey;
+
+        &:hover {
+            color: $white;
+            background: $accent;
+
+            svg[class*="icon"] {
+                fill: $white;
+            }
+        }
+
+        &:active {
+            color: $white;
+            background: $accent;
+
+            svg[class*="icon"] {
+                fill: $white;
+            }
+        }
+
+        &.disabled {
+            color: $grey-grey;
+            background-color: $grey-cloudy;
+
+            svg[class*="icon"] {
+                fill: $grey-grey;
+            }
+            
+        }
+
+        svg[class*="icon"] {
+            fill: $accent;
+        }
+    }
+
+    &-accent {
+        color: $white;
+        background-color: $orange;
+
+        &:hover {
+            background: darken($orange, 10%)
+        }
+
+        &:active {
+            background: darken($orange, 15%)
+        }
+
+        &.disabled {
+            color: $grey-grey;
+            background-color: $grey-cloudy;
+
+            svg[class*="icon"] {
+                fill: $grey-grey;
+            }
+        }
+
+        svg[class*="icon"] {
+            fill: $white;
+        }
+    }
+
+    &-link {
+        color: $flash-blue;
+        background-color: transparent;
+
+        svg[class*="icon"] {
+            fill: $flash-blue;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: darken($flash-blue, 10%);
+
+            svg[class*="icon"] {
+                fill: darken($flash-blue, 10%);
+            }
+        }
+
+        &:active {
+            background-color: transparent;
+            color: darken($flash-blue, 15%);
+
+            svg[class*="icon"] {
+                fill: darken($flash-blue, 15%);
+            }
+        }
+
+        &.disabled {
+            background-color: transparent;
+            color: $grey-grey;
+
+            svg[class*="icon"] {
+                fill: $grey-grey;
+            }
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+    }
+}

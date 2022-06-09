@@ -1,0 +1,8 @@
+div#edit-subject {
+    form[name="formSubjectProperties"] {
+        border-radius: 8px;
+        background-color: $white;
+        padding: 24px;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    }
+}

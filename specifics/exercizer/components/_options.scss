@@ -1,0 +1,108 @@
+.options {
+    min-height: 150px;
+    background: $grey-fog;
+    // margin-bottom: 20px;
+    // background: $lightest-grey;
+    // padding: 10px;
+    // margin-top: 10px;
+    // border-radius: 3px;
+    // transition: background 250ms ease;
+
+    ul {
+        padding: 0;
+        list-style-type: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+        gap: 1rem;
+
+        li {
+            z-index: 20;
+        }
+    }
+
+    &.lightbox {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+
+        ul {
+            justify-content: flex-start;
+        }
+    }
+
+    &.right {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: .75rem;
+        margin: 0;
+        border-radius: .25rem;
+        background-color: $grey-fog;
+        border: 1px solid $grey-grey;
+
+        @media screen and (max-width: $fat-tablette), print {
+            margin-top: 1rem;
+        }
+
+        ul {
+            gap: .75rem;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        image-zone {
+            margin: 0;
+        }
+    }
+
+
+    .add-option {
+        input[type="text"] {
+            border-right: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &>button {
+            padding: 0;
+            margin: 0;
+            width: 46px;
+            background: $flash-blue;
+            box-shadow: none;
+            border-radius: 0 .5rem .5rem 0;
+
+            &[disabled] {
+                background-color: $grey-grey;
+            }
+
+            .icon-plus {
+                fill: $white;
+            }
+        }
+
+    }
+
+    text-zone {
+        cursor: move;
+        width: auto !important;
+        box-shadow: none;
+        background-color:$white;
+        border: 1px dashed $grey-grey;
+        min-width: unset !important;
+        max-width: unset !important;
+
+        .text-zone-size {
+            padding-right: 0;
+            max-width: inherit;
+            text-overflow: inherit;
+            max-height: inherit;
+            white-space: normal;
+        }
+    }
+
+    
+}

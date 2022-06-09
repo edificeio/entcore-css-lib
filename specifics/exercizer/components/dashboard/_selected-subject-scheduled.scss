@@ -1,0 +1,66 @@
+.selected-subject-scheduled {
+    padding: 6px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    border: 1px solid $grey-grey;
+    border-radius: 12px;
+
+    span,
+    label {
+        display: inline-block;
+        font-size: .8125rem;
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .icon-attachement {
+        flex-shrink: 0;
+    }
+
+    button {
+        margin: 0;
+        padding: 2px 3px;
+        float:none;
+        background-color: transparent;
+        box-shadow: none;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 8px;
+        flex-shrink: 0;
+        aspect-ratio: 1 / 1;
+
+        &.download {
+            border-color: $flash-blue;
+            [class*="icon"] {
+                fill: $flash-blue;
+            }
+        }
+        &.remove {
+            border-color: $red;
+
+            [class*="icon"] {
+                fill: $red;
+            }
+        }
+
+        &:hover {
+            .download {
+                background-color: $flash-blue;
+                [class*="icon"] {
+                    fill: $white;
+                }
+            }
+            .remove {
+                background-color: $red;
+    
+                [class*="icon"] {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}

@@ -1,18 +1,41 @@
 body.exercizer {
+  color: $grey-black;
+  line-height: 24px !important;
 
-  @import './components/';
-  @import './views/';
+  @import "./components/";
+  @import "./views/";
+
+  >* {
+    box-sizing: border-box;
+  }
 
   &.dragging {
-
     [drop-item].drag-over {
       background: $orange;
       color: #fff;
     }
   }
 
+  svg[class*="icon"] {
+    flex-shrink: 0;
+  }
+
+  editor {
+    margin: 0;
+    line-height: 28px !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1;
+  }
+
   h1 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     line-height: 28px;
     color: $purple;
@@ -27,67 +50,68 @@ body.exercizer {
     }
   }
 
+  h2,
+  h3,
+  h4 {
+    color: $grey-black;
+  }
+
   h2 {
     font-size: 18px;
   }
 
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .lightbox>.content h2 {
+    font-size: 1.125rem;
+    color: $grey-black;
+  }
+
   button {
     border-radius: 4px;
-    margin-left: .5em;
-    margin-right: .5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 
     &.right-magnet:first-of-type,
     &:not(.right-magnet):last-of-type {
       margin-right: 0;
     }
+
     &.right-magnet:last-of-type,
     &:not(.right-magnet):first-of-type {
       margin-left: 0;
     }
+
     &>* {
       vertical-align: middle;
     }
+
     &>i {
       margin-right: 8px;
     }
+
     &.label-badge {
       padding: 8px 16px;
     }
   }
 
-  .chip {
-    &.selected {
-      box-shadow: 2px 2px 1px 0px $shadow;
-      background: $primary;
+  .in-place-toaster {
+    position: relative;
+    margin: 0 -1.6rem 0;
+    top: 1.6rem;
+    padding: 0 1rem;
+    background-color: $grey-fog;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid $lightest-grey;
 
-      i {
-        &:hover {
-          &:before {
-            color: $black !important;
-          }
-        }
-      }
-    }
+    .btns {
+      border-radius: 8px;
 
-    &.deletable {
-      box-shadow: 2px 2px 1px 0px $shadow;
-      background: $white;
-
-      span {
-        color: $black;
-      }
-
-      i {
-        &:before {
-          color: $solid-grey !important;
-          @include run-transition;
-        }
-
-        &:hover {
-          &:before {
-            color: $red !important;
-          }
-        }
+      &:hover {
+        color: $hover;
       }
     }
   }
@@ -96,24 +120,24 @@ body.exercizer {
     cursor: move;
   }
 
+  .image-select-radius img {
+    border-radius: 4px;
+  }
+
   .base-image {
-
-    @media screen and (min-width: $wide-screen),
-    print {
-      width: 760px;
-      height: 600px;
-    }
-
-    margin: auto;
-    background: #efefef;
-    border-radius: 5px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 0;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    background: #fff;
+    border-radius: .25rem;
     position: relative;
     overflow: visible;
 
     article {
       background: transparent;
+      margin: 0 !important;
+      overflow: inherit;
+      z-index: 2 !important;
     }
 
     .image-container {
@@ -130,24 +154,7 @@ body.exercizer {
       box-sizing: border-box;
       transition: border 250ms ease;
       border: 1px dashed transparent;
-      border-radius: 5px;
-
-      >img {
-
-        @media screen and (min-width: $wide-screen),
-        print {
-          width: 100%;
-        }
-
-        @media screen and (max-width: $wide-screen),
-        print {
-          margin-left: auto;
-          margin-right: auto;
-          display: block;
-        }
-
-        max-height: 100%;
-      }
+      border-radius: .25rem;
 
       &:hover {
         border: 1px dashed $orange;
@@ -164,19 +171,13 @@ body.exercizer {
           align-items: center;
 
           >img {
-
-            @media screen and (min-width: $wide-screen),
-            print {
-              width: 100%;
-            }
-
+            aspect-ratio: 4 / 3;
+            object-fit: contain;
+            width: 100%;
             max-height: 100%;
-            border: none;
 
             @media screen and (max-width: $wide-screen),
             print {
-              border-radius: 0;
-              width: initial;
               margin-left: auto;
               margin-right: auto;
               display: block;
@@ -192,78 +193,34 @@ body.exercizer {
         align-items: center;
 
         >img {
-
-          @media screen and (min-width: $wide-screen),
-          print {
-            width: 100%;
-          }
-
+          aspect-ratio: 4 / 3;
+          object-fit: contain;
+          width: 100%;
           max-height: 100%;
           border: none;
 
-          @media screen and (max-width: $wide-screen),
+          /* @media screen and (max-width: $wide-screen),
           print {
             border-radius: 0;
             width: initial;
             margin-left: auto;
             margin-right: auto;
             display: block;
-          }
+          } */
         }
       }
     }
 
-    >img {
-      width: 100%;
-      height: auto;
-    }
-  }
 
-  .options {
-    min-height: 150px;
-    margin-bottom: 20px;
-    background: $lightest-grey;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 3px;
-    transition: background 250ms ease;
+    i {
 
-    ul {
-      padding: 0;
-      list-style-type: none;
-      flex-wrap: wrap;
-      justify-content: center;
-      display: flex;
-
-      li {
-        z-index: 20;
+      &.trash,
+      &.edit.pick-file {
+        display: none;
+        visibility: hidden;
       }
     }
-  }
 
-  .add-option {
-
-    input[type="text"],
-    button {
-      float: left;
-    }
-
-    input[type="text"] {
-      border: 1px solid #ddd;
-    }
-
-    button {
-      border-radius: 0;
-      box-shadow: none;
-      width: 32px;
-      padding: 5px;
-      margin-left: 0;
-      height: 29px;
-    }
-  }
-
-  .options text-zone {
-    width: auto;
   }
 
   .eight-desktop {
@@ -274,28 +231,114 @@ body.exercizer {
     }
   }
 
-  article {
-    border-radius: 8px;
-    padding: 24px;
-    transition: z-index 0s 0.35s;
+  .grain-divider {
+    border-bottom: 1px solid $grey-cloudy;
+    padding: 1.6rem;
+    margin: -1.6rem -1.6rem 1.6rem;
   }
 
-  article.textZoneOpen {
-    z-index: 1000 !important;
-    transition: z-index 0s;
+  article {
+    border-radius: .5rem;
+    padding: 1.6rem;
+    transition: z-index 0s 0.35s;
+    box-shadow: 2px 6x rgba($color: #000000, $alpha: .5);
 
-    text-zone {
-      max-width: 450px;
-      max-height: 300px;
-      transition: all 250ms ease, max-width 0.15s 0s ease-in,
-        max-height 0.15s 0.15s ease-out;
+    header {
+      color: $grey-black;
+      font-weight: 600;
+    }
 
-      span {
-        white-space: normal;
-        max-height: 300px;
-        transition: max-height 0.15s 0.15s ease-out;
+    &.textZoneOpen {
+      z-index: 1000 !important;
+      transition: z-index 0s;
+
+      text-zone {
+
+        .text-zone-size {
+          max-width: 200px;
+          max-height: 40px;
+          transition: all 250ms ease, max-width 0.15s 0s ease-in,
+            max-height 0.15s 0.15s ease-out;
+          white-space: normal;
+          text-overflow: inherit;
+        }
+      }
+
+    }
+
+    &.placed-block--dragging {
+      text-zone {
+        cursor: move !important;
       }
     }
+
+    &.article-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .edit-order-list {
+    header {
+      font-weight: 600;
+      background-color: #e4f4ff;
+      vertical-align: middle;
+      padding: 0 16px;
+      border-radius: 4px;
+      font-size: .875rem;
+
+      .cell:first-of-type {
+        width: 71px;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      >li {
+        @include grid-cell-width(12);
+        @include cell;
+        list-style-type: none;
+        padding: 4px 12px;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #e4f4ff;
+        }
+
+        .edit-order-index {
+          height: 32px;
+          width: 32px;
+          margin: 8px 25px 8px 4px;
+          float: left;
+          font-size: 15px;
+          text-align: center;
+          line-height: 32px;
+          border: 2px solid $primary;
+          border-radius: 50%;
+          color: $primary;
+        }
+
+        input[type="text"] {
+          margin-top: 2px;
+        }
+
+        .edit-order-delete {
+          top: 15px;
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  ul.order-list {
+    padding: 12px;
+    margin: 4px 0;
+    border-radius: 4px;
+    background-color: $grey-fog;
+    border: 1px solid $lightest-grey;
   }
 
   .order-index {
@@ -316,10 +359,10 @@ body.exercizer {
     padding: 12px;
     margin: 4px 0;
     border-radius: 4px;
-    background-color: #FAFAFA;
+    background-color: $grey-fog;
     border: 1px solid $lightest-grey;
 
-    &::after {
+    /* &::after {
       @include fonticon;
       content: "\e847";
       font-size: 20px;
@@ -327,7 +370,7 @@ body.exercizer {
       right: 25px;
       top: calc(50% - 12px);
       opacity: 0.75;
-    }
+    } */
   }
 
   // Delete border from Order question in correction
@@ -344,31 +387,6 @@ body.exercizer {
     border-radius: 7px;
     min-height: 23px;
     margin-top: 15px;
-  }
-
-  .dominos.fallen {
-    .item {
-      .domino {
-        .bottom {
-          .content {
-            .buttons {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              height: calc(100% - 20px);
-              display: flex;
-              align-items: flex-end;
-              justify-content: flex-start;
-              flex-direction: column;
-            }
-          }
-
-          .title-icon i {
-            color: $text-light;
-          }
-        }
-      }
-    }
   }
 
   .flex-row.justify-center.centered>button.flat-button.five {
@@ -393,152 +411,25 @@ body.exercizer {
   }
 
   /*  COLOR CORRECTED / CORRECTION ON GOING / HAS BEEN START / IS SUBMITTED */
-  .dominos .item .domino .due-date {
-    padding: 10px 0;
-    color: $grey;
-
-    strong {
-      color: inherit;
-    }
-
-    &>* {
-      display: inline-block;
-    }
-
-    &::before {
-      @include fonticon;
-      content: "\f017";
-      font-size: 20px;
-      margin-right: 5px;
-      vertical-align: middle;
-    }
-
-    &.delay {
-      color: $red;
-
-      &::before {
-        @include fonticon;
-        content: "\e426";
-      }
-    }
-  }
-
-  .dominos .item .domino .bottom .content {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: $darkest-grey;
-  }
-
-  .dominos .item .domino .score {
-    font-size: 20px;
-  }
-
-  .dominos .item .domino .right-glider {
-    overflow: hidden;
-    font-size: 2em;
-    color: white;
-    height: 100%;
-    padding: 0 10px;
-    position: absolute;
-    right: 0;
-    transition: width 1s ease;
-    width: 1%;
-    min-width: 13px;
-
-    a {
-      font-size: large;
-      position: absolute;
-      color: white;
-      opacity: 0;
-      transition: opacity 0.5s ease-in 0s;
-
-      @media screen and (max-width: $tablette),
-      print {
-        display: block;
-        left: 35px;
-
-        @media screen and (max-width: $fat-mobile),
-        print {
-          top: 50px;
-        }
-
-        @media screen and (min-width: $fat-mobile),
-        print {
-          top: 35px;
-        }
-      }
-
-      @media screen and (min-width: $tablette),
-      print {
-        left: 50px;
-        top: 40px;
-
-        >i18n {
-          white-space: nowrap;
-        }
-      }
-    }
-
-    span {
-      color: white !important;
-    }
-
-    &:hover {
-
-      @media screen and (max-width: $tablette),
-      print {
-        width: 140px;
-      }
-
-      @media screen and (min-width: $tablette),
-      print {
-        width: 250px;
-      }
-
-      a {
-        opacity: 1;
-        transition: all 1s ease-in 0s;
-      }
-    }
-
-    &.green {
-      background-color: $green;
-    }
-
-    &.grey {
-      background-color: $grey;
-    }
-
-    span {
-      top: 40%;
-      position: relative;
-    }
-  }
-
   .color-corrected,
-  .color-training-done {
-    color: $green;
+  .color-training-done,
+  .color-is-submitted {
+    color: $green !important;
   }
 
   .color-is-correction-on-going,
   .color-training-sided {
-    color: $purple;
-  }
-
-  .color-is-submitted {
-    color: $cyan;
+    color: $purple !important;
   }
 
   .color-has-been-started,
   .color-training-on-going {
-    color: $orange;
+    color: $orange !important;
   }
-
 
   /* Custom tags for subject library list */
   .subject-library-tag {
-    font-size: 12px;
+    font-size: .8125rem;
     color: white;
     background-color: $orange;
     border-radius: 2px;
@@ -548,9 +439,6 @@ body.exercizer {
   }
 
   /* OVERWRITE THEME */
-  .tabs header.selected {
-    background-color: transparent !important;
-  }
 
   .down-open:hover {
     color: $orange;
@@ -601,23 +489,78 @@ body.exercizer {
   }
 
   .import-files-custom {
-    padding-top: 70px;
-    padding-bottom: 100px;
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    background: $white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-width: 1px;
+
+    & > article {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      margin-bottom: 0;
+      position: static;
+      width: auto;
+      height: auto;
+      box-shadow: none;
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+
+      .select-file + div {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .help {
+        height: auto;
+        line-height: 18px;
+      }
+
+      .icon-upload {
+        flex-shrink: 0;
+
+        @media (max-width: $tablette) {
+          display: none;
+        }
+      }
+    }
+    
+    @media (max-width: $tablette) {
+      .default {
+        position: static;
+        div:last-child {
+          display: inline-flex;
+        }
+      }
+    }
   }
 
   // & body
-  editor.small-editor.edit>[contenteditable] {
+  editor.small-editor.edit div[contenteditable] {
     width: 100%;
     max-height: 100px !important;
     min-height: 100px !important;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
-  editor.small-editor.edit>[contenteditable]:focus {
+  editor.small-editor.edit div[contenteditable] {
+    padding: .75rem 1rem;
+  }
+
+  editor.small-editor.edit div[contenteditable]:focus {
     width: 100%;
     max-height: none !important;
-    min-height: 250px !important;
+    min-height: 100px !important;
     overflow: visible;
+  }
+
+  table tbody tr:hover {
+    background-color: transparent;
   }
 
   table.scores {
@@ -707,7 +650,8 @@ body.exercizer {
     }
 
     &__delete {
-      right: 0;
+      right: 8px;
+      display: inline-flex;
     }
   }
 
@@ -768,11 +712,6 @@ body.exercizer {
       padding-left: 0 !important;
     }
 
-    input {
-      padding: 10px;
-      height: inherit;
-    }
-
     ul.thought-out-actions li {
       margin: 10px 0;
     }
@@ -824,11 +763,21 @@ body.exercizer {
   }
 
   .item-selected {
-    border-color: #ff8500 !important;
+    background-color: rgba(42,154,198,0.2) !important;
+    border: 2px dashed #2a9cc8 !important;
+
+    .text-zone-size {
+      background-color: transparent;
+    }
   }
 
   .left-margin-5 {
     margin-left: 5px;
+  }
+
+  .default-img image-select i.trash {
+    color: $dark-grey;
+    pointer-events: none;
   }
 
   @media screen and (max-width: $fat-mobile),
@@ -963,14 +912,64 @@ body.exercizer {
     color: #46bfaf;
   }
 
+  .zone-image {
+    image-zone {
+      border: 1px solid $white;
+    }
+  }
+
+  .zone-image,
+  .zone-text {
+
+    @media (min-width: $tablette),
+    print {
+      display: flex;
+      gap: 16px;
+
+      >.row {
+        flex: 1;
+      }
+    }
+
+    >.select-zone {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+
+
+      >button {
+        margin: 0 !important
+      }
+
+      >.options {
+        margin: 0 !important;
+        flex: 1;
+        align-self: stretch;
+
+        @media screen and (max-width: $tablette),
+        print {
+          flex-basis: 100%;
+        }
+      }
+
+      @media screen and (min-width: $tablette),
+      print {
+        width: 15rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    }
+  }
+
   @media screen and (max-width: $tablette),
   print {
     .mobile-row {
       @include row;
-
-      >div>input {
-        padding: 0;
-      }
     }
   }
 
@@ -991,5 +990,11 @@ body.exercizer {
     @include desktop-only {
       display: none !important;
     }
+  }
+
+  div.hidden-content>* {display: none;}
+
+  strong {
+    font-weight: 600;
   }
 }

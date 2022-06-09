@@ -1,0 +1,10 @@
+.choice-view {
+    [class*="icon"] {
+        fill: $grey-stone;
+        
+        &.selected {
+            fill: $grey-black;
+        }
+
+    }
+}
