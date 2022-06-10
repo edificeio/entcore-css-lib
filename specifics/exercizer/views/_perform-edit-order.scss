@@ -11,11 +11,7 @@ edit-order input[type="text"] {
 perform-order,
 edit-order {
   ul.thought-out-actions > li:hover {
-    color: #fff;
-
-    .order-index {
-      background-color: white;
-      color: $primary;
-    }
+    // color: #fff;
+    background-color: $pale-cyan;
   }
 }

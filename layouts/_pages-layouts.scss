@@ -750,14 +750,17 @@ $fgrows: 0,
 	}
 }
 
-@media (min-width: $tablette) {
-	.grid {
-		display: grid;
-	}
+.grid {
+	display: grid;
 }
 
 .grid-2 {
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	// grid-template-columns: repeat(2, 1fr);
+
+	@media (max-width: $tablette) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .grid-zone-image {

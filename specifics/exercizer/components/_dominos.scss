@@ -1,9 +1,9 @@
 .dominos.fallen {
     &.index {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        // grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+        grid-template-columns: repeat(auto-fit, MinMax(Min(100%, 330px), 1fr));
         gap: 1rem;
+        justify-content: flex-start;
 
         .item {
             margin: 0;
@@ -43,8 +43,6 @@
             align-items: flex-start;
 
             .top {
-                /* width: 150px;
-                height: 150px; */
                 float: none;
                 aspect-ratio: 1 / 1;
 
@@ -74,15 +72,19 @@
                     -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;  
                     overflow: hidden;
+                    font-size: 1rem;
+                    font-weight: 600;
+
+
+                    &:hover {
+                        color: $flash-blue;
+                    }
                 }
 
                 strong {
-                    font-size: 1rem;
+                    font-size: .875rem;
+                    font-weight: 400;
                     color: $grey-black;
-
-                    &:hover {
-                        color: $cyan;
-                    }
                 }
 
                 .content {
@@ -92,12 +94,12 @@
                         color: $grey-graphite;
 
                         span {
-                            color: inherit;
+                            color: currentColor;
                         }
                     }
 
                     span {
-                        color: inherit;
+                        color: $grey-black;
                     }
 
                     >div:nth-child(2) {
@@ -131,8 +133,11 @@
 }
 
 .dominos .item .domino .due-date {
-    padding: 10px 0;
-    color: $grey;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 0;
+    color: $grey-graphite;
 
     strong {
         color: inherit;
@@ -140,18 +145,20 @@
 
     &>* {
         display: inline-block;
-    }
-
-    /* &::before {
-        @include fonticon;
-        content: "\f017";
-        font-size: 20px;
-        margin-right: 5px;
         vertical-align: middle;
-    } */
+        margin: 0;
+    }
 
     &.delay {
         color: $red;
+
+        > .icon-clock {
+            fill: $red;
+        }
+
+        .bottom .content span {
+            color: $red;
+        }
     }
 }
 
@@ -159,7 +166,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
-    color: $darkest-grey;
+    color: $grey-black;
 }
 
 .dominos .item .domino .score {
@@ -239,7 +246,7 @@
     }
 
     &.grey {
-        background-color: $grey;
+        background-color: $grey-graphite;
     }
 
     span {

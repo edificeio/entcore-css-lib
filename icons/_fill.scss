@@ -1,0 +1,17 @@
+$fills: (
+  "primary": $primary,
+  "accent": $accent,
+  "background": $background,
+  "alert": $warning-color,
+  "warning": $forewarn-color,
+  "success": $valid-color,
+  "white": $white,
+  "shadow": $shadow,
+  "black": $black,
+);
+
+@each $fill, $color in $fills {
+  .fill-#{$fill} {
+    fill: $color;
+  }
+}

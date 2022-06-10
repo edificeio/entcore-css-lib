@@ -132,9 +132,8 @@ text-zone {
   
   text-zone {
     max-width: inherit;
-    // padding: 0;
     border: 0;
-    background: hsla(0, 100%, 100%, 40%);
+    background: rgba(255,255,255,.4);
   }
 
   input[type="text"],

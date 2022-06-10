@@ -42,7 +42,7 @@
         background-color: $grey-fog;
         border: 1px solid $grey-grey;
 
-        @media screen and (max-width: $fat-tablette), print {
+        @media screen and (max-width: $tablette), print {
             margin-top: 1rem;
         }
 

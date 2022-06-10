@@ -65,6 +65,14 @@ body.exercizer {
     font-weight: 600;
   }
 
+  .lightbox h4 {
+    color: $grey-black;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 22px;
+    font-family: var(--font-primary);
+  }
+
   .lightbox>.content h2 {
     font-size: 1.125rem;
     color: $grey-black;
@@ -238,6 +246,7 @@ body.exercizer {
   }
 
   article {
+    margin-bottom: 0;
     border-radius: .5rem;
     padding: 1.6rem;
     transition: z-index 0s 0.35s;
@@ -342,16 +351,17 @@ body.exercizer {
   }
 
   .order-index {
-    height: 40px;
-    width: 40px;
-    margin-right: 25px;
-    border-radius: 20px;
-    background: $primary;
-    color: #fff;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid $flash-blue;
+    color: $flash-blue;
     float: left;
-    font-size: 15px;
+    font-size: .875rem;
     text-align: center;
-    line-height: 40px;
+    line-height: 1.5rem;
     transition: background 250ms ease;
   }
 
@@ -458,11 +468,10 @@ body.exercizer {
   }
 
   .association-possible-answer-left {
-    border: 1px dashed $darkest-grey;
-    padding: 5px 20px;
-    margin: 10px;
-    border-radius: 10px;
-    background-color: $light-grey;
+    border: 1px dashed $grey-grey;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: $white;
 
     &:hover {
       border: 1px dashed $orange;
@@ -637,6 +646,8 @@ body.exercizer {
     }
 
     &__right {
+      padding-left: 1rem;
+      padding-right: 1rem;
       border: 1px dashed $solid-grey !important;
       border-radius: 10px;
       text-align: center;
@@ -667,7 +678,7 @@ body.exercizer {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    box-shadow: 2px 2px 5px rgba(black, 0.25);
+    box-shadow: 0 2px 6px rgba(black, 0.25);
     cursor: pointer;
 
     &::before {
@@ -736,7 +747,7 @@ body.exercizer {
       .item {
         .domino {
           .top {
-            display: none;
+            display: none !important;
           }
 
           .bottom {
@@ -996,5 +1007,14 @@ body.exercizer {
 
   strong {
     font-weight: 600;
+  }
+
+  dropdown-buttons open {
+    border-radius: 8px;
+  }
+
+  a.comment {
+    color: $flash-blue;
+    border-radius: 8px;
   }
 }
