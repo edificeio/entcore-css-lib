@@ -2,12 +2,10 @@
     &-scheduled {
         cursor: pointer;
         padding: 6px 8px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8px;
+        display: inline-block;
         border: 1px solid $grey-grey;
         border-radius: 12px;
+        margin-bottom: 0.6rem;
 
         &:hover {
             border-color: $flash-blue;
@@ -28,11 +26,9 @@
             flex-shrink: 0;
         }
 
-        .icon-eye {
-            fill: $flash-blue;
-        }
-
         button {
+            display: inline-block;
+            vertical-align: middle;
             margin: 0;
             padding: 2px 3px;
             float: none;
@@ -73,21 +69,9 @@
     }
 
     &-inner {
-        display: flex;
+        vertical-align: middle;
+        display: inline-flex;
         gap: 4px;
         align-items: center;
-        
-        .icon-eye {
-            display: none;
-        }
-
-        &:hover {
-            .icon-eye {
-                display: block;
-            }
-            .icon-attachement {
-                display: none;
-            }
-        }
     }
 }

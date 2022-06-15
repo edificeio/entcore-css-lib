@@ -1,12 +1,8 @@
 .options {
-    min-height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem 1rem;
     background: $grey-fog;
-    // margin-bottom: 20px;
-    // background: $lightest-grey;
-    // padding: 10px;
-    // margin-top: 10px;
-    // border-radius: 3px;
-    // transition: background 250ms ease;
 
     ul {
         padding: 0;
@@ -22,6 +18,7 @@
     }
 
     &.lightbox {
+        display: block;
         padding: 0;
         margin: 0;
         background-color: transparent;
@@ -32,17 +29,14 @@
     }
 
     &.right {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 1rem;
-        padding: .75rem;
+        padding: .5rem;
         margin: 0;
         border-radius: .25rem;
         background-color: $grey-fog;
         border: 1px solid $grey-grey;
 
-        @media screen and (max-width: $tablette), print {
+        @media screen and (max-width: $tablette),
+        print {
             margin-top: 1rem;
         }
 
@@ -53,12 +47,7 @@
             justify-content: flex-start;
             align-items: flex-start;
         }
-
-        image-zone {
-            margin: 0;
-        }
     }
-
 
     .add-option {
         input[type="text"] {
@@ -90,7 +79,7 @@
         cursor: move;
         width: auto !important;
         box-shadow: none;
-        background-color:$white;
+        background-color: $white;
         border: 1px dashed $grey-grey;
         min-width: unset !important;
         max-width: unset !important;
@@ -104,5 +93,4 @@
         }
     }
 
-    
 }

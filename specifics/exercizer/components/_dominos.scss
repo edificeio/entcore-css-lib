@@ -83,7 +83,6 @@
 
                 strong {
                     font-size: .875rem;
-                    font-weight: 400;
                     color: $grey-black;
                 }
 
@@ -156,8 +155,8 @@
             fill: $red;
         }
 
-        .bottom .content span {
-            color: $red;
+        span {
+            color: $red !important;
         }
     }
 }
@@ -171,6 +170,10 @@
 
 .dominos .item .domino .score {
     font-size: 20px;
+}
+
+.dominos .domino-group-name {
+    color: $flash-blue !important;
 }
 
 .dominos .item .domino .right-glider {
