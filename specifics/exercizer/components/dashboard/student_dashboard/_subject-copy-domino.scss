@@ -12,10 +12,6 @@
             justify-content: space-between !important;
             padding: 16px 16px 16px 12px;
 
-            & > div:nth-child(2) {
-                text-align: right;
-            }
-
             .custom-ellipsis strong {
                 color: $grey-black;
                 font-weight: 600;
