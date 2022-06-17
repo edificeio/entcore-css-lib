@@ -60,6 +60,14 @@ text-zone {
     background-color: transparent !important;
   }
 
+  select {
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill-rule='evenodd' clip-rule='evenodd' d='M4.01226 6.87113C4.63572 6.32561 5.58336 6.38879 6.12889 7.01224L12 13.7221L17.8712 7.01224C18.4167 6.38879 19.3643 6.32561 19.9878 6.87113C20.6112 7.41666 20.6744 8.3643 20.1289 8.98776L13.1289 16.9878C12.8441 17.3133 12.4326 17.5 12 17.5C11.5675 17.5 11.156 17.3133 10.8712 16.9878L3.87116 8.98776C3.32563 8.3643 3.38881 7.41666 4.01226 6.87113Z' /></svg>");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: right 8px center;
+  }
+
   input[type="text"].filled,
   select.filled {
     background-color: #fff !important;
@@ -152,10 +160,10 @@ text-zone {
 }
 
 .edit-text-zone {
-  padding: 0;
-  position: absolute;
-  border: 0;
-  height: 20px;
-  inset: 0;
-  opacity: 0;
+  padding: 0 0.5rem;
+  // position: absolute;
+  border: 0 !important;
+  height: 100% !important;
+  // inset: 0;
+  // opacity: 0;
 }
