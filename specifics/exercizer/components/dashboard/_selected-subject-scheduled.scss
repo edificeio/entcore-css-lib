@@ -66,6 +66,23 @@
                 }
             }
         }
+
+        &.droppable {
+            .icon-upload {
+                fill: $flash-blue;
+            }
+
+            a {
+                color: $flash-blue;
+            }
+
+            &:hover {
+                .icon-upload {
+                    fill: $orange;
+                }
+            }
+
+        }
     }
 
     &-inner {
