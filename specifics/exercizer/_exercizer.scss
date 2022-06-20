@@ -1053,4 +1053,22 @@ body.exercizer {
       }
     }
   }
+
+  share-panel {
+    .input-help > label {
+      &:first-child {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem !important;
+        font-style: italic;
+        color: $grey-stone;
+        opacity: 1;
+        padding: 6px 16px;
+      }
+      
+      &.move {
+        display: none;
+      }
+    }
+  }
 }
