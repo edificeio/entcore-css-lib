@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+.choose-class {
+    h2 {
+        color: $grey-black;
+        font-family: 'Comfortaa';
+    }
+
+    .step-hint {
+        color: $grey-black;
+        line-height: 24px;
+    }
+
+    i.left-open:before {
+        font-size: 18px !important;
+    }
+    i.check {
+        @include fonticon;
+        &::before {
+            content: "\e871";
+            font-size: 18px !important;
+        }
+    }
+
+    .class-card {
+        border-radius: 4px;
+        border: 2px solid;
+        padding: 12px 16px;
+        margin: 4px 6px;
+        border-color: $neutral-grey;
+        @include run-transition(border-color);
+
+        &:hover {
+            border-color: $primary;
+        }
+
+        &.selected {
+            color: $primary;
+            border-color: $primary;
+            font-weight: bold;
+        }
+    }
+}
