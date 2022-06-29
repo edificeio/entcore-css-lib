@@ -1065,6 +1065,10 @@ body.exercizer {
   }
 
   share-panel {
+    h1 {
+      color: #4a4a4a;
+    }
+    
     .input-help > label {
       &:first-child {
         font-size: 1rem;
@@ -1075,7 +1079,7 @@ body.exercizer {
         opacity: 1;
         padding: 6px 16px;
       }
-      
+
       &.move {
         display: none;
       }
