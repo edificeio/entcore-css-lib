@@ -977,6 +977,7 @@ body.exercizer {
       >.options {
         margin: 0 !important;
         flex: 1;
+        align-items: baseline;
         align-self: stretch;
 
         @media screen and (max-width: $tablette),
