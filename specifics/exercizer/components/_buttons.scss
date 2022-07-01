@@ -35,6 +35,10 @@
         &.disabled {
             background-color: $grey-cloudy;
         }
+
+        @media screen and (max-width: $tablette) {
+            font-size: .875rem;
+        }
     }
 
     &-secondary {

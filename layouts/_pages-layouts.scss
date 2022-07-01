@@ -749,9 +749,11 @@ $fgrows: 0,
 		flex-grow: $fgrow !important;
 	}
 }
-
 .grid {
-	display: grid;
+
+	@media (min-width: $tablette) {
+		display: grid;
+	}
 }
 
 .grid-2 {
@@ -763,6 +765,7 @@ $fgrows: 0,
 }
 
 @media (min-width: $wide-screen) {
+
 	.grid-layout-2 {
 		grid-template-columns: minmax(400px, 3fr) minmax(710px, 7fr);
 		gap: 1.5rem;
