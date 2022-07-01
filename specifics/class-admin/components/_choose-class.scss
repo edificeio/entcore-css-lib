@@ -24,10 +24,9 @@
 
     .class-card {
         border-radius: 4px;
-        border: 2px solid;
+        border: 1px solid $neutral-grey;
         padding: 12px 16px;
-        margin: 4px 6px;
-        border-color: $neutral-grey;
+        margin: 6px 8px;
         @include run-transition(border-color);
 
         &:hover {
@@ -35,8 +34,9 @@
         }
 
         &.selected {
+            border: 2px solid $primary;
+            padding: 11px 15px;
             color: $primary;
-            border-color: $primary;
             font-weight: bold;
         }
     }
