@@ -401,9 +401,11 @@ body.exercizer {
     } */
   }
 
-  // Delete border from Order question in correction
+  // Delete border from Order question in correction, and constraint size
   input[data-ng-model="filled_answer.order_by"] {
     border: none;
+    max-width: 4em;
+    min-width: 4em;
   }
 
   grain-copy-footer {
