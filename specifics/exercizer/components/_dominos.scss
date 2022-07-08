@@ -65,6 +65,7 @@
                 flex: 1;
                 height: auto;
                 margin-left: 0;
+                background: transparent;
 
                 .title {
                     display: -webkit-box;
@@ -130,6 +131,10 @@
             }
         }
     }
+}
+
+.dominos .item {
+    overflow: hidden;
 }
 
 .dominos .item .domino .due-date {
