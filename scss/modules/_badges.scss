@@ -1,32 +1,33 @@
-.badge {
-  border-radius: 10px;
-  background: #ccc;
-  font-weight: bold;
-  font-size: 0.8em;
-  padding: 2px 6px;
-  display: inline-block;
-  text-align: center;
-  text-shadow: 0px 0px 2px rgba($black, 0.5);
+
+.badge{
+	border-radius: 10px;
+	background: #ccc;
+	font-weight: bold;
+	font-size: 0.8em;
+	padding: 2px 6px;
+	display: inline-block;
+	text-align: center;
+	text-shadow: 0px 0px 2px rgba($black, 0.5);
 }
-nav.vertical {
-  .badge {
-    margin: 0 4px;
-  }
+nav.vertical{
+	.badge{
+		margin: 0 4px
+	}
 }
 
-.label-badge {
-  display: inline-block;
+.label-badge{
+	display: inline-block;
 }
 
-.badge-info {
-  border-radius: 10px;
-  background: $primary;
-  color: $white;
-  font-weight: bold;
-  padding: 3px 5px;
-  display: inline-block;
-  text-align: center;
-  text-shadow: 0px 0px 2px rgba($black, 0.5);
-  line-height: 12px;
-  margin-left: 6px;
+.badge-info{
+	border-radius: 10px;
+	background: $primary;
+	color: $white;
+	font-weight: bold;
+	padding: 3px 5px;
+	display: inline-block;
+	text-align: center;
+	text-shadow: 0px 0px 2px rgba($black, 0.5);
+	line-height: 12px;
+	margin-left: 6px;
 }

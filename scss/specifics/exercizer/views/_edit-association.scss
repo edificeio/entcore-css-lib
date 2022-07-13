@@ -1,0 +1,9 @@
+edit-association {
+    table tr:hover {
+        background-color: inherit !important;
+    }
+
+    input[type="text"].ng-invalid {
+        border: 1px solid $red;
+    }
+}

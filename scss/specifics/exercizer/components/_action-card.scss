@@ -16,6 +16,10 @@
 
     &-image {
         padding: .625rem;
+
+        svg {
+            fill: $primary;
+        }
     }
 
     &-info {

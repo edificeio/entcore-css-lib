@@ -19,8 +19,9 @@
       max-height: 200px;
       margin: 25px;
     }
-    &[src*="delete"] {
+    &[src*="trash"] {
       max-height: 35vh;
+
     }
   }
   &-footer {

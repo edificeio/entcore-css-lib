@@ -114,16 +114,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
  * Giving the connect element a border radius causes issues with using transform: scale
  */
 .noUi-target {
-  background: $grey-fog;
+  background: #FAFAFA;
   border-radius: 4px;
-  border: 1px solid #d3d3d3;
-  box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbb;
+  border: 1px solid #D3D3D3;
+  box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
 }
 .noUi-connects {
   border-radius: 3px;
 }
 .noUi-connect {
-  background: #3fb8af;
+  background: #3FB8AF;
 }
 /* Handles and cursors;
  */
@@ -134,21 +134,20 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   cursor: ns-resize;
 }
 .noUi-handle {
-  border: 1px solid #d9d9d9;
+  border: 1px solid #D9D9D9;
   border-radius: 50px;
-  background: #fff;
+  background: #FFF;
   cursor: default;
-  box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ebebeb, 0 3px 6px -3px #bbb;
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
 }
 
-.noUi-handle-lower,
-.noUi-handle-upper {
-  outline: none;
-  cursor: pointer;
+.noUi-handle-lower, .noUi-handle-upper {
+    outline: none;
+    cursor: pointer;
 }
 
 .noUi-active {
-  box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ddd, 0 3px 6px -3px #bbb;
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
 }
 /* Handle stripes;
  */
@@ -159,7 +158,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   position: absolute;
   height: 14px;
   width: 1px;
-  background: #e8e7e6;
+  background: #E8E7E6;
   left: 14px;
   top: 6px;
 }
@@ -179,7 +178,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 /* Disabled state;
  */
 [disabled] .noUi-connect {
-  background: #b8b8b8;
+  background: #B8B8B8;
 }
 [disabled].noUi-target,
 [disabled].noUi-handle,
@@ -215,13 +214,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
  */
 .noUi-marker {
   position: absolute;
-  background: #ccc;
+  background: #CCC;
 }
 .noUi-marker-sub {
-  background: #aaa;
+  background: #AAA;
 }
 .noUi-marker-large {
-  background: #aaa;
+  background: #AAA;
 }
 /* Horizontal layout;
  *
@@ -303,6 +302,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   top: 50%;
   right: 120%;
 }
+
 
 .noUi-target {
   margin-bottom: 20px;

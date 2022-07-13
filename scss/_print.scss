@@ -1,12 +1,9 @@
 $grey-dark: #575e73;
 $grey-light: #f2f4f7;
-$grey-lightest: #f2f3f4;
+$grey-lightest: #F2F3F4;
 
-.print {
-  // Put on the balise <html> for optimal rendering
-  * {
-    box-sizing: border-box;
-  }
+.print { // Put on the balise <html> for optimal rendering
+  * {box-sizing: border-box;}
   body {
     color: $grey-dark;
     -webkit-print-color-adjust: exact;
@@ -19,16 +16,10 @@ $grey-lightest: #f2f3f4;
       margin: 1.5cm;
     }
   }
-  .main {
-    padding: 0;
-  }
-  .row {
-    width: inherit;
-  }
+  .main {padding: 0;}
+  .row {width: inherit;}
 
-  img {
-    page-break-inside: avoid;
-  }
+  img {page-break-inside: avoid;}
 
   video,
   iframe[src*="youtube"],
@@ -38,12 +29,7 @@ $grey-lightest: #f2f3f4;
     box-shadow: 1px 1px 10px $shadow-light;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: bold;
     line-height: 1.4;
@@ -51,14 +37,12 @@ $grey-lightest: #f2f3f4;
 
   h1 {
     font-size: 26px;
-    &.app-title {
-      font-size: 28px;
-    }
+    &.app-title {font-size: 28px;}
     i,
     i::before,
     i::after {
-      display: inline-block !important;
-      color: inherit !important;
+      display: inline-block!important;
+      color: inherit!important;
       vertical-align: top;
     }
   }
@@ -82,8 +66,8 @@ $grey-lightest: #f2f3f4;
   }
   article {
     border: 1px solid $shadow-light;
-    padding: 15px !important;
-    margin: 15px 0 !important;
+    padding: 15px!important;
+    margin: 15px 0!important;
     box-shadow: none;
   }
 
@@ -96,7 +80,7 @@ $grey-lightest: #f2f3f4;
     .subtitle {
       color: lighten($grey-dark, 10%);
       display: block;
-      margin: 5px 0 0 !important;
+      margin: 5px 0 0!important;
     }
   }
 
@@ -115,7 +99,7 @@ $grey-lightest: #f2f3f4;
     margin-top: 15px;
     border-top: 1px solid $grey-light;
     .comments {
-      padding: 10px 25px !important;
+      padding: 10px 25px!important;
       h4 {
         margin-top: 10px;
       }
@@ -128,9 +112,9 @@ $grey-lightest: #f2f3f4;
     }
   }
   [contenteditable] {
-    padding: 10px 20px !important;
-    margin: 10px !important;
-    border: 1px solid #ddd !important;
+    padding: 10px 20px!important;
+    margin: 10px!important;
+    border: 1px solid #ddd!important;
   }
 
   // ICON STYLE
@@ -162,12 +146,12 @@ $grey-lightest: #f2f3f4;
       margin: 15px;
     }
     &__info [contenteditable] {
-      border-color: lighten($green, 10%) !important;
-      background-color: lighten($green, 40%) !important;
+      border-color: lighten($green, 10%)!important;
+      background-color: lighten($green, 40%)!important;
     }
     &__help [contenteditable] {
-      border-color: lighten($cyan, 10%) !important;
-      background-color: lighten($cyan, 35%) !important;
+      border-color: lighten($cyan, 10%)!important;
+      background-color: lighten($cyan, 35%)!important;
     }
   }
 }
@@ -176,11 +160,11 @@ $grey-lightest: #f2f3f4;
 .print--timeline {
   article {
     position: relative;
-    margin: 0 15px !important;
-    padding: 25px 25px 25px 40px !important;
-    border: none !important;
-    border-left: 5px solid $cyan !important;
-    box-shadow: none !important;
+    margin: 0 15px!important;
+    padding: 25px 25px 25px 40px!important;
+    border: none!important;
+    border-left: 5px solid $cyan!important;
+    box-shadow: none!important;
     border-radius: 0;
     &::before {
       content: "";
@@ -226,17 +210,7 @@ $grey-lightest: #f2f3f4;
     margin: 0;
     padding: 0;
   }
-  .one,
-  .two,
-  .three,
-  .four,
-  .five,
-  .six,
-  .seven,
-  .eight,
-  .nine,
-  .ten,
-  .eleven {
+  .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
     width: 100%;
   }
   // Hide buttons, useless on print
@@ -255,16 +229,16 @@ $grey-lightest: #f2f3f4;
 // SCRAPBOOK
 .print .app--scrapbook {
   section.scrapbook {
-    padding: 0 50px !important;
-    font-size: 14px !important;
+    padding: 0 50px!important;
+    font-size: 14px!important;
     article {
-      padding: 0 !important;
+      padding: 0!important;
     }
     .drawing-zone {
-      position: relative !important;
+      position: relative!important;
     }
   }
   .scrapbook-pagination {
-    right: -50px !important;
+    right: -50px!important;
   }
 }

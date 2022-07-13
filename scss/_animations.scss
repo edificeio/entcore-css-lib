@@ -1,188 +1,191 @@
-@keyframes splitScreenGrow {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 70%;
-  }
+
+@keyframes splitScreenGrow{
+	0%{
+		width: 0%;
+    }
+	100%{
+		width: 70%;
+	}
 }
 
 @keyframes pulsate {
-  0% {
-    transform: scale(0.1, 0.1);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.2, 1.2);
-    opacity: 0;
-  }
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0.0;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+
+@keyframes fade-in{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
-@keyframes transient-display {
-  0% {
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+@keyframes transient-display{
+    0% {
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes rotate{
+    0% {
+      	transform: rotate(0deg);
+    }
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes bounce-pop-out {
   0% {
     transform: scale(0);
   }
-  50% {
-    transform: scale(1.1);
+  50%{
+      transform: scale(1.1);
   }
-  90% {
-    transform: scale(0.9);
+  90%{
+      transform: scale(0.9);
   }
   100% {
-    transform: scale(1);
+      transform: scale(1);
   }
 }
 
-@keyframes shockwave-animation {
-  from {
-    transform: scale(1);
-    opacity: 0;
-  }
-  to {
-    transform: scale(100);
-    opacity: 0.4;
-  }
+
+@keyframes shockwave-animation{
+    from {
+      transform: scale(1);
+      opacity: 0;
+    }
+    to {
+      transform: scale(100);
+      opacity: 0.4;
+    }
 }
-@-webkit-keyframes shockwave-animation {
-  from {
-    -webkit-transform: scale(1);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: scale(100);
-    opacity: 0.4;
-  }
+@-webkit-keyframes shockwave-animation{
+    from {
+      -webkit-transform: scale(1);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: scale(100);
+      opacity: 0.4;
+    }
 }
 
 @-webkit-keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
     -webkit-transform-origin: center center;
-    transform-origin: center center;
+            transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
   10% {
     -webkit-transform: scale(0.91);
-    transform: scale(0.91);
+            transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
   }
   17% {
     -webkit-transform: scale(0.98);
-    transform: scale(0.98);
+            transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
   33% {
     -webkit-transform: scale(0.87);
-    transform: scale(0.87);
+            transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
   }
   45% {
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
 }
 @keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
     -webkit-transform-origin: center center;
-    transform-origin: center center;
+            transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
   10% {
     -webkit-transform: scale(0.91);
-    transform: scale(0.91);
+            transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
   }
   17% {
     -webkit-transform: scale(0.98);
-    transform: scale(0.98);
+            transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
   33% {
     -webkit-transform: scale(0.87);
-    transform: scale(0.87);
+            transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
   }
   45% {
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
 }
 
-.shockwave {
-  position: absolute;
-  border-radius: 50%;
-  z-index: 9;
-  width: 50px;
-  height: 50px;
-  background: $accent;
-  animation: shockwave-animation 800ms;
-  -webkit-animation: shockwave-animation 800ms;
+.shockwave{
+	position: absolute;
+	border-radius: 50%;
+	z-index: 9;
+	width: 50px;
+	height: 50px;
+	background: $accent;
+	animation: shockwave-animation 800ms;
+	-webkit-animation: shockwave-animation 800ms;
 }
 
-.fade-in {
-  animation: fade-in 1 500ms;
+.fade-in{
+	animation: fade-in 1 500ms;
 }
 
-.fade-in-hover {
-  @include run-transition(all);
-  opacity: 0.6;
-  &:hover {
-    opacity: 1;
-  }
+.fade-in-hover{
+	@include run-transition(all);
+	opacity: 0.6;
+	&:hover{
+		opacity: 1;
+	}
 }
 
 .heartbeat {
-  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-  animation: heartbeat 1.5s ease-in-out infinite both;
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
 }

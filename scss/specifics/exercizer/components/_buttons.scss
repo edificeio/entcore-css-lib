@@ -1,8 +1,8 @@
 .button {
     margin: 0 !important;
-    border-radius: .625rem;
+    border-radius: .5rem;
     padding: .625rem 1rem;
-    font-size: .875rem;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 20px !important;
     display: inline-flex;
@@ -35,6 +35,10 @@
         &.disabled {
             background-color: $grey-cloudy;
         }
+
+        @media screen and (max-width: $tablette) {
+            font-size: .875rem;
+        }
     }
 
     &-secondary {
@@ -43,7 +47,7 @@
 
         &:hover {
             color: $white;
-            background: darken($light-grey, 10%);
+            background: $accent;
 
             svg[class*="icon"] {
                 fill: $white;
@@ -52,7 +56,7 @@
 
         &:active {
             color: $white;
-            background: darken($light-grey, 15%);
+            background: $accent;
 
             svg[class*="icon"] {
                 fill: $white;
@@ -101,6 +105,9 @@
     }
 
     &-link {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        gap: .5rem;
         color: $flash-blue;
         background-color: transparent;
 

@@ -1,89 +1,89 @@
-.box,
-.text-container article.box {
-  height: 100px;
-  margin-bottom: 0;
 
-  .avatar {
-    padding-right: 5px;
-    height: 100%;
-    .avatar-image {
-      background-size: 100% auto;
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 100%;
-      height: 100%;
-    }
-  }
+.box, .text-container article.box{
+	height: 100px;
+	margin-bottom: 0;
+
+	.avatar{
+		padding-right: 5px;
+		height: 100%;
+		.avatar-image{
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 100%;
+			height: 100%
+		}
+	}
 }
 
-.mini-box {
-  .cell {
-    height: 50px;
-    line-height: 50px;
-    .avatar {
-      padding: 5px;
-    }
-    img {
-      vertical-align: middle;
-    }
-  }
+.mini-box{
+	.cell{
+		height: 50px;
+		line-height: 50px;
+		.avatar{
+			padding: 5px;
+		}
+		img{
+			vertical-align: middle;
+		}
+	}
 }
 
-.large-box {
-  min-width: 300px;
-  min-height: 150px;
+.large-box{
+	min-width: 300px;
+	min-height: 150px;
 }
 /***/
 .message-box {
-  box-shadow: 1px 1px 5px $shadow-dark;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: 500ms ease;
-  box-sizing: border-box;
-  border: none;
-  background: $white;
-  z-index: 999;
+	box-shadow: 1px 1px 5px $shadow-dark;
+	border-radius: 5px;
+	overflow: hidden;
+	transition: 500ms ease;
+	box-sizing: border-box;
+	border: none;
+	background: $white;
+	z-index: 999;
 }
 /*HELPBOX*/
-.helpbox-highlight-message {
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 100002;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
+.helpbox-highlight-message{
+    background: rgba(0,0,0,0.6);
+	z-index: 100002;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
-.helpbox-highlight-message .left-text {
-  text-align: left;
+.helpbox-highlight-message .left-text{
+	text-align: left;
 }
 .helpbox-highlight {
-  z-index: 100003 !important;
-  position: fixed !important;
-  background: $white !important;
-  margin: 0 !important;
+	z-index: 100003 !important;
+	position: fixed !important;
+	background: $white !important;
+	margin: 0 !important;
 }
 
 /*DROP ZONE**/
 .dropzone-overlay-wrapper {
-  position: relative !important;
-  box-shadow: none;
-  border: none;
+	position: relative !important;
+	box-shadow: none;
+	border: none;
 }
 
 .dropzone-overlay {
-  position: absolute !important;
-  top: 2px;
-  left: 2px;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  outline: 2px dashed $orange;
-  background: rgba(250, 250, 250, 0.4);
-  z-index: 99;
+	position: absolute !important;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: calc(100% - 4px);
+	outline: 2px dashed $orange;
+	background: rgba(250, 250, 250, 0.4);
+	z-index: 99;
 }
 
 @media screen and(max-width: $fat-mobile) {
-  .helpbox-highlight {
-    display: none !important;
-  }
+	.helpbox-highlight {
+		display: none !important;
+	}
 }

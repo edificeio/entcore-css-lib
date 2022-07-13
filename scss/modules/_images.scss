@@ -1,85 +1,86 @@
-img.text-sized {
-  height: 20px;
-  vertical-align: top;
-  display: inline-block;
+
+img.text-sized{
+	height: 20px;
+	vertical-align: top;
+	display: inline-block;
 }
 
-.clip {
-  overflow: hidden;
+.clip{
+	overflow: hidden;
 }
 
-.cell {
-  img {
-    max-width: 100%;
-  }
+.cell{
+	img{
+		max-width: 100%;
+	}
 }
 
-image-select.loading-panel {
-  img {
-    visibility: hidden;
-  }
+image-select.loading-panel{
+	img{
+		visibility: hidden;
+	}
 }
 
-image-select > div > img {
-  width: 100%;
+image-select > div > img{
+	width: 100%
 }
 
-image-select {
-  > div > i {
-    position: absolute;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-    cursor: pointer;
-    transition: color 250ms ease;
-    background-color: rgba($black, 0.3);
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    text-align: center;
-  }
-  i.trash {
-    right: 10px;
-    top: 10px;
-    line-height: 24px;
-    &::before {
-      font-size: 12px;
+image-select{
+	> div > i {
+		position: absolute;
+		color: #fff;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+		cursor: pointer;
+		transition: color 250ms ease;
+		background-color: rgba($black, 0.3);
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+		text-align: center;
+	}
+	i.trash{
+		right: 10px;
+		top: 10px;
+		line-height: 24px;
+		&::before{
+			font-size: 12px;
+		}
+	}
+	i.edit{
+		right: 40px;
+	    top: 10px;
+		border: none;
+		padding: 0;
+		&::before{
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+}
+
+.illustration{
+	display: flex;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	left: 0;
+	img{
+		align-self: center;
+	}
+	input[type=checkbox]{
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+	}
+}
+
+.smileys{
+	img.smiley{
+        height: 40px;
+        width: 40px;
+        display: inline-block !important;
+        vertical-align: middle;
     }
-  }
-  i.edit {
-    right: 40px;
-    top: 10px;
-    border: none;
-    padding: 0;
-    &::before {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
-}
-
-.illustration {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-  left: 0;
-  img {
-    align-self: center;
-  }
-  input[type="checkbox"] {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-  }
-}
-
-.smileys {
-  img.smiley {
-    height: 40px;
-    width: 40px;
-    display: inline-block !important;
-    vertical-align: middle;
-  }
 }

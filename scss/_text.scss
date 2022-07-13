@@ -1,238 +1,212 @@
-a {
-  color: $accent;
-  @include run-transition(color);
-  cursor: pointer;
-  &.hover-icon:hover {
-    i:before {
-      @include run-transition(color);
-      color: $accent !important;
-    }
-  }
+a{
+	color: $accent;
+	@include run-transition(color);
+	cursor: pointer;
+	&.hover-icon:hover {
+		i:before {
+			@include run-transition(color);
+			color: $accent !important;
+		}
+	}
 }
 
-span.no-style {
-  background: none !important;
-  display: inline !important;
-  padding: 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  margin: 0 !important;
+span.no-style{
+	background: none !important;
+	display: inline !important;
+	padding: 0 !important;
+	border: none !important;
+	border-radius: 0 !important;
+	margin: 0 !important;
 }
 
 .no-background {
-  background: transparent !important;
+	background: transparent!important;
 }
 
 .no-border {
-  border: inherit !important;
+	border: inherit!important;
 }
 
-p {
-  word-break: break-word;
+p{
+	word-break: break-word;
 }
 
-.low-importance {
-  font-size: 12px !important;
-  height: 16px;
-  line-height: 16px;
-  text-align: right;
+
+.low-importance{
+	font-size: 12px !important;
+	height: 16px;
+	line-height: 16px;
+	text-align: right;
 }
 
-.medium-importance {
-  font-style: normal;
-  color: #666;
+
+.medium-importance{
+	font-style: normal;
+	color: #666;
 }
 
-.high-importance {
-  font-style: normal;
-  font-weight: bold;
-  color: #666;
+
+.high-importance{
+	font-style: normal;
+	font-weight: bold;
+	color: #666;
 }
 
-label {
-  line-height: 24px;
+label{
+    line-height: 24px
 }
 
-.centered-text {
-  text-align: center !important;
+.centered-text{
+	text-align: center !important;
 }
-.left-text {
-  text-align: left !important;
+.left-text{
+	text-align: left !important;
 }
-.right-text {
-  text-align: right !important;
+.right-text{
+	text-align: right!important;
 }
-.strong-text {
-  font-size: $font-size + 8px;
+.strong-text{
+	font-size: $font-size + 8px;
 }
-.italic-text {
-  font-style: italic;
+.italic-text{
+	font-style: italic;
 }
-.upper-title {
-  margin-bottom: 0;
+.upper-title{
+	margin-bottom: 0;
 }
 .strong-title {
-  font-size: 27px;
-  font-weight: bold;
-  color: $grey;
+	font-size: 27px;
+	font-weight: bold;
+	color: $grey;
 }
 .text-title {
-  word-wrap: break-word;
-  font-size: 27px;
-  color: $grey;
-  line-height: normal;
+	word-wrap: break-word;
+	font-size: 27px;
+	color: $grey;
+    line-height: normal;
 }
 .underlined-title {
-  color: $primary;
-  font-size: 15px;
-  color: $primary;
-  border-bottom: 1px solid $primary;
+	color: $primary;
+	font-size: 15px;
+	color: $primary;
+	border-bottom: 1px solid $primary;
 
-  strong {
-    color: $primary;
-  }
+	strong {
+		color: $primary;
+	}
 }
 
 .text-underline-hover:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
-.comment {
-  padding: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+.comment{
+	padding: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .low-text {
-  text-transform: none;
+	text-transform: none;
 }
 
-.user-content {
-  white-space: pre-line;
+.user-content{
+	white-space: pre-line;
 }
 
-.text-preline {
-  white-space: pre-line;
+.inline{
+	margin: 0;
 }
 
-.inline {
-  margin: 0;
+.text-flow{
+	display: inline-block !important;
+	float: none !important;
+	vertical-align: middle;
 }
 
-.text-flow {
-  display: inline-block !important;
-  float: none !important;
-  vertical-align: middle;
+.cell-ellipsis{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+strong.cell-ellipsis{
+	display: block;
 }
 
-.cell-ellipsis {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-strong.cell-ellipsis {
-  display: block;
+.inline-editing{
+	color: darken($medium-grey, 40%);
 }
 
-.inline-editing {
-  color: darken($medium-grey, 40%);
+.tiny-text{
+	font-size: 8px !important;
 }
 
-.tiny-text {
-  font-size: 8px !important;
+.smaller-text{
+	font-size: 10px !important;
 }
 
-.smaller-text {
-  font-size: 10px !important;
+.small-text{
+	font-size: 12px !important;
+	a, em, label, span{
+		font-size: 12px;
+	}
+	input.inline-editing{
+		margin-top: 0px;
+	}
 }
 
-.small-text {
-  font-size: 12px !important;
-  a,
-  em,
-  label,
-  span {
-    font-size: 12px;
-  }
-  input.inline-editing {
-    margin-top: 0px;
-  }
+.medium-text{
+	font-size: 14px !important;
+	a{
+		font-size: 14px;
+	}
+}
+.large-text{
+	font-size: 18px !important;
+	a{
+		font-size: 18px;
+	}
 }
 
-.medium-text {
-  font-size: 14px !important;
-  a {
-    font-size: 14px;
-  }
-}
-.large-text {
-  font-size: 18px !important;
-  a {
-    font-size: 18px;
-  }
+.escape_cke{
+	word-wrap: break-word;
 }
 
-.escape_cke {
-  word-wrap: break-word;
-}
-
-h2 > i.back {
-  font-size: 26px;
-  margin-right: 7px;
-  display: block;
-  float: left;
-  &:hover {
-    color: $accent;
-  }
+h2 > i.back{
+	font-size: 26px;
+    margin-right: 7px;
+    display: block;
+	float: left;
+	&:hover{
+		color: $accent;
+	}
 }
 
 .indication {
-  color: $solid-grey;
-  font-size: 13px;
+	color: $solid-grey;
+	font-size: 13px;
 
-  i {
-    margin-right: 0.5em;
-  }
+	i {
+		margin-right: 0.5em;
+	}
 }
 
 .white-text {
-  color: $white;
+	color: $white;
 }
 
 .text-word-break {
-  word-wrap: break-word;
+	word-wrap: break-word;
 }
-.text-pointer{
-  cursor: pointer;
-}
+
 .bold {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 @media screen and (max-width: $tablette) {
-  body {
-    .text-title {
-      font-size: 22px;
-    }
-  }
-}
-
-// FONT SIZE
-$display-font-sizes: (
-  1: 0.625rem,
-  2: 0.75rem,
-  3: 0.875rem,
-  4: 1rem,
-  5: 1.125rem,
-  6: 1.25rem,
-  7: 1.5rem,
-  8: 1.75rem,
-  9: 1.875rem,
-  10: 2rem,
-) !default;
-
-@each $display, $font-size in $display-font-sizes {
-  .fs-#{$display} {
-    font-size: $font-size !important;
-  }
+	body{
+		.text-title {
+			font-size: 22px;
+		}
+	}
 }

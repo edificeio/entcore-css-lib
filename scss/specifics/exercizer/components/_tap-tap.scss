@@ -1,5 +1,7 @@
 // TAP TAP STYLE : Replace D&D on responsive touch
 .tap-tap {
+  display: flex;
+  gap: 1rem;
   border-radius: 20px 20px 0 0;
   background-color: $primary;
   color: white;
@@ -26,7 +28,8 @@
     background-color: white;
     border: none;
     padding: 8px 12px;
-    margin: 0;
+    // margin: 0;
+    margin: 0 .5rem;
     font-size: .875rem;
     color: $grey-black;
     // border: 1px solid $grey-grey;

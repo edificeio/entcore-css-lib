@@ -1,176 +1,176 @@
 /*EDUMEDIA EXPLORER ELEMENT ROOT*/
-edumedia-explorer-element.root {
-  box-sizing: border-box;
-  padding: 10px;
-  width: 22%;
-  text-align: center;
-  margin: 1% !important;
-  overflow: hidden;
-  height: 100px;
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  font-weight: 600;
-  background-color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  border: solid 2px grey;
-  color: grey;
+edumedia-explorer-element.root{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 22%;
+    text-align: center;
+    margin: 1% !important;
+    overflow: hidden;
+    height: 100px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    border: solid 2px grey;
+    color: grey;
 }
-edumedia-explorer-element.root > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+edumedia-explorer-element.root > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
-edumedia-explorer-element:hover {
-  box-shadow: 0 2px 10px $shadow-light;
+edumedia-explorer-element:hover{
+    box-shadow: 0 2px 10px $shadow-light;
 }
 edumedia-explorer-element.root:nth-child(1) {
-  border-color: #228fcc;
-  color: #228fcc;
-  &:hover {
-    border-color: lighten(#228fcc, 10%);
-    background-color: lighten(#228fcc, 10%);
-    color: white;
-  }
-  &:active {
-    border-color: darken(#228fcc, 5%);
-    background-color: darken(#228fcc, 5%);
-  }
+    border-color: #228fcc;
+    color: #228fcc;
+    &:hover {
+      border-color: lighten(#228fcc, 10%);
+      background-color: lighten(#228fcc, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#228fcc, 5%);
+      background-color: darken(#228fcc, 5%);
+    }
 }
 edumedia-explorer-element.root:nth-child(2) {
-  border-color: #41a796;
-  color: #41a796;
-  &:hover {
-    border-color: lighten(#41a796, 10%);
-    background-color: lighten(#41a796, 10%);
-    color: white;
-  }
-  &:active {
-    border-color: darken(#41a796, 5%);
-    background-color: darken(#41a796, 5%);
-  }
+    border-color: #41a796;
+    color: #41a796;
+    &:hover {
+      border-color: lighten(#41a796, 10%);
+      background-color: lighten(#41a796, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#41a796, 5%);
+      background-color: darken(#41a796, 5%);
+    }
 }
 
 edumedia-explorer-element.root:nth-child(3) {
-  border-color: #60bf5f;
-  color: #60bf5f;
-  &:hover {
-    border-color: lighten(#60bf5f, 10%);
-    background-color: lighten(#60bf5f, 10%);
-    color: white;
-  }
-  &:active {
-    border-color: darken(#60bf5f, 5%);
-    background-color: darken(#60bf5f, 5%);
-  }
+    border-color: #60bf5f;
+    color: #60bf5f;
+    &:hover {
+      border-color: lighten(#60bf5f, 10%);
+      background-color: lighten(#60bf5f, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#60bf5f, 5%);
+      background-color: darken(#60bf5f, 5%);
+    }
 }
 
-edumedia-explorer-element.root:nth-child(4) {
-  border-color: #7dd628;
-  color: #7dd628;
-  &:hover {
-    border-color: lighten(#7dd628, 10%);
-    background-color: lighten(#7dd628, 10%);
-    color: white;
-  }
-  &:active {
-    border-color: darken(#7dd628, 5%);
-    background-color: darken(#7dd628, 5%);
-  }
+edumedia-explorer-element.root:nth-child(4){
+    border-color: #7dd628;
+    color: #7dd628;
+    &:hover {
+      border-color: lighten(#7dd628, 10%);
+      background-color: lighten(#7dd628, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#7dd628, 5%);
+      background-color: darken(#7dd628, 5%);
+    }
 }
-edumedia-explorer-element.root:nth-child(5) {
-  border-color: #c4b520;
-  color: #c4b520;
-  &:hover {
-    border-color: lighten(#c4b520, 10%);
-    background-color: lighten(#c4b520, 10%);
-    color: white;
-  }
-  &:active {
-    border-color: darken(#c4b520, 5%);
-    background-color: darken(#c4b520, 5%);
-  }
+edumedia-explorer-element.root:nth-child(5){
+    border-color: #c4b520;
+    color: #c4b520;
+    &:hover {
+      border-color: lighten(#c4b520, 10%);
+      background-color: lighten(#c4b520, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#c4b520, 5%);
+      background-color: darken(#c4b520, 5%);
+    }
 }
-edumedia-explorer-element.root:nth-child(6) {
-  border-color: #dd972f;
-  color: #dd972f;
-  &:hover {
-    border-color: lighten(#dd972f, 10%);
-    background-color: lighten(#dd972f, 10%);
-    color: white;
-  }
-  &:active {
-    border-color: darken(#dd972f, 5%);
-    background-color: darken(#dd972f, 5%);
-  }
+edumedia-explorer-element.root:nth-child(6){
+    border-color: #dd972f;
+    color: #dd972f;
+    &:hover {
+      border-color: lighten(#dd972f, 10%);
+      background-color: lighten(#dd972f, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#dd972f, 5%);
+      background-color: darken(#dd972f, 5%);
+    }
 }
-edumedia-explorer-element.root:nth-child(7) {
-  border-color: #dd602c;
-  color: #dd602c;
-  &:hover {
-    border-color: lighten(#dd602c, 10%);
-    background-color: lighten(#dd602c, 10%);
-    color: white;
-  }
-  &:active {
-    border-color: darken(#dd602c, 5%);
-    background-color: darken(#dd602c, 5%);
-  }
+edumedia-explorer-element.root:nth-child(7){
+    border-color: #dd602c;
+    color: #dd602c;
+    &:hover {
+      border-color: lighten(#dd602c, 10%);
+      background-color: lighten(#dd602c, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#dd602c, 5%);
+      background-color: darken(#dd602c, 5%);
+    }
 }
-edumedia-explorer-element.root:nth-child(8) {
-  border-color: #dd2929;
-  color: #dd2929;
-  &:hover {
-    border-color: lighten(#dd2929, 10%);
-    background-color: lighten(#dd2929, 10%);
-    color: white;
-  }
-  &:active {
-    border-color: darken(#dd2929, 5%);
-    background-color: darken(#dd2929, 5%);
-  }
+edumedia-explorer-element.root:nth-child(8){
+    border-color: #dd2929;
+    color: #dd2929;
+    &:hover {
+      border-color: lighten(#dd2929, 10%);
+      background-color: lighten(#dd2929, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#dd2929, 5%);
+      background-color: darken(#dd2929, 5%);
+    }
 }
 
 edumedia-explorer-element.root:nth-child(9) {
-  border-color: #f06595;
-  color: #f06595;
-  &:hover {
-    border-color: lighten(#f06595, 10%);
-    background-color: lighten(#f06595, 10%);
-    color: white;
-  }
-  &:active {
-    border-color: darken(#f06595, 5%);
-    background-color: darken(#f06595, 5%);
-  }
+    border-color: #f06595;
+    color: #f06595;
+    &:hover {
+      border-color: lighten(#f06595, 10%);
+      background-color: lighten(#f06595, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#f06595, 5%);
+      background-color: darken(#f06595, 5%);
+    }
 }
 
 edumedia-explorer-element.root:nth-child(10) {
-  border-color: #9775fa;
-  color: #9775fa;
-  &:hover {
-    border-color: lighten(#9775fa, 10%);
-    background-color: lighten(#9775fa, 10%);
-    color: white;
-  }
-  &:active {
-    border-color: darken(#9775fa, 5%);
-    background-color: darken(#9775fa, 5%);
-  }
+    border-color: #9775fa;
+    color: #9775fa;
+    &:hover {
+      border-color: lighten(#9775fa, 10%);
+      background-color: lighten(#9775fa, 10%);
+      color: white;
+    }
+    &:active {
+      border-color: darken(#9775fa, 5%);
+      background-color: darken(#9775fa, 5%);
+    }
 }
 
 /*EDUMEDIA EXPLORER ELEMENT FOLDER*/
 
 edumedia-explorer-element.folder {
-  border: solid 1px #228fcc;
-  align-self: stretch;
-  width: 100%;
-  margin: 6px 0px;
-  border-radius: 8px;
-  color: #333;
-  cursor: pointer;
+    border: solid 1px #228fcc;
+    align-self:stretch;
+    width: 100%;
+    margin: 6px 0px;
+    border-radius: 8px;
+    color: #333;
+    cursor: pointer;
 }
 
 edumedia-explorer-element.folder > div {
@@ -183,87 +183,87 @@ edumedia-explorer-element.folder > div p {
 edumedia-explorer-element.folder p::after {
   margin-left: 12px;
   font-weight: 700;
-  content: "\0203A";
+  content:'\0203A'
 }
 
 /*EDUMEDIA EXPLORER ELEMENT MEDIA*/
-edumedia-explorer-element.media {
-  width: 31%;
-  text-align: center;
-  margin: 1% !important;
-  overflow: hidden;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgb(51, 51, 51);
-  font-weight: 600;
-  background-color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
+edumedia-explorer-element.media{
+    width: 31%;
+    text-align: center;
+    margin: 1% !important;
+    overflow: hidden;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(51, 51, 51);
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
 }
-edumedia-explorer-element.media div {
-  display: flex !important;
+edumedia-explorer-element.media div{
+  display:flex !important;
   width: 100%;
   height: 100%;
 }
-edumedia-explorer-element.media div img {
-  flex: 1;
+edumedia-explorer-element.media div img{
+  flex:1
 }
-edumedia-explorer-element.media div p {
-  flex: 1;
+edumedia-explorer-element.media div p{
+  flex:1;
   align-self: center;
   padding: 5px 10px !important;
-  color: rgb(51, 51, 51);
-  text-align: center;
+  color:rgb(51, 51, 51);
+  text-align:center;
 }
-edumedia-explorer-element.media.selected {
-  color: #228fcc;
+edumedia-explorer-element.media.selected{
+  color:#228fcc;
   border-color: #228fcc;
-  box-shadow: 0 2px 15px $shadow-light;
+    box-shadow: 0 2px 15px $shadow-light;
 }
-edumedia-explorer-element.media.selected p {
-  color: #228fcc;
+edumedia-explorer-element.media.selected p{
+  color:#228fcc;
 }
 
 /*EDUMEDIA EXPLORER*/
 edumedia-explorer .edumedia-scrollable-area {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
-  max-height: 430px;
-  overflow-y: auto;
-  &.edumedia-search {
-    img {
-      height: 100%;
-      padding-right: 10px;
-    }
-    edumedia-explorer-element.root {
-      padding: 0 5px 0 0;
-      width: 31%;
-      text-align: left;
-      border-color: grey;
-      color: #333;
-      background-color: white;
-      & > div {
-        justify-content: flex-start;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    max-height: 430px;
+    overflow-y: auto;
+    &.edumedia-search {
+      img {
+        height: 100%;
+        padding-right: 10px;
+      }
+      edumedia-explorer-element.root {
+        padding: 0 5px 0 0;
+        width: 31%;
+        text-align: left;
+        border-color: grey;
+        color: #333;
+        background-color: white;
+        & > div {
+          justify-content: flex-start;
+        }
       }
     }
-  }
 }
 
 .edumedia-explorer-container {
-  padding: 0 10px;
+  padding: 0 10px;  
 }
 
 /*EDUMEDIA STACK*/
-.tabs .edumedia-header-stack {
-  display: flex !important;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  padding-bottom: 0;
+.tabs .edumedia-header-stack{
+ display: flex !important;
+ justify-content:space-between;
+ align-items:center;
+ padding: 10px 0;
+ padding-bottom: 0;
   header {
     padding: 0;
     padding: 0;
@@ -287,7 +287,7 @@ edumedia-explorer .edumedia-scrollable-area {
 }
 
 /*EDUMEDIA TITLE*/
-.edumedia-header-title {
+.edumedia-header-title{
   display: flex !important;
   align-items: center;
   justify-content: space-between;
@@ -298,10 +298,10 @@ edumedia-explorer .edumedia-scrollable-area {
   h2 {
     font-size: 1.5em !important;
     font-weight: 600 !important;
-    margin: 0 !important;
+    margin: 0!important;
     cursor: pointer;
     span {
-      padding-right: 12px;
+      padding-right: 12px
     }
   }
 }
@@ -314,10 +314,10 @@ edumedia-explorer .edumedia-scrollable-area {
 }
 
 /*TEXT EDITOR*/
-.edumedia-container {
-  display: inline-block;
+.edumedia-container{
+ display: inline-block;
 }
-.edumedia-content-header {
+.edumedia-content-header{
   display: flex !important;
   align-items: baseline;
   justify-content: space-between;
@@ -326,56 +326,54 @@ edumedia-explorer .edumedia-scrollable-area {
   top: -10px;
   left: 0;
 }
-.edumedia-content-header [edumedia-fullscreen-jquery] {
+.edumedia-content-header [edumedia-fullscreen-jquery]{
   display: flex;
   align-items: center;
   position: initial;
   top: initial;
   left: initial;
 }
-[edumedia-delete-jquery],
-lightbox [edumedia-delete-jquery],
-edumedia-explorer edumedia-explorer-media [edumedia-delete-jquery] {
-  display: none;
+[edumedia-delete-jquery],lightbox [edumedia-delete-jquery],edumedia-explorer edumedia-explorer-media [edumedia-delete-jquery]{
+  display:none;
 }
-editor [edumedia-delete-jquery] {
-  display: block;
-  cursor: pointer;
+editor [edumedia-delete-jquery]{
+  display:block;
+  cursor:pointer;
 }
 /*EDUMEDIA FULLSCREEN*/
-#edumedia-fullscreen-lightbox {
-  display: block;
-  z-index: 100001;
+#edumedia-fullscreen-lightbox{
+    display: block;
+    z-index: 100001;
 }
-[edumedia-fullscreen-jquery] {
-  position: relative;
-  bottom: 5px;
-  left: 5px;
-  font-size: 16px !important;
-  margin: 0 !important;
-  font-weight: normal;
-  cursor: pointer;
-  color: $cyan;
+[edumedia-fullscreen-jquery]{
+    position: relative;
+    bottom: 5px;
+    left:5px;
+    font-size: 16px !important;
+    margin: 0!important;
+    font-weight: normal;
+    cursor: pointer;
+    color: $cyan;
 }
-#edumedia-fullscreen-lightbox .background {
+#edumedia-fullscreen-lightbox .background{
   background: black;
   display: block;
 }
-.edumedia-fullscreen-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: 100002;
-  width: 100%;
-  position: fixed;
+.edumedia-fullscreen-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100002;
+    width: 100%;
+    position: fixed;
 }
-#edumedia-fullscreen-lightbox .close-2x {
+#edumedia-fullscreen-lightbox .close-2x{
   color: white;
 }
-#edumedia-fullscreen-lightbox .close-lightbox {
+#edumedia-fullscreen-lightbox .close-lightbox{
   z-index: 100003;
 }
 

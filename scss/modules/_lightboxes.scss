@@ -1,159 +1,156 @@
-section.lightbox-window {
-  .row {
-    min-height: initial !important;
-  }
-  .lightbox-buttons {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    input[type="submit"],
-    input[type="button"] {
-      float: right;
-    }
-  }
-  .close-lightbox {
-    i {
-      @include icon(glyphicons_207_remove_2, 20px);
-    }
-  }
+section.lightbox-window{
+	.row{
+		min-height: initial !important;
+	}
+	.lightbox-buttons{
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		input[type=submit], input[type=button]{
+			float: right;
+		}
+	}
+	.close-lightbox{
+		i{
+			@include icon(glyphicons_207_remove_2, 20px);
+		}
+	}
 }
 
-.lightbox-buttons {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
+.lightbox-buttons{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
 }
+
 
 section.lightbox,
 section.tiny-lightbox {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  position: fixed;
-  z-index: 10001;
-  top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
-  left: 0;
-  right: 0;
-  display: none;
-  text-align: left;
-  line-height: initial;
-  font-size: initial;
-  font-weight: normal;
-  cursor: default;
-  .background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    top: 0;
-    &::after {
-      content: " ";
-      width: 100%;
-      height: 100%;
-      display: block;
-      background: rgba(0, 0, 0, 0.6);
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-  > div.content {
-    border-radius: 5px;
-    width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-    background: #fff;
-    position: relative;
-    margin-top: 20px;
-    padding: 15px;
-    float: none !important;
-    overflow: auto;
-    max-height: calc(100vh - 75px);
-    z-index: 1;
-    max-width: initial;
-  }
-  .content::after {
-    clear: both;
-    content: " ";
-    display: block;
-    width: 100%;
-  }
-  &::after {
-    clear: both;
-    content: " ";
-    display: block;
-    width: 100%;
-  }
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	position: fixed;
+	z-index: 10001;
+	top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	left: 0;
+	right: 0;
+	display: none;
+	text-align: left;
+	line-height: initial;
+	font-size: initial;
+	font-weight: normal;
+    cursor: default;
+	.background{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		top: 0;
+		&::after{
+			content: " ";
+			width: 100%;
+			height: 100%;
+			display: block;
+			background: rgba(0,0,0,0.6);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	> div.content{
+		border-radius: 5px;
+		width: 720px;
+		margin-left: auto;
+		margin-right: auto;
+		background: #fff;
+		position: relative;
+		margin-top: 20px;
+		padding: 15px;
+		float: none !important;
+		overflow: auto;
+		max-height: calc(100vh - 75px);
+		z-index: 1;
+		max-width: initial;
+	}
+	.content::after{
+		clear:both;
+		content: " ";
+		display: block;
+		width: 100%;
+	}
+	&::after{
+		clear:both;
+		content: " ";
+		display: block;
+		width: 100%;
+	}
 }
 
 section.tiny-lightbox div.content {
-  width: 500px;
+	width: 500px;
 }
 
-.lightbox-view,
-.lightbox {
-  .tabs.linker {
-    section .icons-view {
-      border-left: 0;
-    }
-    select {
-      height: 25px;
-    }
-  }
-  .linker {
-    input[type="checkbox"] {
-      margin-left: 0;
-    }
-    input[type="text"],
-    select,
-    label {
-      margin: 5px;
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .found-resources {
-      position: relative;
-      height: 165px;
-      overflow-y: auto;
-      clear: both;
-      @include run-transition(height);
-      .icons-view {
-        overflow: auto;
-        @include absolute;
-      }
-    }
-    .illustrated-list {
-      position: absolute;
-      li {
-        img {
-          position: relative !important;
-          height: 100% !important;
+.lightbox-view, .lightbox {
+	.tabs.linker {
+		section .icons-view {
+			border-left: 0;
+		}
+		select {
+			height: 25px;
+		}
+	}
+	.linker{
+		input[type=checkbox]{
+			margin-left: 0;
+		}
+        input[type=text], select, label{
+            margin: 5px;
+			margin-left: 0;
+			margin-right: 0;
         }
-      }
-    }
-  }
-  .search-pagination {
-    input {
-      padding-right: 45px !important;
-      padding-left: 45px !important;
-      margin: 0 !important;
-      box-sizing: border-box;
-    }
-    .show-close {
-      position: absolute;
-    }
-  }
-  .embed-container {
-    .supported-information {
-      line-height: 1.4;
-      margin-bottom: 1rem;
+		.found-resources {
+			position: relative;
+			height: 165px;
+			overflow-y: auto;
+			clear: both;
+			@include run-transition(height);
+			.icons-view {
+				overflow: auto;
+				@include absolute;
+			}
+		}
+		.illustrated-list {
+			position: absolute;
+			li{
+				img{
+					position: relative !important;
+					height: 100% !important;
+				}
+			}
+		}
+	}
+	.search-pagination{
+		input{
+			padding-right: 45px!important;
+			padding-left: 45px!important;
+			margin: 0!important;
+			box-sizing: border-box;
+		}
+		.show-close{
+			position: absolute;
+		}
+	}
+	.embed-container {
+		.supported-information {
+			line-height: 1.4;
+			margin-bottom: 1rem;
 
-      .cell {
-        float: none;
-      }
-    }
-  }
+			.cell {
+				float: none;
+			}
+		}
+	}
 }

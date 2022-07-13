@@ -1,9 +1,9 @@
-.breadcrumbs {
-  a::after {
-    content: " > ";
-    color: #ccc;
-  }
-  a:last-child::after {
-    content: "";
-  }
+.breadcrumbs{
+    a::after{
+        content: " > ";
+        color: #ccc;
+    }
+    a:last-child::after{
+        content: ""
+    }
 }

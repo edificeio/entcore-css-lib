@@ -1,136 +1,136 @@
-embedder {
-  .lightbox > .content {
-    overflow: hidden;
-  }
-  .lightbox > .content .browser {
-    max-width: 100%;
-  }
-
-  .embedder-help {
-    color: #444;
-    font-size: 14px;
-    margin-bottom: 30px;
-  }
-
-  .provider {
-    display: none;
-    width: 100%;
-
-    i.copy {
-      position: absolute;
-      top: -4px;
-      left: 10px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      float: left;
-
-      &::before {
-        content: "\e820";
-        display: block;
-        height: 30px;
-        font-size: 30px;
-        color: #666;
-        transition: color 250ms ease;
-      }
+embedder{
+    .lightbox > .content {
+        overflow: hidden;
     }
-
-    .input-help {
-      label {
-        left: 60px;
-      }
-    }
-
-    .others {
-      @include editor-icon;
-      display: block;
-      position: relative;
-      font-size: 35px;
-      height: 80px;
-      width: 80px;
-      margin-bottom: 20px;
-      margin-top: 20px;
-      margin-left: auto;
-      margin-right: auto;
-      float: none;
-      box-shadow: 3px 3px 0px rgba(200, 200, 200, 1);
-      background-color: #eee;
-      transition: all 200ms ease;
-      line-height: 80px;
-      border-radius: 5px;
-      color: #888;
-
-      &:hover {
-        box-shadow: none;
-      }
-    }
-
-    .invalid-preview {
-      font-size: 35px;
-      color: #d6d6d6;
-      font-weight: bold;
-      background: #eee;
-      height: 315px;
-      margin-top: 20px;
-      margin-bottom: 30px;
-      text-align: center;
-      line-height: 350px;
-      border-radius: 5px;
-    }
-
-    .preview {
-      iframe {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        margin-top: 30px;
-        margin-bottom: 30px;
+    .lightbox > .content .browser{
         max-width: 100%;
-      }
     }
 
-    &.visible {
-      display: block;
+    .embedder-help {
+        color: #444;
+        font-size: 14px;
+        margin-bottom: 30px;
     }
-  }
 
-  .provider-content {
-    width: 100%;
-    min-width: 300px;
-  }
+    .provider {
+        display: none;
+        width: 100%;
 
-  .pick {
-    ul {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      width: 80%;
-      margin: auto;
+        i.copy {
+            position: absolute;
+            top: -4px;
+            left: 10px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            float: left;
+
+            &::before {
+                content: '\e820';
+                display: block;
+                height: 30px;
+                font-size: 30px;
+                color: #666;
+                transition: color 250ms ease;
+            }
+        }
+
+        .input-help{
+            label{
+                left: 60px;
+            }
+        }
+
+        .others {
+            @include editor-icon;
+            display: block;
+            position: relative;
+            font-size: 35px;
+            height: 80px;
+            width: 80px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            float: none;
+            box-shadow: 3px 3px 0px rgba(200,200,200,1);
+            background-color: #eee;
+            transition: all 200ms ease;
+            line-height: 80px;
+            border-radius: 5px;
+            color: #888;
+
+            &:hover {
+                box-shadow: none;
+            }
+        }
+
+        .invalid-preview {
+            font-size: 35px;
+            color: #d6d6d6;
+            font-weight: bold;
+            background: #eee;
+            height: 315px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            line-height: 350px;
+            border-radius: 5px;
+        }
+
+        .preview {
+            iframe {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                max-width: 100%;
+            }
+        }
+
+        &.visible {
+            display: block;
+        }
     }
-    li {
-      opacity: 0.7;
-      list-style-type: none;
-      max-width: 20%;
-      display: inline-block;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      margin: 5px;
-      padding: 20px;
-      transition: opacity 500ms ease;
-      &:hover {
-        opacity: 1;
-      }
-      img {
-        display: block;
-      }
+
+    .provider-content {
+        width: 100%;
+        min-width: 300px;
     }
-  }
+
+    .pick {
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            width: 80%;
+            margin: auto;
+        }
+        li{
+            opacity: 0.7;
+            list-style-type: none;
+            max-width: 20%;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 20px;
+            transition: opacity 500ms ease;
+            &:hover{
+                opacity: 1;
+            }
+            img{
+                display: block;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $fat-mobile) {
-  embedder .pick li {
-    max-width: 25%;
-    padding: 10px;
-  }
+    embedder .pick li {
+        max-width: 25%;
+        padding: 10px;
+    }
 }

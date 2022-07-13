@@ -1,309 +1,308 @@
 .schedule {
-  .previous-timeslots {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 60px;
-    z-index: 800;
-  }
-  .next-timeslots {
-    width: 100%;
-    position: relative;
-    z-index: 800;
-    height: 17px;
-  }
-  .hidden-schedule-items {
-    &.after {
-      bottom: -24px;
-      top: initial;
-    }
-    position: absolute;
-    top: -27px;
-    z-index: 801;
-    font-size: 10px;
-    left: 50%;
-    width: 22px;
-    margin-left: -7px;
-    background: #fff;
-    border-radius: 15px;
-    text-align: center;
-    color: #666;
-    pointer-events: none;
-  }
-  width: 100%;
-  height: auto;
-  margin-left: 115px;
-  padding-right: 115px;
-  box-sizing: border-box;
-  overflow: visible;
-  legend.timeslots {
-    width: 115px;
-    background: #d9f1f1;
-    color: #777;
-    position: absolute;
-    left: -115px;
-    margin-top: 80px;
-  }
-  .timeslot {
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    box-sizing: border-box;
-  }
-  .days {
-    width: 100%;
-    padding-top: 80px;
-    overflow: hidden;
-    position: relative;
-    height: 546px;
-    .day {
-      float: left;
-      width: 100% / 7;
-      &.single {
-        width: 100%;
-      }
-      position: relative;
-      legend {
-        width: 100%;
-        text-align: center;
-        height: 60px;
-        line-height: 30px;
-        color: #777;
-        background: #d9f1f1;
-        box-sizing: border-box;
-        position: absolute;
-        top: -80px;
-        z-index: 800;
-      }
-      .timeslots {
-        height: auto;
-        .timeslot {
-          background: #fdfdfd;
-          border-bottom: 1px solid #eee;
-          border-right: 1px solid #eee;
-          width: 100%;
-          box-sizing: border-box;
-        }
-      }
-    }
-  }
+	.previous-timeslots {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 60px;
+		z-index: 800;
+	}
+	.next-timeslots {
+		width: 100%;
+		position: relative;
+		z-index: 800;
+		height: 17px;
+	}
+	.hidden-schedule-items {
+		&.after {
+			bottom: -24px;
+			top: initial;
+		}
+		position: absolute;
+		top: -27px;
+		z-index: 801;
+		font-size: 10px;
+		left: 50%;
+		width: 22px;
+		margin-left: -7px;
+		background: #fff;
+		border-radius: 15px;
+		text-align: center;
+		color: #666;
+		pointer-events: none;
+	}
+	width: 100%;
+	height: auto;
+	margin-left: 115px;
+	padding-right: 115px;
+	box-sizing: border-box;
+	overflow: visible;
+	legend.timeslots {
+		width: 115px;
+		background: #d9f1f1;
+		color: #777;
+		position: absolute;
+		left: -115px;
+		margin-top: 80px;
+	}
+	.timeslot {
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		box-sizing: border-box;
+	}
+	.days {
+		width: 100%;
+		padding-top: 80px;
+		overflow: hidden;
+		position: relative;
+		height: 546px;
+		.day {
+			float: left;
+			width: 100% / 7;
+			&.single {
+				width: 100%;
+			}
+			position: relative;
+			legend {
+				width: 100%;
+				text-align: center;
+				height: 60px;
+				line-height: 30px;
+				color: #777;
+				background: #d9f1f1;
+				box-sizing: border-box;
+				position: absolute;
+				top: -80px;
+				z-index: 800;
+			}
+			.timeslots {
+				height: auto;
+				.timeslot {
+					background: #fdfdfd;
+					border-bottom: 1px solid #eee;
+					border-right: 1px solid #eee;
+					width: 100%;
+					box-sizing: border-box;
+				}
+			}
+		}
+	}
 
-  .schedule-items {
-    box-sizing: border-box;
-    .schedule-item {
-      @include run-transition(top);
-      width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      position: absolute;
-      border: 1px solid transparent;
-      border-radius: 5px;
-      box-sizing: border-box;
-      z-index: 500;
-      container {
-        @include run-transition(all);
-      }
-      .schedule-item-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        font-size: 12px;
-        text-align: left;
-        padding: 5px;
-        color: #fff;
-        line-height: 17px;
-        .pending-status::before {
-          position: absolute;
-          bottom: 12px;
-          right: 12px;
-          z-index: 510;
-        }
-        .suspended-status {
-          position: absolute;
-          bottom: 14px;
-          right: 13px;
-          z-index: 510;
-        }
-        .validated-status {
-          position: absolute;
-          bottom: 14px;
-          right: 12px;
-          z-index: 510;
-        }
-        .refused-status {
-          position: absolute;
-          bottom: 15px;
-          right: 14px;
-          z-index: 510;
-        }
-        .periodic-status {
-          position: absolute;
-          bottom: 15px;
-          right: 36px;
-          z-index: 510;
-        }
-      }
-    }
-    .schedule-item.one {
-      @include grid-cell-width(1);
-    }
-    .schedule-item.two {
-      @include grid-cell-width(2);
-    }
-    .schedule-item.three {
-      @include grid-cell-width(3);
-    }
-    .schedule-item.four {
-      @include grid-cell-width(4);
-    }
-    .schedule-item.six {
-      @include grid-cell-width(6);
-    }
-  }
+	.schedule-items {
+		box-sizing: border-box;
+		.schedule-item {
+			@include run-transition(top);
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			position: absolute;
+			border: 1px solid transparent;
+			border-radius: 5px;
+			box-sizing: border-box;
+			z-index: 500;
+			container {
+				@include run-transition(all);
+			}
+			.schedule-item-content {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				font-size: 12px;
+				text-align: left;
+				padding: 5px;
+				color: #fff;
+				line-height: 17px;
+				.pending-status::before {
+					position: absolute;
+					bottom: 12px;
+					right: 12px;
+					z-index: 510;
+				}
+				.suspended-status {
+					position: absolute;
+					bottom: 14px;
+					right: 13px;
+					z-index: 510;
+				}
+				.validated-status {
+					position: absolute;
+					bottom: 14px;
+					right: 12px;
+					z-index: 510;
+				}
+				.refused-status {
+					position: absolute;
+					bottom: 15px;
+					right: 14px;
+					z-index: 510;
+				}
+				.periodic-status {
+					position: absolute;
+					bottom: 15px;
+					right: 36px;
+					z-index: 510;
+				}
+			}
+		}
+		.schedule-item.one {
+			@include grid-cell-width(1);
+		}
+		.schedule-item.two {
+			@include grid-cell-width(2);
+		}
+		.schedule-item.three {
+			@include grid-cell-width(3);
+		}
+		.schedule-item.four {
+			@include grid-cell-width(4);
+		}
+		.schedule-item.six {
+			@include grid-cell-width(6);
+		}
+	}
 }
 
 .schedule-month {
-  margin: 0 !important;
-  width: 100% !important;
-  padding-top: 60px;
+	margin: 0 !important;
+	width: 100% !important;
+	padding-top: 60px;
 
-  .month-day {
-    width: calc(100% / 7);
-    height: 80px;
-    float: left;
-    overflow: auto;
-    border: 1px solid gray;
-    border-right-width: 0;
-    box-sizing: border-box;
-    margin-bottom: -1px;
+	.month-day {
+		width: calc(100% / 7);
+		height: 80px;
+		float: left;
+		overflow: auto;
+		border: 1px solid gray;
+		border-right-width: 0;
+		box-sizing: border-box;
+		margin-bottom: -1px;
 
-    &:last-child,
-    &.offset-6 {
-      border-right-width: 1px;
-    }
-    &.offset-0 {
-      clear: left;
-    }
+		&:last-child,
+		&.offset-6 {
+			border-right-width: 1px;
+		}
+		&.offset-0 {
+			clear: left;
+		}
 
-    &:first-of-type.offset-1 {
-      margin-left: calc(1 * 100% / 7);
-    }
+		&:first-of-type.offset-1 {
+			margin-left: calc(1 * 100% / 7);
+		}
 
-    &:first-of-type.offset-2 {
-      margin-left: calc(2 * 100% / 7);
-    }
+		&:first-of-type.offset-2 {
+			margin-left: calc(2 * 100% / 7);
+		}
 
-    &:first-of-type.offset-3 {
-      margin-left: calc(3 * 100% / 7);
-    }
+		&:first-of-type.offset-3 {
+			margin-left: calc(3 * 100% / 7);
+		}
 
-    &:first-of-type.offset-4 {
-      margin-left: calc(4 * 100% / 7);
-    }
+		&:first-of-type.offset-4 {
+			margin-left: calc(4 * 100% / 7);
+		}
 
-    &:first-of-type.offset-5 {
-      margin-left: calc(5 * 100% / 7);
-    }
+		&:first-of-type.offset-5 {
+			margin-left: calc(5 * 100% / 7);
+		}
 
-    &:first-of-type.offset-6 {
-      margin-left: calc(6 * 100% / 7);
-    }
+		&:first-of-type.offset-6 {
+			margin-left: calc(6 * 100% / 7);
+		}
 
-    .day-number {
-      display: block;
-      padding-left: 3px;
-      font-size: 0.9em;
-    }
+		.day-number {
+			display: block;
+			padding-left: 3px;
+			font-size: 0.9em;
+		}
 
-    .n-more {
-      position: absolute;
-      top: 1px;
-      right: 1px;
-    }
+		.n-more {
+			position: absolute;
+			top: 1px;
+			right: 1px;
+		}
 
-    .schedule-items .item {
-      font-size: 0.8em;
-      line-height: 1.4em;
-      margin: 0 1px 1px;
+		.schedule-items .item {
+			font-size: 0.8em;
+			line-height: 1.4em;
+			margin: 0 1px 1px;
 
-      * {
-        white-space: nowrap;
-        overflow-x: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-  }
+			* {
+				white-space: nowrap;
+				overflow-x: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
 
-  .legend > .month-day {
-    height: 1.6em;
-    line-height: 1.6em;
-    text-align: center;
-    overflow: visible;
-  }
+	.legend > .month-day {
+		height: 1.6em;
+		line-height: 1.6em;
+		text-align: center;
+		overflow: visible;
+	}
 
-  /* Clearfix */
-  .legend::after {
-    display: block;
-    clear: both;
-    content: "";
-  }
+	/* Clearfix */
+	.legend::after {
+		display: block;
+		clear: both;
+		content: "";
+	}
 
-  .grid::after {
-    display: block;
-    clear: both;
-    content: "";
-  }
+	.grid::after {
+		display: block;
+		clear: both;
+		content: "";
+	}
 }
 
 .week-switcher {
-  z-index: 30;
-  font-size: 12px;
-  top: 15px;
-  .date-picker-icon {
-    position: absolute;
-    margin-bottom: 25px;
-    margin-right: 8px;
-  }
+	z-index: 30;
+	font-size: 12px;
+	top: 15px;
+	.date-picker-icon {
+		position: absolute;
+		margin-bottom: 25px;
+		margin-right: 8px;
+	}
 }
 
 .calendar-current-week {
-  background: #efefef;
-  width: 100%;
-  text-align: right;
-  font-weight: bold;
-  padding-right: 8px;
-  line-height: 46px;
-  max-height: 46px;
-  box-sizing: border-box;
-  .calendarFiltersButtons {
-    float: left;
-    max-height: 46px;
-  }
+	background: #efefef;
+	width: 100%;
+	text-align: right;
+	font-weight: bold;
+	padding-right: 8px;
+	line-height: 46px;
+	max-height: 46px;
+	box-sizing: border-box;
+	.calendarFiltersButtons {
+		float: left;
+		max-height: 46px;
+	}
 }
 
-.calendarFiltersButtons {
-  button {
-    margin-bottom: 0;
-  }
+.calendarFiltersButtons{
+	button {margin-bottom:0;}
 }
+
 
 lightbox.schedules-more-items section.lightbox > div.content {
-  max-width: 300px;
-  max-height: 300px;
-  margin-top: 50%;
-  transform: translateY(-100%);
-  overflow-y: auto;
+	max-width: 300px;
+	max-height: 300px;
+	margin-top: 50%;
+	transform: translateY(-100%);
+	overflow-y: auto;
 
-  .item {
-    margin: 0 1px 1px;
+	.item {
+		margin: 0 1px 1px;
 
-    * {
-      white-space: nowrap;
-      overflow-x: hidden;
-      text-overflow: ellipsis;
-      padding: 3px;
-    }
-  }
+		* {
+			white-space: nowrap;
+			overflow-x: hidden;
+			text-overflow: ellipsis;
+			padding: 3px;
+		}
+	}
 }

@@ -1,6 +1,6 @@
 .bpr {
   h2 {
-    margin: 0 !important;
+    margin: 0!important;
   }
   textarea {
     resize: vertical;
@@ -8,19 +8,19 @@
     margin-top: 0;
   }
   & section.lightbox label {
-    margin-bottom: 0 !important;
+    margin-bottom: 0!important;
   }
   & .lightbox > div.content {
-    width: 800px !important;
+    width: 800px!important;
     padding: 15px 30px;
   }
   & .tiny-lightbox > div.content {
-    width: 500px !important;
+    width: 500px!important;
     padding: 15px 30px;
   }
 
   .loading-list {
-    overflow: auto !important;
+    overflow: auto!important;
   }
   .select-file button {
     min-width: 120px;
@@ -42,9 +42,9 @@
 
   .multiline-ellipsis-two {
     line-height: 1;
-    font-size: 14px !important;
+    font-size: 14px!important;
     &::before {
-      content: "";
+      content:"";
     }
   }
 
@@ -53,12 +53,11 @@
   }
 
   .smaller-text {
-    font-size: 12px !important;
+    font-size: 12px!important;
   }
 
-  .lightbox-view .search-pagination input,
-  .lightbox .search-pagination input {
-    padding-left: 10px !important;
+  .lightbox-view .search-pagination input, .lightbox .search-pagination input {
+    padding-left: 10px!important;
   }
 
   .noUi-connect {
@@ -113,7 +112,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 14px;
   }
   .licence-condition {
@@ -137,6 +136,6 @@
 
 @media screen and (max-width: $tablette) {
   file-picker-list .media-library .import-files > article {
-    width: inherit;
+      width: inherit;
   }
 }
