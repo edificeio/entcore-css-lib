@@ -1,143 +1,149 @@
+.share {
+  width: 100%;
 
+  table {
+    width: 100%;
+  }
+  td,
+  th {
+    width: 100px;
+    text-align: center;
+    line-height: 18px;
 
-.share{
-	width: 100%;
-	
-	table{
-		width: 100%;
-	}
-	td, th{
-		width: 100px;
-		text-align: center;
-		line-height: 18px;
+    i.down-open,
+    i.up-open {
+      margin: 0 0 0 5px;
+      &::before {
+        color: $primary;
+        font-size: 12px;
+      }
+      &:hover::before {
+        color: $accent;
+      }
+    }
+  }
+  td:first-child,
+  th:first-child {
+    width: 30%;
+    text-align: left;
+  }
 
-		i.down-open, i.up-open {
-			margin: 0 0 0 5px;
-			&::before {
-				color: $primary;
-				font-size: 12px;
-			}
-			&:hover::before {
-				color: $accent;
-			}
-		}
-	}
-	td:first-child, th:first-child{
-		width: 30%;
-		text-align: left;
-	}
+  .line {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
 
-	.line{
-		margin-bottom: 10px;
-		padding-bottom: 10px;
-	}
+  h2 {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+  }
 
-	h2 {
-		margin-bottom: 0px !important;
-		margin-top: 0px !important;
-	}
+  h3 {
+    padding: 15px;
+  }
 
-	h3{
-		padding: 15px;
-	}
+  input[type="text"] {
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
 
-	input[type=text]{
-		margin-left: 15px;
-		margin-bottom: 15px;
-	}
+  .publication-option {
+    padding: 15px;
+  }
 
-    .publication-option{
-        padding: 15px;
+  .display-more {
+    text-align: right;
+    display: block;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  .saveSharebookmark {
+    font-size: 15px;
+
+    input[type="text"] {
+      width: 250px;
+      height: 37px;
+      margin-right: 10px;
     }
 
-	.display-more{
-		text-align: right;
-		display: block;
-		font-size: 15px;
-		box-sizing: border-box;
-	}
-	.saveSharebookmark {
-		font-size: 15px;
-		
-		input[type=text] {
-			width: 250px;
-			height: 37px;
-			margin-right: 10px;
-		}
+    .saved-in {
+      padding-right: 5px;
+    }
+  }
 
-		.saved-in {
-			padding-right: 5px;
-		}
-	}
+  i.add-favorite {
+    margin: 0 5px 0 0;
+    &::before {
+      color: $primary;
+    }
+  }
 
-	i.add-favorite {
-		margin: 0 5px 0 0;
-		&::before {
-			color: $primary;
-		}
-	}
-
-	.responsive-table {
-		margin: 10px 0;
-	}
+  .responsive-table {
+    margin: 10px 0;
+  }
 }
 
-
-.read-only{
-	.share{
-		label{
-			pointer-events: none;
-		}
-		input[type=checkbox]{
-			opacity: 0.5;
-		}
-		.row:last-child{
-			display: none;
-		}
-		.line{
-			margin: 0 !important;
-			border: none !important;
-		}
-		.drop-line{
-			pointer-events: none;
-			background: none !important;
-		}
-	}
+.read-only {
+  .share {
+    label {
+      pointer-events: none;
+    }
+    input[type="checkbox"] {
+      opacity: 0.5;
+    }
+    .row:last-child {
+      display: none;
+    }
+    .line {
+      margin: 0 !important;
+      border: none !important;
+    }
+    .drop-line {
+      pointer-events: none;
+      background: none !important;
+    }
+  }
 }
 
-.share.publish{
-	table{
-		tr{
-			td:first-child, th:first-child {
-				width: 95%;
-			}
-		}
-
-	}
+.share.publish {
+  table {
+    tr {
+      td:first-child,
+      th:first-child {
+        width: 95%;
+      }
+    }
+  }
 }
 
-.flowing.sharing{
-	td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5),
-	th:nth-child(2), th:nth-child(3), th:nth-child(4), th:nth-child(5){
-		min-width: 80px;
-		text-align: center;
-	}
-	th:first-child{
-		width: 500px;
-	}
-	th{
-		font-size: 14px;
-		font-weight: normal;
-		padding: 5px
-	}
-	td:first-child{
-		text-align: left;
-	}
-	td{
-		text-align: center;
-		input[type=checkbox]{
-			display: inline;
-			float: none;
-		}
-	}
+.flowing.sharing {
+  td:nth-child(2),
+  td:nth-child(3),
+  td:nth-child(4),
+  td:nth-child(5),
+  th:nth-child(2),
+  th:nth-child(3),
+  th:nth-child(4),
+  th:nth-child(5) {
+    min-width: 80px;
+    text-align: center;
+  }
+  th:first-child {
+    width: 500px;
+  }
+  th {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px;
+  }
+  td:first-child {
+    text-align: left;
+  }
+  td {
+    text-align: center;
+    input[type="checkbox"] {
+      display: inline;
+      float: none;
+    }
+  }
 }

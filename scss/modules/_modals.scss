@@ -1,79 +1,79 @@
 .modal {
-    position: absolute;
-    z-index: 1000;
-    background-color: white;
-    border: 1px solid $light-grey;
-    padding: 20px;
-    color: $dark-grey;
-    box-shadow: 5px 5px 15px rgba(black, 0.1);
-    width: 400px;
-    font-size: 14px;
-    font-weight: normal;
-    .close {
-        @include fonticon;
-        position: absolute!important;
-        top: 10px!important;
-        right: 10px!important;
-        z-index: 1001;
-        color: $grey!important;
-        font-size: 16px!important;
-        &::before {
-            content: "\e866";
-        }
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid $light-grey;
+  padding: 20px;
+  color: $dark-grey;
+  box-shadow: 5px 5px 15px rgba(black, 0.1);
+  width: 400px;
+  font-size: 14px;
+  font-weight: normal;
+  .close {
+    @include fonticon;
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 1001;
+    color: $grey !important;
+    font-size: 16px !important;
+    &::before {
+      content: "\e866";
     }
-    &--buttons {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin-top: 20px;
-        > *:not(:last-child) {
-            margin: 0 5px;
-        }
-        i {
-            font-size: 14px;
-            vertical-align: top;
-        }
+  }
+  &--buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    > *:not(:last-child) {
+      margin: 0 5px;
     }
+    i {
+      font-size: 14px;
+      vertical-align: top;
+    }
+  }
 }
 
 .modal--small {
-    width: 200px;
+  width: 200px;
 }
 
 .modal--big {
-    width: 600px;
+  width: 600px;
 }
 
 // Alignement en haut à gauche
 .modal--lt {
-    left: 0;
-    top: 0;
+  left: 0;
+  top: 0;
 }
 
-// Alignement en haut à droite 
+// Alignement en haut à droite
 .modal--rt {
-    right: 0;
-    top: 0;
+  right: 0;
+  top: 0;
 }
 
 // Alignement en bas à gauche
 .modal--lb {
-    left: 0;
-    bottom: 0;
+  left: 0;
+  bottom: 0;
 }
 
 // Alignement en bas à droite
 .modal--rb {
-    right: 0;
-    bottom: 0;
+  right: 0;
+  bottom: 0;
 }
 
 @media screen and (max-width: $tablette) {
-    .modal {
-        position: fixed;
-        width: calc(100% - 50px);
-        top: 100px;
-        left: 25px;
-        box-shadow: 0 0 100px 1000px rgba(0,0,0,0.6);
-    }
+  .modal {
+    position: fixed;
+    width: calc(100% - 50px);
+    top: 100px;
+    left: 25px;
+    box-shadow: 0 0 100px 1000px rgba(0, 0, 0, 0.6);
+  }
 }

@@ -1,133 +1,133 @@
 .toast.toast--video {
-    box-sizing: border-box;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 350px;
-    padding: 24px;
-    padding-bottom: 16px;
-    border-radius: 6px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 0 0 9999px rgba(0, 0, 0, 0.3);
-    transform: translateX(-50%);
+  box-sizing: border-box;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 350px;
+  padding: 24px;
+  padding-bottom: 16px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 0 0 9999px rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
 }
 
 .toast--video .btn-close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    box-sizing: content-box;
-    width: 1em;
-    height: 1em;
-    padding: 0.25em 0.25em;
-    color: #000;
-    border: 0;
-    border-radius: 0.25rem;
-    opacity: .5;
-    box-shadow: none;
-    background: transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 0.25em 0.25em;
+  color: #000;
+  border: 0;
+  border-radius: 0.25rem;
+  opacity: 0.5;
+  box-shadow: none;
+  background: transparent;
 }
 
 .toast--video .btn-close:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .toast--video .toast-headline,
 .toast--video .toast-text {
-    color: #222;
+  color: #222;
 }
 
 .toast--video .toast-headline {
-    font-size: 18px;
-    line-height: 1;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .toast--video .toast-text {
-    font-size: 14px;
-    line-height: 20px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .toast--video .toast-body {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .toast--video .toast-illustration {
-    min-width: 80px;
-    width: 80px;
-    height: 112px;
-    background-color: #f0f2f4;
-    border-radius: 4px;
-    overflow: hidden;
+  min-width: 80px;
+  width: 80px;
+  height: 112px;
+  background-color: #f0f2f4;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .toast--video .toast-footer {
-    gap: 0.2rem;
-    padding-left: 6rem;
-    display: flex;
-    justify-content: flex-end;
+  gap: 0.2rem;
+  padding-left: 6rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.toast--video .toast-footer>button {
-    margin-bottom: 0;
-    float: none;
-    flex: 1;
+.toast--video .toast-footer > button {
+  margin-bottom: 0;
+  float: none;
+  flex: 1;
 }
 
-.toast--video .toast-footer>button,
+.toast--video .toast-footer > button,
 .toast--video .btn-close {
-    pointer-events: all;
+  pointer-events: all;
 }
 
 .highlight-video .header.main {
-    z-index: 1;
+  z-index: 1;
 }
 
 .highlight-video .option.embed {
-    position: relative;
-    z-index: 10000;
+  position: relative;
+  z-index: 10000;
 }
 
-.highlight-video .option.embed>i::before {
-    display: inline;
-    position: relative;
-    z-index: 1000;
-    padding: 0.3rem 0.4rem 0.4rem;
-    border-radius: 4px;
-    background: #fff;
+.highlight-video .option.embed > i::before {
+  display: inline;
+  position: relative;
+  z-index: 1000;
+  padding: 0.3rem 0.4rem 0.4rem;
+  border-radius: 4px;
+  background: #fff;
 }
 
 @media (min-width: 1400px) {
-    .toast.toast--video {
-        right: 0;
-        left: unset;
-        transform: translateX(0);
-    }
+  .toast.toast--video {
+    right: 0;
+    left: unset;
+    transform: translateX(0);
+  }
 }
 
 @media (min-width: 801px) {
-    .highlight-video {
-        overflow: hidden !important;
-    }
+  .highlight-video {
+    overflow: hidden !important;
+  }
 
-    .highlight-video .toast.toast--video {
-        display: block;
-    }
-    
-    .highlight-video * {
-        pointer-events: none;
-    }
-    .highlight-video.actualites .tabs.heading-tabs {
-        z-index: 0;
-    }
+  .highlight-video .toast.toast--video {
+    display: block;
+  }
+
+  .highlight-video * {
+    pointer-events: none;
+  }
+  .highlight-video.actualites .tabs.heading-tabs {
+    z-index: 0;
+  }
 }
 
 @media (max-width: 800px) {
-    .highlight-video {
-        overflow: auto !important;
-    }
+  .highlight-video {
+    overflow: auto !important;
+  }
 
-    .highlight-video .toast.toast--video {
-        display: none;
-    }
+  .highlight-video .toast.toast--video {
+    display: none;
+  }
 }

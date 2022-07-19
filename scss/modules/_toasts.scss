@@ -41,7 +41,7 @@
       background-color: lighten($green, 30%);
 
       .content:before {
-        content: '\e871';
+        content: "\e871";
       }
 
       .timer {
@@ -54,7 +54,7 @@
       background-color: lighten($cyan, 30%);
 
       .content:before {
-        content: '\e84b';
+        content: "\e84b";
       }
 
       .timer {
@@ -67,7 +67,7 @@
       background-color: lighten($warning-color, 30%);
 
       .content:before {
-        content: '\e903';
+        content: "\e903";
       }
 
       .timer {
@@ -75,7 +75,8 @@
       }
     }
 
-    &.info, &.warning {
+    &.info,
+    &.warning {
       .content:before {
         font-size: 20px !important;
       }

@@ -1,317 +1,330 @@
-i.cloud-upload{
-    @include fonticon;
-    &::before{
-        content: '\e9c3'
-    }
+i.cloud-upload {
+  @include fonticon;
+  &::before {
+    content: "\e9c3";
+  }
 }
 
-i.undo, .undo > i{
-    @include fonticon;
-    &::before {
-        content: '\e8be';
-    }
+i.undo,
+.undo > i {
+  @include fonticon;
+  &::before {
+    content: "\e8be";
+  }
 }
 
-i.redo, .redo > i{
-    @include fonticon;
-    &::before {
-        content: '\e8bd';
-    }
+i.redo,
+.redo > i {
+  @include fonticon;
+  &::before {
+    content: "\e8bd";
+  }
 }
-i.loaded{
-    @include fonticon;
-    transform: rotate(0deg);
-    &::before{
-        content: '\e915';
-    }
-}
-
-i.loading{
-    animation: rotate 1000ms linear infinite;
-    @include fonticon;
-    display: inline-block;
-    height: inherit!important;
-    &::before{
-        content: '\e85a';
-    }
+i.loaded {
+  @include fonticon;
+  transform: rotate(0deg);
+  &::before {
+    content: "\e915";
+  }
 }
 
-i.loadingCopy{
-    font-size: 350%;
-    margin-left: 40px;
-    margin-top: 20px;
+i.loading {
+  animation: rotate 1000ms linear infinite;
+  @include fonticon;
+  display: inline-block;
+  height: inherit !important;
+  &::before {
+    content: "\e85a";
+  }
 }
 
-i.loadingMove{
-    font-size: 350%;
-    margin-left: 70px;
-    margin-top: 20px;
+i.loadingCopy {
+  font-size: 350%;
+  margin-left: 40px;
+  margin-top: 20px;
 }
 
-i.loadingExport{
-    font-size: 450%;
-    margin-top: 50px;
+i.loadingMove {
+  font-size: 350%;
+  margin-left: 70px;
+  margin-top: 20px;
 }
 
-i.back{
-    @include fonticon;
-    &::before{
-        content: '\e84c';
-    }
+i.loadingExport {
+  font-size: 450%;
+  margin-top: 50px;
 }
 
-i.forward{
-    @include fonticon;
-    &::before{
-        content: '\e867';
-    }
+i.back {
+  @include fonticon;
+  &::before {
+    content: "\e84c";
+  }
 }
 
-i.rotate{
-    @include fonticon;
-    &::before{
-        content: '\e92b';
-    }
+i.forward {
+  @include fonticon;
+  &::before {
+    content: "\e867";
+  }
 }
 
-i.crop{
-    @include fonticon;
-    &::before{
-        content: '\ea57';
-    }
+i.rotate {
+  @include fonticon;
+  &::before {
+    content: "\e92b";
+  }
 }
 
-i.blur{
-    @include fonticon;
-    &::before{
-        content: '\e92e';
-    }
+i.crop {
+  @include fonticon;
+  &::before {
+    content: "\ea57";
+  }
 }
 
-i.resize{
-    @include fonticon;
-    &::before{
-        content: '\e865';
-    }
+i.blur {
+  @include fonticon;
+  &::before {
+    content: "\e92e";
+  }
 }
 
-i.trash{
-    @include fonticon;
-    &::before{
-        content: '\e8cf';
-    }
+i.resize {
+  @include fonticon;
+  &::before {
+    content: "\e865";
+  }
 }
 
-.download-disk{
-    @include fonticon;
-    &:before{
-        content: '\e86e';
-    }
+i.trash {
+  @include fonticon;
+  &::before {
+    content: "\e8cf";
+  }
 }
 
-i.properties{
-    @include fonticon;
-    &::before{
-        content: '\e854';
-    }
+.download-disk {
+  @include fonticon;
+  &:before {
+    content: "\e86e";
+  }
 }
 
-i.help-large, i.help.cas, i.help, i.navbar-help{
-    @include fonticon;
+i.properties {
+  @include fonticon;
+  &::before {
+    content: "\e854";
+  }
 }
-i.help-large::before, i.type.help::before, i.help::before, i.navbar-help::before{
-    content: '\e835';
-    cursor: pointer;
+
+i.help-large,
+i.help.cas,
+i.help,
+i.navbar-help {
+  @include fonticon;
+}
+i.help-large::before,
+i.type.help::before,
+i.help::before,
+i.navbar-help::before {
+  content: "\e835";
+  cursor: pointer;
 }
 i.others,
 i.share {
-    @include fonticon;
-    &::before {
-        content: '\e815';
-    }
+  @include fonticon;
+  &::before {
+    content: "\e815";
+  }
 }
-i.search{
-    @include fonticon;
-    &::before {
-        content: '\e930';
-    }
+i.search {
+  @include fonticon;
+  &::before {
+    content: "\e930";
+  }
 }
-i.file-text, i.draft{
-    @include fonticon;
-    &:before{
-        content: '\e919';
-    }
+i.file-text,
+i.draft {
+  @include fonticon;
+  &:before {
+    content: "\e919";
+  }
 }
-i.mail-in, i.download{
+i.mail-in,
+i.download {
   @include fonticon;
   text-align: center;
 }
-i.mail-in:before, i.download:before{
-  content: '\e83f';
+i.mail-in:before,
+i.download:before {
+  content: "\e83f";
   font-size: 12px;
 }
 
-i.mail-out, i.upload{
+i.mail-out,
+i.upload {
   @include fonticon;
   text-align: center;
 }
-i.mail-out:before, i.upload:before{
-  content: '\e84e';
+i.mail-out:before,
+i.upload:before {
+  content: "\e84e";
   font-size: 12px;
 }
 
-i.mail-new{
+i.mail-new {
   @include fonticon;
   text-align: center;
 }
-i.mail-new:before{
-  content: '\e828';
+i.mail-new:before {
+  content: "\e828";
   font-size: 12px;
 }
 
-i.attachment{
-    width: auto;
-    height: auto;
-    @include fonticon;
-    &:before{
-        content: '\e805';
-    }
+i.attachment {
+  width: auto;
+  height: auto;
+  @include fonticon;
+  &:before {
+    content: "\e805";
+  }
 }
 
-
-i.warning{
-    @include fonticon;
-    &::before{
-        content: '\e903';
-    }
+i.warning {
+  @include fonticon;
+  &::before {
+    content: "\e903";
+  }
 }
-i.check-circle{
-    @include fonticon;
-    &::before{
-        content: "\e916";
-    }
+i.check-circle {
+  @include fonticon;
+  &::before {
+    content: "\e916";
+  }
 }
 i.sort {
-    @include fonticon;
-    &::before{
-        content: '\e926';
-    }
+  @include fonticon;
+  &::before {
+    content: "\e926";
+  }
 }
 i.right-arrow {
-    @include fonticon;
-    &::before {
-        content: '\e867';
-    }
+  @include fonticon;
+  &::before {
+    content: "\e867";
+  }
 }
-i.person{
-    @include fonticon;
-    text-align: center;
-    font-size: 16px;
-    &::before {
-        content: '\e905';
-    }
+i.person {
+  @include fonticon;
+  text-align: center;
+  font-size: 16px;
+  &::before {
+    content: "\e905";
+  }
 }
 
 /* actions icons */
 
-i.distribute{
+i.distribute {
   @include fonticon;
-  &::before{
-      content: '\e849';
+  &::before {
+    content: "\e849";
   }
 }
-i.switch{
+i.switch {
   @include fonticon;
-  &::before{
-      content: '\e874';
+  &::before {
+    content: "\e874";
   }
 }
 
-i.send-mail{
-    @include fonticon;
-    margin-right: 7px;
-    @include run-transition(background);
+i.send-mail {
+  @include fonticon;
+  margin-right: 7px;
+  @include run-transition(background);
 }
-i.send-mail::before{
-    content: '\e804';
-    color: $white;
+i.send-mail::before {
+  content: "\e804";
+  color: $white;
 }
-i.send-mail:hover{
-    &::before{
+i.send-mail:hover {
+  &::before {
+    color: $accent;
+  }
+}
+.action-item {
+  i.send-mail {
+    line-height: 43px;
+    &::before {
+      color: $primary;
+    }
+  }
+  &:hover {
+    i.send-mail {
+      &::before {
         color: $accent;
+      }
     }
-}
-.action-item{
-    i.send-mail{
-        line-height: 43px;
-        &::before{
-            color: $primary;
-        }
-    }
-    &:hover{
-        i.send-mail{
-            &::before{
-                color: $accent;
-            }
-        }
-    }
+  }
 }
 
 i.add-favorite {
-    @include fonticon;
-    margin-right: 7px;
-    @include run-transition(background);
+  @include fonticon;
+  margin-right: 7px;
+  @include run-transition(background);
 }
 
 i.add-favorite::before {
-    content: '\e80c';
-    color: $white;
+  content: "\e80c";
+  color: $white;
 }
 
-.domino{
-    i.add-favorite::before{
-        color: $primary;
-    }
+.domino {
+  i.add-favorite::before {
+    color: $primary;
+  }
 }
-i.add-favorite:hover{
-    &::before{
-        color: $accent;
-    }
+i.add-favorite:hover {
+  &::before {
+    color: $accent;
+  }
 }
 i.add-favorite.no-hover:hover {
-    &::before{
-        color: $primary;
-    }
+  &::before {
+    color: $primary;
+  }
 }
-.action-item{
-    i.add-favorite{
-        line-height: 43px;
-        &::before{
-            color: $primary;
-        }
+.action-item {
+  i.add-favorite {
+    line-height: 43px;
+    &::before {
+      color: $primary;
     }
-    &:hover{
-        i.add-favorite{
-            &::before{
-                color: $accent;
-            }
-        }
+  }
+  &:hover {
+    i.add-favorite {
+      &::before {
+        color: $accent;
+      }
     }
+  }
 }
 
-.action-item:hover span{
-    color: $accent;
+.action-item:hover span {
+  color: $accent;
 }
 
 .icon-off {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
-i.spinner, .spinner > i{
-    @include fonticon;
-    &::before {
-		content: "\e85a";
-    }
+i.spinner,
+.spinner > i {
+  @include fonticon;
+  &::before {
+    content: "\e85a";
+  }
 }
 
 i.folder-close {
@@ -323,16 +336,16 @@ i.folder-close {
 
 i.settings-class-large,
 i.settings-class {
-    @include fonticon;
+  @include fonticon;
 
-    &::before {
-        content: "\e942";
-    }
+  &::before {
+    content: "\e942";
+  }
 }
 
 i.add-page {
   @include fonticon;
- &::before {
+  &::before {
     content: "\e90b";
   }
 }
@@ -365,7 +378,7 @@ i.file-solid {
   }
 }
 
-i.file-pdf{
+i.file-pdf {
   @include fonticon;
   &::before {
     content: "\e857";
@@ -415,21 +428,21 @@ i.cancel {
 i.mine {
   @include fonticon;
   &::before {
-    content: '\e870';
+    content: "\e870";
   }
 }
 
 i.view {
   @include fonticon;
   &::before {
-    content: '\e873';
+    content: "\e873";
   }
 }
 
 i.public {
   @include fonticon;
   &::before {
-    content:'\e863';
+    content: "\e863";
   }
 }
 
@@ -437,14 +450,14 @@ i.share,
 i.ic-share {
   @include fonticon;
   &::before {
-    content:'\e815';
+    content: "\e815";
   }
 }
 
 i.edit {
   @include fonticon;
   &::before {
-    content: '\e858';
+    content: "\e858";
   }
 }
 
@@ -515,7 +528,7 @@ i.website,
 i.website-large {
   @include fonticon;
   &::before {
-  content: "\e94a";
+    content: "\e94a";
   }
 }
 
@@ -574,4 +587,3 @@ i.recurrent {
     content: "\e958";
   }
 }
-

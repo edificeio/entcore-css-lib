@@ -1,43 +1,43 @@
 .themes-list {
-    display: inline-block;
-    vertical-align: top;
-    width: 47%;
-    margin: 1.5%;
-    box-sizing: border-box;
-    .theme {
-        display: block;
-        padding: 15px;
-        transition: 500ms ease;
-        background: transparent;
-        cursor: pointer;
-        border-radius: 5px;
-        &:hover {
-            background: $lightest-grey;
-        }
-        &::after {
-            content: " ";
-            display: block;
-            width: 100%;
-            height: 0;
-        }
-        img {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
-            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            transition: 500ms ease;
-            border-radius: 4px;
-            &:hover {
-                box-shadow: none;
-            }
-        }
+  display: inline-block;
+  vertical-align: top;
+  width: 47%;
+  margin: 1.5%;
+  box-sizing: border-box;
+  .theme {
+    display: block;
+    padding: 15px;
+    transition: 500ms ease;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover {
+      background: $lightest-grey;
     }
+    &::after {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 0;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transition: 500ms ease;
+      border-radius: 4px;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $tablette) {
   .themes-list {
-      width: 100%;
-      margin: 0;
-    }
+    width: 100%;
+    margin: 0;
+  }
 }
