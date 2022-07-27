@@ -104,7 +104,7 @@ $flags: fr, en, pt, es, it, de;
 
 @for $i from 1 through length($flags) {
   .flag-#{nth($flags, $i)} {
-    background-image: url('../../img/icons/flags/#{nth($flags, $i)}.svg');
+    background-image: url("../../img/icons/flags/#{nth($flags, $i)}.svg");
   }
 }
 

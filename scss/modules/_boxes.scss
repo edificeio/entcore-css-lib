@@ -82,7 +82,7 @@
   z-index: 99;
 }
 
-@media screen and(max-width: $fat-mobile) {
+@media screen and (max-width: $fat-mobile) {
   .helpbox-highlight {
     display: none !important;
   }
