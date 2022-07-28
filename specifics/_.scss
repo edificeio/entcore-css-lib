@@ -1,2 +1,14 @@
 @import './exercizer/exercizer';
 @import "./class-admin/class-admin";
+
+// TO DO: Remove these specifics rules for calendar (WB-870)
+
+body.calendar, body.rbs, body.cdt, body.edt, body.presences {
+    .grid {
+        @media (min-width: $tablette) {
+          display: block;
+        }
+    }
+}
+
+//
