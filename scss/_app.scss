@@ -1,49 +1,46 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial;
+  background: $light-grey;
+  z-index: 0;
 
-
-html, body{
-	margin: 0;
-	height: 100%;
-	font-family: Arial;
-	background: $light-grey;
-	z-index: 0;
-
-	section.main{
-		background: $white;
-		position: relative;
-		padding-bottom: 60px;
-	}
-	section.main::after{
-		clear:both;
-		content: " ";
-		display: block;
-		width: 100%;
-	}
+  section.main {
+    background: $white;
+    position: relative;
+    padding-bottom: 60px;
+  }
+  section.main::after {
+    clear: both;
+    content: " ";
+    display: block;
+    width: 100%;
+  }
 }
 
-html.print{
-	background: transparent;
-	body{
-		background: transparent;
-		overflow: visible;
-		section{
-			page-break-after: always;
-		}
-	}
+html.print {
+  background: transparent;
+  body {
+    background: transparent;
+    overflow: visible;
+    section {
+      page-break-after: always;
+    }
+  }
 }
 
-.container{
+.container {
   height: 100%;
 
-  header.main{
+  header.main {
     height: $header-height;
     width: 100%;
     position: relative;
   }
 
-  .main.wrapper{
+  .main.wrapper {
     box-sizing: border-box;
-    padding-top: $header-height;
-    position: absolute;
     top: 0;
     height: 100%;
     min-height: 100%;
@@ -52,75 +49,75 @@ html.print{
     padding-bottom: 0px;
   }
 
-	section.main{
-		box-sizing: border-box;
-		min-height: 100%;
-		padding: 10px;
-		text-align: left;
-	}
+  section.main {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding: 10px;
+    text-align: left;
+  }
 }
 
-.lightbox-backdrop{
-    @include lightbox-backdrop;
+.lightbox-backdrop {
+  @include lightbox-backdrop;
 }
 
-.lightbox-window{
-	@include lightbox-window;
+.lightbox-window {
+  @include lightbox-window;
 }
 
-.close-lightbox{
-	position: absolute;
-	right: 0;
-	top: 0;
-	margin: 10px;
-	cursor: pointer;
+.close-lightbox {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  cursor: pointer;
 }
 
-.lightbox-view{
-	@include lightbox-window;
-	width: 800px;
-	text-align: left;
+.lightbox-view {
+  @include lightbox-window;
+  width: 800px;
+  text-align: left;
 }
 
-.lightbox-background{
-	@include lightbox-backdrop;
+.lightbox-background {
+  @include lightbox-backdrop;
 }
 
-body.lightbox-body{
-	background: #666;
-	header.lightbox-header{
-		opacity: 0.3;
-	}
+body.lightbox-body {
+  background: #666;
+  header.lightbox-header {
+    opacity: 0.3;
+  }
 
-	section.lightbox-main{
-		background: rgba(255,255,255,0.3)
-	}
+  section.lightbox-main {
+    background: rgba(255, 255, 255, 0.3);
+  }
 }
 
-iframe{
-	overflow: auto;
+iframe {
+  overflow: auto;
 }
 
-iframe.adapter{
-	position: absolute;
-	left: 0;
-	top: 61px;
+iframe.adapter {
+  position: absolute;
+  left: 0;
+  top: 61px;
 }
 
-html.app{
-	min-height: 0;
-	height: auto;
-	body{
-		background: $white;
-		min-height: 100%;
-		height: auto;
-	}
+html.app {
+  min-height: 0;
+  height: auto;
+  body {
+    background: $white;
+    min-height: 100%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: $tablette) {
-	body{
-		header.main{
-			height: $mobile-header-height;
-		}
-	}
+  body {
+    header.main {
+      height: $mobile-header-height;
+    }
+  }
 }

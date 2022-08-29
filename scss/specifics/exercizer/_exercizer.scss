@@ -12,6 +12,7 @@ body.exercizer {
 
   @import "./components/";
   @import "./views/";
+  @import "./layout";
 
   >* {
     box-sizing: border-box;

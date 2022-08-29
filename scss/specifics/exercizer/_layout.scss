@@ -3,3 +3,29 @@
     margin: 0 auto;
     padding: 1rem;
 }
+.grid {
+
+	@media (min-width: $tablette) {
+		display: grid;
+	}
+}
+
+.grid-2 {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+
+	@media (max-width: $tablette) {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (min-width: $wide-screen) {
+
+	.grid-layout-2 {
+		grid-template-columns: minmax(400px, 3fr) minmax(710px, 7fr);
+		gap: 1.5rem;
+	}
+
+	.grid-zone-image {
+		grid-template-columns: auto 260px;
+	}
+}

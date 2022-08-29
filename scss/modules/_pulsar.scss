@@ -237,8 +237,9 @@ $pulseanim: 1s;
   width: $sizeWave;
   position: absolute;
   z-index: -1;
-  top: calc(#{$sizeWave}/ 2 - #{$sizePulsar}/ 2);
-  left: calc(#{$sizeWave}/ 2 - #{$sizePulsar}/ 2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   &::after {
     transform: scale(0.1, 0.1);
     content: "";
