@@ -1,6 +1,6 @@
 {
-  "name": "${modname}",
-  "version": "${npmVersion}",
+  "name": "entcore-css-lib",
+  "version": "1.0.0-feat-produit.%generateVersion%",
   "description": "Open Digital Education Legacy CSS framework",
   "scripts": {
     "copy-fonts": "cpr node_modules/entcore-generic-icons/fonts/ assets/fonts/generic-icons/ -o",
@@ -44,5 +44,6 @@
   },
   "dependencies": {
     "entcore-generic-icons": "git+https://github.com/opendigitaleducation/generic-icons.git"
-  }
+  },
+  "files": ["dist"]
 }

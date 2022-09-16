@@ -14,11 +14,17 @@ fi
 
 clean () {
   rm -rf node_modules
+  rm -rf dist
 }
 
 init () {
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle sh -c "gradle generateTemplate"
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm install"
+  echo "[init] Generate package.json from package.json.template..."
+  NPM_VERSION_SUFFIX=`date +"%Y%m%d%H%M"`
+  cp package.json.template package.json
+  sed -i "s/%generateVersion%/${NPM_VERSION_SUFFIX}/" package.json
+
+  echo "[init] Install yarn dependencies..."
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "yarn install"
 }
 
 build () {
