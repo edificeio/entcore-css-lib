@@ -45,5 +45,5 @@
   "dependencies": {
     "entcore-generic-icons": "git+https://github.com/opendigitaleducation/generic-icons.git"
   },
-  "files": ["dist"]
+  "files": ["assets", "scss", "dist/version.txt"]
 }
