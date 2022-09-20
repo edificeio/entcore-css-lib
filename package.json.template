@@ -1,5 +1,5 @@
 {
-  "name": "entcore-css-lib",
+  "name": "ode-csslib",
   "version": "1.0.0-feat-produit.%generateVersion%",
   "description": "Open Digital Education Legacy CSS framework",
   "scripts": {
@@ -29,7 +29,7 @@
     "framework"
   ],
   "author": "OpenDigitalEducation",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/opendigitaleducation/entcore-css-lib/issues"
   },
