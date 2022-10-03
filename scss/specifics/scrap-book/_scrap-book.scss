@@ -1,0 +1,599 @@
+/* svg mode cover */
+.scrapbook.cover .bloc-svg {
+    .scrapbook-svg {
+        .scrapbook-sheets {
+            fill: transparent;
+        }
+        .scrapbook-pagelines {
+            stroke: transparent;
+        }
+    }
+}
+
+/*mode normal*/
+.bloc-svg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /*fix IE*/
+    height: 0;
+    padding-top: 70%;
+    /*fix IE*/
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /* scrapbook style */
+    .scrapbook-svg {
+        /* cover */
+        .scrapbook-cover {
+            fill: $cyan;
+        }
+        &.orange .scrapbook-cover {
+            fill: $orange;
+        }
+        &.red .scrapbook-cover,
+        &.pink .scrapbook-cover {
+            fill: $red;
+        }
+
+        &.purple .scrapbook-cover {
+            fill: $purple;
+        }
+
+        &.blue .scrapbook-cover {
+            fill: $cyan;
+        }
+
+        &.green .scrapbook-cover {
+            fill: $green;
+        }
+
+        &.black .scrapbook-cover {
+            fill: $black;
+        }
+
+        &.white .scrapbook-cover {
+            fill: $white;
+        }
+
+        &.transparent .scrapbook-cover {
+            fill: transparent;
+        }
+        // bordure
+        .scrapbook-cover {
+            stroke: $grey;
+        }
+        /* ombre portee spirales */
+        image {
+            opacity: 0.4!important;
+        }
+
+        .scrapbook-sheets {
+            fill: $white;
+        }
+
+        .scrapbook-pagelines {
+            stroke: $solid-grey;
+            fill: none;
+        }
+    }
+}
+
+
+/* mode edit scrapbook properties/ CREATE */
+.row.preview {
+    margin-bottom: 60px;
+}
+
+.scrapbook-infos{
+    width: 85%;
+    overflow: hidden;
+
+    input {
+        margin: 5px auto 15px;
+        float: none;
+    }
+
+    h3 {
+        float: left;
+        line-height: 33px;
+        margin: 0 10px;
+    }
+
+    .color-picker .colors-opener{
+        margin: 6px 0px 3px 0px;
+    }
+}
+
+//scrapbook container
+.preview .scrapbook {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    top: 10px;
+    padding-bottom: 60px;
+
+    .bloc-svg {
+        position: relative;
+    }
+
+    .tools-layer {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding-top: 5%;
+
+        .centered {
+            width: 90%;
+
+            .small.button {
+                margin-top: 15px;
+                float: none;
+                display: inline-block;
+            }
+        }
+
+        image-select img {
+            max-height: 280px;
+            max-width: 80%;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+nav.scrapbook-buttons{
+    .option{
+        margin: 0 3px;
+        > i{
+            position: absolute;
+            z-index: 1;
+            font-size: 20px;
+            left: 6px;
+            top: 4px;
+            pointer-events: none;
+            color: $white;
+        }
+        > i.text{
+            font-size: 23px;
+            left: 10px;
+            top: 2px;
+        }
+
+        input.scrapbook-media{
+            height: 29px;
+            width: 32px;
+            border-radius: 0;
+            border: none;
+            padding: 0;
+            @include run-transition(all);
+        }
+
+    }
+
+
+    @for $i from 1 through length($colorz) {
+
+        .option:nth-child(#{length($colorz)}n+#{$i}) input.scrapbook-media{
+            background: nth($colorz, $i);
+            &:hover, &:active{
+                background: darken(nth($colorz, $i), 15%);
+            }
+        }
+    }
+
+    .scrapbook-addpage{
+        text-align: center;
+
+        > button{
+            float: none;
+            display: inline-block;
+            margin: 0;
+            vertical-align: middle;
+        }
+        plus{
+            float: none!important;
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 0;
+        }
+    }
+}
+
+.scrapbook-thumbnails {
+    section.lightbox > div.content {
+        width: 320px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            height: 100px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+            .scrapbook {
+                transform: scale(0.13);
+                transform-origin: top left !important;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $white;
+                max-width: none;
+            }
+        }
+
+        li.hide {
+            display: none;
+        }
+    }
+}
+
+section.scrapbook {
+    position: relative;
+    margin: 15px auto 15px;
+    padding: 20px 45px 35px 65px;
+    box-sizing: border-box;
+    max-width: none !important;
+    // transform-origin: top left !important; // Defined manually in template
+    .drawing-zone {
+        width: 100%;
+        height: 100%;
+        min-width: 75px;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        .media {
+            outline: 0;
+        }
+        .cke_focus {
+            cursor: text !important;
+        }
+        & article {
+          overflow: visible;
+            max-height: 100%;
+            max-width: 100%;
+            img {
+                max-height: inherit;
+                max-width: inherit;
+            }
+        }
+        image-editor .drawing-zone {
+			overflow: hidden !important;
+		}
+    }
+
+    .flip-left:hover,
+    .flip-right:hover {
+        opacity: 1;
+        @include run-transition(opacity);
+    }
+
+    .flip-right {
+        .right-arrow {
+            color: $primary;
+        }
+    }
+
+    .flip-left {
+        .left-arrow {
+            color: $primary;
+            left: 20px;
+        }
+    }
+
+    .left-arrow.disabled,
+    .right-arrow.disabled {
+        color: $medium-grey;
+    }
+
+    .cover {
+        overflow: hidden;
+        position: absolute;
+        border-box: 5px;
+        left: 50px;
+        top: 10px;
+        height: 598px;
+        width: 838px;
+        max-width: 100%;
+        padding: 20px;
+        text-align: center;
+        z-index: 2;
+        box-sizing: border-box;
+        img {
+            max-width: 80%;
+            max-height: 50%;
+            display: block;
+            margin: 25px auto;
+            border: 10px solid $white;
+            @include box-shadow3(5px,5px,10px);
+        }
+        h2 {
+            font-size: 27px;
+            color: $text-lightest;
+
+            &.cover-white, &.printview {
+                color: black;
+            }
+        }
+        h1 {
+            font-size: 40px;
+            color: $text-lightest;
+            text-transform: none;
+            &.cover-white, &.printview {
+                color: black;
+            }
+        }
+    }
+    editor.focus {
+      cursor: auto;
+      &>div {
+          overflow: auto !important;
+      }
+    }
+    editor editor-toolbar {
+      bottom: calc(100% + 15px)!important;
+      left: -2px;
+      min-width: 410px;
+      @include box-shadow3(1px,1px,5px);
+    }
+
+    .drawing-zone {
+        overflow: visible;
+
+        image-editor & {
+            overflow: hidden !important;
+        }
+
+        .scrapbook-layer-image > div.image-contextual-menu {
+            width: auto;
+            height: auto;
+        }
+
+        article.media {
+            margin: 0;
+            padding: 1px;
+            border: 2px dashed rgba($grey,0.5)!important;
+            border-radius: 0;
+            cursor: grab;
+            &:active {
+              cursor: grabbing!important;
+            }
+            &.placed-block--dragging {
+              @include box-shadow3(2px, 2px, 10px);
+            }
+            iframe {
+                pointer-events: none;
+            }
+            .loading-panel {
+                width: 200px;
+                height: 200px;
+                position: relative;
+                float: left;
+                h1 {
+                    text-transform: none;
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    font-size: 20px;
+                }
+                img {
+                    width: 50%;
+                    height: 50%;
+                }
+            }
+            div.close-lightbox {
+                width: auto;
+                height: auto;
+            }
+            i.close{
+                display: block;
+                font-size: 30px;
+                top: -15px;
+                right: -15px;
+                opacity: 0;
+                line-height: 0.9;
+            }
+            .image-contextual-menu {
+                opacity: 0;
+            }
+            .resize {
+              opacity: 0;
+              position: absolute;
+              right: -15px;
+              bottom: -15px;
+              background-color: white;
+              color: $grey;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+              line-height: 30px;
+              text-align: center;
+              transform: rotate(90deg);
+              @include box-shadow3;
+              @include run-transition(opacity);
+              &:hover {
+                background-color: $cyan;
+                color: white;
+              }
+            }
+            .editor-edit-action {
+              position: absolute;
+              top: -15px;
+              left: -10px;
+              opacity: 0;
+              @include run-transition(opacity);
+              background-color: white;
+              &:hover {
+                background-color: $cyan;
+                color: white;
+              }
+            }
+            &:hover {
+              border-color: $grey!important;
+              .resize,
+              i.close,
+              .image-contextual-menu,
+              .editor-edit-action {
+                opacity: 1;
+                @include run-transition(opacity);
+              }
+            }
+            /* & .image-container {
+                overflow: hidden;
+            } */
+        }
+        &.orange {
+            background-color: $orange;
+            article.media {
+              border-color: rgba($white, 0.5)!important;
+              &:hover {
+                border-color: $white!important;
+              }
+            }
+        }
+        &.pink {
+            background-color: $red;
+            article.media {
+              border-color: rgba($white, 0.5)!important;
+              &:hover {
+                border-color: $white!important;
+              }
+            }
+        }
+        &.purple {
+            background-color: $purple;
+            article.media {
+              border-color: rgba($white, 0.5)!important;
+              &:hover {
+                border-color: $white!important;
+              }
+            }
+        }
+        &.blue {
+            background-color: $cyan;
+            article.media {
+              border-color: rgba($white, 0.5)!important;
+              &:hover {
+                border-color: $white!important;
+              }
+            }
+        }
+        &.green {
+            background-color: $green;
+            article.media {
+              border-color: rgba($white, 0.5)!important;
+              &:hover {
+                border-color: $white!important;
+              }
+            }
+        }
+        &.black {
+            background-color: $black;
+            article.media {
+              border-color: rgba($white, 0.5)!important;
+              &:hover {
+                border-color: $white!important;
+              }
+            }
+        }
+
+        &.white {
+            background-color: $white;
+        }
+        &.transparent {
+            background-color: transparent;
+        }
+    }
+}
+
+.scrapbook-layer-image {
+    .image-contextual-menu {
+        bottom: -1.2rem;
+        left: -1.2rem;
+        
+        button {
+            padding: 0.3rem;
+        }
+    }
+}
+
+.scrapbook-layer-text {
+  overflow: hidden !important;
+}
+
+.fullscreen {
+  position: fixed;
+  z-index: 9500;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $white;
+  margin-bottom: 0;
+  article {
+    border: none!important;
+  }
+}
+
+header.infos-block {
+  position: static !important; // position: initial doesn't work in IE
+}
+
+.infotip--scrapbook-no-mobile i.close {
+  display: none;
+}
+.scrapbook [contenteditable="true"] {
+  padding: inherit!important;
+}
+
+.print .cover.pink {
+    background: $red;
+}
+
+@media screen and (max-width: $tablette) {
+  .icons-view explorer {
+    height: auto;
+    width: 100%;
+  }
+
+  article header.infos-block {
+    padding: 0;
+  }
+
+  section.scrapbook {
+    margin-top: 0;
+  }
+
+  article header.infos-block h2 {
+    padding: 4px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: auto;
+  }
+}
+
+.app--scrapbook  {
+    .create-btn {
+        position: absolute;
+        top: -55px;
+        right: 0;
+    }
+    .display-buttons {
+        margin-top: -35px;
+    }
+}
+@media screen and (max-width: $tablette) {
+    .app--scrapbook  {
+        .display-buttons {
+            margin-top: 0;
+        }
+    }
+}

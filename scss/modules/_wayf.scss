@@ -12,12 +12,12 @@ body.wayf {
   }
 
   .logo {
-    margin-left: auto;
+    margin-left: auto !important;
     margin-right: auto;
     width: 100%;
-    background-size: contain;
-    background-position: center !important;
+    display: block;
   }
+
   h1 {
     padding: 0 10px;
     font-weight: bold;
