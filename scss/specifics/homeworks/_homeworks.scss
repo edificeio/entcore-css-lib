@@ -1,0 +1,672 @@
+$shadow-lightest: rgba(0,0,0,0.1);
+$blue-ink: #414254;
+$panda-blue: #3889c1;
+
+.homeworks {
+  portal > .container {
+    min-width: 960px;
+  }
+}
+
+.homework__create {
+  float: none;
+  margin: 25px auto;
+}
+
+.notebook {
+  color: $blue-ink;
+  * {
+    box-sizing: border-box;
+  }
+  #header {
+      margin: 10px 20px 20px;
+  }
+  #book_wrapper {
+    display: table;
+    height: 770px;
+    table-layout: fixed;
+    margin: 0 auto;
+    .date-picker-icon {
+      display: inline-block;
+      margin-top: -10px;
+      a {
+        width: inherit;
+        height: inherit;
+        position: static !important;
+      }
+    }
+  }
+  #book {
+    background-image: url(../../img/illustrations/homeworks_notebook.png);
+    background-repeat: repeat-y;
+    width: 875px;
+    padding-bottom: 16px;
+    position: relative;
+    max-height: 100%;
+    transition: background-color 0.2s ease-in 0s;
+    border-top: 7px solid #3889c1;
+    border-bottom: 7px solid #3889c1;
+  }
+  .backgroundMonday, #monday {
+    background-color: $green;
+    border-top-color: $green!important;
+    border-bottom-color: $green!important;
+  }
+  .backgroundTuesday, #tuesday {
+    background-color: $purple;
+    border-top-color: $purple!important;
+    border-bottom-color: $purple!important;
+  }
+  .backgroundWednesday, #wednesday {
+    background-color: $cyan;
+    border-top-color: $cyan!important;
+    border-bottom-color: $cyan!important;
+  }
+  .backgroundThursday, #thursday {
+    background-color: $red;
+    border-top-color: $red!important;
+    border-bottom-color: $red!important;
+  }
+  .backgroundFriday, #friday {
+    background-color: $orange;
+    border-top-color: $orange!important;
+    border-bottom-color: $orange!important;
+  }
+  .backgroundSaturday, #saturday {
+    background-color: $yellow;
+    border-top-color: $yellow!important;
+    border-bottom-color: $yellow!important;
+  }
+  #topbar {
+    padding-top: 15px;
+    height: 70px;
+    margin-left: 70px;
+    margin-right: 15px;
+    .floatleft {
+      float: left;
+    }
+    .floatright {
+      float: right;
+    }
+    h1 {
+      width: 450px;
+    }
+  }
+  #content {
+    width: 808px;
+    margin-left: 60px;
+    padding: 15px;
+    overflow: auto;
+    background: white;
+  }
+  #side {
+    display: table-cell;
+    vertical-align: top;
+    .day {
+      width: 40px;
+      height: 125px;
+      border-radius: 0 20px 20px 0;
+      margin-bottom: 5px;
+      font-family: KGJune;
+      text-transform: uppercase;
+      font-size: 25px;
+      .rotated {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform-origin: left top 0;
+        -webkit-transform-origin: left top 0;
+        text-align: center;
+        width: 125px;
+        height: 40px;
+        margin-left: 30px;
+      }
+      a {
+        color: black;
+      }
+    }
+    .weekday,
+    .day {
+      opacity: 0.5;
+      -webkit-transition: all 0.25s ease-in-out 0s;
+      -o-transition: all 0.25s ease-in-out 0s;
+      transition: all 0.25s ease-in-out 0s;
+      &:hover,
+      &.active {
+        opacity: 1;
+        -webkit-transition: all 0.25s ease-in-out 0s;
+        -o-transition: all 0.25s ease-in-out 0s;
+        transition: all 0.25s ease-in-out 0s;
+      }
+    }
+  }
+  .homeworksSubject {
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: top;
+  }
+  .homeworksDate {
+    color: $grey;
+    text-align: center;
+    vertical-align: top;
+  }
+  .homeworksContent {
+    vertical-align: top;
+    img {
+      vertical-align: text-bottom;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .homeworksTable {
+    display: table;
+    line-height: 24px;
+    // background: url(../../img/illustrations/notebook_lines.png) repeat-y;
+    height: 650px;
+    width: 100%;
+    position: relative;
+    & > #redMargin
+    {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 200px;
+      width: 1px;
+      background: #ff000080;
+    }
+    & > .emptyscreen ~ #redMargin
+    {
+      width: 0;
+    }
+    lightbox p {
+      padding-right: 15px;
+    }
+    .emptyscreen {
+      margin-top: -40px!important;
+    }
+  }
+  .homeworksSubject {
+    display: table-cell;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    input {
+      color: inherit;
+      font: inherit;
+      background: transparent;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      text-overflow: ellipsis;
+      max-width: 95%; /*http://support.web-education.net/issues/23700#note-46*/
+    }
+  }
+  .homeworksDate {
+      display: table-cell;
+      width: 65px;
+  }
+  .homeworksContent {
+    display: table-cell;
+  }
+  .homeworksLine {
+    .contextual-editor {
+      min-height: 24px;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      height: auto;
+    }
+    audio {
+      height: 40px;
+    }
+    editor{
+      margin: 0;
+    }
+    > popover {
+      display: none !important;
+    }
+    editor-toolbar {
+      border: 1px solid $shadow-lightest!important;
+      .option {
+        height: 50px;
+        min-width: 35px;
+      }
+    }
+    [contenteditable] {
+      background: transparent;
+      min-height: 36px !important;
+      padding: 10px;
+      border: 1px dashed $shadow-lightest!important;
+      margin-top: -1px;
+    }
+  }
+  .homeworksRecurrence {
+    height: 0;
+    .recurrent {
+      position: relative;
+      top: -28px;
+      right: -155px;
+      display: inline-block;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      line-height: 29px; //-1px for good alignment
+      text-align: center;
+      color: $grey;
+      font-size: 14px;
+      @include run-transition(all);
+      &.active {
+        @include run-transition(all);
+        color: $orange;
+      }
+      &.disabled {
+        color: $neutral-grey;
+      }
+    }
+    .recurrentHover:hover {
+      @include run-transition(all);
+      color: $orange;
+    }
+
+    .modal {
+      margin-top: -20px;
+      h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+      h3 {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $darkest-grey;
+      }
+      input {
+        border: 1px solid $neutral-grey;
+        padding: 0 10px;
+      }
+      select {
+        border: 1px solid $neutral-grey;
+        padding: 4px 10px;
+        background-color: white;
+      }
+      input[type="date"] {
+        border-radius: 0;
+      }
+      .homeworksRecurrence--options {
+        margin: 25px 0 5px;
+      }
+      .homeworksRecurrence--day {
+        > span {
+          margin-right: 40px;
+        }
+        input {
+          appearance: none;
+          background-color: white;
+          border: 1px solid $neutral-grey;
+          border-radius: 5px;
+          width: 30px;
+          height: 30px;
+          margin-left: -35px;
+          position: relative;
+          top: 5px;
+          &:hover {
+            background-color: rgba($panda-blue, 0.2);
+            border-color: rgba($panda-blue, 0.2);
+          }
+          &:checked {
+            background-color: $panda-blue;
+            border-color: $panda-blue;
+            & ~ label {
+              color: white;
+            }
+          }
+          &:disabled {
+            opacity: .5;
+          }
+        }
+        label {
+          position: relative;
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          left: -35px;
+          top: -5px;
+        }
+      }
+      .homeworksRecurrence--date {
+        margin: 5px 0;
+        > input {
+          width: 33%;
+        }
+      }
+      .homeworksRecurrence--counter {
+        font-style: italic;
+        color: $grey;
+      }
+    }
+  }
+}
+
+.notebook lightbox i.arrow {
+  box-sizing: initial;
+}
+.notebook .homeworksLine > lightbox label {
+  font-size: initial;
+}
+
+.daily-view,
+.editor {
+  .emptyscreen {
+    background-color: white;
+  }
+  #topbar h1 {
+    width: 400px;
+  }
+  .homeworksTable {
+    position: relative;
+    display: table;
+    padding: 2px 0 0;
+    line-height: 24px;
+    height: 650px;
+    width: 100%;
+    background: white;
+    lightbox p {
+      padding-right: 15px;
+    }
+  }
+  .homeworksLine {
+    .contextual-editor {
+      min-height: 24px;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      height: auto;
+    }
+    &:last-of-type {
+      border-bottom: 1px solid $shadow-light;
+    }
+    audio {
+      height: 41px;
+    }
+    editor{
+      &:first-child{
+        margin-top: -2px;
+    }
+    > popover{
+      display: none !important;
+    }
+    editor-toolbar{
+      border-right: 1px solid #ddd;
+      border-top: 0;
+      border-bottom: 0;
+        .option{
+          height: 50px;
+        }
+      }
+    }
+    & + .homeworksLine {
+      border-top: 1px solid $shadow-lightest;
+    }
+  }
+  .homeworksSubject {
+    display: table-cell;
+    width: 200px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 35px 10px 5px;
+    input {
+      color: inherit;
+      font: inherit;
+      background: transparent;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      text-overflow: ellipsis;
+      max-width: 95%; /*http://support.web-education.net/issues/23700#note-46*/
+    }
+  }
+  .homeworksContent {
+    padding: 10px;
+    display: table-cell;
+  }
+  .close {
+    position: relative;
+    top: 5px;
+    right: 5px;
+    z-index: 100;
+  }
+  #topbar {
+    a {
+      padding: 12px 20px;
+      display: inline-block;
+      float: left;
+    }
+  }
+}
+.editor {
+  .homeworksContent {
+    width: 100%;
+  }
+  [contenteditable] {
+    .image-container {
+      border: 2px dashed $panda-blue!important;
+    }
+  }
+}
+
+.weekly-view {
+  #topbar {
+    i {
+      height: 40px!important;
+      width: 40px!important;
+    }
+  }
+  .homeworksDate {
+    display: block;
+    width: 100%;
+    font-family: "KGJune";
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bold;
+    color: $grey;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-bottom: 1px dashed $shadow-lightest;
+  }
+  .homeworksSubject {
+    width: 200px;
+    max-width: 200px;
+    padding: 15px;
+    border-right: 1px solid $shadow-lightest;
+  }
+  .homeworksContent {
+    max-width: inherit!important;
+    padding: 10px 15px!important;
+  }
+  .homeworksItem {
+    &:first-of-type {
+      border: none!important;
+    }
+    & + .homeworksItem {
+      border-top: 1px solid $shadow-lightest;
+    }
+  }
+  .homeworksLine {
+    border-left: 5px solid;
+    border-bottom: 1px solid $shadow-lightest;
+    margin-bottom: 15px;
+    &.monday {
+      border-left-color: $green;
+      .homeworksDate {
+        color: $green;
+        border-bottom-color: $green;
+      }
+    }
+    &.tuesday {
+      border-left-color: $purple;
+      .homeworksDate {
+        color: $purple;
+        border-bottom-color: $purple;
+      }
+    }
+    &.wednesday {
+      border-left-color: $cyan;
+      .homeworksDate {
+        color: $cyan;
+        border-bottom-color: $cyan;
+      }
+    }
+    &.thursday {
+      border-left-color: $red;
+      .homeworksDate {
+        color: $red;
+        border-bottom-color: $red;
+      }
+    }
+    &.friday {
+      border-left-color: $orange;
+      .homeworksDate {
+        color: $orange;
+        border-bottom-color: $orange;
+      }
+    }
+    &.saturday {
+      border-left-color: $yellow;
+      .homeworksDate {
+        color: $yellow;
+        border-bottom-color: $yellow;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablette) {
+  .homeworks {
+    portal > .container {
+      min-width: inherit!important;
+    }
+  }
+  .notebook {
+    #book_wrapper {
+      table-layout: inherit;
+      width: 100%;
+    }
+    #book {
+      width: 100%;
+      background-image: none;
+      background-color: white!important;
+      border: 1px solid $shadow-lightest;
+      padding-bottom: 0;
+    }
+    #topbar {
+      margin-left: 0;
+      height: 50px;
+      padding-top: 10px;
+      h1 {
+        font-size: 22px;
+        width: 100%;
+        max-width: 410px;
+      }
+      i {
+        height: 30px!important;
+      }
+    }
+    #content {
+      width: 100%;
+      height: 723px;
+      margin: 0;
+      padding: 0 15px;
+    }
+    #side {
+      opacity: 1;
+    }
+    .editor {
+      &.focus {
+        [contenteditable] {
+          padding-top: 60px;
+        }
+      } 
+      .homeworksLine + .homeworksLine,
+      .homeworksSubject {
+        border: none;
+      }
+    }
+    #redMargin {
+      display: none;
+    }
+    .homeworksLine [contenteditable] {
+      background-color: white;
+    }
+    editor.focus .close-focus {
+      width: 50px;
+    }
+    .homeworksSubject {
+      border-bottom: none!important;
+    }
+    .homeworksLine {
+      .close {
+        top: 15px;
+        right: 0;
+        font-size: 30px;
+      }
+    }
+    .homeworksRecurrence .recurrent {
+      right: -98%;
+      font-size: 20px;
+      top: -27px;
+    }
+  }
+  .daily-view,
+  .editor {
+    .homeworksLine + .homeworksLine {
+      border-top: 1px solid $neutral-grey!important;
+    }
+    .homeworksLine {
+      editor.focus {
+        div[contenteditable] {
+          padding-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small-tablette) {
+  .notebook {
+    .weekly-view {
+      .homeworksSubject {
+        width: 100%;
+        display: block;
+        padding: 10px 25px 0;
+        border: none;
+      }
+      .homeworksContent {
+        padding-left: 35px;
+      }
+    }
+    .daily-view,
+    .editor {
+      #topbar h1 {
+        width: inherit;
+      }
+      .homeworksSubject {
+        display: block;
+        border-left: none;
+        border-bottom: 1px solid $shadow-lightest;
+        max-width: calc(100% - 60px);
+        width: auto;
+      }
+      .homeworksContent {
+        display: block;
+      }
+    }
+    .homeworksLine {
+      .close {
+        right: 15px;
+      }
+    }
+  }
+}
