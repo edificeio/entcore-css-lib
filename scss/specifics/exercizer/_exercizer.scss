@@ -10,6 +10,10 @@ body.exercizer {
   color: $grey-black;
   line-height: 24px !important;
 
+  editor > popover {
+    position: absolute !important;
+  }
+
   @import "./components/";
   @import "./views/";
   @import "./layout";
@@ -1028,7 +1032,7 @@ body.exercizer {
   }
 
   .lightbox {
-    .content {
+    & > div.content {
       min-height: auto;
       padding: 24px;
 
@@ -1066,6 +1070,21 @@ body.exercizer {
 
       &.move {
         display: none;
+      }
+    }
+  }
+
+  .exercizer-editor {
+    .margin-two.height-three {
+      margin-top: 1rem;
+    }
+
+    @media (min-width: $tablette) {
+      display: grid;
+      grid-template-columns: 1fr 6fr;
+
+      .margin-two.height-three {
+        margin-top: 0;
       }
     }
   }

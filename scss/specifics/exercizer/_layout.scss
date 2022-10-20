@@ -17,6 +17,13 @@
   }
 }
 
+.grid-create-subject {
+  .clip {
+    height: 160px;
+    width: 160px;
+  }
+}
+
 @media (min-width: $wide-screen) {
   .grid-layout-2 {
     grid-template-columns: minmax(400px, 3fr) minmax(710px, 7fr);
@@ -25,5 +32,12 @@
 
   .grid-zone-image {
     grid-template-columns: auto 260px;
+  }
+}
+
+@media (min-width: $tablette) {
+  .grid-create-subject {
+    grid-template-columns: 1fr 11fr;
+    gap: 2rem;
   }
 }

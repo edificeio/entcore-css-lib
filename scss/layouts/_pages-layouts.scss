@@ -904,7 +904,7 @@ $sizes: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90
   */
 
 // Center component on page only for tablettes
-@media screen and (min-width: ($fat-mobile +1)) and (max-width: $wide-screen) {
+@media screen and (min-width: ($fat-mobile)) and (max-width: $wide-screen) {
   body {
     .center-component-tablette {
       display: flex;
@@ -940,7 +940,7 @@ $sizes: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90
 }
 
 // For special elements that are only visible on mobiles and tablettes
-@media screen and (min-width: ($tablette +1)) {
+@media screen and (min-width: ($tablette)) {
   body {
     .zero-desktop {
       display: none !important;
@@ -958,7 +958,7 @@ $sizes: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90
 }
 
 // For special elements that are only visible on mobile and fat-mobiles
-@media screen and (min-width: ($fat-mobile +1)) {
+@media screen and (min-width: ($fat-mobile)) {
   body {
     .mobile-fat-mobile {
       display: none !important;
@@ -967,7 +967,7 @@ $sizes: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90
 }
 
 // Only visible for mobile and landscape tablets
-@media screen and (min-width: ($wide-screen +1)) {
+@media screen and (min-width: ($wide-screen)) {
   body {
     .zero-large-desktop {
       display: none !important;
@@ -976,7 +976,7 @@ $sizes: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90
 }
 
 // Only visible in wide screen
-@media screen and (min-width: ($wide-screen +1)),
+@media screen and (min-width: ($wide-screen)),
   screen and (max-width: $tablette) {
   body {
     .only-wide-screen {
@@ -999,7 +999,7 @@ $sizes: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90
   */
 
 // Classes restrictions for no mobile and fat mobile
-@media screen and (min-width: ($fat-mobile +1)) {
+@media screen and (min-width: ($fat-mobile)) {
   body {
     .width-medium-no-mobile-fat-mobile {
       width: 200px;
