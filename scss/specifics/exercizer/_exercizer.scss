@@ -10,6 +10,10 @@ body.exercizer {
   color: $grey-black;
   line-height: 24px !important;
 
+  @supports (-webkit-touch-callout: none) {
+    width: 100vw;
+  }
+
   editor > popover {
     position: absolute !important;
   }
