@@ -1,0 +1,24 @@
+.h2-hobbies {
+    margin-bottom: 10px!important;
+}
+
+.bloc-hobbies {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profil-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    em {
+        color: #8c939e;
+    }
+
+    .one {
+        display: flex;
+        justify-content: center;
+    }
+}
