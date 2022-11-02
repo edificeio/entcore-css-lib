@@ -1,3 +1,17 @@
+
+@media screen and (max-width: $fat-mobile) {
+    .profil-flex {
+        .flex.seven {
+            flex-wrap: wrap;
+        }
+
+        .email-ellipsis {
+            @include cell-ellipsis;
+            max-width: 200px;
+        }
+    }
+}
+
 .h2-hobbies {
     margin-bottom: 10px!important;
 }
@@ -20,5 +34,14 @@
     .one {
         display: flex;
         justify-content: center;
+    }
+
+    .icon-verified {
+        margin-left: 10px;
+        margin-right: -10px;
+    }
+
+    input[type=text]:placeholder-shown {
+        text-overflow: ellipsis;
     }
 }
