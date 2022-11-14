@@ -15,6 +15,8 @@ fi
 clean () {
   rm -rf node_modules
   rm -rf dist
+  rm -f package.json
+  rm -f yarn.lock
 }
 
 init () {

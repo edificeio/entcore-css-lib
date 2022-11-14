@@ -5,3 +5,4 @@ node:
   volumes:
     - ./:/home/node/app
     - ~/.npm:/.npm
+    - ~/.gitconfig:/home/node/.gitconfig
