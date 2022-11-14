@@ -587,3 +587,17 @@ i.recurrent {
     content: "\e958";
   }
 }
+
+i.forms {
+  @include fonticon;
+  &::before {
+    content: "\e95c";
+  }
+}
+
+i.presence {
+  @include fonticon;
+  &::before {
+    content: "\e95d";
+  }
+}
