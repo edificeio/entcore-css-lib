@@ -528,7 +528,7 @@ i.website,
 i.website-large {
   @include fonticon;
   &::before {
-    content: "\e94a";
+    content: "\e90a";
   }
 }
 
@@ -588,16 +588,34 @@ i.recurrent {
   }
 }
 
-i.forms {
+i.forms,
+i.forms-large {
   @include fonticon;
   &::before {
     content: "\e95c";
   }
 }
 
-i.presence {
+i.presences,
+i.presences-large {
   @include fonticon;
   &::before {
     content: "\e95d";
+  }
+}
+
+i.competences,
+i.competences-large {
+  @include fonticon;
+  &::before {
+    content: "\e927";
+  }
+}
+
+i.web-conference,
+i.web-conference-large {
+  @include fonticon;
+  &::before {
+    content: "\e957";
   }
 }
