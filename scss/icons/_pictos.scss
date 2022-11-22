@@ -589,7 +589,9 @@ i.recurrent {
 }
 
 i.forms,
-i.forms-large {
+i.forms-large,
+i.formulaire,
+i.formulaire-large {
   @include fonticon;
   &::before {
     content: "\e95c";
@@ -597,7 +599,9 @@ i.forms-large {
 }
 
 i.presences,
-i.presences-large {
+i.presences-large,
+i.absences,
+i.absences-large {
   @include fonticon;
   &::before {
     content: "\e95d";
