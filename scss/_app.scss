@@ -73,6 +73,23 @@ html.print {
   cursor: pointer;
 }
 
+.back-lightbox {
+    margin: 0;
+    display: flex;
+    color: #4A4A4A;
+    align-items: center;
+
+    .icon-left {
+      fill: #4A4A4A;
+      margin-right: 5px;
+      margin-top: 3px;
+    }
+
+    span {
+      font-size: 14px;
+    }
+}
+
 .lightbox-view {
   @include lightbox-window;
   width: 800px;
