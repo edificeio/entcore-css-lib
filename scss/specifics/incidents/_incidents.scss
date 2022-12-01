@@ -1,6 +1,6 @@
 body.presences, .sniplet.presences {
   @import "components/index";
-  @import "../../../sass/global/common";
+  @import "../presences-common/common";
 
   .pagination {
     float: right;
