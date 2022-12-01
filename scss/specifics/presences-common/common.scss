@@ -1,0 +1,16 @@
+$yellow-main: #ffb600;
+$grey-white: #ffffff99;
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobileMini {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+@import "components/index";
