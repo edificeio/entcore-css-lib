@@ -1,0 +1,94 @@
+/* ----------------------------
+    Period bar history
+---------------------------- */
+
+.period li {
+  list-style: none;
+  float: left;
+  width: 2%;
+  position: relative;
+}
+
+.period li:before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid $presences-grey;
+  display: block;
+  z-index: 1;
+  position: relative;
+  border-radius: 50%;
+  background: $presences-grey;
+  color: $presences-grey;
+  text-align: center;
+  font-weight: bold;
+  top: 2px;
+}
+
+.period li:nth-child(4):after {
+  width: 64px;
+}
+
+.period li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: $presences-grey;
+  top: 18px;
+  left: -50%;
+
+}
+
+.period li:first-child:after, .period li:last-child:before {
+  content: none;
+}
+
+.tableEdit:after {
+  font-family: 'material-icons';
+  content: "\F4F0";
+  font-size: 25px;
+}
+
+.period li:last-child:after {
+  width: 25.5px;
+}
+
+.period li.empty:before {
+  cursor: not-allowed;
+}
+
+.period li.absent-followed:before {
+  border-color: $presences-heavy-black;
+  background: $presences-heavy-black;
+}
+
+.period li.absent:before, .period li.event-absent:before {
+  border-color: $presences-red;
+  background: $presences-red;
+}
+
+.period li.no-regularized:before, .period li.absent-no-regularized:before {
+  border-color: $presences-pink;
+  background: $presences-pink;
+}
+
+.period li.regularized:before, .period li.absent-regularized:before {
+  border-color: $presences-green;
+  background: $presences-green;
+}
+
+.period li.late:before {
+  border-color: $presences-purple;
+  background: $presences-purple;
+}
+
+.period li.departure:before {
+  border-color: $presences-light-purple;
+  background-color: $presences-light-purple;
+}
+
+.period li.action-drag-event:before {
+  border-color: $presences-heavy-pink;
+  background: $presences-heavy-pink;
+}

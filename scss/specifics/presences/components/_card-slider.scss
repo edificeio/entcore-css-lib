@@ -1,0 +1,149 @@
+$card-width: 150px;
+$card-height: 85px;
+
+.card-slider {
+
+  .black {
+    color: $presences-black;
+  }
+
+  .card {
+    width: $card-width;
+    height: $card-height;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    background-color: $white;
+    color: $black;
+    margin: 10px 10px 10px 0;
+    padding: 5px;
+    position: relative;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &.disabled {
+      background-color: $grey;
+      cursor: not-allowed;
+
+      &:hover {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        background-color: $grey;
+        color: $black;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    &:first-child {
+      margin-left: 0 !important;
+    }
+
+    .notify-bell {
+      font-size: 20px;
+      line-height: 20px;
+      color: $presences-grey;
+
+      &.active {
+        color: $presences-main;
+      }
+    }
+
+    .personnel-icon {
+      &:hover .register-tooltip{
+        @include tooltipVisible();
+      }
+
+      .register-tooltip {
+        @include tooltipTemplate();
+        max-width: 115px;
+        padding: 5px !important;
+        width: 100px;
+        bottom: 32px;
+        margin-left: -32px;
+        line-height: 16px;
+        @-moz-document url-prefix() {
+          margin-left: -12px;
+        }
+
+        &:after {
+          @include tooltipBottomArrow();
+          top: 100%;
+          left: 15%;
+        }
+      }
+    }
+
+    .clipboard-alert-outline {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .hour {
+      font-weight: bold;
+    }
+
+    .classes, .subject {
+      text-align: center;
+    }
+
+    .classes {
+      font-size: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      > span {
+        &:after {
+          content: ' - ';
+        }
+
+        &:last-child:after {
+          content: ''
+        }
+      }
+    }
+
+    .markedStudents {
+      margin-top: auto;
+      text-align: end;
+      font-size: 12px;
+    }
+
+    .has-search-right {
+      line-height: normal;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: 100%;
+
+      .classes {
+        align-self: flex-end;
+        margin-top: auto;
+      }
+    }
+
+    .teachers {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .subject {
+      font-size: 12px;
+    }
+
+    &:hover, &.active {
+      background-color: $presences-main;
+      color: $white;
+
+      .notify-bell {
+        color: $presences-white;
+      }
+    }
+  }
+}

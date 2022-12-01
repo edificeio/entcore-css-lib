@@ -1,0 +1,110 @@
+$textAreaHeight: 50px;
+
+.eventFormLightBox {
+
+  /* Header part */
+  &-head {
+    h3 {
+      margin-left: 5px;
+    }
+  }
+
+  /* SubHeader part */
+  &-subHead {
+    background: $presences-grey-smoke;
+    padding: 8px 20px;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  /* toggle event type radio part */
+  &-eventsTypeRadio {
+    background: $presences-grey-smoke;
+    padding: 8px 8px 16px 20px;
+  }
+
+  /* Body part */
+  &-body {
+    background: $presences-grey-smoke;
+
+    &-title {
+      color: $black;
+    }
+
+    &-info {
+
+      &-startDate {
+        margin: 16px 0 8px 0;
+        &-datepicker {
+          margin-right: 24px;
+        }
+      }
+
+      &-endDate {
+        margin: 8px 0 16px 0;
+        &-datepicker {
+          margin-right: 24px;
+        }
+      }
+
+      &-reason {
+        padding-left: 0 !important;
+
+        select {
+          border: unset !important;
+        }
+      }
+    }
+
+    &-timeslot {
+      /* Select css */
+      @include select-timeslot(0, $box-shadow-1);
+
+      .select {
+        height: unset;
+      }
+
+      &-margin {
+        margin-right: 10px;
+
+        &-bottom {
+          margin-bottom: 7px;
+        }
+      }
+    }
+
+    &-timepicker {
+      display: inline-block;
+    }
+
+    &-description {
+      background: $white;
+
+      .latenessText {
+        display: flex;
+        padding: calc(#{$textAreaHeight} - 20px) 0 0 0;
+        height: $textAreaHeight;
+        resize: none;
+        border: none;
+
+        border-bottom: 1px solid $presences-grey-incident;
+
+        &::placeholder {
+          color: $presences-grey-incident
+        }
+      }
+    }
+  }
+
+  /* Footer part */
+  &-footer {
+    &-button {
+      padding: 8px;
+      button {
+        margin: 8px;
+      }
+    }
+  }
+}

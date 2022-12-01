@@ -1,0 +1,63 @@
+#event-card {
+  display: none;
+  position: absolute;
+}
+
+.registry-event-card {
+  min-width: 400px;
+  background-color: $presences-white;
+  color: $presences-black;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+  &-header {
+    background-color: $presences-main;
+    color: $presences-white;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    display: flex;
+    padding: 4px 8px 8px 8px;
+    flex-direction: column;
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-body {
+    display: flex;
+    padding: 8px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding-bottom: 16px;
+
+        &:last-child {
+          padding: 0;
+        }
+      }
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &-title {
+        padding: 0 16px;
+      }
+
+      &-date {
+        padding-right: 16px;
+      }
+
+      &-option {
+        padding-left: 32px;
+      }
+    }
+  }
+}

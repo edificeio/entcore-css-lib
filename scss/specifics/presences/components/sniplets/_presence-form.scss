@@ -1,0 +1,167 @@
+.presenceLightbox {
+
+  /* Body part */
+  &-body {
+    padding: 1px 20px;
+    background: $presences-grey-smoke;
+
+    &-title {
+      color: $black;
+    }
+
+    &-info {
+      &-date {
+        display: flex;
+        align-items: center;
+        margin: 16px 0;
+
+        &-datepicker {
+          margin: 0 40px 0 8px;
+        }
+      }
+
+      &-choice {
+        margin-bottom: 16px;
+
+        .follow-checkbox {
+          margin-left: 16px;
+        }
+      }
+
+      &-time {
+        margin-left: 40px;
+
+        &-start {
+          margin-right: 16px;
+        }
+
+        &-end {
+          margin-left: 16px;
+        }
+      }
+
+      &-timeslot {
+        /* Select css */
+        @include select-timeslot(0, $box-shadow-1);
+
+        .select {
+          height: unset;
+        }
+      }
+
+      &-discipline {
+        display: flex;
+        align-items: center;
+
+        &-select {
+          width: 172px;
+          margin-right: 40px;
+
+          select {
+            margin: 16px 0;
+            border: unset !important;
+          }
+        }
+
+        &-owner {
+          display: flex;
+          flex-direction: column;
+
+          &-info {
+            margin: 24px 0;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+
+  /* Footer part */
+  &-footer {
+    padding: 8px 8px 0 8px;
+
+    &-body {
+      &-search {
+        display: flex;
+        align-items: center;
+
+        &-title {
+          color: $presences-black;
+          flex: 1;
+        }
+
+        &-global {
+          flex: 3;
+
+          input {
+            margin: auto;
+          }
+        }
+
+        &-space {
+          flex: 2;
+          visibility: collapse;
+        }
+      }
+
+      .list-students {
+        max-height: 252px;
+        overflow-y: auto;
+
+        /* Comment */
+
+        &-comment {
+          position: relative;
+
+          &-markedStudentComment {
+            background: none;
+            border: 0 solid rgba(170, 170, 170, 0.2);
+            box-sizing: unset;
+            padding: 0;
+            margin: 0;
+            height: auto;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          &-icon {
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    &-submit {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 16px;
+
+      &-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-students {
+          font-weight: bold;
+          padding-right: 16px;
+        }
+      }
+
+      &.create {
+        justify-content: flex-end;
+      }
+
+      .button {
+        padding: 8px;
+      }
+    }
+  }
+}
+
+.markedStudents-displayName {
+  justify-content: start !important;
+}

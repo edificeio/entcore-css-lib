@@ -1,0 +1,30 @@
+&.presences-manage {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  padding: 5px;
+
+  .presence-navigation-item {
+    color: $presences-black;
+    flex-direction: column;
+
+    &:hover {
+      color: $presences-orange;
+      transition: color 250ms ease;
+    }
+
+    .flex-row {
+      justify-content: center;
+      align-content: center;
+    }
+
+    .presence-icon {
+      font-size: 30px;
+      min-height: 0;
+      justify-content: center;
+
+      .add:before {
+        font-size: 30px;
+      }
+    }
+  }
+
+}

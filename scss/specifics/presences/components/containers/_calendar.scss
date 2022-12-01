@@ -1,0 +1,612 @@
+$calendar-item-color: rgba(247, 246, 246, 1);
+$calendar-item-pink-colored: #CC6F6A;
+$calendar-item-red-colored: #B7120B;
+$calendar-item-color-opacity: rgba(247, 247, 246, 0.34);
+$calendar-exemption-color: #c0c0c0;
+$calendar-item-border-color: rgba(96, 96, 96, 0.15);
+$calendar-item-border-radius: 5px;
+$calendar-user-card-height: 56px;
+
+.calendar {
+  sniplet {
+    .incident-lightbox-footer-protagonist {
+      box-shadow: none !important;
+    }
+  }
+
+  > h1 {
+    margin-bottom: 10px;
+  }
+
+  .search-toolbar {
+    margin-bottom: 7px;
+
+    .cell.eight {
+      height: 55px;
+      line-height: 55px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .right-magnet {
+        > button, sniplet > div > button {
+          float: unset !important;
+          display: inline-block;
+        }
+
+        sniplet > div {
+          display: inline-block;
+        }
+      }
+    }
+
+    .search-input {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    }
+  }
+
+
+  .calendar-container {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    background-color: $white;
+    position: relative;
+    user-select: none;
+
+    loader {
+      position: absolute;
+      top: 0px;
+      height: 100%;
+      width: 100%;
+      z-index: 1000;
+      background-color: $white;
+    }
+  }
+
+  calendar {
+    .calendarFiltersButtons .displayModeButtons {
+      display: none;
+    }
+
+    .calendar-current-week {
+      background: $white !important;
+      padding-right: 0;
+
+      span[ng-if="display.mode === 'week'"] {
+        color: $white;
+        background: $presences-main;
+        height: 100%;
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+
+    .schedule {
+
+      .forgotten-notebook-legends {
+        background-color: $presences-water-green;
+
+        &::before {
+          font-family: 'material-icons';
+          content: '\F0C6';
+          position: absolute;
+          font-size: 24px;
+          right: 0;
+          width: 60px;
+          top: 0;
+          bottom: 0;
+          display: flex;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      legend.timeslots {
+        background: $white !important;
+        color: $black !important;
+      }
+
+      .next-timeslots, .previous-timeslots {
+        margin-bottom: 0;
+        z-index: 500 !important;
+
+        &::before {
+          @include fonticon();
+          content: "\e841";
+          background: transparent;
+          position: absolute;
+          top: 0;
+          line-height: 17px;
+          left: unset;
+        }
+
+        &:disabled {
+          background: #e6e6e6;
+
+          &:hover {
+            background: #e6e6e6;
+          }
+
+          &::before {
+            content: " ";
+          }
+        }
+      }
+
+      .previous-timeslots {
+        transform: rotate(180deg);
+      }
+
+      .days {
+        height: auto;
+
+        .day {
+          legend {
+            background: $white !important;
+            color: $black !important;
+          }
+
+          .timeslots {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .timeslot {
+              background: $white !important;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+
+              &.action-drag-absence {
+                background: $presences-red !important;
+                z-index: 999;
+                opacity: 60%;
+              }
+            }
+          }
+        }
+      }
+
+      .timeslot {
+        height: 47px;
+        line-height: 47px;
+      }
+
+      .schedule-item {
+        overflow: visible;
+
+        div[ng-include="templateContainer"], div[ng-include="templateContainer"] .course-item {
+          height: 100%;
+          box-sizing: border-box;
+        }
+
+        &.schedule-globalAbsence, &.schedule-globalAbsenceReason {
+          width: 99% !important;
+          left: 0 !important;
+          z-index: 1 !important;
+        }
+
+        &.schedule-course {
+          width: 99% !important;
+          left: 0 !important;
+          z-index: 2 !important;
+        }
+
+        .absence, .exemption, .absenceReason, .globalAbsence, .globalAbsenceReason {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+          border-radius: 5px;
+        }
+
+        .absence, .globalAbsence {
+          background-color: $presences-red;
+        }
+
+        .absenceReason, .globalAbsenceReason {
+          background-color: $presences-pink;
+        }
+
+        .exemption {
+          background-color: $calendar-exemption-color;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          &.absent {
+            background-color: $presences-red !important;
+          }
+
+          &.absent-not-regularized {
+            background-color: $presences-pink !important;
+          }
+
+          &.absent-regularized {
+            background-color: $presences-green !important;
+          }
+
+          &.contains-followed-absence {
+            background-color: $presences-black !important;
+          }
+        }
+
+        .course-item-container {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          height: 100%;
+
+          &-event {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+          }
+        }
+
+        .right-side {
+          width: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .exemption-label {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: $white;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        .course-item {
+          font-size: 11px;
+          display: flex;
+          width: 70%;
+          background-color: $calendar-item-color;
+          border: solid 1px $calendar-item-border-color;
+          border-radius: $calendar-item-border-radius;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .data {
+            .subject {
+              max-width: 80%;
+            }
+          }
+
+          &.isAbsent {
+            background-color: $calendar-item-red-colored;
+            color: $presences-white;
+          }
+
+          &.isJustifiedAbsent {
+            background-color: $calendar-item-pink-colored;
+            color: $presences-white;
+          }
+
+          .data > em.metadata {
+            margin-right: 4px;
+          }
+
+          &.contains-absence, &.contains-absenceReason {
+            background-color: rgba(0, 0, 0, 0.2) !important;
+            color: $white !important;
+          }
+
+          &.contains-followed-absence {
+            background-color: $presences-black !important;
+            color: $white !important;
+          }
+
+          &.contains-globalAbsence {
+            background-color: $presences-red;
+            border: none;
+          }
+
+          &.contains-globalAbsenceReason {
+            background-color: $presences-pink;
+            border: none;
+          }
+
+          &.contains-events {
+            background-color: $calendar-item-color-opacity;
+          }
+
+          .subject {
+            text-indent: 3px;
+          }
+
+          .events {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            align-self: flex-end;
+            padding: 0 0 2px 0;
+            width: 100%;
+
+            i.incident {
+              margin-right: 3px;
+
+              &:before {
+                font-size: 20px;
+                color: $presences-pink;
+              }
+            }
+
+            i.punishment-calendar {
+              margin-right: 3px;
+
+              &:before {
+                font-size: 20px;
+                color: $presences-main;
+              }
+            }
+
+            > div {
+              &:hover .tooltip-top {
+                @include tooltipVisible();
+              }
+
+              .tooltip-top {
+                @include tooltipTemplate();
+                max-width: 115px;
+                padding: 5px !important;
+                width: 100px;
+                bottom: 30px;
+                margin-left: -33px;
+                line-height: 16px;
+                @-moz-document url-prefix() {
+                  margin-left: -12px;
+                }
+
+                &:after {
+                  @include tooltipBottomArrow();
+                  top: 100%;
+                  left: 15%;
+                }
+              }
+
+              &.event {
+                width: 20%;
+                height: 12px;
+                border-radius: 6px;
+                margin-right: 3px;
+
+                .tooltip-top {
+                  min-width: 90px;
+                  max-width: 450px;
+                  width: fit-content;
+                  bottom: 21px;
+                  margin-left: -4px;
+                }
+
+                &.event-type {
+                  &-1 {
+                    display: none;
+                  }
+
+                  &-2 {
+                    background-color: $presences-purple;
+                  }
+
+                  &-3 {
+                    background-color: $presences-light-purple;
+                  }
+
+                  &-4 {
+                    background-color: $presences-remark;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .calendar-user-card {
+    position: fixed;
+    top: $portal-header-height;
+    right: 0;
+    z-index: 1001;
+
+    &-container {
+      display: flex;
+    }
+
+    .user-cards {
+      position: relative;
+      right: unset;
+      top: unset;
+      z-index: unset;
+
+      .user-card {
+        height: $calendar-user-card-height;
+        box-sizing: border-box;
+
+        .avatar {
+          width: 46px;
+          height: 46px;
+        }
+      }
+
+      + .user-cards-student-list {
+        background-color: $white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+        top: $calendar-user-card-height;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        .user-cards-student-list-show-button {
+          height: 56px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: right;
+          padding: 0 10px;
+          box-sizing: border-box;
+          font-size: 14px;
+
+          &::after {
+            @include fonticon();
+            content: "\e87b";
+            margin-left: 5px;
+            font-size: 16px;
+            transform: rotate(-90deg);
+          }
+        }
+
+        + .list {
+          overflow-y: hidden;
+          height: 0;
+          transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+          position: absolute;
+          top: 56px;
+          right: 0;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+
+          .student {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 5px;
+            border-top: solid 2px rgba(170, 170, 170, 0.3);
+            background-color: $white;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-bottom: solid 2px $white;
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+            &:hover {
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+              background-color: $presences-main !important;
+              color: $white;
+              border-color: $presences-main !important;
+              transform: scale(1.0);
+            }
+
+            > .avatar {
+              width: 40px;
+              height: 40px;
+              display: inline-block;
+              background-size: 100%;
+              border-radius: 20px;
+              margin-top: 5px;
+              background-repeat: no-repeat;
+            }
+
+            > div {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+
+    &.open {
+      height: calc(100% - #{$portal-header-height});
+
+      .user-cards-student-list {
+        height: calc(100% - #{$calendar-user-card-height}) !important;
+
+        + .list {
+          overflow-y: scroll;
+          height: calc(100% - #{$calendar-user-card-height}) !important;
+        }
+      }
+
+      .user-cards-student-list-show-button::after {
+        transform: rotate(90deg) !important;
+        display: inline-block;
+      }
+    }
+  }
+
+  #exemption-hover, #presences-hover, #event-absence-hover {
+    width: 180px;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.26);
+    z-index: 800;
+    height: 90px;
+    box-sizing: border-box;
+
+    &:after {
+      content: ' ';
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid $white;
+      position: absolute;
+      top: 100%;
+      left: calc(50% - 10px);
+    }
+  }
+
+  #exemption-hover {
+    z-index: 999;
+  }
+
+  #presences-hover {
+    z-index: 999;
+  }
+
+  #event-absence-hover {
+    width: auto;
+    min-width: 120px;
+    max-width: 200px;
+    height: auto;
+    min-height: 60px;
+    max-height: 100px;
+    justify-content: normal;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  container[template="calendarDefaultDisplayOptionsTemplate"] {
+    > div {
+      float: left;
+      width: 100%;
+
+      h2 {
+        background: $presences-main;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 10px 5px;
+        color: $white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-indent: 20px;
+
+        ~ div {
+          padding-left: 20px;
+
+          &:last-child {
+            margin-bottom: 20px !important;
+          }
+
+          .quarterHours {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.dashboard {
+  h2 {
+    color: $black;
+  }
+
+  .empty-title {
+    color: $presences-middle-grey;
+    font-size: 18px;
+    width: 80%;
+    text-align: center;
+  }
+
+  .tick-color {
+    min-width: 50px;
+    height: 16px;
+    border-radius: 8px;
+    display: inline-block;
+
+    &.purple {
+      background: $presences-purple;
+    }
+
+    &.red {
+      background: $presences-red;
+    }
+
+    &.yellow {
+      background: $presences-main;
+    }
+  }
+
+  .presences-title {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 60px;
+      max-width: none;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    .structure {
+      min-width: 300px;
+      font-size: 18px;
+    }
+  }
+
+  &-search-row {
+
+    &-searchs {
+      display: flex;
+      justify-content: space-evenly;
+
+      .row {
+        width: 547px;
+      }
+
+      .search-registry {
+        .input-async-autocomplete {
+          &::before {
+            @include fonticon();
+            content: "\e812";
+          }
+
+          input[type="text"] {
+            border: solid 3px $presences-grey;
+
+            &:focus {
+              border-bottom: solid 3px $presences-grey !important;
+            }
+          }
+        }
+      }
+    }
+
+    .input-async-autocomplete {
+      line-height: 48px;
+
+
+      &::before {
+        @include fonticon();
+        content: "\e930";
+        font-size: 24px;
+        position: absolute;
+        z-index: 10;
+        margin-left: 10px;
+        left: 0;
+      }
+
+      input[type="text"] {
+        background-color: $white;
+        height: 48px;
+        line-height: 48px;
+        border: solid 3px $presences-main;
+        border-radius: 30px;
+        text-indent: 35px;
+        box-shadow: 0 1px 5px rgba(189, 189, 189, 0.75);
+
+        &:focus {
+          border-bottom: solid 3px $presences-main !important;
+        }
+      }
+    }
+  }
+
+  &-absences-counts {
+    display: flex;
+
+    .card {
+      margin-right: 6px;
+      padding: 3px;
+    }
+  }
+
+  .current-date {
+    text-transform: capitalize;
+    color: $black;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .sidebar-widgets {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    height: calc(100% - 64px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.21);
+    z-index: 1001;
+  }
+
+}

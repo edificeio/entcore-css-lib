@@ -1,0 +1,30 @@
+body.presences, .sniplet.presences {
+  @import "components/index";
+  @import "../../../sass/global/common";
+
+  .pagination {
+    float: right;
+
+    &.lightbox {
+      float: none;
+    }
+  }
+
+  .playdown {
+    font-size: 16px !important;
+  }
+
+  i.seriousness:before {
+    content: '\e903';
+    font-size: 24px;
+  }
+
+  i.edit:before {
+    font-size: 24px;
+    color: $grey-light;
+  }
+
+  section.lightbox {
+    overflow: unset;
+  }
+}

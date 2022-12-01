@@ -1,0 +1,77 @@
+#memento-incidents-sniplet {
+  position: relative;
+
+  .disabled {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+  }
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  .background-yellow {
+    background-color: $yellow-main;
+  }
+
+  .text-white {
+    color: $white;
+  }
+
+  .min-height-45 {
+    min-height: 45px !important;
+  }
+
+  .max-height-80 {
+    max-height: 80px !important;
+  }
+
+  .overflow-y {
+    overflow: auto;
+    max-height: 200px;
+  }
+
+  .pagination-sniplet {
+    > ul {
+      float: none !important;
+      text-align: right;
+    }
+  }
+
+  .open-in-new::before {
+    font-size: 25px;
+    margin-right: 0;
+  }
+
+  .incident-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .incident-filters {
+    font-size: 14px;
+  }
+
+  .checkbox {
+    margin-left: 20px;
+  }
+
+  .check-circle::before {
+    font-size: 25px;
+    color: $incident-light-green;
+  }
+
+  .absences::before {
+    font-size: 25px;
+    color: $incidents-grey-average;
+  }
+
+}

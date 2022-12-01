@@ -1,0 +1,24 @@
+.presences-widget {
+  .presence {
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $presences-grey;
+  }
+
+
+  .empty-state {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    .empty-title {
+      width: auto;
+      margin: 0 50px;
+    }
+  }
+}

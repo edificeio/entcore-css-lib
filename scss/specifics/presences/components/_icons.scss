@@ -1,0 +1,326 @@
+i {
+  &.presence-home::before {
+    font-family: 'material-icons';
+    content: "\F56E";
+  }
+
+  &.register::before {
+    font-family: 'material-icons';
+    content: "\F0E6";
+  }
+
+  &.absence::before {
+    font-family: 'material-icons';
+    content: "\F413";
+  }
+
+  &.lateness::before {
+    font-family: 'material-icons';
+    content: "\F413";
+  }
+
+  &.presence:before {
+    font-family: 'material-icons';
+    content: "\F5C7";
+  }
+
+  &.events:before {
+    font-family: 'material-icons';
+    content: "\F005";
+  }
+
+  &.calendar-remove:before {
+    font-family: 'material-icons';
+    content: "\F0F4";
+  }
+
+  &.uncolored-time-picker:before {
+    content: "\F017";
+  }
+
+  &.collective-absences::before {
+    font-family: 'material-icons';
+    content: "\e7fb";
+  }
+
+  &.permission::before {
+    font-family: 'material-icons';
+    content: "\f02f";
+  }
+
+  &.incident::before {
+    font-family: 'material-icons';
+    content: "\F026";
+  }
+
+  &.punishment::before {
+    font-family: 'material-icons';
+    content: "\F6D4";
+  }
+
+  &.sanction::before {
+    font-family: 'material-icons';
+    content: "\f29b";
+  }
+
+  &.mass-mailing::before {
+    font-family: 'material-icons';
+    content: "\fab8";
+  }
+
+  &.statistics-presences::before {
+    font-family: 'material-icons';
+    content: "\f128";
+  }
+
+  &.testimony::before {
+    font-family: 'material-icons';
+    content: "\f362";
+  }
+
+  &.collective-absences::before {
+    font-family: 'material-icons';
+    content: "\fb34";
+  }
+
+  &.split-view::before {
+    font-family: 'material-icons';
+    content: "\f575";
+  }
+
+  &.show-list::before {
+    font-family: 'material-icons';
+    content: "\F279";
+  }
+
+  &.notify-bell::before {
+    font-family: 'material-icons';
+    content: "\F09E";
+  }
+
+  &.notify-bell.active::before {
+    font-family: 'material-icons';
+    content: "\F09F";
+  }
+
+  &.attach:before {
+    font-family: 'material-icons';
+    content: '\F066';
+  }
+
+  &.add:before {
+    font-family: 'material-icons';
+    content: '\F416';
+  }
+
+  &.addMultiple:before {
+    font-family: 'material-icons';
+    content: '\F334';
+  }
+
+  &.account:before {
+    font-family: 'material-icons';
+    content: "\F004";
+  }
+
+  &.account-outline:before {
+    font-family: 'material-icons';
+    content: "\F013";
+  }
+
+  &.table-edit:before {
+    font-family: 'material-icons';
+    content: "\F4F0";
+  }
+
+  &.alertes:before {
+    font-family: 'material-icons';
+    content: "\F149";
+  }
+
+  &.punishment-active:before {
+    font-family: 'material-icons';
+    content: "\F241";
+  }
+
+  &.publipostage:before {
+    font-family: 'material-icons';
+    content: "\F214";
+  }
+
+  &.presences-statistics:before {
+    font-family: 'material-icons';
+    content: "\F128";
+  }
+
+  &.file-checked:before {
+    font-family: 'material-icons';
+    content: "\F216";
+  }
+
+  &.visible:before {
+    font-family: 'material-icons';
+    content: "\F208";
+  }
+
+  &.invisible:before {
+    font-family: 'material-icons';
+    content: "\F6D0";
+  }
+
+  &.delete:before {
+    font-family: 'material-icons';
+    content: "\F5AD";
+  }
+
+  &.presence-edit:before {
+    font-family: 'material-icons';
+    content: '\F3EB';
+  }
+
+  &.filter:before {
+    font-family: 'material-icons';
+    content: '\F236';
+  }
+
+  &.percent:before {
+    font-family: 'material-icons';
+    content: '\F3f0';
+  }
+
+  &.last-absent:before {
+    font-family: 'material-icons';
+    content: '\F99A';
+  }
+
+  &.forgotten-notebook:before {
+    font-family: 'material-icons';
+    content: '\F0C6';
+  }
+
+  &.close-xs:before {
+    font-family: 'material-icons';
+    content: '\F156';
+  }
+
+  &.help:before {
+    font-family: 'material-icons';
+    content: '\F2D7';
+  }
+
+  &.plus-sign:before {
+    font-family: 'material-icons';
+    content: '\F415';
+  }
+
+  &.minus-sign:before {
+    font-family: 'material-icons';
+    content: '\F374';
+  }
+
+  &.disciplines:before {
+    font-family: 'material-icons';
+    content: '\F5C7';
+  }
+
+  &.circle:before {
+    font-family: 'material-icons';
+    content: '\F9DD';
+  }
+
+  &.comments:before {
+    font-family: 'material-icons';
+    content: '\F188';
+  }
+
+  &.phone-android:before {
+    font-family: 'material-icons';
+    content: '\F11D';
+  }
+
+  &.presences-email:before {
+    font-family: 'material-icons';
+    content: '\F1EE';
+  }
+
+  &.pdf:before {
+    font-family: 'material-icons';
+    content: '\F225';
+  }
+
+  &.arrow-right:before {
+    font-family: 'material-icons';
+    content: '\F054';
+  }
+
+  &.open-in-new:before {
+    font-family: 'material-icons';
+    content: '\F3CC';
+  }
+
+  &.check-circle:before {
+    font-family: 'material-icons';
+    content: '\F5E0';
+  }
+
+  &.cross-circle:before {
+    font-family: 'material-icons';
+    content: '\F15A';
+  }
+
+  &.chevron-right:before {
+    font-family: 'material-icons';
+    content: '\F142';
+  }
+
+  &.chevron-left:before {
+    font-family: 'material-icons';
+    content: '\F141';
+  }
+
+  &.chevron-up:before {
+    font-family: 'material-icons';
+    content: '\F143';
+  }
+
+  &.chevron-down:before {
+    font-family: 'material-icons';
+    content: '\F140';
+  }
+
+  &.alert-octagon:before {
+    font-family: 'material-icons';
+    content: '\F029';
+  }
+
+  &.presences-table:before {
+    font-family: 'material-icons';
+    content: '\f4eb';
+  }
+
+  &.clipboard-alert-outline:before {
+    font-family: 'material-icons';
+    content: '\fcd3';
+  }
+
+  &.flag:before {
+    font-family: 'material-icons';
+    content: '\f23b';
+  }
+
+  &.flag-outline:before {
+    font-family: 'material-icons';
+    content: '\f23d';
+  }
+
+  &.silverware:before {
+    font-family: 'material-icons';
+    content: '\f4a3';
+  }
+
+  &.hotel:before {
+    font-family: 'material-icons';
+    content: '\f2e3';
+  }
+
+}

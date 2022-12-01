@@ -1,0 +1,60 @@
+.forgotten-registers-widget {
+  &-tooltip {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+
+    i {
+      position: relative;
+
+      &:hover .tooltip-top {
+        @include tooltipVisible();
+      }
+
+      .tooltip-top {
+        @include tooltipTemplate();
+        bottom: 30px;
+        margin-left: -43px;
+
+        &:after {
+          @include tooltipBottomArrow();
+          top: 100%;
+          left: 15%;
+        }
+      }
+    }
+
+    &-text {
+      padding: 0 8px;
+    }
+
+    .switch input[type=checkbox]:checked + .tick {
+      background: $presences-light-green;
+
+      &:before {
+        background: $presences-dark-green;
+      }
+    }
+  }
+  .card-slider.empty {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+    .empty-title {
+      width: auto !important;
+    }
+
+    .tick-color {
+      &:first-child {
+        margin-right: 50px;
+      }
+
+      &:last-child {
+        margin-left: 50px;
+      }
+    }
+  }
+}

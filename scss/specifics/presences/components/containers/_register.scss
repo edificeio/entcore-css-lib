@@ -1,0 +1,349 @@
+$student-height: 40px;
+$absence-button-width: 20px;
+
+.register {
+
+  .card-slider {
+    max-width: 100%;
+    overflow-x: auto;
+    height: 120px;
+    overflow-y: hidden;
+    display: flex;
+    margin-bottom: 10px;
+
+    .card {
+      min-width: 150px;
+      flex-basis: 150px;
+    }
+  }
+
+  .register-header {
+    text-align: center;
+    background-color: $white;
+    color: $presences-grey;
+    padding: 5px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  }
+
+  .settings {
+    > div {
+      display: inline-block;
+      min-height: 40px;
+
+      &.view-settings {
+        display: inline-block;
+        min-height: 40px;
+        line-height: 40px;
+        font-size: 24px;
+        text-align: center;
+        margin-right: 10px;
+
+        i {
+          float: left;
+          height: 40px;
+          width: 40px;
+          position: relative;
+          color: $presences-grey;
+          opacity: 1 !important;
+          transition: all 0.25s ease;
+
+          &.split-view::before, &.show-list::before {
+            position: absolute;
+            //top: -2px;
+            left: 0;
+            height: 40px;
+            width: 100%;
+            line-height: 40px;
+          }
+
+          &.split-view::before {
+            font-size: 30px;
+          }
+
+          &.active {
+            color: $darkest-grey !important;
+          }
+        }
+      }
+    }
+
+    .valid-content {
+      display: flex !important;
+      align-items: flex-end;
+
+      .check-circle::before {
+        color: $presences-green;
+      }
+    }
+  }
+
+  .student {
+    background-color: $white;
+    margin: 4px 0;
+    padding: 0 10px;
+    height: $student-height;
+    line-height: $student-height;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    /* tooltip hover */
+    li {
+
+      &:hover .tooltip-top {
+        @include tooltipVisible();
+      }
+
+      .tooltip-top {
+        @include tooltipTemplate();
+        text-align: left;
+        max-width: 115px;
+        padding: 5px;
+        line-height: 20px;
+        transform: scale(0.80);
+        bottom: 20px;
+        margin-left: -23px;
+
+        &:after {
+          @include tooltipBottomArrow();
+          top: 100%;
+          left: 15%;
+        }
+      }
+    }
+
+
+    .student-name.last-course-absent {
+      color: $presences-red;
+    }
+
+    .history-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .history {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+      opacity: 1;
+      transition: all 0.25s ease;
+
+      &.disabled {
+        opacity: 0.15;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $presences-grey;
+        z-index: 0;
+      }
+
+      li {
+        width: $absence-button-width - 2;
+        height: $absence-button-width - 2;
+        display: block;
+        background-color: $presences-grey;
+        border-radius: ($absence-button-width - 2)/2;
+        z-index: 1;
+
+        &.current {
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+          transform: scale(1.25);
+        }
+
+        &.absence {
+          background-color: $presences-red;
+        }
+
+        &.lateness {
+          background-color: $presences-purple;
+        }
+
+        &.departure {
+          background-color: $presences-light-purple;
+        }
+
+        &.remark {
+          background-color: $presences-remark;
+        }
+
+        &.incident {
+          background-color: $presences-grey;
+        }
+      }
+    }
+
+    .absence-button {
+      width: 26px;
+      height: $student-height;
+      display: block;
+      float: left;
+      margin-right: 10px;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: " ";
+        width: $absence-button-width;
+        height: $absence-button-width;
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -(($absence-button-width + 1)/2);
+        border-radius: ($absence-button-width/2)+1;
+        border: solid 1px #929292;
+        transition: all 0.3s ease;
+        background-color: $white;
+      }
+
+      &.active::before {
+        background-color: $presences-red;
+        border-color: $presences-red;
+      }
+
+
+      &.disabled::before {
+        background-color: $presences-grey !important;
+        border-color: $presences-grey !important;
+      }
+    }
+
+    .absence-student {
+      display: flex;
+
+      .last-absent {
+        padding-left: 8px;
+
+        &:before {
+          font-size: 17px;
+          color: $presences-red;
+        }
+      }
+
+      .forgotten-notebook {
+        padding-left: 8px;
+
+        &:before {
+          font-size: 17px;
+          color: $presences-water-green;
+        }
+      }
+    }
+
+    .register-event-status {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+
+      > div {
+        width: 44px;
+        height: $student-height/3;
+        background-color: pink;
+        border-radius: $student-height/5;
+
+
+        &.absence {
+          background-color: $presences-red;
+        }
+
+        &.lateness {
+          background-color: $presences-purple;
+        }
+
+        &.departure {
+          background-color: $presences-light-purple;
+        }
+
+        &.remark {
+          background-color: $presences-remark;
+        }
+
+        &.incident {
+          background-color: $presences-grey;
+        }
+      }
+    }
+  }
+}
+
+.registers {
+  h2 {
+    color: $presences-black;
+  }
+}
+
+/* Button declare absence */
+.register-absence-button {
+  width: 26px;
+  height: 40px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: " ";
+    width: $absence-button-width;
+    height: $absence-button-width;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -(($absence-button-width + 1)/2);
+    border-radius: ($absence-button-width/2)+1;
+    border: solid 1px #929292;
+    transition: all 0.3s ease;
+    background-color: $white;
+  }
+
+  &.active::before {
+    background-color: $presences-red;
+    border-color: $presences-red;
+  }
+
+  &.disabled::before {
+    background-color: $presences-grey !important;
+    border-color: $presences-grey !important;
+  }
+}
+
+/* State color */
+.state {
+  width: 44px;
+  height: $student-height / 3;
+  border-radius: $student-height / 5;
+
+  &.absence {
+    background-color: $presences-red;
+  }
+
+  &.lateness {
+    background-color: $presences-purple;
+  }
+
+  &.departure {
+    background-color: $presences-light-purple;
+  }
+
+  &.remark {
+    background-color: $presences-remark;
+  }
+
+  &.incident {
+    background-color: $presences-grey;
+  }
+}

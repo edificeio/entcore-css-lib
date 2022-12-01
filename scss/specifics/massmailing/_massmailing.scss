@@ -1,0 +1,105 @@
+@import "variables";
+
+$massmailing-main: #ffb600;
+$massmailing-bgcolor: rgba(255, 255, 255, 0.6);
+$massmailing-grey: #c0c0c0;
+
+body.massmailing, .sniplet.presences {
+  @import "components/index";
+
+  .text-align-left {
+    text-align: left;
+  }
+
+  .text-align-right {
+    text-align: right;
+  }
+
+  .red-text {
+    color: $presences-red;
+  }
+
+  .hr {
+    width: 100%;
+    height: 2px;
+    background: $massmailing-grey;
+    opacity: 0.5;
+    border-radius: 1px;
+  }
+
+  h1.title {
+    padding: 0 10px;
+    margin-left: 5px;
+  }
+
+  .massmailing-content {
+    padding: 0 10px;
+    margin: 0 5px;
+    background-color: $massmailing-bgcolor;
+  }
+
+  .date-filters {
+    padding-top: 10px;
+  }
+
+  i.filter {
+    font-size: 26px;
+  }
+
+  .massmailing-filters {
+    h4 {
+      font-size: 20px;
+      font-weight: normal;
+
+      input[type="number"] {
+        width: 50px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .counters-cell {
+    padding: 0;
+    position: relative;
+
+    .counters {
+      height: 100%;
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .counter {
+        width: 40px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+
+        &.REGULARIZED {
+          background: $presences-green;
+        }
+
+        &.UNREGULARIZED {
+          background: $presences-pink;
+        }
+
+        &.PUNISHMENT, &.SANCTION {
+          background: $presences-main;
+        }
+
+        &.NO_REASON {
+          background: $presences-red;
+        }
+
+        &.LATENESS {
+          background: $presences-purple;
+        }
+      }
+    }
+  }
+}

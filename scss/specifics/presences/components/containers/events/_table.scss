@@ -1,0 +1,234 @@
+.events-table {
+  &-body {
+    border-bottom: 1px solid $presences-grey-light;
+
+    .regularized-absence .checkmark {
+      margin-top: -8px;
+    }
+
+    .massmail-status {
+      font-size: 20px;
+    }
+
+    &-student {
+      display: flex;
+      align-items: center;
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+
+        .class-name {
+          color: $presences-grey;
+        }
+      }
+    }
+
+    &-date {
+      text-align: right !important;
+      padding-right: 8px;
+    }
+
+    &-period {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+
+      ul {
+        width: 370px;
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &-file {
+      transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+    }
+
+    &-description {
+      display: none;
+      background: $presences-grey-light;
+
+      &.open {
+        display: table-row;
+      }
+
+      &-content {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-checkbox {
+          .checkmark {
+            margin-top: -1px !important;
+          }
+        }
+      }
+    }
+
+    &-color {
+      color: $presences-main;
+    }
+
+    &-colspan {
+      margin-bottom: 0;
+      background: $presences-grey-light;
+    }
+
+    &-td {
+      padding: 0;
+    }
+  }
+}
+
+.table-reason {
+  &-icon {
+    position: absolute;
+    top: -3px;
+    left: 8px;
+  }
+
+  &-select {
+    padding-left: 28px !important;
+  }
+
+  label {
+    position: relative;
+  }
+
+  label::after {
+    content: '';
+    border-color: $presences-main transparent transparent;
+    background: $presences-white;
+    border-width: 11px;
+    border-style: solid;
+
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+  }
+
+  select {
+    /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 208px;
+    padding: 0 14px;
+    font-size: 16px;
+    border: solid 1px $presences-grey-light;
+  }
+}
+
+li {
+
+  &:hover .tooltip-top {
+    @include tooltipVisible();
+  }
+
+  .tooltip-top {
+    @include tooltipTemplate();
+    text-align: left;
+    max-width: 115px;
+    padding: 5px;
+    line-height: 20px;
+    transform: scale(0.80);
+    bottom: 35px;
+    margin-left: -30px;
+
+    &:after {
+      @include tooltipBottomArrow();
+      top: 100%;
+      left: 15%;
+    }
+  }
+}
+
+i.attach:before {
+  font-size: 24px;
+}
+
+i.add:before {
+  font-size: 24px;
+}
+
+i.addMultiple:before {
+  font-size: 24px;
+}
+
+// Select design
+
+/* regularized-absence */
+.regularized-absence {
+  position: relative;
+  overflow: visible;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 22px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Hide the browser's default checkbox */
+.regularized-absence input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom regularized checkbox */
+.checkmark {
+  height: 18px;
+  width: 18px;
+  border: 2px solid $presences-main;
+  border-radius: 4px;
+
+  &.active {
+    background: $presences-main;
+
+    &:after {
+      display: block;
+      left: 7px;
+      top: 3px;
+      width: 6px;
+      height: 11px;
+      border: solid $white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  &.half {
+    background: $presences-main;
+
+    &:after {
+      display: block;
+      left: 10px;
+      top: 5px;
+      height: 11px;
+      border: solid $white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(91deg);
+    }
+  }
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:before {
+  display: none;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}

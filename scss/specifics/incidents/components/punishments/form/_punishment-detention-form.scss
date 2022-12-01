@@ -1,0 +1,38 @@
+.punishment-detention-form {
+  &-dates {
+    margin: $spacing-LXS 0;
+
+    &-date {
+      padding-bottom: $spacing-LXS;
+
+      .timeslot-select {
+        margin-right: $spacing-M;
+      }
+    }
+
+    &-place {
+      input {
+        border: none;
+        background: none;
+        border-bottom: 1px dotted $grey-light;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &-createSlot {
+    margin-bottom: $spacing-L;
+
+    &:hover {
+      color: $yellow-main;
+    }
+
+    &-icon {
+      font-size: 2em;
+      margin-right: $spacing-LXS;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+$status-height: 120px;
+$status-max-width: 250px;
+
+.massmail-status {
+  &.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, $status-max-width));
+    grid-column-gap: 25px;
+    grid-gap: 16px;
+    grid-template-rows: $status-height;
+
+    .widget-alert {
+      height: 100%;
+
+      .value {
+        font-size: 33px;
+        color: $black;
+        margin-top: 20px;
+      }
+
+      .subtitle {
+        width: 85%;
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .empty-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .description {
+      height: 120px;
+    }
+  }
+
+  .empty-content-evenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .empty-content {
+      margin: 0;
+    }
+  }
+}
