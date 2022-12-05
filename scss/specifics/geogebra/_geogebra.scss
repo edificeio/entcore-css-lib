@@ -1,4 +1,4 @@
-body.geogebra section.main {
+body.geogebra {
   @import './components/index';
   .ggbmenubarwrapper {
     button{
@@ -12,5 +12,11 @@ body.geogebra section.main {
   }
   .box-shadow-button {
     box-shadow: 2px 2px 3px grey;
+  }
+  .toaster-right {
+    float: right;
+  }
+  .top-index {
+    z-index: 10;
   }
 }
