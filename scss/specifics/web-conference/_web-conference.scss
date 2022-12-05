@@ -30,13 +30,11 @@
         display: flex;
         justify-content: flex-end;
       }
-    } 
+    }
     .url-container {
-      display: flex;
-
       .input-url {
         padding-right: 15px;
-  
+
         input {
           width: 100%;
         }
@@ -59,7 +57,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
-  
+
     .flex-card {
       height: 130px;
       display: flex;
@@ -96,21 +94,34 @@
     margin-block-start: auto;
     margin-bottom: 15px;
     margin-right: 5px;
+    gap: 3px;
   }
   i.sharing::before {
     font-family: 'material-icons';
     content: "\F497";
-    color: #5b6472;
     font-size: 20px;
     vertical-align: top;
   }
   i.waitingRoom::before {
     font-family: 'material-icons';
     content: "\FB32";
-    color: #5b6472;
     font-size: 20px;
     vertical-align: top;
   }
+
+  i.streaming {
+    &.active {
+      color: #46BFAF;
+    }
+  }
+
+  i.streaming::before {
+    font-family: 'material-icons';
+    content: "\F118";
+    font-size: 20px;
+    vertical-align: top;
+  }
+
   lightbox {
     .action-buttons {
       margin-top: 10px;
@@ -120,9 +131,32 @@
   .emptyscreen{
     margin-top:-25px;
     img{
-      width:37%;
+      width:65%;
       height:auto;
     }
+  }
+  .padding-bottom-15 {
+    padding-bottom: 15px;
+  }
+
+  .padding-top-15 {
+    padding-top: 15px;
+  }
+
+  .margin-left-25 {
+    margin-left: 25px;
+  }
+
+  .padding-10 {
+    padding: 10px;
+  }
+
+  .font-bold {
+    font-weight: bold;
+  }
+
+  .active-streaming {
+
   }
 }
 
@@ -162,8 +196,8 @@
   }
   dots-menu.right {
     .options{
-        right: 20px;
-        left: auto;
+      right: 20px;
+      left: auto;
     }
   }
 }
