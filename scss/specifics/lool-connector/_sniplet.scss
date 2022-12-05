@@ -58,13 +58,13 @@
             }
           }
 
-          &.odp {
+          &.pptx, &.odp {
             &::before {
               content: '\e85f'
             }
           }
 
-          &.ods {
+          &.xlsx, &.ods {
             &::before {
               content: '\e881'
             }
