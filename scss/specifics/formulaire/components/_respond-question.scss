@@ -77,3 +77,22 @@
 
   }
 }
+
+.matrix-table {
+  margin-top: 3%;
+  table-layout: fixed;
+
+  thead tr {
+    background: none;
+    color: inherit;
+    border-bottom: 1px solid $accent;
+  }
+
+  thead th, tbody tr {
+    text-align: center;
+  }
+
+  th:first-child, td:first-child {
+    border-right: 1px solid $accent;
+  }
+}

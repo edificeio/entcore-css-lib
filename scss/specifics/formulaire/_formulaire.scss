@@ -12,17 +12,18 @@ $formulaire-grey-dark: #5b6472; // from body text color
 $formulaire-grey: #b1b6bf; // from disabled button
 $formulaire-grey-light: #c9ced5; // from medium-grey from moodle ?
 $formulaire-grey-very-light: #e9ebef; // from cancel button
+$formulaire-grey-lighter: #f0f2f4; // from background linear-gradient
 
 $formulaire-red: #b50000;
 $formulaire-green: green;
 
 @font-face {
-  font-family: 'material-icons';
-  src: url('/formulaire/public/font/material-design/fonts/materialdesignicons-webfont.eot');
-  src: url('/formulaire/public/font/material-design/fonts/materialdesignicons-webfont.eot') format('embedded-opentype'),
-  url('/formulaire/public/font/material-design/fonts/materialdesignicons-webfont.woff2') format('woff2'),
-  url('/formulaire/public/font/material-design/fonts/materialdesignicons-webfont.woff2') format('woff'),
-  url('/formulaire/public/font/material-design/fonts/materialdesignicons-webfont.ttf') format('truetype');
+  font-family: 'formulaire-mdi';
+  src: url('/formulaire/public/mdi/materialdesignicons-webfont.eot');
+  src: url('/formulaire/public/mdi/materialdesignicons-webfont.eot') format('embedded-opentype'),
+  url('/formulaire/public/mdi/materialdesignicons-webfont.woff2') format('woff2'),
+  url('/formulaire/public/mdi/materialdesignicons-webfont.woff2') format('woff'),
+  url('/formulaire/public/mdi/materialdesignicons-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -37,7 +38,7 @@ body.formulaire section.toggle-buttons {
 }
 
 body.formulaire section.main {
-  @import "./components/index";
+  @import "components/index";
 
   .margin-vertical-1 {
     margin: 1% 0;
@@ -150,6 +151,20 @@ body.formulaire section.main {
     margin-top: 0;
   }
 
+  .flex-spaced {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  switch.switchoff span {
+    background: $formulaire-grey-light !important;
+
+    &:before {
+      background: $formulaire-grey !important;
+    }
+  }
+
 
   // Forms-list
 
@@ -162,6 +177,10 @@ body.formulaire section.main {
   .table {
     table-layout: fixed;
     margin: 10px;
+
+    thead label input[type=checkbox]:checked+span::before, thead label input[type=checkbox]+span::before{
+      border-color: $formulaire-white;
+    }
   }
 
   .toaster-right { float: right; }
@@ -230,7 +249,7 @@ body.formulaire section.main {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    @media screen and (max-width:$formulaire-screen-mobile){margin-right: 40px;}
+    @media screen and(max-width:$formulaire-screen-mobile){margin-right: 40px;}
   }
 
   label.chip.checkbox.selected {
@@ -289,100 +308,14 @@ body.formulaire section.main {
     }
   }
 
-  // Prop-form
-
-  .prop-form {
+  .public_link {
     display: flex;
-    justify-content: center;
+    align-items: center;
 
-    .item {
-      width: 60%;
-      @media screen and (max-width: $formulaire-screen-laptop) { width: 100%; }
-
-      .domino {
-        .picture {
-          &:hover {
-            cursor: pointer;
-          }
-
-          image-select {
-            width: 100%;
-          }
-        }
-
-        .data {
-          padding: 10px 20px;
-
-          &-text {
-            .title {
-              font-weight: bold;
-              margin: 10px 0 5px 0;
-            }
-
-            .interval {
-              font-size: 12px;
-              @media screen and (max-width: $formulaire-screen-mobile) {
-                margin-left: 5px;
-              }
-
-              .opening { margin-right: 10px; }
-
-              input {
-                text-align: center;
-                @media screen and (max-width: $formulaire-screen-mobile) {
-                  font-size: 10px;
-                }
-              }
-            }
-
-            .multiple, .editable, .anonymous, .notified {
-              height: 24px;
-            }
-
-            .multiple, .editable, .anonymous, .notified, .collectData {
-              font-size: 12px;
-              display: flex;
-              align-items: baseline;
-              margin-bottom: 1%;
-
-              .text {
-                display: flex;
-                flex-direction: column;
-                margin-left: 5px;
-              }
-            }
-
-            .collectData {
-              &-inputs{
-                margin: 2% 2% 2% 25px;
-
-                .goal input {
-                  margin: 0;
-                  font-size: 12px;
-                }
-              }
-
-              &-description {
-                border: solid 1px $formulaire-grey;
-                padding: 2%;
-              }
-            }
-          }
-
-          &-bottom {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            @media screen and (max-width: $formulaire-screen-mobile) {
-              margin-top: 5%;
-            }
-
-            &.date {
-              justify-content: space-between;
-            }
-          }
-        }
-      }
+    .text {
+      font-size: 14px;
+      font-style: italic;
+      margin-right: 1%;
     }
   }
 
@@ -395,4 +328,8 @@ body.formulaire section.main {
   .notResponded {
     color: $formulaire-red;
   }
+}
+
+body.formulaire section.lightbox {
+  z-index: 10003;
 }
