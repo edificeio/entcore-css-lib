@@ -1,0 +1,49 @@
+  .card-list-item-options {
+    nav {
+      .nav, .sub-nav {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 2;
+        background-color: $magneto-white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+        &.reposition {
+          transform: translateX(-125%) translateY(0%);
+        }
+
+        a {
+          color: $magneto-black !important;
+          position: relative;
+          display: block;
+        }
+
+        .items {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: column;
+
+          .item {
+            display: flex;
+            gap: 5px;
+            color: $magneto-black !important;
+            padding: 10px 10px 5px 10px;
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+            &:hover {
+              background-origin: padding-box;
+              color: $magneto-white !important;
+              background-color: $magneto-orange;
+            }
+          }
+        }
+
+        .label-navbar {
+          font-size: 12px;
+          display: block;
+        }
+      }
+    }
+  }

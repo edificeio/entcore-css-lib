@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: 'magneto-mdi';
+  src: url('/magneto/public/mdi/materialdesignicons-webfont.eot');
+  src: url('/magneto/public/mdi/materialdesignicons-webfont.eot') format('embedded-opentype'),
+  url('/magneto/public/mdi/materialdesignicons-webfont.woff2') format('woff2'),
+  url('/magneto/public/mdi/materialdesignicons-webfont.woff2') format('woff'),
+  url('/magneto/public/mdi/materialdesignicons-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body.magneto,.sniplet.magneto {
+  @import "mixins";
+  @import "generics/index";
+  @import "components/index";
+
+  section.main {
+    top: 56px !important;
+
+    #directory + div.cell {
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.21);
+    }
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 40px;
+    color: $magneto-blue;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+}
+
+

@@ -1,0 +1,95 @@
+$magneto-yellow: #ffb600;
+$magneto-yellow-ochre: #ecbe30;
+$magneto-white: #ffffff;
+$magneto-lighter-grey: #ebebeb;
+$magneto-light-grey: #d6d6d6;
+$magneto-grey-blue: #f4fAfd;
+$magneto-white-blue: #e3f1f7;
+$magneto-black: #000000;
+$magneto-grey: #aaaaaa;
+$magneto-black-light: #555555;
+$magneto-dark-blue: #368daf;
+$magneto-blue: #67add1;
+$magneto-sky-blue: #2a9cc8;
+$magneto-light-sky-blue: #4bafd5;
+$magneto-light-blue: #78c5e2;
+$magneto-lighter-blue: #bde4f9;
+$magneto-orange: #ff8500;
+$magneto-red: #e61610;
+
+$magneto-font-secondary: 'Comfortaa', cursive;
+
+$magneto-screen-mobile: 768px;
+
+
+
+@mixin mobile {
+  @media (max-width: $magneto-screen-mobile) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin paddingX($size) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
+@mixin paddingY($size) {
+  padding-bottom: $size;
+  padding-top: $size;
+}
+
+@mixin marginX($size) {
+  margin-left: $size;
+  margin-right: $size;
+}
+
+@mixin marginY($size) {
+  margin-bottom: $size;
+  margin-top: $size;
+}
+
+@mixin lightboxWidth($width) {
+  section.lightbox {
+    .content {
+      width: $width !important;
+    }
+  }
+}
+
+@mixin noTextOverflow($nbLines) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $nbLines !important;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /*! autoprefixer: on */
+}
+
+@mixin navbarBorderBottom($size) {
+  padding-top: $size;
+  border-bottom: solid $size;
+  box-sizing: border-box;
+}
+
+/* ----------------------------
+    Spacing
+---------------------------- */
+$spacing-XXL: 68px;
+$spacing-XML: 60px;
+$spacing-XM: 48px;
+$spacing-XL: 42px;
+$spacing-L: 24px;
+$spacing-M: 16px;
+$spacing-S: 12px;
+$spacing-XLXS: 10px;
+$spacing-LXS: 8px;
+$spacing-6: 6px;
+$spacing-XXS: 4px;

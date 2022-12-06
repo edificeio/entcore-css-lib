@@ -1,0 +1,155 @@
+.boards-container {
+
+  &-header {
+    background: $magneto-white;
+    padding: $spacing-L;
+    h1 {
+      font-family: $magneto-font-secondary;
+      color: $magneto-yellow-ochre;
+      margin-bottom: 0;
+
+      .application-logo {
+        width: 36px;
+        margin-right: $spacing-XLXS;
+      }
+    }
+
+
+  }
+
+  &-header-mobile {
+    background: $magneto-white;
+    display: flex;
+    align-items: center;
+    h1 {
+      font-family: $magneto-font-secondary;
+      color: $magneto-yellow-ochre;
+      margin-bottom: 0;
+      font-size:$spacing-M;
+      display: flex;
+      justify-content: center;
+    }
+
+    i {
+      margin: $spacing-LXS;
+      font-size: 24px;
+    }
+
+    button {
+      margin: $spacing-LXS;
+    }
+  }
+
+  .nine {
+    @media screen and (max-width: $magneto-screen-mobile) {
+      width: 100% !important;
+    }
+  }
+
+  &-body {
+    display: flex;
+    border-top: solid 1px $magneto-white-blue;
+    border-bottom: solid 1px $magneto-white-blue;
+    background: $magneto-white;
+
+    &-nav {
+      min-height: 550px;
+      border-right: solid 1px $magneto-white-blue;
+    }
+
+    &-search {
+      border-bottom: solid 1px $magneto-white-blue;
+      display: block;
+      padding: $spacing-L;
+    }
+
+    .list-header {
+
+      padding: 20px 20px 0 20px;
+
+      .folder-name {
+        font-size: 20px;
+      }
+    }
+
+    &-folder-button {
+      width: 66%;
+      margin: 14px auto auto;
+      display: flex;
+
+      a {
+        border: solid $magneto-blue 1px;
+        border-radius: 5px;
+        background: none !important;
+        padding: $spacing-LXS $spacing-L;
+      }
+    }
+
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 26%;
+      }
+
+      i18n {
+        padding: $spacing-L;
+      }
+
+    }
+
+  }
+
+ .side-nav-mobile {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #F0F0F0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    top: 52px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.26);
+    border-radius: 3px;
+
+    .vertical-spacing {
+      display: flex;
+      height: 24px;
+
+      .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        cursor: pointer;
+      }
+    }
+
+    .folder-tree-nav-item {
+      &-name {
+        i {
+          margin-left: 5px !important;
+        }
+      }
+    }
+
+    &-folder-button {
+      justify-content: center;
+      width: 66%;
+      margin: 14px auto auto;
+      display: flex;
+
+      a {
+        border: solid $magneto-blue 1px;
+        border-radius: 5px;
+        background: none !important;
+        padding: $spacing-LXS $spacing-L;
+      }
+    }
+
+  }
+}

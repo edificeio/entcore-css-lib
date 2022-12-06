@@ -1,0 +1,43 @@
+.board-read-container {
+  display: flex;
+  background: $magneto-white;
+  min-height: calc(100vh - 124px);
+  width: 70%;
+  @include mobile {
+    width: 100% ! important;
+  }
+
+  margin-left: auto;
+  margin-right: auto;
+
+
+  .return-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+  }
+
+  .nav-right {
+    font-size: 70px;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+    color: black;
+  }
+
+  .nav-left {
+    font-size: 70px;
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    z-index: 1;
+    color: black;
+  }
+
+  .button-icon {
+    font-size: 24px;
+  }
+
+}

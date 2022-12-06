@@ -1,0 +1,37 @@
+.card-navbar {
+  height: 56px;
+  background: $magneto-white;
+
+  @include desktop {
+    text-transform: uppercase;
+  }
+
+  &-item {
+    height: 100%;
+    align-items: center;
+
+
+    &.selected {
+      @include desktop {
+        color: $magneto-dark-blue;
+        @include navbarBorderBottom(3px);
+      }
+
+      @include mobile {
+        background: $magneto-blue;
+        color: $magneto-white;
+        border-radius: 28px;
+        text-align: center;
+      }
+    }
+
+    &:hover {
+      @include desktop {
+        color: $magneto-blue;
+        @include navbarBorderBottom(3px);
+      }
+    }
+
+  }
+}
+
