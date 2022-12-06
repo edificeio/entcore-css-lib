@@ -76,6 +76,10 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        .cell{
+          width: max-content;
+        }
       }
 
       &-right {
