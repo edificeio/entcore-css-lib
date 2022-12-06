@@ -1,0 +1,24 @@
+&.nextcloud-content {
+  .clip {
+    img {
+      object-fit: cover;
+    }
+  }
+  .emptyscreen {
+    &-nextcloud {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      height: inherit;
+      align-items: center;
+      margin-top: 25px;
+    }
+  }
+
+  .nextcloud-article {
+    min-height: 50vh;
+    height: auto;
+  }
+}
