@@ -1,0 +1,31 @@
+.board-list-folder {
+  height: 60px;
+  width: 335px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  border: solid $magneto-lighter-grey 1px;
+  box-shadow: none;
+
+  &.active {
+    border: solid $magneto-light-blue 3px !important;
+    background: $magneto-lighter-blue;
+    margin: -3px;
+  }
+
+  &-infos {
+
+    i.magneto-folder {
+      margin: 14px;
+      font-size: 50px;
+      color: $magneto-red;
+    }
+
+    &-title {
+      @include noTextOverflow(1);
+      align-self: center;
+      font-size: 16px;
+    }
+  }
+
+}

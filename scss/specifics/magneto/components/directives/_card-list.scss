@@ -1,0 +1,16 @@
+.card-list {
+  background: $magneto-lighter-grey;
+  gap: 16px;
+  justify-content: center;
+  padding-top: 15px;
+
+  @include mobile {
+    padding-top: 60px;
+  }
+
+  @include paddingX(15px);
+  &-scrollable {
+    overflow-y: scroll;
+    height: 55vh;
+  }
+}

@@ -1,0 +1,106 @@
+.board-container {
+
+  &-header {
+    background: $magneto-white;
+    padding: $spacing-M;
+    padding-left: $spacing-XM;
+    z-index: 2;
+    @include noTextOverflow(1);
+    h1 {
+      font-family: $magneto-font-secondary;
+      color: $magneto-yellow-ochre;
+      margin-bottom: 0;
+
+      .application-logo {
+        width: 36px;
+        margin-right: $spacing-XLXS;
+      }
+    }
+
+    &-date {
+      margin-right: $spacing-XM;
+      margin-top: 5px;
+    }
+
+    &-description {
+      height: 64px;
+      overflow-y: scroll;
+    }
+  }
+
+  &-header-mobile {
+    background: $magneto-white;
+    padding: $spacing-LXS;
+    z-index: 2;
+    top: -12px;
+    @include noTextOverflow(1);
+
+    &-title {
+      width: 70%;
+    }
+
+    h1 {
+      font-size: $spacing-M;
+      font-family: $magneto-font-secondary;
+      color: $magneto-yellow-ochre;
+      margin-bottom: 0;
+      @include noTextOverflow(1);
+
+      .application-logo {
+        width: 24px;
+        margin-right: $spacing-XLXS;
+      }
+    }
+
+    &-description {
+      height: 64px;
+      overflow-y: scroll;
+    }
+
+    .create-button {
+      float: right;
+    }
+  }
+
+  &-body {
+    display: flex;
+    border-top: solid 1px $magneto-white-blue;
+    border-bottom: solid 1px $magneto-white-blue;
+    background: $magneto-lighter-grey;
+    position: absolute;
+
+    @include mobile {
+      top: 65px;
+    }
+
+    &-nav {
+      width: 60px;
+    }
+
+    &-list {
+      min-height: 650px;
+      width: 100%;
+
+      .empty-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12%;
+
+        i18n {
+          padding: $spacing-L;
+        }
+
+        i.magneto-arrow-left {
+          font-size: 100px;
+          padding: $spacing-L;
+        }
+
+      }
+    }
+
+    embedder {
+      z-index: 99999;
+    }
+  }
+}

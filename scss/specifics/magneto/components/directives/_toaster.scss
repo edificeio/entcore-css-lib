@@ -1,0 +1,8 @@
+.magneto-toaster {
+  button {
+    background: none;
+    &:hover {
+      background: $magneto-white;
+    }
+  }
+}

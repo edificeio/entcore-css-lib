@@ -1,0 +1,101 @@
+.board-nav {
+  nav {
+    .nav, .sub-nav {
+      position: fixed;
+      left: 0;
+      top: 24px;
+      height: calc(100% - 24px);
+      background-color: $magneto-white;
+      width: 60px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+
+      a {
+        color: $magneto-black !important;
+        position: relative;
+        display: block;
+        margin: 3px 0;
+      }
+
+      i {
+        &::after {
+          content: " ";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          display: block;
+          background-color: transparent;
+          width: 5px;
+        }
+      }
+
+      .items {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 200px;
+        height: 72%;
+
+        .item {
+          display: block;
+          color: $magneto-black !important;
+          padding-top: 5px;
+          margin: 3px 0;
+          text-align: center;
+          font-size: 24px;
+          @media screen and (max-width: $magneto-screen-mobile) {
+            height: 40px !important;
+            font-size: 20px;
+          }
+          position: relative;
+          width: 100%;
+          box-sizing: border-box;
+
+          &:hover {
+            color: $magneto-yellow-ochre !important;
+          }
+
+          i.magneto-settings {
+            font-size: 26px;
+            @media screen and (max-width: $magneto-screen-mobile) {
+              font-size: 16px !important;
+            }
+          }
+        }
+
+        &-divider {
+          border-top: 1px $magneto-black;
+          border-top-style: ridge;
+          width: 56px;
+          padding: 0;
+        }
+      }
+
+      .label-navbar {
+        font-size: 12px;
+        @media screen and (max-width: $magneto-screen-mobile) {
+          font-size: 10px !important;
+        }
+        padding: 5px 0;
+        display: block;
+        line-height: 16px;
+      }
+    }
+
+    @include mobile {
+      .nav {
+        overflow-y: scroll;
+      }
+      ::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+      }
+    }
+  }
+}
+
