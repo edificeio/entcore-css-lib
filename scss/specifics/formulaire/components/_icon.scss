@@ -89,128 +89,133 @@ i {
   }
 
   &.i-bell::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F09C";
   }
 
   &.i-cancel::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F156";
   }
 
   &.i-chevron-down::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F140";
   }
 
   &.i-chevron-left::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F141";
   }
 
   &.i-chevron-right::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F142";
   }
 
   &.i-chevron-up::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F143";
   }
 
   &.i-clock::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F150";
     color: $formulaire-grey-dark;
   }
 
   &.i-delete::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F1C0";
   }
 
   &.i-download::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F1DA";
     color: $formulaire-grey-dark;
   }
 
   &.i-drag::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F1D8";
     color: $formulaire-grey;
   }
 
   &.i-duplicate::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F18F";
   }
 
   &.i-validate::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F12C";
   }
 
   &.i-plus-circle::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F417";
   }
 
   &.i-send::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F0108";
     color: $formulaire-grey-dark;
   }
 
   &.i-share::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F497";
     color: $formulaire-grey-dark;
   }
 
   &.i-view-cards::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\FE4D";
     color: $formulaire-grey-light;
   }
 
   &.i-view-tab::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F572";
     color: $formulaire-grey-light;
   }
 
   &.i-undo::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F54C";
   }
 
   &.i-folder::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F24B";
     color: $formulaire-blue;
   }
 
   &.i-eye::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F208";
     color: $formulaire-blue;
   }
 
   &.i-eye:hover::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F208";
     color: $formulaire-orange;
   }
 
   &.i-info::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F2FD";
     color: $formulaire-blue;
   }
 
   &.i-edit::before {
-    font-family: 'material-icons';
+    font-family: 'formulaire-mdi';
     content: "\F3EB";
+  }
+
+  &.i-reload::before {
+    font-family: 'formulaire-mdi';
+    content: "\F453";
   }
 }

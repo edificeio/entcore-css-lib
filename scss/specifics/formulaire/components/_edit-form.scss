@@ -4,6 +4,21 @@
   @media screen and (max-width: $formulaire-screen-mobile) {
     padding: 8px 8px 8px;
   }
+
+  margin-top: 10px;
+}
+
+.header {
+  &-fixed {
+    position: sticky;
+    background: linear-gradient(to bottom right, $formulaire-grey-lighter, $formulaire-grey-very-light) fixed;
+    top: 64px;
+    z-index: 10003;
+  }
+
+  &-title {
+    margin-top: 10px;
+  }
 }
 
 .edit-form {
@@ -11,12 +26,9 @@
   flex-direction: column;
   align-content: space-between;
 
-  [sortable-element] {
-    cursor: default;
-
-    :not(.disabled) .grab {
-      cursor: grab;
-    }
+  .question-item .domino:not(.disabled) > .grab,
+  .section-top:not(.disabled) > .grab {
+    cursor: grab;
   }
 
   .elements {
@@ -27,6 +39,7 @@
 
     .question-item, .section-item {
       margin: auto;
+      cursor: default;
 
       .domino, .question-item .domino {
         display: flex;
@@ -76,6 +89,10 @@
               margin-top: 7px;
             }
 
+            .flex-spaced {
+              flex-wrap: wrap-reverse;
+            }
+
             .empty {
               font-weight: normal;
               font-style: italic;
@@ -86,12 +103,26 @@
           .question-type {
             font-size: 12px;
 
+            h4 {
+              font-size: 16px;
+            }
+
             .choice {
               display: flex;
               align-items: center;
 
               select {
                 margin-left: 6%;
+              }
+
+              .width95 {
+                @media screen and (min-width: $formulaire-screen-tablet) {
+                  width: 95%;
+                }
+
+                &-always {
+                  width: 95%;
+                }
               }
 
               i.i-cancel {
@@ -110,6 +141,7 @@
           .question-bottom, .section-bottom {
             display: flex;
             justify-content: flex-end;
+            margin-top: 1%;
 
             .mandatory, .conditional {
               margin-right: 2%;
@@ -117,6 +149,11 @@
           }
         }
       }
+    }
+
+    // This one is for DragAndDrop ghost preview
+    .childSection.sortable-ghost {
+      width: 75% !important;
     }
 
     .section-item {
@@ -151,14 +188,13 @@
             margin-left: 5%;
           }
 
-          .flex-spaced {
+          .icons-section{
+            margin-left: 2%;
             display: flex;
-            justify-content: space-between;
-            align-items: baseline;
           }
         }
 
-        i::before, h4, input, input::placeholder {
+        i:not(.disabled)::before, h4, input, input::placeholder {
           color: white !important;
         }
       }
@@ -179,6 +215,16 @@
           display: flex;
           flex-direction: column;
           padding: 0 5%;
+          min-height: 50px;
+
+          // This one is for DragAndDrop ghost preview
+          .sortable-ghost {
+            width: 100% !important;
+
+            .question-item {
+              width: 100% !important;
+            }
+          }
         }
 
         .addQuestion {
@@ -207,8 +253,11 @@
     height: auto;
     padding: 0;
 
-    .hidden {
-      visibility: hidden;
+    // This one is for DragAndDrop ghost preview in pop-up
+    ul {
+      .sortable-ghost {
+        margin-left: 5%;
+      }
     }
 
     .row-shadow-effect {
@@ -221,6 +270,19 @@
       cursor: grab;
       margin: 1%;
       width: auto;
+
+      &.sectionChild {
+        margin-left: 5%;
+      }
+    }
+
+    .section-orga .row-shadow-effect {
+      background-color: $formulaire-blue;
+      color: white;
+
+      .top .dots i::before {
+        color: white !important;
+      }
     }
 
     .top {
@@ -250,11 +312,26 @@
         text-overflow: ellipsis;
         white-space: nowrap;
       }
-
-      .container-arrow {
-        display: flex;
-        justify-content: space-around;
-      }
     }
   }
+}
+
+
+.hidden {
+  visibility: hidden;
+}
+
+.container-arrow {
+  display: flex;
+  justify-content: space-around;
+}
+
+.preview-recap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+  padding: 2% 3% 2% 3%;
+  background: $formulaire-white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
