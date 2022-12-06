@@ -29,3 +29,21 @@ lightbox.nopadding {
     }
   }
 }
+
+.warning {
+  //color: #5b6472;
+  text-align: left;
+  border-radius: 0;
+  //background: #e9ebef;
+  border-left: 10px solid #4bafd5;
+  margin: 5px 0 15px;
+  background: linear-gradient(to right, #ffe7cc, #ffdab3);
+  border: 1px solid #ffce99;
+  color: #995000;
+
+  font-size: 14px !important;
+  //box-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
+
+  padding: 15px 30px 15px 15px;
+  max-width: 100%;
+}
