@@ -1,4 +1,8 @@
 .editEvent {
+  &-time {
+    margin-bottom: 15px !important;
+  }
+
   &-itemColumn {
     width: max-content;
   }
