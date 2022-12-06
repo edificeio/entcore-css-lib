@@ -1,0 +1,27 @@
+.minetestFollow {
+
+  .minetest-lightbox {
+    &-content {
+      &-title {
+        margin-bottom: 20px;
+      }
+    }
+
+    .custom-button {
+      background: $minetest-orange;
+      color: $minetest-white;
+      font-size: 14px;
+    }
+
+    .custom-button:hover {
+      background-color: $minetest-dark-orange;
+      box-shadow: none;
+      color: $minetest-white;
+      font-size: 14px;
+    }
+
+    .one-small {
+      width: 1%;
+    }
+  }
+}
