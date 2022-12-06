@@ -1,0 +1,58 @@
+.folder-tree-nav {
+  height: auto;
+  padding: 0;
+  margin-right: 0;
+
+  ul {
+    border-left: none !important;
+  }
+
+  &-item {
+    &-name {
+
+      display: flex;
+
+      &.selected {
+        background-color: $magneto-lighter-blue;
+        color: $magneto-sky-blue;
+
+        a {
+          color: $magneto-sky-blue;
+        }
+      }
+
+      i {
+        align-self: center;
+        margin-left: 24px;
+
+        @media screen and (max-width: $magneto-screen-mobile) {
+          margin-left: 0 !important;
+        }
+
+      }
+
+      i.magneto-chevron-down + i {
+        margin-left: 0 !important;
+      }
+
+      i.magneto-chevron-right + i {
+        margin-left: 0 !important;
+      }
+
+      i.magneto-chevron-right, i.magneto-chevron-down {
+        font-size: 24px;
+        margin-left: 0 !important;
+      }
+
+      a {
+        color: $dark-grey;
+        font-weight: bold;
+        font-size: 14px;
+        padding-left: 12px !important;
+      }
+
+
+    }
+  }
+
+}

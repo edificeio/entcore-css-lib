@@ -1,0 +1,72 @@
+.board-list-item {
+
+  height: 250px;
+  width: 240px;
+  border-radius: 10px;
+  border: solid $magneto-lighter-grey 1px;
+  box-shadow: none;
+
+  &.active {
+    border: solid $magneto-light-blue 3px !important;
+    background: $magneto-lighter-blue;
+    border-radius: 13px;
+    margin: -3px;
+
+    &-image {
+      background: $magneto-lighter-blue;
+    }
+  }
+
+  @include mobile {
+    width: 170px;
+    height: 183px;
+  }
+
+  &-image {
+    background: $magneto-grey-blue;
+    border-radius: 10px 10px 0 0;
+    flex: 1;
+    height: 60%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      margin: 5px;
+    }
+  }
+
+  &-infos {
+    height: 40%;
+    margin: 4%;
+    flex-direction: column;
+
+    &-title {
+      font-size: 16px;
+      font-weight: bold;
+      @include noTextOverflow(1);
+    }
+
+    &-nb-cards {
+      i.magneto-magnet::before {
+        color: $magneto-yellow;
+        font-size: 16px;
+      }
+
+      font-size: 13px;
+    }
+
+    &-date-icons {
+
+      display: flex;
+      justify-content: space-between;
+
+      i::before {
+        font-size: 16px;
+      }
+
+      font-size: 13px;
+    }
+  }
+
+}

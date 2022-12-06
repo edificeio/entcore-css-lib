@@ -1,0 +1,12 @@
+button, a.button {
+  color: $magneto-white;
+
+  &:disabled {
+    background: $magneto-black-light;
+  }
+
+  &.cancel {
+    background: $magneto-grey;
+    color: $magneto-white;
+  }
+}

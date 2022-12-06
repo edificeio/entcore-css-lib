@@ -1,0 +1,11 @@
+.board-date {
+  background: $magneto-lighter-blue;
+  padding: $spacing-6;
+  font-size: 12px;
+  border-radius: 6px;
+  color: $magneto-sky-blue;
+
+  i.magneto-check-circle {
+    color: $magneto-sky-blue;
+  }
+}

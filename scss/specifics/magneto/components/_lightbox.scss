@@ -1,0 +1,21 @@
+.lightbox {
+  z-index: 100030;
+  height: auto;
+
+  .content {
+    padding-top: 0;
+    overflow-y: scroll !important;
+    @include mobile {
+      width: 80% !important;
+    }
+  }
+
+  section.head {
+    padding: 1px 15px !important;
+    border-radius: 5px 5px 0 0;
+  }
+
+  section.body {
+    padding: 8px 20px;
+  }
+}
