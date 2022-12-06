@@ -181,6 +181,10 @@ calendar {
     .calendar-current-week {
         max-height: unset;
     }
+
+    .day-number {
+        pointer-events: none !important;
+    }
 }
 
 h1 a {
