@@ -95,9 +95,13 @@
         margin-left: 25px;
       }
 
-      &-camembert {
+      &-camembert, &-histogram {
         display: flex;
         justify-content: center;
+      }
+
+      .apexcharts-toolbar {
+        display: none;
       }
     }
 

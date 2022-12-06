@@ -1,0 +1,96 @@
+// Prop-form
+
+.prop-form {
+  display: flex;
+  justify-content: center;
+
+  .item {
+    width: 60%;
+    @media screen and (max-width: $formulaire-screen-laptop) { width: 100%; }
+
+    .domino {
+      .picture {
+        &:hover {
+          cursor: pointer;
+        }
+
+        image-select {
+          width: 100%;
+        }
+      }
+
+      .data {
+        padding: 10px 20px;
+
+        &-text {
+          .title {
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+          }
+
+          .interval {
+            font-size: 12px;
+            @media screen and (max-width: $formulaire-screen-mobile) {
+              margin-left: 5px;
+            }
+
+            .opening { margin-right: 10px; }
+
+            input {
+              text-align: center;
+              @media screen and (max-width: $formulaire-screen-mobile) {
+                font-size: 10px;
+              }
+            }
+          }
+
+          .public, .multiple, .editable, .anonymous, .notified, .collectData {
+            font-size: 12px;
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 1%;
+            min-height: 24px;
+
+            .text {
+              display: flex;
+              flex-direction: column;
+              margin-left: 5px;
+            }
+          }
+
+          .subtext {
+            width: 100%;
+
+            .infos {
+              margin: 2% 2% 2% calc(25px + 2%);
+              width: 100%;
+
+              .goal input {
+                margin: 0;
+                font-size: 12px;
+              }
+            }
+
+            .description {
+              border: solid 1px $formulaire-grey;
+              padding: 2%;
+            }
+          }
+        }
+
+        &-bottom {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          @media screen and (max-width: $formulaire-screen-mobile) {
+            margin-top: 5%;
+          }
+
+          &.date {
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}
