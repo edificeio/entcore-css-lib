@@ -51,7 +51,25 @@ body.mediacentre-v2 {
     cursor: pointer;
   }
 
+  .external {
+    .external-flex {
+      .external-flex-card {
+        grid-column-gap: 25px;
+        grid-row-gap: 30px;
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+    }
+  }
+
+  .external-flex {
+    .cell .add-to-favorite, .cell .remove-to-favorite {
+      width: 28px;
+    }
+  }
+
   multi-combo {
+    padding-right: 10px;
     display: inline-block;
     min-width: 250px;
 
@@ -419,6 +437,10 @@ body.mediacentre-v2 {
     display: inline-block;
     font-size: 12px;
     font-weight: bold
+  }
+  div.select-blocks>div:hover::after {
+    //align-content: center;
+    top:4.5px;
   }
   div.select-blocks-cross>div.partial {
     background-color: #e9ebef
