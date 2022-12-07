@@ -1,13 +1,44 @@
+@media screen and (min-width: $wide-screen) {
+    .profil-flex {
+        .email-ellipsis {
+            @include cell-ellipsis;
+            max-width: 410px;
+        }
+    }
+}
+
+@media screen and (min-width: $fat-tablette) and (max-width: $wide-screen) {
+    .profil-flex {
+        .email-ellipsis {
+            @include cell-ellipsis;
+            max-width: 310px;
+        }
+    }
+}
+
+@media screen and (min-width: $tablette) and (max-width: $fat-tablette) {
+    .profil-flex {
+        .email-ellipsis {
+            @include cell-ellipsis;
+            max-width: 180px;
+        }
+    }
+}
+
+@media screen and (min-width: $fat-mobile) and (max-width: $tablette) {
+    .profil-flex {
+        .email-ellipsis {
+            @include cell-ellipsis;
+            max-width: 250px;
+        }
+    }
+}
 
 @media screen and (max-width: $fat-mobile) {
     .profil-flex {
-        .flex.seven {
-            flex-wrap: wrap;
-        }
-
         .email-ellipsis {
             @include cell-ellipsis;
-            max-width: 200px;
+            max-width: 150px;
         }
     }
 }
@@ -27,6 +58,10 @@
     justify-content: space-between;
     align-items: center;
 
+    .flex-flow {
+        flex-flow: wrap;
+    }
+
     em {
         color: #8c939e;
     }
@@ -38,7 +73,7 @@
 
     .icon-verified {
         margin-left: 10px;
-        margin-right: -10px;
+        margin-right: 10px;
     }
 
     input[type=text]:placeholder-shown {
