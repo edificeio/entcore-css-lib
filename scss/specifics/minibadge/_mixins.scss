@@ -1,0 +1,84 @@
+$minibadge-blue-dark: #368daf;
+$minibadge-blue: #67add1;
+$minibadge-blue-light: #eff8fc;
+$minibadge-green: #629c44;
+$minibadge-grey-dark: #5b6472;
+$minibadge-grey: #c0c0c0;
+$minibadge-grey-light: #d6d6d6;
+$minibadge-grey-lighter: #ebebeb;
+$minibadge-orange: #ffa834;
+$minibadge-red: #E13A3A;
+$minibadge-white: #fff;
+$minibadge-small-icon: 16px;
+
+$minibadge-shadow: rgb(214, 214, 214);
+$minibadge-shadow-light: transparentize($minibadge-shadow, 0.3);
+$minibadge-shadow-lighter: transparentize($minibadge-shadow, 0.7);
+
+$minibadge-font-secondary: 'Comfortaa', cursive;
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 769px) and (max-width:992px) {
+    @content;
+  }
+}
+
+@mixin paddingX($size) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
+@mixin paddingY($size) {
+  padding-bottom: $size;
+  padding-top: $size;
+}
+
+@mixin paddingXY($sizeX, $sizeY) {
+  padding: $sizeY $sizeX;
+}
+
+@mixin marginX($size) {
+  margin-left: $size;
+  margin-right: $size;
+}
+
+@mixin marginY($size) {
+  margin-bottom: $size;
+  margin-top: $size;
+}
+
+@mixin navbarBorderBottom($size) {
+  padding-top: $size;
+  border-bottom: solid $size;
+  box-sizing: border-box;
+}
+
+@mixin icon-small() {
+  width: $minibadge-small-icon;
+}
+
+.minibadge-mobile-padding-x {
+  @include mobile {
+    @include paddingX(10px);
+  }
+}
+
+.minibadge-margin-top {
+  margin-top: 10px;
+}
+
+.minibadge-delete-button {
+  background-color: $minibadge-grey-light;
+}

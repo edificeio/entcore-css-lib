@@ -1,0 +1,31 @@
+label.checkbox {
+  input[type=checkbox] {
+    + span:before {
+      @include fonticon();
+      border: 2px solid $minibadge-blue-dark;
+      border-radius: 3px;
+      color: $minibadge-white;
+      height: 20px;
+      width: 20px;
+      margin-top: 0;
+      font-size: 12px;
+      text-align: center;
+      line-height: 16px;
+    }
+
+    &:checked + span::before {
+      content: "\e871";
+      transform: rotate(0deg);
+      border-color: $minibadge-blue-dark;
+      background-color: $minibadge-blue-dark;
+    }
+  }
+
+  &.half input[type="checkbox"] + span:before {
+    font-family: 'material-icons';
+    content: "\F374";
+    transform: rotate(0deg);
+    border-color: $minibadge-blue-dark;
+    background-color: $minibadge-blue-dark;
+  }
+}

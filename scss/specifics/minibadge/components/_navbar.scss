@@ -1,0 +1,41 @@
+.minibadge-navbar {
+  height: 56px;
+  background: $minibadge-white;
+
+  @include desktop {
+    text-transform: uppercase;
+  }
+
+  @include mobile {
+    background: $minibadge-blue-dark;
+    color: $minibadge-white;
+  }
+
+  &-item {
+    height: 100%;
+    align-items: center;
+
+
+    &.minibadge-selected {
+      @include desktop {
+        color: $minibadge-blue-dark;
+        @include navbarBorderBottom(3px);
+      }
+
+      @include mobile {
+        background: $minibadge-blue;
+        color: $minibadge-blue-light;
+        border-radius: 28px;
+      }
+    }
+
+    &:hover {
+      @include desktop {
+        color: $minibadge-blue;
+        @include navbarBorderBottom(3px);
+      }
+    }
+
+  }
+}
+

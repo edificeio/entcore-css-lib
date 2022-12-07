@@ -1,0 +1,156 @@
+.minibadge-badge-cards {
+  gap: 15px;
+}
+
+minibadge-card-type {
+  &.minibadge-mobile-full {
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .minibadge-card {
+    &-title {
+      flex: none;
+    }
+
+    &-body {
+      align-items: revert;
+
+      &-icon {
+        padding: 10px;
+        font-size: 24px;
+        line-height: 24px;
+        left: 0;
+
+        @include mobile {
+          padding: 5px;
+        }
+
+        &.minibadge-icon-right {
+          right: 0;
+          left: revert;
+          color: $minibadge-blue-dark;
+        }
+      }
+    }
+
+    &-badge-detail {
+      @include mobile {
+        width: 100%;
+        flex-direction: row;
+        height: 112px;
+      }
+
+      .minibadge-card-body {
+        @include mobile {
+          flex: revert;
+          width: 180px;
+        }
+      }
+
+      .minibadge-card-footer {
+        @include paddingX(10px);
+        background: $minibadge-white;
+        height: 80px;
+
+        @include mobile {
+          height: 100%;
+          line-height: 30px;
+          flex: 1;
+          border-radius: 0 10px 10px 0;
+        }
+
+        .minibadge-more-info {
+          width: 100%;
+        }
+
+        .minibadge-actions {
+          align-self: flex-end;
+          margin-left: auto;
+          position: relative;
+
+          .dots-vertical {
+            font-size: 1.3rem;
+
+            &:hover {
+              color: $minibadge-orange;
+            }
+          }
+
+          .minibadge-action {
+            &-options {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              top: 0;
+              left: 100%;
+              background: $minibadge-white;
+              border-radius: 2px;
+              box-shadow: 4px 8px 10px $minibadge-grey-light;
+              z-index: 1;
+
+              &.minibadge-reposition {
+                left: 0;
+                transform: translateX(-100%);
+              }
+            }
+
+            &-option {
+              @include paddingX(28px);
+              @include paddingY(6px);
+              white-space: nowrap;
+              justify-content: flex-start;
+
+              & .lock {
+                @include icon-small();
+              }
+
+              &:first-child {
+                border-radius: 2px 2px 0 0;
+              }
+
+              &:last-child {
+                border-radius: 0 0 2px 2px;
+              }
+
+              &:hover {
+                background-color: $minibadge-orange;
+                color: $minibadge-white;
+              }
+            }
+          }
+        }
+
+        .star {
+          color: $minibadge-orange;
+        }
+
+        .minibadge-type-footer {
+          height: 100%;
+        }
+      }
+    }
+
+    &-award-badge {
+      .minibadge-card-footer {
+        height: 48px;
+
+        @include mobile {
+          height: 38px;
+        }
+
+        background: $minibadge-blue;
+        color: $minibadge-white;
+
+        &:hover {
+          background: $minibadge-orange;
+        }
+
+        .minibadge-type-footer {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

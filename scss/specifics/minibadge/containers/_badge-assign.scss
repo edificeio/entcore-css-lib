@@ -1,0 +1,103 @@
+.minibadge-assign {
+
+  section.lightbox {
+    @include mobile {
+      position: absolute;
+    }
+  }
+
+  .background::after {
+    @include mobile {
+      background: none;
+    }
+  }
+
+  .background::before {
+    @include mobile {
+      box-shadow: 0 2px 5px $shadow;
+      height: 50px;
+    }
+  }
+
+  .content {
+    width: 900px;
+    margin-top: 10em;
+
+    @include mobile {
+      position: fixed;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &-title {
+    &:hover {
+      color: $minibadge-blue;
+    }
+
+    &:active {
+      color: $minibadge-blue-dark;
+    }
+  }
+
+  &-footer {
+    margin-top: 10px;
+    @include mobile {
+      justify-content: center;
+    }
+
+    &-warning {
+      color: $minibadge-red;
+    }
+
+    &-buttons {
+      margin-left: auto;
+
+      button:not(:last-child) {
+        margin-right: 20px;
+        min-width: 148px;
+      }
+    }
+  }
+
+  &-content {
+    flex-direction: row-reverse;
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &-card {
+      display: flex;
+      justify-content: end;
+      @include marginX(2em);
+      margin-bottom: 2em;
+      @include mobile {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+
+    &-search {
+      @include mobile {
+        justify-content: center;
+        align-items: center;
+      }
+      margin-left: 1em;
+
+      .search-user {
+        margin-bottom: 1em;
+        width: 100%;
+      }
+    }
+  }
+
+  .minibadge-card {
+    border: solid $minibadge-shadow-lighter 1px;
+    @include mobile {
+      width: 100%;
+      align-self: center;
+    }
+  }
+}
+

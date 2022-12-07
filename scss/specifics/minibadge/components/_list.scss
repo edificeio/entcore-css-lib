@@ -1,0 +1,19 @@
+.minibadge-list {
+  flex: 1;
+  height: auto;
+  padding-inline-start: 20px;
+  margin-block-start: 0;
+  list-style-type: none;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    &-distinction {
+      color: $minibadge-grey;
+    }
+
+  }
+}
+
