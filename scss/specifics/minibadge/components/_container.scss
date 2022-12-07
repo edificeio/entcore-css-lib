@@ -1,0 +1,37 @@
+.minibadge-container {
+  &-component, &-card {
+    flex: 1;
+    row-gap: 8px;
+    background: $minibadge-white;
+    @include paddingXY(8px, 16px);
+
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &-component {
+    margin-top: 30px;
+
+    h3 {
+      display: flex;
+
+      i.play {
+        display: flex;
+        transform: rotate(0deg);
+        transition: transform 0.2s linear;
+
+        &.opened {
+          transform: rotate(90deg);
+          transition: transform 0.2s linear;
+        }
+      }
+    }
+  }
+
+  &-card {
+    border-radius: 5px;
+    box-shadow: 0 5px 5px $minibadge-shadow;
+  }
+}
+

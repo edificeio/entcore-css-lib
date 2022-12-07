@@ -1,0 +1,132 @@
+.minibadge-statistics {
+  .minibadge-container-component {
+    h3 > .minibadge-title {
+      font-weight: bold;
+    }
+
+    &-body > container-body {
+      gap: 50px
+    }
+  }
+
+  &-card {
+    display: flex;
+
+    h3 > .minibadge-title {
+      font-weight: bold;
+      font-size: 25px;
+    }
+  }
+
+  &-count-allowed {
+    flex: 4;
+    display: flex;
+
+    .minibadge-container-card {
+      flex: 1;
+      justify-content: center;
+
+      .minibadge-title {
+        font-size: 30px;
+
+        .check-decagram {
+          color: $minibadge-orange;
+        }
+      }
+
+      .minibadge-container-card-body {
+        display: none;
+      }
+    }
+
+  }
+
+  &-top-structures {
+    flex: 5;
+
+    .minibadge-container-card-title {
+      display: none;
+    }
+
+    .minibadge-card {
+      flex: 1;
+      background: $minibadge-white;
+      border: none;
+      color: $minibadge-orange;
+      height: revert;
+
+      &-body {
+        justify-content: center;
+
+        h3 {
+          color: $minibadge-orange;
+          font-size: 30px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &-list {
+      flex: 3;
+    }
+  }
+
+  &-most-allowed {
+    flex: 5;
+
+    .check-circle {
+      color: $minibadge-green;
+    }
+  }
+
+  &-most-refused {
+    flex: 4;
+
+    .close-circle {
+      color: $minibadge-red;
+    }
+  }
+
+  .minibadge-container-badges {
+    .minibadge-card-title {
+      font-weight: bold;
+    }
+
+    .minibadge-container-card > .minibadge-container-card-body {
+      margin-top: 30px;
+
+      .minibadge-most-assigned {
+        padding: 10px;
+        align-items: stretch;
+      }
+    }
+
+    .minibadge-most-assigned-detail, .minibadge-most-assigned-others {
+      flex: 1;
+      line-height: 30px;
+    }
+
+    minibadge-card-type {
+      .minibadge-card {
+        height: 146px;
+        width: 176px;
+      }
+    }
+
+  }
+}
+
+minibadge-card-type-statistic {
+  .minibadge-card {
+    height: auto;
+    .minibadge-card-body {
+      flex: revert;
+      .minibadge-card-picture {
+        flex: revert;
+        @include marginX(10px);
+      }
+    }
+  }
+}
+
+

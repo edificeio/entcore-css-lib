@@ -1,0 +1,80 @@
+.minibadge-type {
+  margin-top: 20px;
+  background: $minibadge-white;
+  height: 100%;
+  @include paddingY(15px);
+  @include paddingX(15px);
+
+  @include desktop {
+    flex-direction: column;
+    border: solid $minibadge-grey-lighter 2px;
+    border-radius: 5px;
+  }
+
+  @include mobile {
+    font-size: 16px;
+  }
+
+  > h2, h3 {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 25px;
+    color: $minibadge-grey-dark;
+  }
+
+  &-container {
+    @include mobile {
+      flex-direction: column;
+    }
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &-id {
+    @include desktop {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  &-detail {
+    @include desktop {
+      margin-left: 30px;
+      flex: 1;
+    }
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+
+  &-description {
+    @include desktop {
+      flex: 1;
+    }
+
+    &-detail {
+      margin-top: 10px;
+    }
+  }
+
+  &-user-lists {
+    @include desktop {
+      gap: 30px;
+    }
+  }
+
+  &-data {
+    @include paddingX(15px);
+    line-height: 30px;
+    @include desktop {
+      margin-top: 20px;
+    }
+
+    i {
+      font-size: 1.5em;
+    }
+  }
+
+}
+

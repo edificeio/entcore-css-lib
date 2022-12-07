@@ -1,0 +1,78 @@
+.given-array {
+  background-color: $minibadge-white;
+  padding: 1em;
+  border-radius: 10px;
+
+  & i {
+    margin: 0 1%;
+    font-size: 1.3em;
+  }
+
+  &-head {
+    background-color: $minibadge-blue;
+    color: $minibadge-white;
+    justify-content: space-between;
+  }
+
+  &-row {
+    border-top: 1px solid $minibadge-grey-light;
+    justify-content: space-between;
+    @include mobile {
+      padding: 1em 0;
+    }
+  }
+
+  &-img {
+    padding-right: 1em;
+    max-width: 85%;
+    @include mobile {
+      padding-right: 0;
+    }
+  }
+
+  &-label {
+    width: 30%;
+    @include mobile {
+      width: 75%;
+    }
+  }
+
+  &-img img {
+    max-width: 85%;
+  }
+
+  &-cell {
+    padding: 1em;
+    @include mobile {
+      padding: 0;
+    }
+  }
+
+  &-trash {
+    font-size: 1.5em;
+    &:hover {
+      color: $minibadge-orange;
+    }
+  }
+
+  &-revoked {
+    font-weight: bold;
+    color: $minibadge-red;
+  }
+
+  &-lightbox {
+    .content {
+      margin-top: 10em;
+      @include mobile {
+        position: fixed;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    &-label {
+      padding: 0.5em;
+    }
+  }
+}
