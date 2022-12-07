@@ -1,0 +1,49 @@
+drop-down-menu {
+  position: relative;
+
+  .title {
+    position: relative;
+    padding: 5px 15px;
+    cursor: pointer;
+
+    &::after {
+      content: ' ';
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid $darkest-grey;
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      margin-top: -4px;
+    }
+  }
+
+  .options {
+    position: absolute;
+    background: $white;
+    padding: 10px;
+    margin-top: 15px;
+    left: 0;
+    @include material-card(5px, 10px);
+    z-index: 1;
+
+    &.hidden {
+      display: none;
+    }
+
+    opt {
+      cursor: pointer;
+      padding: 10px;
+      display: block;
+      white-space: nowrap;
+      text-align: left;
+      color: $primary;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+}
