@@ -1,0 +1,108 @@
+.status-circle {
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  margin-right: 10px;
+  > i {
+    margin-bottom: 3px;
+    color: $white;
+    display: block;
+    text-align: center;
+    margin-top: 3px;
+    margin-left: 3px;
+    font-size: 25px;
+    text-align: center;
+    background-repeat: no-repeat;
+
+    height: 90%;
+    width: 80%;
+    &:after {
+      color: $white;
+    }
+  }
+
+  &.WAITING {
+    background: $yellow;
+    > i {
+      background-image: url(/crre/public/img/scss/send.svg);
+    }
+  }
+
+  &.NEW {
+    background: $black;
+    > i {
+      background-image: url(/crre/public/img/scss/send.svg);
+    }
+  }
+
+  &.PROGRESS, &.PARTIALLYVALIDED, &.PARTIALLYREJECTED, &.RESUBMIT, &.PARTIALLYRESUBMIT {
+    background: $yellow;
+
+    > i {
+      background-image: url(/crre/public/img/scss/sync.svg);
+    }
+  }
+
+  &.SENT {
+    background: $green;
+
+    > i {
+      background-image: url(/crre/public/img/scss/truck.svg);
+    }
+  }
+
+  &.DONE {
+    background: $green;
+    > i {
+      background-image: url(/crre/public/img/scss/check-all.svg);
+      fill: white;
+    }
+  }
+  &.REJECTED, &.CANCELED {
+    background: $red;
+    >i:after{
+      content: '\e866';
+    }
+  }
+
+  &.WAITING_FOR_ACCEPTANCE{
+    background: $orange;
+    >i:after{
+      content: "?";
+      font-size: 44px;
+      font-family: "Roboto";
+    }
+  }
+
+  &.VALID {
+    background: $green;
+    >i{
+      background-image: url(/crre/public/img/scss/check.svg);
+    }
+  }
+  &.BLUE {
+    background: blue;
+    >i{
+      background-image: url(/crre/public/img/scss/check.svg);
+    }
+  }
+
+  &.GRAY {
+    background: gray;
+    >i{
+      background-image: url(/crre/public/img/scss/check.svg);
+    }
+  }
+}
+
+.myOrder{
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+}
+
+.justification-rejected{
+  filter: invert(31%) sepia(50%) saturate(4547%) hue-rotate(337deg) brightness(100%) contrast(128%);
+}
+
+

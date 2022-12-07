@@ -1,0 +1,135 @@
+.status-bar {
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+
+  > li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    line-height: 35px;
+
+    &.large {
+      width: 40px !important;
+      height: 40px !important;
+      line-height: 40px !important;
+    }
+
+    &:first-child, &:nth-child(2) {
+      margin-right: 65px;
+
+      &::after {
+        content: " ";
+        display: block;
+        width: 45px;
+        height: 5px;
+        position: absolute;
+        right: -55px;
+        top: 15px;
+      }
+    }
+
+    i.validated-status {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      left: 0;
+      text-align: center;
+      line-height: 35px;
+      color: $white;
+      display: none;
+    }
+  }
+
+  &.WAITING {
+    > li {
+      background-color: $medium-grey;
+
+      &:first-child::after, &:nth-child(2)::after {
+        background-color: $light-grey;
+      }
+    }
+  }
+
+  &.VALID {
+    > li {
+      background-color: $medium-grey;
+
+      &:first-child {
+        background-color: $accent;
+      }
+
+      &:first-child::after, &:nth-child(2)::after {
+        background-color: $light-grey;
+      }
+    }
+  }
+
+  &.REJECTED {
+    > li {
+      background-color: $medium-grey;
+
+      &:first-child {
+        background-color: $warning-color;
+      }
+
+      &:first-child::after, &:nth-child(2)::after {
+        background-color: $light-grey;
+      }
+    }
+  }
+
+  &.SENT {
+    > li {
+      background-color: $medium-grey;
+
+      &:first-child {
+        background-color: $primary;
+
+        i.validated-status {
+          display: block;
+        }
+
+        &::after {
+          background-color: $primary;
+        }
+      }
+
+      &:nth-child(2) {
+        background-color: $accent;
+
+        &::after {
+          background-color: $light-grey;
+        }
+      }
+    }
+  }
+
+  &.DONE {
+    > li {
+      background-color: $primary;
+
+      i.validated-status {
+        display: block;
+      }
+
+      &:first-child::after, &:nth-child(2)::after {
+        background-color: $primary;
+      }
+    }
+  }
+  &.colored {
+    > li {
+      background-color: $primary-dark;
+      color: white;
+
+      &:first-child::after, &:nth-child(2)::after {
+        background-color: $light-grey;
+      }
+    }
+  }
+}
