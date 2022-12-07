@@ -1,0 +1,114 @@
+i {
+  &.calendar-month::before{
+    font-family: 'material-icons';
+    content: "\FDFA";
+  }
+  &.calendar-range::before {
+    font-family: 'material-icons';
+    content: "\F678";
+  }
+  &.trash::before{
+    font-family: "material-icons";
+    content: "\FA79";
+  }
+  &.sort-arrow-up::before{
+    font-family: 'material-icons';
+    content: "\F4BC";
+
+  }
+  &.sort-arrow-down::before{
+    font-family: 'material-icons';
+    content: "\F4BD";
+  }
+  &.sort-arrow-up::before{
+    font-family: 'material-icons';
+    content: "\F4BC";
+
+  }
+  &.sort-arrow-down::before{
+    font-family: 'material-icons';
+    content: "\F4BD";
+  }
+
+  &.user-circle::before {
+    font-family: 'material-icons';
+    content: "\F009";
+  }
+
+  &.close::before {
+    font-family: 'material-icons';
+    content: "\F156";
+  }
+
+  &.chevron-left::before {
+    font-family: 'material-icons';
+    content: "\F141";
+  }
+  &.target::before{
+    font-family: "material-icons";
+    content: "\F8C8";
+  }
+  &.human-arrow::before{
+    font-family: "material-icons";
+    content: "\FB2F";
+  }
+  &.star::before {
+    font-family: 'material-icons';
+    content: "\F4CE";
+  }
+
+  &.icon-info::before {
+    font-family: 'material-icons';
+    content: "\F2FC";
+  }
+
+  &.icon-info-circle::before {
+    font-family: 'material-icons';
+    content: "\F2FD";
+  }
+
+  &.earth::before {
+    font-family: 'material-icons';
+    content: "\F1E7";
+  }
+
+  &.dots-vertical::before {
+    font-family: 'material-icons';
+    content: "\F1D9";
+  }
+
+  &.refused::before {
+    font-family: 'material-icons';
+    content: "\F697";
+  }
+
+  &.settings::before {
+    font-family: 'material-icons';
+    content: "\F493";
+  }
+
+  &.close-circle::before {
+    font-family: 'material-icons';
+    content: "\F159";
+  }
+
+  &.check-circle::before {
+    font-family: 'material-icons';
+    content: "\F5E0";
+  }
+
+  &.check-decagram::before {
+    font-family: 'material-icons';
+    content: "\F790";
+  }
+
+  &.chevron::before {
+    font-family: 'material-icons';
+    content: "\F142";
+  }
+
+  &.trophy::before {
+    font-family: 'material-icons';
+    content: "\F538";
+  }
+}

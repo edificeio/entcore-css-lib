@@ -1,0 +1,17 @@
+.minibadge-selected-list {
+  @include paddingX(15px);
+
+  &-items {
+    margin-top: 5px;
+  }
+
+  &-item {
+    font-weight: bold;
+    margin-top: 10px;
+
+    .close::before {
+      font-size: 16px;
+    }
+  }
+}
+

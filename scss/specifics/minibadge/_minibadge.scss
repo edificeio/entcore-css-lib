@@ -1,0 +1,38 @@
+body.minibadge, .sniplet.minibadge {
+  @import "mixins";
+
+  @include mobile {
+    font-size: 12px;
+  }
+
+  .mobile-disabled {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  portal > div.main > section.main {
+    @include mobile {
+      padding: 0;
+      top: 50px;
+    }
+  }
+
+  .minibadge-main-title {
+    font-family: $minibadge-font-secondary;
+    color: $minibadge-red;
+
+    img {
+      width: 34px;
+    }
+  }
+
+
+  @import "containers/index";
+  @import "components/index";
+  @import "generics/index";
+
+
+}
+
+

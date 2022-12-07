@@ -1,0 +1,42 @@
+.minibadge-user-list {
+  flex: 1;
+  height: auto;
+
+  &-items {
+    padding-inline-start: 20px;
+    column-count: 2;
+    @include mobile {
+      column-count: 1;
+    }
+    @include tablet {
+      column-count: 1;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    &-avatar {
+      margin-top: 0;
+      padding: 5px 0;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+    }
+
+    &-precision {
+      font-style: italic;
+    }
+
+  }
+
+  .minibadge-paging {
+    justify-content: flex-end;
+    margin-top: auto;
+  }
+}
+

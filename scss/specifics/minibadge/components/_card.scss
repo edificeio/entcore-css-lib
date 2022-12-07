@@ -1,0 +1,88 @@
+.minibadge-card {
+  &.disabled {
+    opacity: 0.5;
+
+    & * {
+      cursor: default;
+    }
+  }
+
+  &-list {
+    margin-top: 30px;
+    background: $minibadge-white;
+    gap: 15px;
+    @include paddingY(15px);
+  }
+
+  height: 232px;
+  width: 215px;
+  border-radius: 10px;
+  background: $minibadge-blue-light;
+  border: solid $minibadge-shadow-light 1px;
+
+  @include mobile {
+    width: 170px;
+    height: 183px;
+  }
+
+  &-body, &-body > container-body {
+    flex: 1;
+    width: 100%;
+    align-items: center;
+
+    &-icon {
+      flex: 1;
+      font-size: 80px;
+      line-height: 80px;
+      align-items: flex-end;
+    }
+  }
+
+  &-footer, .minibadge-footer {
+    border-radius: 0 0 10px 10px;
+  }
+
+  container-footer {
+    flex: 1;
+  }
+
+  &-picture {
+    flex: 1;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  &-title, h3 {
+    flex: 1;
+    height: 31px;
+  }
+
+}
+
+.minibadge-card-simple, minibadge-card-type-statistic {
+  display: flex;
+  align-self: center;
+
+  .minibadge-card {
+    @include desktop {
+      align-self: center;
+      background-color: $minibadge-white;
+      border: none
+    }
+  }
+}
+
+minibadge-card-type-statistic {
+  width: 100%;
+
+  .minibadge-card {
+    flex: 1;
+
+    &-title {
+      flex: none;
+      height: auto;
+    }
+  }
+}
