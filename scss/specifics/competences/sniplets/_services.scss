@@ -8,6 +8,11 @@
   }
   .service-list-container{
     .serviceList {
+      .flex-row{
+        display: inline-flex!important;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
       &.active{
         box-shadow: -0.2em 0 3px rgba(10,10,10,0.2), 0.2em 0 3px rgba(10,10,10,0.2);
       }
@@ -140,14 +145,12 @@
     display: flex;
     align-items:center;
 
-    input {
+    input,i {
       padding-top: 5px;
+      margin-left: 1em;
     }
     .image-center{
       margin-left: 40%;
-    }
-    input,i{
-      margin-left: 1em;
     }
   }
 
