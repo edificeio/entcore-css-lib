@@ -11,8 +11,8 @@
 }
 
 body.lystore {
-  @import './components/index';
-  @import './fragments/index';
+  @import 'components/index';
+  @import 'fragments/index';
 
   h4{
     &.highlighted {
