@@ -1,0 +1,50 @@
+/* View from grouping '/viescolaire/public/templates/viescolaire/param-grouping.html' */
+
+.grouping-list {
+
+  &-choiceSchedule {
+    display: flex;
+    align-items: center;
+  }
+
+  &-schedule {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0 32px 0;
+
+    &-title {
+      display: flex;
+      text-align: center;
+      position: relative;
+      align-items: center;
+      background-color: $white;
+      color: $black;
+      box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.3);
+      height: 30px;
+      border: 1px solid $vsco-grey-clear;
+
+      span {
+        flex: 1;
+      }
+    }
+
+    &-list {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      height: 30px;
+      border-bottom: 1px solid $vsco-grey-invisible;
+
+      &:nth-child(even) {
+        background-color: $white;
+      }
+
+      span {
+        flex: 1
+      }
+    }
+  }
+}
