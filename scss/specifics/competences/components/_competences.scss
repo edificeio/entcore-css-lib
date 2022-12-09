@@ -1970,7 +1970,7 @@ body.evaluations {
     }
   }
 
-  @media screen and(min-width: $tablette) {
+  @media screen and (min-width: $tablette) {
     .addRemplacement {
       .addRemplacementTable {
         padding: 15px 40px;
@@ -1990,7 +1990,7 @@ body.evaluations {
     }
   }
 
-  @media screen and(min-width: $tablette) {
+  @media screen and (min-width: $tablette) {
     .addDevoir {
       .skills-list {
         margin: 0 0 0 5% !important;
@@ -2936,29 +2936,29 @@ body.evaluations {
     text-align: center !important;
     opacity: 0.8 !important;
 
-      img {
-        height: 100px;
-        width: 100px;
-        object-fit: cover;
-        border-radius: 50% !important;
-        border: 1px solid $medium-grey !important;
-      }
+    img {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+      border-radius: 50% !important;
+      border: 1px solid $medium-grey !important;
+    }
 
-      span {
-        color: $grey !important;
-        font-weight: bold !important;
-        text-align: center !important;
-      }
+    span {
+      color: $grey !important;
+      font-weight: bold !important;
+      text-align: center !important;
+    }
   }
 
   .big-round-avatar {
     height: 240px !important;
     width: 200px !important;
 
-      img {
-        height: 200px !important;
-        width: 200px !important;
-      }
+    img {
+      height: 200px !important;
+      width: 200px !important;
+    }
   }
 
   .alignTablewithOtherWidget {
