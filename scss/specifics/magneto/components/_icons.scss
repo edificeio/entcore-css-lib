@@ -127,7 +127,7 @@ i {
 
   &.magneto-edit::before {
     font-family: 'magneto-mdi';
-      content: '\F03EB'
+    content: '\F03EB'
   }
 
   &.magneto-duplicate::before {
@@ -138,6 +138,11 @@ i {
   &.magneto-hide::before {
     font-family: 'magneto-mdi';
     content: '\F0209'
+  }
+
+  &.magneto-show::before {
+    font-family: 'magneto-mdi';
+    content: '\F0208'
   }
 
   &.magneto-delete::before {
