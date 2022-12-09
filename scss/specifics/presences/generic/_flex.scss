@@ -19,7 +19,7 @@
       .flex-col {
         @for $j from 1 through 16 {
           &.col__#{$j} {
-            width: percentage($j / $i);
+            width: percentage(calc($j / $i));
           }
         }
       }
@@ -27,7 +27,8 @@
   }
 }
 
-.flex-content, .flex-collapse {
+.flex-content,
+.flex-collapse {
   flex: 1;
   display: flex;
   flex-direction: column;

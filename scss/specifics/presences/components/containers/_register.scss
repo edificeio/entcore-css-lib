@@ -2,7 +2,6 @@ $student-height: 40px;
 $absence-button-width: 20px;
 
 .register {
-
   .card-slider {
     max-width: 100%;
     overflow-x: auto;
@@ -47,7 +46,8 @@ $absence-button-width: 20px;
           opacity: 1 !important;
           transition: all 0.25s ease;
 
-          &.split-view::before, &.show-list::before {
+          &.split-view::before,
+          &.show-list::before {
             position: absolute;
             //top: -2px;
             left: 0;
@@ -89,7 +89,6 @@ $absence-button-width: 20px;
 
     /* tooltip hover */
     li {
-
       &:hover .tooltip-top {
         @include tooltipVisible();
       }
@@ -100,7 +99,7 @@ $absence-button-width: 20px;
         max-width: 115px;
         padding: 5px;
         line-height: 20px;
-        transform: scale(0.80);
+        transform: scale(0.8);
         bottom: 20px;
         margin-left: -23px;
 
@@ -111,7 +110,6 @@ $absence-button-width: 20px;
         }
       }
     }
-
 
     .student-name.last-course-absent {
       color: $presences-red;
@@ -151,11 +149,11 @@ $absence-button-width: 20px;
       }
 
       li {
-        width: $absence-button-width - 2;
-        height: $absence-button-width - 2;
+        width: calc($absence-button-width - 2px);
+        height: calc($absence-button-width - 2px);
         display: block;
         background-color: $presences-grey;
-        border-radius: ($absence-button-width - 2)/2;
+        border-radius: calc(($absence-button-width - 2px) / 2);
         z-index: 1;
 
         &.current {
@@ -201,8 +199,8 @@ $absence-button-width: 20px;
         display: block;
         position: absolute;
         top: 50%;
-        margin-top: -(($absence-button-width + 1)/2);
-        border-radius: ($absence-button-width/2)+1;
+        margin-top: calc(($absence-button-width + 1px) / -2);
+        border-radius: calc($absence-button-width/2) + 1px;
         border: solid 1px #929292;
         transition: all 0.3s ease;
         background-color: $white;
@@ -212,7 +210,6 @@ $absence-button-width: 20px;
         background-color: $presences-red;
         border-color: $presences-red;
       }
-
 
       &.disabled::before {
         background-color: $presences-grey !important;
@@ -251,10 +248,9 @@ $absence-button-width: 20px;
 
       > div {
         width: 44px;
-        height: $student-height/3;
+        height: calc($student-height/3);
         background-color: pink;
-        border-radius: $student-height/5;
-
+        border-radius: calc($student-height/5);
 
         &.absence {
           background-color: $presences-red;
@@ -303,8 +299,8 @@ $absence-button-width: 20px;
     display: block;
     position: absolute;
     top: 50%;
-    margin-top: -(($absence-button-width + 1)/2);
-    border-radius: ($absence-button-width/2)+1;
+    margin-top: calc(($absence-button-width + 1px) / -2);
+    border-radius: calc($absence-button-width/2) + 1px;
     border: solid 1px #929292;
     transition: all 0.3s ease;
     background-color: $white;
@@ -324,8 +320,8 @@ $absence-button-width: 20px;
 /* State color */
 .state {
   width: 44px;
-  height: $student-height / 3;
-  border-radius: $student-height / 5;
+  height: calc($student-height / 3);
+  border-radius: calc($student-height / 5);
 
   &.absence {
     background-color: $presences-red;

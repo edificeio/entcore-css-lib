@@ -4,9 +4,7 @@ $md-radio-size: 20px;
 $md-radio-checked-size: 10px;
 $md-radio-ripple-size: 15px;
 
-
 .md-radio {
-
   &.md-radio-inline {
     display: inline-block;
   }
@@ -23,17 +21,18 @@ $md-radio-ripple-size: 15px;
 
   label {
     display: inline-block;
-    height:$md-radio-size;
+    height: $md-radio-size;
     position: relative;
     padding: 0 ($md-radio-size + 10px);
     margin-bottom: 0;
     cursor: pointer;
     vertical-align: bottom;
-    &:before, &:after {
+    &:before,
+    &:after {
       position: absolute;
-      content: '';
+      content: "";
       border-radius: 50%;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
     }
     &:before {
       left: 0;
@@ -43,17 +42,18 @@ $md-radio-ripple-size: 15px;
       border: 2px solid $md-radio-border-color;
     }
     &:after {
-      top: $md-radio-size / 2 - $md-radio-checked-size / 2 - 0.2;
-      left: $md-radio-size / 2 - $md-radio-checked-size / 2 - 0.2;
-      width:$md-radio-checked-size;
-      height:$md-radio-checked-size;
+      top: calc($md-radio-size / 2 - $md-radio-checked-size / 2 - 0.2px);
+      left: calc($md-radio-size / 2 - $md-radio-checked-size / 2 - 0.2px);
+      width: $md-radio-checked-size;
+      height: $md-radio-checked-size;
       transform: scale(0);
-      background:$md-radio-checked-color;
+      background: $md-radio-checked-color;
     }
   }
 
-  *, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     box-sizing: border-box;
   }
 }
-
