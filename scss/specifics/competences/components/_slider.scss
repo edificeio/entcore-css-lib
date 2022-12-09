@@ -140,7 +140,7 @@ body.vsco--global {
       background-color: $primary;
       z-index: 3;
       @include rounded(calc($handleSize/2));
-      @include box-shadow(rgba(0, 0, 0, 0.26) 0 1px 3px);
+      @include box-shadow(rgba(0,0,0,0.26) 0 1px 3px);
       //  -webkit-transition:all linear 0.15s;
       //  -moz-transition:all linear 0.15s;
       //  -o-transition:all linear 0.15s;
@@ -206,9 +206,7 @@ body.vsco--global {
       position: absolute;
       top: 0;
       left: 0;
-      margin-left: calc(
-        $handleSize / 2 - $ticksWidth / 2
-      ); // for centering*padding:
+      margin-left: calc($handleSize / 2 - $ticksWidth / 2); // for centering*padding:
       padding: 0;
       &.rz-selected {
         background: $selectedTicksColor;
