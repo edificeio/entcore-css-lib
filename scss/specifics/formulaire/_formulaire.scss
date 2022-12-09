@@ -249,7 +249,7 @@ body.formulaire section.main {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    @media screen and(max-width:$formulaire-screen-mobile){margin-right: 40px;}
+    @media screen and (max-width:$formulaire-screen-mobile){margin-right: 40px;}
   }
 
   label.chip.checkbox.selected {
