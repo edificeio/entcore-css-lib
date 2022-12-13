@@ -1,10 +1,8 @@
 body.calendar {
-
   @import "mixins";
-  @import 'components/index';
+  @import "components/index";
 
   .calendar.widget {
-
     span.last-events-widget {
       white-space: nowrap;
       overflow: hidden;
@@ -35,5 +33,5 @@ body.calendar {
 }
 
 calendar .week-switcher .date-picker-icon {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
