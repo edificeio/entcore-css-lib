@@ -71,9 +71,12 @@
         justify-content: center;
     }
 
-    .icon-verified {
-        margin-left: 10px;
-        margin-right: 10px;
+    .email-ellipsis {
+        margin-right: 20px;
+    }
+
+    .email-ellipsis + .icon-verified {
+        margin-right: 20px;
     }
 
     input[type=text]:placeholder-shown {
