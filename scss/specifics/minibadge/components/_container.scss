@@ -3,7 +3,7 @@
     flex: 1;
     row-gap: 8px;
     background: $minibadge-white;
-    @include paddingXY(8px, 16px);
+    padding: 30px;
 
     &.disabled {
       opacity: 0.5;
