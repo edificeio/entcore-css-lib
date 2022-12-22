@@ -6,7 +6,7 @@
       font-weight: bold;
     }
 
-    &-body > container-body, .minibadge-statistics-badges {
+    &-body > container-body, .minibadge-statistics-cards, .minibadge-statistics-badges {
       gap: 50px
     }
   }
@@ -46,7 +46,14 @@
 
   &-top-structures {
     flex: 5;
+  }
 
+  &-top-assigning, &-top-receiving {
+    flex: 1;
+  }
+
+
+  &-top-structures, &-top-assigning, &-top-receiving {
     .minibadge-card {
       background: $minibadge-white;
       border: none;
