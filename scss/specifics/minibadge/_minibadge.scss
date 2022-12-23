@@ -22,6 +22,12 @@ body.minibadge, .sniplet.minibadge {
     }
   }
 
+  .desktop-disabled {
+    @include desktop {
+      display: none;
+    }
+  }
+
   portal > div.main > section.main {
     @include mobile {
       padding: 0;
@@ -29,12 +35,24 @@ body.minibadge, .sniplet.minibadge {
     }
   }
 
-  .minibadge-main-title {
-    font-family: $minibadge-font-secondary;
-    color: $minibadge-red;
+  .minibadge-button-title-settings {
+    margin-left: auto;
+    background: $minibadge-blue-dark;
+    right: 0;
+    @include mobile {
+      margin-right: 10px;
+    }
+  }
 
-    img {
-      width: 34px;
+  .minibadge-main {
+    &-title {
+      margin: 0;
+      font-family: $minibadge-font-secondary;
+      color: $minibadge-red;
+
+      img {
+        width: 34px;
+      }
     }
   }
 
