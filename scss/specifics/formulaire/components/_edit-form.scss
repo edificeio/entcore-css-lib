@@ -12,8 +12,12 @@
   &-fixed {
     position: sticky;
     background: linear-gradient(to bottom right, $formulaire-grey-lighter, $formulaire-grey-very-light) fixed;
+    z-index: 3;
     top: 64px;
-    z-index: 10003;
+
+    @media screen and (max-width: $formulaire-screen-tablet) {
+      top: 49px;
+    }
   }
 
   &-title {

@@ -1,0 +1,202 @@
+.formulaire-cursor {
+
+  &-form  {
+    display: flex;
+    flex-direction: column;
+
+    .cursor-line {
+      display: flex;
+
+      @media screen and (max-width: $formulaire-screen-tablet) {
+        flex-direction: column;
+        margin-top: 3%;
+      }
+
+      .cursor-value-min, .cursor-value-max, .cursor-value-step {
+        display: flex;
+
+        @media screen and (min-width: $formulaire-screen-tablet) {
+          width: 20%;
+        }
+      }
+    }
+
+    em {
+      color: $formulaire-red;
+    }
+
+    input[type="number"] {
+      width: 40px;
+      height: 20px;
+      text-align: center;
+      -moz-appearance: textfield;
+      margin-left: 10px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &-input {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2%;
+    }
+
+    &-range {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      margin: 0 2%;
+
+      .range-slider {
+        position: relative;
+
+        &::before {
+          content: var(--min);
+          pointer-events: none;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+
+        &::after {
+          content: var(--max);
+          pointer-events: none;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+      /***** Remove old Styles *****/
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+      }
+
+      /***** Track Styles *****/
+      /* Chrome, Safari, Opera, and Edge Chromium */
+      input[type="range"]::-webkit-slider-runnable-track {
+        background: transparent;
+        z-index: 5;
+      }
+
+      /* Firefox */
+      input[type="range"]::-moz-range-track {
+        background: transparent;
+        z-index: 5;
+      }
+
+
+      /***** Thumb Styles *****/
+      /* Chrome, Safari, Opera, and Edge Chromium */
+      input[type="range"]::-webkit-slider-thumb,  {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        margin-top: -4px; /* Centers thumb on the track with formula (track height in pixels / 2) - (thumb height in pixels /2) - border size*/
+        background-color: $formulaire-grey-very-light;
+        border: $formulaire-grey-dark 1px solid;
+        border-radius: 100px;
+        height: 16px;
+        width: 16px;
+        cursor: grabbing;
+        z-index: 2;
+      }
+
+      /* Firefox */
+      input[type="range"]::-moz-range-thumb {
+        background-color: $formulaire-grey-very-light;
+        border: $formulaire-grey-dark 1px solid;
+        border-radius: 100px;
+        height: 16px;
+        width: 16px;
+        cursor: grabbing;
+        z-index: 2;
+      }
+
+      /***** Removes default focus *****/
+      /* Removes default focus */
+      input[type="range"]:focus {
+        outline: none;
+      }
+
+      /* Chrome, Safari, Opera, and Edge Chromium */
+      input[type="range"]:focus::-webkit-slider-thumb {
+        outline: none;
+      }
+
+      /* Firefox */
+      input[type="range"]:focus::-moz-range-thumb {
+        outline: none;
+      }
+
+      /***** Pin cursor styles *****/
+      .pin {
+        position: absolute;
+        left: calc((((var(--value) - var(--min)) / (var(--max) - var(--min))) * 100%) - 10px);
+        bottom: 35px;
+        width: 20px;
+        height: 20px;
+        background-color: $formulaire-blue;
+
+        &-content {
+          text-align: center;
+          font-size: 10px;
+          color: white;
+        }
+
+        &::after {
+          position: absolute;
+          left: 0;
+          top: 20px;
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid $formulaire-blue;
+          content: '';
+        }
+      }
+
+      /***** Progress bar styles *****/
+      .filler {
+        &::before {
+          position: absolute;
+          height: 10px;
+          width: calc(((var(--value) - var(--min)) / (var(--max) - var(--min))) * 100%);
+          bottom: 9px;
+          left: 3px;
+          background-color: $formulaire-blue;
+          border-radius: 5px;
+          content: '';
+          z-index: 2;
+        }
+
+        &::after {
+          position: absolute;
+          height: 10px;
+          width: calc(100% - 3px);
+          bottom: 8px;
+          left: 3px;
+          background-color: #efefef;
+          border-radius: 5px;
+          border: #4a4a4a 1px solid;
+          content: '';
+          z-index: 1;
+        }
+      }
+
+      &-values {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 5px;
+      }
+    }
+  }
+}

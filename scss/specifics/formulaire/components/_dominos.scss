@@ -29,11 +29,11 @@
         align-items: center;
         justify-content: center;
         background: $formulaire-white;
-        
+
         &.empty {
           background: $formulaire-blue;
         }
-        
+
         img {
           max-height: 135px;
         }
