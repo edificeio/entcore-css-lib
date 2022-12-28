@@ -8,6 +8,21 @@
       font-weight: normal;
       color: $calendar-white;
       padding-left: 10px !important;
+
+      &-sync {
+        transform: rotate(-45deg);
+        opacity: 1 !important;
+      }
+
+      &-sync-in-progress {
+        text-indent: unset !important;
+        opacity: 1 !important;
+      }
+
+      &-center-text {
+        text-align: center;
+      }
+
     }
   }
 
@@ -51,6 +66,10 @@
         @include tooltipBottomArrow();
         top: 100%;
         left: 15%;
+      }
+
+      &-text {
+        font-weight: initial !important;
       }
     }
 
