@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'minibadge-icons';
+  src: url('/minibadge/public/font/material-design/fonts/materialdesignicons-webfont.eot');
+  src: url('/minibadge/public/font/material-design/fonts/materialdesignicons-webfont.eot') format('embedded-opentype'),
+  url('/minibadge/public/font/material-design/fonts/materialdesignicons-webfont.woff2') format('woff2'),
+  url('/minibadge/public/font/material-design/fonts/materialdesignicons-webfont.woff2') format('woff'),
+  url('/minibadge/public/font/material-design/fonts/materialdesignicons-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body.minibadge, .sniplet.minibadge {
   @import "mixins";
 
