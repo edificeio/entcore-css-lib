@@ -3,6 +3,7 @@
   background: $minibadge-white;
 
   @include desktop {
+    margin-top: 20px;
     text-transform: uppercase;
   }
 

@@ -2,8 +2,7 @@
   margin-top: 20px;
   background: $minibadge-white;
   height: 100%;
-  @include paddingY(15px);
-  @include paddingX(15px);
+  padding: 15px;
 
   @include desktop {
     flex-direction: column;
@@ -13,6 +12,7 @@
 
   @include mobile {
     font-size: 16px;
+    margin-top: 10px;
   }
 
   > h2, h3 {
@@ -32,6 +32,8 @@
   }
 
   &-id {
+    margin-top: 10px;
+
     @include desktop {
       height: auto;
       width: auto;
@@ -49,6 +51,8 @@
   }
 
   &-description {
+    margin-top: 10px;
+
     @include desktop {
       flex: 1;
     }
