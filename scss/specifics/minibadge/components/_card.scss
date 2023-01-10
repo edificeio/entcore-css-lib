@@ -5,6 +5,15 @@
     & * {
       cursor: default;
     }
+
+    .minibadge-card-footer {
+      background: $minibadge-blue-light;
+
+      &:hover {
+        background: initial;
+      }
+    }
+
   }
 
   &-list {
