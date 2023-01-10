@@ -46,6 +46,10 @@
       justify-content: space-between;
       margin-bottom: 2%;
     }
+    
+    &-label {
+      max-width: 200px;
+    }
 
     &-range {
       display: flex;
