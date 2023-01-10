@@ -138,7 +138,7 @@
         position: absolute;
         left: calc((((var(--value) - var(--min)) / (var(--max) - var(--min))) * 100%) - 10px);
         bottom: 35px;
-        width: 20px;
+        width: 23px;
         height: 20px;
         background-color: $formulaire-blue;
 
@@ -154,9 +154,9 @@
           top: 20px;
           width: 0;
           height: 0;
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          border-top: 10px solid $formulaire-blue;
+          border-left: 12px solid transparent;
+          border-right: 11px solid transparent;
+          border-top: 11px solid $formulaire-blue;
           content: '';
         }
       }
