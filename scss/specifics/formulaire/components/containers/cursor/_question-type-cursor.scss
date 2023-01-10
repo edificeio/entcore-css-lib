@@ -99,9 +99,7 @@
       input[type="range"]::-webkit-slider-thumb,  {
         -webkit-appearance: none; /* Override default look */
         appearance: none;
-        margin-top: -4px; /* Centers thumb on the track with formula (track height in pixels / 2) - (thumb height in pixels /2) - border size*/
         background-color: $formulaire-grey-very-light;
-        border: $formulaire-grey-dark 1px solid;
         border-radius: 100px;
         height: 16px;
         width: 16px;
@@ -112,7 +110,6 @@
       /* Firefox */
       input[type="range"]::-moz-range-thumb {
         background-color: $formulaire-grey-very-light;
-        border: $formulaire-grey-dark 1px solid;
         border-radius: 100px;
         height: 16px;
         width: 16px;
@@ -170,7 +167,7 @@
           position: absolute;
           height: 10px;
           width: calc(((var(--value) - var(--min)) / (var(--max) - var(--min))) * 100%);
-          bottom: 9px;
+          bottom: 8px;
           left: 3px;
           background-color: $formulaire-blue;
           border-radius: 5px;
@@ -186,7 +183,6 @@
           left: 3px;
           background-color: #efefef;
           border-radius: 5px;
-          border: #4a4a4a 1px solid;
           content: '';
           z-index: 1;
         }
