@@ -1,0 +1,27 @@
+name: dev-check-repository
+
+on: [push]
+
+jobs:
+  build-node-test:
+    runs-on: ubuntu-latest
+
+    container:
+      image: opendigitaleducation/node:16-alpine
+      options: --user root -v ${{ github.workspace }}:/home/node/:rw
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Init .gitconfig
+        run: git config --global user.name “github-test”
+
+      - name: Init entcore-css-lib
+        run: |
+          NPM_VERSION_SUFFIX=`date +"%Y%m%d%H%M"`
+          cp package.json.template package.json
+          sed -i "s/%generateVersion%/${NPM_VERSION_SUFFIX}/" package.json
+          yarn install
+
+      - name: Build entcore-css-lib
+        run: npm run sass:build:release
