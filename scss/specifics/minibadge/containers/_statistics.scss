@@ -102,7 +102,20 @@
 
       .minibadge-most-assigned {
         padding: 10px;
-        align-items: stretch;
+        align-items: center;
+
+        &-detail {
+          flex: 3;
+        }
+
+        &-others {
+          flex: 3;
+        }
+
+        minibadge-card-type {
+          flex: 2;
+        }
+
       }
     }
 
@@ -117,7 +130,7 @@
     minibadge-card-type {
       .minibadge-card {
         height: 176px;
-        width: 176px;
+        width: 100%;
       }
     }
 
