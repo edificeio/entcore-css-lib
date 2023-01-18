@@ -73,6 +73,7 @@
 .minibadge-card-simple, minibadge-card-type-statistic {
   display: flex;
   align-self: center;
+  flex: 1 1 0;
 
   .minibadge-card {
     @include desktop {
