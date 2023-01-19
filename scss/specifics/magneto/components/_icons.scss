@@ -214,4 +214,9 @@ i {
     font-family: 'magneto-mdi';
     content: '\F033F';
   }
+
+  &.magneto-user::before {
+    font-family: 'magneto-mdi';
+    content: '\F0009';
+  }
 }

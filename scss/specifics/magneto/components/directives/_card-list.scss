@@ -1,5 +1,7 @@
 .card-list {
-  background: $magneto-lighter-light-grey;
+  &.no-background-image {
+    background: $magneto-lighter-light-grey;
+  }
   gap: 16px;
   flex-wrap: wrap;
 
