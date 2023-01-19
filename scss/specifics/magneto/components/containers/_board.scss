@@ -80,6 +80,7 @@
     &-list {
       min-height: 650px;
       width: 100%;
+      overflow-x: auto;
 
       .empty-state {
         display: flex;
