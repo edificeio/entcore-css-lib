@@ -1,0 +1,17 @@
+.scrollbar {
+  /* Mozilla firefox */
+  scrollbar-color: #aaa transparent;
+  scrollbar-width: thin;
+}
+
+/* Global */
+.scrollbar::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Ascenseur */
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(35, 35, 35, 0.1);
+  border-radius: 8px;
+}

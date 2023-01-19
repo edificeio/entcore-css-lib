@@ -1,0 +1,94 @@
+.sections-list {
+  i.magneto-card-settings {
+    font-size: 25px;
+    position: absolute;
+    right: 5px;
+  }
+
+  display: flex;
+  justify-content: space-between;
+
+  &-horizontal {
+    flex-direction: column;
+  }
+
+  &-content {
+    flex: 1;
+    height: 85vh;
+    overflow-y: auto;
+
+    &-horizontal {
+      overflow-y: unset;
+      height: 100% !important;
+    }
+
+    display: flex;
+
+    @include mobile {
+      min-width: 100%;
+    }
+
+    @include tablet {
+      min-width: 50%;
+    }
+
+    @include small-desktop {
+      min-width: 33%;
+    }
+
+    @include desktop {
+      min-width: 20%;
+    }
+
+    flex-direction: column;
+
+    &-container {
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #fff;
+      border-radius: 50px;
+      display: flex;
+      width: 85%;
+      height: auto;
+      position: relative;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-container:focus-within {
+      border-bottom: 1px solid #ff8500;
+    }
+
+    &-title {
+      width: 85%;
+      align-self: center;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 20px;
+      &.input {
+        outline: none;
+        box-shadow: none;
+        border-bottom: none !important;
+        margin-bottom: 1px !important;
+        margin-top: 0 !important;
+      }
+
+      &-margin {
+        margin: auto !important;
+        margin-top: 10px !important;
+      }
+
+      &-truncate {
+        margin: auto;
+        width: 75%;
+        @include noTextOverflow(1);
+      }
+    }
+  }
+
+  &-content-vertical:not(:first-child) {
+    border-left: solid 2px rgba(211, 211, 211, .5);
+  }
+}

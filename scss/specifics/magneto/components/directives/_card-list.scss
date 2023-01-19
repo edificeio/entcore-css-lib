@@ -1,7 +1,17 @@
 .card-list {
-  background: $magneto-lighter-grey;
+  background: $magneto-lighter-light-grey;
   gap: 16px;
-  justify-content: center;
+  flex-wrap: wrap;
+
+  &-free, &-vertical {
+    justify-content: center;
+  }
+
+  &-horizontal {
+    min-height: 75px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
   padding-top: 15px;
 
   @include mobile {

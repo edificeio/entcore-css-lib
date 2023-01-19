@@ -21,6 +21,9 @@ $magneto-red: #e61610;
 $magneto-font-secondary: 'Comfortaa', cursive;
 
 $magneto-screen-mobile: 768px;
+$magneto-screen-tablet: 1024px;
+$magneto-screen-small-desktop: 1224px;
+
 
 
 
@@ -30,8 +33,20 @@ $magneto-screen-mobile: 768px;
   }
 }
 
+@mixin tablet {
+  @media (min-width: 769px) and (max-width: $magneto-screen-tablet) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (min-width: 1025px) and (max-width: $magneto-screen-small-desktop) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media (min-width: 769px) {
+  @media (min-width: 1225px) {
     @content;
   }
 }
