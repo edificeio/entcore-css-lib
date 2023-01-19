@@ -8,6 +8,9 @@
   &-body {
     display: flex;
     &-image-select {
+      &.small {
+        width: 120px !important;
+      }
       width: 240px;
       image-select {
         img {

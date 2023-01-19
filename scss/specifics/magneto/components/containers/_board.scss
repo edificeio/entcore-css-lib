@@ -66,7 +66,10 @@
     display: flex;
     border-top: solid 1px $magneto-white-blue;
     border-bottom: solid 1px $magneto-white-blue;
-    background: $magneto-lighter-light-grey;
+    background-size: cover;
+    &.no-background-image {
+      background: $magneto-lighter-light-grey;
+    }
     position: absolute;
 
     @include mobile {
@@ -78,7 +81,7 @@
     }
 
     &-list {
-      min-height: 650px;
+      min-height: 80vh;
       width: 100%;
       overflow-x: auto;
 
