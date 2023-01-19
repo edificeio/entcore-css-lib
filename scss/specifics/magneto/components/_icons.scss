@@ -199,4 +199,14 @@ i {
     font-family: 'magneto-mdi';
     content: '\F040A';
   }
+
+  &.magneto-lock::before {
+    font-family: 'magneto-mdi';
+    content: '\F033E';
+  }
+
+  &.magneto-unlock::before {
+    font-family: 'magneto-mdi';
+    content: '\F033F';
+  }
 }
