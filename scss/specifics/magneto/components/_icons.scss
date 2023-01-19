@@ -180,6 +180,21 @@ i {
     content: '\F1682';
   }
 
+  &.magneto-display-free::before {
+    font-family: 'magneto-mdi';
+    content: '\F148E';
+  }
+
+  &.magneto-display-vertical::before {
+    font-family: 'magneto-mdi';
+    content: '\F1491';
+  }
+
+  &.magneto-display-horizontal::before {
+    font-family: 'magneto-mdi';
+    content: '\F1490';
+  }
+
   &.magneto-play::before {
     font-family: 'magneto-mdi';
     content: '\F040A';
