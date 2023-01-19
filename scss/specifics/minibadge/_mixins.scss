@@ -30,7 +30,7 @@ $minibadge-font-secondary: 'Comfortaa', cursive;
 }
 
 @mixin tablet {
-  @media (min-width: 769px) and (max-width:992px) {
+  @media (min-width: 769px) and (max-width: 992px) {
     @content;
   }
 }
@@ -81,4 +81,8 @@ $minibadge-font-secondary: 'Comfortaa', cursive;
 
 .minibadge-delete-button {
   background-color: $minibadge-grey-light;
+}
+
+.cursor-default {
+  cursor: default;
 }
