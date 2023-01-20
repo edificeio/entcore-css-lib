@@ -10,6 +10,10 @@
     align-items: center;
     overflow: hidden;
 
+    &-number {
+      align-self: baseline;
+    }
+
     &-img {
       margin-top: 0;
       padding: 5px 0;
@@ -22,6 +26,10 @@
 
     &-distinction {
       color: $minibadge-grey;
+      flex-shrink: 0;
+      &-italic {
+        font-style: italic;
+      }
     }
 
   }
