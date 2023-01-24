@@ -116,6 +116,10 @@
           flex: 2;
         }
 
+        .minibadge-list-item-display, .minibadge-list-item-distinction {
+          flex: 1;
+          overflow: auto;
+        }
       }
     }
 
