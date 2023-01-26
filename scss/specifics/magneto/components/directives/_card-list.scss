@@ -8,9 +8,10 @@
   }
 
   &-vertical {
-    height: 85vh;
     justify-content: center;
     overflow-y: auto;
+    overflow-x: hidden;
+    height: 85vh;
   }
 
   &-horizontal {

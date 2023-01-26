@@ -23,6 +23,7 @@ $magneto-font-secondary: 'Comfortaa', cursive;
 $magneto-screen-mobile: 768px;
 $magneto-screen-tablet: 1024px;
 $magneto-screen-small-desktop: 1224px;
+$magneto-screen-medium-desktop: 1536px;
 
 
 
@@ -39,17 +40,30 @@ $magneto-screen-small-desktop: 1224px;
   }
 }
 
+@mixin desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
 @mixin small-desktop {
   @media (min-width: 1025px) and (max-width: $magneto-screen-small-desktop) {
     @content;
   }
 }
 
-@mixin desktop {
-  @media (min-width: 1225px) {
+@mixin medium-desktop {
+  @media (min-width: 1225px) and (max-width: $magneto-screen-medium-desktop) {
     @content;
   }
 }
+
+@mixin large-desktop {
+  @media (min-width: 1441px) {
+    @content;
+  }
+}
+
 
 @mixin paddingX($size) {
   padding-left: $size;
