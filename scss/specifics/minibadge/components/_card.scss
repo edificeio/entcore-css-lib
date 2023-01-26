@@ -5,6 +5,15 @@
     & * {
       cursor: default;
     }
+
+    .minibadge-card-footer {
+      background: $minibadge-blue-light;
+
+      &:hover {
+        background: initial;
+      }
+    }
+
   }
 
   &-list {
@@ -76,9 +85,11 @@
 
 minibadge-card-type-statistic {
   width: 100%;
+  height: 90px;
 
   .minibadge-card {
     flex: 1;
+    align-self: stretch;
 
     &-title {
       flex: none;
