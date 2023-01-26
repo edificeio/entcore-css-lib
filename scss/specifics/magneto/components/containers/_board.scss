@@ -24,7 +24,7 @@
 
     &-description {
       height: 64px;
-      overflow-y: scroll;
+      overflow-y: auto;
     }
   }
 
@@ -54,7 +54,7 @@
 
     &-description {
       height: 64px;
-      overflow-y: scroll;
+      overflow-y: auto;
     }
 
     .create-button {
