@@ -3,14 +3,21 @@
   gap: 16px;
   flex-wrap: wrap;
 
-  &-free, &-vertical {
+  &-free {
     justify-content: center;
+  }
+
+  &-vertical {
+    height: 85vh;
+    justify-content: center;
+    overflow-y: auto;
   }
 
   &-horizontal {
     min-height: 75px;
     overflow-x: auto;
     flex-wrap: nowrap;
+    padding-bottom: 20px;
   }
   padding-top: 15px;
 

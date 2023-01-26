@@ -29,10 +29,16 @@
         resize: none;
       }
     }
+
+    &-layout-container {
+      display: flex;
+      gap:30px;
+    }
   }
 
   .display-icons {
     font-size: 56px !important;
     vertical-align: middle;
   }
+
 }
