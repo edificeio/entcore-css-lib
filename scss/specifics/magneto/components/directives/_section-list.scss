@@ -7,6 +7,7 @@
 
   display: flex;
   justify-content: space-between;
+  overflow-y: hidden;
 
   &-horizontal {
     flex-direction: column;
@@ -34,7 +35,11 @@
       min-width: 33%;
     }
 
-    @include desktop {
+    @include medium-desktop {
+      min-width: 25%;
+    }
+
+    @include large-desktop {
       min-width: 20%;
     }
 
