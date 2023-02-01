@@ -43,11 +43,14 @@
 
   .reload {
     cursor: pointer;
+
     &:hover {
       color: $statistics-presences-main;
     }
+
     &.disabled {
       color: $statistics-presences-middle-grey;
+
       &:hover {
         color: $statistics-presences-middle-grey;
       }
@@ -56,8 +59,18 @@
 
   .flex-row {
     min-height: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+  }
+
+  .cell-values.tr {
+    align-items: stretch;
+
+    .td {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: revert;
+      padding: 5px
+    }
   }
 
 }
