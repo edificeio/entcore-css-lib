@@ -53,6 +53,45 @@
     margin-bottom: 15px;
 }
 
+.unlock-flex {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 16px;
+    font-weight: 700;
+
+    .icon-lock {
+        margin-top: 3px;
+        margin-right: 5px;
+    }
+}
+
+.unlock {
+    color: #2A9CC8;
+
+    &:hover {
+        color: #2A9CC8;
+    }
+
+    .icon-lock {
+        color: #2A9CC8;
+    }
+
+    &-disabled[disabled] {
+        color: #B2DAEF;
+
+        &:hover {
+            color: #B2DAEF;
+        }
+
+        .icon-lock {
+            color: #B2DAEF;
+        }
+    }
+}
+
 .profil-flex {
     display: flex;
     justify-content: space-between;
