@@ -1,0 +1,108 @@
+.parameter{
+  &-subtitle{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $lystore-light-grey;
+    margin-top: 2em;
+    & > *{
+      vertical-align: middle;
+    }
+    & > i {
+      font-size: 1.5em;
+    }
+  }
+  &-valid-command{
+    color: $lystore-light-grey;
+    margin-bottom: 1em;
+    &-title{
+      margin-bottom: 1em;
+    }
+    &-label{
+      margin-left: 2em;
+      padding-left: 5px;
+      margin-bottom: 1em;
+      font-style: italic;
+      &-switch{
+        margin-left: 2em;
+      }
+    }
+  }
+  &-bc-setting{
+    &-title{
+      font-weight: bold;
+      color: $lystore-light-grey;
+      margin-bottom: 1em;
+      margin-top: 1em;
+    }
+    &-form-input{
+      &-line{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 2em;
+        & > input{
+          width: 75%;
+        }
+      }
+    }
+    &-img-render{
+      &-img{
+        position: relative;
+        clear: both;
+        box-sizing: border-box;
+        margin-left: 15%;
+        width: 50%;
+      }
+    }
+    &-buttons{
+      padding-left: 1em;
+      display: flex;
+      column-gap: 1em;
+    }
+  }
+  &-bc-preview{
+    &-address {
+      border: 1px black solid;
+      height: 250px;
+
+      &-text {
+        padding-bottom: 1em;
+        padding-top: 1em;
+      }
+    }
+    &-signature{
+      border: 1px black solid;
+      height: 100px;
+      &-text {
+        padding-bottom: 1em;
+        padding-top: 1em;
+      }
+    }
+    &-elem {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+  &-export-options{
+    &-instruction{
+      &-switches{
+        display: flex;
+        flex-flow: row wrap;
+        row-gap : 5px;
+        & > * {
+          flex: 0 0 50%;
+        }
+      }
+    }
+    &-bc{
+      &-switches{
+        display: flex;
+        flex-flow: row wrap;
+        row-gap : 5px;
+        & > * {
+          flex: 0 0 50%;
+        }
+      }
+    }
+  }
+}
