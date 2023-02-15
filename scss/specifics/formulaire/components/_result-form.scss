@@ -105,6 +105,14 @@
       }
     }
 
+    .custom-answers {
+      margin-top: 2%;
+
+      &-title {
+        font-style: italic;
+      }
+    }
+
     .buttons {
       display: flex;
       justify-content: space-between;
