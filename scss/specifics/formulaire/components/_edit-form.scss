@@ -105,9 +105,11 @@
           }
 
           .question-type {
-            font-size: 12px;
+            question-type-date, question-type-time, question-type-file {
+              font-size: 12px;
+            }
 
-            h4 {
+            h4, .add-choice {
               font-size: 16px;
             }
 
@@ -139,6 +141,12 @@
               height: 60px;
               resize: none;
               background: none;
+            }
+
+            .add-choice {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
             }
           }
 
