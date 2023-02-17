@@ -50,9 +50,9 @@
       }
     }
 
-    .navbar .welcome-message {
+    /* .navbar .welcome-message {
       display: none;
-    }
+    } */
 
     .cards-list .card {
       max-width: 250px;
@@ -93,9 +93,10 @@
       display: none;
     }
     .application-title {
+      margin-bottom: 0;
       position: fixed;
       color: #fff;
-      top: 0;
+      top: -4px;
       left: 10px;
       z-index: 10001;
       line-height: 50px;

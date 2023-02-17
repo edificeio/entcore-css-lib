@@ -1,0 +1,124 @@
+.pagination {
+  font-size: 0;
+  text-align: center;
+}
+.pagination-item {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 2px;
+}
+.pagination-item.arrow > .pagination-item-link {
+  font-size: 24px;
+  color: #000000;
+}
+.pagination-item.arrow > .pagination-item-link:hover {
+  background-color: #ffb600;
+  border-color: #ffb600;
+  color: #fff;
+}
+.pagination-item-link {
+  position: relative;
+  display: block;
+  text-align: center;
+  min-width: 24px;
+  line-height: 42px;
+  color: #7a7a7a;
+  transition: 0.3s;
+}
+.pagination-item-link:hover {
+  background-color: #ffb600;
+  border-color: #ffb600;
+  color: #fff;
+}
+.pagination-item.active > .pagination-item-link {
+  background-color: #ffb600;
+  border-color: #ffb600;
+  color: #fff;
+}
+.pagination-item:nth-child(3), .pagination-item:nth-child(5) {
+  pointer-events: none;
+}
+
+.pagination-item:empty::before {
+  display: none;
+}
+
+option:disabled {
+  display: none;
+}
+
+.selected-child {
+  display: flex;
+}
+.selected-child-select {
+  margin: 0 15px 0 0;
+}
+
+@media (max-width: 768px) {
+  .presences-nav-bar {
+    margin-left: 30px;
+  }
+}
+.presences-nav-bar nav {
+  height: 80px !important;
+}
+.presences-nav-bar nav[side-nav] {
+  position: fixed;
+  left: 0;
+  top: 50px;
+  z-index: 10001;
+  transition: all 250ms ease;
+  box-sizing: border-box;
+  width: 0;
+  overflow: hidden;
+  padding: 0;
+  background-color: #F0F0F0;
+  border-radius: 2px;
+  border-left: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.26);
+}
+.presences-nav-bar nav[side-nav].slide {
+  width: 155px;
+  padding: 0 10px;
+  overflow: unset;
+}
+
+.menu .menu-item > a {
+  color: #000000;
+  font-size: 18px;
+  padding: 0 10px;
+  text-align: center;
+  margin: 0 5px;
+  height: 50px;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 50px;
+}
+.menu .menu-item > a::after {
+  content: " ";
+  display: block;
+  height: 3px;
+  background: #ffb600;
+  border-radius: 2px;
+  margin-top: -10px;
+  width: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.menu .menu-item > a.current-state {
+  color: #ffb600;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  font-weight: bold;
+}
+.menu .menu-item > a.current-state::after {
+  width: 100%;
+}
+
+export-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}/*# sourceMappingURL=common.css.map */
