@@ -40,8 +40,11 @@
         align-items: center;
         justify-content: space-between;
         margin-right: 2em;
+        margin-bottom: 1em;
         & > input{
           width: 75%;
+          margin-bottom: 0;
+          background-color: white;
         }
       }
     }
