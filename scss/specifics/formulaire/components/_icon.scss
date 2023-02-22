@@ -218,4 +218,9 @@ i {
     font-family: 'formulaire-mdi';
     content: "\F453";
   }
+
+  &.i-restore::before {
+    font-family: 'formulaire-mdi';
+    content: "\F99A";
+  }
 }
