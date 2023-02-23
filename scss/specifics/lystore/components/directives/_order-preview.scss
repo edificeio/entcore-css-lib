@@ -1,0 +1,162 @@
+.pdf-generation-preview .prev-next {
+  margin-top: 50px;
+}
+
+.order-preview {
+  margin-top: 50px;
+  font-family: "Calibri", sans-serif !important;
+  align-content: center !important;
+  color: #000000 !important;
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5 {
+    color: #000000 !important;
+  }
+
+  & .logo-region{
+    height: auto;
+    width: 300px;
+    border-bottom: 1px #f6f6f6 solid ;
+    margin-bottom: 5px;
+  }
+
+  &  .left {
+    position: relative;
+    width: 45%;
+    margin-right: 5%;
+    display: inline-block;
+  }
+
+  &  .left::before {
+    content: none !important;
+  }
+  &  .right {
+    position: relative;
+    margin-left: 5%;
+    width: 44%;
+    display: inline-block;
+  }
+
+  & .order-info {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  &  .right > input {
+    width: 90%;
+  }
+  &  .right > h1{
+    font-size: 20px ;
+  }
+  &  .header {
+    width: 100%;
+  }
+  &  .foot {
+    width: 100%;
+    margin-top: 35px;
+  }
+
+  &  .fright {
+    float: right;
+  }
+
+  &  .signature {
+    height: 60px;
+  }
+  & .equipments-table  {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+  }
+  &  .equipments-table tfoot tr td:first-child  {
+    font-weight: bold;
+  }
+  &  .equipments-table tr  td {
+    padding-top:10px;
+    padding-left: 10px ;
+    padding-bottom:10px;
+    border: 1px solid #ddd;
+  }
+
+  &  table.equipments-table > tbody tr:nth-child(odd) td {
+    background-color: #efefef;
+  }
+  &  table.equipments-table > tbody tr:nth-child(even) td {
+    background-color: #f2f4f6;
+  }
+
+  &  table > thead {
+    font-size: 14px ;
+    font-weight: bold;
+    text-align: center;
+  }
+  &  input {
+    min-width: 150px ;
+    width: 150px;
+    max-width: 100%;
+    margin-left: 5px;
+    padding-left: 5px ;
+  }
+
+  &  table > tfoot > tr {
+    margin-top: 20px;
+  }
+  &  div.service-fait > table.header {
+    margin-bottom: 10px ;
+  }
+  &  div.service-fait > table.equipments-table {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  &  div.service-fait > div.signature {
+    width: 100%;
+    height: 400px;
+  }
+  &  div.block {
+    border: 0.5px #aaaaaa solid;
+    margin-bottom: 5px ;
+    margin-top: 5px ;
+    padding: 5px;
+    page-break-after: avoid;
+  }
+  &  .center-text {
+    text-align: center;
+  }
+
+  &  .right-text {
+    text-align: right;
+    padding-right: 5px;
+  }
+
+  & .bigger {
+    width: 70%;
+  }
+
+  &  .smaller {
+    width: 25%;
+  }
+
+  &  .uppercase {
+    text-transform: uppercase;
+  }
+
+  & .orders {
+    margin-bottom: 50px;
+  }
+
+  & .header h4, &  .header h5 {
+    margin: 5px;
+  }
+
+  & .signature:not(:empty) {
+    border-top: 0 !important;
+  }
+
+  & table thead td {
+    background-color: #fff;
+    color: #000;
+  }
+}

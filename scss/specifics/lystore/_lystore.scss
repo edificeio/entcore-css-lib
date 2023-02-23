@@ -1,6 +1,6 @@
 
 @font-face {
-  font-family: 'material-icons';
+  font-family: 'lystore-material-icons';
   src: url('/lystore/public/font/material-design/fonts/materialdesignicons-webfont.eot');
   src: url('/lystore/public/font/material-design/fonts/materialdesignicons-webfont.eot') format('embedded-opentype'),
   url('/lystore/public/font/material-design/fonts/materialdesignicons-webfont.woff2') format('woff2'),
@@ -9,6 +9,7 @@
   font-weight: normal;
   font-style: normal;
 }
+$lystore-light-grey: #7f8080;
 
 body.lystore {
   @import './components/index';

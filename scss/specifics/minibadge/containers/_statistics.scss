@@ -87,6 +87,16 @@
   &-top-most-refused {
     flex: 4;
 
+    .minibadge-card {
+      width: 100%;
+      background: $minibadge-white;
+      border: none;
+
+      container-body {
+        font-weight: bold;
+      }
+    }
+
     .close-circle {
       color: $minibadge-red;
     }

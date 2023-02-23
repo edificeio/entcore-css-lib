@@ -1,0 +1,22 @@
+i {
+  &.lystore-download::before {
+    font-family: 'lystore-material-icons';
+    content: "\F1DA";
+  }
+  &.trash::before{
+    font-family: 'lystore-material-icons';
+    content: "\FA79";
+  }
+  &.pencil::before{
+    font-family: 'lystore-material-icons';
+    content: "\F3EB";
+  }
+  &.tune::before{
+    font-family: 'lystore-material-icons';
+    content: "\F62E";
+  }
+  &.clipboard::before{
+    font-family: 'lystore-material-icons';
+    content: "\F14E";
+  }
+}

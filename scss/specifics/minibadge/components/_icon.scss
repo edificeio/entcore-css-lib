@@ -107,4 +107,14 @@ i {
     font-family: 'minibadge-icons';
     content: "\F0987";
   }
+
+  &.icon-eye::before {
+    font-family: 'minibadge-icons';
+    content: "\F06D0";
+  }
+
+  &.eye-off::before {
+    font-family: 'minibadge-icons';
+    content: "\F06D1";
+  }
 }
