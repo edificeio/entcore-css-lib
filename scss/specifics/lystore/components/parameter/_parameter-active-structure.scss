@@ -1,6 +1,5 @@
-parameter-table
-{
-  .parameter-table{
+.parameter{
+  &-table{
     position: fixed;
     display: block;
     right: -250px;
@@ -13,6 +12,14 @@ parameter-table
     &.hide{
       right: -250px;
       transition: right 250ms ease;
+    }
+    &-body{
+      &-th{
+        &-left{
+          text-align: left;
+          padding-left: 2em;
+        }
+      }
     }
   }
 
@@ -33,11 +40,11 @@ parameter-table
     }
   }
 
-  .parameter-table::-webkit-scrollbar{
+  &-table::-webkit-scrollbar{
     width: 9px;
     background-color: #F5F5F5;
   }
-  .parameter-table::-webkit-scrollbar-thumb
+  &-table::-webkit-scrollbar-thumb
   {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
@@ -49,5 +56,5 @@ parameter-table
     overflow-y: auto;
     height: 60vh;
   }
-
 }
+
