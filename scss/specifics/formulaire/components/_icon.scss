@@ -82,9 +82,17 @@ i {
     }
   }
 
+  &.cursor {
+    &-pointer {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
   // Icons content
 
-  &.dropbtn::before{
+  &.dropbtn::before {
     content: '\e912';
   }
 
