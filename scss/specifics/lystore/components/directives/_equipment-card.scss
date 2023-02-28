@@ -1,0 +1,29 @@
+.equipment-card{
+  &-status{
+    background-color: $white;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid $black;
+  }
+  &-price-ht{
+    margin-bottom: 4px;
+  }
+  &-price-ttc{
+    color: $lystore-light-grey;
+    font-size: 16px;
+    margin-left: 5%;
+    margin-bottom: 4px;
+  }
+  &-tax{
+    color: $lystore-light-grey;
+    font-size: 14px;
+    margin-left: 5%;
+    margin-bottom: 4px;
+  }
+  &-equipment {
+    &-name {
+      display: block;
+      margin: 10px 0 5px 0;
+    }
+  }
+}
