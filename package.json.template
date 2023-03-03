@@ -43,7 +43,7 @@
     "sass": "^1.49.9"
   },
   "dependencies": {
-    "entcore-generic-icons": "git+https://github.com/opendigitaleducation/generic-icons.git#master"
+    "entcore-generic-icons": "git+https://github.com/CGI-OPEN-ENT-NG/generic-icons.git#dev"
   },
   "files": ["assets", "scss", "dist"]
 }
