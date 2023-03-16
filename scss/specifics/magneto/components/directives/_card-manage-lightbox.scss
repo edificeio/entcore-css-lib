@@ -2,6 +2,10 @@
 
   @include lightboxWidth(80%);
 
+  .content > :first-child {
+    min-height: 60vh;
+  }
+
   .content {
 
     .card-manage-lightbox-head {

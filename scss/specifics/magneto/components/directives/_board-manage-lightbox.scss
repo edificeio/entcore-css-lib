@@ -27,9 +27,27 @@
 
     &-inputs {
       margin: 0 25px 25px !important;
+      display: flex;
+      flex-direction: column;
 
       textarea {
         resize: none;
+      }
+
+      &-options {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+
+        h2 {
+          color: $magneto-black;
+        }
+      }
+
+      .board-layout-type {
+        h2 {
+          color: $magneto-black;
+        }
       }
     }
 

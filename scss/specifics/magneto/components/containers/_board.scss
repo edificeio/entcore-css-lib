@@ -67,6 +67,7 @@
     border-top: solid 1px $magneto-white-blue;
     border-bottom: solid 1px $magneto-white-blue;
     background-size: cover;
+    min-height: 84vh;
     &.no-background-image {
       background: $magneto-lighter-light-grey;
     }
@@ -81,7 +82,7 @@
     }
 
     &-list {
-      min-height: 80vh;
+      min-height: 650px;
       width: 100%;
       overflow-x: auto;
 
