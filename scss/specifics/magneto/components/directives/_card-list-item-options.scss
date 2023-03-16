@@ -1,9 +1,9 @@
   .card-list-item-options {
+    transform: translateX(5px) translateY(-26px);
+    z-index: 2;
     nav {
       .nav, .sub-nav {
         position: absolute;
-        top: 0;
-        left: 100%;
         z-index: 2;
         background-color: $magneto-white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);

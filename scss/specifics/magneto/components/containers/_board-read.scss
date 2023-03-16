@@ -27,6 +27,12 @@
     right: 20px;
     z-index: 1;
     color: $magneto-black;
+
+    &:before {
+      background-color: $magneto-white;
+      border-radius: 50%;
+      opacity: 0.9;
+    }
   }
 
   .nav-left {
@@ -36,6 +42,12 @@
     left: 20px;
     z-index: 1;
     color: $magneto-black;
+
+    &:before {
+      background-color: $magneto-white;
+      border-radius: 50%;
+      opacity: 0.9;
+    }
   }
 
   .button-icon {

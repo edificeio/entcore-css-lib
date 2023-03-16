@@ -1,0 +1,69 @@
+.card-comment {
+
+  &:hover {
+    i.magneto-card-settings {
+      opacity: 1;
+    }
+  }
+
+  &-infos {
+    display: flex;
+
+    &-header {
+      display: flex;
+
+      .card-list-item-options {
+        transform: inherit !important;
+      }
+
+
+      &-user {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        &-avatar {
+          margin-right: 8px;
+          margin-top: 0;
+          padding: 5px 0;
+          border-radius: 50%;
+          border: 1px solid rgba(0,0,0,0);
+          width: 30px;
+          height: 30px;
+          vertical-align: middle;
+        }
+        &-infos {
+          display: flex;
+          flex-direction: column;
+
+          &-name {
+            font-weight: bold;
+            @include noTextOverflow(1);
+          }
+          &-date {
+            color: $magneto-light-grey;
+            font-size: 12px;
+            line-height: 12px;
+          }
+        }
+      }
+
+      i.magneto-card-settings {
+        opacity: 0;
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-end;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &-content {
+    line-height: 18px;
+    margin-left: 40px;
+  }
+
+}

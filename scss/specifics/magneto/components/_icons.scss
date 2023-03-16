@@ -219,4 +219,15 @@ i {
     font-family: 'magneto-mdi';
     content: '\F0009';
   }
+
+  &.magneto-comment-outline::before {
+    font-family: 'magneto-mdi';
+    content: '\F0182';
+  }
+
+  &.magneto-close::before {
+    font-family: 'magneto-mdi';
+    content: '\F0156';
+  }
+
 }

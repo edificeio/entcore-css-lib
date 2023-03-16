@@ -1,0 +1,72 @@
+.magneto-comments-panel {
+
+  &.opened {
+    width: 320px;
+    height: 80%;
+
+    .magneto-comments-panel-button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 12px;
+    }
+  }
+
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 12px;
+  background: $magneto-white;
+  cursor: pointer;
+  box-shadow: -2px -2px 4px rgb(0 0 0 / 12%);
+
+  display: flex;
+  flex-direction: column;
+
+  &-button {
+    font-size: 20px;
+  }
+
+  &-list {
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &-header {
+
+      display: flex;
+      justify-content: space-between;
+
+      i.magneto-close {
+        font-size: 24px;
+        padding: 4px;
+      }
+
+      &-title {
+        font-size: 20px;
+        padding: 8px;
+      }
+
+    }
+
+    &-items {
+
+      max-height: 80%;
+      overflow-y: auto !important;
+
+      &-item {
+        padding: 8px;
+        margin: 8px;
+      }
+    }
+
+    .comment-input {
+      bottom: 0;
+      position: absolute;
+    }
+  }
+
+
+}

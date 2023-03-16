@@ -2,15 +2,17 @@
   &.no-background-image {
     background: $magneto-lighter-light-grey;
   }
-  gap: 16px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(230px,1fr));
+  grid-auto-rows: 0;
 
   &-free {
     justify-content: center;
   }
 
   &-vertical {
-    justify-content: center;
+    justify-items: center;
     overflow-y: auto;
     overflow-x: hidden;
     height: 85vh;
