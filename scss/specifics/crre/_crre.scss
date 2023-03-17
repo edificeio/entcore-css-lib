@@ -1621,7 +1621,7 @@ body.crre {
 
   .float {
     position: fixed;
-    bottom: 20px;
+    bottom: 70px;
     right: 20px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -1758,4 +1758,14 @@ body.crre {
     display : flex;
   }
 
+  .crre {
+    &-order-waiting {
+      &-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+  }
 }
