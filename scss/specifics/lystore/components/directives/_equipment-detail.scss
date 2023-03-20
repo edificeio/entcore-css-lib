@@ -1,6 +1,11 @@
 .equipment-detail{
   padding : 1em;
-  &-recap-ht{
-    color: $lystore-light-grey;
+  &-recap{
+    &-ht{
+      color: $lystore-light-grey;
+    }
+    &-price-total{
+      margin-bottom: 0!important;
+    }
   }
 }
