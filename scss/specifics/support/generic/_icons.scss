@@ -1,0 +1,21 @@
+i {
+  &.attachment::before {
+    content: "\e805";
+    font-family: 'generic-icons';
+  }
+
+  &.cross::before {
+    content: "\e866";
+    font-family: 'generic-icons';
+  }
+
+  &.sync::before {
+    content: "\F04E6";
+    font-family: 'calendar-material-icons';
+  }
+
+  &.loading::before {
+    content: '\e85a';
+    font-family: 'generic-icons';
+  }
+}
