@@ -21,24 +21,25 @@
         }
       }
     }
-  }
-
-  .button-puce{
-    width: 40px;
-    height: 40px;
-    background: #FF8500;
-    border-radius: 15px 0 0 15px;
-    i.param{
-      &:before{
-        content: '\e854';
-        font-size: 25px;
-        color: white;
-        position: absolute;
-        margin-left: 10px;
-        margin-top: 6.5px;
+    & .button-puce{
+      width: 40px;
+      height: 40px;
+      background: #FF8500;
+      border-radius: 15px 0 0 15px;
+      i.param{
+        &:before{
+          content: '\e854';
+          font-size: 25px;
+          color: white;
+          position: absolute;
+          margin-left: 10px;
+          margin-top: 6.5px;
+        }
       }
     }
   }
+
+
 
   &-table::-webkit-scrollbar{
     width: 9px;
