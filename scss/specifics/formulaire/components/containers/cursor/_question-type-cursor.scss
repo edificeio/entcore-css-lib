@@ -16,7 +16,7 @@
         display: flex;
 
         @media screen and (min-width: $formulaire-screen-tablet) {
-          width: 20%;
+          width: 30%;
         }
       }
     }
@@ -44,7 +44,7 @@
     &-wrapper {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 2%;
+      margin: 2% 0;
     }
     
     &-label {
@@ -108,6 +108,8 @@
         height: 16px;
         width: 16px;
         cursor: grabbing;
+        position: relative;
+        bottom: -3px;
         z-index: 2;
       }
 
@@ -118,6 +120,8 @@
         height: 16px;
         width: 16px;
         cursor: grabbing;
+        position: relative;
+        bottom: -3px;
         z-index: 2;
       }
 
@@ -140,9 +144,11 @@
       /***** Pin cursor styles *****/
       .pin {
         position: absolute;
-        left: calc((((var(--value) - var(--min)) / (var(--max) - var(--min))) * 100%) - 10px);
+        left: calc(((var(--value) - var(--min)) / (var(--max) - var(--min))) * 100%
+                    - calc(((var(--value) - var(--min)) / (var(--max) - var(--min))) * 15px)
+                    - 2px);
         bottom: 35px;
-        width: 23px;
+        width: 22px;
         height: 20px;
         background-color: $formulaire-blue;
 
@@ -170,9 +176,10 @@
         &::before {
           position: absolute;
           height: 10px;
-          width: calc(((var(--value) - var(--min)) / (var(--max) - var(--min))) * 100%);
+          width: calc((var(--value) - var(--min))/(var(--max) - var(--min)) * 100%
+                      - calc((var(--value) - var(--min))/(var(--max) - var(--min)) * 15px));
           bottom: 8px;
-          left: 3px;
+          left: 9px;
           background-color: $formulaire-blue;
           border-radius: 5px;
           content: '';
@@ -182,9 +189,9 @@
         &::after {
           position: absolute;
           height: 10px;
-          width: calc(100% - 3px);
+          width: calc(100% - 16px);
           bottom: 8px;
-          left: 3px;
+          left: 9px;
           background-color: #efefef;
           border-radius: 5px;
           content: '';
