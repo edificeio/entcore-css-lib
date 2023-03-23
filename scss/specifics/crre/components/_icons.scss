@@ -1,0 +1,16 @@
+i {
+    &.crre-mdi-arrow-down::before {
+        font-family: 'material-icons';
+        content: "\f045";
+    }
+
+    &.crre-mdi-arrow-up::before {
+        font-family: 'material-icons';
+        content: "\f05d";
+    }
+
+    &.crre-mdi-swap-vertical::before {
+        font-family: 'material-icons';
+        content: "\f4e2";
+    }
+}
