@@ -98,6 +98,10 @@
       &-camembert, &-histogram {
         display: flex;
         justify-content: center;
+
+        &-cursor {
+          flex-direction: column;
+        }
       }
 
       .apexcharts-toolbar {
