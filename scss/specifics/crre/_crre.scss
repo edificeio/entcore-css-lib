@@ -1759,6 +1759,17 @@ body.crre {
   }
 
   .crre {
+    &-display-duplicate-basket {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 4px;
+    }
+
+    &-display-duplicate-basket::before {
+      content: "\2022"; /* code unicode pour le point */
+      margin-right: 10px;
+    }
+
     &-order-waiting {
       &-header {
         display: flex;
