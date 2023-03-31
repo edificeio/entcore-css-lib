@@ -1,0 +1,92 @@
+.init-1d-lightbox {
+
+  .content {
+    width: 70%;
+
+
+    .init-1d-lightbox-body {
+      padding: 20px;
+
+      &-warning {
+        font-weight: bold;
+      }
+
+      &-schoolyear {
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-weight: bold;
+        }
+
+        &-content {
+          display: flex;
+
+          &-date {
+            margin-right: 16px;
+
+            .date-picker {
+              margin: 8px;
+            }
+          }
+        }
+
+      }
+
+      &-timetable {
+
+        &-title {
+          font-weight: bold;
+        }
+
+        &-content {
+          &-hours {
+            margin: 8px 0;
+          }
+          &-days {
+            display: flex;
+            margin: 16px 0;
+            align-items: center;
+          }
+        }
+      }
+
+      &-holidays {
+        &-title {
+          font-weight: bold;
+        }
+
+        &-content {
+          display: flex;
+          flex-direction: row;
+
+          &-system-select {
+            display: flex;
+            flex-direction: column;
+
+            .md-radio {
+                margin: 16px 0;
+            }
+          }
+
+          &-zone-select {
+            display: flex;
+            padding: 18px;
+
+            &-zones {
+              margin-left: 16px;
+            }
+          }
+        }
+      }
+
+
+    }
+
+  }
+
+
+
+
+
+}
