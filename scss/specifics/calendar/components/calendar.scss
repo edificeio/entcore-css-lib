@@ -26,7 +26,7 @@
     background-color: #ec6045 !important;
 }
 .color-selector .cyan, .row .cyan , nav.vertical ul li a.cyan, .calendarTooltip>.cyan {
-    background-color: $calendar-blue !important;
+    background-color: $calendar-blue;
 }
 .color-selector .grey, .row .grey, nav.vertical ul li a.grey, .calendarTooltip>.grey {
     background-color: #b7b8ba !important;
@@ -157,7 +157,7 @@ calendar {
     }
 
     legend, .legend>.month-day, button.cyan {
-        background: $calendar-blue !important;
+        background: $calendar-blue;
     }
 
     button.previous-timeslots, button.next-timeslots {
@@ -185,10 +185,6 @@ calendar {
     .day-number {
         pointer-events: none !important;
     }
-}
-
-h1 a {
-    color: $calendar-blue !important;
 }
 
 .top-spacing-four {

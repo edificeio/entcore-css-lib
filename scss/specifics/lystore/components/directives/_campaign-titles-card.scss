@@ -1,0 +1,21 @@
+.campaign-titles-card{
+  &-elem{
+    margin-right: 2px;
+    padding: 5px 30px 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background-color: #e9ebef;
+    color: #8c939e;
+    transition: all .25s ease-in-out;
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    &:hover{
+      border: orange solid 1px;
+    }
+    &-selected {
+      background-color: #8c939e;
+      color: $white;
+    }
+  }
+}
