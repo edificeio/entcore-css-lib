@@ -156,7 +156,11 @@ calendar {
         }
     }
 
-    legend, .legend>.month-day, button.cyan {
+    legend, .legend>.month-day {
+        background: $calendar-blue !important;
+    }
+
+    button.cyan {
         background: $calendar-blue;
     }
 
