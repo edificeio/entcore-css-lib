@@ -239,9 +239,15 @@
           }
         }
 
-        .addQuestion {
-          text-align: right;
-          padding: 1%;
+        .bottom-buttons {
+          display: flex;
+          flex-direction: row;
+          padding: 8px 16px;
+
+          .addQuestion {
+            text-align: right;
+            align-self: center;
+          }
         }
       }
     }
