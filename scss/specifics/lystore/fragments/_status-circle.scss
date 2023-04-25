@@ -62,9 +62,9 @@
   }
 
   &.WAITING_FOR_ACCEPTANCE{
-    background: $orange;
-    >i{
-      background-image: url(/lystore/public/img/scss/check.svg);
+    background: $yellow;
+    > i {
+      background-image: url(/lystore/public/img/scss/sync.svg);
     }
   }
 
