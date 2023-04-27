@@ -29,6 +29,9 @@ body.lool {
         &-tree {
           max-height: 50vh;
           overflow-y: auto;
+          > ul {
+            box-sizing: border-box;
+          }
         }
       }
 
