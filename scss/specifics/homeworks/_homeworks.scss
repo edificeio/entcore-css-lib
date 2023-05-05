@@ -289,6 +289,40 @@ $panda-blue: #3889c1;
       margin-top: -1px;
     }
   }
+  .homeworkModal {
+    .homeworkDoTable {
+      max-height: 300px;
+      overflow-y: scroll;
+      margin: 10px 0px 10px 0px;
+      #thCenter {
+        text-align: center;
+      }
+      #tdCenter {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .homeworkDoContainer {
+    font-size: 15px;
+    font-weight: initial;
+    display: flex;
+  }
+  .homeworkBadge {
+    padding: 1px 7px 1px 7px;
+    text-align: center;
+    border-radius: 15px;
+    margin-left: 8px;
+    font-size: 13px;
+    width: fit-content;
+    border: 2px solid;
+  }
+  .homeworkBadge.borderRed {
+    border-color: $red;
+  }
+  .homeworkBadge.borderGreen {
+    border-color: $green;
+  }
   .homeworksRecurrence {
     height: 0;
     .recurrent {
