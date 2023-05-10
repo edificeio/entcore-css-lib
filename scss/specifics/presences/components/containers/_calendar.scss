@@ -295,6 +295,12 @@ $calendar-user-card-height: 56px;
 
           .data > em.metadata {
             margin-right: 4px;
+            max-width: -moz-calc(20% - 4px);
+            max-width: calc(20% - 4px);
+
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
           }
 
           &.contains-absence, &.contains-absenceReason {
