@@ -19,7 +19,6 @@
 
   @include mobile {
     width: 170px;
-    height: 183px;
   }
 
   &-image {
@@ -37,7 +36,7 @@
   }
 
   &-infos {
-    height: 40%;
+    height: 25%;
     margin: 4%;
     flex-direction: column;
 
