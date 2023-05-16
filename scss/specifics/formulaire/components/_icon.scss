@@ -101,6 +101,11 @@ i {
     content: "\F09C";
   }
 
+  &.i-earth::before {
+    font-family: 'formulaire-mdi';
+    content: "\F1E7";
+  }
+
   &.i-cancel::before {
     font-family: 'formulaire-mdi';
     content: "\F156";
