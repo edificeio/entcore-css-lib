@@ -4,7 +4,6 @@
     background: $magneto-white;
     padding: $spacing-M;
     padding-left: $spacing-XM;
-    z-index: 2;
     @include noTextOverflow(1);
     h1 {
       font-family: $magneto-font-secondary;
