@@ -11,6 +11,8 @@
       align-items: flex-start;
       justify-content: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+      overflow-y: auto;
+      overflow-x: hidden;
 
       a {
         color: $magneto-black !important;
@@ -38,8 +40,12 @@
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
-        margin-top: 200px;
+        margin-top: 180px;
         height: 72%;
+        transition: margin-top 0.2s ease-in-out;
+        @media screen and (max-height: $magneto-screen-mobile) {
+          margin-top: 60px;
+        }
 
         .item {
           display: block;
