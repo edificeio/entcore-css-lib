@@ -5,6 +5,13 @@
     right: -250px;
     top: 146px;
     width: 290px;
+    bottom:0;
+    &-list{
+      position: absolute;
+      overflow-y: scroll;
+      height: 93%;
+      bottom: 0;
+    }
     &.show{
       right: 0px;
       transition: right 250ms ease;
