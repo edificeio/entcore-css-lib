@@ -1,8 +1,7 @@
 .init-1d-lightbox {
 
   .content {
-    width: 70%;
-
+    width: 75%;
 
     .init-1d-lightbox-body {
       padding: 20px;
@@ -42,6 +41,21 @@
         &-content {
           &-hours {
             margin: 8px 0;
+
+            .card {
+              padding: 4px;
+              margin-right: 8px;
+            }
+
+            .time-picker {
+              input[type="time"] {
+                height: 15px !important;
+              }
+              input[type="time"]::-webkit-calendar-picker-indicator {
+                background: none;
+                display: none;
+              }
+            }
           }
           &-days {
             display: flex;
