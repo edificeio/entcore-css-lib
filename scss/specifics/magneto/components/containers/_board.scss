@@ -30,8 +30,7 @@
 
   &-header-mobile {
     background: $magneto-white;
-    padding: $spacing-LXS;
-    z-index: 2;
+    padding: $spacing-LXS $spacing-LXS $spacing-LXS 73px;
     top: -12px;
     @include noTextOverflow(1);
 
