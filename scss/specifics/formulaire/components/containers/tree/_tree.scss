@@ -1,0 +1,76 @@
+.tree-view {
+  //display: flex;
+  //justify-content: center;
+  padding: 16px;
+  min-height: calc(100vh - 74px - 8px - 60px - 60px - 32px);
+  text-align: center;
+
+  &-question {
+    background: white;
+    height: 32px;
+    width: calc(((100vw - 70px - 32px) / 3) - 16px);
+    min-width: calc(300px - 16px);
+    margin: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 2px #bfbfbf7d;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin: 0 16px;
+    }
+  }
+
+  &-section {
+    background: white;
+    width: calc((100vw - 70px - 32px) /3);
+    min-width: 300px;
+    margin: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 2px #bfbfbf7d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .top {
+      background: $formulaire-blue;
+      color: white;
+      min-height: 32px;
+      border-radius: 5px 5px 0 0;
+      display: flex;
+      align-items: center;
+
+
+      &.no-main {
+        border-radius: 3px 3px;
+        justify-content: center;
+      }
+
+      .title {
+        margin-left: 8px;
+      }
+    }
+
+    .main {
+      min-height: 32px;
+      padding: 8px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  svg {
+    .node rect {
+      fill: transparent;
+    }
+
+    .edgePath path {
+      stroke: $formulaire-blue;
+      fill: $formulaire-blue;
+      stroke-width: 1.5px;
+    }
+  }
+}
