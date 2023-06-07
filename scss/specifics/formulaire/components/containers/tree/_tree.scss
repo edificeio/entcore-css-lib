@@ -5,6 +5,10 @@
   min-height: calc(100vh - 74px - 8px - 60px - 60px - 32px);
   text-align: center;
 
+  .tree-legend{
+    font-style: italic;
+  }
+
   &-question {
     background: white;
     height: 32px;
