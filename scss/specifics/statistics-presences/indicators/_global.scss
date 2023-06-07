@@ -74,4 +74,14 @@
     }
   }
 
+  .tbody {
+    .cell-values {
+      .td {
+        .audience {
+          display: inline;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
 }
