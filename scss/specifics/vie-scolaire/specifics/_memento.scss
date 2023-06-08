@@ -44,7 +44,7 @@ body {
   top: 64px;
   width: 100%;
   height: calc(100% - 64px);
-  z-index: 100000;
+  z-index: 10000;
   left: 0;
   overflow-y: auto;
   color: $black !important;
