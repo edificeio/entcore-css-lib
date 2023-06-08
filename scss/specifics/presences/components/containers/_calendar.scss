@@ -528,7 +528,8 @@ $calendar-user-card-height: 56px;
 
         + .list {
           overflow-y: scroll;
-          height: calc(100% - #{$calendar-user-card-height}) !important;
+          height: auto !important;
+          max-height: calc(100% - #{$calendar-user-card-height}) !important;
         }
       }
 
