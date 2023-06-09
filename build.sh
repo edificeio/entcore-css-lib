@@ -26,7 +26,7 @@ init () {
   sed -i "s/%generateVersion%/${NPM_VERSION_SUFFIX}/" package.json
 
   echo "[init] Install yarn dependencies..."
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "yarn install"
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "yarn install --production=false"
 }
 
 build () {
