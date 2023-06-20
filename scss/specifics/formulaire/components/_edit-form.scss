@@ -30,6 +30,7 @@
   flex-direction: column;
   align-content: space-between;
 
+
   .question-item .domino:not(.disabled) > .grab,
   .section-top:not(.disabled) > .grab {
     cursor: grab;
@@ -117,6 +118,22 @@
               display: flex;
               align-items: center;
 
+              .form-image {
+                position: relative;
+                margin: 15px 10px 15px 10px;
+                i.i-close {
+                  position: absolute;
+                  top: -20px;
+                  left: -20px;
+                  margin: auto 1%;
+                }
+                &-upload {
+                  display: flex;
+                  width: 25%;
+                  margin: 10px;
+                }
+              }
+
               select {
                 margin-left: 6%;
               }
@@ -131,9 +148,6 @@
                 }
               }
 
-              i.i-cancel {
-                margin: auto 1%;
-              }
             }
 
             textarea {
@@ -147,6 +161,39 @@
               display: flex;
               flex-direction: column;
               align-items: center;
+            }
+
+            question-type-singleanswer, question-type-multipleanswer {
+
+              /* Ajuster la taille de <image-select> */
+              .image-select {
+                width: 100px;
+                height: 100px;
+              }
+
+              /* Ajuster la taille de l'image dans la directive <image-select> */
+              .image-select .initialFloat.cell img {
+                width: 100px;
+                height: 100px;
+              }
+
+              /* Ajuster la taille de l'image affichée dans la balise <img> */
+              img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+              }
+
+              .image-container {
+                position: relative;
+                width: 125px;
+              }
+
+              .image-container .i-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
             }
           }
 
