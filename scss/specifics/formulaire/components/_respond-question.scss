@@ -33,30 +33,6 @@
           height: inherit;
         }
       }
-
-      .image-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-flow: wrap;
-
-        img {
-          width: 150px;
-          height: 150px;
-          object-fit: cover;
-          margin-top: 15px;
-        }
-
-        input[type="text"] {
-          margin-top: 10px;
-        }
-
-        .choice-image {
-          display: flex;
-          flex-direction: column;
-          margin-bottom: 15px;
-        }
-      }
     }
 
     &-edit {
@@ -72,6 +48,30 @@
 
     &.alone {
       justify-content: end !important;
+    }
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-top: 15px;
+    }
+
+    input[type="text"] {
+      margin-top: 10px;
+    }
+
+    .choice-image {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
     }
   }
 }
