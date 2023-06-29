@@ -18,7 +18,7 @@
     &-main {
       display: flex;
       flex-direction: column;
-      font-size: 12px;
+      font-size: 14px;
 
       textarea {
         width: 100%;
@@ -72,6 +72,20 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 15px;
+
+      .choice-text {
+        display: flex;
+        align-items: center;
+
+        .notCustomChoice {
+          height: 27.89px; // Too match the height of ODE inout text
+        }
+
+        .customInput {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
