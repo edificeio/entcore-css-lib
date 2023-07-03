@@ -156,9 +156,9 @@
       @include grid-cell-left(12);
     }
 
-    /* .zero-mobile {
+    .zero-mobile {
       display: none !important;
-    } */
+    }
 
     .one-mobile {
       @include grid-cell-width(1);
