@@ -25,33 +25,33 @@ init () {
   cp package.json.template package.json
   sed -i "s/%generateVersion%/${NPM_VERSION_SUFFIX}/" package.json
 
-  echo "[init] Install yarn dependencies..."
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "yarn install --production=false"
+  echo "[init] Install pnpm dependencies..."
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm install"
 }
 
 build () {
   local extras=$1
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm run release:build"
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm run release:build"
   VERSION=`grep "version="  gradle.properties| sed 's/version=//g'`
   echo "entcore-css-lib=$VERSION `date +'%d/%m/%Y %H:%M:%S'`" >> dist/version.txt
 }
 
 watch () {
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm run dev:watch"
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm run dev:watch"
 }
 
 lint () {
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm run dev:lint"
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm run dev:lint"
 }
 
 lint-fix () {
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm run dev:lint-fix"
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm run dev:lint-fix"
 }
 
 publish () {
   LOCAL_BRANCH=`echo $GIT_BRANCH | sed -e "s|origin/||g"`
   echo "Publish using tag $LOCAL_BRANCH"
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm publish --tag $LOCAL_BRANCH"
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm publish --no-git-checks --tag $LOCAL_BRANCH"
 }
 
 for param in "$@"

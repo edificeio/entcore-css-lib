@@ -1,11 +1,10 @@
-version: "2"
+version: "3"
 services:
   node:
-    image: "opendigitaleducation/node:16-alpine"
+    image: "opendigitaleducation/node:16-alpine-pnpm"
+    user: "node"
     working_dir: /home/node/app
-    environment:
-      - NODE_ENV=production
     volumes:
       - ./:/home/node/app
-      - ~/.npm:/.npm
+      - ~/.pnpm:/.pnpm
       - ~/.gitconfig:/home/node/.gitconfig

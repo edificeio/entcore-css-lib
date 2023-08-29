@@ -7,17 +7,17 @@
     "sass:watch": "sass --source-map -w scss/index.scss docs/index.css",
     "sass:build:debug": "sass --source-map scss/index.scss docs/index.css",
     "sass:build:release": "sass --style=compressed scss/index.scss dist/index.css",
-    "dev:prepare": "npm run sass:build:debug && npm run copy-fonts && cpr assets/ docs/ -o",
-    "dev:watch": "npm run dev:prepare && concurrently  \" npm run sass:watch \" \" npm run dev:serve  \" ",
+    "dev:prepare": "pnpm run sass:build:debug && pnpm run copy-fonts && cpr assets/ docs/ -o",
+    "dev:watch": "pnpm run dev:prepare && concurrently  \" pnpm run sass:watch \" \" pnpm run dev:serve  \" ",
     "dev:serve": "live-server --open=docs/ --ignore=**/node_modules/**,**/dist/**,**/package.json,**/.git/**",
     "dev:lint": "stylelint scss/**/*.scss || echo \"lint faild for some file(s).\"",
     "dev:lint-fix": "stylelint scss/**/*.scss --fix || echo \"lint faild for some file(s).\"",
     "prettier:check": "npx prettier --check scss/**/*.scss",
     "prettier:write": "npx prettier --write scss/**/*.scss",
-    "prettier:all": "npm run prettier:write && npm run prettier:check",
+    "prettier:all": "pnpm run prettier:write && pnpm run prettier:check",
     "release:clean": "rimraf dist",
-    "release:prepare": "npm run release:clean && npm run copy-fonts && cpr assets/ dist/",
-    "release:build": "npm run release:prepare && npm run sass:build:release"
+    "release:prepare": "pnpm run release:clean && pnpm run copy-fonts && cpr assets/ dist/",
+    "release:build": "pnpm run release:prepare && pnpm run sass:build:release"
   },
   "repository": {
     "type": "git",
@@ -35,12 +35,12 @@
   },
   "homepage": "",
   "devDependencies": {
-    "concurrently": "^5.0.2",
-    "copyfiles": "^2.2.0",
-    "cpr": "^3.0.1",
+    "concurrently": "5.3.0",
+    "copyfiles": "2.4.1",
+    "cpr": "3.0.1",
     "prettier": "2.6.0",
-    "rimraf": "^3.0.2",
-    "sass": "^1.49.9"
+    "rimraf": "3.0.2",
+    "sass": "1.66.1"
   },
   "dependencies": {
     "entcore-generic-icons": "git+https://github.com/opendigitaleducation/generic-icons.git#master"
