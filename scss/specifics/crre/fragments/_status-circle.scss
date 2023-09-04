@@ -58,7 +58,7 @@
       fill: white;
     }
   }
-  &.REJECTED, &.CANCELED {
+  &.REJECTED, &.CANCELED, &.ARCHIVED {
     background: $red;
     >i:after{
       content: '\e866';

@@ -33,13 +33,13 @@ body.mediacentre-v2 {
   }
 
   section.main {
-    top: 64px !important;
+    top: 0px !important;
     padding: 0 !important;
   }
 
   @media (max-width: $tablette) {
     section.main {
-      top: 50px !important;
+      top: 0px !important;
     }
   }
 

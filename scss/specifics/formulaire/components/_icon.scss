@@ -236,4 +236,15 @@ i {
     font-family: 'formulaire-mdi';
     content: "\F99A";
   }
+
+  &.i-image::before {
+    font-family: 'formulaire-mdi';
+    content: "\F2E9";
+    color: $formulaire-orange;
+  }
+
+  &.i-close::before {
+    font-family: 'formulaire-mdi';
+    content: "\F159";
+  }
 }

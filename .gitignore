@@ -6,3 +6,5 @@ package.json
 .gradle
 .DS_Store
 .idea
+pnpm-lock.yaml
+.pnpm-store
