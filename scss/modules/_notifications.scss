@@ -263,6 +263,7 @@ div:not(.simple-notifications) > .notification {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-x: hidden;
   i {
     margin-right: 10px;
     color: $darkest-grey;
