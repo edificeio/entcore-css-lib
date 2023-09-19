@@ -133,6 +133,9 @@ $panda-blue: #3889c1;
       }
       a {
         color: black;
+        font-family: "KGJune";
+        text-transform: uppercase;
+        font-weight: bold;
       }
     }
     .weekday,
@@ -374,6 +377,12 @@ $panda-blue: #3889c1;
     font-size: 15px;
     font-weight: initial;
     display: flex;
+  }
+  .homeworkDoContainer.colorRed {
+    color: $red;
+  }
+  .homeworkDoContainer.colorGreen {
+    color: $green;
   }
   .homeworkBadge {
     padding: 1px 7px 1px 7px;
