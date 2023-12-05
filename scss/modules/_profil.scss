@@ -1,7 +1,7 @@
 @media screen and (min-width: $wide-screen) {
     .profil-flex {
         .email-ellipsis {
-            @include cell-ellipsis;
+            // @include cell-ellipsis;
             max-width: 410px;
         }
     }
@@ -10,7 +10,7 @@
 @media screen and (min-width: $fat-tablette) and (max-width: $wide-screen) {
     .profil-flex {
         .email-ellipsis {
-            @include cell-ellipsis;
+            // @include cell-ellipsis;
             max-width: 310px;
         }
     }
@@ -19,7 +19,7 @@
 @media screen and (min-width: $tablette) and (max-width: $fat-tablette) {
     .profil-flex {
         .email-ellipsis {
-            @include cell-ellipsis;
+            // @include cell-ellipsis;
             max-width: 180px;
         }
     }
@@ -28,7 +28,7 @@
 @media screen and (min-width: $fat-mobile) and (max-width: $tablette) {
     .profil-flex {
         .email-ellipsis {
-            @include cell-ellipsis;
+            // @include cell-ellipsis;
             max-width: 250px;
         }
     }
@@ -36,9 +36,28 @@
 
 @media screen and (max-width: $fat-mobile) {
     .profil-flex {
+
+        flex-wrap: wrap;
+
+        .four {
+            flex: 100%;
+        }
+
         .email-ellipsis {
-            @include cell-ellipsis;
+            // @include cell-ellipsis;
             max-width: 150px;
+        }
+
+        .one {
+            margin-right: 12px;
+            flex: 0;
+            width: auto;
+            align-items: center;
+        }
+
+        .seven {
+            width: auto;
+            flex: 1;
         }
     }
 }
@@ -95,7 +114,15 @@
 .profil-flex {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    .four {
+        font-weight: bold;
+    }
 
     .flex-flow {
         flex-flow: wrap;
@@ -108,6 +135,8 @@
     .one {
         display: flex;
         justify-content: center;
+        align-items: center;
+        height: 22px;
     }
 
     .email-ellipsis {
@@ -116,9 +145,11 @@
 
     .email-ellipsis + .icon-verified {
         margin-right: 20px;
+        padding-top: calc((22px - 16px) / 2);
     }
 
     input[type=text]:placeholder-shown {
         text-overflow: ellipsis;
     }
+
 }

@@ -542,6 +542,10 @@ section.scrapbook {
   }
 }
 
+.scrapbook-fullscreen .header {
+  display: none !important;
+}
+
 header.infos-block {
   position: static !important; // position: initial doesn't work in IE
 }

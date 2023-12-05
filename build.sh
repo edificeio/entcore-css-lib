@@ -32,8 +32,7 @@ init () {
 build () {
   local extras=$1
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm run release:build"
-  VERSION=`grep "version="  gradle.properties| sed 's/version=//g'`
-  echo "entcore-css-lib=$VERSION `date +'%d/%m/%Y %H:%M:%S'`" >> dist/version.txt
+  echo "entcore-css-lib `date +'%d/%m/%Y %H:%M:%S'`" >> dist/version.txt
 }
 
 watch () {
