@@ -21193,6 +21193,13 @@ i.system-avatar {
 .icons-view.apps .container.qwant-junior i:before {
   content: "\e93d";
 }
+.icons-view.apps .container.edumalin {
+  background: radial-gradient(farthest-side at 10% 10%, #ffc594, #ff8d2e);
+  border: 1px solid #eee;
+}
+.icons-view.apps .container.edumalin i:before {
+  content: "\e967";
+}
 i.storage {
   height: 25px;
   width: 25px;

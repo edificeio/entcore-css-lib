@@ -20850,6 +20850,20 @@ i.agenda::before {
   content: "\e83c";
   color: #ecbe30;
 }
+i.edumalin-large,
+i.type.edumalin,
+i.edumalin {
+  font-family: "generic-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.edumalin-large::before,
+i.type.edumalin::before,
+i.edumalin::before {
+  content: "\e967";
+  color: #1a22a2;
+}
 i.absences-large,
 i.type.absences,
 i.absences {
@@ -24190,6 +24204,9 @@ i.carnet-de-bord-icon::before {
 }
 i.qwant-icon::before {
   content: "\e92a";
+}
+i.edumalin-widget-icon::before {
+  content: "\e967";
 }
 .last-infos-widget .last-infos-config-button::before {
   font-family: "generic-icons";
