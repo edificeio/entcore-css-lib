@@ -1,6 +1,6 @@
 {
   "name": "ode-csslib",
-  "version": "4.2.0-dev.%generateVersion%",
+  "version": "4.2.0-mongodb7.0.%generateVersion%",
   "description": "Open Digital Education Legacy CSS framework",
   "scripts": {
     "copy-fonts": "cpr node_modules/entcore-generic-icons/fonts/ assets/fonts/generic-icons/ -o",
@@ -43,7 +43,7 @@
     "sass": "1.66.1"
   },
   "dependencies": {
-    "entcore-generic-icons": "git+https://github.com/opendigitaleducation/generic-icons.git#master"
+    "entcore-generic-icons": "git+https://github.com/edificeio/generic-icons.git#master"
   },
   "files": ["assets", "scss", "dist"]
 }
