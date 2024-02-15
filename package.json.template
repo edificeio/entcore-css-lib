@@ -1,7 +1,7 @@
 {
   "name": "ode-csslib",
-  "version": "4.2.1",
-  "description": "Open Digital Education Legacy CSS framework",
+  "version": "4.2.2",
+  "description": "Edifice Legacy CSS framework",
   "scripts": {
     "copy-fonts": "cpr node_modules/entcore-generic-icons/fonts/ assets/fonts/generic-icons/ -o",
     "sass:watch": "sass --source-map -w scss/index.scss docs/index.css",
@@ -21,17 +21,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/opendigitaleducation/entcore-css-lib"
+    "url": "git+https://github.com/edificeio/entcore-css-lib"
   },
   "keywords": [
     "ODE",
     "CSS lib",
     "framework"
   ],
-  "author": "OpenDigitalEducation",
+  "author": "Edifice",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/opendigitaleducation/entcore-css-lib/issues"
+    "url": "https://github.com/edificeio/entcore-css-lib/issues"
   },
   "homepage": "",
   "devDependencies": {
@@ -43,7 +43,7 @@
     "sass": "1.66.1"
   },
   "dependencies": {
-    "entcore-generic-icons": "git+https://github.com/opendigitaleducation/generic-icons.git#master"
+    "entcore-generic-icons": "git+https://github.com/edificeio/generic-icons.git#master"
   },
   "files": ["assets", "scss", "dist"]
 }
