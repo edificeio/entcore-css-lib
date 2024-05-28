@@ -24208,6 +24208,9 @@ i.qwant-icon::before {
 i.edumalin-widget-icon::before {
   content: "\e967";
 }
+i.mediacentre-widget-icon::before {
+  content: "\e863";
+}
 .last-infos-widget .last-infos-config-button::before {
   font-family: "generic-icons";
   -webkit-font-smoothing: antialiased;
