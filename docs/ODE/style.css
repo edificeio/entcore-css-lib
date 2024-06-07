@@ -20864,6 +20864,20 @@ i.edumalin::before {
   content: "\e967";
   color: #1a22a2;
 }
+i.mediacentre-large,
+i.type.mediacentre,
+i.mediacentre {
+  font-family: "generic-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.mediacentre-large::before,
+i.type.mediacentre::before,
+i.mediacentre::before {
+  content: "\e968";
+  color: #2029b6;
+}
 i.absences-large,
 i.type.absences,
 i.absences {
@@ -24209,7 +24223,7 @@ i.edumalin-widget-icon::before {
   content: "\e967";
 }
 i.mediacentre-widget-icon::before {
-  content: "\e863";
+  content: "\e968";
 }
 .last-infos-widget .last-infos-config-button::before {
   font-family: "generic-icons";
