@@ -11,6 +11,16 @@ infotip {
       color: $accent;
     }
   }
+
+  @media screen and (max-width: $tablette) {
+    &.info {
+      width: auto !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      z-index: 99999 !important;
+      margin-bottom: 0 !important;
+    }
+  }
 }
 
 .alert,
@@ -48,6 +58,7 @@ infotip {
 .info {
   color: $primary;
   background: lighten($primary, 35%);
+
   i.check-circle {
     color: $primary;
   }
