@@ -1,3 +1,4 @@
+@import "./actualites/actualites";
 @import "./cahier-de-textes/cahier-de-textes";
 @import "./calendar/calendar";
 @import "./class-admin/class-admin";
@@ -32,6 +33,8 @@
 @import "./statistics-presences/statistics-presences";
 @import "./magneto/magneto";
 @import "./minibadge/minibadge";
+@import "./rack/rack";
+@import "./workspace-app/workspace-app";
 
 // TO DO: Remove these specifics rules for calendar (WB-870)
 
