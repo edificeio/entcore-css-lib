@@ -53,12 +53,21 @@ $block-disabled-color: $primary-lighter !default;
 $colorz: $cyan, $green, $yellow, $orange, $pink, $purple, $indigo;
 
 // MESSAGE FLASH
-$flash-red: #c74848;
-$flash-orange: #ff9057;
-$flash-green: #3cb371;
-$flash-blue: #2a9cc8;
-$flash-grey: #5b6472;
-
+$flash-red: #FFECEE !default;
+$flash-red-border: #FFADB9 !default;
+$flash-red-badge: #FF3A55 !default;
+$flash-orange: #FFEFE3 !default;
+$flash-orange-border: #FFCBA0 !default;
+$flash-orange-badge: #FF8D2E !default;
+$flash-green: #E6F9F8 !default;
+$flash-green-border: #B6EDE5 !default;
+$flash-green-badge: #46BFAF !default;
+$flash-blue: #E5F5FF !default;
+$flash-blue-border: #B9E3F8 !default;
+$flash-blue-badge: #2A9CC8 !default;
+$flash-grey: #FAFAFA !default;
+$flash-grey-border: #E4E4E4 !default;
+$flash-grey-badge: #B0B0B0 !default;
 // SIZES
 $icon-list-size: 117px !default;
 $icon-list-padding: 7px !default;
