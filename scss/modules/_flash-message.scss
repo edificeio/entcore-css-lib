@@ -135,19 +135,6 @@
   }
 
   div[bind-html]>div {
-    &>br+br {
-      display: none;
-    }
-
-    &>p:empty,
-    &>p>br:first-child,
-    &>p>br:not(:not(br) + br),
-    &>p>div>br:first-child,
-    & div:last-child>br:last-child,
-    & div:has(+p:last-child:empty)>br:last-child,
-    &>p>div>br:not(:not(br) + br) {
-      display: none;
-    }
 
     &>p {
       margin-block-start: 1em;
@@ -164,6 +151,14 @@
     }
 
     margin-block-start: -1em;
+
+    &::after {
+      content: '';
+      display: block;
+      margin-block-start: 1em;
+    }
+
+    margin-block-end: -1em;
   }
 
   .flash-content-signature {
