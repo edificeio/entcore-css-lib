@@ -6,7 +6,7 @@
   left: 4px;
   bottom: 4px;
 
-  padding: calc(36px - 12px) 24px 24px;
+  padding: 36px 24px 24px;
   color: #4A4A4A;
   margin: 32px 4px 36px 0;
 
@@ -62,9 +62,6 @@
   }
   div.flash-msg-collapsable {
     grid-area: 1 / 1 / 2 / 3;
-  }
-  div.flash-msg-collapsable > div {
-    margin-top:12px;
   }
   div.flash-msg-collapsable.flash-msg-collapsable--collapsable.flash-msg-collapsable--collapsed > div {
     text-overflow: ellipsis;
@@ -137,13 +134,36 @@
     }
   }
 
-  // Merge multiple <br> into one and delete the first empty line if present
-  p,
-  p>div {
-    &>br:first-child,
-    &>br:not(:not(br)+br) {
+  div[bind-html]>div {
+    &>br+br {
       display: none;
     }
+
+    &>p:empty,
+    &>p>br:first-child,
+    &>p>br:not(:not(br) + br),
+    &>p>div>br:first-child,
+    & div:last-child>br:last-child,
+    & div:has(+p:last-child:empty)>br:last-child,
+    &>p>div>br:not(:not(br) + br) {
+      display: none;
+    }
+
+    &>p {
+      margin-block-start: 1em;
+    }
+
+    &>p:not(:last-child):not(:has(+p:empty)) {
+      margin-block-end: 1em;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      margin-block-end: 1em;
+    }
+
+    margin-block-start: -1em;
   }
 
   .flash-content-signature {
