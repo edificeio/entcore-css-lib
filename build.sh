@@ -43,7 +43,7 @@ build () {
 }
 
 watch () {
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm run dev:watch"
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "pnpm run watch"
 }
 
 lint () {
