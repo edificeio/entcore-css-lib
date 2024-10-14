@@ -69,8 +69,8 @@
   div.flash-msg-collapsable.flash-msg-collapsable--collapsable.flash-msg-collapsable--collapsed > div {
     text-overflow: ellipsis;
     overflow: hidden;
-    line-clamp: 4;
-    -webkit-line-clamp: 4;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
     display: -webkit-box;
     box-orient: vertical;
     -webkit-box-orient: vertical;
