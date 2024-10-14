@@ -19,10 +19,7 @@
 
   div[bind-html] p {
     margin-top: 0;
-    margin-bottom: 1.5714285714em;
-    &:empty, &:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
   div[bind-html]:first-of-type:last-of-type {
     margin-bottom: 0;
@@ -63,11 +60,11 @@
     display: -webkit-box;
     box-orient: vertical;
     -webkit-box-orient: vertical;
-    line-clamp: 3;
-    -webkit-line-clamp: 3;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
     overflow: hidden;
     text-overflow: clip;
-    max-height: calc(3 * (22em / 14));
+    max-height: calc(4 * (22em / 14));
     
     div, p, span {
       overflow: hidden;
@@ -124,6 +121,7 @@
   a {
     color: inherit;
     text-decoration: underline;
+    font-weight: bold;
 
     &:hover {
       color: #000;
@@ -132,6 +130,21 @@
     &:active {
       color: #550070;
     }
+  }
+
+  // Merge multiple <br> into one and delete the first empty line if present
+  p,
+  p>div {
+    &>br:first-child,
+    &>br:not(:not(br)+br) {
+      display: none;
+    }
+  }
+
+  .flash-content-signature {
+    font-style: italic;
+    margin-top: 22px !important;
+    margin-right: 12em;
   }
 
   &.red {
@@ -150,9 +163,9 @@
     }
     .flash-msg-collapsable-button {
       background: $flash-red;
-      &::before{
-        background: linear-gradient(to right, rgba($flash-red, 0), rgba($flash-red, 0.5) 30%, rgba($flash-red, 0.8) 50%, rgba($flash-red, 0.95) 75%, $flash-red 100%);
-      }
+    }
+    .flash-msg-collapsable.flash-msg-collapsable--collapsed .flash-msg-collapsable-button::before {
+      background: linear-gradient(to right, rgba($flash-red, 0), rgba($flash-red, 0.5) 30%, rgba($flash-red, 0.8) 50%, rgba($flash-red, 0.95) 75%, $flash-red 100%);
     }
     .flashmsg-icon {
       transform: translateY(-1px);
@@ -168,9 +181,9 @@
     }
     .flash-msg-collapsable-button {
       background: $flash-orange;
-      &::before {
-        background: linear-gradient(to right, rgba($flash-orange, 0), rgba($flash-orange, 0.5) 30%, rgba($flash-orange, 0.8) 50%, rgba($flash-orange, 0.95) 75%, $flash-orange 100%);
-      }
+    }
+    .flash-msg-collapsable.flash-msg-collapsable--collapsed .flash-msg-collapsable-button::before {
+      background: linear-gradient(to right, rgba($flash-orange, 0), rgba($flash-orange, 0.5) 30%, rgba($flash-orange, 0.8) 50%, rgba($flash-orange, 0.95) 75%, $flash-orange 100%);
     }
   }
   &.green {
@@ -183,9 +196,9 @@
     }
     .flash-msg-collapsable-button {
       background: $flash-green;
-      &::before {
-        background: linear-gradient(to right, rgba($flash-green, 0), rgba($flash-green, 0.5) 30%, rgba($flash-green, 0.8) 50%, rgba($flash-green, 0.95) 75%, $flash-green 100%);
-      }
+    }
+    .flash-msg-collapsable.flash-msg-collapsable--collapsed .flash-msg-collapsable-button::before {
+      background: linear-gradient(to right, rgba($flash-green, 0), rgba($flash-green, 0.5) 30%, rgba($flash-green, 0.8) 50%, rgba($flash-green, 0.95) 75%, $flash-green 100%);
     }
   }
   &.blue {
@@ -198,9 +211,9 @@
     }
     .flash-msg-collapsable-button {
       background: $flash-blue;
-      &::before {
-        background: linear-gradient(to right, rgba($flash-blue, 0), rgba($flash-blue, 0.5) 30%, rgba($flash-blue, 0.8) 50%, rgba($flash-blue, 0.95) 75%, $flash-blue 100%);
-      }
+    }
+    .flash-msg-collapsable.flash-msg-collapsable--collapsed .flash-msg-collapsable-button::before {
+      background: linear-gradient(to right, rgba($flash-blue, 0), rgba($flash-blue, 0.5) 30%, rgba($flash-blue, 0.8) 50%, rgba($flash-blue, 0.95) 75%, $flash-blue 100%);
     }
   }
   &.grey-dark {
@@ -213,9 +226,9 @@
     }
     .flash-msg-collapsable-button {
       background: $flash-grey;
-      &::before {
+    }
+    .flash-msg-collapsable.flash-msg-collapsable--collapsed .flash-msg-collapsable-button::before {
         background: linear-gradient(to right, rgba($flash-grey, 0), rgba($flash-grey, 0.5) 30%, rgba($flash-grey, 0.8) 50%, rgba($flash-grey, 0.95) 75%, $flash-grey 100%);
-      }
     }
   }
 }
