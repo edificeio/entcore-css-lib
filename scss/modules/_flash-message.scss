@@ -147,6 +147,10 @@
     margin-right: 12em;
   }
 
+  .flash-msg-collapsable:not(.flash-msg-collapsable--collapsable) .flash-content-signature:empty {
+    display: none;
+  }
+
   &.red {
     background: $flash-red;
     box-shadow: $flash-red-border -4px 0px, $flash-red-border 0px 4px, $flash-red-border -2px 2px 0 2px;
