@@ -1,3 +1,9 @@
-.actualites .rigid-grid .four.cell{
-    position: absolute;
+.actualites {
+    .rigid-grid .four.cell {
+        position: absolute;
+    }
+
+    .linker .four.cell {
+        position: relative;
+    }
 }
