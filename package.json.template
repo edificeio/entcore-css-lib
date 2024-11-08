@@ -43,7 +43,7 @@
     "sass": "1.66.1"
   },
   "dependencies": {
-    "entcore-generic-icons": "git+https://github.com/edificeio/generic-icons.git#master"
+    "entcore-generic-icons": "github:edificeio/generic-icons#master"
   },
   "files": ["assets", "scss", "dist"]
 }
