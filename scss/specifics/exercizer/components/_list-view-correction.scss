@@ -1,7 +1,7 @@
 .list-view {
     thead tr {
         color: $white;
-        background: $flash-blue;
+        background: $primary;
     }
 
     label input[type="checkbox"] {
@@ -50,7 +50,7 @@
             th {
                 padding: 1.5rem 0.65rem;
                 font-size: .875rem;
-                background: $flash-blue;
+                background: $primary;
 
                 &:first-child {
                     border-top-left-radius: 4px;
