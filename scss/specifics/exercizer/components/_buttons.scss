@@ -18,18 +18,18 @@
 
     &-primary {
         color: $white;
-        background-color: $flash-blue;
+        background-color: $primary;
 
         svg[class*="icon"] {
             fill: $white;
         }
 
         &:hover {
-            background: darken($flash-blue, 10%);
+            background: darken($primary, 10%);
         }
 
         &:active {
-            background: darken($flash-blue, 15%)
+            background: darken($primary, 15%)
         }
 
         &.disabled {
@@ -108,28 +108,28 @@
         padding-top: .5rem;
         padding-bottom: .5rem;
         gap: .5rem;
-        color: $flash-blue;
+        color: $primary;
         background-color: transparent;
 
         svg[class*="icon"] {
-            fill: $flash-blue;
+            fill: $primary;
         }
 
         &:hover {
             background-color: transparent;
-            color: darken($flash-blue, 10%);
+            color: darken($primary, 10%);
 
             svg[class*="icon"] {
-                fill: darken($flash-blue, 10%);
+                fill: darken($primary, 10%);
             }
         }
 
         &:active {
             background-color: transparent;
-            color: darken($flash-blue, 15%);
+            color: darken($primary, 15%);
 
             svg[class*="icon"] {
-                fill: darken($flash-blue, 15%);
+                fill: darken($primary, 15%);
             }
         }
 

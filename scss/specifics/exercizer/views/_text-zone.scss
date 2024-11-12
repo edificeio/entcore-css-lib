@@ -40,7 +40,7 @@ text-zone {
   }
 
   &.selected {
-    background: $flash-blue;
+    background: $primary;
     color: $white;
 
     >svg[class*="icon"] {
