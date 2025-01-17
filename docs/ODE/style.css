@@ -20878,6 +20878,20 @@ i.mediacentre::before {
   content: "\e968";
   color: #2029b6;
 }
+i.appointments-large,
+i.type.appointments,
+i.appointments {
+  font-family: "generic-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.appointments-large::before,
+i.type.appointments::before,
+i.appointments::before {
+  content: "\e96a";
+  color: #46bfaf;
+}
 i.absences-large,
 i.type.absences,
 i.absences {
