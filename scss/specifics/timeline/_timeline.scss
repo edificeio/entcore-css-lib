@@ -1,6 +1,8 @@
-#timeline {
-    .media {
-        position: sticky;
-        top: 0;
+.timeline-js {
+  #timeline {
+    .vco-slider .slider-item .content .content-container .media {
+      position: sticky;
+      top: 0;
     }
+  }
 }
