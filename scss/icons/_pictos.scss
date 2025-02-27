@@ -638,3 +638,13 @@ i.web-conference-large {
     content: "\e957";
   }
 }
+
+i.appointments,
+i.appointments-large,
+i.appointments,
+i.appointments-large {
+  @include fonticon;
+  &::before {
+    content: "\e96a";
+  }
+}
