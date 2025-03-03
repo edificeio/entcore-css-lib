@@ -1,6 +1,6 @@
 {
   "name": "ode-csslib",
-  "version": "4.3.3",
+  "version": "4.3.3-%branch%.%generateVersion%",
   "description": "Edifice Legacy CSS framework",
   "scripts": {
     "copy-fonts": "cpr node_modules/entcore-generic-icons/fonts/ assets/fonts/generic-icons/ -o",
