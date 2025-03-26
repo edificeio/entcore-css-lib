@@ -21123,6 +21123,20 @@ i.blog::before {
   content: "\e809";
   color: #1a22a2;
 }
+i.nabook-large,
+i.type.nabook,
+i.nabook {
+  font-family: "generic-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.nabook-large::before,
+i.type.nabook::before,
+i.nabook::before {
+  content: "\e96b";
+  color: #00FFCC;
+}
 i.mindmap-large,
 i.type.mindmap,
 i.mindmap {

@@ -20697,6 +20697,9 @@ i.system-avatar {
 .icons-view.apps .container.blog-large i:before {
   content: "\e809";
 }
+.icons-view.apps .container.nabook-large i:before {
+  content: "\e96b";
+}
 .icons-view.apps .container.account-large {
   background: radial-gradient(farthest-side at 10% 10%, #c994da, #a348c0);
   border: 1px solid #eee;
