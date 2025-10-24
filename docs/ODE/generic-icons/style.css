@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'generic-icons';
   src:
-    url('fonts/generic-icons.ttf?u79mue') format('truetype'),
-    url('fonts/generic-icons.woff?u79mue') format('woff'),
-    url('fonts/generic-icons.svg?u79mue#generic-icons') format('svg');
+    url('fonts/generic-icons.ttf?n1z2nu') format('truetype'),
+    url('fonts/generic-icons.woff?n1z2nu') format('woff'),
+    url('fonts/generic-icons.svg?n1z2nu#generic-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,25 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.screenTime:before {
+  content: "\e972";
+  color: #ff8d2e;
+}
+.geogebra:before {
+  content: "\e971";
+  color: #4a4a4a;
+}
+.minetest:before {
+  content: "\e970";
+  color: #4a4a4a;
+}
+.communities:before {
+  content: "\e96f";
+}
+.tempsEcran:before {
+  content: "\e96e";
+  color: #ecbe30;
+}
 .votil:before {
   content: "\e96d";
   color: #ecbe30;
@@ -58,6 +77,7 @@ i {
 }
 .lool:before {
   content: "\e962";
+  color: #4a4a4a;
 }
 .magneto:before {
   content: "\e961";
