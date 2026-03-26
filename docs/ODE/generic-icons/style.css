@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'generic-icons';
   src:
-    url('fonts/generic-icons.ttf?pxiso0') format('truetype'),
-    url('fonts/generic-icons.woff?pxiso0') format('woff'),
-    url('fonts/generic-icons.svg?pxiso0#generic-icons') format('svg');
+    url('fonts/generic-icons.ttf?a1hiz') format('truetype'),
+    url('fonts/generic-icons.woff?a1hiz') format('woff'),
+    url('fonts/generic-icons.svg?a1hiz#generic-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,9 +24,8 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.assistancetic:before {
-  content: "\e974";
-  color: #4a4a4a;
+.livretScolaire:before {
+  content: "\e975";
 }
 .elea:before {
   content: "\e973";
@@ -152,6 +151,10 @@ i {
 }
 .star-full:before {
   content: "\e9d9";
+}
+.assistancetic:before {
+  content: "\e974";
+  color: #4a4a4a;
 }
 .formulaire:before {
   content: "\e95b";
